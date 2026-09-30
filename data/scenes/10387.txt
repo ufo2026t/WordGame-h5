@@ -1,0 +1,48 @@
+id=10387
+名称=婺州天皇门
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clNavy}),clWindow,天皇门,AT1012,0,0/2007.bmp"></CENTER>
+城门高大，城楼上有士兵把守。<p>
+<:game_not_scene_event(1009)城墙上贴着一个布告<p><strong><FONT color=#FF0000>布告</FONT></strong><p>
+兹有西峰山盗匪作乱，危害百姓。<p>
+因匪首武功高强，虽官府多次捉拿均无功而返。<p>
+今布告全城，如有能擒拿匪首者，官府赏银5000两。<p>
+婺州府 即日<p>
+<p>
+:><p>
+<:if game_check_scene_event(1018) then
+ 路人甲：“这段时间闲着，想去哪里挖点宝物来。”<br>
+路人乙：“如果不怕妖怪，郊外的天坑有宝。”
+else
+ 路上有几个路人在交谈，<br>
+路人甲：“据我爷爷讲，万佛塔上有个从暹罗进贡的金佛。”<br>
+路人乙：“那能值不少钱吧”
+end:><p>
+<a href="game_page(10176)" title="土匪窝">前往西峰山</a><p>
+<a href="game_page(10388)" title="一座荒废已久的寺庙，现在里面多树妖">前往兰若寺</a><p>
+<a href="game_page(10186)" title="可以挖矿和打怪">前往北山</a><p>
+<a href="if game_check_scene_event(1115) then game_page(11337) else game_chat('还是先去临安看看吧。去临安要从清波门坐轮船') end" title="南国大理">前往大理</a><p>
+<p>
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1EEE3CBD62A0CFFAC3D27E82F04D5FC6

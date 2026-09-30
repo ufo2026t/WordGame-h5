@@ -1,0 +1,28 @@
+id=12179
+名称=婺州西峰山岩洞
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+一个神秘的岩洞。<p>
+<a href="game_page(1)" title="">进入</a>
+<p>
+<a href="game_page(10183)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EB4F8EA188E506CEC6E93CC856898AA4

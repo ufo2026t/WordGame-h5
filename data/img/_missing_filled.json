@@ -1,0 +1,96 @@
+﻿{
+    "filledAt":  "2026-09-02T03:49:59.072Z",
+    "proxy":  "http://proxysg.ai.yinwang.com:8080",
+    "note":  "Stand-in photos from Wikimedia Commons (CC/PD), JPEG-compressed to \u003c=100KB.",
+    "credits":  [
+                    {
+                        "file":  "img_yumenguan.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/Yumenguan.jpg?width=640",
+                        "commons":  "Yumenguan.jpg",
+                        "bytes":  21903
+                    },
+                    {
+                        "file":  "img_shamo1.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/Hanmuren.JPG?width=640",
+                        "commons":  "Hanmuren.JPG",
+                        "bytes":  41174
+                    },
+                    {
+                        "file":  "img_tianshan1.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/Barkol%20Shan.jpg?width=640",
+                        "commons":  "Barkol Shan.jpg",
+                        "bytes":  29142
+                    },
+                    {
+                        "file":  "img_tianshan2.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/Aksu%20Jabagly%202.JPG?width=640",
+                        "commons":  "Aksu Jabagly 2.JPG",
+                        "bytes":  49398
+                    },
+                    {
+                        "file":  "img_tianshan3.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/Aksu%20Jabgly%203.JPG?width=640",
+                        "commons":  "Aksu Jabgly 3.JPG",
+                        "bytes":  56214
+                    },
+                    {
+                        "file":  "img_tianshan4.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/CHatkal.jpg?width=640",
+                        "commons":  "CHatkal.jpg",
+                        "bytes":  41995
+                    },
+                    {
+                        "file":  "img_tianshan5.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/CHatkal%20angren.jpg?width=640",
+                        "commons":  "CHatkal angren.jpg",
+                        "bytes":  40363
+                    },
+                    {
+                        "file":  "img_tianshan6.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/Azsia%20236a%20resize.jpg?width=640",
+                        "commons":  "Azsia 236a resize.jpg",
+                        "bytes":  38289
+                    },
+                    {
+                        "file":  "img_tianshan7.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/Flowers%20in%20March%20or%20April%20in%20Tianshan%20Collage%20-%20panoramio.jpg?width=640",
+                        "commons":  "Flowers in March or April in Tianshan Collage - panoramio.jpg",
+                        "bytes":  92704
+                    },
+                    {
+                        "file":  "img_tianshan8.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/Hory%20kirgizstan.jpg?width=640",
+                        "commons":  "Hory kirgizstan.jpg",
+                        "bytes":  50974
+                    },
+                    {
+                        "file":  "img_tianshan9.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/Glacier%20in%20Tian%20Shan%20AB.jpg?width=640",
+                        "commons":  "Glacier in Tian Shan AB.jpg",
+                        "bytes":  66323
+                    },
+                    {
+                        "file":  "img_tianshan10.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/Central%20Tien%20Shan%2C%20China.JPG?width=640",
+                        "commons":  "Central Tien Shan, China.JPG",
+                        "bytes":  32689
+                    },
+                    {
+                        "file":  "img_tianshan11.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/Fresh%20Snow%20Caps%20the%20Eastern%20Tien%20Shan%20(MODIS%202024-09-07).jpg?width=640",
+                        "commons":  "Fresh Snow Caps the Eastern Tien Shan (MODIS 2024-09-07).jpg",
+                        "bytes":  61217
+                    },
+                    {
+                        "file":  "img_tianshan12.jpg",
+                        "source":  "https://commons.wikimedia.org/wiki/Special:FilePath/Ak-Shiyrak%20ridge%20-%20panoramio.jpg?width=640",
+                        "commons":  "Ak-Shiyrak ridge - panoramio.jpg",
+                        "bytes":  61410
+                    }
+                ],
+    "failed":  [
+
+               ],
+    "compressedAt":  "2026-09-02T04:00:42.6439705Z",
+    "maxBytes":  102400
+}

@@ -1,0 +1,32 @@
+id=11578
+名称=塞外
+作者=
+属性=260
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,路口,AT1002,0,0/2007.bmp"></CENTER>
+<img src="gpic://img_damo.jpg"><p>
+大漠孤烟直，长辉落日圆。<p>
+1。前往<a href="game_page(11784)" title="">昆仑</a><p>
+2。前往<a href="game_page(11785)" title="">天山</a><p>
+3。前往<a href="if game_check_scene_event(1269) then game_page(12617) else game_chat('山高路远，还是先不去西域了。') end" title="">西域</a><p>
+<p>
+<a href="game_page(11417)">返回朱仙镇</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9400E5BBE2D2158157767C6CA121CD6F

@@ -1,0 +1,29 @@
+id=10789
+名称=嘉明殿
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clPurple}),clWindow,嘉明,AT1001,0,62/2007.bmp) fixed no-repeat center center;">
+御膳房。<p>
+
+;;一条石板路，通往<a href="game_page(1)" title="">嘉明殿</a><p>
+一条石板路，通往<a href="game_page(-1)" title="返回">勤政殿</a><p>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=75EA3BFF0309C41A1CA5220184816D08

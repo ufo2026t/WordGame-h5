@@ -1,0 +1,40 @@
+id=12098
+名称=天山派-房间二
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,房间二,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('天山弟子')">天山弟子</a><p>
+
+<a href="game_page(12095)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1177) then
+天山弟子=1,大家都说天山雪莲好，我怎么看着觉得不好看呢？
+I=1,物不可貌相。
+else
+天山弟子=1,你可到过中原？
+I=1,到过。
+天山弟子=2,可曾到过少林？
+I=2,怎么了？
+天山弟子=[game_add_scene_event(1177)]3,我听说少林寺的达摩洞内有一绝世神功秘籍，名叫达摩神掌。我一直想去那看看，只可惜我武功低微，怕是进不了达摩洞。
+I=3,达摩神掌果真在达摩洞内？
+天山弟子=4,我师父说的。
+I=[game_reload_direct(0)]4,看来这消息可靠。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6482F7A9C6AF998B132EC3E5A41F713D

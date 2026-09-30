@@ -1,0 +1,75 @@
+id=10199
+名称=天坑巨石
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clTeal}),clWindow,天坑,AT1001,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+即将进入天坑，此坑深不见底。最好多买些药材、还魂丹等，当然，手头备个回城卷，在弹尽粮绝时真是太有用了。<p>
+&nbsp;<p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):>
+<p>
+虽然天坑很深，但在迷宫内，有时会随机出现时空隧道，可以通过隧道直接进入天坑底部，当然也可选择继续一路打过去以积累更多经验值和捡到更多物品。<p>
+
+<:if game_check_scene_event(1013) or game_check_scene_event(1027) then &nbsp;<p> else<a if game_check_scene_event(1012) then href="game_npc_talk('宇文赫')">宇文赫else href="game_npc_talk('不明人物')">有一不明人物end</a>，也在天坑内，似乎正在查探进入天坑的路线。end:>
+<p><a href="game_page(10200)" title="准备好了吗？新的冒险开始了。">进入天坑</a> <p>
+<:game_read_temp(1019901)
+天坑10层，每层皆相同。第一层图如下：<br>
+200--201--202--203--204<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+205--206--207--208--209--通往第二层<br>
+
+else
+ 石壁上有一张<a href="game_npc_talk('系统')">模糊的<FONT color=#"FF0000">地图</FONT></a>:><p>
+<a href="game_page(10198)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_not_scene_event(1027) then
+
+宇文赫=[game_can_stop_chat(0);game_add_scene_event(1027)]1,<img src="$apppath$img\3.bmp">
+I=1,这不是宇文兄吗？你怎么也在这里，找到要找的人了吗？
+宇文赫=2,还没，急不来，正在想办法找。
+I=2,这天坑里是不是有新情况？
+宇文赫=3,没啥情况，这是天上流星坠地而成坑，里面很可能有<FONT color=#FF0000>上等陨铁</FONT>，乃是铸造<FONT color=#"FF0000">天剑</FONT>的必备材料。所以我想下去找找。
+I=3,天剑？这是什么兵器？
+宇文赫=4,修罗剑，游龙剑，倚天剑和轩辕剑名列四大神兵利器，十分厉害。但据古书记载最厉害的却当属天剑，只是铸造天剑要求很苛刻，原料也十分难找，故而一直无人铸出过天剑。
+I=4,陨铁就很难找，用它做出的兵器性能出众倒是可以理解。
+宇文赫=5,传说“一剑出鞘，鬼哭神嚎”。
+I,A,A=[game_can_stop_chat(1);game_add_friend('宇文赫',0);game_add_scene_event(1013);game_reload_direct(0)]5,好，咱们一起进去找宝去。
+I,A,B=[game_can_stop_chat(1);game_reload_direct(0)]5,兄弟，此坑危险，您再准备准备，我先下去了。再见。
+宇文赫=6,好。
+end
+
+
+不明人物=[game_can_stop_chat(0);game_add_scene_event(1027)]1,<img src="$apppath$img\3.bmp">
+I=1,你是何人？为何在此？
+不明人物=2,我是岳飞元帅手下的先锋官，前方战事出现了困难，岳元帅夜观天象，见紫微星日渐黯淡，显是大宋王朝危也。近日见东南方向忽现异星，因是力挽狂澜之能人异士在此出现，特命我前来寻找。
+I=2,这奇人异士有和特征，见了如何认得？
+不明人物=3,岳元帅只说：“此人现在金星与婺女两星争华之地，乃是婺州”其他不得而知。
+I=3,哦，难道这奇人异士会在天坑内？
+不明人物=4,不，只是这天坑由天上流星坠落而成，这坑如此之深，里面很可能有上等陨铁，乃是铸造<FONT color=#"FF0000">天剑</FONT>的必备材料。
+I=4,天剑到底有何神奇之处？
+不明人物=5,传说“一剑出鞘，鬼哭神嚎”。
+I,A,A=[game_can_stop_chat(1);game_add_friend('宇文赫',1);game_add_scene_event(1013);game_reload_direct(0)]5,此坑凶险异常，人大多有去无回，咱们不如一起进去，好有个照应。
+I,A,B=[game_can_stop_chat(1);game_reload_direct(0)]5,兄弟，此坑危险，您再准备准备，我先下去了。再见。
+系统=1,天坑路径复杂，先人石上刻此图，图下有个功德箱，内设机关，如果投钱2000，机关开启，可显一清晰地图。
+I,A=[if game_check_money(2000) then game_change_money(-2000);game_write_temp(1019901,1);game_reload_direct(0) else game_chat('你钱不够') end]1,投2000钱看一下地图
+I,B=1,先不看地图，下去再说。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6DC1DDADE38596D95B32536F000C8648

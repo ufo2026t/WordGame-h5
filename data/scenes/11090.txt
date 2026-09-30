@@ -1,0 +1,33 @@
+id=11090
+名称=后院
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clGreen}),clWindow,苗,AT1002,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,后院,AT1000,0,0/2007.bmp"></CENTER>
+后院有一些房子。<p>
+<a href="game_page(11094)" title="">房间一</a><p>
+<a href="if game_check_scene_event(1085) then game_pop_fight_a(2,99);game_page(11095) else game_page(11095) end" title="">房间二</a><p>
+<a href="game_page(11096)" title="">房间三</a><p>
+<a href="game_page(11097)" title="">房间四</a><p>
+
+<p>
+<a href="game_page(11087)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4C9B94087A18AE4B9FA803BE2AC79F4D

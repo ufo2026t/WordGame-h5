@@ -1,0 +1,45 @@
+id=10028
+名称=矿洞底下一层28号地块
+作者=
+属性=38
+载入后=game_pop_fight_a(1, 61)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clWindow,迷宫,AT1000,1,75/2007.bmp) fixed no-repeat center center;">
+这里是矿洞的底下一层地块。<p>
+旁边洞口众多，也不知道通往哪里才是正确的，先到处转转看了<br>
+
+再往里走，旁边有个<a href="game_pop_a(3);game_page(10027)" title="">石门</a>，通向27号地块。<p>
+<:game_true(1)阅读材料：string game_get_read_txt(0):><p>
+此处地势平坦，比较明亮，远处似乎有不明生物在晃动。<br>
+
+<p>
+<:game_true(1)string game_res_goods(5091,1,'铁护腕'):>
+<p>
+<a href="game_page(10022)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+江雪儿=1,这迷宫讨厌死了。
+I,A=1,这点困难算不了什么，跟着我就是，不会迷路的。
+I,B=1,是啊是啊，变态的迷宫，我也不喜欢。
+江雪儿,A=2,都已经瞎转这么长时间啦，还吹。
+江雪儿,B=2,那有没有办法快速走出去啊。
+I,A=2,迷宫很大的，所以……
+I,B=2,要不我上网找找秘籍去？
+江雪儿,A=3,废话
+江雪儿,B=3,别异想天开了，走啦。
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C51383898191DB3890D8171F22DEAC02

@@ -1,0 +1,48 @@
+id=10056
+名称=李二毛家
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<CENTER><img src="gpic://348,85,(楷体_GB2312,134,64,{Bold},{clOlive}),clWindow,涂糊得难,AT1009,0,10/2007.bmp"></CENTER>
+<p>
+
+家里收拾的干干净净的，<a href="game_npc_talk('李二毛')">李二毛</a>正在客厅喝茶。<p>
+<:game_true(1)string game_res_goods(5017,1,'绸帽'):>
+<p>
+<a href="game_page(10054)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+李二毛=1,if game_role_count(0)>1 then 你们else 您end是外地来的吧。
+I=1,河对岸来的。
+李二毛=2,今天咱村举行着三年一度的比武大赛，我看if game_sex_from_id(1) then公子else女侠end气宇不凡，可否去一试身手？
+I,A=2,唉，我这粗手笨脚的，还是不去献丑了。
+I,B=2,哦，不是本村村民也可参加？
+李二毛,A=3,if game_sex_from_id(1) then公子else女侠end过谦了，只是友谊赛，点到即止。
+李二毛,B=3,来者都是客，只要您有这个胆量，都可参赛。
+I,A,A=3,我还是不去了。
+I,A,B=3,既然如此，我且去试试看。
+I,B=3,恩，我倒想去会会诸位。
+李二毛,A,A=4,无胆鼠辈，难成大器。
+李二毛,A,B=4,比武在晒谷场上举行。
+李二毛,B=4,时间差不多了，比武在晒谷场上进行。
+I,A,A=4,……
+I,A,B=4,那先告辞了，我看看去。
+I,B=4,多谢这位兄台，告辞。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BC3C50334C6D8626316D61DE71EC94D8

@@ -1,0 +1,36 @@
+id=10427
+名称=厨房
+作者=
+属性=32
+载入后=if game_role_is_exist('江雪儿') then game_npc_talk('江雪儿') else if game_role_is_exist('慕容丽雯') then game_npc_talk('慕容丽雯') end end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://269,267,(隶书,134,200,{Bold},{clGreen}),clWindow,厨,AT1012,0,60/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+厨房里没啥吃的。<p>
+<p>
+<:game_true(1)string game_res_goods(5,1,'百年灵芝'):>
+<p>
+<a href="game_page(10425)">返回客厅</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+江雪儿=1,<img src="$apppath$img\4.bmp">：“谁煮点东西吃吃啊。”
+I=1,自己动手，丰衣足食。
+慕容丽雯=1,<img src="$apppath$img\7.bmp">：“我会烧饭，谁要吃？”
+I=1,就你这水平，不是烧焦就是太咸。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F0975806A056C03DC18CFE08903F24AA

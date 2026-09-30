@@ -1,0 +1,35 @@
+id=11349
+名称=虚无幻境四，第三关
+作者=
+属性=6
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,第三关,AT1000,0,0/2007.bmp"></CENTER>
+到汜水关后看见卞喜在远处迎接。<p>
+卞喜：将军名震天下，天下人都很敬仰你啊！现在你归顺皇叔，可谓忠义之士！<br>
+走了没多远卞喜暗自向关羽抛来飞锤。<br>
+<:game_true(1) string game_get_newname_at_id(1):>：“我还以为你是一个好人，怎么会这样！”<br>
+卞喜：你们也都是快要死的人了，我就实话说吧，我垂涎将军的青龙堰月刀已久，今日见关将军身子虚弱，正是下手的好时机。而你，谁叫你和将军一起来的，做鬼也不能怪我。<br>
+
+1。<a href="game_pop_fight_a(1,114);game_page(1)" title="">闯关</a><br>
+2。<a href="game_pop_a(3);game_page(10574)" title="">开溜</a><br>
+
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EC56CDD9BF400F4A85975AE335D62224

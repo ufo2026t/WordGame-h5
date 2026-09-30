@@ -1,0 +1,29 @@
+id=10063
+名称=婺州知府衙门
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<CENTER><img src="gpic://196,48,(宋体,134,36,{Bold},{clBlack}),clWindow,明镜高悬,AT1003,0,0/2007.bmp"></CENTER>
+<:game_check_scene_event(1009)衙门前很安静 else 衙门前贴着一个<a href="game_page(10064)" title="">布告</a>:><p>
+<:game_check_scene_event(1010)门关着 else <a href="game_page(10065)" title="">门开着</a>:><p>
+<a href="game_page(10061)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3C60BE776FE1E7829C854EB6C504067C

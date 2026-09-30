@@ -1,0 +1,41 @@
+id=11746
+名称=开封
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,皇宫,AT1002,0,0/2007.bmp"></CENTER>
+<img src="gpic://img_kfhuanggong.jpg"><p>
+北宋朝廷留下的皇宫，由于年久失修，显得比较破旧了。金军大帅金兀术居于此地。<p>
+<:if game_check_scene_event(1085) then
+现在是<strong>晚上</strong><p>
+<a href="game_pop_a(9);game_page(11753)" title="翻墙进入皇宫">翻墙进入</a>
+else
+现在是<strong>白天</strong><p>
+if game_check_goods_nmb('开封皇宫令牌',1) then
+<a href="game_page(11754)" title="进入">进入皇宫</a>
+else
+皇宫门前有金兵守卫，城墙上又有弓箭手，硬闯看来不行。先在开封市内转转。想办法去找个通行证。
+end
+end:><p>
+
+<p>
+<a href="game_page(11577)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9C6C11E77FE19F183E6EE35D58C909CF

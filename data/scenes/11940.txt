@@ -1,0 +1,32 @@
+id=11940
+名称=冰雪宫内
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,400,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,77/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,冰雪宫,AT1000,0,0/2007.bmp"></CENTER>
+<img src="$apppath$img\img_tianshan10.jpg"><p>
+房间一<p>
+<:if not game_check_res_event(game_get_pscene_id(0)) then
+一个小<a href="game_pop_a(15);game_goods_change_n('风卷残云',1);game_chat('捡到风卷残云武功秘籍一。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">书本</a>。end:><p>
+
+
+<a href="game_page(11939)">退出</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=61BBEDD90538A4448D862D284597E273

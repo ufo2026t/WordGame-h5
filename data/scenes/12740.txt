@@ -1,0 +1,43 @@
+id=12740
+名称=醉仙楼
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,醉仙楼,AT1000,0,0/2007.bmp"></CENTER>
+三层酒楼，西域最好的烈酒在此。居民都说：小酒馆骗外人，醉仙楼才是老饕去处。<p>
+<a href="game_npc_talk('酒楼掌柜')">酒楼掌柜</a><p>
+<a href="if game_check_money(200) then game_change_money(-200);game_chat('饮了醉仙楼招牌酒，豪气顿生。');game_reload_direct(0) else game_chat('一壶酒二百文。') end" title="">饮酒（200文）</a><p>
+<a href="game_page(-3)">中孚大街</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1300) then
+酒楼掌柜=1,听说你帮东来山庄夺回了令牌？来，这壶酒我请了！
+I=1,
+elseif game_check_scene_event(1283) then
+酒楼掌柜=1,莫延顿贺那厮若在，定也爱这烈酒。他从中原回来，总坛里就忙起来了。
+I=1,
+elseif game_check_scene_event(1281) then
+酒楼掌柜=1,教主手里有块碎图，来喝酒的都在议论邙山宝藏。
+I=1,
+else
+酒楼掌柜=1,客官从哪来？最近中原来的剑客多，小心九毒派的眼线。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D83FA4AC43A6196F8D9C48EDC90AA30F

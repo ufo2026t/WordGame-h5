@@ -1,0 +1,59 @@
+id=11151
+名称=淮阳乱坟岗内部
+作者=
+属性=6
+动作=
+{
+D5001=game_pop_fight_a(2,45);game_add_scene_event(1103);game_reload_direct(0)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://807,267,(隶书,134,200,{Bold},{clWindowText}),clWindow,乱坟岗,AT1010,1,68/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,房二,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1101) then
+ 房间空了。稻草上还留着半截绳索，和一枚来不及带走的木簪。姐妹们走时说，有人会在<FONT color=#"FF0000">城南破庙</FONT>等救命恩人，哪怕只说一声谢谢。<p>
+else
+里面，有<a href="game_npc_talk('对话')">一群女人</a>在哭哭啼啼的。<p>
+end:>
+<a href="game_page(11149)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1101) then
+对话=1,这里已经空了。稻草上那枚木簪，是谁走得太急落下的。姐妹们说，有人会在城南破庙等救命恩人，哪怕只说一声谢谢。
+I=1,
+end
+if game_not_scene_event(1101) and game_check_scene_event(1103) then
+对话=1,众女子@接下来怎么办？
+I=1,依计行事，我们去其他房间逐个消灭山贼。
+end
+if game_not_scene_event(1101) and game_not_scene_event(1103) then
+对话=1,女人甲@哇，哇，我的妈妈呀，快来救我啊。
+I=1,女人乙@不要，不要，不要拉我。
+对话=2,女人甲@不要打我，我听话，我听话。
+I=2,不要怕，我们是来救你们的，你们先告诉我一些情况。
+对话=3,女人丙@我们是被那些山贼抓来的，被关在这里，供这些贼人取乐。稍有不从，既遭毒打。好惨啊。
+I=3,山贼有多少人？
+对话=4,大约5-6十人。
+I=4,山贼平时都有些什么活动？
+对话=5,山贼以这里为基地，昼伏夜出，经常出去打家劫舍。
+I=5,那官府为何不来抓捕？
+对话=6,现在战乱连连，官府都自顾不暇，哪会来管这些山贼啊。可苦了我们这些女子，被关在这里暗无天日。
+I=6,嗯，可知贼人有何弱点？
+对话=7,不知
+I=7,女人甲@只知贼人每次酒后都会派两个小啰啰来这里领人，带去各个房间供头目消遣。
+对话=8,女人乙@现在过会就会来人了。
+I=[game_time_exe(4,'D5001')]8,我有办法了，我们先躲在这里，待会抓了那两个小啰啰，然后再装作送人，去各个房间逐个消灭山贼。
+对话=9,众女子@我们一切听您安排。
+I=9,嘘，有人过来了。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C883B463DF085D8E186D843171985E87

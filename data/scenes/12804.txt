@@ -1,0 +1,48 @@
+id=12804
+名称=平安京-皇宫外苑
+作者=
+属性=
+动作=
+{
+D5001=game_pop_fight_a(2,178);game_add_scene_event(1296);game_chat('源氏先锋拜北，外苑阵线大破。');game_reload_direct(0)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,外苑,AT1000,0,0/2007.bmp"></CENTER>
+<:if not game_check_goods_nmb('平安京令牌',1) then
+无令牌者不得过问。<br>
+<a href="game_page(12152)">返回</a>
+else
+<:if game_check_scene_event(1296) then
+源氏先锋已漩，外苑尽在平氏掌控之中。<br>
+1。<a href="game_page(12805)" title="">进入源氏本阵</a><br>
+elseif game_check_scene_event(1241) and game_check_scene_event(1333) then
+平氏武士在两侧拉开阵线，源氏先锋凝阵于前。<br>
+1。<a href="D5001" title="">击破源氏先锋</a><br>
+else
+百鬼未平或令牌未献，暂不宜攻外苑。<br>
+end:>
+<p>
+<a href="game_npc_talk('平氏武士')">与平氏武士交谈</a><p>
+<a href="game_page(12800)">返回内殿</a><p>
+<a href="game_page(12152)">离开皇宫</a>
+end:>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1296) then
+平氏武士=1,先锋已破，本阵就在前方。请侠士直取源氏大将首级。
+I=1,
+else
+平氏武士=1,我们拉开阵脚，请侠士击破源氏先锋。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

@@ -1,0 +1,41 @@
+id=10707
+名称=玉乳洞内
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,玉乳洞,AT1000,0,0/2007.bmp"></CENTER>
+洞内有多层，且含机关。较为难走。<p>
+多妖怪，多财宝。<p>
+不过本洞内妖怪<strong>打一个少一个</strong>，只要不出洞，妖怪不会重生。<p>
+<strong><FONT color=#"FF0000">警告</FONT></strong>：本迷宫很难走，极具挑战性。如果您不想在迷宫内花太多时间，可以走这个<a href="if game_check_scene_event(1063) then game_pop_a(80); else game_pop_a(40);game_add_scene_event(1063); end game_page(10778)" title="狂背单词，快速到达目的地">时空隧道</a>。<p>
+另外，最好带上<strong>回城卷</strong>，这样，在迷宫内走的晕头转向时，可以随时离开迷宫。<p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):>
+<p>
+<:game_true(1)string game_res_goods(0,3,'千年人参'):><p>
+
+<a href="game_page(1)" title="进入玉乳洞">进入迷宫</a>
+<p>
+<a href="game_page(10643)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0C0D048C65B2AD904B85C5A39C2F0F0B

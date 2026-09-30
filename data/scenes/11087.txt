@@ -1,0 +1,53 @@
+id=11087
+名称=苗府内
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clGreen}),clWindow,苗,AT1002,0,66/2007.bmp) fixed no-repeat center center;">
+原先苗大人很受皇上器重。只是近年情况有了变化，这使得苗大人心里积了不少怨气。<p>
+<:if game_check_scene_event(1085) then
+夜晚，静悄悄的。天上繁星点点。<p>
+if game_check_scene_event(1087) and game_check_scene_event(1090) then
+if game_sex_from_id(1) then
+苗小姐：“公子，又看到你了，真好。奇怪，你怎么一身夜行衣打扮？”<br>
+string game_get_newname_at_id(1)：“哦，没什么，这几天听说贼人多，我当心你安全，所以，所以悄悄的来看看你。”<br>
+“你真好，既然来了，天色也这么晚了，先到我房里坐一会吧。”<br>
+“啊，不了，不了，你没事就好，我先走了。”<br>
+“公子，你就这么快走了么，就不多看我一眼……”<p>
+
+else
+苗公子：“姑娘，又看到你了，真好。奇怪，你怎么一身夜行衣打扮？”<br>
+string game_get_newname_at_id(1)：“哦，没什么，这几天听说贼人多，我当心你安全，所以，所以悄悄的来看看你。”<br>
+“哇，上天保佑，你果真挂念着我，既然来了，天色也这么晚了，先到我房里坐一会吧。”<br>
+“啊，不了，不了，你没事就好，我先走了。”<br>
+“姑娘，姑娘……”<p>
+end
+end
+else
+白天，天气晴朗。<p>
+end:>
+<a href="game_page(1)" title="">进入客厅</a><p>
+<a href="game_page(2)" title="">到花园</a><p>
+<a href="game_page(3)" title="">到后院</a><p>
+<a href="game_page(4)" title="">到练功房</a><p>
+<a href="game_page(5)" title="">到仓库</a><p>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=263D1238643C49377A0B1247ADCED469

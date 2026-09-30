@@ -1,0 +1,37 @@
+id=12093
+名称=昆仑山-偏房三
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://314,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,偏房三,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('昆仑弟子')">昆仑弟子</a><p>
+<:game_true(1)string game_res_goods(0,1,'雪莲'):><p>
+
+<a href="game_page(12089)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+昆仑弟子=1,听掌门说，天下武功，皆出昆仑，是否确有其事？
+I=1,江湖上一般说法是：天下武功，皆出少林。
+昆仑弟子=2,那看来少林武功是最厉害的了。
+I=2,也不尽然，这武功是指一般的内功心法和外部拳脚棍剑之类。不过，还有更厉害的，比如魔法。
+昆仑弟子=3,魔法？是什么？
+I=3,魔法融合天地阴阳之气，内可起死回生，外可伤敌于无形。
+昆仑弟子=4,啊，有这等好东西，哪里可以学到？
+I=4,可遇不可求，有缘自然能学到。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=8E0EBB86071DA49008521B0E743BE6F1

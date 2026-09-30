@@ -1,0 +1,73 @@
+id=12552
+名称=天王山顶
+作者=
+属性=38
+载入后=game_pop_fight_a(1,171)
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,天王山,AT1000,0,0/2007.bmp"></CENTER>
+
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:if game_check_scene_event(1264) and game_not_scene_event(1265) then
+if game_check_scene_event(1268) then
+if game_check_res_event(5257) then
+run game_add_scene_event(1265);string game_res_goods(5258,1,'金牛');game_add_message('已取得镇国神器金牛，请回临安皇宫端诚殿面见圣上复命。')<p>
+<FONT color=#FF0000>获得镇国神器「金牛」。</FONT>请携此物前往临安皇宫<b>端诚殿</b>面圣复命。<p>
+这时，留意到了一个上次忽略的细节。<br>
+一些细小的泥土，看色泽不是本地泥，这是很罕见的西域白泥。<br>
+if game_role_is_exist('铁无梅') then
+铁无梅：“这土在我家有见过，乃是家父从西域带来，说是制毒的上等材料。”<br>
+“不会吧，堂堂无剑山庄庄主也做这喂毒的下三滥暗器？”<br>
+铁无梅：“当然不会，家父是拿来研究解毒用。”<br>
+else
+if game_role_is_exist('铁檑') then
+铁檑：“这土在我家有见过，乃是家父从西域带来，说是制毒的上等材料。”<br>
+“啊，堂堂无剑山庄庄主也做这喂毒的下三滥暗器？”<br>
+铁檑：“哪里，家父是拿来研究解毒的而已。”<br>
+else
+“这白泥乃是制作剧毒暗器的上等原料，仅西域出产。怎么会在这里看到？”<br>
+end
+end
+“难道，是西域毒王来过这里？先去上京的<FONT color=#FF0000>客栈酒馆</FONT>转转。看能否探听到一些消息。”
+run game_add_scene_event(1269)
+
+else
+山头上静悄悄的。
+end
+else
+山顶围着好多人<br>
+胡匪甲：你到底说不说。<br>
+胡匪乙：不说，别怪我们兄弟不客气。<br>
+ 黑衣人：我……，死也不说。<p>
+1。<a href="game_pop_fight_a(1,174);game_add_scene_event(1268);game_infobox('黑衣人：我快不行了，你们去临安，找一个外号叫黑狗的，镇国神……');game_reload_direct(0)" title="">上前助阵</a>。
+
+end
+else
+这里到山顶了，疾风劲吹。<br>
+end:>
+<:game_true(1)string game_res_goods(0,1,'金鼠'):><p>
+<p>
+
+<p>
+
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A5F61C924327911338ABBB68E7CDE764

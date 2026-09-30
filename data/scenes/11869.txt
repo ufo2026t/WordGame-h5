@@ -1,0 +1,35 @@
+id=11869
+名称=上京皇宫内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<:game_add_scene_event(1183)。:>
+金熙宗：“大侠饶命，你们要什么，我都给。”<br>
+赵小金：“就要你的命。”<br>
+金熙宗：“你是谁？我们无怨无仇，你干吗杀我。”<br>
+赵小金：“我是谁？我是赵小金。16年前，被扔出皇宫的”<br>
+金熙宗：“那都是我父皇下的令，不能怪我啊。”<br>
+赵小金：“你也不是什么好东西。”<br>
+金熙宗：“你要的人他们都在五里城，在那生活的好好的呢。”<br>
+赵小金：“好，那我先去五里城看看，先留你一条狗命。”
+<p>
+<a href="game_page(11845)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1E59CC67034FF3B05EE127651737B776

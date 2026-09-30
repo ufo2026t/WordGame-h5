@@ -1,0 +1,40 @@
+id=12204
+名称=沂州-十八里铺-村内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,李真枝家,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'千年灵芝'):><p>
+李真枝，个子小，与山东大汉的形象格格不入。所以大家都叫他<a href="game_npc_talk('小李子')">小李子</a>。
+<p>
+<a href="game_page(12198)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+小李子=1,有很多人以为沂山上有什么宝物，所以常来找五行图想过阵上山的。
+I=1,愿闻其详。
+小李子=2,其实，山上没有啥宝物，毒蝎子倒是有不少。
+I=2,你上得山过？
+小李子=3,上过，不难，关键是要按五行相生相克来走就行
+I=3,怎么个走法？
+小李子=4,木生火，火生土，土生金，金生水，水生木，为之相生
+I=4,然后呢？
+小李子=5,木克土，土克水，水克火，火克金，金克木，为之相克。
+I=5,就是说，走相生的道路，不要去走相克的道路，就能过阵。
+小李子=6,要按相生路线，中途若走错一次，就前功尽弃，需重新走过。
+I=6,谢谢你。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B923222C4B02DFF1718BF27867442927

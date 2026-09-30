@@ -1,0 +1,43 @@
+id=12592
+名称=房间四
+作者=
+属性=38
+载入后=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间四,AT1000,0,0/2007.bmp"></CENTER>
+
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:if not game_read_temp(6002) then
+ 一个小<a href="game_goods_change_n('定时炸弹',1);game_chat('捡到定时炸弹1。');game_write_temp(6002,1);game_reload_direct(0)" title="">盒子</a>。
+ else
+ 一个空盒子。
+ end:><p>
+
+
+
+
+<p>
+
+<p>
+<a href="game_page(12588)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=605BD4753278C92198C1A3C4096D6E49

@@ -1,0 +1,45 @@
+id=11772
+名称=开封皇宫内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,翠微殿,AT1002,0,0/2007.bmp"></CENTER>
+华丽的宫殿。<p>
+<:if game_check_scene_event(1137) then
+if game_check_scene_event(1195) then
+金兀术不在。
+else
+金兀术：“你们还是找上门来了。”<br>
+string game_get_newname_at_id(1)：“呸，我中原大地，怎么成你的门了。”<br>
+金兀术：“胜者为王，天公地道。”<br>
+string game_get_newname_at_id(1)：“胜者为王，来吧，今天让见识见识我中华武功。”<br>
+金兀术：“哈哈，贪生怕死不是我胡人本色。”<p>
+1。<a href="game_pop_fight_a(1,141);game_goods_change_n('镇妖神镜',1);game_add_scene_event(1195);game_chat('金兀术跑了，您得到了镇妖神镜。');game_reload_direct(0)">开战</a>。<p>
+2。<a href="game_page(11762)">逃跑</a>。
+end
+else
+里面没人。
+end:>
+
+
+<p>
+<a href="game_page(11762)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3EF8EB71CF9721F8577F58149EA250C5

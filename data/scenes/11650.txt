@@ -1,0 +1,42 @@
+id=11650
+名称=少林寺-法堂
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,法堂,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_page(1)" title="">禅室1</a><p>
+<a href="game_page(3)" title="">禅室2</a><p>
+<a href="game_page(4)" title="">客堂1</a><p>
+<a href="game_page(6)" title="">客堂2</a><p>
+<a href="game_npc_talk('少林弟子')" title="">藏经阁</a><p>
+<a href="game_page(5)" title="">方丈室</a><p>
+<p>
+<a href="game_page(-2)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+少林弟子=1,藏经阁乃少林重地，非少林弟子，一律不准进入。
+I,A=1,我这有10万金钱，给你买酒喝，让我进去吧。
+I,B=1,有其他方法能通融一下吗
+I,C=1,这样啊，那我不进去了。
+少林弟子,A=2,佛门弟子，不贪财物，不近酒色。
+少林弟子,B=2,按寺里的规矩，如若能胜了我等，可以进入。
+少林弟子,C=2,哦弥陀佛
+I,A=2,真是榆木脑袋。
+I,B=[game_pop_fight_a(4,126);game_page(2)]2,那就多有得罪了，请。
+I,C=2,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B82B9BB7568EB300BC2B178A5990390F

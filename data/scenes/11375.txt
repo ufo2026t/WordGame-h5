@@ -1,0 +1,70 @@
+id=11375
+名称=万松书院-东院
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://260,64,(隶书,134,48,{Bold},{clBlack}),clWindow,实务真求,AT1003,0,0/2007.bmp"></CENTER>
+书院内稀稀拉拉的坐了几个人。<p>
+<:game_true(1)string game_res_goods(0,1,'蜂王浆'):><p>
+<a href="if game_check_scene_event(1116) then game_chat('读书人甲：明白了，多谢指教。') else game_npc_talk('读书人甲') end">读书人甲</a><p>
+<a href="game_npc_talk('读书人乙')">读书人乙</a><p>
+<a href="game_npc_talk('读书人丙')">读书人丙</a><p>
+<a href="game_npc_talk('读书人丁')">读书人丁</a><p>
+
+<p>
+<a href="game_page(11374)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+读书人甲=1,子曰：朝闻道夕死足矣。何解？
+I=[game_add_scene_event(1116)]1,道者，天地之始，万物之根。闻道，则洞悉天地，自无惧生死矣。
+读书人甲=2,听君一席话，胜读十年书。
+I=2,
+读书人乙=1,圣人作易，为趋吉避凶乎？
+I=1,善占者不易，善易者不占。
+读书人丙=1,信州有胆泉，入铁可出铜。世人皆称奇。
+I=1,
+if game_check_scene_event(1224) then
+读书人丁=1,太谢谢您了，最近精神好多了。
+I=1,
+else
+if game_check_scene_event(1225) then
+读书人丁=1,你晚上一定要来帮我捉妖啊，我担心死了。
+I=1,嗯，你放心，我会来的。
+else
+读书人丁=1,最近总感觉腰酸腿软，头晕目眩。我是不是读书太用功了？
+I=1,不对，我看你脸上有妖气。
+读书人丁=2,不要吓唬我，我很胆小的。
+I=2,确实有妖气，这样，你说说，最近有什么遭遇？
+读书人丁=3,这个，我，这个，我
+I=3,别吞吞吐吐的，妖气再重，你小命就没了。
+读书人丁=4,啊，大侠救我，我说，我前段时间，在书院后面的树林，偶遇一窈窕女子，我们志趣相投，互相爱慕，两情相悦……
+I=4,嗯，说重点
+读书人丁=5,然后，她每晚都会来我房间，半夜陪读，红袖添香，这真乃人生一大乐事也。
+I=5,有问过这女的来历吗？
+读书人丁=6,没，只知半夜应时而来，鸡鸣便回。
+I=6,你可真是书呆子，你想，良家女子有这么来无影去无踪的吗？
+读书人丁=[game_add_scene_event(1225)]7,那我现在如何是好？
+I=7,这样，我先去客栈休息，半夜我来找你。
+读书人丁=8,好，好，多谢大侠
+I=8,
+end
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=950E46D860F51645515CC44B1AE2C39D

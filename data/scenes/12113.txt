@@ -1,0 +1,36 @@
+id=12113
+名称=唐招提寺
+作者=
+属性=
+TempKey=唐招提寺
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://371,56,(隶书,134,42,{Bold},{clRed}),clWindow,唐招提寺,AT1000,0,0/2007.bmp"></CENTER>
+唐朝高僧鉴真所建。<p>
+寺院大门上红色横额“唐招提寺”是日本孝谦女皇仿王羲之、王献之的字体所书<p>
+
+<a href="game_page(1)" title="">金堂</a><p>
+<a href="game_page(2)" title="">讲堂</a><p>
+<a href="game_page(3)" title="">经藏</a><p>
+<a href="game_page(4)" title="">宝藏</a><p>
+
+<p>
+<a href="game_page(12104)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=72B906AA453782F80CD43B91EFCE9EEB

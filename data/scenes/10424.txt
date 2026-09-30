@@ -1,0 +1,62 @@
+id=10424
+名称=八咏楼
+作者=
+属性=1
+TempKey=八咏楼
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://807,267,(隶书,134,200,{Bold},{clGreen}),clWindow,八咏楼,AT1012,0,60/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+墙上有一首诗：<p>
+<strong>千古风流八咏楼</strong>，<br>
+<strong>江山留与后人愁</strong>。<br>
+<strong>水通南国三千里</strong>，<br>
+<strong>气压江城十四州</strong>。<p>
+<:if game_check_scene_event(10424) then
+——李清照
+else
+请问这首诗是谁人所提：<p>
+1。<a href="game_infobox('不对')" title="">王安石</a><br>
+2。<a href="game_add_scene_event(10424);game_goods_change_n('百剑幻影',1);game_infobox('答对啦，您得到了一本武功秘籍，百剑幻影');game_reload_direct(0)" title="">李清照</a><br>
+3。<a href="game_infobox('不对')" title="">柳永</a>
+end:><p>
+<:if game_check_scene_event(1044) then
+游客甲：“西山的土匪北山的妖”<br>
+ 游客乙：“不要乱说，黑我大婺州”<p>
+else
+ 游客甲：“天外天山庄的酒色财气四大高手号称无人能敌”<br>
+ 游客乙：“那是吹牛，要知道天外有天，人外有人。”<p>
+end:><p>
+<:if game_role_is_exist('江雪儿') then
+  江雪儿：“滔滔江面烟波浩渺，要是有个小船去划水多好啊。”<p>
+end
+if game_role_is_exist('慕容丽雯') then
+ 慕容丽雯：“滚滚江水荡尽多少英雄豪杰，却荡不尽几多哀愁”<p>
+end:>
+<:if not game_check_scene_event(1311) and not game_role_is_exist('西门菲菲') and game_grade('无名',8) then
+侧厅通往<a href="game_page(12820)" title="八咏楼茶榭">西门茶榭</a>，隐约传来琴声。<p>
+elseif game_check_scene_event(1311) then
+西门菲菲常到<a href="game_page(12820)">西门茶榭</a>小坐。<p>
+end:>
+<:if game_role_is_exist('西门菲菲') then
+西门菲菲：“八咏楼风大，诗稿别被吹跑了。”<p>
+end:>
+<p>
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E148D49C9A45E0E54D8605E0552B5108

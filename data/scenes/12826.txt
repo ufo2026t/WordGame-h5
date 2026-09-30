@@ -1,0 +1,31 @@
+id=12826
+名称=可可西里荒原
+作者=
+属性=38
+载入后=game_pop_fight_a(1,37)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,荒原,AT1000,0,0/2007.bmp"></CENTER>
+远处传来藏羚羊的哀鸣，似乎更接近盗猎者活动区域了。<p>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+ <a href="game_pop_a(2);game_page(12827)">前进</a><p>
+ <a href="game_pop_a(2);game_page(12829)">跳跃前进</a><p>
+<a href="game_pop_a(2);game_page(12825)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F6789012345678ABCD12826AA

@@ -1,0 +1,69 @@
+id=12676
+名称=山庄大厅
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,山庄大厅,AT1000,0,0/2007.bmp"></CENTER>
+正堂悬「东来」匾额，两侧陈列刀枪架。庄中弟子往来，与九毒派井水不犯河水。<p>
+<:if game_role_is_exist('丝路花雨') and game_check_scene_event(1318) then
+丝路花雨：“庄主听说花雨的舞，要在大厅排一出新戏呢。”<p>
+end:>
+<a href="game_npc_talk('庄主')">庄主</a><p>
+<a href="game_npc_talk('东来弟子')">东来弟子</a><p>
+<:if game_check_scene_event(5300) and not game_check_scene_event(1300) then
+<a href="game_add_scene_event(1300);game_change_money(1500);game_goods_change_n('降魔镖',1);game_add_message('东来山庄谢礼：一千五百文与降魔镖一支。');game_chat('庄主：东来令失而复得，全仰侠士！此镖聊表寸心。');game_reload_direct(0)" title="">交还东来令</a><p>
+elseif game_check_scene_event(1300) then
+<FONT color=#008000>东来令已交还，庄主对你十分敬重。</FONT><p>
+end:>
+<a href="game_page(1)">练武厅</a><br>
+<a href="game_page(2)">走廊</a><br>
+<a href="game_page(9)">后院</a><br>
+
+
+<p>
+<a href="game_page(-1)">东来山庄</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1288) then
+庄主=1,藏宝图碎块既已取走，九毒派与中原的纠葛怕是要升级了。
+I=1,
+elseif game_check_scene_event(1281) then
+庄主=1,九毒派近日闭门不出，似在图谋邙山宝藏。你若要去总坛，先备好解毒之物。
+I=1,多谢庄主提醒。
+庄主=2,后巷房间可歇息；前厅练武厅中有弟子切磋，也可看看。
+I=2,
+elseif game_check_scene_event(1289) and not game_check_scene_event(5300) then
+庄主=1,公子说信物在后院房间四，请侠士速去夺回东来令。
+I=1,
+elseif game_check_scene_event(1318) and game_role_is_exist('丝路花雨') then
+庄主=1,听说戏院里那位丝路花雨舞得好，连九毒派大小姐都去捧场了。
+I=1,花雨是我们的伙伴。
+庄主=2,好好，有缘再来坐坐。
+I=2,
+elseif game_check_scene_event(1300) then
+庄主=1,侠士高义，东来山庄永志不忘。邙山宝藏之事，还望多加小心。
+I=1,
+else
+庄主=1,西州地界，我东来山庄虽不敌九毒派声势，却从不使毒。
+I=1,久仰大名。
+东来弟子=1,庄主常说：行走西域，先识毒，再识人。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F4EC1FBB81449043B33447E10E456A71

@@ -1,0 +1,42 @@
+id=11374
+名称=万松书院
+作者=
+属性=
+TempKey=万松书院
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://260,64,(隶书,134,48,{Bold},{clBlack}),clWindow,万松书院,AT1003,0,0/2007.bmp"></CENTER>
+万松书院是明清时期杭州规模最大、历时最久、影响最广<br>
+的浙江省文人汇集之地,办学达四百多年之久。<br>
+这里造就了《随园诗话》作者袁枚等莘莘学子。<br>
+梁山伯与祝英台就是在这里同窗共读三年,演绎了中国四大民间传说之一的绝美爱情故事。<p>
+<:if not game_check_scene_event(1085) then
+<b>白天</b><p>
+<a href="game_page(1)" title="">东院</a><p>
+<a href="game_page(2)" title="">西院</a><p>
+else
+<b>夜晚</b><p>
+end:>
+<a href="game_page(12167)" title="">书院小树林</a><p>
+<a href="game_page(12175)" title="">书院宿舍</a>
+<p>
+<a href="game_page(10922)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B24120D387847C7800FFFA891343D2AF

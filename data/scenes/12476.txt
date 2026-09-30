@@ -1,0 +1,39 @@
+id=12476
+名称=天蓬山庄
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,山庄走廊,AT1000,0,0/2007.bmp"></CENTER>
+一条狭长的走廊。
+<a href="game_npc_talk('山庄武师')">山庄武士</a><p>
+<:game_true(1)string game_res_goods(0,1,'千年人参'):><p>
+
+<a href="game_page(1)">前行</a><br>
+
+
+<p>
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+山庄武师=1,嘻嘻，看你也像个练家子，咱们来比武比武如何？
+I,A=[game_pop_game(2,158);game_infobox('武师：人不可貌相啊，想不到你竟然这么厉害。')]1,好
+I,B=1,不和你比
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2D254523A8C41787DB066560B4B21DA6

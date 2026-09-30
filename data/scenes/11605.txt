@@ -1,0 +1,37 @@
+id=11605
+名称=飞龙帮
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,飞龙帮,AT1002,0,0/2007.bmp"></CENTER>
+<a href="game_page(11665)" title="">大厅</a><p>
+<a href="game_page(11666)" title="">前院</a><p>
+<a href="game_page(11667)" title="">后院</a><p>
+<a href="game_page(11668)" title="">听雨轩</a><p>
+<:game_random_chance(3)
+<a href="game_npc_talk('家丁')">家丁</a><p>:>
+<:game_random_chance(3)
+<a href="game_npc_talk('家丁2')">家丁2</a><p>:>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+家丁=1,少帮主天天两功很刻苦，真是苦了这孩子，唉
+I=1,
+家丁2=1,听老帮主说，少林寺的易筋经，乃武林奇学，只可惜，无人能见识此书真面目。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F4DEAE2793B7D634FC1548A11AC498D3

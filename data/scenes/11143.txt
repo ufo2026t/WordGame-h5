@@ -1,0 +1,37 @@
+id=11143
+名称=淮阳乱坟岗
+作者=
+属性=38
+载入后=game_pop_fight_a(1,106)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://807,267,(隶书,134,200,{Bold},{clWindowText}),clWindow,乱坟岗,AT1010,1,68/2007.bmp) fixed no-repeat center center;">
+
+月亮下山了，有云，少少的几颗星星，更显得天穹深不可测。<p>
+呼呼的阴风吹过，树梢发出沙沙的响声。<p>
+偶尔，老鼠爬过。<p>
+<:game_true(1)string game_res_goods(0,1,'上等木炭'):><p>
+ <:game_true(1)exeing game_include_str('biao_yuedu.upp'):> <p>
+<a href="game_page(1)" title="">前进</a><p>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=862A303F6E638C2F07C23B231324C05E

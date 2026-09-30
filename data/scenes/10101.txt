@@ -1,0 +1,52 @@
+id=10101
+名称=宾至如归客房2
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,客房二,AT1005,0,0/2007.bmp"></CENTER>
+<p>
+ <:game_true(1)string game_res_goods(5036,1,'玫瑰花'):>
+ <p>
+客房内住着一对<a href="game_npc_talk('小夫妻')">小夫妻</a>。<p>
+<p>
+
+<a href="game_page(10099)">返回客栈二楼走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+小夫妻=1,if game_role_count(0)>1 then 也不敲门，怎么就闯进来了，还有王法没有？else 这丫头片子怎么一点教养都没有的。end
+if game_role_count(0)>1 then
+同伴=1,
+if game_sex_from_id(1) then
+;;如果主角是男的
+if game_role_sex_count(0)>1 then
+I=1,这么多MM，一枝花，送给谁好呢，先收起来再说。
+else
+I=1,string game_get_newname_at_id(game_get_fm_1(0)),这个花送给你。
+end
+else
+;;如果主角是女的
+if game_role_sex_count(1)>0 then
+I=1,string game_get_newname_at_id(game_get_fm_1(1))@string game_get_newname_at_id(1),这个花送给你。
+else
+I=1,这破玫瑰，要它何用。
+end
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BAD92F93E0B188FF224BD95493105C27

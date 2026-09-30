@@ -1,0 +1,31 @@
+id=11330
+名称=牡蛎岛平台
+作者=
+属性=38
+载入后=game_pop_fight_a(1,110)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://645,213,(隶书,134,160,{Bold},{clFuchsia}),clWindow,牡蛎岛,AT1001,0,65/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clOlive}),clWindow,牡蛎岛,AT1002,0,0/2007.bmp"></CENTER>
+迷宫走到尽头，眼前是一处临海的小平台，潮声在脚下回荡。<p>
+礁岩上刻着半旧的法阵纹路，当地采蚝人说，踏此阵可直回岛上入口，省得再钻一遍蟹穴。<p>
+<a href="game_pop_a(3);game_page(11315)" title="返回牡蛎岛入口">法阵<img src="$apppath$img\fazhen.gif" border="0"></a><p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4FA71087685BD634AC33063D9807B965

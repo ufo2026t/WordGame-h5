@@ -1,0 +1,56 @@
+id=10057
+名称=村长家
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<CENTER><img src="gpic://348,85,(楷体_GB2312,134,64,{Bold},{clOlive}),clWindow,来东气紫,AT1003,0,10/2007.bmp"></CENTER>
+<p>
+
+李大爷已经担任村长很多年了，在村里威望很高。<p>
+您是否有事情和<a href="game_npc_talk('李大爷')">李大爷</a>谈谈？<p>
+
+<:game_true(1)string game_res_goods(5018,1,'绸披风'):>
+<p>
+<a href="game_page(10054)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_res_event(9000) then
+;;表示接受了任务，这里完成
+李大爷=1,
+I=1,这里有给您的一封信，客栈老板托我带来的。
+李大爷=2,哦，我看看。
+I=2,给
+李大爷=[game_add_scene_event(1005);game_comp_task(9000)]3,果然，多谢if game_sex_from_id(1) then公子else女侠end，这是一点小意思。
+I=3,谢谢李大爷。
+else
+if game_check_scene_event(1331) then
+李大爷=1,今年风调雨顺，收成很好。
+else
+李大爷=1,今天村里正在比武，这位if game_sex_from_id(1) then公子else女侠end是否有意前去打擂？
+I=1,不知怎么个比法？
+李大爷=2,一对一淘汰制。比到现在估计还剩下4位，您若胜了他们，就是头名了。
+I=2,李大爷@金兵屡犯中原，只可惜朝廷昏庸，我等志士难为国出力，唉。
+李大爷=3,最近听说岳元帅连战连捷，可喜可贺啊。
+I=3,甚是，甚是。
+李大爷=4,呆会我去晒场，比赛就要开始了。
+end
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A3032F1D73567E8702B780B18A941FAF

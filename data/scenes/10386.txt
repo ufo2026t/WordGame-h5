@@ -1,0 +1,39 @@
+id=10386
+名称=古墓主墓室
+作者=
+属性=38
+载入后=game_pop_fight_a(3,52)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clWindow,古墓,AT1012,1,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+古墓最深处。<p>
+由于年代久远，墓里的东西大多已经腐朽。<p>
+虽然此古墓机关众多，走道上也有不少尸骨，但主墓室内，还是被盗了，且不只一次。<p>
+<a onMouseOver=location.href="game_role_value_half(0);game_chat('中了乱箭，全体生命值减半。')">地上散落着一些不值钱的东西，顶上的石壁上隐约可见<FONT color=#"FF0000">射箭孔</FONT>，很可能内部有弩机。</a>
+<p>
+
+<:game_true(1)string game_res_goods(0,1,'凌波斩'):>
+<:game_true(1)string game_res_goods(5239,1,'龙精甲'):>
+<p>
+<a href="game_pop_a(2);game_page(10346)" title="离开墓室">法阵<img src="$apppath$img\fazhen.gif" border="0"></a><p>
+;;<a href="game_page(game_random_chance_2(5))" title="走到哪算哪">随机跳转</a><p>
+<a href="game_pop_a(2);game_page(-1)">返回前页</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=DB7BF6EBD385D94989CFEB3BA0B5CC88

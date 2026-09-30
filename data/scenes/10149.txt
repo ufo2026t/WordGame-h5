@@ -1,0 +1,92 @@
+id=10149
+名称=柳树林
+作者=
+属性=38
+载入后=game_pop_fight_a(1,19)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,40/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+柳树林里面错综复杂。<p>
+且常有野猪出没。<p>
+<:if game_sex_from_id(1) then
+if game_not_scene_event(1003) and game_not_scene_event(1028) then
+ 见一<a href="game_can_stop_chat(0);game_npc_talk('江雪儿')">不明人物<img src="$apppath$img\4.bmp"></a>也在柳树林。
+end
+else
+if game_not_scene_event(1038) and game_not_scene_event(1039) then
+ 见一<a href="game_can_stop_chat(0);game_npc_talk('不明人物')">不明人物<img src="$apppath$img\1.bmp"></a>也在柳树林。
+end
+end:><p>
+<p>
+<a href="game_pop_a(2);game_page(10150)">进入树林深处往南</a>
+<p>
+<a href="game_pop_a(2);game_page(10148)">树林出口</a><p>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<a href="game_pop_a(2);game_page(10001)">退出柳树林</a><p>
+<:game_true(1)string game_res_goods(5053,1,'草帽'):>
+<:game_true(1)string game_res_goods(5,1,'一年生草药'):>
+<p>
+<strong>小试身手：</strong><p>
+您知道“Mr. Murrel has got a big head.”的正确翻译是：<p>
+A： <a href="game_infobox('很遗憾，您答错了。')" title="选择这个？">莫雷尔先生的头长得很大。</a><p>
+B： <a href="game_infobox('选择正确，您的生命值体力和灵力补充到全满了。');game_role_all_mtl(1)" title="这个看起来也像是正确的？">莫雷尔先生自高自大。</a><p>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_sex_from_id(1) then
+江雪儿=1,
+I=1,<img src="$apppath$img\0.bmp">：你是人是妖？
+江雪儿=2,你才是妖怪呢。我乃<FONT color=#"FF0000">婺州</FONT>人士，听说河西镇好玩，就来这里转转。
+I=2,镇上以前还好，现在到处都是妖怪，不好玩了。不过婺州是大地方，应该比这繁华多了吧。
+江雪儿=3,那是自然。这柳树林多小妖，你来这干吗？打怪？
+I=3,是的，我等级偏低，来这练练级呢，你会法术吗？
+江雪儿=4,会哦，想学？
+I=4,怎么学？怎么用？
+江雪儿=5,在野外迷宫内可捡到一些武功秘籍，然后在属性窗口的特殊物品列表内点击“学习此技能”就可以了。
+I=5,怎么用？
+江雪儿=6,在战斗时，我方策略窗口上点击“术”按钮，然后选择一个法术就可以了。
+I=6,法术有哪些种类？
+江雪儿=7,法术和物品一样，分攻击类的和恢复类的，到时候看提示就明白啦。
+I,A=7,嗯，明白了，谢谢，可以和你一起打怪不？多个人多份力量了。（加入新队员）
+I,B=7,恩，明白了，谢谢，我去打怪了，再见。（不加入新队员）
+江雪儿,A=[game_can_stop_chat(1);game_add_scene_event(1028);game_add_friend('江雪儿',1)]8,好。
+江雪儿,B=[game_can_stop_chat(1);game_add_scene_event(1028)]8,恩，你去吧，我先回家了，有机会可以来<FONT color=#"FF0000">婺州</FONT>找我，在<FONT color=#"FF0000">渡口</FONT>坐船就可以到婺州。
+I,A=8,
+I,B=8,行，我会来婺州的。
+else
+不明人物=1,女侠你好啊，来这打怪？
+I=1,<img src="$apppath$img\-1.bmp">：是的，这没啥风景好看，只好打怪练级了。
+不明人物=2,不是，您别误会，我也是听说这边怪好打，适合练级，才来这里打怪的，想来你我是同行了。
+I=2,唉，这样啊，不知你会不会法术？
+不明人物=3,我不会，不过可以学啊，在迷宫内会能捡到武功秘籍，这是一些怪偷去后掉在那里的，我们捡来，就能在“属性”窗口的特殊物品栏目内看到，并点击“学习此技能”就能学会了。
+I=3,那学会后怎么用？
+不明人物=4,在战斗时，出现我方策略窗口时，鼠标点击“术”按钮，就会出现法术列表，然后点击一个法术即可。
+I=4,法术有分别吗？
+不明人物=5,有，法术分几种，攻击类的和恢复类的，攻击的打怪，恢复的可以给队员加血。还有单体攻击，全体攻击等。
+I=5,这么麻烦？
+不明人物=6,不麻烦，使用很简单的，根据实际情况灵活运用即可。当然，不用法术也行，也能打的。
+I,A=6,哦，看你懂的蛮多的，咱们一起去打怪吧（加入新队员）
+I,B=6,哦，知道了，我去打怪了，再见。（不加入新队员）
+不明人物,A=[game_can_stop_chat(1);game_add_scene_event(1038);game_add_friend('胡飛',1)]7,好。
+不明人物,B=[game_can_stop_chat(1);game_add_scene_event(1039)]7,再见，接下来，我要去<FONT color=#"FF0000">临安</FONT>了，以后有缘临安再会。
+I,A=7,
+I,B=7,恩，拜拜。
+
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=CEA93DA1EE769B7E572A861AC73D75EC

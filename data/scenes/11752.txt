@@ -1,0 +1,41 @@
+id=11752
+名称=开封
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,金兵大营,AT1002,0,0/2007.bmp"></CENTER>
+<:game_check_scene_event(1085)
+现在是<strong>晚上</strong>。<p>
+
+else
+现在是<strong>白天</strong><p>
+
+:><p>
+<a href="game_pop_a(3);game_page(11786)">金营一</a><p>
+<a href="game_pop_a(3);game_page(11787)">金营二</a><p>
+<a href="game_pop_a(3);game_page(11788)">金营三</a><p>
+<a href="game_pop_a(3);game_page(11789)">金营四</a><p>
+<a href="game_pop_a(3);game_page(11790)">金营五</a><p>
+<a href="game_pop_a(5);game_page(11791)">金兵大营</a><p>
+
+<p>
+<a href="game_page(11577)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6132FB4191AFC53DF9DD201263BB8A75

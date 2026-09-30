@@ -1,0 +1,44 @@
+id=12742
+名称=居民乙
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,居民乙,AT1000,0,0/2007.bmp"></CENTER>
+ 居民院中，老人晒着胡杨木。<p>
+<a href="game_npc_talk('老人')">老人</a><p>
+<p>
+<a href="game_page(-5)">中孚大街</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+老人=1,老了老了，只愿丝路太平，少些打打杀杀。
+I=1,最近城里有什么事？
+if game_check_scene_event(1288) then
+老人=2,听说有人从九毒教主手里夺了碎块，年轻人都在议论，我只是怕生乱子。
+I=2,
+elseif game_check_scene_event(1300) then
+老人=2,东来令夺回来了，公子请室友，街上可欢喜了一阵。
+I=2,
+else
+老人=2,九毒派和东来山庄隔街相望，看着和气，其实暗地里斗着呢。
+I=2,
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=476C0AA892F93F6F8297EF4A406DFF8D

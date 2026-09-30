@@ -1,0 +1,48 @@
+id=12798
+名称=主线胜利
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<:if game_not_scene_event(1291) then run game_add_scene_event(1291) end:>
+<CENTER><img src="gpic://432,107,(黑体,134,80,{Bold},{clYellow}),clNavy,功成江湖,AT1001,0,0/2007.bmp"></CENTER>
+<p>
+<CENTER><img src="gpic://98,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,神镜归位,AT1000,0,0/2007.bmp"></CENTER>
+<p>
+七块藏宝图碎片归位，邙山秘藏重见天日，前朝遗愿终得圆满。<br>
+神镜传说主线至此告一段落，然江湖路远，恩怨情仇未必就此终结。<p>
+string game_get_newname_at_id(1)：“今日之功，非一人之力可成——<FONT color=#FF0000>神镜传说主线通关</FONT>。”<br>
+若有余兴，仍可仗剑天涯；若欲歇息，亦可在此存盘留念。<p>
+
+<hr>
+<table width="75%" border="0" align="center">
+  <tr>
+    <td><a href="game_save_panel(0)" title="保存并可导出存盘码">保存进度</a></td>
+    <td><a href="game_page(11577)" title="前往开封继续探索">继续闯荡</a></td>
+  </tr>
+  <tr>
+    <td><strong><a href="game_start_now(0);if game_question('请定义主角性别，选择“是”为男，选择“否”为女。') then game_change_sex('无名',1) else game_change_sex('无名',0) end" title="重新开始游戏">新的征程</a></strong></td>
+    <td><a href="game_page(10000)" title="返回开始界面">返回标题</a></td>
+  </tr>
+</table>
+<p>
+<a href="game_page(12797)" title="">回到宝藏石室</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A1B2C3D4E5F6789012345678ABCDEF01

@@ -1,0 +1,122 @@
+id=12366
+名称=村西路口
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,路口,AT1000,0,0/2007.bmp"></CENTER>
+<p>
+<:if game_check_scene_event(1001) then
+村庄的路口有个凉亭，经常有村民聚集聊天，可以打听。
+else
+路口凉亭里有人在聊天：<p>
+刘大娘说：“听说婺州城里有<FONT color=#FF0000>藏宝图</FONT>出现，各路高手都准备出动呢。”<br>
+ 赵大妈说：“说是前朝儿皇帝留下来的宝藏。”<br>
+村民乙说：“咳咳，这事儿保不准是真的，我听我爷爷说起过。”
+end:><p>
+
+<a href="if game_grade('无名',5) or game_check_role_values('无名',19,2500) then game_chat('本任务限5级，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('村民老六') end">村民老六</a><br>
+<a href="if game_grade('无名',6) or game_check_role_values('无名',19,3000) then game_chat('本任务限6级，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('村民李') end">村民李</a><br>
+
+<a href="game_npc_talk('村民甲')">村民甲</a><br>
+<a href="game_npc_talk('村民乙')">村民乙</a><br>
+<a href="game_npc_talk('村民丙')">村民丙</a><br>
+<a href="game_npc_talk('村民丁')">村民丁</a><br>
+村民<a href="game_npc_talk('王麻子')">王麻子</a><p>
+<a href="game_npc_talk('棋叟')">棋叟</a><p>
+<a href="if game_grade('无名',6) or game_check_role_values('无名',19,3000) then game_chat('本任务限6级，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('村民朱') end">村民朱</a>
+<p>
+
+<a href="game_page(11401)">返回</a><br>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+村民甲=1,中原战乱，这逃难的人一拨一拨的到这儿来了。
+I=1,
+村民乙=1,当今朝廷，苟安于一隅，咋不早日迎请二圣还朝呢？
+I=1,村民戊@嘘，你想啊，二圣回朝，当今皇上还坐的住吗？
+村民丙=1,听说，离这不远的黄鹤台遗址，有不少妖怪出没。村民们都不敢去那里。
+I=1,
+村民丁=1,从小镇码头可以坐船去婺州，临安，汴京，方便快捷就是船价太贵了。
+I=1,
+
+if game_check_res_event(9019) then
+if game_check_goods_nmb('千年灵芝',1) then
+村民老六=1,对，要的就是千年灵芝。
+I=[game_goods_change_n('千年灵芝',-1);game_comp_task(9019);game_infobox('您得到了500金币，300经验，');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+村民老六=1,您采的千年灵芝数量不够。
+end
+else
+村民老六=1,可帮我找1份<FONT color="#FF0000">千年灵芝</FONT>吗？
+I,A=[game_add_task(9019)]1,接受任务
+I,B=1,我现在没空。
+end
+
+if game_check_res_event(9020) then
+if game_check_goods_nmb('何首乌',1) then
+王麻子=1,对，要的就是何首乌。
+I=[game_goods_change_n('何首乌',-1);game_comp_task(9020);game_infobox('您得到了100金币，100经验');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+王麻子=1,您采集的何首乌数量不够。
+end
+else
+王麻子=1,可帮我找1份<FONT color="#FF0000">何首乌</FONT>吗？
+I,A=[game_add_task(9020)]1,接受任务
+I,B=1,我现在没空。
+end
+
+if game_check_res_event(9021) then
+if game_check_goods_nmb('蜂王浆',1) then
+村民李=1,对，要的就是蜂王浆。
+I=[game_goods_change_n('蜂王浆',-1);game_comp_task(9021);game_infobox('您得到了200金币，100经验');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+村民李=1,您采集的蜂王浆数量不够。
+end
+else
+村民李=1,可帮我找1份<FONT color="#FF0000">蜂王浆</FONT>吗？
+I,A=[game_add_task(9021)]1,接受任务
+I,B=1,我现在没空。
+end
+
+if game_check_res_event(9022) then
+if game_check_goods_nmb('牛黄',1) then
+村民朱=1,对，要的就是牛黄。
+I=[game_goods_change_n('牛黄',-1);game_comp_task(9022);game_infobox('您得到了100金币，200经验');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+村民朱=1,您采集的牛黄数量不够。
+end
+else
+村民朱=1,可帮我找1份<FONT color="#FF0000">牛黄</FONT>吗？
+I,A=[game_add_task(9022)]1,接受任务
+I,B=1,我现在没空。
+end
+棋叟=1,来下盘五子棋如何？
+I,A=1,我不会下棋呢。
+I,B=[game_wuziqi(0)]1,我五子棋水平很差，白痴一样的，试试看吧。
+I,C=[game_wuziqi(1)]1,嗯，来个入门水平的
+I,D=1,下棋有什么好处？
+棋叟,A=2,五子棋很容易，只要想办法连成五个棋子就赢了。
+棋叟,B=2,看好了
+棋叟,C=2,看好了
+棋叟,D=2,下棋可提高形象思维能力。
+I,A=2,
+I,B=2,
+I,C=2,
+I,D=2,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BACA001E5C108E403574987591C18C48

@@ -1,0 +1,41 @@
+id=12674
+名称=杂货铺
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,杂货铺,AT1000,0,0/2007.bmp"></CENTER>
+ 南北杂货齐备，回城卷与干粮最受欢迎。<p>
+西州的杂货店。<p>
+<a href="game_npc_talk('掌柜')">掌柜</a><p>
+<a href="game_trade(16,0)" title="">买杂货</a><p>
+<a href="game_trade(16,1)" title="">卖杂货</a><p>
+
+
+
+<p>
+<a href="game_page(-26)">西州城</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+掌柜=1,回城卷、干粮、火把最好卖，迷宫里用得着。
+I=1,去邙山要什么？
+掌柜=2,藏宝图碎块齐了再说。你先在城里打听九毒派的下落。
+I=2,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=40AA0EE8EF48878B415B5B1C9F7F8FC2

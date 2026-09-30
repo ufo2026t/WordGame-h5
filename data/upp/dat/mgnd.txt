@@ -1,0 +1,22 @@
+<:if game_read_factor(0)=20 then
+1。<strong>难度和经验值加倍（√）</strong><br>
+else
+1。<a href="game_write_factor(20);game_reload_direct(0)" title="迷宫内怪物的攻打难度和获得的经验值均是标准的两倍">难度和经验值加倍</a><br>
+end
+if game_read_factor(0)=0 then
+2。<strong>标准（√）</strong><br>
+else
+2。<a href="game_write_factor(0);game_reload_direct(0)" title="默认的难度和经验值，也许不一定适合你。">标准</a><br>
+end
+if game_read_factor(0)=5 then
+3。<strong>经验值和难度减半（√）</strong><br>
+else
+3。<a href="game_write_factor(5);game_reload_direct(0)" title="怪的攻击力，生命值和经验值只有默认值的一半">经验值和难度减半</a><br>
+end
+if game_read_factor(0)=3 then
+4。<strong>三分之一（√）</strong><br>
+else
+4。<a href="game_write_factor(3);game_reload_direct(0)" title="怪的生命力和攻击力和经验值只默认值的三分之一">三分之一</a><br>
+end
+:>
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

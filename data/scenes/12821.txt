@@ -1,0 +1,46 @@
+id=12821
+名称=可可西里垭口
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://314,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,可可西里,AT1000,0,0/2007.bmp"></CENTER>
+<img src="gpic://img_kunlun1.jpg"><p>
+海拔四千余米，空气稀薄，远处可见藏羚羊群影。昆仑巡山人在此设了简易哨所。<p>
+<:game_true(1)string game_res_goods(0,1,'千年灵芝'):><p>
+<a href="game_npc_talk('扎西')">巡山人扎西</a><p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):><p>
+<a href="game_save(0)" title="存盘">存盘点</a><p>
+<a href="game_pop_a(5);game_page(12822)">进入荒原迷宫</a><p>
+<:if game_check_scene_event(1322) then
+<a href="game_page(12831)">前往藏羚羊谷</a><p>
+end:>
+<a href="game_pop_a(5);game_page(11890)">返回昆仑山口</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+扎西=1,近年有盗猎者潜入可可西里，专杀藏羚羊取绒。我们人手不够，你若肯深入荒原，捣毁他们的营地，全高原的羊都会感激你。
+I,A=[game_add_scene_event(1321);game_reload_chatlist(0)]1,我们这就去。
+I,B=1,我们先在垭口适应一下。
+I,C=1,盗猎营地在哪里？
+扎西,A=2,前方迷宫尽头便是。小心雪豹、白熊，与昆仑天山一带的猛兽一样凶。
+扎西,B=2,莫急，高原反应可不是闹着玩的。
+扎西,C=2,穿过荒原迷宫，望见炊烟便是。若已击退他们，可直接去藏羚羊谷找我。
+I,A=2,
+I,B=2,
+I,C=2,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A1B2C3D4E5F6789012345678ABCD12821

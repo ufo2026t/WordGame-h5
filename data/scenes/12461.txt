@@ -1,0 +1,43 @@
+id=12461
+名称=王府地下室
+作者=
+属性=4
+TempKey=
+动作=
+{
+
+D5001=if game_pop_a(4) and game_random_chance(3) then game_add_scene_event(1251);game_reload_direct(0) else game_chat('机关开启失败，请重试') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,王府地下室,AT1000,0,0/2007.bmp"></CENTER>
+ <:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:if game_check_scene_event(1250) then
+if game_check_scene_event(1251) then
+该机关已经被打开，可以前往2474标记处继续拿取宝物了。
+else
+一个机关装置，<a href="D5001;" title="">开启</a>
+end
+else
+一个怪异的装置，用途不明。<p>
+game_true(1)string game_res_goods(0,3,'牛黄')<p>
+end:>
+
+
+<p>
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5E3E0FD1B4BCD526F4142ED6B9F5F4C9

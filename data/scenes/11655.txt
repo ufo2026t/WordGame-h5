@@ -1,0 +1,103 @@
+id=11655
+名称=少林寺-方丈室
+作者=
+属性=4
+动作=
+{
+D5001=if game_pop_game(1,132) then game_write_temp(1165503,1); else game_write_temp(1165503,2); end game_reload_direct(0)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,方丈室,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_read_temp(1165503)=1 then
+方丈：“施主武功过人，宅心仁厚，前途不可限量啊。哦弥陀佛”<br>
+“方丈过奖了。多谢方丈手下留情。”<p>
+else
+if game_read_temp(1165503)=2 then
+string game_get_newname_at_id(1)：“大师功力深厚，在下佩服。”<br>
+方丈：“哦弥陀佛，施主年纪轻轻有此修为，也属不易。”<p>
+else
+;;比武大会开始×××
+if game_check_scene_event(1205) then
+;;     武林大会已经结束。
+<a href="game_npc_talk('方丈')">方丈</a>正在参禅
+else
+if game_check_scene_event(1137) and game_check_scene_event(1214) then
+if game_check_scene_event(1197) then
+少林弟子：“方丈去参加武林大会了。”
+else
+方丈：“今日找我何事？”<br>
+1。<a href="game_pop_a(10);game_add_scene_event(1197);game_chat('方丈：谢谢，我知道了。你先回去吧，我稍后就到。')" title="邀请">邀请少林</a>参加无剑山庄的武林大会。
+end
+else
+;;岳飞还在开封
+<a href="game_npc_talk('方丈')">方丈</a>正在参禅
+end
+end
+;;比武大会结束×××
+end
+end:>
+<p>
+<a href="game_page(-5)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_not_scene_event(1242) and game_check_scene_event(1243) and game_not_scene_event(1244) then
+if game_check_scene_event(1217) then
+方丈=1,今日盟主大驾光临，有失远迎，罪过罪过。
+I=1,大师客气了。
+方丈=2,盟主今日找老衲有事否？
+I=2,大师果然高人，今日前来有一事不明？
+方丈=3,盟主请讲。
+else
+方丈=1,
+I=1,大师。
+方丈=2,何事？
+I=2,在下有事请教大师
+方丈=3,讲
+end
+I=3,前几天我在天山发现几句经文和两个人形凹坑，甚是奇怪。
+方丈=4,经文，人形凹坑，可是在冰摩崖底下？
+I=4,正是
+方丈=5,难道是，难道是？
+I=5,是什么？
+方丈=6,传说有一种无上武功，因其过于厉害，怕落入坏人之手而危害武林，被六祖禅师慧能冰封于天山冰摩崖底。但由于冰摩崖气候恶劣，无人能到达崖底，所以，大家都以为这只是一个传说罢了。
+I=6,不过，我在崖底看到了“大X大悲，佛空一切……”这么一些经文，还有两个高3寸的小人形状的凹坑，看起来像是开启机关所用。
+方丈=7,这个如果真是机关，那么据传说，要放入一个木刻如来神像和玉刻如来神像进入凹坑才能开启。
+I=7,要去哪里才能找到这两个神像？
+方丈=8,这两个神像当年乃禅宗六祖一手打造，而今500余年过去了，要查找这个不容易啊。
+I=[game_add_scene_event(1244)]8,只要能有点滴线索，我想可以去找找看。
+方丈=9,原先此二神像收藏在南华寺内，后被小和尚偷出，辗转落入皇宫中，而今很可能在金人手中，if game_check_scene_event(1217) then 盟主end 可去开封皇宫或者上京找找。
+I=9,多谢大师。
+方丈=10,物得物失，皆因果循环，因缘事巧。if game_check_scene_event(1217) then 盟主路上多加小心才是。end
+I=10,多谢大师教诲。
+else
+if game_check_scene_event(1217) then
+方丈=1,今日盟主大驾光临，有失远迎，罪过罪过。
+I=1,大师客气了。
+方丈=2,上香茶
+I=2,
+else
+方丈=1,何事？
+I=1,久仰少林大名，在下不知天高地厚，想与方丈切磋武功，望方丈成全。
+if game_check_role_values('无名',9,60) then
+方丈=2,请施主出招。
+I=[D5001]2,请
+else
+方丈=2,你的道德值过低，我不屑与肖小鼠辈比试。
+I=2,那不知如何才能提高道德值？
+方丈=3,做任务，抓小偷等均能提高道德值。逛妓院、使用妙手空空等会降低道德值。
+I=3,多谢方丈指点。
+end
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=192B5A644697996EFCBF77CE276A30BD

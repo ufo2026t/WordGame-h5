@@ -1,0 +1,40 @@
+id=11693
+名称=岳飞营
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,兵营一,AT1002,0,0/2007.bmp"></CENTER>
+兵营一<p>
+<:game_true(1)string game_res_goods(0,1,'鬼见愁'):><p>
+<a href="game_npc_talk('宋兵甲')">宋兵甲</a><p>
+<a href="game_npc_talk('宋兵乙')">宋兵乙</a><p>
+<a href="game_npc_talk('宋兵丙')">宋兵丙</a><p>
+
+<p>
+<a href="game_page(11687)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+宋兵甲=1,听说，这金兵现在都发狂了。
+I=1,
+宋兵乙=1,是啊，我们现在简直是跟妖怪在打仗，苦啊。
+I=1,
+宋兵丙=1,也不知猴年马月才能回去，想我家媳妇呢。
+I=1,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=96DD3CF3C22942BA55337A5821A012AF

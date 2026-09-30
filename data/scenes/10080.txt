@@ -1,0 +1,49 @@
+id=10080
+名称=古堡一号房间
+作者=
+属性=34
+载入后=if game_random_chance_at_sleep(2) then game_pop_fight_a(game_random_chance_2(4),73) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(楷体_GB2312,134,120,{Bold},{clWhite}),clSilver,古堡房间,AT1009,1,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+房间很清爽。<p>
+
+ <:if game_check_goods_nmb('藏宝图碎片1',1) then
+墙上留下了一点点淡淡的痕迹。
+else
+不过还是要<FONT color=#FF0000>仔细</FONT>看看<br>
+墙上贴着<a href="if not game_check_goods_nmb('藏宝图碎片1',1) then game_goods_change_n('藏宝图碎片1',1);end if game_role_is_exist('宇文赫') then game_npc_talk('宇文赫') else game_chat('找到了一张藏宝图碎片。') end" title="">一副画</a>形状很古怪，看着似某个图纸的一部分。<p>
+end:>
+<p>
+<:game_true(1)string game_res_goods(5030,1,'水晶'):>
+<:if game_random_chance(5) then <p><span id="bo_113">一个小<a href="game_goods_change_n('一年生草药',2);game_chat('捡到一年生草药2颗。');game_inner_html(113,' ')" title="好东西哦">包裹</a></span>end:>
+<p>
+
+<a href="game_page(10079)">返回走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+宇文赫=1,这个碎片是藏宝图的一部分，估计是主人把藏宝图拆成了多份收藏在了不同的地方。看来当年贼人没有找全，漏下了这么一小块。
+I=1,这藏宝图到底有何来历？
+宇文赫=2,听岳元帅说，这批宝藏乃是周显德六年，周世宗病重，自知不久于人世，其子尚幼，故私埋宝藏以备不测。
+I=2,可知宝藏大约埋在何处？
+宇文赫=3,当年埋宝藏的人都已被杀，无人知其下落，只留下藏宝图一份，我们现发现的这个碎片，就是藏宝图的一部分。
+I=3,那藏宝图你先留着吧。
+宇文赫=4,藏宝图碎片还是你留着，我当务之急是要去找岳元帅托付的能人异士。
+I=[game_reload_direct(0)]4,那行我先留着，你对付金兵要紧。
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=DCA172594ACC44305483C2D0E9DA114E

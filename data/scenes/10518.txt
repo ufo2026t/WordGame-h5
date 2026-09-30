@@ -1,0 +1,29 @@
+id=10518
+名称=寒冰窟
+作者=
+属性=32
+载入后=game_attribute_change(0,8,-40);game_infobox('众人冻伤不轻，生命值下降。')
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,寒冰窟,AT1012,0,50/2007.bmp) fixed no-repeat center center;">
+一炷香时限用尽，寒气透骨，您眼前一黑……<p>
+再醒时已被同伴拖出窟口，伏在遗址旁的岩石上。黄药师当年在窟内设下的禁制，到点便会将闯入者强行弹出，以免冻毙其中。<p>
+众人冻伤不轻，须调养些时日方可再入。<p>
+<a href="game_page(10502)">在窟口缓一缓</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5A9292067602D3BC29051FCA22231920

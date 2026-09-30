@@ -1,0 +1,42 @@
+id=10826
+名称=颐云洞
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,颐云洞,AT1000,0,0/2007.bmp"></CENTER>
+洞内有洞，现在闹鬼。<p>
+<:game_not_scene_event(1061)
+洞口堵着好多<a href="game_npc_talk('石头')">石头</a>。<p>:>
+
+<a href="game_npc_talk('系统')" title="">进洞</a>
+<p>
+<a href="game_page(10818)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+系统=1,由于洞口被大石头堵住了，要进去需要搬掉几块才行。
+I=[game_pop_a(7);game_page(1)]1,开始搬石头（鼠标点此开始动手）
+if game_check_scene_event(1060) then
+石头=1,系统@这块石头看起来有点怪异。
+I=[game_pop_a(7);game_goods_change_n('石室钥匙',1);game_infobox('得到了一把钥匙');game_add_scene_event(1061);game_reload_direct(0)]1,估计钥匙就在这下面了，挖。
+else
+石头=1,系统@这块石头看起来有点怪异。
+I=1,算了，先不管他。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=005E516741EE6672FE91D2FFE6BE6C85

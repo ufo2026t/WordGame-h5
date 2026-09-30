@@ -1,0 +1,37 @@
+id=10780
+名称=垂拱殿外
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clPurple}),clWindow,垂拱,AT1001,0,62/2007.bmp) fixed no-repeat center center;">
+垂拱殿，日常上早朝的场所。由于丽正门平常关闭，只在大朝时打开。<p>
+所以平时文武百官都从和宁门进入来此上朝，百姓曰之“倒骑龙”<p>
+<a href="game_npc_talk('侍卫')" title="">进入</a>
+一条石板路，通往<a href="game_page(2)" title="">端城殿</a><p>
+一条石板路，通往<a href="game_page(1)" title="">大庆殿</a><p>
+<a href="game_page(10644)">退出皇宫</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_sex_from_id(1) then
+侍卫=1,站住，你个太监是新来的吧，懂点规矩，现在百官正在议政。岂能随便进去？
+I=1,是
+else
+侍卫=1,站住，你个宫女是新来的吧，懂点规矩，现在百官正在议政。岂能随便进去？
+I=1,是
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=FF6EE158FC2709629F03C774E6A1D002

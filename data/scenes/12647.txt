@@ -1,0 +1,55 @@
+id=12647
+名称=西州城外
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,西州城外,AT1000,0,0/2007.bmp"></CENTER>
+马踢声与驼铃交织，商旅从此入城换马整备。<p>
+<a href="game_npc_talk('驼夫老王')">驼夫老王</a><p>
+<a href="game_npc_talk('中原武士')">中原武士</a><p>
+这里是西州城外。<p>
+<:if game_not_scene_event(1282) then run game_add_scene_event(1282) end:>
+<:if game_check_scene_event(1281) and not game_check_scene_event(1288) then
+同伴提醒：上京客栈探听到的消息指向此处<b>九毒派</b>，教主手中似乎握有藏宝图碎块。<p>
+end:>
+
+<a href="game_page(1)">进入西州城</a><br>
+
+
+<p>
+<a href="game_page(-1)">从迷宫返回朱仙镇</a><br>
+<a href="game_pop_a(10);game_page(11578)">背10个单词返回朱仙镇</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+驼夫老王=1,我走了十年丝路，西域迷宫里白熊怪最难对付。干粮、解毒药都得备齐。
+I=1,西州城里怎样？
+驼夫老王=2,九毒派横着走，东来山庄是好人。听说教主手里有块藏宝图，中原来的侠士都在打听。
+I=2,
+中原武士=1,我也是为邙山宝藏而来。七块碎图齐了，邙山机关才能开。
+I=1,你知道在哪吗？
+中原武士=2,教主手里有第七块，具体在总坛里。先去城里探听消息吧。
+I=2,
+if game_check_scene_event(1288) then
+中原武士=3,听说你已夺到碎块？那就快去邙山吧，别在西州耗着。
+I=3,
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=28040EDEE6BDD0D6DC9CE5E91BC5CAB4

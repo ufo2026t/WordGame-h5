@@ -1,0 +1,32 @@
+id=12807
+名称=奈良-兴福寺
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,兴福寺,AT1000,0,0/2007.bmp"></CENTER>
+奈良最大的佛教寺院，四大天王像威严。<p>
+<a href="game_npc_talk('山门')">山门</a><p>
+<:if game_check_scene_event(1220) and not game_check_scene_event(1333) then
+<FONT color=#FF0000>伋闻东大寺正仓院的旧藏中，有平氏所需的唐物。</FONT><p>
+end:>
+<p>
+<a href="game_page(12104)">返回奈良县</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+山门=1,施主若要寻唐物，去东大寺的正仓院。若要寻法器，法隆寺五重塔下或有奇物。
+I=1,多谢。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

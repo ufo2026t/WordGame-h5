@@ -1,0 +1,41 @@
+id=10076
+名称=右书房
+作者=
+属性=34
+载入后=game_npc_talk('同伴')
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(楷体_GB2312,134,120,{Bold},{clWhite}),clSilver,古堡,AT1009,1,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+房间里什么都没有。<p>
+<:game_true(1)阅读材料：string game_get_read_txt(0):><p>
+<p>
+
+<a href="game_page(10071)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_role_count(0) > 1 then
+同伴=1,
+I=[game_write_name('string game_get_newname_at_id(2)')]1,这里什么都没有。
+if game_id_exist(3) then
+string game_get_newname_at_id(2)=1,我们上楼看看去。
+I=1,string game_get_newname_at_id(3)@对，最后再去地下室。
+else
+string game_get_newname_at_id(2)=1,什么都没有。
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C368E0BE762F8DB6B7AB79780C4942BE

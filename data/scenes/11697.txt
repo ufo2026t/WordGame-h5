@@ -1,0 +1,45 @@
+id=11697
+名称=岳飞营
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,兵营二,AT1002,0,0/2007.bmp"></CENTER>
+兵营二<p>
+<:game_true(1)string game_res_goods(0,1,'大力丸'):><p>
+<a href="game_npc_talk('宋兵头目甲')">宋兵头目甲</a><p>
+<a href="game_npc_talk('宋兵头目乙')">宋兵头目乙</a><p>
+<a href="game_npc_talk('宋兵头目丙')">宋兵头目丙</a><p>
+
+<p>
+<a href="game_page(11688)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+宋兵头目甲=1,我一次去朱仙镇喝酒，在酒桌上听说开封附近有宝藏？
+I=1,宋兵@瞎讲，人家那是酒后胡话，想钱都想疯了。
+宋兵头目乙=1,也不一定，也许开封附近真有宝藏。
+I=1,宋兵@真要有宝藏，你说皇帝老儿还要拿嫔妃公主来给金兵抵债干吗？
+宋兵头目乙=2,此话怎讲？
+I=2,宋兵@想当年，朝廷无钱赔款，就拿女人抵债，一个嫔妃当金一千锭，一个公主也是这个价。其他宫女采女每人按银500锭算
+宋兵头目乙=3,这事儿你是怎么知道的？
+I=3,宋兵@我父亲当时在刘家寺打杂，那简直一人间地狱，不说了，我都恨不得把那些金狗抽筋扒皮了。
+宋兵头目乙=4,也有耳闻金兵烧杀抢掠，无恶不作，唉
+I=4,宋兵@所以我现在坚决跟着岳元帅，打算直捣黄龙府。
+宋兵头目丙=1,呼呼（睡着了）
+I=1,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0313678BAF501B9DBAF1ACBA86721E43

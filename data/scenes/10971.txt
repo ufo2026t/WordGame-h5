@@ -1,0 +1,77 @@
+id=10971
+名称=天府大酒店
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://349,347,(隶书,134,260,{Bold},{clGreen}),clWindow,酒,AT1002,0,60/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+欢迎光临天府大酒店。<p>
+酒店女掌柜<a href="game_npc_talk('珠儿')">珠儿</a>小姐，貌美如花，惹得很多公子王孙慕名前来。<p>
+两个<a href="game_npc_talk('公子哥')">公子哥</a><p>
+两个<a href="game_npc_talk('官差')">官差</a><p>
+
+<p>
+<a href="game_page(10804)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_res_event(9009) then
+if game_check_goods_nmb('马兰头',1) then
+珠儿=1,对对，要的就是这马兰头草。
+I=[game_goods_change_n('马兰头',-1);game_comp_task(9009);game_infobox('您得到了钱100和经验值600');game_reload_direct(0)]1,给你草药（鼠标点击此处把草药给珠儿）。
+else
+珠儿=1,您没有采到我要的马兰头。
+I=1,
+end
+else
+珠儿=1,唉，我这每天都有人喝醉酒，很是麻烦。听说<FONT color=#"FF0000">冲天观</FONT>附近有一种叫<FONT color=#"FF0000">马兰头</FONT>的草药，能解酒。
+I,A=[game_add_task(9009)]1,好啊，我有空帮你找点马兰头过来。
+I,B=1,是吗，只是我现在很忙哦，帮不了你。
+end
+if game_sex_from_id(1) then
+if game_role_sex_count(0)> 0 then
+公子哥=1,公子哥甲@乡下土包子，也配来这地方喝酒？公子哥乙：哟，这旁边的小妞倒是挺俊俏的，可惜鲜花都插牛粪上了。
+I=1,看看你们两个猪一样的，吃的脑满肠肥。整一个饭桶。
+公子哥=2,公子哥甲@啊哈，竟敢骂我们，是不是活腻了。
+I=2,公子哥乙@算了，咱们何等身份，不和你们这些一般见识。
+else
+公子哥=1,乡下土包子，也配来这地方喝酒？看你年纪也不小了，还是光棍一个，哈哈。
+I=1,看你们两个脑满肠肥的，一看就是俩酒囊饭袋。
+end
+else
+if game_role_sex_count(1)> 0 then
+公子哥=1,啊哈，小妞长的可真俊俏。来，给哥哥亲一个。
+I=1,string game_get_newname_at_id(game_get_fm_1(1))@靠，你们这俩肥猪，现在市场上猪肉价格狂涨啊，把你们宰了正合适。
+公子哥=2,公子哥甲@来护花使者了？
+I=2,公子哥乙@天涯处处有芳草，算了，咱不惹这带刺的玫瑰了。
+else
+公子哥=1,啊哈，小妞长的可真俊俏。来，给哥哥亲一个。
+I=1,呸，下流胚子。
+公子哥=2,打是亲骂是爱，坐下来喝一杯，接着骂。
+I=2,无耻，不要脸。
+end
+end
+if game_check_scene_event(1117) then
+官差=1,官差甲@城里太平了不少啊。
+I=1,官差乙@是啊
+else
+官差=1,官差甲@听说附近的吴山上有个神秘的组织？
+I=1,官差乙@好像叫“星”什么的，不太清楚。
+官差=2,官差甲@好像和皇宫里的人，还有东海什么岛都有关连。
+I=2,官差乙@嘘，这事儿咱们少管。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4B9658DADE620180E747A2D43E9E28B6

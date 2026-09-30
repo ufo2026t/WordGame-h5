@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&#x795e;&#x955c;&#x4f20;&#x8bf4;&#x80cc;&#x5355;&#x8bcd; - HTML5 &#x7248;</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/game.css" />
+  <script>
+    (function () {
+      try {
+        var raw = localStorage.getItem('wordgame-settings');
+        var theme = raw ? JSON.parse(raw).pageTheme : 'dark';
+        document.documentElement.setAttribute('data-theme', theme === 'light' ? 'light' : 'dark');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div id="splash" class="splash">
+    <h1 class="splash-title">&#x795e;&#x955c;&#x4f20;&#x8bf4;&#x80cc;&#x5355;&#x8bcd;</h1>
+    <p class="splash-sub">&#x6b66;&#x4fa0;&#x6e38;&#x620f;&#x80cc;&#x5355;&#x8bcd; &#x00b7; HTML5</p>
+    <p id="splash-info" class="splash-info"></p>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="toolbar">
+      <div class="toolbar-left">
+        <button type="button" data-action="player">&#x73a9;&#x5bb6;&#x548c;&#x7269;&#x54c1;</button>
+        <button type="button" data-action="craft">&#x94f8;&#x5251;&#x548c;&#x70bc;&#x836f;</button>
+        <button type="button" data-action="save">&#x5b58;&#x53d6;&#x6863;&#x6848;</button>
+        <button type="button" data-action="tasks">&#x4efb;&#x52a1;&#x548c;&#x4fe1;&#x606f;</button>
+        <button type="button" data-action="settings">&#x6e38;&#x620f;&#x8bbe;&#x7f6e;</button>
+      </div>
+      <div class="toolbar-center">
+        <label class="lib-select">
+          &#x8bcd;&#x5e93;
+          <select id="word-lib"></select>
+        </label>
+        <span id="scene-title" class="scene-title">&#x5f00;&#x59cb;&#x6e38;&#x620f;</span>
+      </div>
+      <div class="toolbar-right">
+        <span id="game-time-countdown" class="status-pill game-time-countdown hidden" aria-live="polite"></span>
+        <span id="status-money" class="status-pill">&#x91d1;&#x94b1;: 0</span>
+        <span id="status-hp" class="status-pill">&#x751f;&#x547d;: 100</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="scene-panel">
+        <div id="scene-host" class="scene-host"></div>
+        <div id="chat-layer" class="chat-layer hidden">
+          <div class="chat-header">
+            <span>&#x5bf9;&#x8bdd;</span>
+            <button type="button" id="chat-close" class="icon-btn chat-close" title="&#x5173;&#x95ed;">&#x5173;&#x95ed;</button>
+          </div>
+          <div id="chat-body" class="chat-body"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span id="footer-hint">&#x70b9;&#x51fb;&#x573a;&#x666f;&#x4e2d;&#x7684;&#x94fe;&#x63a5;&#x63a2;&#x7d22;&#x4e16;&#x754c;&#x653b;&#x51fb;&#x602a;&#x7269;&#x6216;&#x80cc;&#x5355;&#x8bcd;&#x65f6;&#x4f1a;&#x5f39;&#x51fa;&#x7b54;&#x9898;&#x7a97;&#x53e3;&#x3002;</span>
+    </footer>
+  </div>
+
+  <div id="word-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card word-modal">
+      <header class="modal-header">
+        <h2 id="word-modal-title">&#x80cc;&#x5355;&#x8bcd;</h2>
+        <button type="button" id="word-modal-close" class="icon-btn" title="&#x5173;&#x95ed;">&#x2715;</button>
+      </header>
+      <div id="fight-bar" class="fight-bar hidden"></div>
+      <div id="fight-picker" class="fight-picker hidden"></div>
+      <div id="word-stage" class="word-stage">
+        <div id="word-prompt" class="word-prompt">word</div>
+        <div id="word-choices" class="word-choices"></div>
+        <div id="word-feedback" class="word-feedback"></div>
+      </div>
+      <div id="fight-actions" class="fight-actions hidden">
+        <button type="button" data-fight="attack">&#x653b;</button>
+        <button type="button" data-fight="defend">&#x9632;</button>
+        <button type="button" data-fight="magic">&#x6cd5;</button>
+        <button type="button" data-fight="item">&#x7269;</button>
+        <button type="button" data-fight="escape">&#x9003;</button>
+      </div>
+      <footer class="modal-footer">
+        <label><input type="checkbox" id="reverse-learn" /> &#x53cd;&#x5411;&#x5b66;&#x4e60;</label>
+        <span id="word-progress" class="word-progress"></span>
+      </footer>
+    </div>
+  </div>
+
+  <div id="settings-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card settings-modal">
+      <header class="modal-header">
+        <h2>&#x6e38;&#x620f;&#x8bbe;&#x7f6e;</h2>
+        <button type="button" class="icon-btn" data-close="settings">&#x2715;</button>
+      </header>
+      <div class="settings-body">
+        <label>&#x9875;&#x9762;&#x98ce;&#x683c;
+          <select id="set-page-theme"></select>
+        </label>
+        <label>&#x82f1;&#x6587;&#x989c;&#x8272; <input type="color" id="set-en-color" /></label>
+        <label>&#x4e2d;&#x6587;&#x989c;&#x8272; <input type="color" id="set-cn-color" /></label>
+        <label>&#x82f1;&#x6587;&#x5b57;&#x53f7; <input type="number" id="set-en-size" min="12" max="48" /></label>
+        <label>&#x4e2d;&#x6587;&#x5b57;&#x53f7; <input type="number" id="set-cn-size" min="12" max="36" /></label>
+        <label>&#x9009;&#x9879;&#x80cc;&#x666f;&#x8272; <input type="color" id="set-choice-bg" /></label>
+        <label>&#x9009;&#x9879;&#x5ef6;&#x8fdf;(ms) <input type="number" id="set-delay" min="1000" max="5000" step="100" /></label>
+        <label><input type="checkbox" id="set-sequential" /> &#x987a;&#x5e8f;&#x80cc;&#x5355;&#x8bcd;</label>
+        <label><input type="checkbox" id="set-abhs" /> &#x827e;&#x5bbe;&#x65af;&#x590d;&#x4e60;</label>
+        <label>&#x9519;&#x8bef;&#x5355;&#x8bcd;&#x91cd;&#x590d;
+          <select id="set-rep-index"></select>
+        </label>
+        <label><input type="checkbox" id="set-reverse-learn" /> &#x53cd;&#x5411;&#x5b66;&#x4e60;</label>
+        <label>&#x5206;&#x6bb5;&#x80cc;&#x8bf5;&#x6570; <input type="number" id="set-part-size" min="0" max="200" step="10" /></label>
+        <label>&#x5355;&#x8bcd;&#x5206;&#x8272;
+          <select id="set-word-color"></select>
+        </label>
+        <label>&#x524d;&#x7f00;&#x989c;&#x8272; <input type="color" id="set-prefix-color" /></label>
+        <label>&#x540e;&#x7f00;&#x989c;&#x8272; <input type="color" id="set-suffix-color" /></label>
+      </div>
+      <footer class="modal-footer">
+        <button type="button" id="save-settings">&#x4fdd;&#x5b58;&#x8bbe;&#x7f6e;</button>
+      </footer>
+    </div>
+  </div>
+
+  <div id="player-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card panel-modal wide-modal">
+      <header class="modal-header">
+        <h2>&#x73a9;&#x5bb6;&#x548c;&#x7269;&#x54c1;</h2>
+        <button type="button" class="icon-btn" data-close="player">&#x2715;</button>
+      </header>
+      <div class="tab-row player-tabs">
+        <button type="button" class="player-tab active" data-tab="stats">&#x5c5e;&#x6027;</button>
+        <button type="button" class="player-tab" data-tab="equip">&#x88c5;&#x5907;</button>
+        <button type="button" class="player-tab" data-tab="goods">&#x7269;&#x54c1;</button>
+        <button type="button" class="player-tab" data-tab="skills">&#x6280;&#x80fd;&#x6cd5;&#x672f;</button>
+      </div>
+      <div id="player-body" class="panel-body player-layout"></div>
+    </div>
+  </div>
+
+  <div id="tasks-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card panel-modal wide-modal">
+      <header class="modal-header">
+        <h2>&#x4efb;&#x52a1;&#x548c;&#x4fe1;&#x606f;</h2>
+        <button type="button" class="icon-btn" data-close="tasks">&#x2715;</button>
+      </header>
+      <div class="tab-row tasks-tabs">
+        <button type="button" class="tasks-tab active" data-tab="active">&#x672a;&#x5b8c;&#x6210;</button>
+        <button type="button" class="tasks-tab" data-tab="completed">&#x5df2;&#x5b8c;&#x6210;</button>
+        <button type="button" class="tasks-tab" data-tab="messages">&#x6d88;&#x606f;</button>
+      </div>
+      <div id="tasks-body" class="panel-body"></div>
+    </div>
+  </div>
+
+  <div id="trade-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card panel-modal wide-modal">
+      <header class="modal-header">
+        <h2 id="trade-title">&#x5546;&#x5e97;</h2>
+        <button type="button" class="icon-btn" data-close="trade">&#x2715;</button>
+      </header>
+      <div class="panel-body">
+        <div class="tab-row">
+          <button type="button" class="trade-tab active" data-mode="buy">&#x8d2d;&#x4e70;</button>
+          <button type="button" class="trade-tab" data-mode="sell">&#x51fa;&#x552e;</button>
+        </div>
+        <p id="trade-quote" class="panel-quote"></p>
+        <div id="trade-list" class="trade-list"></div>
+        <p id="trade-summary" class="panel-summary"></p>
+      </div>
+      <footer class="modal-footer">
+        <button type="button" id="trade-confirm">&#x786e;&#x8ba4;&#x4ea4;&#x6613;</button>
+      </footer>
+    </div>
+  </div>
+
+  <div id="craft-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card panel-modal wide-modal">
+      <header class="modal-header">
+        <h2>&#x94f8;&#x5251;&#x548c;&#x70bc;&#x836f;</h2>
+        <button type="button" class="icon-btn" data-close="craft">&#x2715;</button>
+      </header>
+      <div class="panel-body">
+        <div class="tab-row">
+          <button type="button" class="craft-tab active" data-tab="sword">&#x94f8;&#x5251;</button>
+          <button type="button" class="craft-tab" data-tab="medicine">&#x70bc;&#x836f;</button>
+          <button type="button" class="craft-tab" data-tab="equip">&#x88c5;&#x5907;&#x5236;&#x9020;</button>
+          <button type="button" class="craft-tab" data-tab="hidden">&#x6697;&#x5668;&#x5236;&#x9020;</button>
+        </div>
+        <div id="craft-info" class="craft-info"></div>
+        <div id="craft-recipes" class="craft-recipes"></div>
+        <div id="craft-materials" class="craft-materials"></div>
+      </div>
+      <footer class="modal-footer">
+        <button type="button" id="craft-make">&#x5f00;&#x59cb;&#x5236;&#x4f5c;</button>
+      </footer>
+    </div>
+  </div>
+
+  <div id="save-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card panel-modal wide-modal">
+      <header class="modal-header">
+        <h2>&#x5b58;&#x53d6;&#x6863;&#x6848;</h2>
+        <button type="button" class="icon-btn" data-close="save">&#x2715;</button>
+      </header>
+      <div class="panel-body save-panel-body">
+        <div id="save-summary" class="save-summary"></div>
+        <div id="save-slot-list" class="save-slot-list"></div>
+        <div class="save-actions">
+          <button type="button" id="save-to-slot">&#x5b58;&#x6863;</button>
+          <button type="button" id="save-load-slot">&#x8bfb;&#x6863;</button>
+          <button type="button" id="save-delete-slot">&#x5220;&#x9664;</button>
+          <button type="button" id="save-export-clipboard">&#x5bfc;&#x51fa;&#x5b57;&#x7b26;&#x4e32;</button>
+          <button type="button" id="save-paste-clipboard">&#x4ece;&#x526a;&#x8d34;&#x677f;&#x7c98;&#x8d34;</button>
+          <button type="button" id="save-copy-code">&#x590d;&#x5236;&#x5bfc;&#x51fa;&#x7801;</button>
+          <button type="button" id="save-import">&#x5bfc;&#x5165;&#x5b57;&#x7b26;&#x4e32;&#x5e76;&#x8bfb;&#x6863;</button>
+        </div>
+        <label class="save-transfer-label">
+          &#x5bfc;&#x51fa;/&#x5bfc;&#x5165;&#x7528; WGSAVE1: &#x5b57;&#x7b26;&#x4e32;&#x6216; JSON
+          <textarea id="save-transfer-text" class="save-transfer-text" rows="6" spellcheck="false" placeholder="WGSAVE1:..."></textarea>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div id="infobox-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card infobox-modal">
+      <header class="modal-header">
+        <h2>&#x73a9;&#x6e38;&#x5355;&#x8bcd;&#x80cc;&#x5355;&#x8bcd;</h2>
+      </header>
+      <div id="infobox-body" class="panel-body infobox-body"></div>
+      <footer class="modal-footer">
+        <button type="button" id="infobox-ok">&#x786e;&#x5b9a;</button>
+      </footer>
+    </div>
+  </div>
+
+  <div id="minigame-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card minigame-modal wide-modal">
+      <header class="modal-header">
+        <h2 id="minigame-title">&#x5c0f;&#x6e38;&#x620f;</h2>
+        <button type="button" class="icon-btn" data-close="minigame">&#x2715;</button>
+      </header>
+      <p id="minigame-status" class="minigame-status"></p>
+      <div id="minigame-word-layer" class="minigame-word-layer hidden">
+        <div id="minigame-word-prompt" class="word-prompt"></div>
+        <div id="minigame-word-choices" class="word-choices"></div>
+        <div id="minigame-word-feedback" class="word-feedback"></div>
+      </div>
+      <div id="minigame-game-layer" class="minigame-game-layer hidden">
+        <canvas id="minigame-canvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="js/h5-text-pack.js"></script>
+  <script src="js/h5-bin-pack.js"></script>
+  <script src="js/h5-boot.js"></script>
+  <script src="js/game.bundle.js"></script>
+</body>
+</html>

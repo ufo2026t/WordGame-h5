@@ -1,0 +1,39 @@
+id=11420
+名称=客厅
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clBlack}),clWindow,慕容世家,AT1001,0,0/2007.bmp"></CENTER>
+<:if game_role_is_exist('慕容丽雯') or game_check_scene_event(1127) then
+if game_check_scene_event(1128) then
+家丁丙：“老爷吩咐，书房里不得让外人进入。”
+else
+家丁丙：“我家二小姐经常喜欢在外惹事生非，还好赌钱，欠了一屁股债，又不敢让老爷知道。”
+end
+else
+家丁：“我家大小姐去了临安，至今未归，恐怕凶多吉少啊。”
+end:>
+<p>
+<:game_true(1)string game_res_goods(0,1,'虫草精'):><p>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=8893E77845F7756C5FB6A85B39B86E3A

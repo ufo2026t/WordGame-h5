@@ -1,0 +1,58 @@
+id=10985
+名称=望梅山庄内-房间5
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clOlive}),clWindow,梅,AT1009,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,房间五,AT1001,0,0/2007.bmp"></CENTER>
+;;<:game_true(1)string game_res_goods(0,1,'百年人参'):><p>
+<:if game_not_scene_event(1071) then
+一个<a href="game_npc_talk('老家丁')">老家丁</a>在扫地<p>
+else
+房间是空的。
+if not game_check_res_event(game_get_pscene_id(0)) then 一个小<a href="game_goods_change_n('百年人参',1);game_chat('捡到百年人参1。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">包裹</a>。end<p>
+
+end:>
+
+<a href="game_page(10980)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+老家丁=[game_can_stop_chat(0)]1,看你们像是外地来的吧。
+I=1,是的
+老家丁=2,呵呵，我在这庄里很多年了。
+I=2,那一定知道不少事情了。
+老家丁=3,听说过<FONT color=#"FF0000">土坑</FONT>里的怪坛子没？
+I=3,愿闻其详。
+老家丁=4,这土坑啊，原先是个大土坡，后来，要造院子，就挖啊挖的，然后，挖到了这个坛子，说也奇怪，原本晴朗的天，突然黑云遮日，电闪雷鸣，狂风大作。
+I=4,接着呢？
+老家丁=5,接着，大家都不敢挖了。然后庄主觉得这似乎不祥之兆，就找了个道士。
+I=5,道士怎么说？
+老家丁=6,道士说，据古书记载，此地数百年前有黑水龙作恶，在钱塘江翻起大浪。后有高人在一坛子内装神器，镇住恶龙。现在动了土，影响了神器的法力，黑水龙似有苏醒之状。
+I=6,那重新填土回去不就行了？
+老家丁=7,非也，道士说，要让坛子先露着，接受日月光华，999天后才能再封土回填。
+I=7,现在多少天了？
+老家丁=8,已经800天了。只是，现在每到半夜，特别是月圆十分，地下总有恐怖的啸声隐隐传上来，且感觉越来越大了。恐怕
+I=8,恐怕怎么？
+老家丁=9,恐怕等不到999天，黑水龙就要破土而出啊。
+I=9,可有解救之法？
+老家丁=[game_can_stop_chat(1);game_add_scene_event(1070)]10,……（老人家摇了摇头）
+I=10,我先去土坑那看看吧。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A92480782B72E9CD9A9C2F1030EB9294

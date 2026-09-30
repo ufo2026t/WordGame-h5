@@ -1,0 +1,80 @@
+id=12485
+名称=天蓬山庄
+作者=
+属性=4
+TempKey=
+动作=
+{
+D5001=if game_check_money(10000) then game_change_money(-10000);game_add_scene_event(1258) else game_chat('您金钱不够，赛天蓬拒绝打白条。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,天蓬山庄房间,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1257) and game_not_scene_event(1258) then
+<a href="game_npc_talk('赛天蓬')">赛天蓬</a>闲坐着喝茶。
+else
+房间内没人。
+string game_res_goods(0,1,'皮腰带')<p>
+end:>
+<p>
+<:if game_read_temp(1248508) then
+if game_read_temp(1248501) then
+赛天蓬：“我自认技不如人，藏宝图在庄内，你自己找吧。”
+else
+赛天蓬：“我看你也不是好东西，出招吧。”<br>
+1。<a href="game_pop_fight_a(1,157);game_write_temp(1248501,1);game_add_scene_event(1258);game_reload_direct(0)" title="">出招</a><br>
+2。<a href="game_page(-1)" title="">退出</a>。
+
+end
+end:>
+
+
+<p>
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1217) then
+赛天蓬=1,盟主？？
+I=1,我去过海龙世家了。
+赛天蓬=2,海龙世家十分狡猾，他们肯定会倒打一耙，反诬赖我不是
+I=2,我看狡猾的是你。
+赛天蓬=3,嘿嘿，话已如此，我也不再多说了，想从我这拿东西，没这么容易。
+I=3,希望你能深明大义，再者你一块图藏着也没用。不如……
+赛天蓬=4,不如怎样？
+I=4,我给你一万两银子，把图给我吧。
+赛天蓬=5,一万两，那宝藏可是富可敌国的。
+I=5,你要明白，你就一部分地图，你拿不到宝藏的。
+赛天蓬=6,没有我这一部分，你也拿不到宝藏。
+I=6,你这次诬蔑海龙世家，他们也不是省油的灯，不同多久，江湖上都会传开你有藏宝图，你想后果会怎么样？
+赛天蓬=7,这个，这个（冒汗）
+I=7,识实务者为俊杰，我先告辞了。
+赛天蓬=8,等，等一下，藏宝图确实在我庄上，你自己找吧。
+I,A=[D5001]8,爽快，给你一万两。
+I,B=8,呵呵，我去找去了。
+赛天蓬,A=9,多谢盟主照顾。
+赛天蓬,B=9,那，我的银子
+I,A=9,
+I,B=9,银子，哈哈，等我找到宝藏再说
+赛天蓬,A=10,
+赛天蓬,B=10,你言而无信，你也不会找到藏宝图的。
+I,A=10,
+I,B=10,P类
+else
+赛天蓬=1,你又来干嘛？
+I=1,你这斯竟敢骗我。
+赛天蓬=2,哈哈，自己傻还能怪我。
+I=[game_write_temp(1248508,1);game_reload_direct(0)]2,看招
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=57D722A044C3CFDC9CD68AC44A70D4E8

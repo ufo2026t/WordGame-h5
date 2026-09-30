@@ -1,0 +1,26 @@
+id=12811
+名称=伊贺-城下町-药店
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://111,35,(隶书,134,26,{Bold},{clOlive}),clBlack,药店,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_trade(9,0)" title="">买药材</a><p>
+<a href="game_trade(9,1)" title="">卖药材</a><p>
+<a href="game_page(12120)">返回城下町</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

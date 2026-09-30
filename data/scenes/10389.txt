@@ -1,0 +1,59 @@
+id=10389
+名称=兰若寺前院
+作者=
+属性=32
+载入后=if game_role_is_exist('慕容丽雯') then game_npc_talk('慕容丽雯') end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url($apppath$img\d) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clBlack}),clWindow,兰若寺,AT1002,0,0/2007.bmp"></CENTER>
+室内蛛网密布，蛇鼠横行。<p>
+<a href="game_page(10390)" title="寺内大殿">进入大殿</a><p>
+<a href="game_page(10391)" title="">进入左偏房</a><p>
+<a href="game_page(10392)" title="">进入右偏房</a><p>
+<a href="game_page(10393)" title="">进入院内佛塔一层</a><p>
+<:if game_role_is_exist('江雪儿') then
+
+if game_check_scene_event(1006) then
+江雪儿<img src="$apppath$img\4.bmp">“好大的一座庙。”<br>
+“是啊，里边菩萨也多。”
+else
+
+
+江雪儿<img src="$apppath$img\4.bmp">“这庙好大啊，我在这边长大的，但从来就没来过这里，小时候就听说闹妖怪，没人敢来了。”<br>
+“咱们现在进去里边看看。”<br>
+江雪儿：“小心，里面好像有树妖。”<br>
+end
+end:><p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_not_scene_event(1006) then
+慕容丽雯=1,<img src="$apppath$img\7.bmp">这里阴风阵阵，好恐怖啊。
+I=1,不怕，妖怪来一个打一个，来两个打一双。
+慕容丽雯=2,这里地下室好像有轻微的声音传出。
+I=2,也许是老鼠呢。
+慕容丽雯=3,不像老鼠的声音。
+I=3,那咱们呆会去看看。
+
+else
+慕容丽雯=1,<img src="$apppath$img\7.bmp">黑山老妖除掉了，现在这里清爽多了。
+I=1,是哦，这里香火很快又会旺起来的。
+
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=7149E31C97BECEC9C1067FED4D42F027

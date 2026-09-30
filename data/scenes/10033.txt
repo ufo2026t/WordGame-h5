@@ -1,0 +1,47 @@
+id=10033
+名称=矿洞底下一层33号地块
+作者=
+属性=36
+载入后=game_pop_fight_a(1, 61);if not game_check_scene_event(1001) and game_role_is_exist('江雪儿') then game_delay(1000);game_npc_talk('江雪儿') end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clWindow,迷宫,AT1000,1,75/2007.bmp) fixed no-repeat center center;">
+这里是矿洞的底下一层地块。<p>
+旁边洞口众多，也不知道通往哪里才是正确的，先到处转转看了<br>
+
+行走在里边，感觉<a onMouseOver=location.href="game_pop_fight_a(1,61)">阴风阵阵</a>，不过，艺高人胆大，倒是不怕这些。<p>
+再往里走，旁边有个<a href="game_pop_a(3);game_page(10029)" title="">石门</a>，通向29号地块。<p>
+此处地势平坦，比较明亮，远处似乎有不明生物在晃动。<br>
+
+再远处还有一个<a href="game_pop_a(3);game_page(10034)" title="">石门通向34号地块。</a><p>
+<p>
+<:game_true(1)string game_res_goods(5008,1,'三年生草药'):>
+<p>
+<a href="game_save(0)" title="可以存盘">存盘点</a><p>
+前方是妖王所在的<a href="game_pop_fight_a(1,64);game_page(10035)" title="最好先存盘哦">大厅</a>了
+<p>
+
+<a href="game_page(10029)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+江雪儿=1,总算找到出口了，该不会还有下一层迷宫吧。
+I=1,应该没有了。
+江雪儿=2,这迷宫这么难绕，晕死了。
+I=2,哈哈，我倒没觉得，这不三下两下就出来了，关键是我方向感好啊。
+江雪儿=3,你就吹吧你。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D744D9BD4042568E9584291815176200

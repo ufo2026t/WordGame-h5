@@ -1,0 +1,128 @@
+id=14445
+名称=飞行地图
+作者=
+属性=2
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://148,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,飞行地图,AT1000,0,0/2007.bmp"></CENTER>
+<table width="75%" border="0">
+  <tr>
+    <td><a href="if game_check_scene_event(1189) then game_pop_a(5);game_page(11937) else game_chat('要走到过一次天山后才能飞行') end">天山</a></td>
+    <td>&nbsp;</td>
+    <td><a href="if game_check_scene_event(1282) then game_pop_a(5);game_page(12647) else game_chat('要走到过一次西域后才能飞行') end">西域</a></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><a href="game_pop_a(5);game_page(11896)">昆仑</a></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="game_pop_a(5);game_page(11819)">上京</a></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="if game_check_scene_event(1192) then game_pop_a(5);game_page(12071) else game_chat('要走到过一次东瀛后才能飞行。') end">东瀛</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="game_pop_a(5);game_page(12070)">峨嵋</a></td>
+    <td>&nbsp;</td>
+    <td><a href="game_pop_a(5);game_page(11417)">开封</a></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="game_pop_a(5);game_page(12007)">武当</a></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="game_pop_a(5);game_page(10583)">临安</a></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="game_pop_a(5);game_page(10061)" title="">婺州</a></td>
+    <td><a href="game_pop_a(5);game_page(10453)">东海</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="game_pop_a(5);game_page(10302)">无剑山庄</a></td>
+    <td><a href="game_pop_a(5);game_page(10001)">河西镇</a></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="game_pop_a(5);game_page(11373)">大理</a></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+&nbsp;<p>
+<a href="game_goto_oldpage(0)" title="返回前一个页面">返回前页</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=630B9439DA87A7C66CCDDED9F97F079C

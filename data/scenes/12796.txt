@@ -1,0 +1,94 @@
+id=12796
+名称=邙山迷宫
+作者=
+属性=38
+载入后=game_pop_fight_a(1,135)
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,邙山迷宫,AT1000,0,0/2007.bmp"></CENTER>
+
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,1,'十年生草药'):><p>
+
+前方有一个巨大的石门，需要摁动对应的机关来打开。<br>
+这些机关都写在藏宝图上，所以有完整的藏宝图就可以打开这些机关。<br>
+<:if game_role_is_exist('慕容丽雯') and not game_check_goods_nmb('藏宝图碎片4',1)  then
+慕容丽雯：“要打开机关需要一副<b>完整</b>的藏宝图，我有一小块。”<p>
+end:>
+
+您当前拥有藏宝图碎片为<br>
+<:if game_check_goods_nmb('藏宝图碎片1',1) then
+ <FONT color=#FF0000>藏宝图碎片1</FONT>已经就位。<br>
+else
+藏宝图碎片1没有。<br>
+end
+if game_check_goods_nmb('藏宝图碎片2',1) then
+ <FONT color=#FF0000>藏宝图碎片2</FONT>已经就位。<br>
+else
+藏宝图碎片2没有。<br>
+end
+if game_check_goods_nmb('藏宝图碎片3',1) then
+ <FONT color=#FF0000>藏宝图碎片3</FONT>已经就位。<br>
+else
+藏宝图碎片3没有。<br>
+end
+if game_check_goods_nmb('藏宝图碎片4',1) then
+ <FONT color=#FF0000>藏宝图碎片4</FONT>已经就位。<br>
+else
+if game_role_is_exist('慕容丽雯') then
+ 慕容丽雯拿出了一块家传的藏宝图。<br>
+ <FONT color=#FF0000>藏宝图碎片4</FONT>已经就位。
+else
+藏宝图碎片4没有。<br>
+end
+
+end
+if game_check_goods_nmb('藏宝图碎片5',1) then
+ <FONT color=#FF0000>藏宝图碎片5</FONT>已经就位。<br>
+else
+藏宝图碎片5没有。<br>
+end
+if game_check_goods_nmb('藏宝图碎片6',1) then
+ <FONT color=#FF0000>藏宝图碎片6</FONT>已经就位。<br>
+else
+藏宝图碎片6没有。<br>
+end
+if game_check_goods_nmb('藏宝图碎片7',1) then
+ <FONT color=#FF0000>藏宝图碎片7</FONT>已经就位。<br>
+else
+藏宝图碎片7没有。<br>
+end
+:>
+<p>
+<:if game_check_goods_nmb('藏宝图碎片1',1) and game_check_goods_nmb('藏宝图碎片2',1) andgame_check_goods_nmb('藏宝图碎片3',1) andgame_check_goods_nmb('藏宝图碎片5',1) andgame_check_goods_nmb('藏宝图碎片6',1) andgame_check_goods_nmb('藏宝图碎片7',1) then
+if game_check_goods_nmb('藏宝图碎片4',1) or game_role_is_exist('慕容丽雯') then
+藏宝图已经收集完整，<a href="game_page(1)" title="">开启机关</a>。
+else
+藏宝图不完整，无法打开机关。<p>
+end
+else
+藏宝图不完整，无法打开机关。<p>
+end:>
+<p>
+
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B12D8B5D03C73A47236AD3C214593415

@@ -1,0 +1,44 @@
+id=12478
+名称=天蓬山庄
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,走廊,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'迷踪蛊'):><p>
+走廊比较长，走廊的边上是人工湖，湖水清澈见底，数鱼游戏其中。<p>
+<a href="game_npc_talk('丫鬟')">丫鬟</a><p>
+<a href="game_npc_talk('武师')">武师</a><p>
+<a href="game_page(2)">前行2</a><br>
+
+
+<p>
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+丫鬟=1,我家小姐对这个八戒很不喜欢。
+I=1,为何不喜欢呢，不都说八戒是师徒四人当中最具魅力的？
+丫鬟=2,小姐喜欢红孩儿。
+I=2,你家小姐芳龄几何？
+丫鬟=3,小姐属马的
+I=3,才11岁……小P孩
+武师=1,这山庄有一秘道，通往一个地下室，内设机关，庄主从不让我们进去。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=CA847CE204B2729DB53D096878DD1602

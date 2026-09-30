@@ -1,0 +1,34 @@
+id=11191
+名称=龙泓洞
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://645,213,(隶书,134,160,{Bold},{clGreen}),clWindow,龙泓洞,AT1001,0,60/2007.bmp) fixed no-repeat center center;">
+龙泓洞，传说洞里有宝藏。<p>
+不过，现在洞里是否有宝藏还不清楚，但里面有妖怪倒是真的。<p>
+此洞分上下两层。<p>
+上层可以爬到山顶，有一定机会看到佛光。如果见到佛光，那么有一个队员可以增加经验值5000-10000点。<p>
+下层到地时能有机会发现神泉。如果见到，那么可以给一个队员永久增加生命值上限或者攻击力上限若干点。<p>
+每进洞一次（从这里开始），最后能见到这两种异像的机会是五分之一。<p>
+进入<a href="game_page(1)" title="">上层</a><p>
+进入<a href="game_page(11227)" title="">下层</a>
+<p>
+<a href="game_page(11085)">返回飞来峰</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=35182A0FFFB2C01381786A8E2E96E89E

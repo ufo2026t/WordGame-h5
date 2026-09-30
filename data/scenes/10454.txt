@@ -1,0 +1,98 @@
+id=10454
+名称=东海小镇
+作者=
+属性=1
+动作=
+{
+D5001=if game_check_money(9999) then game_change_money(-9999);game_goods_change_n('龙泉剑',1);game_chat('您购买了一把龙泉剑。') else game_chat('您钱不够。') end
+D5002=if game_check_money(900) then game_change_money(-900);game_goods_change_n('东海龙涎草',1);game_chat('您购买了3棵东海龙涎草。') else game_chat('您钱不够。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://644,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,东海小镇,AT1001,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+东海边的一个小镇，靠海，多海鲜奇货，常有客商往来。<p>
+时常有海风的吹拂，所以街道上干净的没有一点灰尘。<p>
+街上有些人在卖杂货：<p>
+一个<a href="game_npc_talk('剑商')">卖剑的商人</a><p>
+一个<a href="game_npc_talk('草药商')">草药商</a>人<p>
+一个<a href="game_npc_talk('海鲜商')">海鲜商</a>人<p>
+<a href="game_npc_talk('朱大妈')">朱大妈</a><p>
+一条路，<a href="game_pop_a(3);game_page(12502)" title="前往海龙世家">通往山上</a>。
+<p>
+<a href="game_page(-1)">返回东海岸</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+剑商=1,买龙泉剑不？价格优惠呢。
+I=1,if game_check_scene_event(1046) and game_not_scene_event(1047) then string game_get_newname_at_id(2)@ end这剑什么价？有何厉害之处？
+剑商=2,龙泉宝剑，名师所造，用材精良，攻加130，价格9999，需19级才能佩戴。
+I,A=[D5001]2,if game_check_scene_event(1046) and game_not_scene_event(1047) then string game_get_newname_at_id(2)@ end买
+I,B=2,if game_check_scene_event(1046) and game_not_scene_event(1047) then string game_get_newname_at_id(2)@ end不买
+if game_check_scene_event(1046) and game_not_scene_event(1047) then
+if game_role_count(0)=2 then
+草药商=1,
+I=1,string game_get_newname_at_id(2)@请问有东海龙涎草卖吗？
+草药商=2,这个你算是问对人了，这草就我这有，300元一棵，要几棵？
+I,A=2,string game_get_newname_at_id(2)@买个三棵了。
+I,B=2,string game_get_newname_at_id(2)@先不买。
+草药商,A=3,if game_check_money(900) then [D5002]3,好，拿着。这药要<FONT color=#"FF0000">交给大夫</FONT>，不能自己吃的。else 您钱不够。 end
+草药商,B=3,恩，随意。
+
+else
+if game_check_res_event(5164) then
+草药商=1,
+I=1,string game_get_newname_at_id(2)@请问有东海龙涎草卖吗？
+草药商=2,这个你算是问对人了，这草就我这有，300元一棵，要几棵？
+I,A=2,string game_get_newname_at_id(2)@买个三棵了。
+I,B=2,string game_get_newname_at_id(2)@先不买。
+草药商,A=3,if game_check_money(900) then [D5002]3,好，拿着。这药要<FONT color=#"FF0000">交给大夫</FONT>，不能自己吃的。else 您钱不够。 end
+草药商,B=3,恩，随意。
+else
+草药商=1,
+I=1,string game_get_newname_at_id(2)@请问有东海龙涎草卖吗？
+草药商=2,这个草啊，我这没有，你可以去<strong>蛇岛</strong>看看，好像那上面能找到。
+I=2,string game_get_newname_at_id(2)@恩，好的，我去看看，谢谢你了。
+end
+end
+else
+草药商=1,我这时常有些罕见的药品卖，有需要可以来问问看。
+I=1,好
+end
+
+if game_not_res_event(9013) then
+海鲜商=1,收购大海蟹啦？在<FONT color=#"FF0000">牡蛎岛</FONT>上有大量海蟹出没哦。
+I,A=[game_add_task(9013)]1,好啊，我去抓几只来
+I,B=1,我现在没空呢。
+else
+if game_check_goods_nmb('海蟹',3) then
+海鲜商=[game_goods_change_n('海蟹',-3);game_comp_task(9013)]1,恩，给你报酬。还要再帮忙抓蟹吗？
+I=1,恩，不谢。
+else
+if not game_check_goods_nmb('海蟹',1) then
+海鲜商=1,海蟹在<FONT color=#"FF0000">牡蛎岛</FONT>那里很多的。
+I=1,恩，我马上去抓。
+else
+海鲜商=1,你抓的蟹不够哦，要3只起收购。
+I=1,恩，我再去抓。
+end
+end
+end;
+if game_check_res_event(9015) then
+朱大妈=1,我的信送到了吗？
+I=1,还没，快了。
+else
+朱大妈=1,我儿在开封附近和金兵打仗，很久没回来了。我找人写了封信，只是没能送过去。
+I,A=[game_add_task(9015)]1,正好，我经常会去那些地方，我帮你带去吧。
+I,B=1,战争会很快结束的，您老不必当心。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A3A9FED5C298E3EE9719E83BE72BDF64

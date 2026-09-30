@@ -1,0 +1,49 @@
+id=10987
+名称=望梅山庄内-土坑
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clOlive}),clWindow,梅,AT1009,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<:if game_check_scene_event(1071) then
+土坑填上了，四周的空气似乎也变得清新了。<p>
+else
+土坑，不大，深，土色浅红。<p>
+可见坑内有蓝色花纹的陶瓷坛子一个。<p>
+if game_check_goods_nmb('和氏璧',1) then
+if game_role_count(0) >1 then
+string game_get_newname_at_id(2)：“string game_get_newname_at_id(1)，你有和氏璧一块，据说此物集天地之灵气，不知能否镇妖？”
+else
+string game_get_newname_at_id(1)：“我有和氏璧一块，据说此物集天地之灵气，不知能否镇妖？”
+end
+<p>望梅山庄老家丁：“啊，这是神物啊，应该可以镇妖。”<p>
+<a href="game_pop_fight_a(1,97);game_add_scene_event(1071);game_reload_direct(0)" title="">试试</a>。
+else
+if game_role_count(0) >1 then
+string game_get_newname_at_id(2)：“据古书记载，古时赵国的<FONT color=#"FF0000">和氏璧</FONT>，乃集天地之灵气，如得到，可助镇妖。只是，要得和氏璧，需去婺州三清山道观，从须弥幻境进入方可。”
+else
+string game_get_newname_at_id(1)：“听说古时赵国的<FONT color=#"FF0000">和氏璧</FONT>，乃集天地之灵气，如得到，可助镇妖。只是，要得和氏璧，需去婺州三清山道观，从须弥幻境进入方可。”
+end
+end
+end:>
+<p>
+<a href="game_page(10980)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9F519E0AA92CA4FA764D6F9328F783A8

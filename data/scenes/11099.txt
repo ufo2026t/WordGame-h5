@@ -1,0 +1,59 @@
+id=11099
+名称=客房一
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,客房一,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1085) then
+if game_random_chance_at_sleep(3) then
+房客：（梦话）“好酒，好酒，再喝……”<p>
+end
+if game_random_chance_at_sleep(3) then
+房客：（梦话）“美女，别走啊……”<p>
+end
+if game_random_chance_at_sleep(3) then
+房客：（梦话）“哇，中原果然地大物博……”<p>
+end
+else
+if game_check_scene_event(1282) then
+房间是空的。
+else
+房间里有个西域打扮的<a href="game_npc_talk('客人')">客人</a>住着。</a>。
+end
+
+end:>
+
+<p>
+<a href="game_page(11098)">退出</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1283) then
+客人=1,有去过西域了？
+I=1,还没
+else
+客人=1,我来中原也有一些时间了，只是吃的不习惯
+I=1,你从哪里来？
+客人=2,我从<b>西州城</b>来。
+I=2,请问尊姓大名？
+客人=[game_add_scene_event(1283)]3,莫延顿贺
+I=3,过段时间也去西域走走，见识见识
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=8151DC6F5FB40514828C4BCD6F861D7F

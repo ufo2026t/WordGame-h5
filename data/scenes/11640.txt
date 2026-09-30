@@ -1,0 +1,64 @@
+id=11640
+名称=十里坪内部密室
+作者=
+属性=6
+动作=
+{
+D5001=game_pop_a(12);if game_not_scene_event(1163) then game_goods_change_n('天蚕丝',1);game_goods_change_n('九阳丹',1);game_goods_change_n('金块',1);game_add_scene_event(1163); end game_write_temp(1164001,1);game_reload_direct(0)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,十里坪,AT1002,0,0/2007.bmp"></CENTER>
+到了一间密室，里面很昏暗，石壁透出骇人的气息。<p>
+<:game_true(1)string game_res_goods(0,1,'黑钨矿'):><p>
+<:if game_check_scene_event(1156) then
+密室机关开启，现出一副壁画，上画着天狼星正从东方缓缓升起。<br>
+墙壁上有一个<a href="D5001" title="">暗格</a>。<p>
+if game_read_temp(1164001) then
+暗格打开了：<br>
+if game_check_scene_event(1163) then
+物品已经被拿走。<br>
+else
+您得到了天蚕丝1，九阳丹1，金块1。<br>
+end
+暗格内有一张羊皮，上面写着：<br>
+庚丑年夏，大旱数月，颗粒无收。地方乡绅牵头，请一术士求雨。<br>
+术士言：“曦，天狼星从东方起，以人祭之，必雨。”<br>
+乃建此室，以为祭。<br>
+是日，祭始，人杀之，忽，星从东来，嗡声不绝，火光四射。<br>
+众喜，以为神。<br>
+忽，星坠地，巨震，久之不息。进而火起，绵延数里。<br>
+其人皆绝，仅此室内存活一二，是为天怒。<p>
+------------------------------------------------<p>
+string game_get_newname_at_id(1)：“这，很可能是一个火流星碎片掉下，引起的爆炸。且从天上带来了有毒物质，常人来此，皆因中毒而亡。”<p>
+if game_role_count(0)>1 then
+string game_get_newname_at_id(2)：“老大说言甚是，既是星从天降，可能有陨铁矿？”<p>
+string game_get_newname_at_id(1)： “都没见天坑，应该是临近地面时就炸了，没了。”
+end
+祭室探尽；岩壁旁留着昔年术士布下的退阵，踏之可直回十里坪外。<p>
+<a href="game_pop_a(5);game_page(11572)" title="">法阵<img src="$apppath$img\fazhen.gif" border="0"></a><p>
+end
+else
+这里有几个机关，您觉得要按下哪一个？（请结合前面发现的那些线索）<p>
+1。<a href="game_pop_a(6);game_infobox('您的判断有误，估计没有在先前仔细翻看线索。机关触动，您被送回了城镇。');game_goto_home(0)" title="按下">日出江花红胜火，春来江水绿如蓝</a>。<br>
+2。<a href="game_pop_a(6);game_infobox('您的判断有误，估计没有在先前仔细翻看线索。机关触动，您被送回了城镇。');game_goto_home(0)" title="按下">三十功名尘与土,八千里路云和月</a>。<br>
+3。<a href="game_pop_a(6);game_add_scene_event(1156);game_reload_direct(0)" title="按下">天狼星从东方升起</a>。<p>
+end:>
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1BB0FF957A60B1528E4443AEDF8DEA16

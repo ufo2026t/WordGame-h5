@@ -1,0 +1,39 @@
+id=11158
+名称=淮阳乱坟岗内部
+作者=
+属性=6
+动作=
+{
+D5001=game_pop_fight_a(1,107);game_write_temp(1115801,1);game_reload_direct(0)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://807,267,(隶书,134,200,{Bold},{clWindowText}),clWindow,乱坟岗,AT1010,1,68/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,房八,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1101) then
+房间是空的。
+elseif game_check_scene_event(1103) then
+if game_read_temp(1115801) then
+小贼都跑光了，那贼王在哪？会不会在大厅？
+else
+if game_time_exe(2,'D5001') then
+有几个山贼在房间内。
+end
+end
+else
+房间是空的。
+end:> <p>
+<a href="game_page(11153)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2207750F0A65CD51BF87CF71E0B7133E

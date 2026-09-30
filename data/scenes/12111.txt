@@ -1,0 +1,28 @@
+id=12111
+名称=东大寺-大殿
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,大殿,AT1000,0,0/2007.bmp"></CENTER>
+大殿内卢舍那大佛坐像巍然。<p>
+<a href="game_page(12112)" title="">进入佛像内部</a><p>
+<a href="game_page(12107)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A292863E19C5C396781D9E72018B8B83

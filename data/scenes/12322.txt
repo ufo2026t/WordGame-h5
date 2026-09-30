@@ -1,0 +1,46 @@
+id=12322
+名称=月牙泉
+作者=
+属性=4
+TempKey=月牙泉
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<:game_read_temp(1232201)
+<bgsound src="$apppath$music\天堂.mid" loop="-1">
+:>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,月牙泉,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_role_is_exist('慕容丽雯') then
+if game_check_res_event(11727) then
+慕容丽雯：“沙漠中的绿洲，风光独好。”<a href="game_write_temp(1232201,1);game_page(12322)" title="">听琴</a>
+else
+慕容丽雯：“天上银月，落地为泉。”<br>
+
+end
+else
+string game_get_newname_at_id(1)：“终于到月牙泉了。”
+end:><p>
+<:game_true(1)string game_res_goods(0,1,'月牙钩'):><p>
+泉边沙地上刻着绿洲里难得一见的法阵，是往来商旅留下的捷径，踏之可直回沙漠起点。<p>
+<a href="game_pop_a(5);game_page(11923)">法阵</a><br>
+
+<p>
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=FF5FE3FF8ABDFEBDFF4A24AC982C16CE

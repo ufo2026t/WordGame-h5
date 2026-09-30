@@ -1,0 +1,68 @@
+id=12531
+名称=通海洞迷宫
+作者=
+属性=38
+载入后=game_pop_fight_a(1,167)
+TempKey=
+动作=
+{
+D5001=if game_pop_fight_a(1,161) then game_write_temp(1253101,1);game_add_scene_event(1257);game_reload_direct(0) end
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,通海洞迷宫,AT1000,0,0/2007.bmp"></CENTER>
+
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,1,'上等木炭'):><p>
+迷宫底，有个<a href="game_pop(3);game_page(-19)" title="">法阵</a>可以返回<p>
+
+<:if game_read_temp(1253101) then
+if game_check_scene_event(1217) then
+总堂主：“你武功果然惊人，难道是最新的武林盟主？有事请讲。”<br>
+else
+总堂主：“你武功果然惊人，有什么事你就问吧。”<br>
+end
+string game_get_newname_at_id(1)：“其实也没什么事，我从天蓬山庄得到消息说你这里
+有第五份藏宝图？”<br>
+总堂主：“我们海龙世家安居于东海，从不过问中原之事，从没染指过什么藏宝图。”<br>
+“天蓬山庄庄主可是说的有鼻子有眼的，说藏宝图就在你们海龙世家。”<br>
+“天蓬山庄？想起来了，那个肥猪庄主数月前来东海游玩，与我们家丁发生冲突，被我教训了一顿，
+有可能是因此怀恨在心，现伺机诬蔑我们。”<br>
+“你怎么知道他是天蓬山庄庄主？”<br>
+ “当年他在一酒馆带了几个人在喝酒，席间隐约听他说起，只要宝藏到手，他们天蓬山庄必然会成为天下第一庄，他到时候也能在武林中呼风唤雨了。
+ 再看其人确有几分猪八戒的样子，所以，我断定他是庄主。”<br>
+“这么说来，天蓬山庄应该知道宝藏的不少信息。”<br>
+“后来，天蓬人员和敝家丁因琐事打了起来，天蓬庄主不仅不劝阻手下，还屡出重手，我不得已出手打退天蓬一伙。”<br>
+“如此说来，再结合张真人所言，可见第五部分藏宝图十有八九在天蓬山庄手上。”<br>
+“这我就不清楚了，只是这次天蓬山庄竟然诬赖藏宝图在我们海龙世家，实非君子所为。”<br>
+ “好，我再去天蓬山庄走一趟，打扰你了。”<br>
+else
+if game_check_scene_event(1256) and game_not_scene_event(1257) then
+海龙<a href="game_npc_talk('总堂主')">总堂主</a>正在修炼啸海神功。
+end
+end:>
+<p>
+
+<p>
+
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+总堂主=1,你能连闯四关来这里，看来乃是高手中的高手。
+I=1,我也是要事在身，迫不得已。
+总堂主=2,不过，我这是最后一关，你要能过了，再说不迟。
+I,A=[D5001]2,请出招
+I,B=[game_page(-1)]2,退出
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C9C0F35A3D6AE3B7ABD0F28304AD570E

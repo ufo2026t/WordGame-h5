@@ -1,0 +1,37 @@
+id=11377
+名称=星月神教
+作者=
+属性=4
+动作=
+{
+D5001=if game_pop_a(3) then game_write_temp(1137701,1);game_reload_direct(0) else game_infobox('您掉入了水塘，被神教的人发现，逃回来了。');game_page(10583) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clBlack}),clWindow,星月,AT1002,0,66/2007.bmp"></CENTER>
+里面弥漫着一股特殊的气味。<p>
+内有参差不齐的建筑。<br>
+
+<:game_read_temp(1137701)
+<a href="game_page(11380)">通道左</a><p>
+<a href="game_page(11386)">通道右</a><p>
+else
+大门内就是一个深塘周围堵着高墙。要进入内部，需<a href="D5001" title="跳，小心掉下去">跳过池塘</a>。<p>
+:>
+（本故事由网友“*火*”和“浅秋晴明”提供故事梗概，在此表示感谢）
+<p>
+<a href="game_page(11084)">返回</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B4ABC3B682F84EADFD9B23BB7951B6D8

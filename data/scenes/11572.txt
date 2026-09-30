@@ -1,0 +1,31 @@
+id=11572
+名称=十里坪
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,十里坪,AT1002,0,0/2007.bmp"></CENTER>
+方圆十里，所以当地人称十里坪，稀稀拉拉的长着一些草，地上怪石嶙峋，崎岖不平。且时常见有五彩祥云从上头飘过。<p>
+但无人知道这些云从哪里出来，因为，进去查看的人，从来没有出来过……<p>
+
+<a href="game_pop_a(3);game_page(11607)" title="">进入</a>
+<p>
+<a href="game_page(11417)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=36B371550253192045EFE2B9FFCE880C

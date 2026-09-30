@@ -1,0 +1,37 @@
+id=10333
+名称=山庄藏书阁
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://269,267,(隶书,134,200,{Bold},{clGreen}),clWindow,书,AT1001,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://185,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,藏书阁,AT1000,0,0/2007.bmp"></CENTER>
+书中自有黄金屋，书中自有颜如玉。<p>
+有几个人在看书<br>
+看书人甲：“你说自己著书和注疏有什么不同。”<br>
+看书人乙：“著书好比是水，若有源头就能自成一派。注疏就好比是火，需依附他人著作才能发光发热。”<p>
+
+<:if not game_check_res_event(5160) then
+一本<a href="game_pop_a(15);game_goods_change_n('回春术',1);game_chat('找到回春术一本。');game_add_res_event(5160);game_reload_direct(0)" title="">武功秘籍</a>。
+end:>
+
+<p>
+<a href="game_page(10324)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1451114E61D1EA7C907FFA627F7ABA84

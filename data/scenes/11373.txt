@@ -1,0 +1,66 @@
+id=11373
+名称=大理
+作者=
+属性=64
+TempKey=大理
+载入后=if game_not_scene_event(1113) then game_add_scene_event(1113) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,大理,AT1001,0,0/2007.bmp"></CENTER>
+大理。<p>
+<:game_random_chance(3)
+<a href="game_npc_talk('行人甲')">行人甲</a><p>:>
+<a href="game_npc_talk('行人乙')">行人乙</a><p>
+<:game_random_chance(3)
+<a href="game_npc_talk('行人丙')">行人丙</a><p>:>
+<a href="game_npc_talk('行人丁')">行人丁</a><p>
+<a href="if game_check_goods_nmb('王子令牌',1) then game_page(11549) else game_chat('进王宫需要王子令牌。') end" title="">大理王宫</a><p>
+<a href="game_page(11419)" title="大理的豪门望族">慕容世家</a><p>
+<a href="game_page(12186)" title="">异草堂</a>&nbsp;&nbsp;茶楼&nbsp;&nbsp;<a href="game_trade(12,1)" title="没钱？来卖东西吧。">当铺</a><p>
+<:if game_role_is_exist('慕容丽雯') and game_not_scene_event(1127) then
+if not game_check_role_values('慕容丽雯',15,25) then
+run game_del_friend('慕容丽雯',0)
+run game_add_scene_event(1127)
+慕容丽雯离开了队伍。<br>
+<img src="$apppath$img\7.bmp">：“前面不远处就是我家了。我先回去准备一下。”<br>
+end
+end:>
+<a href="game_page(11418)" title="雪山">雪山</a><p>
+<p>
+<a href="if game_role_is_exist('慕容紫霞') then if game_check_role_values('慕容紫霞',0,0) then game_pop_a(3);game_page(11371) else game_page(11548) end else game_pop_a(3);game_page(11371) end">返回南绍镇</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+行人甲=1,这里的风光不错啊，天气又暖和。让我去临安我还不愿意去呢。
+if game_check_scene_event(1229) then
+I=1,大理物产是丰富的，打听一下，可知道哪里有优质天麻卖？
+行人甲=2,药店应该有的，你去看看，这附近就有一药店。
+I=2,多谢。
+else
+I=1,天南地北，各有风情啊。
+end
+行人乙=1,大理就慕容世家和段家是大家族，你们没事千万别去惹他们。否则吃不了兜着走。
+I=1,
+行人丙=1,听说临安多美女，是真的吗？
+I=1,是哦，要不要给你介绍一个？
+行人丙=2,收介绍费吗？
+I=2,当然，介绍一个100钱
+行人丙=3,pi，骗我钱，没门
+I=3,
+行人丁=1,前几天，我在街上碰见了慕容家的小女慕容紫霞姑娘
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=72C2848764AE87AC48BA103C1513D32F

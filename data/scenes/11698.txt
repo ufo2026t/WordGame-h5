@@ -1,0 +1,69 @@
+id=11698
+名称=岳飞营
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,兵营三,AT1002,0,0/2007.bmp"></CENTER>
+兵营三<p>
+<:game_true(1)string game_res_goods(0,1,'大力丸'):><p>
+<a href="game_npc_talk('宋兵小王')">宋兵小王</a><p>
+<a href="game_npc_talk('宋兵小朱')">宋兵小朱</a><p>
+<a href="game_npc_talk('宋兵小毛')">宋兵小毛</a><p>
+
+<p>
+<a href="game_page(11688)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+宋兵小王=1,听说朝廷准备撤军了？
+I=1,宋兵小朱@哪来的小道消息，不要瞎说。
+宋兵小王=2,我昨天晚上做梦梦见的。
+I=2,
+if game_check_res_event(9015) then
+宋兵小朱=1,
+I=1,你是朱金豆？
+宋兵小朱=2,是啊，你怎么知道的？
+I=2,好消息，你妈托我给你带信来了。
+宋兵小朱=[game_comp_task(9015)]3,真的，太好了，家书抵万金啊。
+I=3,哈哈
+else
+宋兵小朱=1,好久没有回家了，也不知这仗啥时能打完。
+I=1,
+end
+if game_check_scene_event(1173) then
+宋兵小毛=1,谢谢大侠啊。真是谢谢了
+I=1,小事，不值一提
+else
+宋兵小毛=1,啊哟，啊哟
+I=1,你怎么啦？
+宋兵小毛=2,宋兵小王@他打战受伤了，中了一箭，很深，大夫都说不乐观。
+I=2,我来看看。
+宋兵小毛=3,宋兵小王@你也懂医术？
+I=3,略懂一二。
+宋兵小毛=4,宋兵小王@也只好死马当活马医了，总比等死强。
+if game_check_goods_nmb('还魂丹',1) then
+I=4,我这有还魂丹，不过，此丹药性强，普通人难以承受，待我运功给其增强体能。
+宋兵小毛=5,宋兵小朱@太好了，看来小毛有救啦。
+I=[game_goods_change_n('还魂丹',-1);game_pop_a(6);game_add_scene_event(1173);game_infobox('疗伤成功。');game_reload_direct(0)]5,（开始运功）。
+else
+I=4,我还魂丹用完了，否则，会好办很多，这样，待我运功试试。
+宋兵小毛=5,宋兵小王@但愿老天保佑。
+I=[game_pop_a(12);game_add_scene_event(1173);game_infobox('疗伤成功。');game_reload_direct(0)]5,（开始运功）。
+end
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E73D57C8F4675CD5FE55B4E78F9ABA57

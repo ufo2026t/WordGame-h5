@@ -1,0 +1,41 @@
+id=10025
+名称=矿洞底下一层25号地块
+作者=
+属性=38
+载入后=game_pop_fight_a(1, 62)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clWindow,迷宫,AT1000,1,75/2007.bmp) fixed no-repeat center center;">
+这里是矿洞的底下一层地块。<p>
+旁边洞口众多，也不知道通往哪里才是正确的，先到处转转看了<br>
+
+再往里走，旁边有个<a href="game_pop_a(3);game_page(10030)" title="">石门</a>，通向30号地块。<p>
+
+此处地势平坦，比较明亮，远处似乎有不明生物在晃动。<br>
+<:game_true(1)string game_res_goods(5022,1,'仙露饮'):>
+<p>
+<:game_true(1)string game_res_goods(5089,1,'迟钝剂'):>
+<p>
+<a href="game_page(10023)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+江雪儿=1,
+I=1,有没有什么药物，服用了以后不用打怪也能过的？
+江雪儿=2,没有的吧，反正我是没听说过。
+I=2,下次我去药铺问问。
+江雪儿=3,这还用去问，少丢人啦。
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=19F6E4D98426EB4021E1109A4D76D15A

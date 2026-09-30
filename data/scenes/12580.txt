@@ -1,0 +1,47 @@
+id=12580
+名称=上京客栈楼上
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://343,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,上京客栈客房五,AT1000,0,0/2007.bmp"></CENTER>
+
+ <:game_true(1)string game_res_goods(0,1,'百年人参'):><p>
+ <:if game_check_scene_event(1269) then
+ if game_check_scene_event(1280) then
+ 房间里没有人。
+else
+ 房间里两个九毒派使者在小声的说着什么，马上<a href="game_npc_talk('九毒派使者甲')">探听一下</a>。
+end
+else
+房间里空空的，不过空气中似乎有种奇怪的气味，等以后再来看看吧。
+end:>
+
+<a href="game_page(12575)">返回</a><br>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+九毒派使者甲=[game_add_scene_event(1280)]1,听说教主得到了一个藏宝图小块，所以派出很多人去各地查找剩余部分。
+I=1,九毒派使者乙@不知是什么宝藏能让教主这么大费周章？
+九毒派使者甲=2,是前朝流传下来的大宝藏，不过都是传说，没人见过真面目。
+I=2,九毒派使者乙@你可知道宝藏在什么地方不？
+九毒派使者甲=3,听人说在<FONT color=#FF0000>开封邙山</FONT>一带。
+I=3,九毒派使者乙@等我们这边探查完后去邙山查看查看。
+
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C9524466F244AC8275AF674C55BC0EE4

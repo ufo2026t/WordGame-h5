@@ -1,0 +1,37 @@
+id=11897
+名称=昆仑山隧洞
+作者=
+属性=260
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://314,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,昆仑山,AT1000,0,0/2007.bmp"></CENTER>
+<img src="gpic://img_kunlun8.jpg"><p>
+<:if game_not_res_event(5232) then
+一个奇怪的<a href="game_pop(20);game_chat('捡到了一飞行地图，您以后可以在动作菜单下的“飞行”菜单内打开飞行地图，然后直接前往要去的地方了。');game_add_res_event(5232);game_goods_change_n('飞行地图',1);game_reload_direct(0)" title="好东西，千万别错过！！！">盒子</a>。end:><p>
+到达了昆仑隧洞口。<p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):>
+洞内神鬼莫测。是否<a href="game_save(0)" title="存盘">存盘</a>？<p>
+ <a href="game_page(1)">进洞</a><p>
+
+
+<a href="game_pop_a(2);game_page(-1)">返回昆仑山顶</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3AD7C7E811BA2781E03D05CFB5780CE0

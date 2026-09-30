@@ -1,0 +1,34 @@
+id=10129
+名称=娘娘庙
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+ <CENTER><img src="gpic://124,29,(隶书,134,22,{Bold},{clWindowText}),clWindow,娘娘母地,AT1000,0,0/2007.bmp"></CENTER>
+<p>
+坊间盛传地母娘娘很灵，有求必应。因此这里一直香火鼎盛。<p>
+但由于靠近兰若寺，在兰若寺内树妖横行以后，渐渐的，娘娘庙也没人来了。<p>
+现在里面蒿草丛生，破败不堪了，只是偶尔还有个把人冒险来此许愿求仙。<p>
+&nbsp;<p>
+<:game_check_scene_event(1020)<a href="game_page(10130)" title="">进入娘娘庙内殿</a> else
+因娘娘庙如今人迹罕至，倒常有蒙面人在此出没。:><p>
+<a href="game_page(10061)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=36FA3C50D52F8BA7F8650B368CB0EC72

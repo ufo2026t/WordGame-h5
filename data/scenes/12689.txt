@@ -1,0 +1,36 @@
+id=12689
+名称=房间四
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间四,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(5300) then
+角落已无贼踪，东来令已夺回。<p>
+elseif game_check_scene_event(1289) then
+墙根有新鲜足迹，窗下丢着九毒派特有的毒囊——蒙面窃贼似乎还在此处！<p>
+<a href="if game_pop_fight_a(1,46) then game_add_scene_event(5300);game_chat('蒙面窃贼败退，你在床下搜得东来令。');game_reload_direct(0) end" title="">搜查并擒贼</a><p>
+else
+一间空置客房，陈设简朴。<p>
+end:>
+<p>
+<a href="game_page(-4)">后院</a><br>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C463C7073EF0331CBD87480F1CAF42AF

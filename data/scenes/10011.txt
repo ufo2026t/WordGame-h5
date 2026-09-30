@@ -1,0 +1,58 @@
+id=10011
+名称=客栈后院
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+客栈后院比较清幽，有假山和花坛。
+<p>
+
+<p><:if game_role_is_exist('江雪儿') or game_check_scene_event(1001) or game_check_scene_event(1028) then 花儿开的正艳 else 一位<a href="game_npc_talk('小姑娘')">女子</a>正在赏花 end:>
+<p>
+
+<a href="game_page(10006)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+小姑娘=[game_add_scene_event(1028)]1,<img src="$apppath$img\4.bmp">
+if game_sex_from_id(1) then
+I,A=1,嘿，小妞，干吗呢？
+I,B=1,不知姑娘在此，多有打扰了。
+小姑娘,A=2,你是谁，我不认识你。
+小姑娘,B=2,无事看看花开，想必公子也是悠闲之人。
+I,A=2,相逢何必曾相识，一回生两回熟嘛
+I,B=2,听说最近妖怪为患，准备去后山上看看，经过附近偶听黄莹鸣叫特进来看看。
+小姑娘,A=3,油嘴滑舌，我不想认识你，你走吧。
+小姑娘,B=3,是么，我也为此事而来，正想去山上看看。
+I,A=3,系统提示@由于您的不文明，失去了一次添加队员的机会。好吧，重新聊吧。
+I,B=3,除妖很是危险，不如跟我一道去如何？
+小姑娘,A=4,呸
+小姑娘,B=[game_add_friend('江雪儿',1);game_reload_direct(0)]4,也好，先去看看吧。
+I,B=4,敢问姑娘尊姓大名，家住何方？
+小姑娘,B=5,聚也是缘，散也是缘，不需多问。
+I,B=5,
+else
+I=1,这花可真漂亮。
+小姑娘=2,是啊，你也喜欢？
+I=2,恩，只是我没时间赏花，现在到处转转，找个人做帮手，上山打怪去。
+小姑娘=3,嘿，你可算是问对人了，本姑娘可不是吹的，乃法术高手拉。
+I=3,是吗，是骡子是马拉出去溜溜，走，咱们上山打怪去。
+小姑娘=[game_add_friend('江雪儿',1);game_reload_direct(0)]4,Let's go.
+I=4,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E25C7990BA8E8C023197455A70534094

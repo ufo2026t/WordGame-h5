@@ -1,0 +1,33 @@
+id=11699
+名称=岳飞营
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,空地,AT1002,0,0/2007.bmp"></CENTER>
+营中空地。<p>
+宋军中尉：“听岳元帅说你们武功了得，尔等想见识见识。”<br>
+“大家都是自家兄弟，这是为何呢？”<br>
+宋军中尉：“我们向岳元帅几次请求要去金营打探，元帅都不允，却偏会让你们去，所以不服。”<br>
+“既然如此，那咱们就点到为止，友谊第一。”<p>
+<a href="game_pop_fight_a(2,129);game_add_scene_event(1175);game_infobox('中尉：果然有两下子，我们服了。');game_page(11576)" title="">开始比武</a>
+<p>
+<a href="if game_check_scene_event(1175) then game_page(11576) else game_chat('中尉：别跑啊') end">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=15D9602FCE47F26FD3B87F8DD639DCF6

@@ -1,0 +1,40 @@
+id=12208
+名称=平安京-小巷-大宅院
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,宅院,AT1000,0,0/2007.bmp"></CENTER>
+（百鬼夜游故事由网友 <strong>雪ヤヤ</strong> 提供，在此表示感谢）<p>
+
+由于长期荒芜，院子里长满了半人多高的荒草，灌木。<br>
+各色小鸟在草上飞飞停停。<p>
+院子很大，在草丛中散落了许多白森森的人骨。<p>
+<:if game_check_scene_event(1241) then
+房间的门关着。
+else
+if game_role_is_exist('千代美') then
+千代：“好大一座宅子，原先的主人不是一般的有钱有势呢。”<br>
+end
+进入<a href="game_page(1)" title="">客厅</a>
+end:>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1F20E226271484259B1E566594041863

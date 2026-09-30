@@ -1,0 +1,43 @@
+id=10521
+名称=天外天山庄
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,天外天,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+天外天山庄，虽然比河西镇的无剑山庄名气小点，但也高手如云。<p>
+庄主云霸天，善使一对流星锤。<p>
+云庄主原先为人和善，但一次在练习某神功时不慎走火入魔，导致性格怪异，喜怒无常。
+&nbsp;<p>
+<a href="game_page(10523)" title="">进入山庄</a><p>
+<:game_random_chance(3)一个<a href="game_npc_talk('白胡子大伯')">白胡子大伯</a>在山庄附近挖蚯蚓。:>
+<p>
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+白胡子大伯=1,你是外地来的吧。
+I=1,是哦，乡下来的，你这挖蚯蚓干吗？钓鱼？
+白胡子大伯=2,对，钓鱼。
+I=2,那河边就有蚯蚓挖的，为何要挖这里的？
+白胡子大伯=3,这里红蚯蚓多。你外地来的就不要在这里瞎转悠。这庄主脾气古怪，你还是离远点好。
+I=3,愿闻其详。
+白胡子大伯=4,庄主姓云，外号云霸天，原先为人和善，但一次在练习某神功走火入魔，变成现在这样喜怒无常了。
+I=4,什么神功这么邪门？
+白胡子大伯=5,这就不清楚了，不过，庄里还有酒色财气四大高手，也非等闲之辈。
+I=5,谢谢大伯。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=50B8EC66E7037F29A2BA36D0252F3992

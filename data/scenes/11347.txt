@@ -1,0 +1,36 @@
+id=11347
+名称=虚无幻境四，第一关
+作者=
+属性=6
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,第一关,AT1000,0,0/2007.bmp"></CENTER>
+岭关<p>
+孔秀：来者何人！报上名来<br>
+关羽：我乃关羽！到河北去见兄长！<br>
+孔秀：将军可有通关文书？<br>
+关羽：时间匆忙！忘记带了<br>
+孔秀：制度所迫，必须这样！<br>
+关羽：咳，咳，那就不客气了。<br>
+孔秀：哈哈哈哈，看你手脚发软，连大刀都有旁人提着，还想闯关，找死。<br>
+1。<a href="game_pop_fight_a(1,111);game_page(1)" title="">闯关</a><br>
+2。<a href="game_pop_a(3);game_page(10574)" title="">开溜</a><br>
+<p>
+<a href="game_pop_a(2);game_page(10574)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F3CF61676921904762DE368292042887

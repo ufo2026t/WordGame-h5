@@ -1,0 +1,43 @@
+id=12706
+名称=天井
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,天井,AT1000,0,0/2007.bmp"></CENTER>
+天井四壁涂着各色毒虫图谱，中央一方水池养着几条色彩斑斓的异蛇。<p>
+<:if game_check_scene_event(1288) then
+总坛内气氛肃杀，弟子们窃窃私语，似在商议邙山之行。
+else
+要见教主，须先通过会客大厅的护法；后院书房中或藏有线索。<br>
+<FONT color=#FF0000>主线：天井 → 会客大厅 → 后院 → 书房 → 密室 → 教主房。两侧练功房、弟子房为支路，可略过。</FONT>
+end:>
+
+<a href="game_page(1)">走廊</a><br>
+<a href="game_page(9)">会客大厅</a><br>
+<a href="game_page(10)">后院</a><br>
+<a href="game_page(26)">小厅</a><br>
+
+
+<p>
+<a href="game_page(-1)">九毒派大门</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=FBE47A9D4B23973112435B1813E7A842

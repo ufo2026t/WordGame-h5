@@ -1,0 +1,77 @@
+id=12506
+名称=海龙堂
+作者=
+属性=4
+TempKey=
+动作=
+{
+
+D5001=if game_pop_game(1,161) then game_write_temp(1250605,1);game_reload_direct(0) else game_write_temp(1250606,1);game_reload_direct(0) end
+D5002=if game_pop_game(1,166) then game_write_temp(1250605,1);game_reload_direct(0) else game_write_temp(1250606,1);game_reload_direct(0) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,海龙堂,AT1000,0,0/2007.bmp"></CENTER>
+海龙世家总坛，平时大小事情均在此商议。<p>
+<:if game_check_scene_event(1256) and game_not_scene_event(1253) then
+<a href="game_npc_talk('家丁')">家丁</a>
+else
+if game_check_scene_event(1256) then
+if game_read_temp(1250606) then
+海龙总堂主：“哈哈，我的啸海神功，威力果然了得。”<p>
+else
+if game_read_temp(1250605) then
+海龙总堂主：“唉，看来啸海神功还需继续修炼。”<p>
+else
+海龙总堂主：“哈哈，又见你们，可否还想比武？”<p>
+1。<a href="D5001;" title="">比武</a><br>
+2。<a href="game_page(-3)" title="">不比</a>
+end
+end
+
+else
+
+if game_read_temp(1250606) then
+海龙总堂主：“年轻人，还需继续努力啊。”<p>
+else
+if game_read_temp(1250605) then
+海龙总堂主：“等我的啸海神功练成后再和你们比试。”<p>
+else
+海龙总堂主：“能打过看门家丁，看来非等闲之辈，说吧，来了有什么目的”<p>
+1。<a href="D5002;" title="">比武</a><br>
+2。<a href="game_npc_talk('总堂主')">聊天</a>
+end
+end
+
+end
+end:><p>
+
+<:game_true(1)string game_res_goods(0,1,'百年灵芝'):><p>
+
+
+
+
+<p>
+<a href="game_page(-3)">院子</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+家丁=1,我家总堂主现在闭关修炼，不见任何人。
+I=1,有急事找，怎么办？
+家丁=2,按规矩，打过青，黄，紫，黑四大坛主才能去通海洞见总坛主
+I=2,
+总堂主=1,
+I=1,没什么，想和总堂主聊聊罢了
+总堂主=2,我不喜欢和小年轻聊天。
+I=2,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5A876EE103DC711A1F02C2D21692A206

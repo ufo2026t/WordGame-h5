@@ -1,0 +1,35 @@
+id=10590
+名称=花港观鱼
+作者=
+属性=
+TempKey=花港观鱼
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clGreen}),clWindow,花港观鱼,AT1002,0,0/2007.bmp"></CENTER>
+花港观鱼公园位于苏堤南段以西，在西里湖与小南湖之间的一块半岛上。南宋时，内侍官允升曾在离这里不远的花家山下结庐建私家花园，园中花木扶疏，引水入池，蓄养五色鱼以供观赏怡情，渐成游人杂沓频频光顾之地，时称卢园又以地近花家山而名以花港。宫廷画师创作西湖十景组画时将它列入其中。清康熙三十八年（一六九九），皇帝玄烨驾临西湖，照例题书花港观鱼景目，用石建碑于鱼池畔。后来乾隆下江南游西湖时，又有诗作题刻于碑阴，诗中有句云：“花家山下流花港，花著鱼身鱼嘬花”。
+<p>
+<:game_true(1)string game_res_goods(0,1,'红酒'):><p>
+<p>
+
+<p>
+<a href="game_page(10584)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=268BBECDF2FCF43548ABAC30F3C25E69

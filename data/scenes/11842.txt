@@ -1,0 +1,36 @@
+id=11842
+名称=上京-城内
+作者=
+属性=64
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<bgsound src="$apppath$music\bach2.mid" loop="-1">
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,上京城内,AT1009,66,0/2007.bmp"></CENTER>
+上京城内。北国都城，很是繁华。<p>
+<a href="game_npc_talk('皇宫守卫')">进入皇宫</a><p>
+<a href="game_page(11850)" title="">王府</a><p>
+<a href="game_page(11855)" title="">客栈</a><p>
+<a href="game_page(11856)" title="">酒馆</a><p>
+<a href="game_page(11857)" title="">市井街巷</a><p>
+
+<p>
+<a href="game_page(11819)">退出上京</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+皇宫守卫=1,请出示令牌
+I=1,if game_check_goods_nmb('金都皇宫令牌',1) then [game_page(1)]1,看，这就是令牌 else 我没有令牌 end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F2E0D4880562C78BAB35603F49539EAF

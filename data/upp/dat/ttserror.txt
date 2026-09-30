@@ -1,0 +1,27 @@
+TTS语音合成组件常见的错误和解决方法：
+
+1。下载 Spchapi.exe sapi接口（下载地址可在这里找到 http://word.5d6d.com/thread-124-1-1.html ）
+2。下载 mstts5.1 版,包括 Sam / Mary / Mike 三种美国英语发音（下载地址可在这里找到 http://word.5d6d.com/thread-124-1-1.html ）
+
+语音引擎的相关问题：
+语音引擎问题:
+
+如果是windows98/windows2000, 缷载原来的语音引擎，重新安装一次，一般能修复语音引擎问题。
+
+
+如果是windowsxp, 可分别尝试以下的办法:
+1. 缷载原引擎，重新安装一次 (如果不行，试第2步)
+2. 下载并安装 spchapi 文件，然后重启电脑 (如果还不行，试第3步)
+3. 删除以下文件夹:
+  驱动器:\documents and settings\ 用户名 \application data\microsoft\speech\files\userlexicons
+注意，上面的驱动器是指你的xp所安装的盘符，用户名指的是你登录xp使用的登录用户
+例: c:\documents and settings\cjc\application data\microsoft\speech\files\userlexicons
+
+
+如果问题还不能解决，请重新安装windows系统。
+
+更多信息，也可来本贴查找  http://word.5d6d.com/thread-124-1-1.html 
+
+玩家论坛：http://www.finer2.com/wordgame/bbs.htm
+
+游戏主页：http://www.finer2.com/wordgame/

@@ -1,0 +1,62 @@
+id=11552
+名称=大理王宫
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clNavy}),clWindow,大理王宫,AT1002,0,0/2007.bmp"></CENTER>
+东宫<p>
+
+<:game_true(1)string game_res_goods(0,1,'雪莲'):><p>
+<:if game_check_scene_event(1134) or game_check_scene_event(1135) then
+房间是空的。
+else
+if game_check_scene_event(1133) then
+if game_sex_from_id(1) then
+run game_add_scene_event(1135)
+段浒：“哦，是你啊，从雪山回来了？可有收获？”<br>
+string game_get_newname_at_id(1)：“捡到了不少宝贝。”<br>
+段浒：“宝贝？你要什么宝贝？我这多的是，随便挑几样去。”<br>
+string game_get_newname_at_id(1)：“金银珠宝我倒是不需要，不过听说大理有很多武功秘籍？”<br>
+段浒：“武功秘籍，有啊，六脉神剑，只是这是我们段家的独门武功，祖上有规矩，不能外传的。”<br>
+string game_get_newname_at_id(1)：“哎，真是可惜。”<br>
+else
+ if not game_role_is_exist('段浒') then
+  王子，<a href="game_add_scene_event(1135);game_npc_talk('段浒')">对话</a>。
+ end
+end
+else
+王子不在，有事出去了。
+end
+end:>
+<p>
+<a href="game_page(11549)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+段浒=1,好啊，从雪山回来了？
+I=1,回来了，累死我了。
+段浒=2,你内力深厚，应该不会这么没用啊。
+I=2,主要是路上怪多，打的累。
+段浒=3,大宋境内有这么多怪吗？
+I=3,也有，有些地方多有些地方少。
+段浒=4,那边的风土人情如何？我很想去那边看看。
+I=4,行万里路，读万卷书，不错的选择。
+段浒=5,那我先跟着你们可好？我这人怕寂寞，喜欢成群结队的出行，不过，带很多大理的侍卫出去又麻烦，且不熟悉大宋习俗。
+I,A=[game_add_friend('段浒',1);game_add_scene_event(1134);game_infobox('段浒加入了队伍。');game_reload_direct(0)]5,好，就跟着我吧。
+I,B=5,不好，我不喜欢前呼后拥的。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=122DBB61049E867F750E26343AEF04AA

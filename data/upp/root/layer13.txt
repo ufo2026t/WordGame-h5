@@ -1,0 +1,12 @@
+id=layer13
+begin=373
+end=374
+begin2=383
+end2=384
+begin3=391
+end3=391
+begin3=394
+end3=395
+;可以使用begin2，end2等定义多个物品区间，最多搜索到begin9为止
+;矿物商店
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

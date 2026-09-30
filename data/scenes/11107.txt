@@ -1,0 +1,31 @@
+id=11107
+名称=秀洲小河
+作者=
+属性=
+动作=
+{
+D5001=if game_pop_a(3) and game_random_chance(4) then game_goods_change_n('鲫鱼',1);game_chat('恭喜：抓到了一条鲫鱼。') else game_chat('抓鱼失败，鱼逃走了。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clGreen}),clWindow,小河,AT1000,0,0/2007.bmp"></CENTER>
+小河弯弯，流向遥远的地方。<p>
+<a href="D5001" title="">抓鱼</a><p>
+
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3FE6661861FC3BAE185BB3868B202039

@@ -1,0 +1,32 @@
+id=12803
+名称=伊豆-修善寺
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,修善寺,AT1000,0,0/2007.bmp"></CENTER>
+伊豆半岛上的古刹，温泉水汽盈永，游人稀少。<p>
+<a href="game_npc_talk('老僧')">老僧</a><p>
+可远瞰<a href="game_page(12153)" title="">富士山</a>。<p>
+<p>
+<a href="game_page(12106)">返回伊豆</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+老僧=1,施主从远方来？伊豆多温泉，可洗尘心。
+I=1,听说平源两氏争斗不休？
+老僧=2,武士争权，百姓受苦。奈良有佛，伊贺有平氏，平安京则是源氏盘据之地。
+I=2,多谢大师指点。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

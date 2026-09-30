@@ -1,0 +1,32 @@
+id=11153
+名称=淮阳乱坟岗内部
+作者=
+属性=6
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://807,267,(隶书,134,200,{Bold},{clWindowText}),clWindow,乱坟岗,AT1010,1,68/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,通道,AT1000,0,0/2007.bmp"></CENTER>
+里面有一些房间。<p>
+<a href="game_page(1)" title="">房间四</a><p>
+<a href="game_page(2)" title="">房间五</a><p>
+<a href="game_page(3)" title="">房间六</a><p>
+<a href="game_page(4)" title="">房间七</a><p>
+<a href="game_page(5)" title="">房间八</a><p>
+<a href="game_page(-4)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=790AF29825C6EA788DB2B91753CC63B1

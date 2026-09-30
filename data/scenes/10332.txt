@@ -1,0 +1,36 @@
+id=10332
+名称=山庄后院房间6
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://185,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,后院房间六,AT1000,0,0/2007.bmp"></CENTER>
+客房<p>
+<:if game_check_scene_event(1031) then
+里面住了几个人。
+else
+房间里没人。
+end:><p>
+<:if not game_check_res_event(5159) then 一个<a href="game_goods_change_n('回城卷',1);game_chat('捡到回城卷一。');game_add_res_event(5159);game_reload_direct(0)" title="">宝箱</a>。end:>
+
+<p>
+<a href="game_page(10324)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1105D849D83B1B432E24F9A590E235CA

@@ -1,0 +1,37 @@
+id=10390
+名称=兰若寺大殿
+作者=
+属性=2
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://538,267,(隶书,134,200,{Bold},{clGray}),clWindow,大殿,AT1012,0,60/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+大殿正中塑着高大的佛像，边上是四大金刚。<p>
+不过由于长期无人打理，佛像上落满了灰层，佛前的布帘也显得破落不堪。<p>
+&nbsp;<p>
+&nbsp;<p>
+大殿可通往别处：<p>
+<a href="game_page(10399)" title="">左边殿1</a>，<a href="game_page(10400)" title="">左边殿2</a>，<a href="game_page(10401)" title="">左边殿3</a><p>
+<a href="game_page(10402)" title="">右边殿1</a>，<a href="game_page(10403)" title="">右边殿2</a>，<a href="game_page(10404)" title="">右边殿3</a><p>
+<a href="game_page(10405)" title="">二楼走廊</a><p>
+<a href="game_page(10412)" title="">到地下室</a><p>
+
+<p>
+<a href="game_page(-1)">返回前院</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=014F0978FB23FFE8D44D029B09E94D41

@@ -1,0 +1,43 @@
+id=10977
+名称=望梅山庄内
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clOlive}),clWindow,梅,AT1009,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+这地名曰梅家坞，但没有梅树。<br>
+这山庄叫望梅山庄，所以也看不到梅花。<p>
+<a href="game_npc_talk('家丁')">进入</a>
+<p>
+<:game_check_scene_event(1068)一个<a href="game_page(10978)" title="从小门进入">小门</a>:>
+<p>
+<a href="game_page(10641)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+家丁=1,有拜帖吗？
+I=1,没有。
+家丁=2,没有拜帖的，一律从旁边的小门进去，不能走大门。
+I=2,为何？
+家丁=3,这是规矩，庄主立的，没有理由。
+I,A=[game_add_scene_event(1068);game_reload_direct(0)]3,好吧，我从小门走了。
+I,B=3,那我偏要从大门进呢？
+家丁,A=4,
+家丁,B=4,哦，和我过不去是不是？看你有没有这个能耐了。
+I,A=4,
+I,B=[game_pop_fight_a(4,82);game_page(10978)]4,那就试试看。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F3BF48812AFC2CBFD2649964309178B3

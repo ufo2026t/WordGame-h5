@@ -1,0 +1,39 @@
+id=12202
+名称=沂州-十八里铺-村内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,李大民家,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'铜块'):><p>
+此人不学无术，是村里有名的混混，30好几了，依然是光棍一个。<a href="game_npc_talk('李大民')">闲聊</a><p>
+
+<p>
+<a href="game_page(12198)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+李大民=1,看那采花贼，来无影去无踪，尝遍世间风情，好不快活。
+I=1,难不成你也想去做采花贼？
+李大民=2,有这贼心没这贼胆。
+I=2,你说话倒是直率，虽说思想境界不高。
+李大民=3,俺一介俗人，有一说一，从不二话
+I=3,那你可知采花贼出没有何规律？
+李大民=4,这个……，只知采花贼昼伏夜出。
+I=4,夜出，那就是说要晚上才能发现踪迹了。
+李大民=5,村外的山神庙，偶有行人在那过夜，不过，这和采花贼应该没关系。
+I=5,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BFC9C97767DB2B551ABF529B26C3FF71

@@ -1,0 +1,78 @@
+id=11372
+名称=
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clRed}),clWindow,花店,AT1005,0,0/2007.bmp"></CENTER>
+<img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><p>
+<img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><img src="$apppath$gif\63.gif"><p>
+您想把999朵玫瑰送给谁？（注，999朵只能送一次）<p>
+<:
+if game_role_count(2) then
+if not game_sex_from_id(2) then
+送给 <a href="game_pop_a(5);game_attribute_change(2,14,1);game_attribute_change(2,15,1);game_add_scene_event(1114);game_infobox('对方接受了您的玫瑰花，感情值增加了一点。');game_page(-1)" title="送花">string game_get_newname_at_id(2)</a><p>
+end
+end
+if game_role_count(3) then
+if not game_sex_from_id(3) then
+送给 <a href="game_pop_a(5);game_attribute_change(3,14,1);game_attribute_change(3,15,1);game_add_scene_event(1114);game_infobox('对方接受了您的玫瑰花，感情值增加了一点。');game_page(-1)" title="送花">string game_get_newname_at_id(3)</a><p>
+end
+end
+if game_role_count(4) then
+if not game_sex_from_id(4) then
+送给 <a href="game_pop_a(5);game_attribute_change(4,14,1);game_attribute_change(4,15,1);game_add_scene_event(1114);game_infobox('对方接受了您的玫瑰花，感情值增加了一点。');game_page(-1)" title="送花">string game_get_newname_at_id(4)</a><p>
+end
+end
+if game_role_count(5) then
+if not game_sex_from_id(5) then
+送给 <a href="game_pop_a(5);game_attribute_change(5,14,1);game_attribute_change(5,15,1);game_add_scene_event(1114);game_infobox('对方接受了您的玫瑰花，感情值增加了一点。');game_page(-1)" title="送花">string game_get_newname_at_id(5)</a><p>
+end
+end
+if game_role_count(6) then
+if not game_sex_from_id(6) then
+送给 <a href="game_pop_a(5);game_attribute_change(6,14,1);game_attribute_change(6,15,1);game_add_scene_event(1114);game_infobox('对方接受了您的玫瑰花，感情值增加了一点。');game_page(-1)" title="送花">string game_get_newname_at_id(6)</a><p>
+end
+end
+if game_role_count(7) then
+if not game_sex_from_id(7) then
+送给 <a href="game_pop_a(5);game_attribute_change(7,14,1);game_attribute_change(7,15,1);game_add_scene_event(1114);game_infobox('对方接受了您的玫瑰花，感情值增加了一点。');game_page(-1)" title="送花">string game_get_newname_at_id(7)</a><p>
+end
+end
+if game_role_count(8) then
+if not game_sex_from_id(8) then
+送给 <a href="game_pop_a(5);game_attribute_change(8,14,1);game_attribute_change(8,15,1);game_add_scene_event(1114);game_infobox('对方接受了您的玫瑰花，感情值增加了一点。');game_page(-1)" title="送花">string game_get_newname_at_id(8)</a><p>
+end
+end
+if game_role_count(9) then
+if not game_sex_from_id(9) then
+送给 <a href="game_pop_a(5);game_attribute_change(9,14,1);game_attribute_change(9,15,1);game_add_scene_event(1114);game_infobox('对方接受了您的玫瑰花，感情值增加了一点。');game_page(-1)" title="送花">string game_get_newname_at_id(9)</a><p>
+end
+end
+if game_role_count(10) then
+if not game_sex_from_id(10) then
+送给 <a href="game_pop_a(5);game_attribute_change(10,14,1);game_attribute_change(10,15,1);game_add_scene_event(1114);game_infobox('对方接受了您的玫瑰花，感情值增加了一点。');game_page(-1)" title="送花">string game_get_newname_at_id(10)</a><p>
+end
+end
+:>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4CEC6A2EA4390346FCAE204D3D7067F5

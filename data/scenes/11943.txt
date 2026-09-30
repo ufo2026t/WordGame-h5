@@ -1,0 +1,34 @@
+id=11943
+名称=天山南麓
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,南麓,AT1002,0,0/2007.bmp"></CENTER>
+进入天山南麓迷宫<p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):><p>
+<a href="game_save(0)" title="存盘">存盘点</a><p>
+<a href="game_page(1)">进入迷宫</a>
+<p>
+<a href="game_page(11937)">返回天山顶</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=37024E54742E55BF5810B62D4C67D1FD

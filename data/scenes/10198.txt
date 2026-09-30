@@ -1,0 +1,32 @@
+id=10198
+名称=天坑
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clTeal}),clWindow,天坑,AT1001,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+天坑是由于在很久很久以前，流星坠落而砸出的一个深坑，内部深不可测。<p>
+民间有着古老的传说，说是在天坑的底下埋藏着无价之宝，但坑内多怪，人下去以后再也没有能活着回来的。<p>
+因此至今无人知道，天坑的深处，到底是什么。<p>
+&nbsp;<p>
+<a href="game_page(10199)" title="">进入天坑</a> <p>
+
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5E8BC0F245DDA973913496C2E4B8351D

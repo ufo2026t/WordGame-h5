@@ -1,0 +1,21 @@
+* text=auto eol=lf
+*.md text eol=lf working-tree-encoding=UTF-8
+*.txt text eol=lf
+*.json text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.htm text eol=lf
+*.ini text eol=lf
+*.bat text eol=crlf
+
+*.gif binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.bmp binary
+*.webp binary
+*.ico binary
+*.mid binary
+*.wav binary

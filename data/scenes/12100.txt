@@ -1,0 +1,148 @@
+id=12100
+名称=无剑山庄-比武大会
+作者=
+属性=132
+退出后=if game_check_scene_event(1218) then game_role_reshow(0); end if game_not_scene_event(1215) then game_add_scene_event(1216); end game_add_scene_event(1205)
+动作=
+{
+D5001=if game_check_scene_event(1218) then game_role_only_show('无名'); end if game_read_temp(12191) and game_read_temp(12192) and game_read_temp(12193) and game_read_temp(12194) and game_read_temp(12195) and game_read_temp(12196) and game_read_temp(12197) and game_read_temp(12198) and game_read_temp(12199) then game_add_scene_event(1215);game_page(12101) else game_reload_direct(0) end
+D5002=if game_check_scene_event(1218) then game_role_only_show('无名'); end if game_pop_game(1,81) then game_write_temp(12191,1);D5001 else game_page(12102) end
+D5003=if game_check_scene_event(1218) then game_role_only_show('无名'); end if game_pop_game(1,132) then game_write_temp(12192,1);D5001 else game_page(12102) end
+D5004=if game_check_scene_event(1218) then game_role_only_show('无名'); end if game_pop_game(1,150) then game_write_temp(12193,1);D5001 else game_page(12102) end
+D5005=if game_check_scene_event(1218) then game_role_only_show('无名'); end if game_pop_game(1,144) then game_write_temp(12194,1);D5001 else game_page(12102) end
+D5006=if game_check_scene_event(1218) then game_role_only_show('无名'); end if game_pop_game(1,145) then game_write_temp(12195,1);D5001 else game_page(12102) end
+D5007=if game_check_scene_event(1218) then game_role_only_show('无名'); end if game_pop_game(1,146) then game_write_temp(12196,1);D5001 else game_page(12102) end
+D5008=if game_check_scene_event(1218) then game_role_only_show('无名'); end if game_pop_game(1,147) then game_write_temp(12197,1);D5001 else game_page(12102) end
+D5009=if game_check_scene_event(1218) then game_role_only_show('无名'); end if game_pop_game(1,32) then game_write_temp(12198,1);D5001 else game_page(12102) end
+D5010=if game_check_scene_event(1218) then game_role_only_show('无名'); else if game_role_is_exist('李疏盈') then game_set_role_0_hide('李疏盈',0); end end if game_pop_game(1,124) then game_write_temp(12199,1);D5001 else game_page(12102) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+<style>
+<!-- .intro{position:absolute; left:0; top:0; layer-background-color:green; background-color:green;border:0.1px solid green}
+.pt9 {font-size: 9pt; text-decoration: none}
+body {font-size: 12pt; text-decoration: none; margin-top:0px}
+-->
+</style>
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clMaroon}),clWindow,武林大会,AT1002,0,0/2007.bmp"></CENTER>
+<div id="i1" class="intro"></div>
+<div id="i2" class="intro"></div>
+<script language="JavaScript1.2">
+var speed=20;
+var temp=new Array();
+var temp2=new Array();
+if (document.layers)
+{
+for (i=1;i<=2;i++)
+{
+temp[i]=eval("document.i"+i+".clip");
+temp2[i]=eval("document.i"+i);
+temp[i].width=window.innerWidth/2;
+temp[i].height=window.innerHeight;
+temp2[i].left=(i-1)*temp[i].width;
+}
+}
+else if (document.all)
+{
+var clipright=document.body.clientWidth/2,clipleft=0;
+for (i=1;i<=2;i++)
+{
+temp[i]=eval("document.all.i"+i+".style");
+temp[i].width=document.body.clientWidth/2;
+temp[i].height=document.body.offsetHeight;
+temp[i].left=(i-1)*parseInt(temp[i].width);
+}
+}
+function openit()
+{
+window.scrollTo(0,0);
+if (document.layers)
+{
+temp[1].right-=speed;
+temp[2].left+=speed;
+if (temp[2].left>window.innerWidth/2) clearInterval(stopit);
+}
+else if (document.all)
+{
+clipright-=speed;
+temp[1].clip="rect(0 "+clipright+" auto 0)";
+clipleft+=speed;
+temp[2].clip="rect(0 auto auto "+clipleft+")";
+if (clipright<=0) clearInterval(stopit);
+}
+}
+function gogo()
+{
+stopit=setInterval("openit()",100);
+}
+gogo()
+</script>
+本次武林大会，比武规则。<p>
+只要谁能一一击败9大门派的，就算是本届大会的新盟主。<p>
+不过，如果没有和9大门派一一过招，中途离场的，就算输了。<p>
+为照顾一些习惯团体作战的人士，本次比武，允许团体上场共同进退。<p>
+本着友谊第一，比赛第二的精神，请大家点到即止。<p>
+<hr>
+<:if game_check_scene_event(1218) then
+您当前是个人参战，勇气可嘉。切换到<a href="game_role_reshow(0);game_del_scene_event(1218);game_reload_direct(0)">团体作战</a>。
+else
+您当前是团体作战。切换到<a href="game_role_only_show('无名');game_add_scene_event(1218);game_reload_direct(0)">个人作战</a>。
+end:><p>
+<:if game_role_is_exist('铁无梅') then
+run game_set_role_0_hide('铁无梅',0)
+<strong>铁无梅</strong>：“我在边上看着。看你们比武。string game_get_newname_at_id(1)哥哥，小心点哦。”<br>
+else
+if game_role_is_exist('铁檑') then
+run game_set_role_0_hide('铁檑',0)
+<strong>铁檑</strong>：“我父亲在场，所以，我不便出手。你们比吧。”
+end
+end:>
+<hr>
+<:
+if not game_read_temp(12191) then
+1。与无剑山庄庄主<a href="D5002" title="">过招</a><br>
+end
+if not game_read_temp(12192) then
+2。与少林方丈<a href="D5003" title="">过招</a>。<br>
+end
+if not game_read_temp(12193) then
+3。与武当张真人<a href="D5004" title="">过招</a>。<br>
+end
+if not game_read_temp(12194) then
+4。与峨嵋师太<a href="D5005" title="">过招</a>。<br>
+end
+if not game_read_temp(12195) then
+5。与昆仑掌门<a href="D5006" title="">过招</a>。<br>
+end
+if not game_read_temp(12196) then
+6。与天山掌门<a href="D5007" title="">过招</a>。<br>
+end
+if not game_read_temp(12197) then
+7。与东方镖局总镖头<a href="D5008" title="">过招</a>。<br>
+end
+if not game_read_temp(12198) then
+8。与天外天山庄庄主<a href="D5009" title="">过招</a>。<br>
+end
+if not game_read_temp(12199) then
+if game_read_temp(12198) and game_not_scene_event(1218) and game_role_is_exist('李疏盈') then
+run game_set_role_0_hide('李疏盈',0)
+赵小金：“飞龙帮主是在下义父，我不便参战，你们小心为是。”<br>
+end
+9。与飞龙帮帮主<a href="D5010" title="">过招</a>。<br>
+end :>
+<p>
+<a href="if game_not_scene_event(1215) then if game_question('比武没有获胜，是否认输脱逃?') then game_page(10320) end else game_page(10320) end">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4CF85566AE00B3E623C990D91C88CA43

@@ -1,0 +1,63 @@
+id=11859
+名称=望湖别墅
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<:if game_read_scene_integer(1187)=0 then
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,客厅,AT1002,0,0/2007.bmp"></CENTER>
+end
+if game_read_scene_integer(1187)=1 then
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,正大光明,AT1002,0,0/2007.bmp"></CENTER>
+end
+if game_read_scene_integer(1187)=2 then
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,一统江湖,AT1002,0,0/2007.bmp"></CENTER>
+end
+if game_read_scene_integer(1187)=3 then
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,难得糊涂,AT1002,0,0/2007.bmp"></CENTER>
+end
+if game_read_scene_integer(1187)=4 then
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,小康之家,AT1002,0,0/2007.bmp"></CENTER>
+end
+if game_read_scene_integer(1187)=5 then
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,一无所有,AT1002,0,0/2007.bmp"></CENTER>
+end
+if game_read_scene_integer(1187)=6 then
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,虫虫乐园,AT1002,0,0/2007.bmp"></CENTER>
+end
+if game_read_scene_integer(1187)=7 then
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,财源广进,AT1002,0,0/2007.bmp"></CENTER>
+end
+if game_read_scene_integer(1187)=8 then
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,好好学习,AT1002,0,0/2007.bmp"></CENTER>
+end
+if game_read_scene_integer(1187)=9 then
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,不背单词,AT1002,0,0/2007.bmp"></CENTER>
+end
+if game_read_scene_integer(1187)=10 then
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,龙啸九天,AT1002,0,0/2007.bmp"></CENTER>
+end
+:>客厅内<p>
+<:game_check_res_event(5222)家丁甲<p>:>
+<:game_check_res_event(5227)丫鬟甲<p>:>
+<a href="if game_check_scene_event(1144) then game_page(11862) else game_chat('您没有购买，这房间无法进入。') end">书房</a><p>
+<p>
+<a href="game_page(11569)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9D310D788D77C8537CF2159A73081877

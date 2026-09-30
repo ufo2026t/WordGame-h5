@@ -1,0 +1,73 @@
+id=10096
+名称=宾至如归客栈
+作者=
+属性=
+动作=
+{
+D5001=if game_check_money(100) then game_change_money(-100);game_role_all_MTL(0);game_delay(1000);game_infobox('休息了一晚上，生命值，体力值等全满。') else game_infobox('钱不够，不能住店。') end
+D5002=if game_check_money(80) then game_change_money(-80);game_role_all_MTL(0);game_delay(1000);game_infobox('休息了一晚上，生命值，体力值等全满。') else game_infobox('钱不够，不能住店。') end
+D5003=if game_check_money(80) then game_change_money(-80);game_role_all_MTL(0);game_delay(1000);if game_question('到半夜了，是否去兰若寺看看？') then game_add_scene_event(1041);game_page(10061) else game_del_scene_event(1041) end else game_infobox('钱不够，不能住店。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<:if game_check_scene_event(1041) then
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clGray,半夜,AT1010,1,42/2007.bmp) fixed no-repeat center center;">
+else
+<BODY>
+end:>
+
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<CENTER><img src="gpic://196,48,(黑体,134,36,{Bold},{clRed}),clOlive,宾至如归,AT1001,0,0/2007.bmp"></CENTER>
+<:game_check_scene_event(1041)
+现在是<strong>晚上半夜</strong>了。<p>
+else
+现在是<strong>白天</strong><p>
+:>
+婺州城里最大的一间客栈了。<br>
+客栈有上下两层，每层大约8间客房。<br>
+左边有个<a href="game_page(10099)" title="客栈二楼">楼梯</a>可以通往楼上。<p>
+右边一个门，通往<a href="game_page(10107)" title="客栈一楼走廊">走廊</a>。<p>
+客栈<a href="game_npc_talk('老板')">老板</a>正忙着招呼客人。如需住店，请和<a href="game_npc_talk('老板')" title="住店">老板</a>联系。<br>
+<p>
+<:if game_check_scene_event(1041) then
+住店能恢复体力，为省钱也可以在大厅里坐着<a href="game_del_scene_event(1041);game_reload(0)">等到天亮</a>
+else
+住店能恢复体力，为省钱也可以在大厅里坐着<a href="game_add_scene_event(1041);game_reload(0)" title="">等到半夜天黑</a>
+end:>
+<p>
+
+<a href="game_page(10061)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1040) then
+老板=1,客官，休息不？
+I,A=[D5003]1,好。
+I,B=1,先不住店。
+else
+if not game_check_scene_event(1014) and not game_check_res_event(9003) then
+老板=1,今天忙的团团转，对了，您是否有空帮我送封信？
+I,A=1,可以，送到哪？
+I,B=1,我也忙着呢。
+老板,A=[game_add_task(9003)]2,多谢，送往<FONT color=#"FF0000">临安</FONT>的赵老板。
+老板,B=2,那我找别人吧，不麻烦你了。
+else
+老板=1,客官，住店？一晚上100，长住优惠。
+I,A=[D5001]1,好。
+I,B=1,太贵了。
+老板,A=2,里边请。
+老板,B=2,唉，现在生意不景气，给你个八折吧。
+I,B,A=2,我还是不住。
+I,B,B=[D5002]2,好，就休息一晚上吧。
+end
+end;
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=450C835E39F9A4915E6A9BA5C9E63FE4

@@ -1,0 +1,49 @@
+id=12124
+名称=伊贺谷-赤石山
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,赤石山,AT1000,0,0/2007.bmp"></CENTER>
+赤石山，也不知什么原因，山上的石头怪里怪气的。<p>
+树木，也是稀稀拉拉的长了没多少。<p>
+听说，这山上有一上古流传下来的神器，蕴含有惊世的力量，用于战斗，可力敌千军。<p>
+但这终归只是传说，因为谁也没有看到过这宝贝的真面目。<br>
+上得山去的，往往有去无回……<p>
+<:if game_role_is_exist('千代美') then
+if game_not_res_event(game_get_pscene_id(0)) then
+run game_add_res_event(game_get_pscene_id(0))
+string game_newname_from_oldname('千代美')：“大家小心，这里很是危险。”<p>
+end
+end:>。<p>
+<:game_true(1)exeing game_include_str('mgnd.upp'):>。<p>
+。
+<p>
+<:
+if game_check_scene_event(1220) then
+<a href="game_page(1)" title="">进山</a>
+else
+进山的路不通，还是先回去再找找线索吧。
+end
+:>
+<p>
+<a href="game_page(12121)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BBDCEA8E46436A0F72EADAC111BB3B67

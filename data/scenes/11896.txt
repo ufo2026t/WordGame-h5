@@ -1,0 +1,34 @@
+id=11896
+名称=昆仑山顶
+作者=
+属性=260
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://314,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,昆仑山顶,AT1000,0,0/2007.bmp"></CENTER>
+<img src="gpic://img_kunlun7.jpg"><p>
+<:if not game_check_res_event(game_get_pscene_id(0)) then
+一个五彩<a href="game_pop_a(5);game_goods_change_n('五色土',1);game_chat('捡到五色土1。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">土堆</a>。end:><p>
+这里已经到山顶了，需要翻过山顶，进入山另一面的隧洞内。<p>
+ <a href="game_pop_a(10);game_page(1)">翻越</a><p>
+前往<a href="game_pop_a(3);game_page(12089)" title="">昆仑派</a><p>
+
+
+<a href="game_pop_a(2);game_page(-1)">下山</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=7544314C42A990385183F0D0278DC3E6

@@ -1,0 +1,59 @@
+id=12178
+名称=书院宿舍
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://260,64,(隶书,134,48,{Bold},{clBlack}),clWindow,宿舍三,AT1003,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1085) then
+if game_check_scene_event(1226) and game_not_scene_event(1224) then
+if game_check_scene_event(1233) then
+书生丁：“自从你们上次来过后，那女子便没有来过。也不知到底怎么回事。我想，还是要去小树林看个明白。”
+else
+run game_add_scene_event(1233)
+一进房间，忽见一妖艳女子，一闪，不见了。<p>
+string game_get_newname_at_id(1)：“往<strong>小树林</strong>跑了，快追。”
+end
+else
+<a href="game_npc_talk('书生丁')">书生丁</a>
+end
+else
+白天，宿舍没人。
+end:><p>
+<:game_true(1)string game_res_goods(0,1,'干粮'):><p>
+<p>
+<a href="game_page(12175)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1224) then
+书生丁=1,请坐，请坐。唉，你说，她要是人，该多好啊。
+I=1,
+else
+if game_check_scene_event(1225) and game_not_scene_event(1226) then
+书生丁=1,你们来了。先坐一会，要夜深了她才会来。
+I=1,她一般从哪里来？
+书生丁=2,有个事儿我想起来了，她总是从书院后面的小树林过来。
+I=2,很可能小树林里有线索，我们先去小树林看看。
+书生丁=3,好，多谢你们。
+I=3,
+else
+书生丁=1,对不起，夜深了，要休息了。
+I=1,
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5DD0D628AD42D7B51F45E81C3A5FD8E1

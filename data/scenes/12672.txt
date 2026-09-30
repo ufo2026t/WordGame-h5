@@ -1,0 +1,44 @@
+id=12672
+名称=武器铺
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,武器铺,AT1000,0,0/2007.bmp"></CENTER>
+ 架上枪刀明亮，多是来往客商添置防身之物。<p>
+ 西州的武器店，多高级武器。<p>
+<a href="game_npc_talk('铁匠')">铁匠</a><p>
+<a href="game_trade(14,0)" title="">买武器</a><p>
+<a href="game_trade(14,1)" title="">卖武器</a><p>
+
+
+
+
+<p>
+<a href="game_page(-24)">西州城</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+铁匠=1,西州兵器多防身用，要极品去中原打。
+I=1,
+if game_check_scene_event(1289) then
+铁匠=2,听说东来山庄失了信物，是九毒派干的？你若要讨公道，先备好兵器。
+I=2,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E6EE0A734CD0074B4A4BA9869618C2F8

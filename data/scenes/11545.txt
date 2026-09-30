@@ -1,0 +1,34 @@
+id=11545
+名称=梅里雪山
+作者=
+属性=38
+载入后=game_pop_fight_a(5,121)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,神女峰,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:if not game_check_res_event(game_get_pscene_id(0)) then
+一个大<a href="game_goods_change_n('天蚕丝',1);game_goods_change_n('雪莲',20);game_chat('捡到天蚕丝1。雪莲20');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">宝箱</a>。end:><p>
+神女峰顶，云气缭绕；峰侧刻着采药人留下的法阵，踏之可直回梅里雪山起点。<p>
+<a href="game_pop_a(5);game_page(11475)" title="返回雪山开头">法阵<img src="$apppath$img\fazhen.gif" border="0"></a><p>
+返回<a href="game_pop_a(2);game_page(-1)" title="返回">前一场景</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D0EE854C1B974F12BB2DF59E19B6F2D3

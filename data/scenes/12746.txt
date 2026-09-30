@@ -1,0 +1,44 @@
+id=12746
+名称=城外郊外
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,城外郊外,AT1000,0,0/2007.bmp"></CENTER>
+西州城外的戈壁，风卷黄沙。<p>
+<:if game_check_scene_event(1288) then
+<FONT color=#FF0000>藏宝图第七块既已入手，可往开封邙山汇合。</FONT><p>
+<a href="game_page(1)" title="">邙山迷宫</a><br>
+else
+若要探邙山，须先备齐藏宝图碎块。<p>
+end:>
+<a href="game_page(-9)">中孚大街</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+猎人=1,我在这儿打猎，不敬沉。再往东是邙山方向的迷宫，没有把握別去。
+I=1,
+if game_check_scene_event(1288) then
+猎人=2,你背着藏宝图的样子，是去邙山吧？路上多留神。
+I=2,
+end
+采药人=1,我采的是十年生草药，药铺老板收。近来药价涨，都是江湖人抖的。
+I=1,
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=92990E645534DA17BEAB715AE89D2700

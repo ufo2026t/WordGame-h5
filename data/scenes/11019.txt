@@ -1,0 +1,43 @@
+id=11019
+名称=珊瑚岛-八卦阵
+作者=
+属性=4
+动作=
+{
+D5001=game_pop_a(5);game_write_temp(1101901,1);game_chat('继续')
+D5002=game_pop_a(5);game_write_temp(1101902,1);game_chat('继续')
+D5003=game_pop_a(5);game_write_temp(1101903,1);game_chat('继续')
+D5004=if game_read_temp(1101901) and game_read_temp(1101902) and game_read_temp(1101903) then game_pop_a(5);game_page(1) else game_pop_a(5);game_chat('继续') end
+D5005=game_pop_a(5);game_clear_temp(0);game_chat('此路不通')
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://645,213,(隶书,134,160,{Bold},{clFuchsia}),clWindow,岛,AT1001,0,75/2007.bmp) fixed no-repeat center center;">
+ <CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,万灵山,AT1000,0,0/2007.bmp"></CENTER>
+山不高，但陡峭且多洞穴。<br>
+要进山，需先过八卦阵：<br>
+乾：<a href="D5001">进入</a>　　　坤：<a href="D5005">进入</a>　　　震：<a href="D5002">进入</a>　　　艮：<a href="D5005">进入</a><br>
+▅▅▅▅▅　　▅▅　▅▅　　▅▅　▅▅　　▅▅▅▅▅<br>
+▅▅▅▅▅　　▅▅　▅▅　　▅▅　▅▅　　▅▅　▅▅<br>
+▅▅▅▅▅　　▅▅　▅▅　　▅▅▅▅▅　　▅▅　▅▅<br>
+&nbsp;<p>
+离：<a href="D5003">进入</a>　　　坎：<a href="D5005">进入</a>　　　兑：<a href="D5004">进入</a>　　　巽：<a href="D5005">进入</a><br>
+▅▅▅▅▅　　▅▅　▅▅　　▅▅　▅▅　　▅▅▅▅▅<br>
+▅▅　▅▅　　▅▅▅▅▅　　▅▅▅▅▅　　▅▅▅▅▅<br>
+▅▅▅▅▅　　▅▅　▅▅　　▅▅▅▅▅　　▅▅　▅▅<br>
+<p>
+
+<a href="game_pop_a(3);game_page(11014)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C14D9D763333713488584053A167E81E

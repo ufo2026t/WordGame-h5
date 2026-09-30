@@ -1,0 +1,40 @@
+id=10303
+名称=无剑山庄内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://67,56,(隶书,134,42,{Bold},{clRed}),clWindow,剑,AT1012,0,20/2007.bmp"></CENTER>
+无剑山庄种了很多的奇花异草。<p>
+山庄家丁：“<:game_sex_from_id(1)公子这里地形复杂着呢。else 小姐，请往这边走：:>”<p>
+左边通往<a href="game_page(10304)" title="">水榭走廊</a><p>
+中间这条路<a href="game_page(10320)" title="">通往大厅</a><p>
+右边的<a href="game_page(10324)" title="">通往后院</a><p>
+<:if game_check_scene_event(1137) then
+if game_not_scene_event(1196) then
+if game_check_scene_event(1197) and game_check_scene_event(1198) and game_check_scene_event(1199) and game_check_scene_event(1200) and game_check_scene_event(1201) and game_check_scene_event(1202) and game_check_scene_event(1203) and  game_check_scene_event(1204) then
+run game_add_scene_event(1196);game_add_scene_event(1031)
+end
+end
+end:>
+<a href="game_page(10302)">退出山庄</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E47607593ACC1FCD52C9EAE15B0A21E9

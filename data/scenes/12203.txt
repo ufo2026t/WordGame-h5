@@ -1,0 +1,51 @@
+id=12203
+名称=沂州-十八里铺-村内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,李二哲家,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'软骨粉'):><p>
+ 李二哲是个闷葫芦，很少说话，倒是他老婆爱说爱笑。
+<a href="game_npc_talk('李妻')">聊天</a>。
+<p>
+<a href="game_page(12198)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1238) then
+李妻=1,贼没了，晚上大姑娘小伙子又都经常在村头巷尾谈天说地了。
+I=1,
+else
+if game_check_scene_event(1237) then
+李妻=1,
+I=1,
+else
+李妻=1,现在呀，我们天一擦黑，就早早关门睡觉了，虽说俺徐娘半老的，可也风姿犹存哪，不怕贼偷，就怕贼惦记。
+I=1,那是那是（心里寻思着，这贼要是惦记您，也太没眼光了不是）
+李妻=2,咦，我看你咋皮笑肉不笑的呢。
+I=2,哦，哈哈，您看人可真是入木三分啊，今晚这菜花贼一定奔您这来。
+李妻=3,去，俺才不要那杀千刀的呢。听说啊，那采花贼是专门找那亥年卯月生的处女，这样的女子阴气重。
+I=3,这是为何？
+李妻=4,这我就不知道了，好像是采阴补阳，练邪魔歪功呢。
+I=4,嗯，多谢你了。
+if not game_sex_from_id(1) then
+李妻=5,你不会是亥年卯月生的吧，小心贼盯上啊
+I=5,哈哈，邪不胜正，不怕。
+end
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=290E2C1703AD2B1DFCA983B4377D8801

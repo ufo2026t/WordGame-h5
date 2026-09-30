@@ -1,0 +1,71 @@
+id=11402
+名称=新手村-宅院
+作者=
+属性=256
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,宅院,AT1000,0,0/2007.bmp"></CENTER>
+数间土木结构的平房，屋顶上是青黑色瓦片。<b><FONT color=#FF0000>剧情提示</FONT></b>：可以和游戏内人物聊天获取信息或者接任务以提高等级。<br>
+然后上方的“<b>任务和消息</b>”按钮，点击可以看到未完成的任务，已完成的任务，消息，消息里面有一些游戏进度的提示。<p>
+<:if game_check_scene_event(1001) then
+ 最近村里安宁多了，村民们都很开心。
+else
+院子里有几人在聊天：<p>
+ 龚大伯说：“离这里不远的小镇上有一座矮山名为“后山”，近几年山上闹妖怪，晚上时常会出来伤人，闹得咱村里鸡犬不宁。”<br>
+ 赵大爷说：“以前还好好的，听说和什么镇妖镜被盗有关。”<br>
+赵二爷说：“婺州有大户人家听说过几个月要<FONT color=#FF0000>比武招亲</FONT>，那家女儿可是生的花容月貌。只可惜我家孙子武功太差了。”
+end:>
+;;<a href="game_bubble(60)" title="玩泡泡龙背单词"> 一个泡泡龙机器</a>这是一个小游戏
+
+<p>
+<a href="game_npc_talk('杜爷')">杜爷</a><p>
+<a href="if game_grade('无名',6) or game_check_role_values('无名',19,3000) then game_chat('百年人参有多了，现在不收购了。') else game_npc_talk('杜大伯') end">杜大伯</a><p>
+<a href="game_page(1)" title="">房间2</a><p>
+
+<a href="game_page(-1)">返回</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_res_event(5207) then
+杜爷=1,现在外面的世道乱的很，还是咱们这小地方安静。
+I=1,只是安静的呆久了，总想出去走走。
+杜爷=2,年轻人有志气，是好事情。
+I=2,不知往哪里去比较好？
+杜爷=3,先在附近练练等级，等级高了可以去小镇，然后再去大城市。不然出门很容易被人打。
+I=3,好
+else
+杜爷=1,听说你要出远门，我这有一个回城卷，你带上吧。
+I=1,回城卷是什么？
+杜爷=2,回城卷是一个特殊物品，当你在野外迷宫内迷路的时候，使用一个回城卷可以立即离开迷宫返回城镇。
+I=2,这么好东西，怎么用呢？
+杜爷=3,点击“人物。物品”按钮，然后在“特殊物品”栏内直接鼠标双击“回城卷”就可以了，一个回城卷只能使用一次，在小镇的杂货铺里面还可以买到更多的回城卷。
+I=[game_goods_change_n('回城卷',1);game_add_res_event(5207);game_reload_direct(0)]3,好的，谢谢您。（得到回城卷一个）
+end
+if game_check_res_event(9018) then
+if game_check_goods_nmb('百年人参',1) then
+杜大伯=1,对，要的就是这种人参。
+I=[game_goods_change_n('百年人参',-1);game_comp_task(9018);game_infobox('您得到了钱80和经验值100');game_reload_direct(0)]1,恩，给你（鼠标点击此处提交物品）。
+else
+杜大伯=1,您采的人参数量不够。
+end
+else
+杜大伯=1,可帮我找颗<FONT color=#"FF0000">百年人参</FONT>吗？我给80金币，200经验值哦。可在<strong>东坡林</strong>那里采药采到。
+I,A=[game_add_task(9018)]1,好
+I,B=1,我现在没空。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=AACB55A0C162EADDC92BD9A1F519267F

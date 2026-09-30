@@ -1,0 +1,57 @@
+id=11161
+名称=淮阳破庙
+作者=
+属性=64
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,破庙,AT1000,0,0/2007.bmp"></CENTER>
+一座破庙。<p>
+<:if game_check_scene_event(1100) then
+到半夜了，可以去乱坟岗探查了。<p>
+继续<a href="game_pop_a(6);game_del_scene_event(1100);game_reload_direct(0)" title="休息到晚上">休息</a><p>
+else
+if game_check_scene_event(1101) and game_not_scene_event(1328) then
+佛前灯火将尽。角落里坐着一名女子，衣袖破了也不肯放下，手里反复摩着一块旧帕。她是乱坟岗里被救出来的<a href="game_npc_talk('周阿绣')">周阿绣</a>。<p>
+end
+if game_check_scene_event(1099) then
+现在是白天，先<a href="game_pop_a(6);game_add_scene_event(1100);game_reload_direct(0)" title="休息到晚上">休息一下</a>吧。<p>
+
+else
+佛像已经蒙尘。<p>
+桌椅也很破烂。<p>
+end
+end:>
+<a href="game_pop_a(6);game_role_all_mtl(0);game_chat('命体灵全满了。')" title="">给佛像除尘</a><p>
+
+<p>
+<a href="game_page(11134)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1327) then
+周阿绣=1,小棠还没回来……我坐不住。那玉镯是娘去世前塞进她手里的，她把命都看得轻，镯子看得重。若她再出事，阿绣这辈子都没法见娘。
+I=1,我这就去城北，一定把她带回来。
+else
+周阿绣=1,侠士……真的是你们。我在佛前坐到天亮，就怕你们不来，又怕自己配不上说一声谢。
+I=1,人都出来了，比什么都强。
+周阿绣=2,姐妹们大多回城去了。我爹娘早亡，只剩下妹妹小棠。她非要回<FONT color=#"FF0000">城北乱坟岗</FONT>找娘的玉镯。我拦她，她哭着说：镯子没了，就像娘也没了。我手一松，她就跑了。
+I=2,你在庙里等着。坟岗我去。
+周阿绣=[game_add_scene_event(1327);game_add_message('周阿绣请你去城北乱坟岗寻找妹妹小棠。');game_attribute_change(1,19,600);game_attribute_change(1,9,1);game_change_money(200);game_infobox('阿绣把衣襟里仅剩的二百文塞过来，指尖还在抖。经验+600，道德+1。');game_reload_direct(0)]3,这是姐妹们凑的一点心意，您若不收，我更无地自容。小棠……就拜托了。
+I=3,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BA62EC1DCD08FC6391F189FEE3555FDB

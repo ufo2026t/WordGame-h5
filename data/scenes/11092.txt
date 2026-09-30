@@ -1,0 +1,36 @@
+id=11092
+名称=仓库
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clGreen}),clWindow,苗,AT1002,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,仓库,AT1000,0,0/2007.bmp"></CENTER>
+仓库内有不少好东西。<p>
+<:game_true(1)string game_res_goods(0,1,'百年人参'):><p>
+
+<:if not game_check_res_event(5177) then
+地上有<a href="game_goods_change_n('百年灵芝',5);game_chat('捡到百年灵芝5。');game_add_res_event(5177);game_reload_direct(0)" title="">灵芝</a>。end:><p>
+
+<:if not game_check_res_event(5178) then
+地上有<a href="game_goods_change_n('百年人参',5);game_chat('捡到百年人参5。');game_add_res_event(5178);game_reload_direct(0)" title="">人参</a>。end:><p>
+<p>
+<a href="game_page(11087)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B2194FF59FFD0DEA47851E837ACC9980

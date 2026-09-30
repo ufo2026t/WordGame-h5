@@ -1,0 +1,54 @@
+id=10520
+名称=一品鲜酒楼
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clMaroon}),clWindow,酒,AT1001,0,60/2007.bmp) fixed no-repeat center center;">
+<bgsound src="$apppath$music\天堂.mid" loop="-1">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+金华老酒，好酒应有尽有。<p>
+<:game_not_scene_event(1009)
+临窗坐着一个<a href="game_npc_talk('黑衣男')">黑衣男</a>子独自喝酒。<p>:>
+靠墙地方两个<a href="game_npc_talk('丝罗商')">丝罗商</a>在谈论着什么。<p>
+
+<p>
+<a href="game_page(10061)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_sex_from_id(1) then
+黑衣男=1,
+I=1,这位兄台，何事喝闷酒？
+黑衣男=2,我老婆被西峰山的土匪抢走了，555
+I=2,兄弟放心，我会尽快去踏平西峰山擒拿匪首。
+黑衣男=3,谢谢好汉，多谢好汉。
+I=3,
+
+else
+黑衣男=1,姑娘你要小心，最近西峰山土匪经常下山抢劫。
+I=1,真的吗？
+黑衣男=2,前几天我老婆被西峰山的土匪抢走了，555
+I=2,不要伤心，你老婆会很快回来的。
+黑衣男=3,姑娘何出此言？
+I=3,我有空就会去西峰山抓土匪。
+
+end
+丝罗商=1,丝罗商甲@为何这段时间生意不好？
+I=1,丝罗商乙@听说是金兀术招了妖人，现岳家军战事出现困难，人心惶惶啊。
+丝罗商=2,丝罗商甲@你说的有理，另外，上次我听说岳元帅夜观星相，发现江南有异人出现。
+I=2,丝罗商乙@唉，现在金兵今非昔比，都搭上妖怪的战车了。大宋恐怕就江山不保了。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0B75D5DA2CEF24AC0731316AA68ABE98

@@ -1,0 +1,35 @@
+id=11687
+名称=岳飞营
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,东区,AT1002,0,0/2007.bmp"></CENTER>
+宋军驻扎地。旌旗猎猎。<p>
+<a href="game_page(11693)" title="">兵营1</a><p>
+<a href="game_page(11694)" title="">兵营2</a><p>
+<a href="game_page(11695)" title="">兵营3</a><p>
+<:game_true(1)string game_res_goods(0,1,'百年灵芝'):><p>
+
+
+<p>
+<a href="game_page(11576)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B77C2D11AA68F6143E1E4927E3A8E660

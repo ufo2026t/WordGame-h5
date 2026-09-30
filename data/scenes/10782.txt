@@ -1,0 +1,89 @@
+id=10782
+名称=端城殿
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clPurple}),clWindow,端城,AT1001,0,62/2007.bmp) fixed no-repeat center center;">
+端诚殿则是一座多功能殿宇，作为明堂郊祀时称“端诚”，策士唱名曰“集英”，宴对奉使曰“崇德”，
+武举授官曰“讲武”，随时更换匾额。<p>
+<:if game_check_scene_event(1265) and game_not_scene_event(1266) then
+if game_check_goods_nmb('金牛',1) then
+赵构：“朕日夜盼的就是这一天——镇国神器失而复得，大宋国运当再振！”<br>
+string game_get_newname_at_id(1)：“此物形似金牛，乃臣等自天王山寻回，请陛下验看。”<p>
+1。<a href="game_goods_change_n('金牛',-1);game_add_scene_event(1266);game_change_money(100000);game_attribute_change(1,19,50000);game_attribute_change(1,9,5);game_add_message('镇国神器已复归朝廷，赵构龙颜大悦。');game_chat('赵构：“好！好！朕不食言——赏黄金十万两，并记你等大功一件！”');game_reload_direct(0)" title="">呈上镇国神器（金牛）</a><p>
+else
+赵构：“朕闻你已寻得神器下落，为何空手而来？镇国神器何在？”<p>
+string game_get_newname_at_id(1)：“臣疏忽，金牛未随身携带，这就去取来。”<p>
+end
+else
+if game_check_scene_event(1266) then
+赵构：“爱卿献宝之功，朕铭记在心。神器既归，朕心稍安——然天下未定，还望诸位继续为国效力。”<p>
+else
+if game_check_scene_event(1264) and game_not_scene_event(1265) then
+赵构：“镇国神器可有下落？朕所托非轻，望卿等早日报喜。”<p>
+else
+if game_not_scene_event(1263) and game_check_scene_event(1262) then
+if game_check_scene_event(1207) then
+if game_check_scene_event(1209) then
+ 赵构：“你可是当朝状元，虽在岳飞事情上与朕作对，但朕念你人才难得，<br>
+现今朝廷正在用人之际，朕既往不咎了。<br>
+靖康时节，宫中一<b>镇国神器</b>被金贼掳走，现下落不明。<br>
+缺少此物，致国道中落。如能寻回镇国神器，朕将更予以提拔重用。”<p>
+else
+赵构：“汝等虽在岳飞事情上与朕作对，但念尔等皆为人才，<br>
+现今朝廷正在用人之际，如若原为朝廷效力者，朕既往不咎。<br>
+靖康时节，宫中一<b>镇国神器</b>被金贼掳走，现下落不明。<br>
+缺少此物，致国道中落。如能寻回镇国神器，高官厚禄，拜相封侯。”<p>
+end
+else
+if game_check_scene_event(1209) then
+ 赵构：“你是当朝状元，现在是为国出力的时候了。<br>
+靖康时节，宫中一<b>镇国神器</b>被金贼掳走，现下落不明。<br>
+缺少此物，致国道中落。如能寻回镇国神器，朕将更予以提拔重用。”<p>
+else
+赵构：“汝等身手不凡，现今朝廷正在用人之际，<br>
+如有原为朝廷效力者，重重有赏。<br>
+靖康时节，宫中一<b>镇国神器</b>被金贼掳走，现下落不明。<br>
+缺少此物，致国道中落。如能寻回镇国神器，高官厚禄，拜相封侯。”<p>
+end
+end
+1。<a href="game_add_scene_event(1263);game_add_scene_event(1264);game_reload_direct(0);game_chat('我等定当竭力，为国分忧。');game_add_message('前往上京寻找镇国神器')" title="">接受任务</a><br>
+2。<a href="game_add_scene_event(1263);game_reload_direct(0);game_chat('我等难担此重任。请皇上另选高人。')" title="拒绝了这个任务">拒绝</a>
+
+else
+两个<a href="game_npc_talk('宫女')">宫女</a><p>
+end
+end
+end
+end:>
+
+
+一条石板路，通往<a href="game_page(-2)" title="">垂拱殿</a><p>
+一条石板路，通往<a href="game_page(1)" title="">后殿</a><p>
+一条石板路，通往<a href="game_page(10921)" title="">皇宫仓库</a><p>
+<a href="game_page(10644)">退出皇宫</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+宫女=1,宫女甲@前几天，我看见丽妃娘娘在那掉眼泪呢。
+I=1,宫女乙@为何？
+宫女=2,宫女甲@皇上好久没来了，天天独守深宫，都快闷死了。
+I=2,宫女乙@小伍子昨天偷偷给了我一个御饼吃吃，他人挺好的，可惜是个太监，唉。
+宫女=3,宫女甲@上天就爱捉弄人。
+I=3,宫女乙@可不是。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BCF1C93A2D540AC541038823E262DDC0

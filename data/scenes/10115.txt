@@ -1,0 +1,112 @@
+id=10115
+名称=翠红院内厅
+作者=
+属性=32
+载入后=game_npc_talk('大妈咪')
+动作=
+{
+D5001=if game_check_role_values('无名',5,10) then game_delay(1000);game_write_temp(1011401,0);game_attribute_change(1,5,-10000);game_infobox('一晚上很快过去了。您的体力值将到了零。');game_page(10061) else game_infobox('官人，您有气无力的，怎么玩啊。');game_write_temp(1011401,0);game_page(10061) end
+D5002=if game_check_money(800) then game_change_money(-800);game_write_temp(1011401,0);game_add_scene_event(1276);game_chat('你请琴师小珠弹了一曲，并未留宿。');game_page(10061) else game_infobox('请琴师的银子不够。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<CENTER><img src="gpic://171,56,(楷体_GB2312,134,42,{Bold},{clRed}),clOlive,院内,AT1012,0,0/2007.bmp"></CENTER>
+<p>
+<img src="gpic://175,24,(楷体_GB2312,134,18,{Bold},{clRed}),clWindow,葡萄美酒夜光杯,AT1004,0,15/2007.bmp"><p>
+<img src="gpic://175,24,(楷体_GB2312,134,18,{Bold},{clRed}),clWindow,纤纤美人拥入怀,AT1004,0,15/2007.bmp"><p>
+ 一群<a href="game_npc_talk('年轻姑娘')">年轻姑娘</a>正坐着等待客人。<p>
+<a href="game_write_temp(1011401,0);game_page(10061)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_read_temp(1011401)=1 then
+if game_sex_from_id(1) then
+大妈咪=1,公子既然只品茶听曲，春花，上茶。
+I,A=1,小珠姑娘可在？
+I,B=1,那便在此坐坐，听一曲便走。
+I,C=1,8206号房怎么走？
+I,D=1,[game_write_temp(1011401,0);game_page(10061)]1,告辞。
+大妈咪,A=2,[game_add_scene_event(1276);game_chat('大妈咪：8206号房，别砸我招牌。')]知道了就快去。
+I,A=2,[game_write_temp(1011401,0);game_page(10061)]2,多谢。
+大妈咪,B=2,[game_add_scene_event(1276)]请坐，小珠若不在，别的姑娘也能弹。
+I,B=2,[game_write_temp(1011401,0);game_page(10061)]2,听完了，告辞。
+大妈咪,C=2,往里走右首便是8206号房。
+I,C=2,[game_write_temp(1011401,0);game_page(10061)]2,我去看看。
+else
+大妈咪=1,姑娘请坐，不上算其他的。
+I,A=1,小珠姑娘可在？
+I,B=1,只喝茶，听一曲便走。
+I,C=1,我并未寻欢，能否退些茶钱？
+I,D=1,[game_write_temp(1011401,0);game_page(10061)]1,告辞。
+大妈咪,A=2,[game_add_scene_event(1276)]8206号房去问，别声张。
+I,A=2,[game_write_temp(1011401,0);game_page(10061)]2,知道了。
+大妈咪,B=2,[game_add_scene_event(1276)]请，琴师价钱另算。
+I,B=2,[game_write_temp(1011401,0);game_page(10061)]2,听完了，走。
+大妈咪,C=2,[game_change_money(100);game_chat('退你一百两茶钱，别到处说。')]罢了，别到处说。
+I,C=2,[game_write_temp(1011401,0);game_page(10061)]2,也行。
+end
+else
+if game_sex_from_id(1) then
+大妈咪=1,春花、秋月，接客。
+I=1,花魁呢，花魁在哪？
+大妈咪=2,你是说小莲姑娘啊，她被知府老爷点名要去陪酒了。再说，你只出了500银子，也不够点花魁的。
+I,A=2,点花魁一晚上多少？
+I,B=2,那就春花吧
+I,C=2,那就秋月吧
+I,D=2,[D5002]2,只请琴师弹曲，不当枕席之客。
+I,E=2,[game_write_temp(1011401,0);game_page(10061)]2,今日不作了，告辞。
+大妈咪,A=3,至少得再加2千。
+大妈咪,B=[D5001]3,春花，2号房接客。
+大妈咪,C=[D5001]3,秋月，3号房接客。
+大妈咪,D=3,琴师另算800两，不扣你别的。
+I,A,A=3,好，加就加。
+I,A,B=[D5001]3,那算了，随便找个其他的姑娘吧。
+大妈咪,A,A=4,现在加也不行了，我的生意还要知府大人罩着呢，哪能得罪知府大人啊。
+I,A,A=4,你不敢得罪，我敢，我才不怕知府呢。
+大妈咪,A,A=[game_goods_change_n('翠红院贵宾金卡',1);game_write_temp(1011401,0);game_chat('得到翠红院贵宾金卡一张')]5,公子先消消气，我这给您本院的终身贵宾金卡一张，您以后来这，能得到更好的服务呢。
+I,A,A=5,算了，不和你们一般计较。
+else
+大妈咪=1,姑娘您随便玩。有事叫我。
+I=1,花魁呢，花魁在哪。
+大妈咪=2,小莲被知府老爷叫去陪酒了，说是今天上头有大官过来。
+I=2,我出了2万银子，岂不亏大了？
+大妈咪=3,不会让你亏的，我给你一张终身优惠贵宾金卡，价值3万两呢。
+I,A=3,什么破烂卡片，我才不要，我去找知府要人去。
+I,B=[game_goods_change_n('翠红院贵宾金卡',1);game_write_temp(1011401,0);game_chat('得到翠红院贵宾金卡一张')]3,唉，那就这样吧。
+I,C=3,不行，这你得给我退钱。
+I,D=3,[D5002]3,不闹了，只请琴师弹一曲便走。
+I,E=3,[game_write_temp(1011401,0);game_page(10061)]3,懒得纠缠，告辞。
+大妈咪,A=4,不行不行，知府大人得罪不起，我这生意还全凭知府大人罩着呢。
+大妈咪,B=4,以后欢迎姑娘多来我这坐坐。
+大妈咪,C=[game_change_money(4000);game_write_temp(1011401,0);game_chat('拿回了四千银子')]4,这样吧，给你打个八折，退你四千两得了。
+大妈咪,D=4,琴师800两，姑娘自己付。
+I,D=4,[D5002]4,好，请琴师。
+大妈咪,E=4,慢走。
+I,A,A=4,我不管，我可不吃这哑巴亏，看我非砸了他府衙不可，敢和姑奶奶抢女人。
+I,A,B=4,那你说怎么办？姑奶奶可是出了大价钱的。
+大妈咪,A,A=[game_change_money(20000);game_write_temp(1011401,0);game_chat('拿回了2万银子')]5,我的姑奶奶啊，算了算了，我不收你银子了，你白玩，随便吃喝。
+大妈咪,A,B=[game_change_money(10000);game_goods_change_n('翠红院贵宾金卡',1);game_write_temp(1011401,0);game_chat('拿回了1万银子并得到翠红院贵宾金卡一张')]5,打五折，再赠送金卡一张。
+end
+end
+if game_check_scene_event(1276) then
+年轻姑娘=1,
+I=1,请问8206号房在哪里？
+年轻姑娘=2,没有8206号房，不过有个代号8206的姑娘，叫小珠。经常有达官贵人请她去唱歌弹琴。这不今天又出去了。
+I=2,谢谢
+else
+年轻姑娘=1,我们这里琴弹的最好的就属小珠姑娘了。
+I=1,
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=822FA455D9C7043B96777751E784E111

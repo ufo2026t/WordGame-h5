@@ -1,0 +1,39 @@
+id=10133
+名称=游戏结束
+作者=
+属性=32
+载入后=if game_role_is_exist('慕容丽雯') then game_del_friend('慕容丽雯',0) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clRed}),clWindow,洞房花烛,AT1009,0,0/2007.bmp"></CENTER>
+<p>
+<:game_true(1) string game_newname_from_oldname('无名')高高兴兴的做了江府的乘龙快婿。:><p>
+<:game_role_is_exist('慕容丽雯')慕容丽雯悄悄的离去，独自一人乘船前往临安了。:>
+接着，在江府老爷的推荐下，<:game_true(1) string game_newname_from_oldname('无名'):>到婺州知府衙门做了一个捕头。<p>
+第二年，江雪儿生了一对龙凤胎，一家人过着平静而幸福的日子。<p>
+
+<CENTER><strong>游戏结束</strong></CENTER>
+&nbsp;<p>
+<a href="game_start_now(0);if game_question('请定义主角性别，选择“是”为男，选择“否”为女。') then game_change_sex('无名',1) else game_change_sex('无名',0) end" title="开始新的冒险">新的游戏</a><p>
+<a href="game_save(0)" title="读取存盘的游戏继续玩">旧的回忆</a><p>
+
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5C5933C3DC1DC3462AB98139E6273A5F

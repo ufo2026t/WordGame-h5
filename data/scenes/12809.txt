@@ -1,0 +1,42 @@
+id=12809
+名称=法隆寺-梦殿
+作者=
+属性=
+TempKey=法隆寺
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,梦殿,AT1000,0,0/2007.bmp"></CENTER>
+供奉圣德太子，梦境般安详。<p>
+<a href="game_npc_talk('小僧')">小僧</a><p>
+<:if not game_check_scene_event(1241) then
+<FONT color=#FF0000>小僧说，要安心入塔，须先找到能镇魔的法器。</FONT><p>
+else
+封印之事既了，地宫也安静了。<p>
+end:>
+<p>
+<a href="game_page(12118)">返回法隆寺</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1241) then
+小僧=1,多亏侠士平息百鬼，奈良又清静了。
+I=1,
+else
+小僧=1,侠士若要入五重塔地宫，须有<strong>封神珏</strong>。百鬼乱世，法器或藏在塔下。
+I=1,我们正在查。
+小僧=2,祝旅途顺利。
+I=2,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

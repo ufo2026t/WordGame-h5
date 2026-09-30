@@ -1,0 +1,32 @@
+id=10131
+名称=婺州江府比武失败
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,败不馁,AT1001,0,0/2007.bmp"></CENTER>
+<p>
+<:game_sex_from_id(1) 天涯何处无芳草，何必单恋一枝花？路在前方，走吧。else
+唉，管她嫁给谁呢，我还是继续自己的江湖路吧。:><p>
+&nbsp;<p>
+<:game_role_is_exist('慕容丽雯') 慕容丽雯：“成败皆由天定，你与江姑娘有缘无份，无须伤心。咱们去临安吧。”<p>:>
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=06727A9EE37BB2CF1D4EFB847C026A2A

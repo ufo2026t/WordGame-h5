@@ -1,0 +1,30 @@
+id=11862
+名称=望湖别墅
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clMaroon}),clWindow,书房,AT1002,0,0/2007.bmp"></CENTER>
+书房内<p>
+
+<:game_check_res_event(5229)丫鬟丙<p>:>
+<p>
+<a href="game_page(11859)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=AAFCA7018BEF76EE03F5B11AFF720C2C

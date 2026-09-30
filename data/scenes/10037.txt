@@ -1,0 +1,34 @@
+id=10037
+名称=后山顶
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://640,480,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs-16,AT1000,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+山顶有块石碑。上面写有字，只是年代久远，风吹日晒，字迹已经看不清楚了。<br>
+<:if game_check_res_event(5009) then 石碑后面长着杂草。 else 石碑后面有<a href="game_goods_change_n('三年生草药',5);game_chat('得到了5颗三年生草药。');game_add_res_event(5009);game_reload_direct(0)" title="">草药</a>几颗。end:> <p>
+
+<:if game_check_res_event(5046) then 。 else 山顶上有一丛玫瑰，枝头上开了<a href="game_goods_change_n('玫瑰花',1);game_chat('采到一枝玫瑰花。鲜花送佳人哦');game_add_res_event(5046);game_reload_direct(0)" title="">一朵花<img src="$apppath$gif\63.gif"></a>。end:>
+<p>
+<:if not game_check_res_event(game_get_pscene_id(0)) then 一本武功<a href="game_pop_a(7);game_goods_change_n('降妖咒',1);game_chat('捡到降妖咒法术秘笈一本。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">秘籍</a>。秘籍需要在人物和物品界面内学习，学会后在战斗中使用越多等级越高威力越大 end:><p>
+<a href="game_page(10015)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+江雪儿=1,哇，风景好美啊。
+I=1,无限风光在险峰啊。
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EB74F8F1EFFCDA24F258DB2128706D93

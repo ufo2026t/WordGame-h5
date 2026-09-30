@@ -1,0 +1,41 @@
+id=12477
+名称=天蓬山庄
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,天蓬山庄走廊,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'忘忧草'):><p>
+<a href="game_npc_talk('山庄下人')">山庄下人</a><p>
+
+<a href="game_page(3)">前行</a><br>
+<a href="game_page(1)">前行2</a><br>
+<a href="game_page(5)">前行4</a><br>
+
+
+<p>
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+山庄下人=1,我家庄主听说是天蓬元帅下凡
+I=1,你也这么认为？
+山庄下人=2,我看他是有点像画上的猪八戒的。
+I=2,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=20A64AD8FCFDEA867107EE6DE7FF6A63

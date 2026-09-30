@@ -1,0 +1,33 @@
+id=11785
+名称=塞外
+作者=
+属性=260
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,玉门关,AT1002,0,0/2007.bmp"></CENTER>
+前往天山的路上<p>
+<img src="$apppath$img\img_yumenguan.jpg"><p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):><p>
+羌笛无须怨杨柳，春风不度玉门关。<p>
+<a href="game_page(11918)" title="出玉门关，前往天山">玉门关</a>
+<p>
+<a href="game_page(11578)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=77D8A1A45E44FDD98A6CFE1ED740A9AB

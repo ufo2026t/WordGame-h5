@@ -1,0 +1,112 @@
+id=10645
+名称=鬼市
+作者=
+属性=32
+载入后=if game_not_scene_event(1082) and game_not_scene_event(1083) and game_not_scene_event(1088) and game_not_scene_event(1091) then game_time_exe(6,'Game_npc_talk(^对话^)') end
+动作=
+{
+D5001=if game_check_money(100) then game_goods_change_n('十字绣',1);game_change_money(-100);game_infobox('你购买了一个十字绣，') else game_chat('你带的钱不够。') end
+D5002=if game_check_money(10) then game_goods_change_n('上等木炭',10);game_change_money(-10);game_infobox('你购买了上等木炭10，') else game_chat('你带的钱不够。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clWindowText}),clWindow,鬼市,AT1009,0,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+潘楼东去十字街，谓之土市子，又谓之竹竿市．又东十字大街，曰从行角，茶坊毎五更点灯，博易买卖衣物图画花环领抹之类，至晓即散，谓之‘鬼市子’。
+<p>
+一个<a href="game_npc_talk('小摊甲')">小摊</a><p>
+一个<a href="game_npc_talk('小摊乙')">小摊</a><p>
+一个<a href="game_npc_talk('小摊丙')">小摊</a><p>
+一个<a href="game_npc_talk('小摊丁')">小摊</a><p>
+一个<a href="game_npc_talk('小摊戊')">小摊</a><p>
+一个<a href="game_npc_talk('小摊己')">小摊</a><p>
+一个<a href="game_npc_talk('小摊庚')">小摊</a><p>
+一个<a href="game_npc_talk('小摊辛')">小摊</a><p>
+一个<a href="game_npc_talk('小摊寅')">小摊</a><p>
+一个<a href="game_npc_talk('小摊癸')">小摊</a><p>
+<:if game_check_scene_event(1268) and game_not_scene_event(1267) then
+一个<a href="game_npc_talk('黑狗')">临时小摊</a><p>
+else
+一个摊位空着
+end:>
+
+<p>
+<a href="game_page(10583)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+小摊甲=1,if game_sex_from_id(1) then 这位大爷，买点东西吧？ else 这位姑娘，买点东西了 end
+I=1,有什么特色商品？
+小摊甲=2,有，看这幅，王羲之亲笔书法，兰亭序。
+I=2,兰亭序不是被武则天带进陵墓了啊，怎么会在这里，难道？
+小摊甲=3,唉，你这人不识货，不卖了。
+I=3,切
+小摊乙=1,今晚没开张，便宜卖啦，上等布鞋，买一送一啦
+I=1,这布鞋“速”加多少？
+小摊乙=2,什么速加多少，买鞋还有看这个的，神经病。
+I=2,不懂，不和你说。跟你说了你也不懂。
+小摊丙=1,上等宝衣啊，神州名牌，清仓大处理，最后一晚。
+I=1,这夜市果然热闹，买假货的这么多。
+if game_random_chance(3) then
+小摊丁=1,百年灵芝，特价销售啊，每颗只需15，要的赶紧买。
+I,A=[if game_check_money(150) then game_change_money(-150);game_goods_change_n('百年灵芝',10);game_chat('你买了10颗百年灵芝');game_reload_direct(0) else game_chat('你钱不够。') end]1,买10颗。
+I,B=[if game_check_money(300) then game_change_money(-300);game_goods_change_n('百年灵芝',20);game_chat('你买了20颗百年灵芝');game_reload_direct(0) else game_chat('你钱不够。') end]1,买20颗。
+I,C=1,下次再说。
+else
+小摊丁=1,卖完了，收摊了。
+I=1,哇，什么货这么好卖，我下次要早点来看看。
+end
+小摊戊=1,if game_sex_from_id(1) then 兄弟，买春宫图不？ else 姑娘，要十字绣吗？ end
+I=1,if game_sex_from_id(1) then 哇，古时候就有卖这个的，看来现在街头卖毛片的可算找到祖宗了。 else [D5001]1,好啊，买一个。 end
+小摊己=1,驱魔符要不，挂在门上，可保一家老小平安。
+I=1,不要
+小摊庚=1,if game_sex_from_id(1) then 小兄弟，看你骨骼清奇，乃百里挑一之人，来本秘籍吧，学会JAVA，不愁饿不死。 else 姑娘，看你心灵手巧，我这有毛衣编织大法一本，便宜卖了。 end
+I=1,这么牛的书，我还是先不买吧。
+小摊辛=1,卖饺子了，羊肉饺子。
+I=1,临安建都才几年，北方的习俗这么快就传过来了？
+小摊寅=1,臭豆腐，油炸臭豆腐。
+I=1,该不会是地沟油炸的吧。
+小摊寅=2,不会，我这绝对的健康食品，选用上等菜籽油做料。
+I=2,
+小摊癸=1,买木炭不？上等木炭。
+I,A=[D5002]1,好，来10斤。
+I,B=1,现在不买。
+if game_sex_from_id(1) then
+对话=1,女子呼救@“救命啊，有流氓啊，救命啊。”
+I,A=[game_pop_fight_a(2,100);game_add_scene_event(1082);game_write_name('女子') ]1,过去看看
+I,B=1,不理她
+女子=1,多谢公子相救，请问公子家住何方，日后定当让家父上面拜谢。
+I=1,区区小事，不足挂齿。
+else
+对话=1,有人呼救@“救命啊，有人抢劫啦，快来人啊。”
+I,A=[game_pop_fight_a(2,100);game_add_scene_event(1082);game_write_name('男子') ]1,过去看看
+I,B=1,不理他
+男子=1,多谢女侠出手相救。在下无以为报，请女侠告知家住何处，改日定当登门道谢。
+I=1,小事一桩，何须答谢。你早点回去吧，免得再受小贼困扰。
+end
+黑狗=1,古玩字画，新出土的，绝无赝品。
+I=1,哪来那么多考古砖家，这假的吧。
+黑狗=2,我黑狗入行多年，在这一带信誉可是想当当的。
+I=2,你就是黑狗？
+黑狗=3,行不改名坐不改姓。
+I=3,你可听说过镇-国-神-器？
+黑狗=4,你们别问我，我什么都不知道
+I,A=4,给你1000两，说吧。
+I,B=4,别不识抬举，咱们也是道上混的人。
+I,C=4,此事关乎大宋江山，国家兴亡，匹夫有责。
+黑狗,A=[game_change_money(-1000);game_add_scene_event(1267)]5,爽快，我就告诉你吧，在<b>上京皇宫的一个殿内</b>，画着个龙头，那是个开关，打开的话有个地下密室。我知道的就这么多了。
+黑狗,B=5,谁怕谁啊，我大哥可是姓秦的。
+黑狗,C=5,谁做皇帝都一样，我还是照样干我的老本行。
+I,A=5,
+I,B=5,算了，不和你摸金校尉一般见识。
+I,C=5,真是没见识，难怪只能继续干这偷鸡摸狗之事。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=7D85B5BE717948FD327BA95B678AFC7C

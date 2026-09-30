@@ -1,0 +1,73 @@
+id=11782
+名称=开封
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,包子店,AT1002,0,0/2007.bmp"></CENTER>
+卖包子了，各种包子馒头花卷。<p>
+羊肉泡馍<p>
+1。<a href="game_chat('对不起，包子卖完了。')" title="">买包子</a><p>
+2。和<a href="game_npc_talk('老板娘')">老板娘</a>聊天<p>
+
+<p>
+<a href="game_page(11748)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1164) then
+if game_role_is_exist('李疏盈') then
+老板娘=1,客官，里面坐，来让我看看这位小姑娘。
+I=1,这是飞龙帮的少帮主。
+老板娘=2,来，来，喝茶。
+I=2,
+else
+老板娘=1,客官，包子卖完了。
+I=1,
+end
+else
+if game_check_scene_event(1162) then
+if game_check_scene_event(1182) then
+老板娘=1,客官，来，里边坐。
+I=1,你可是丁姑？
+if game_check_goods_nmb('丝绸手绢',1) then
+老板娘=2,正是，你怎么知道的？
+I=2,我这有个东西给您看看。不知是否认得。（拿出丝绸手绢）
+老板娘=3,（吃惊），这，你从哪里得来的？
+I=3,你可认得此物？
+老板娘=4,认得，这是当年我抱恭福公主出逃时的信物。
+I=4,那你可知道小公主下落？
+老板娘=5,这个手绢从何处得来？
+I=5,从飞龙帮的密室内找到。
+老板娘=6,我记得当年是把婴儿给了一衣着不俗的中年妇女。想来是有钱人家，孩子不会吃苦，但是什么帮的还真不知道。
+I=6,这飞龙帮主老婆众多，不好找，那你是否记得婴儿的身上有和特征？这样我下次见了少帮主，好仔细认认。如果真是小公主，帮忙认祖归宗，也是一件功劳。
+老板娘=[game_add_scene_event(1167);game_add_scene_event(1180)]7,当年抱出宫时，王妃在她左手臂上咬了一口，留下了牙印。
+I=7,嗯，我明白了，谢谢老板娘
+else
+老板娘=2,坏了，这么重要的东西，竟然给我弄丢了。
+I=2,也罢，既然无缘，何必强求。
+end
+else
+老板娘=1,客官，来，里边坐。
+I=1,谢谢老板娘，不坐了。（这老板娘脸上的胎记，让人印象深刻）
+end
+else
+老板娘=1,客官，来，里边坐。
+I=1,不了，我还有事赶路呢。（这老板娘脸上的胎记，还好，不是很明显）
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4B686D170716C30D760F9684CE40A1C0

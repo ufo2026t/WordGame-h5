@@ -1,0 +1,33 @@
+id=11082
+名称=吴山草地
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,68/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,草地,AT1000,0,0/2007.bmp"></CENTER>
+吴山半山一个平坦的草地。有几条路通往几个地方。<p>
+到<a href="game_pop_a(10);game_page(1)" title="">山顶</a><p>
+到<a href="if game_check_goods_nmb('上半封密信',1) then game_page(2) else game_chat('此教听说诡异的很，我还是先到皇宫看看吧。（要先在皇宫找到上半封密信，然后去过东海的珊瑚岛）') end" title="">星月神教</a><p>
+到<a href="game_page(12253)" title="">龙潭</a>
+<p>
+<a href="game_page(-2)">返回吴山小路</a><p>
+<a href="game_pop_a(3);game_page(10583)">法阵<img src="$apppath$img\fazhen.gif" border="0">，直接返回临安</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=393D69516AADD34F9197D1C2FFF92F0F

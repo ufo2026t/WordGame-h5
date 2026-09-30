@@ -1,0 +1,50 @@
+id=10104
+名称=宾至如归客房5
+作者=
+属性=5
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,客房五,AT1005,0,0/2007.bmp"></CENTER>
+<p>
+<:game_true(1)string game_res_goods(5,1,'三年生草药'):>
+<p>
+ <:if game_check_scene_event(1006) then
+ 客房是空的。<p>
+else
+ 客房里有几个考生模样的人在扶乩请仙（古时的一种迷信活动）。<br>
+考生们请的是吕主，想问问考题大概是什么。<br>
+if game_read_temp(3801) then
+一番焚香祈祷后，乩盘动了起来，上书几个字：“我是赵酒鬼”<br>
+考生们一阵叫骂后重新祈祷。<br>
+过了一会乩盘又动了起来，上书几个字：“吕主来也”<br>
+于是考生们激动的请吕主指示。<br>
+ 乩盘又动了起来，上书几个字：“喝墨汁一碗”<br>
+考生们面面相觑，不过也不敢违背，就每人喝了一碗墨汁，然后接着请吕主指示。<br>
+乩盘上接着写了几个字：“我还是赵酒鬼，你们胸无点墨，多喝几碗。”<br>
+考生们被戏弄了一番，愤愤不平的咒骂了几句后只好作罢。
+else
+ 看看<a href="game_pop_a(5);game_write_temp(3801,1);game_reload_direct(0)" title="">结果如何</a><p>
+end
+
+
+end:>
+<a href="game_page(10099)">返回客栈二楼走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4435484E50C3CE697F50703C3F5034F5

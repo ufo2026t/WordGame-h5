@@ -1,0 +1,86 @@
+id=10111
+名称=宾至如归一楼客房5
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,客房三,AT1004,0,0/2007.bmp"></CENTER>
+<p>
+<:if game_check_scene_event(1234) or game_check_scene_event(1235) then
+if game_check_scene_event(1234) and game_not_scene_event(1236) then
+run game_add_scene_event(1236)
+采矿人：“多谢你采集的药啊，我现在全好了。”<br>
+“区区小事，不足挂齿。”<br>
+“大恩不言谢，我告诉大侠一个秘密，也行你能用的上。”<br>
+“什么秘密”？<br>
+“在西峰山土匪窝（大厅）附近，有个神秘的小洞，钻进去，在里面似有亮光，一般只有天降神物才有此光。”<br>
+“有这等好事？”<br>
+“当然没有了，那洞里有妖怪，就是土匪也不敢进去呢。”<br>
+“多谢壮士的消息。”<br>
+“大侠如果去采矿，要多多小心才是。”<br>
+else
+房间是空的。
+end
+else
+if game_check_scene_event(1229) then
+伤员昏睡中，正在等待药材。
+else
+<a href="game_npc_talk('伤者')">一个人</a>看起了受了伤，躺在床上。
+end
+end:>
+<p>
+<:if game_not_scene_event(1229) and game_check_scene_event(1227) and game_check_scene_event(1228) then
+郎中已经在房里了，<a href="game_npc_talk('女郎中')">询问</a>。<p>
+end:>
+<:game_true(1)string game_res_goods(15,1,'五年生草药'):>
+<p>
+
+<a href="game_page(10107)">返回客栈一楼走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1227) and game_check_scene_event(1228) then
+;;碰上了女子，也遇到过伤员
+女郎中=1,
+I=1,病人症状如何？
+女郎中=2,伤者被打皮开肉绽，又遇风寒，故而寒毒内侵。
+I=2,可有救？
+女郎中=3,我这有一方子，可治此症，只是几位药很是难找啊。
+I=3,姑娘请讲
+女郎中=4,此方名叫<strong>五虎追风散</strong>．药物：蝉衣　胆南星　天麻　全蝎　僵蚕　．蝉衣和僵蚕在一般药店买就可以了，其他三味需要地道的药材，所以收集有难度。
+I=4,哦，难在何处？
+女郎中=5,<strong>胆南星</strong>是<FONT color=#FF0000>皇宫</FONT>的好，需要你们去临安皇宫内方能拿到，<strong>天麻</strong>是<FONT color=#FF0000>大理</FONT>的为上品，所以要去大理采集，<strong>全蝎</strong>是山东为佳，必须去<FONT color=#FF0000>沂州</FONT>采集
+I,A=[game_add_scene_event(1229);game_add_scene_event(1235)]5,果然有难度，我看是帮不上忙了
+I,B=[game_del_scene_event(1235);game_add_scene_event(1229);game_add_task(9016)]5,好，我就尽力而为吧。采到药材后，来这里找你吗？
+女郎中,A=6,切，胆小如鼠。
+女郎中,B=6,你找齐药物后，来客栈的一楼3号房找我就是，我反正要在这住上一段时间。这期间我用常规药物给他控制一下。
+I,A=6,
+I,B=6,好的
+else
+伤者=[game_add_scene_event(1228)]1,唉，都是被<FONT color=#FF0000>西峰山</FONT>上的土匪给打的，我去那山上采矿，他们硬要诬我是官府密探，就给打成了这样。
+I=1,if game_check_scene_event(1009) then 西峰山的匪徒已经捉拿归案了，您可以放心了。 else 西峰山匪徒如此可恶。 end 不知壮士伤势如何？
+伤者=2,浑身无力，四肢经常抽搐。
+if game_check_scene_event(1227) then
+;;遇到过女子，但没遇到伤员
+I=2,对了，在前边不是遇到过一个女郎中吗？找她来看看准成。
+else
+;;没遇到过女子，不管是否遇到过伤员，对话不变
+I=2,这事儿麻烦，我要是遇上郎中，就帮你找来看看吧。
+end
+伤者=3,太谢谢了。
+I=3,小事而已，不用客气。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=00673F1709801880BF6ED98CC7C6A77F

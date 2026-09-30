@@ -1,0 +1,34 @@
+id=10304
+名称=无剑山庄水榭走廊
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,水榭,AT1001,0,0/2007.bmp"></CENTER>
+走廊弯弯曲曲。在一池碧波内蜿蜒前伸。<p>
+两旁荷叶招展，荷花盛开。<p>
+在走廊的尽头，可以看到一个小岛在水中央，岛上隐约可见人影。<p>
+只是无路通向小岛，附近也没见小船。看来非轻功高手，到不了岛上，<a href="game_pop_a(8);game_page(10305)" title="">试试看</a>。<p>
+&nbsp;<p>
+&nbsp;<p>
+<a href="game_page(10303)">返回山庄内</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D77E23D667B6E0242EC5AE06014265D8

@@ -1,0 +1,35 @@
+id=11870
+名称=上京皇宫内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<:game_add_scene_event(1186)。:>
+金熙宗：“你父皇确是病死的。”<br>
+赵小金：“那也是你们照顾不周。”<br>
+金熙宗：“其实，我也想送他们回国，只是当今宋国皇上并无真心迎回啊。”<br>
+赵小金：“怎么可能？”<br>
+金熙宗：“你想啊，如果老皇上回朝，那现在的皇上怎么办？他肯让位吗？”<br>
+赵小金：“那我父皇现在客死他乡，成孤魂野鬼，何解？”<br>
+金熙宗：“我一定动迁，把他遗骨送会故土。一定”<br>
+赵小金：“好，如果你言而无信，我必回来取你項上人头。”
+<p>
+<a href="game_page(11845)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=44C3F908CCCACE21C00082800DED129A

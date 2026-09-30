@@ -1,0 +1,38 @@
+id=11674
+名称=飞龙帮-房间一
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,房间一,AT1002,0,0/2007.bmp"></CENTER>
+少帮主房间<p>
+<:if game_check_scene_event(1164) then
+<a href="game_pop(3);game_role_all_mtl(0);game_chat('命体灵全满了。')" title="小睡一会">休息一下</a>。
+else
+if game_check_scene_event(1160) then
+房间里没人。
+else
+丫鬟：“这是小姐房间，外人不能随便进来。”
+end
+end:>
+
+<p>
+<a href="game_page(11667)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=28F66D3671A583060536842AD9C326E4

@@ -1,0 +1,39 @@
+id=12626
+名称=西域迷宫
+作者=
+属性=38
+载入后=game_pop_fight_a(1,37)
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,西域迷宫,AT1000,0,0/2007.bmp"></CENTER>
+岩缝里生着一株生机勃勃的灵苗，似有千年之气。<p>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,1,'千年人参'):><p>
+
+
+<p>
+<a href="game_pop_a(2);game_page(1)">前行</a><br>
+
+<p>
+
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=AAF474D3F3354C728B341B16A6FA36B4

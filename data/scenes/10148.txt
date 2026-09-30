@@ -1,0 +1,45 @@
+id=10148
+名称=柳树林
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://756,187,(隶书,134,140,{Bold},{clGreen}),clWindow,柳树林,AT1012,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+这里到处是柳树，蒿草和灌木丛。<p>
+野外经常能捡到好东西，比如包裹啊，宝箱啊什么的，点击一下就能捡到了。<br>
+在小镇的杂货店里，也能买到各种装备和物品，穿上装备可以提高防护值。配上好的武器能提高攻击力。<br>
+在杂货店内还可以买到时间加速丸，使用此物可关闭3秒单词等待时间。<br>
+<:if not game_grade('无名',3) and game_role_count(0) =1 then 您<FONT color=#"FF0000">单枪匹马</FONT>来闯柳树林，危机重重哦。<br>
+建议您可以在镇内到处逛逛，比如<FONT color=#"FF0000">客栈</FONT>等地方，也许能找到志同道合者一起打怪，就会省力多了。 end:>
+<p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):>
+<p>
+这里有个<a href="game_pop_dig(100)" title="挖矿">淘金（挖矿）点，如果挖到锡块可以拿去镇上的铁匠那里做任务。</a><p>
+一个小土坡，长着很多花花草草，<a href="game_pop_dig(200)" title="采药，可随时结束">采药</a>，采到的药材可以自用也可以卖给药铺。<p>
+<a href="game_page(10159)" title="这是一个环形区域，可以沿着一个方向走到头">进入树林深处往南</a><p>
+
+<a href="game_page(10149)" title="这是一个环形区域，可以沿着一个方向走到头">进入树林深处往北</a>
+<p>
+<:game_true(1)string game_res_goods(5147,2,'铁蒺藜'):>
+<:game_true(1)string game_res_goods(0,1,'存储卡'):>
+<p>
+<a href="game_page(10001)">返回小镇</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0E81961362287DC22FCC8FD0D66DDD39

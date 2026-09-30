@@ -1,0 +1,56 @@
+id=10979
+名称=望梅山庄内
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clOlive}),clWindow,梅,AT1009,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clYellow}),clWindow,谁是我,AT1003,0,67/2007.bmp"></CENTER>
+望梅山庄，<a href="game_npc_talk('梅庄主')">梅庄主</a>，人傲，个小，钱多，武功一般。<p>
+
+
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_role_is_exist('铁无梅') then
+梅庄主=[game_add_scene_event(1069)]1,你们这么多人，是谁要见我啊？什么事呢？
+I=1,铁无梅@是我父亲托我带一封重要的信给你。
+梅庄主=2,哦，原来是铁庄主让你来的，你叫什么名字啊。
+I=2,铁无梅@我叫铁无梅。
+梅庄主=3,无梅，无梅，我就姓梅啊，怎会无梅呢。
+I=3,让梅庄主见笑了。
+梅庄主=4,玩笑，玩笑。
+I=4,
+else
+if game_role_is_exist('铁檑') then
+梅庄主=[game_add_scene_event(1069)]1,你们这么多人，是谁要见我啊？什么事呢？
+I=1,铁檑@是我父亲托我带一封重要的信给你。
+梅庄主=2,哦，原来是铁庄主让你来的，你就是铁檑。
+I=2,铁檑@正是在下。
+梅庄主=3,多年不见，都长大了。
+I=3,让梅庄主见笑了。
+梅庄主=4,恩，随便玩，啊，在这多住几日。
+I=4,多谢梅庄主，我们还有要事，这就告辞了。
+梅庄主=5,年轻人，耐不住性子。
+I=5,
+else
+梅庄主=1,谁找我？今日不见客。送客。
+I=1,
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D5AE30C5BF0F4156B282C571BD6B7D83

@@ -1,0 +1,48 @@
+id=12090
+名称=昆仑山-大厅
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://314,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,大厅,AT1000,0,0/2007.bmp"></CENTER>
+;;比武大会开始×××
+<:if game_check_scene_event(1205) then
+;;     武林大会已经结束。
+昆仑掌门人不在。
+else
+if game_check_scene_event(1137) and game_check_scene_event(1214) then
+if game_check_scene_event(1200) then
+昆仑弟子：“掌门去参加武林大会了。”
+else
+昆仑掌门：“今日找我何事？”<br>
+1。<a href="game_pop_a(10);game_add_scene_event(1200);game_chat('昆仑掌门：谢谢，我知道了。你先回去吧，我稍后就到。')" title="邀请">邀请昆仑派</a>参加无剑山庄的武林大会。
+end
+else
+;;岳飞还在开封
+昆仑派的<a href="game_npc_talk('掌门人')">掌门人</a>正闭目运功。<p>
+end
+end:>
+;;比武大会结束×××
+
+<a href="game_page(12089)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+掌门人=1,我巍巍昆仑，乃中华武功之巅也。
+I=1,可曾听说过“夜郎”？
+掌门人=2,哈哈，你这井底之蛙，夜郎算什么东西，哪里是我昆仑神功的对手。
+I=2,果然井底之蛙。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0B7820E83CD6DCE8948BB31759E3A1EB

@@ -1,0 +1,48 @@
+id=12201
+名称=沂州-十八里铺-村内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,王九家,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'千年灵芝'):><p>
+<a href="game_npc_talk('王九')">王九</a>和王六也是兄弟，但王九不抽烟，也不喝酒。
+<p>
+<a href="game_page(12198)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1238) then
+王七=1,自打梁山好汉被朝廷招安后，这里的收成也一年比一年差了。
+I=1,
+else
+if game_check_scene_event(1237) then
+王七=1,多年前，我去过开封，做做小买卖。
+I=1,生意可好？
+王七=2,马马虎虎，对了，当年从皇宫太监那里换得一古玩字画，说是偷出宫来的。我才疏学浅，不知此宝真假。你是从大地方来的，见多识广。
+I,A=[game_pop_a(3)]2,我帮你看看
+I,B=2,我也不识货，帮不上您了
+王七,A=3,怎么样？
+王七,B=3,没事，我叫别人再鉴别鉴别
+I,A=3,是个赝品。
+I,B=3,
+王七,A=4,唉，我说呢，天上掉馅饼，就掉我头上了。
+王七,B=4,
+I,A=4,徽宗喜字画，所以常有官吏投其所好，进贡这些东西，多了，难免鱼龙混杂。
+I,B=4,
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F588E9C077A35545B5D73BF7CF280352

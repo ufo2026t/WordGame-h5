@@ -1,0 +1,40 @@
+id=12205
+名称=沂州-十八里铺-村内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,王七家,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'五毒丸'):><p>
+<a href="game_npc_talk('王七')">王七</a>和王六是兄弟，不抽烟，喜喝酒。
+<p>
+<a href="game_page(12198)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1238) then
+王七=1,日子又平静啦。
+I=1,
+else
+if game_check_scene_event(1237) then
+王七=1,那个山神庙啊，有时半夜能看到黑影晃动，但我们都不敢去看。
+I=1,
+else
+王七=1,听说江湖上有采阴补阳的邪门武功，一旦练成，天下无敌呢。
+I=1,
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=59040367D86913C72414D65955D7F360

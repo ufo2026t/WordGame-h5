@@ -1,0 +1,64 @@
+id=10452
+名称=宋大夫家
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clGreen}),clWindow,诊所,AT1001,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1046) and game_not_scene_event(1047) then
+if game_get_goods_count('东海龙涎草') >=3 then
+把药给<a href="game_npc_talk('宋医生')">宋大夫</a><p>
+else
+您采集的药不够，要<FONT color=#"FF0000">东海龙涎草3棵</FONT>才行。<p>
+end
+else
+<:if game_role_is_exist('柳依依') and game_check_scene_event(1310) and not game_check_scene_event(1316) then
+柳依依：“宋大夫，您认得我父柳怀远吗？”<p>
+<a href="game_npc_talk('宋医生')">向宋大夫询问父病</a><p>
+elseif game_role_is_exist('柳依依') and game_check_scene_event(1316) then
+柳依依：“宋大夫说，父亲服药后气色好多了。”<p>
+end:>
+我这善治妖毒，有需要可以来找我。<p>
+帮宋大夫<a href="if game_grade('无名',28) or game_check_role_values('无名',19,14000) then game_chat('佛珠已经够了，不收购了。') else game_npc_talk('宋大夫')end">帮忙找药引</a>子。
+end
+:>
+
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_role_is_exist('柳依依') and game_check_scene_event(1310) and not game_check_scene_event(1316) then
+宋医生=1,柳怀远是我旧识，股痛的老病。若有<FONT color=#"FF0000">百年灵芝</FONT>或<FONT color=#"FF0000">还魂丹</FONT>，托商队寄回去最好。
+I=1,我们正在找药。
+宋医生=2,去西湖边的柳浪闻莺采药，再进迷宫打怪，说不定能碰上灵芝。
+I=2,多谢大夫。
+end
+宋医生=[game_add_scene_event(1047);game_set_role_0_hide('无名',1);game_goods_change_n('东海龙涎草',-3);game_delay(1000);game_infobox('恢复了健康')]1,对，就是这个药，吃下去，毒马上就解了。
+if game_check_res_event(9005) then
+if game_check_goods_nmb('佛珠',5) then
+宋大夫=1,对对，要的就是这佛珠。
+I=[game_goods_change_n('佛珠',-5);game_comp_task(9005);game_infobox('您得到了钱500和经验值1500');game_reload_direct(0)]1,给你佛珠（鼠标点击此处把佛珠给宋大夫）。
+else
+宋大夫=1,您收集的佛珠数量不够。
+end
+else
+宋大夫=1,城隍庙附近的万佛塔佛珠，乃是上等沉香木制作，可做药引子。可惜都被小妖抢走了。可帮我去万佛塔收集<FONT color=#"FF0000">佛珠</FONT>吗？5颗佛珠，500金币，1500经验值哦。可在<strong>万佛塔</strong>打妖怪，有一定概率会掉落佛珠。
+I,A=[game_add_task(9005)]1,好
+I,B=1,我现在没空。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=328A13C7EBD0DA22A7AC6F70CC742375

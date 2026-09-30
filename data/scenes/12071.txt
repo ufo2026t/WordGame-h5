@@ -1,0 +1,44 @@
+id=12071
+名称=九州岛
+作者=
+属性=
+TempKey=樱花
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,九州,AT1000,0,0/2007.bmp"></CENTER>
+12世纪中，已到了日本平安时代的末期，新兴的武士力量逐渐显现。<br>
+最终武士阶层从贵族手中夺取了权力，建立了幕府。<p>
+而在武士阶层，又以源,平两氏势力最为强大。并为争权夺利而经常发生战争<p>
+<:if game_not_res_event(game_get_pscene_id(0)) then
+run game_add_res_event(game_get_pscene_id(0))
+if game_role_is_exist('千代美') then
+千代美：“终于，我又回来了。我家在<strong>伊贺</strong>。”
+end
+end:><p>
+
+您可以：<p>
+前往<a href="game_page(12103)" title="">平安京</a>（京城所在地，源氏的势力范围）<p>
+前往<a href="game_page(12104)" title="">奈良县</a>（多寺庙，法王所在地）<br>
+前往<a href="game_page(12105)" title="">伊贺</a>（平氏所在地）<br>
+前往<a href="game_page(12106)" title="">伊豆</a><p>
+
+<p>
+<a href="game_pop_a(3);game_page(11606)">返回东海岸边</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F674CF1F9DBC7A37B1AD8BC5205A3DD8

@@ -1,0 +1,8 @@
+id=layer15
+begin=28
+end=52
+begin2=65
+end2=71
+;可以使用begin2，end2等定义多个物品区间，最多搜索到begin9为止
+;高级装备店
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

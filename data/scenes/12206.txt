@@ -1,0 +1,73 @@
+id=12206
+名称=平安京
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://74,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,茶楼,AT1000,0,0/2007.bmp"></CENTER>
+一间茶楼，内设简陋，客人也稀少。<p>
+茶楼<a href="game_npc_talk('老板')">老板</a>
+<:if game_check_scene_event(1293) then
+正在招呼客人。
+elseif game_check_scene_event(1241) then
+<FONT color=#FF0000>百鬼已平</FONT>，正招呼客人。
+elseif game_check_scene_event(1333) then
+看上去仍有些心事，但听说平氏已获令牌，眼神里多了些希望。
+else
+看上去心事重重的样子。
+end:>
+<:if game_check_scene_event(1333) and not game_check_scene_event(1241) then
+<p><FONT color=#FF0000>平氏旧部说，须先以封神珏修补十二神将封印，方可攻入皇宫。</FONT>
+elseif game_check_scene_event(1333) and game_check_scene_event(1241) and not game_check_scene_event(1293) then
+<p><:if game_check_scene_event(1296) then
+老板低声道：听说外苑先锋已破，源氏本阵就在皇宫深处。
+else
+老板低声道：封印既固，可持令牌入<strong>皇宫</strong>，与平氏会合。
+end:>
+end:>
+
+<p>
+<a href="game_page(12152)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1241) then
+老板=1,上等好茶，全新上市
+I=1,
+else
+if game_check_scene_event(1239) then
+老板=1,我估计一郎是被百鬼吃了，还好还有二郎三郎在，少一个无所谓了。
+I=1,不听老人言，吃亏在眼前。
+else
+老板=1,我家一郎，已经失踪两天了，也不知道是死是活。
+I=[game_add_scene_event(1239)]1,怎么回事？
+老板=2,因为最近晚上常有百鬼夜行，我吩咐他晚上不要外出闲逛，不听话，唉
+I=2,百鬼常在哪里出没的？
+老板=3,平安京内有个小巷子，里面有间荒宅，原先是大户人家，后来听说闹鬼，家道也逐渐没落，人死的死，逃的逃，最后成空宅了。
+I=3,那这和百鬼有什么关系？
+老板=4,说来话长，这宅的主人，荒淫残暴，害死无数良家少女。当死了七七四十九个后，闹起了鬼变，宅主请来十二神将（勾阵，腾蛇，太阴，六合等）镇住了众鬼。
+I=4,后来呢？
+老板=5,后来宅主有所收敛，但相安无事几年后，本性难改，又开始残暴害人，终于，害死到第一百个后，十二神将镇不住，造成了百鬼夜游的事情，由于这些女鬼都是被虐待迫害至死，怨气很重，且对人类特别是男人恨之入骨。
+I=5,是不是死了很多男人？
+老板=6,是啊，死了不止一百个呢。一般，一个男人只要被众鬼围住，一阵子后众鬼散去，那人就剩一堆白骨了。
+I=6,这么恐怖？
+老板=7,怕就怕百鬼越是吃人，其怨气就越重，害人就越多啊。现在百鬼夜游越来越频繁了。
+I=7,那没什么破解之法了吗？
+老板=8,这个我就不知道了。
+I=8,多谢老伯
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0037038FC6FA5D5A137727D9DC8F3D06

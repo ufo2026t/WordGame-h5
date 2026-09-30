@@ -1,0 +1,47 @@
+id=11830
+名称=房间一
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clGreen}),clWindow,五国城,AT1009,66,0/2007.bmp"></CENTER>
+ 房间一<p>
+<:game_role_is_exist('李疏盈')
+<a href="game_npc_talk('韦贤妃')">韦贤妃</a>
+else
+韦贤妃：“你们是谁？来这里干吗？”:>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1186) then
+韦贤妃=1,唉，这么多年了，总算叶落归根了。
+I=1,
+else
+if game_check_scene_event(1185) then
+韦贤妃=1,去吧，去看看你父皇吧，在这不远的山谷里。
+I=1,
+else
+韦贤妃=1,你们是谁？来这里干什么？
+I=1,赵小金@我是赵小金，当年的恭福小公主。
+韦贤妃=1,啊，你还在世上？走吧，走的远远的，这里不是你该来的地方。
+I=1,赵小金@不，我知道了身世后，千里迢迢，来这里，就是为了能报仇雪恨。国恨家愁，让他们血债血还。我的父母呢，他们在哪？
+韦贤妃=[game_add_scene_event(1185)]2,你母亲已经在北上时被金兵折磨死了。你父皇，他，也在几年前长眠与此了。
+I=2,赵小金@金人狗贼！！！
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=497D287DA69F6733FD6AD8663022CB26

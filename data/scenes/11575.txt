@@ -1,0 +1,53 @@
+id=11575
+名称=沈村
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://114,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,沈村,AT1002,0,0/2007.bmp"></CENTER>
+<a href="game_page(11680)" title="">村长家</a><p>
+<a href="game_page(11681)" title="">小二家</a><p>
+<a href="game_page(11682)" title="">小三家</a><p>
+<a href="game_page(11683)" title="">刘老头家</a><p>
+<a href="game_npc_talk('村民甲')">村民甲</a><p>
+<a href="game_npc_talk('村民乙')">村民乙</a><p>
+<a href="game_page(11684)" title="">村外荒地</a>
+<p>
+<a href="game_page(11417)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1166) then
+村民甲=1,现在，终于清净了。
+I=1,
+村民乙=1,现在没人打了，反倒冷清了，还真不习惯。
+I=1,
+else
+村民甲=1,我家祖祖辈辈在这里生活，都好几百年啦。
+I=1,安居乐业，挺好啊
+村民甲=2,唉，只是最近比较心烦？
+I=2,怎么了？
+村民甲=3,我有一块田在村外的荒地边上，最近老有人在那寻衅斗殴，毁坏我的庄家。
+I=3,我会去看看，也许能帮你搞定这帮家伙。
+村民甲=4,啊，谢谢啦，真是高人啊。
+I=4,
+村民乙=1,我上次看见飞龙帮的少帮主和一群人在村外激战，真是刀光剑影啊。
+I=1,那知道为什么打吗？
+村民乙=2,听说，飞龙帮的少帮主在外有不少仇家。
+I=2,哦，谢谢了
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=38EA17F1808F5A4AB67CCCEA3591CAC3

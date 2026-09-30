@@ -1,0 +1,33 @@
+id=10804
+名称=清河坊
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://885,293,(隶书,134,220,{Bold},{clNavy}),clWindow,清河坊,AT1001,0,60/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+这里是一条商业街，达官贵人，三教九流，接在此来往。<p>
+<a href="game_page(1)" title="酒香不怕巷子深">一溪楼</a><p>
+<a href="game_page(10972)" title="">鹤林宫大赌馆</a><p>
+<a href="game_page(10973)" title="">寻宝大乐园</a><p>
+<a href="game_page(10975)" title="清倌卖艺，新近修葺">花满楼</a><p>
+<a href="game_page(10971)" title="">天府饭庄</a>
+<p>
+<a href="game_page(10583)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C28A1FC92A6AA72CE9EE0E06678B84D4

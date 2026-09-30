@@ -1,0 +1,52 @@
+id=12152
+名称=平安京
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+经过几个世纪的经营，平安京成了当时的政治中心和经济中心。<p>
+<a href="game_page(12206)" title="">茶楼</a><p>
+<a href="game_page(12801)" title="">酒馆</a><p>
+<a href="game_page(12802)" title="">客栈</a><p>
+<:if game_check_goods_nmb('平安京令牌',1) then
+<a href="game_page(12800)" title="">皇宫</a><p>
+else
+if game_check_scene_event(1221) then
+皇宫（需持<strong>平安京令牌</strong>。请回<strong>伊贺上野村</strong>向平忠正献圣杯与正仓院唐物。）<p>
+else
+皇宫（源氏把守，外人不得入内。）<p>
+end
+end:>
+<:if game_check_scene_event(1333) and not game_check_scene_event(1241) then
+<FONT color=#FF0000>平氏虽已获令牌，但百鬼未平，不宜强攻皇宫。</FONT><p>
+elseif game_check_scene_event(1333) and game_check_scene_event(1241) and not game_check_scene_event(1293) then
+<:if game_check_scene_event(1296) then
+<FONT color=#FF0000>先锋已破，可入源氏本阵与大将决战。</FONT><p>
+else
+<FONT color=#FF0000>封印已固，可入皇宫与平氏会合，共讨源氏。</FONT><p>
+end:>
+elseif game_check_scene_event(1293) then
+京都重归平氏，百姓稍安。<p>
+end:>
+<a href="game_page(12207)" title="">小巷</a><p>
+
+<p>
+<a href="game_page(12103)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=7DEE6A0B18F3382E674502BFEC189D2E

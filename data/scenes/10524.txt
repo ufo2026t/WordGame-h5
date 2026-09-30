@@ -1,0 +1,64 @@
+id=10524
+名称=天外天山庄大厅
+作者=
+属性=
+动作=
+{
+D5001=if game_pop_game(1,32) then game_add_scene_event(1049);game_page(10525) else game_add_scene_event(1049);game_page(10526) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,天外天,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clPurple}),clWindow,紫气东来,AT1000,0,55/2007.bmp"></CENTER>
+<:if game_check_scene_event(1048) then
+if game_check_scene_event(1049) then
+;;比武大会开始×××
+if game_check_scene_event(1205) then
+;;武林大会已经结束。
+云庄主不在。
+else
+if game_check_scene_event(1137) and game_check_scene_event(1214) then
+if game_check_scene_event(1203) then
+家丁：“云庄主去参加武林大会了。”
+else
+云庄主：“今日找我何事？”<br>
+1。<a href="game_pop_a(10);game_add_scene_event(1203);game_chat('云庄主：唔，我知道了。你先回去吧，我稍后就到。')" title="邀请">邀请天外天山庄</a>参加无剑山庄的武林大会。
+end
+else
+;;岳飞还在开封
+云庄主闭关修炼中……
+end
+end
+;;比武大会结束×××
+else
+云庄主正在欣赏着一副美女图，看的入神，想<a href="game_npc_talk('云庄主')" title="">和云庄主过几招</a>。
+end
+else
+客厅内有一个小童在擦桌子。<p>
+小童：“if game_sex_from_id(1) then 大哥哥，else 小姐姐， end 我家庄主去<strong>东方镖局</strong>了。”<p>
+string game_get_newname_at_id(1)：“东方镖局？我知道了。”<p>
+
+end:>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+云庄主=1,if game_sex_from_id(1) then 年轻人找我何事？else 姑娘找我云某何事？ end
+I,A=1,我最近打遍婺州无敌手，所以前来找云庄主切磋切磋。
+I,B=1,云庄主客气，无事，闲着，路过这里而已。
+云庄主,A=[D5001]2,年轻人如此狂妄，老夫教你几招。
+云庄主,B=[D5001]2,我天外天山庄，也是你这if game_sex_from_id(1) then 小子else 野丫头end 想进就进想出就出的？
+I,A=2,
+I,B=2,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=8596A1C528F4F7EEB2D6D5E95D5319E6

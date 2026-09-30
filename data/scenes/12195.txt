@@ -1,0 +1,65 @@
+id=12195
+名称=沂州-十八里铺
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<:if game_check_scene_event(1085) then
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,夜晚,AT1000,0,0/2007.bmp"></CENTER>
+十八里铺,夜晚，月明星稀。<p>
+
+
+else
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,十八里铺,AT1000,0,0/2007.bmp"></CENTER>
+白天。<p>
+
+<a href="game_npc_talk('路人甲')">路人甲</a><p>
+<a href="game_npc_talk('路人乙')">路人乙</a><p>
+end:>
+<p>
+去往<a href="game_page(1)" title="">山神庙</a><p>
+<a href="game_page(3)" title="">进村</a><p>
+
+<a href="game_page(12187)">返回</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1238) and game_check_scene_event(1237) then
+路人乙=1,多谢大侠为民除害。
+I=1,
+路人甲=1,终于又过回太平日子啦。
+I=1,
+else
+路人甲=1,附近的山神庙，只有初一十五才有人去上香，平时偶有流浪者在那过夜。
+I=1,
+if game_sex_from_id(1) then
+路人乙=1,我家妹子昨晚被采花贼糟蹋了，今天在屋子里寻死觅活的，这可如何是好啊。
+I=1,有这等事？
+路人乙=2,咋会有假？俺一个表姨的外孙女就嫁在那个村哩。
+I=2,
+else
+路人乙=1,姑娘啊，看你是外地来的吧，这里最近不太平啊。
+I=1,怎么回事？
+路人乙=2,唉，一到晚上，常有采花贼在四邻八村糟蹋良家女子。
+I=2,衙门也不抓吗？
+路人乙=3,采花贼武功高强，没办法啊。
+I=3,有知道什么蛛丝马迹吗？
+路人乙=4,只知作案时黑纱蒙面，轻功了得。来去飘忽，且会使用迷香，所以，受害者无人见其真面目。
+I=4,
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=481ABDF8C2C97F13BBE7E0947C609947

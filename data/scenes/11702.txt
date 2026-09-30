@@ -1,0 +1,45 @@
+id=11702
+名称=少林寺-藏经阁小院
+作者=
+属性=4
+动作=
+{
+D5001=if game_pop_game(1,133) then game_write_temp(1178007,1);game_reload_direct(0) else game_write_temp(1178007,2);game_reload_direct(0) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,藏经阁,AT1000,0,0/2007.bmp"></CENTER>
+一位老僧在扫地。<p>
+传说中的扫地神僧？<p>
+想和老僧过几招？学武之人嘛。<p>
+<:if game_read_temp(1178007)=1 then
+扫地僧：“施主武功已达登峰造极之地，哦弥陀佛”<p>
+else
+if game_read_temp(1178007)=2 then
+string game_get_newname_at_id(1)：“师傅确是世外高人，在下认输。”<br>
+扫地僧：“哦弥陀佛，善哉，善哉”。
+else
+string game_get_newname_at_id(1)：“师傅，好。”<br>
+扫地僧：“难得施主对我这么一个扫地僧人这么有礼貌。很好，很好。”<br>
+string game_get_newname_at_id(1)：“我从武侠小说中得知扫地神僧是武功最高的，所以总想找个机会比试一番。”<br>
+扫地僧：“哈哈，小说也信？骗人的啦。”<br>
+string game_get_newname_at_id(1)：“看我这么老远的跑来一趟少林不容易啊，您就露两手了。”<br>
+扫地僧：“老衲心如止水，早无名利之念。胜负皆为过眼浮云。施主，<a href="D5001" title="">请出招吧</a>。”<p>
+end
+end:>
+<p>
+<a href="game_page(11652)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F71C3FCBC86E4C870C7BFAAADCC8AA3E

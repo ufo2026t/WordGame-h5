@@ -1,0 +1,30 @@
+id=11069
+名称=吴山脚下
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://320,300,(隶书,134,22,{Bold},{clWindowText}),clWindow,$tree,AT1000,0,0/2007.bmp) fixed no-repeat center center;">
+吴山，一面靠近皇宫，筑有城墙，过不去。<p>
+一个小土坡，长着很多花花草草，<a href="game_pop_dig(200)" title="采药，可随时结束">采药</a>。<p>
+<a href="game_page(1)" title="">进入吴山</a><p>
+<:game_true(1)string game_res_goods(0,1,'忘忧草'):><p>
+<a href="game_page(10583)">返回临安</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=338ABA74E7CAFC029D6189E01EAEB36F

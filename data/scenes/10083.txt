@@ -1,0 +1,38 @@
+id=10083
+名称=古堡四号房间
+作者=
+属性=34
+载入后=if game_random_chance_at_sleep(2) then game_pop_fight_a(game_random_chance_2(4),73) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(楷体_GB2312,134,120,{Bold},{clWhite}),clSilver,古堡房间,AT1009,1,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+房间里放着一张桌子。<p>
+<:game_check_goods_nmb('大号钥匙',1)桌子上什么也没有。 else 桌子底下掉着<a href="game_goods_change_n('大号钥匙',1);game_chat('得到钥匙一把');game_reload_direct(0)" title="">一把钥匙</a>:>
+<p>
+<:game_true(1)阅读材料：string game_get_read_txt(0):><p>
+;;<:game_true(1)string game_res_goods(5030,1,'水晶'):>
+;;<:game_true(1)string game_res_goods(5,1,'三年生草药'):>
+<p>
+
+<a href="game_page(10079)">返回走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F9D955537D88AC6B503CD83B256C4071

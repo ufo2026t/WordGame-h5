@@ -1,0 +1,40 @@
+id=12508
+名称=青龙堂
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,青龙堂,AT1000,0,0/2007.bmp"></CENTER>
+
+<:game_true(1)string game_res_goods(0,1,'冰蚕'):><p>
+<:if game_check_scene_event(1256) and game_not_scene_event(1257) then
+青龙堂主：“海龙世家禁地，闲杂人等不得入内。”<br>
+string game_get_newname_at_id(1)：“我要见你们总堂主。”<br>
+青龙堂主：“口气不小啊，除非能打得过去。”<br>
+<a href="game_pop_fight_a(1,162);game_page(1)">前往紫龙堂</a><br>
+else
+青龙堂主：“海龙世家禁地，闲杂人等不得入内。”
+end:>
+
+<p>
+<a href="game_page(-1)">贝壳路</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=192651C704207574F22F664E26C8C303

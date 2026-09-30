@@ -1,0 +1,41 @@
+id=11384
+名称=星月神教内
+作者=
+属性=4
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间五,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)阅读材料：string game_get_read_txt(0):>
+<:game_true(1)string game_res_goods(0,1,'迷踪蛊'):><p>
+<a href="game_npc_talk('门徒丙')">门徒丙</a>
+<p>
+<a href="game_pop_a(2);game_page(1)">前进</a>
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+门徒丙=1,听说，前阵子抓了几个人回来。
+I=1,是什么人？
+if game_sex_from_id(1) then
+门徒丙=2,是个小孩，被关在哪里就不知道了。
+I=2,
+else
+门徒丙=2,是个年轻女子，被关在哪里就不知道了。
+I=2,
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=54EE9174C758D1462FF52EB2BEFFE8E5

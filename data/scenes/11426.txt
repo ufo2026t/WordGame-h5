@@ -1,0 +1,77 @@
+id=11426
+名称=大理-慕容-花园
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clBlack}),clWindow,花园,AT1001,0,0/2007.bmp"></CENTER>
+一个私家花园。<p>
+长着不少热带花木。<p>
+在不起眼的地方，有一些红豆，<a href="game_pop_a(9);game_goods_change_n('红豆',1);game_chat('采到了一颗红豆')" title="采些相思豆">采摘</a>。<p>
+<:if game_role_is_exist('慕容丽雯') or game_check_scene_event(1127) then
+<a href="game_npc_talk('慕容紫霞')">慕容紫霞</a>
+else
+慕容紫霞：“我不认识你，你来我们家花园做什么。”
+end:>
+<p>
+<a href="game_page(11419)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_sex_from_id(1) then
+if game_check_scene_event(1129) then
+if game_check_scene_event(1128) then
+慕容紫霞=1,看，好大的太阳。
+I=1,
+else
+慕容紫霞=1,我好想去江南和中原看看。
+I,A=1,好啊，我带你去。
+I,B=1,江湖险恶，你还是乖乖留在家里吧。
+慕容紫霞,A=2,哇，你真好，真要去我还是有些不敢，还是留在家里吧。
+慕容紫霞,B=2,哼，人家已经长大啦。
+I,A=2,
+I,B=2,
+end
+else
+慕容紫霞=1,你行走江湖也不少时间了，可有遇到好玩的事情？
+I=1,有啊。
+if game_check_scene_event(1097) and game_check_scene_event(1071) then
+慕容紫霞=2,说来听听
+I=2,恩，我在临安时，一个叫梅家庄的地方，打死了一条黑水龙，哇，那龙可厉害了，能腾云驾雾，呼风唤雨呢。
+慕容紫霞=3,这么厉害的龙，打死不是太可惜了，把它驯服，天旱了让它下雨，天热了让它吹风，岂不很爽？
+I=3,这，倒没想这么多。不过，这是一条恶龙，不好控制呢。
+慕容紫霞=4,要是我在啊，肯定能降伏它。
+I=4,你小小年纪就会吹牛啦。
+慕容紫霞=5,才不呢，你欺负我。
+I=5,好，不说你了。
+慕容紫霞=6,再说说看，还有什么得意之作？
+I=6,嗯，还有，在淮阳，两大帮派正要恶斗，我一声大吼，制止了他们的冲动。
+慕容紫霞=[game_add_scene_event(1129)]7,哇，好帅气哦。
+I=[game_reload_direct(0)]7,哈哈，小意思啦。
+else
+慕容紫霞=2,那说来听听，比如是否有打过很厉害很厉害的怪物啊
+I=2,唉，也没什么好说的，很多支线剧情我都没玩。
+慕容紫霞=3,shit
+I=3,……
+end
+end
+else
+慕容紫霞=1,你说是大宋的男人帅还是我们大理的男人帅？
+I=1,这个，哪个地方都有帅哥也都有丑八怪吧。
+慕容紫霞=2,哼，问你也是白问。
+I=2,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0DF98BE076001936C99FAD53FA8ECF15

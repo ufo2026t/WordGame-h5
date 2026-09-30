@@ -1,0 +1,36 @@
+id=11727
+名称=少林寺-塔林
+作者=
+属性=38
+载入后=game_pop_fight_a(4,134)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,少林塔林,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+
+<:if not game_check_res_event(game_get_pscene_id(0)) then
+一个<a href="game_goods_change_n('伯牙古琴',1);game_chat('捡到伯牙古琴1。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">大箱子</a>。end:><p>
+塔林迷宫走到尽头，古塔林立，烟尘漫漫。<p>
+塔基旁有法阵刻痕，据说是昔年入塔的僧人所留，踏之可直回塔林入口。<p>
+<a href="game_pop_a(4);game_page(11663)" title="返回迷宫入口">法阵<img src="$apppath$img\fazhen.gif" border="0"></a><p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=AD4540BA21047EC460FF1E0E8C6162CA

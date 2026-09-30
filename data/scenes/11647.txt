@@ -1,0 +1,32 @@
+id=11647
+名称=少林寺-六祖殿
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,六祖殿,AT1000,0,0/2007.bmp"></CENTER>
+菩提本无树<br>
+明镜亦非台<br>
+本来无一物<br>
+何处染尘埃<p>
+<a href="game_pop(6);game_chat('五蕴皆空')" title="参禅悟道">参禅</a>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E9A98F621CE607355442136CB97866BE

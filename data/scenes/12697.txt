@@ -1,0 +1,39 @@
+id=12697
+名称=账房
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,账房,AT1000,0,0/2007.bmp"></CENTER>
+账房狭小，柜上堆着驾队登记册与欠条。掌柜说上楼请走右侧木梯。<p>
+<a href="game_npc_talk('账房先生')">账房先生</a><p>
+<a href="game_page(1)">上二楼</a><br>
+<p>
+<a href="game_page(-1)">小旅社</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+账房先生=1,住一晚五十文，包月可打折。走马巷夜里吵，怕吳的请住里间。
+I=1,楼上可还有空房？
+账房先生=2,五间客房，常有过路客商。若听见议论藏宝图的，别乱插嘴——九毒派的眼线多。
+I=2,
+if game_check_scene_event(1286) then
+账房先生=3,楼上那商人找到玛瑙石了，正打包呢。你也做宝石生意？
+I=3,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A1B2C3D4E5F6789012345678ABCDEF01

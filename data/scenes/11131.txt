@@ -1,0 +1,60 @@
+id=11131
+名称=平江府大厅
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,大厅,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1087) then
+if game_check_scene_event(1088) then
+张大人：“您现在前去<FONT color=#"FF0000">淮阳</FONT>找韩世忠将军吧。”
+else
+张大人：“去苗府的事情进展如何了？”<br>
+“正在努力。”
+end
+else
+if game_check_scene_event(1096) then
+<a href="game_npc_talk('张大人')">张大人</a>正在看一神秘地图。
+else
+张大人不在。
+end
+end:>
+<p>
+<a href="game_page(11109)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+张大人=1,if game_sex_from_id(1) then 壮士请坐 else 女侠请坐 end
+I=1,多谢张大人。
+张大人=2,此次案子得破，多亏你帮忙。
+I=2,一件小事，无须多提。对了，我此次来秀洲，还有重要事情找你。
+张大人=3,哦，侠士请讲。
+I=3,（拿出一份苗将军给刺客的赏格。并把临安兵变，苗刘派人暗杀，以及皇太后希望张大人联合韩世忠出兵勤王之事说了一遍）
+张大人=4,多谢侠士救命之恩。再说我等屡受朝廷恩惠，这次皇上有难，勤王之事定当尽力。
+I=4,那不知张大人有何计划？
+张大人=5,贼人现在佣兵在朝，皇上还捏在他们手上，我们投鼠忌器啊。不过，等韩元帅大军一到，包围临安，我想那贼人插翅难逃。
+I=5,只恐到时苗刘两人狗急跳墙，杀了皇上。
+张大人=6,我倒是有一计，只是需要侠士帮忙。
+I=6,请讲。
+张大人=7,侠士身手非凡，我们何不来个以牙还牙。
+I=7,你是说？
+张大人=8,你回临安，然后混入<FONT color=#"FF0000">苗府</FONT>，找机会杀了苗，这样，贼匪群虫无首，大军一到，便可手到擒来。事成子后，我禀明皇上，给你加官晋爵。
+I=8,呵呵，我对做官无多大兴趣。我先回临安看看吧。
+张大人=[game_add_scene_event(1087);game_add_message('平江府任务完成，返回临安，前往苗府')]9,侠士，这事马虎不得，请侠士千万放在心上。
+I=9,好
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=272166164C82D958DE4D06A4B1AA2F76

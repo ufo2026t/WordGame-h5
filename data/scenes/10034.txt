@@ -1,0 +1,38 @@
+id=10034
+名称=矿洞底下一层34号地块
+作者=
+属性=38
+载入后=game_pop_fight_a(1, 61)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clWindow,迷宫,AT1000,1,75/2007.bmp) fixed no-repeat center center;">
+这里是矿洞的底下一层地块。<p>
+旁边洞口众多，也不知道通往哪里才是正确的，先到处转转看了<br>
+
+再往里走，旁边有个<a href="game_pop_a(3);game_page(10033)" title="">石门</a>，通向33号地块。<p>
+ <:game_true(1)string game_res_goods(5023,1,'红酒'):>
+
+<p>
+<a href="game_page(10027)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+江雪儿=1,看到胜利的曙光了。
+I=1,哪里看出来的？
+江雪儿=2,保密，呆会你就知道了。
+
+
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=537A51E16967153DD5ACFA21CFC2D005

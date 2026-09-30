@@ -1,0 +1,41 @@
+id=12817
+名称=伊贺-城下町-东街
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,东街,AT1000,0,0/2007.bmp"></CENTER>
+城下町最热闹的街巷，行商与浪人来往。<p>
+<a href="game_npc_talk('荡橡摄')">荡橡摄</a><p>
+<:if game_check_scene_event(1220) and not game_check_scene_event(1299) then
+有人在暗处交换眼神，不太对劲。<p>
+end:>
+<a href="game_page(12120)">返回城下町</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1299) then
+荡橡摄=1,源氏探子被整数后，东街安静多了。
+I=1,
+elseif game_check_scene_event(1220) then
+荡橡摄=1,我拍到有人在暗中盯着平氏的行踪，怕是源氏的探子。
+I=1,谢谢告诉。
+荡橡摄=2,西街的渡边先生或知更多内情。
+I=2,
+else
+荡橡摄=1,东街的面馆多，客人来了去了。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

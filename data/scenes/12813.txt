@@ -1,0 +1,38 @@
+id=12813
+名称=伊贺-城下町-武器店
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://111,35,(隶书,134,26,{Bold},{clOlive}),clBlack,武器店,AT1000,0,0/2007.bmp"></CENTER>
+平源大战之际，武器铺生意倒不错。<p>
+<a href="game_trade(3,0)" title="">买武器</a><p>
+<a href="game_trade(3,1)" title="">卖武器</a><p>
+<a href="game_npc_talk('铁匠')">铁匠</a><p>
+<a href="game_page(12120)">返回城下町</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1293) then
+铁匠=1,源氏败了，这回该换平氏的旗号啦。
+I=1,
+elseif game_check_scene_event(1220) then
+铁匠=1,要打源氏，得备把像样的利器。奈良东大寺佛像内也有好东西。
+I=1,
+else
+铁匠=1,要买刀剑，还是卖旧的？
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

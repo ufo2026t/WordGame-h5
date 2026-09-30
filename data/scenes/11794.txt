@@ -1,0 +1,34 @@
+id=11794
+名称=开封
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,西厢房,AT1002,0,0/2007.bmp"></CENTER>
+这里原是富商的宅院，靖康年间南逃了，剩下一空宅。如今被金兵的一大将所占。<p>
+<:if not game_check_goods_nmb('开封皇宫令牌',1) then
+有一堆衣物，<a href="game_pop(6);game_infobox('惊动了金兵将领');game_pop_fight_a(1,137);game_goods_change_n('开封皇宫令牌',1);game_chat('得到了一皇宫令牌');game_reload_direct(0)" title="翻翻看">翻找</a>。<p>
+else
+房间里没人
+end:>
+
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=70E0C55846A695E6CA30041329B413A7

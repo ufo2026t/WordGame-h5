@@ -1,0 +1,64 @@
+id=12112
+名称=东大寺-佛像内部
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,佛像内,AT1000,0,0/2007.bmp"></CENTER>
+佛像内部。<p>
+ 佛像内部有很多的机关。<p>
+<:
+ if game_read_temp(1211201)=0 then
+ 第一关：<br>
+  <a href="game_pop_fight_a(1,148);game_write_temp(1211201,game_read_temp(1211201)+1);game_reload_direct(0)" title="">闯关</a>
+end
+if game_read_temp(1211201)=1 then
+ 第二关：<br>
+  <a href="game_pop_fight_a(1,148);game_write_temp(1211201,game_read_temp(1211201)+1);game_reload_direct(0)" title="">闯关</a>
+end
+if game_read_temp(1211201)=2 then
+ 第三关：<br>
+  <a href="game_pop_fight_a(2,148);game_write_temp(1211201,game_read_temp(1211201)+1);game_reload_direct(0)" title="">闯关</a>
+end
+if game_read_temp(1211201)=3 then
+ 第四关：<br>
+  <a href="game_pop_fight_a(3,148);game_write_temp(1211201,game_read_temp(1211201)+1);game_reload_direct(0)" title="">闯关</a>
+end
+if game_read_temp(1211201)=4 then
+ 第五关：<br>
+  <a href="game_pop_fight_a(4,148);game_write_temp(1211201,game_read_temp(1211201)+1);game_reload_direct(0)" title="">闯关</a>
+end
+if game_read_temp(1211201)=5 then
+ 第六关：<br>
+  <a href="game_pop_fight_a(5,148);game_write_temp(1211201,game_read_temp(1211201)+1);game_reload_direct(0)" title="">闯关</a>
+end
+if game_read_temp(1211201)=6 then
+ 第七关：<br>
+ if not game_check_res_event(game_get_pscene_id(0)) then
+  一个小<a href="game_goods_change_n('金佛',1);game_chat('捡到金佛1。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">小宝箱</a>。
+  else
+   一个空的宝箱。
+  end
+end
+:>
+
+<p>
+<a href="game_page(12107)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=10B52E8E6C6F365408C78039B904A42C

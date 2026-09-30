@@ -1,0 +1,36 @@
+id=12675
+名称=东来山庄
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,东来山庄,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1282) and not game_check_scene_event(1300) then
+练武厅中的东来公子，似乎有事相托。<p>
+end:>
+东来山庄门楣高阔，与九毒派总坛隔街相望，是西州第二大势力。<p>
+<a href="game_page(1)">山庄大厅</a><br>
+
+
+<p>
+<a href="game_page(-27)">西州城</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C1876596A0E44A94FCFE2FF05E90685C

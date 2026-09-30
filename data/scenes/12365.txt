@@ -1,0 +1,53 @@
+id=12365
+名称=崖底
+作者=
+属性=38
+载入后=game_pop_fight_a(1,156)
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,崖底,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+崖底有一石头密室，上书几个字：<br>
+如是我闻：<br>
+大X大悲，佛空一切。<br>
+X念此咒，XXXX。<p>
+一些文字已经风化，看不清楚了，可见这些文字刻在此处已经很久远了。<p>
+<:if game_check_goods_nmb('木制如来像',1) and game_check_goods_nmb('玉制如来像',1) then
+暗室开启，
+if game_not_scene_event(1242) then
+能看到一本书，<a href="game_pop_a(20);game_goods_change_n('木制如来像',-1);game_goods_change_n('玉制如来像',-1);game_goods_change_n('大悲咒',1);game_add_scene_event(1242);game_chat('得到大悲咒武功秘籍一本。');game_reload_direct(0)" title="">拿取</a>
+else
+里面空空如也。
+end
+else
+if game_check_scene_event(1242) then
+里面空空如也。
+else
+文字的下面，有两个人形凹坑。尝试<a href="game_pop_a(6);game_add_scene_event(1243);game_chat('打开机关失败，看来是不得要领，从这些文字上看，和佛经有关，不如前去少林请教一下方丈。')" title="">打开机关</a>。
+end
+end:>
+崖底密室探尽；若要早些脱身，可踏壁上古法阵直回天山顶。<p>
+<a href="game_pop_a(3);game_page(11937)" title="">法阵</a>
+<p>
+<a href="game_page(-6)">冰摩崖迷宫</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BAAD53E59EF7CB640D6ED22BC079022B

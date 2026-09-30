@@ -1,0 +1,41 @@
+id=10093
+名称=中档副食杂货店
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<CENTER><img src="gpic://248,39,(隶书,134,36,{Bold},{clBlack}),clWindow,副食杂货铺,AT1000,0,0/2007.bmp"></CENTER>
+主营：南北山货，滋补珍品。
+<p>
+这是一家中档的副食杂货店。<p>
+如果您想买或者卖东西，请与<a href="game_npc_talk('掌柜')">掌柜</a>联系。<p>
+
+<a href="game_page(10061)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+掌柜=1,客官请随便挑。
+I,A=1,我看看先
+I,B=[game_trade(11,0)]1,我想买东西。
+I,C=[game_trade(11,1)]1,我要卖。
+掌柜,A=2,唉，中原连续打仗，百姓日子不好过啊，咱这小店生意也大受影响。
+掌柜,B=2,呵呵，咱们价格公道，且绝无假冒伪劣。
+掌柜,C=2,请，本店高价收购。
+I,A,A=2,听说岳大元帅连战连捷啊，打跑金狗指日可待。
+I,A,B=2,我也想去
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=297F458F93DCD859C82F3C768FC9D93B

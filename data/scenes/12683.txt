@@ -1,0 +1,30 @@
+id=12683
+名称=房间五
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间五,AT1000,0,0/2007.bmp"></CENTER>
+ 空房，只有橱香袅袅。<p>
+<p>
+<a href="game_page(-5)">走廊</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=8B85ACF97AF8394B021AFE73A4E6D8E9

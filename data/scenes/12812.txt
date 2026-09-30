@@ -1,0 +1,39 @@
+id=12812
+名称=伊贺-城下町-酒楼
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://74,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,酒楼,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('酒楼老板')">酒楼老板</a><p>
+<:if game_check_scene_event(1293) and not game_check_scene_event(1297) then
+<a href="game_add_scene_event(1297);game_change_money(-300);game_chat('与平氏武士共饮一餐，听他们诉说决战经过。');game_reload_direct(0)" title="">参加庆功酒宴（300文）</a><p>
+elseif game_check_scene_event(1297) then
+庆功酒宴已过，酒楼里传来欢声。<p>
+end:>
+<a href="game_page(12120)">返回城下町</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1297) then
+酒楼老板=1,平氏胜了！这餐酒，说什么也得请侠士喝一杯。
+I=1,
+elseif game_check_scene_event(1293) then
+酒楼老板=1,快来吧！平氏武士们在庆功呢。
+I=1,
+else
+酒楼老板=1,客官里少，都去打仗了。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

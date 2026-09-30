@@ -1,0 +1,38 @@
+id=11022
+名称=万灵山-小路
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,0/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://285,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,万灵山小路,AT1000,0,0/2007.bmp"></CENTER>
+万灵山，山不在高，有仙则灵。<p>
+这个小路，通往万灵山深处，多山洞，深沟，野兽。<p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):>
+<p>
+<:game_true(1)string game_res_goods(0,1,'百年人参'):><p>
+
+<a href="game_pop_a(2);game_page(1)" title="">进山</a>
+
+<p>
+<a href="game_page(-2)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=DC9E04F27AB7AC746A80AFD5CEBB57D7

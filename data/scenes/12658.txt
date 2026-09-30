@@ -1,0 +1,35 @@
+id=12658
+名称=府衙
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,明镜高悬,AT1000,0,0/2007.bmp"></CENTER>
+大堂上没有人，今天没升堂问案。<p>
+<a href="game_npc_talk('门子')">门子</a><p>
+<a href="game_page(1)">客厅</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+门子=1,大人有事？今日太守不升堂，要告状去中孚大街说书馆，定期有官员来受理。
+I=1,九毒派在城里横行无忌，府衙不管吗？
+门子=2,小声点！府台也只能照顾商旅税赋，毒派的事……谁敢管？
+I=2,
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=690CB30BD58147C3615700C79C50344C

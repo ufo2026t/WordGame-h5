@@ -1,0 +1,39 @@
+id=10174
+名称=三清山道观前厅
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://295,293,(楷体_GB2312,134,220,{Bold},{clBlue}),clWindow,道,AT1012,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<p>
+;;<:game_true(1)string game_res_goods(5069,1,'电气石'):>
+;;<:game_true(1)string game_res_goods(8,1,'三年生草药'):>
+<p>
+道可道，非常道，<p>
+名可名，非常名。<p>
+无名，谓之天地始，<p>
+有名，谓之万物母。<p>
+<a href="game_page(10175)">进入三清山道观</a>
+&nbsp;<p>
+<a href="game_page(10173)">走迷宫返回</a><p>
+<a href="game_page(10061)">直接返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=79DDEDEF2CF0CD020DB36A948E5BFBFA

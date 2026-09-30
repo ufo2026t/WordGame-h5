@@ -1,0 +1,68 @@
+id=11917
+名称=昆仑山地宫内
+作者=
+属性=38
+载入后=game_pop_fight_a(2,56)
+动作=
+{
+D5001=if game_pop(20) and game_random_chance(3) then game_goods_change_n('混沌之晶毛胚',-1);game_goods_change_n('混沌之晶',1);game_add_scene_event(1190);game_reload_direct(0) else game_chat('激活失败，请重试') end
+D5002=if game_check_goods_nmb('五色石',1) then if game_pop(20) and game_random_chance(3) then game_goods_change_n('混沌之晶',-1);game_goods_change_n('镇妖神镜',-1);game_add_scene_event(1191);game_reload_direct(0) else game_chat('归位失败，请重试') end else game_chat('您没有五色石。需要在天山才能找到') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,400,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,密室深处,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):>
+<p>
+密室尽头，有个很大的祭坛。<p>
+<:if game_check_scene_event(1191) then
+神镜已经归位，散发着幽幽的光芒。<p>
+if game_not_res_event(5233) then
+ 一个小<a href="game_goods_change_n('上古神石',1);game_chat('捡到上古神石1。');game_add_res_event(5233);game_reload_direct(0)" title="">盒子</a>。<p>
+end
+else
+if game_check_scene_event(1190) then
+if game_check_goods_nmb('镇妖神镜',1) and game_check_goods_nmb('混沌之晶',1) then
+如果要让神镜归位，还需要<strong>天山</strong>的<strong>五色石</strong>（注意，不是五色土），
+如果你已经从天山找到了五色石头，那么试试让神镜<a href="D5002" title="">归位</a>。
+else
+<strong>混沌之晶</strong>已经激活，现在可以下山去查找神镜的下落了。
+end
+else
+if game_check_scene_event(1189) then
+if game_check_goods_nmb('混沌之晶毛胚',1) then
+您现在拿到了“混沌之晶毛胚”，但要释放它的力量，需要在这里利用暗黑之气进行<a href="D5001" title="激活混沌之晶">激活</a>。
+else
+您没有获得需要的物品：混沌之晶毛胚。此物可以在天山获得。
+end
+else
+祭坛上有个深不见底的小孔，原先神镜放置于此，现在，可以感觉到丝丝的阴寒之气从孔内源源不断的涌出。<p>
+if game_read_temp(1191701) then
+
+神镜，映射天地之能量尔。然万物相生相克。<strong>天山</strong>有<FONT color=#"FF0000">混沌之晶</FONT>，可御神镜。
+else
+祭坛底部，有个可活动的<a href="game_pop(8);game_write_temp(1191701,1);game_reload_direct(0)" title="">小盒</a>。<p>
+end
+end
+end
+end:>
+<:if not game_check_res_event(game_get_pscene_id(0)) then
+一个<a href="game_goods_change_n('九阳丹',1);game_chat('捡到九阳丹1。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">小包裹</a>。end:><p>
+祭坛一侧的石壁上，还刻着通往隧洞口的古法阵，踏之可省却来时的曲折。<p>
+<a href="game_pop_a(5);game_page(11897)">法阵<img src="$apppath$img\fazhen.gif" border="0"></a><p>
+
+<a href="game_pop_a(2);game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=113951DF68F5AD4E3EF6E5B7E54FEE41

@@ -1,0 +1,10 @@
+id=layer17
+begin=222
+end=224
+begin2=226
+end2=233
+begin3=248
+end3=250
+;可以使用begin2，end2等定义多个物品区间，最多搜索到begin9为止
+;高级药材店
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

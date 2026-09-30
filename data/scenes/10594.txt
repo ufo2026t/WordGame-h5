@@ -1,0 +1,35 @@
+id=10594
+名称=三潭印月
+作者=
+属性=
+TempKey=三潭印月
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clGreen}),clWindow,三潭印月,AT1002,0,0/2007.bmp"></CENTER>
+三潭印月岛又名小瀛洲，与湖心亭，阮公墩合称为湖上三岛。全岛连水面在内面积约七公顷，南北有曲桥相通，东西以土堤相连桥堤呈“十”字形交叉，将岛上水面一分为四水面外围是环形堤埂。从空中俯瞰，岛上陆地形如一个特大的“田”字，呈现出湖中有岛，岛中有湖，水景称胜的特色在西湖十景中独具一格，为我国江南水上园林的经典之作。 明万历三十五年（一六零七），钱塘县令聂心汤取湖中葑泥在岛周围筑堤坝，初成湖中湖，作为放生之所。后人在岛南湖中建造三座瓶形小石塔，称为“三潭”，清初岛上又加营建筑曲桥，堂轩，沿内湖环植木芙蓉，复经清光绪间退休将领彭玉麟在此营造别墅，小瀛洲初具风貌。
+<p>
+<:game_true(1)string game_res_goods(0,1,'道士符'):><p>
+<p>
+
+<p>
+<a href="game_page(10584)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=565D227137E17A42F572989BE445CBB4

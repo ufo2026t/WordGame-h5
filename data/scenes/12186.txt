@@ -1,0 +1,42 @@
+id=12186
+名称=大理异草堂
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://111,35,(隶书,134,26,{Bold},{clOlive}),clBlack,异草堂,AT1000,0,0/2007.bmp"></CENTER>
+草药铺子。<p>
+1。<a href="game_trade(9,0)" title="">买药材</a><p>
+2。<a href="game_trade(9,1)" title="">卖药材</a><p>
+3。和掌柜的<a href="game_npc_talk('掌柜')">对话</a>
+<p>
+<a href="game_page(11373)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1229) then
+掌柜=1,
+I=1,请问，有上好的天麻没？
+掌柜=2,天麻啊，不巧，都卖光了，如果急需，您可以去<FONT color=#"FF0000">南绍镇</FONT>看看，那里可能还有。
+I=2,多谢掌柜的。
+else
+掌柜=1,
+I=1,不知大理有何特产药材？
+掌柜=2,特别的奇珍异草倒是没有，不过，这里产的天麻倒是不错，质量确属上乘。
+I=2,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F00283472EE75297CA55618A1952887A

@@ -1,0 +1,39 @@
+id=12577
+名称=上京客栈楼上
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://343,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,上京客栈客房二,AT1000,0,0/2007.bmp"></CENTER>
+
+ <:game_true(1)string game_res_goods(0,1,'降神镖'):><p>
+
+<:if game_check_scene_event(1269) then
+两个<a href="game_npc_talk('行僧')">行僧</a>在翻阅经卷。
+else
+ 客房是空的。
+end:><p>
+<a href="game_page(12575)">返回</a><br>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+行僧=1,行僧甲@师兄，我觉得今天在接上遇到的那几个西域人好诡异哦。
+I=1,行僧乙@你有所不知，那是西域九毒派的门人。千万别招惹他们。
+行僧=2,行僧甲@九毒派，以前没听说过。
+I=2,行僧乙@九毒派在西域非常有名，其毒名目繁多，威力非常。只是很少出西域行动，故而外界少知。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5BD6AE5568D5952D63E948A28E56480C

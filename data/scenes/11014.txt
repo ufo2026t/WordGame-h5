@@ -1,0 +1,44 @@
+id=11014
+名称=珊瑚岛-万灵山
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://645,213,(隶书,134,160,{Bold},{clFuchsia}),clWindow,岛,AT1001,0,75/2007.bmp) fixed no-repeat center center;">
+ <CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,万灵山,AT1000,0,0/2007.bmp"></CENTER>
+山不高，但陡峭且多洞穴。<br>
+<:game_check_scene_event(1075)
+这是从张堡主身上取得的<strong>八卦阵地图</strong>：<br>
+乾：生门　　　坤：死门　　　震：生门　　　艮：死门<br>
+▅▅▅▅▅　　▅▅　▅▅　　▅▅　▅▅　　▅▅▅▅▅<br>
+▅▅▅▅▅　　▅▅　▅▅　　▅▅　▅▅　　▅▅　▅▅<br>
+▅▅▅▅▅　　▅▅　▅▅　　▅▅▅▅▅　　▅▅　▅▅<br>
+&nbsp;<p>
+离：生门　　　坎：死门　　　兑：生门　　　巽：死门<br>
+▅▅▅▅▅　　▅▅　▅▅　　▅▅　▅▅　　▅▅▅▅▅<br>
+▅▅　▅▅　　▅▅▅▅▅　　▅▅▅▅▅　　▅▅▅▅▅<br>
+▅▅▅▅▅　　▅▅　▅▅　　▅▅▅▅▅　　▅▅　▅▅<br>
+<p>
+要<FONT color=#"FF0000">过八卦阵</FONT>，其实不难，只需按从左到右，从上到下的顺序每个生门都走一遍（点击一次）即可。是否立即去<a href="game_page(11019)" title="">破阵</a>？
+else
+如果没人指点，估计很难到想去的地方。<p>
+或者，可以先去<strong>张家堡</strong>探听一下消息。<br> :><p>
+<a href="game_page(11019)" title="">进山</a>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2AC8B0448115E0E12BBA10F01248250E

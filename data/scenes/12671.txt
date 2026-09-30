@@ -1,0 +1,48 @@
+id=12671
+名称=药材店
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,药材店,AT1000,0,0/2007.bmp"></CENTER>
+ <:if game_role_is_exist('柳依依') and game_check_scene_event(1316) then
+柳依依：“西域的解毒散我带了一包寄回去，父亲说毒气散了大半。”<p>
+elseif game_role_is_exist('柳依依') and game_check_scene_event(1310) then
+柳依依：“西州药价贵，可比娉州多了好几味药。”<p>
+end:>
+药柜上贴着「识毒先识药」的条幅，老板正在称重。<p>
+西州的药材店。<p>
+<a href="game_npc_talk('老板')">老板</a><p>
+<a href="game_trade(17,0)" title="">买药材</a><p>
+<a href="game_trade(17,1)" title="">卖药材</a><p>
+<p>
+
+
+
+
+<p>
+<a href="game_page(-23)">西州城</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+老板=1,西域药材金贵，解毒散和五毒丸最好勿乱搬。
+I=1,要进九毒派总坛吗？
+老板=2,先备解毒之物。教主手里有块藏宝图，全城都在传。
+I=2,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6C0DF67FB3F85ED6AB8295174D1C0215

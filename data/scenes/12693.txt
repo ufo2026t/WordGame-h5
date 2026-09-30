@@ -1,0 +1,40 @@
+id=12693
+名称=马奶茶店
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,马奶茶店,AT1000,0,0/2007.bmp"></CENTER>
+热腾腾的奶茶飘香，店主忙着招呼过路客商。<p>
+<a href="game_npc_talk('店主')">店主</a><p>
+<a href="if game_check_money(50) then game_change_money(-50);game_chat('喝了一碗马奶茶，身子暖洋洋的。');game_reload_direct(0) else game_chat('一碗奶茶五十文。') end" title="">买奶茶（50文）</a><p>
+<a href="game_page(-1)">走马巷</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+店主=1,客官打尖还是住店？走马巷尽头有小旅社。
+I=1,听说九毒派的事了吗？
+店主=2,听说他们教主手里有块藏宝图，真假不知。
+I=2,
+if game_check_scene_event(1289) then
+店主=3,东来山庄和九毒派又闹起来了？听说是为了一块什么令牌。
+I=3,
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F83677FC0F7377EE8B30CA8982ECD866

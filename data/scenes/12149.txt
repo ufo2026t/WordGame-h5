@@ -1,0 +1,41 @@
+id=12149
+名称=伊贺谷-熊野本宮
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://371,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,熊野本宮,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_role_is_exist('千代美') then
+if game_not_res_event(game_get_pscene_id(0)) then
+run game_add_res_event(game_get_pscene_id(0))
+string game_newname_from_oldname('千代美')：“熊野本宮是忍者的大本营之一，里面有很多的忍者，非常难缠。”<p>
+end
+end:>
+<a href="game_npc_talk('忍者甲')">忍者甲</a><p>
+<a href="game_page(1)" title="">进入大堂</a><p>
+<a href="if game_check_scene_event(1223) then game_page(2) else game_chat('不要到处乱走的好。') end" title="">进入神堂</a>
+<p>
+<a href="game_page(12121)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+忍者甲=1,你们鬼鬼祟祟的，来这干吗？看着就不像好人。
+I=1,我们来旅游的
+忍者甲=2,这里不欢迎游客。出去吧
+I=2,如此待客，找你们老板来，我要投诉。
+忍者甲=3,不说了，随你，在里面乱逛，呆会都不知道怎么死的。
+I=3,哈哈，不用你担心，我是破解机关的能手。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6D7B7CD3D170C70437223CEAD8686B1C

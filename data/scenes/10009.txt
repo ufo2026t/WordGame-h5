@@ -1,0 +1,47 @@
+id=10009
+名称=兵器铺
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://241,240,(隶书,134,180,{Bold},{clWindowText}),clWindow,武,AT1000,0,75/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+ 上等良兵利刃，尽在此处。走过路过不要错过。<p>
+有几个顾客在闲聊：<br>
+顾客甲：“听说婺州野外的天坑里有一块<FONT color=#FF0000>陨铁</FONT>，那可是打造上等兵器的必备物品。”<br>
+顾客乙：“陨铁是值钱但那天坑深不可测，且里面还滋生有妖孽，不是一般人能下的去的。”
+顾客丙：“有好兵器还不够，还需要有<FONT color=#FF0000>武功秘籍</FONT>威力就能四两拨千斤。听说一些<b>迷宫</b>密室等地方有时会有上等秘籍出现。”
+<p>
+<a href="game_trade(1,0)" title="">购买武器</a><p>
+<a href="game_trade(1,1)" title="把多余的武器卖给店家">卖出多余武器</a><p>
+给铁匠<a href="if game_grade('无名',10) or game_check_role_values('无名',19,5000) then game_chat('锡块有多了，现在不收购了。') else game_npc_talk('铁匠老板') end">帮忙找材料</a>。<p>
+<a href="game_page(10001)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_res_event(9006) then
+if game_check_goods_nmb('锡块',2) then
+铁匠老板=1,真有找到锡块啊。
+I=[game_goods_change_n('锡块',-2);game_comp_task(9006);game_infobox('您得到了钱80和经验值200');game_reload_direct(0)]1,恩，给你（鼠标点击此处把锡块给铁匠老板）。
+else
+铁匠老板=1,您采的锡块数量不够。
+end
+else
+铁匠老板=1,可帮我收集铸剑原料<FONT color=#"FF0000">锡块</FONT>吗？两块锡块，80金币，200经验值哦。可在<strong>后山矿洞挖矿</strong>得到锡块。
+I,A=[game_add_task(9006)]1,好
+I,B=1,我现在没空。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9FF6E3D7B4C10522B731C5EC27B80636

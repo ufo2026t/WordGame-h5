@@ -1,0 +1,60 @@
+id=11666
+名称=飞龙帮-前院
+作者=
+属性=4
+动作=
+{
+D5001=if game_pop_game(1,127) then if game_check_scene_event(1161) then game_infobox('副帮主：你又赢了，老夫认输。') else game_add_scene_event(1158);game_add_scene_event(1161);game_infobox('副帮主：后生可畏啊。') end else game_infobox('副帮主：先回去多练练，下次再来找我比试吧。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,前院,AT1002,0,0/2007.bmp"></CENTER>
+前院栽了些花花草草的。<p>
+<:game_random_chance(3)
+<a href="game_npc_talk('副帮主')">副帮主</a>正在这里。
+else
+有<a href="game_npc_talk('家丁')">家丁</a>在扫地。
+:>
+<p>
+<a href="game_page(11671)" title="">房间一</a><p>
+<a href="game_page(11672)" title="">房间二</a><p>
+<a href="game_page(11673)" title="">房间三</a><p>
+
+<p>
+<a href="game_page(11605)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+家丁=1,
+I=1,请问，副帮主在这里吗？
+家丁=2,你说副帮主吗？他经常在这儿的，你先去别的地方转转，再来估计就在这里了。
+I=2,好的，多谢。
+if game_check_scene_event(1161) then
+副帮主=1,又找我比武？
+I,A=1,恩，友谊赛，友谊赛。
+I,B=1,没，只是想找你聊聊天。
+副帮主,A=2,好，请出招
+副帮主,B=2,不聊天。
+I,A=[D5001]2,请
+I,B=2,哦，知道了。
+else
+副帮主=1,
+I=1,副帮主好啊。
+副帮主=2,你好，找我何事？
+I,A=2,久闻副帮主大名，想找您切磋一下。
+I,B=2,随意聊聊了。
+副帮主,A=3,请
+副帮主,B=3,本人不闲聊，对不起。
+I,A=[D5001]3,请
+I,B=3,呵
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=66F18CCDA921053C4AC7FE08D47DA267

@@ -1,0 +1,46 @@
+id=10539
+名称=后院
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,天外天,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clGreen}),clWindow,后院,AT1001,0,0/2007.bmp"></CENTER>
+ <:if game_not_res_event(game_get_pscene_id(0)) then
+ <a href="game_goods_change_n('玫瑰花',2);game_chat('摘到玫瑰花2朵');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">红花</a>
+ 绿树，数栋小楼散布其中。<br>
+if game_role_is_exist('江雪儿') then
+ 江雪儿：“这花真好看。”<br>
+end
+ else
+ 红花绿树，数栋小楼散布其中。
+ end:>
+<p>
+<a href="game_page(10540)" title="">小楼1</a><p>
+<a href="game_page(10541)" title="">小楼2</a><p>
+<a href="game_page(10542)" title="">小楼3</a><p>
+<a href="game_page(10543)" title="">小楼4</a><p>
+<a href="game_page(10544)" title="">小楼5</a><p>
+<a href="game_page(10545)" title="">练功房</a><p>
+
+<p>
+<a href="game_page(10523)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D7FD2D46DC061098990DB18C0FAA5702

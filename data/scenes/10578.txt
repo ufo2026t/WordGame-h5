@@ -1,0 +1,55 @@
+id=10578
+名称=驿站南面小院
+作者=
+属性=6
+动作=
+{
+D5001=game_pop_fight_a(1,88);game_goods_change_n('和氏璧',1);game_add_scene_event(1053);game_infobox('长安君：“多谢大虾救命之恩，一点小意思。”');game_infobox('您得到了和氏璧一块。');game_kill_game_time(0);game_page(10570)
+D5002=game_pop_fight_a(1,88);game_change_money(888);game_infobox('长安君：“多谢大虾救命之恩，一点小意思。”');game_infobox('您得到了金钱888。');game_kill_game_time(0);game_page(10570)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,南面小院,AT1000,0,0/2007.bmp"></CENTER>
+院子里堆着不少器物。<p>
+<a href="game_npc_talk('小三')">小三，小五</a>请点着随带的货物。<p>
+<a href="game_npc_talk('长安君')">长安君</a>仰望长空，面色忧郁。<p>
+<:game_read_temp(1057902)
+一<a href="game_npc_talk('黑衣人')">黑衣人</a>在和马夫聊天<p>
+:>
+<p>
+<a href="game_page(10577)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+小三=1,小三@铜盏16个。
+I=1,小五@青铜酒器18个。
+小三=2,小三@狐皮20张。
+I=2,小五@竹简18捆。
+长安君=1,一夜东风起，花满地。
+I=1,此去齐国，前途未卜啊。
+长安君=2,你是何人？为何穿着如此怪异？
+I=2,我从很远很远的地方来，所以穿着与尔等不同。
+长安君=3,哦，呵呵，来的都是客，小三，摆酒。
+I=3,
+黑衣人=1,
+I=1,刚才见你去马房偷偷下药，何为？
+黑衣人=2,呵呵，你看错了，我没去过马房。
+I=2,刺客果然是你，你先给马下药，得手后对方马跑不动，你好乘机逃脱？
+黑衣人=3,看来事情败露了，今天不成功变成仁。
+if game_check_scene_event(1053) then
+I=[D5002]3,系统@捉拿刺客。
+else
+I=[D5001]3,系统@捉拿刺客。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C30DFBD670630CDB4430FF820C40B533

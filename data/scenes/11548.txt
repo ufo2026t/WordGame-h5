@@ -1,0 +1,38 @@
+id=11548
+名称=大理大街
+作者=
+属性=
+动作=
+{
+D5001=if game_get_role_suxing(game_id_from_oldname('慕容紫霞'),0)*-1 > game_get_role_suxing(1,0) then game_infobox('你钱不够。') else game_change_money(game_get_role_suxing(game_id_from_oldname('慕容紫霞')));game_attribute_change(game_id_from_oldname('慕容紫霞'),0,game_get_role_suxing(game_id_from_oldname('慕容紫霞'))*-1);game_infobox('你替慕容紫霞还了钱。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+赌徒甲：“慕容二小姐，你欠我们的钱，什么时候还啊？”<br>
+赌徒乙：“想离开大理，先把欠我们的钱还上啊。”<p>
+1。<a href="game_reload_direct(0);game_npc_talk('赌徒')" title="">还钱</a><p>
+2。<a href="game_chat('慕容紫霞：“算了，欠债还钱，不要和他们一般见识。”')" title="">几个赌徒，还这么嚣张，看招</a>
+<p>
+<a href="game_page(11373)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_get_role_suxing(game_id_from_oldname('慕容紫霞'),0)>=0 then
+赌徒=1,不欠我们钱了，你们走吧。
+I=1,
+else
+赌徒=1,还钱。
+I=1,欠你们多少？
+赌徒=2,欠我们string game_inttostr(game_get_role_suxing(game_id_from_oldname('慕容紫霞'),0)*-1)
+I=[D5001]2,好，我还给你们。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1A4BC8A0AA07098591B47A6DFB4C5297

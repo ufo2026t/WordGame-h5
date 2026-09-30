@@ -1,0 +1,78 @@
+id=10589
+名称=柳浪闻莺
+作者=
+属性=
+TempKey=柳浪闻莺
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://300,300,(隶书,134,42,{Bold},{clGreen}),clWindow,$tree,AT1002,0,0/2007.bmp"></CENTER>
+柳浪闻莺，由当年帝王享受的御花园，演变为普通老百姓的大乐园。她仍以青翠柳色和婉啭莺鸣作为公园景观基调，在沿湖长达千米的堤岸上和园路主干道路沿途栽种垂柳及狮柳，醉柳，浣沙柳等特色柳树。在园中部主景区辟闻莺馆，又在距闻莺馆不远处置巨型网笼“百鸟天堂”，营造烟花三月，柳丝飘舞，莺声清丽的氛围。闻莺馆东面，以草坪和密林带为主形成友谊园景区，引种了一批日本樱花，草坪北侧铺石砌台，矗立着”日中不再战纪念碑。闻莺馆西侧，是柳浪闻莺重建时填平水荡沼泽而营造的大草坪，草色遥连西湖碧波青山，大草坪北侧，是迁建来此的康熙御题柳浪闻莺景亭碑；南侧种植了一片高大的乔木树林，与草坪，柳岸及湖光山色构成富于层面，角度变化的生动图景。
+<p>
+<:if game_check_scene_event(1310) and not game_check_scene_event(1316) and game_role_is_exist('柳依依') then
+if game_check_goods_nmb('百年灵芝',1) then
+<a href="game_goods_change_n('百年灵芝',-1);game_add_scene_event(1316);game_infobox('依依托商队将灵芝寄回婺州，父亲柳怀远气色见好。');game_attribute_change(1,19,1000);game_attribute_change(1,9,1);game_reload_direct(0)">请柳依依将百年灵芝寄回家</a><p>
+elseif game_check_goods_nmb('还魂丹',1) then
+<a href="game_goods_change_n('还魂丹',-1);game_add_scene_event(1316);game_infobox('依依将还魂丹寄给父亲，来信说已能下床。');game_attribute_change(1,19,800);game_attribute_change(1,9,1);game_reload_direct(0)">请柳依依将还魂丹寄回家</a><p>
+else
+柳依依望着北方：“再找到一味好药，父亲就有救了。”<p>
+end
+elseif game_check_scene_event(1316) then
+柳依依：“家父来信说能下床了。这份感情，依依记一辈子。”<p>
+end:>
+<:game_true(1)string game_res_goods(0,1,'红酒'):><p>
+<p>
+<:if not game_check_scene_event(1310) and not game_role_is_exist('柳依依') and game_grade('无名',5) then
+垂柳下，一名<a href="game_npc_talk('柳依依')">绿衫女子</a><img src="$apppath$img\9.bmp">正对着湖面写着什么，身旁放着药篓。<p>
+elseif game_check_scene_event(1310) then
+<a href="game_npc_talk('柳依依')">柳依依</a><img src="$apppath$img\9.bmp">在柳荫下整理药草。<p>
+end:>
+<p>
+一<a href="game_npc_talk('老叟')">老叟</a>湖边那钓鱼。
+<p>
+<a href="game_page(10584)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_not_scene_event(1310) then
+柳依依=1,<img src="$apppath$img\9.bmp">这位if game_sex_from_id(1) then 公子 else 姑娘 end，也是来赏柳的？
+I=1,姑娘在写什么？（<FONT color=#"FF0000">点此继续对话</FONT>）
+柳依依=2,家父柳怀远是乡野郎中，卧病在床。我听说临安西湖边有<FONT color=#"FF0000">百年老柳皮</FONT>可入药，便独自前来采集。
+I=2,你一个人来，不怕遇险？
+柳依依=3,依依学过一些拳脚，也识得几味草药。只是……方才有两个泼皮，要收什么“过路钱”。
+I=3,不如跟我们一起走吧，打怪采药都方便些。
+柳依依=4,你们……不嫌我累赘？
+I,A=4,江湖儿女，何必客气。
+I,B=4,我还有事，姑娘自己小心。
+柳依依,A=[game_add_friend('柳依依',1);game_pop_fight_a(2,13);game_add_scene_event(1310);game_infobox('柳依依加入了队伍。');game_reload_direct(0);game_npc_talk('柳依依')]5,那就叨扰了。那两个泼皮若再来，依依也不怕了。
+柳依依,B=5,也好，依依再想想别的法子。
+I,A=5,
+I,B=5,
+柳依依=6,<img src="$apppath$img\9.bmp">跟着你们走，比一个人在这柳浪闻莺安全多了。家父还等着药呢。
+I=6,
+else
+柳依依=1,<img src="$apppath$img\9.bmp">柳浪闻莺的春色真好，依依想多采些药草带给家父。
+I=1,
+end
+老叟=1,闲来无事，钓钓鱼
+I=1,这鱼无污染，绿色食品啊。
+老叟=2,听说<FONT color=#"FF0000">梅家坞</FONT>有数棵御用龙井，泡的茶奇香无比，只是尔等平头百姓，无缘此等香茶，唉。
+I=2,if game_check_goods_nmb('龙井茶',1) then 我这有御用龙井，给你，看看。 else 有机会，我带点过来你尝尝了。 end
+老叟=3,if game_check_goods_nmb('龙井茶',1) then [game_goods_change_n('龙井茶',-1);game_change_money(500);game_attribute_change(1,19,1000);game_infobox('金钱增加了500，经验值增加了1000')]3,果然是上等龙井啊。这点小意思，您收着。 else 那先谢谢您了。 end
+I=3,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B72D5BA207D2EB9B95A046C10C2AD61C

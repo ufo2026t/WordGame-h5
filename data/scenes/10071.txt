@@ -1,0 +1,36 @@
+id=10071
+名称=右厢房
+作者=
+属性=34
+载入后=if game_random_chance_at_sleep(2) then game_pop_fight_a(game_random_chance_2(3),73) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(楷体_GB2312,134,120,{Bold},{clWhite}),clSilver,古堡,AT1009,1,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+长期无人居住，里面落满了灰层。<p>
+层层叠叠的，到处是蜘蛛网。<p>
+ <p>
+门开着，可<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10076)" title="">通往左书房</a><p>
+又一扇木门，到<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10077)" title="">左卧室</a><p>
+<:if game_random_chance(5) then <p><span id="bo_113">一个小<a href="game_goods_change_n('一年生草药',2);game_chat('捡到一年生草药2颗。');game_inner_html(113,' ')" title="好东西哦">包裹</a></span>end:>
+<p>
+
+<a href="game_page(10067)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4331D5CCD841A27FAF3D66C31674B993

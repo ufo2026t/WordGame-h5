@@ -1,0 +1,30 @@
+id=12116
+名称=唐招提寺
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://371,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,经藏,AT1000,0,0/2007.bmp"></CENTER>
+经藏中收藏鉴真东渡带来的经卷。<p>
+<:if game_check_scene_event(1220) and not game_check_scene_event(1241) then
+<FONT color=#FF0000>一卷经文提到：平安京百鬼作乱，需神将封印方可安定。</FONT><p>
+end:>
+<a href="game_page(12113)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=ED390965538B3D88F08A749FCB0865AB

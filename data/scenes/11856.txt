@@ -1,0 +1,64 @@
+id=11856
+名称=上京-酒馆
+作者=
+属性=64
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,酒馆,AT1009,66,0/2007.bmp"></CENTER>
+几个<a href="game_npc_talk('胡人')">胡人</a>正在喝酒。<p>
+<:if not game_check_goods_nmb('金都皇宫令牌',1) then
+一个<a href="game_npc_talk('官兵')">官兵</a>模样的在酒馆内好长时间了。
+end:><p>
+<a href="game_npc_talk('胡人乙')">胡人乙</a><p>
+<a href="game_npc_talk('胡人丙')">胡人乙</a><p>
+
+<p>
+<a href="game_page(11842)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+胡人=1,胡人甲@听说咱们大金国的军队真是厉害，以摧枯拉朽之势打的宋人屁滚尿流。
+I=1,胡人乙@不过，那个岳飞可不是等闲之辈呢。
+胡人=2,胡人甲@切，论打战，岳飞是厉害，但论权谋，哈哈，就不行啦。
+I=2,胡人乙@战场上哪用的上权谋啊，不是说将在外君命有所不受吗？
+胡人=3,胡人甲@跟你说了你也不明白的，等着瞧就是了。
+I=3,胡人乙@哼
+官兵=1,看什么看，说的就是你。还看
+I=1,不想让人看见，就别出来晃悠。
+官兵=2,我就是要出来，还就不想让你看。
+I=2,我不是看你，三条腿的蛤蟆没见过，两条腿的人我还没见过？我是在看腰上挂的那块牌子。
+官兵=3,这可是进皇宫的令牌，你要在敢多瞧两眼，就以偷窥内宫罪把你抓了。
+I=[game_pop_fight_a(1,138);game_goods_change_n('金都皇宫令牌',1);game_reload_direct(0)]3,你小子可真狂，今儿我正却这么一令牌呢。
+if game_check_scene_event(1244) then
+胡人乙=1,听说王爷从中原得到一精美绝世玉佛。
+I=1,
+else
+胡人乙=1,王爷爱好收集各种金玉古器。
+I=1,
+end
+if game_check_scene_event(1265) and game_not_scene_event(1266) then
+胡人丙=1,听说有人在上京天王山寻到了镇国神器，正往临安皇宫去复命呢。
+I=1,那我们也快去端诚殿看看。
+else
+if game_check_scene_event(1264) and game_not_scene_event(1265) then
+胡人丙=1,离这不远的<FONT color=#FF0000>天王山</FONT>上，最近常见有金光乍现，似乎有<b>神物</b>出现。
+I=1,天王山，神器，有门路。
+else
+胡人丙=1,今朝有酒今朝醉，小二，再上两壶。
+I=1,
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A8C07E7BF2F3CE1175FF7842751D0B26

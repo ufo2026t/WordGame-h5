@@ -1,0 +1,35 @@
+id=10477
+名称=桃花岛
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://645,213,(隶书,134,160,{Bold},{clFuchsia}),clWindow,桃花岛,AT1001,0,65/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+桃花岛，东海中的一座孤岛。春时落英缤纷，故名桃花岛。<p>
+黄药师离岛远赴襄阳之后，岛上日渐荒芜；他当年布下的桃花阵、毒障与机关仍留于此，外人鲜有敢登岛者。<p>
+若要去黄药师旧日居所，须先破开桃花阵。<p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):>
+<p>
+<a href="game_page(1)" title="进入迷宫">进入桃花阵</a>
+<p>
+<a href="game_page(10453)">返回东海岸</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=251629FF89818AB13510307AE10E29B4

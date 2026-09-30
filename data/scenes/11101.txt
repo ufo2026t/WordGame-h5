@@ -1,0 +1,40 @@
+id=11101
+名称=客房三
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,客房三,AT1000,0,0/2007.bmp"></CENTER>
+一个<a href="game_npc_talk('商人')">商人</a>。<p>
+
+<p>
+<a href="game_page(11098)">退出</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+商人=1,客官，买点啥不？
+I=1,你这有什么卖的？
+商人=2,我这有金丝软甲卖，防加68呢。
+I=2,多少钱一件？
+商人=3,不贵，2万。
+I,A=3,if game_check_money(20000) then [game_change_money(-20000);game_goods_change_n('金丝软甲',1)]3,买一件了else 我现在身上没钱 end
+I,B=3,太贵了，杀猪啊。不买
+商人,A=4,下次再来啊。
+商人,B=4,不识货。
+I,A=4,
+I,B=4,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6560EA17414DF03891D9366AB15BD303

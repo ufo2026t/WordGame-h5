@@ -1,0 +1,43 @@
+id=11381
+名称=星月神教内
+作者=
+属性=4
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间二,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)阅读材料：string game_get_read_txt(0):>
+<:game_true(1)string game_res_goods(0,1,'千年人参'):><p>
+
+一些不透明的陶瓷<a href="game_pop_a(6);if game_check_res_event(5186) then game_chat('空的瓶子') else game_chat('拿到牛黄5个');game_goods_change_n('牛黄',5);game_add_res_event(5186) end">瓶子1</a><p>
+一些不透明的陶瓷<a href="game_pop_a(6);if game_check_res_event(5187) then game_chat('空的瓶子') else game_chat('拿到茯苓根5个');game_goods_change_n('茯苓根',5);game_add_res_event(5187) end">瓶子2</a><p>
+一些不透明的陶瓷<a href="game_pop_a(6);if game_check_res_event(5188) then game_chat('空的瓶子') else game_chat('拿到鹿茸1个');game_goods_change_n('鹿茸',1);game_add_res_event(5188) end">瓶子3</a><p>
+一些不透明的陶瓷<a href="game_pop_a(6);game_chat('一个破的瓶子')">瓶子4</a><p>
+一些不透明的陶瓷<a href="game_pop_a(6);if game_check_res_event(5189) then game_chat('空的瓶子') else game_chat('拿到何首乌2个');game_goods_change_n('何首乌',2);game_add_res_event(5189) end">瓶子5</a><p>
+一些不透明的陶瓷<a href="game_pop_a(6);if game_check_res_event(5190) then game_chat('空的瓶子') else game_chat('拿到冬虫夏草1个');game_goods_change_n('冬虫夏草',1);game_add_res_event(5190) end">瓶子6</a><p>
+一些不透明的陶瓷<a href="game_pop_a(6);game_chat('一个破的瓶子')">瓶子7</a><p>
+一些不透明的陶瓷<a href="game_pop_a(6);if game_check_res_event(5191) then game_chat('空的瓶子') else game_chat('拿到钱2万');game_change_money(20000);game_add_res_event(5191) end">瓶子8</a><p>
+一些不透明的陶瓷<a href="game_pop_a(6);game_chat('一个破的瓶子')">瓶子9</a><p>
+一些不透明的陶瓷<a href="game_pop_a(6);if game_check_res_event(5192) then game_chat('空的瓶子') else game_chat('获得了经验值2万');game_attribute_change(1,19,20000);game_add_res_event(5192) end">瓶子10</a><p>
+
+<p>
+<a href="game_pop_a(2);game_page(1)">前进</a>
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=189AFBC46962B343D8F25C78B1AFE62B

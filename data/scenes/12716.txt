@@ -1,0 +1,43 @@
+id=12716
+名称=后院
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,后院,AT1000,0,0/2007.bmp"></CENTER>
+<:if not game_check_scene_event(1287) then
+后院有假山亭台，是教主清修之地，弟子未获准不得随意进入。<p>
+end:>
+<:if game_check_scene_event(1287) and not game_check_scene_event(1288) then
+护法既已放行，可去<b>书房密室</b>一探，或直接经<b>走廊</b>面见教主。<p>
+end:>
+
+<a href="game_page(1)">亭子</a><br>
+<a href="game_page(2)">书房</a><br>
+<a href="game_page(4)">修炼房</a><br>
+<a href="game_page(5)">假山</a><br>
+<a href="game_page(6)">走廊</a><br>
+
+
+<p>
+<a href="game_page(-10)">天井</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E38F563E89C2FFAF8F8B777EDB88031D

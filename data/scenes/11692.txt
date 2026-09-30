@@ -1,0 +1,108 @@
+id=11692
+名称=岳飞营
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,岳飞帐,AT1002,0,0/2007.bmp"></CENTER>
+岳飞大帐内。<p>
+<:if game_check_scene_event(1179) then
+if game_read_scene_integer(1171)=1 then
+run game_write_scene_integer(1171,2)
+岳飞：“根据探测回来的消息，金兵现在在神镜的魔力下，士气很BT，兵法有云，敌静则扰之。”<br>
+string game_get_newname_at_id(1)：“这扰敌的小事，就交给我去办吧。我白天去开封的皇宫和兵营里去走动走动。”<br>
+岳飞：“如此甚好。”<br>
+else
+if game_read_scene_integer(1171)=3 then
+岳飞：“现在可以安排一次会战了。希各将士做好准备。”<br>
+
+else
+if game_read_scene_integer(1171)=4 then
+岳飞：“战争开始了，希望能速战速决。”<br>
+else
+if game_check_scene_event(1190) then
+if game_check_goods_nmb('镇妖神镜',1) and game_check_goods_nmb('混沌之晶',1) then
+现在需要让神镜在昆仑归位，以平衡天地二界，还需要<strong>天山</strong>的<strong>五色石</strong>（注意，不是五色土），
+如果你已经从天山找到了五色石头，那么可以去昆仑试试让神镜归位。
+else
+岳飞：“有了混沌之晶，就可以和金兀术一绝对雌雄了。将士们，准备好了吗？”<br>
+“<a href="game_add_scene_event(1193);game_chat('岳飞：第二次宋金大战很快就要开始了，你们先休息吧。')">准备好了</a>”<br>
+“<a href="game_chat('岳飞：继续准备，多弄粮草。')">没有准备好</a>”
+end
+else
+if game_read_scene_integer(1171)<=2 then
+run game_write_scene_integer(1171,2)
+岳飞：“根据探测回来的消息，金兵现在在神镜的魔力下，士气很BT，兵法有云，敌静则扰之。”<br>
+string game_get_newname_at_id(1)：“这扰敌的小事，就交给我去办吧。我白天去开封的皇宫和兵营里去走动走动。”<br>
+岳飞：“如此甚好。”<br>
+else
+岳飞：“没想到这神镜威力如此惊人。这得速速想个破解之法才行。”<br>
+string game_get_newname_at_id(1)：“听一道长讲过，要破这神镜魔力，得去昆仑才能找到。”<br>
+岳飞：“现在众将士受伤颇多，只有辛苦你了，速去昆仑，以解我军之困。”<br>
+“好”<br>
+end
+end
+
+end
+end
+end
+else
+岳飞紧缩眉头，正在一军事地图前思考着。<br>
+<a href="game_npc_talk('岳飞')">谈话</a>
+end:>
+<p>
+<a href="if game_check_scene_event(1175) then game_page(-1) else game_page(11699) end">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_role_is_exist('宇文赫') then
+岳飞=1,
+I=1,宇文赫@禀报元帅。
+岳飞=2,阿，你回来了。江南的事可有头绪？
+I=2,宇文赫@有负元帅重望，江南没有找到异人。
+岳飞=3,恩，我近日看天，见这异星已然移到了中原。唉，找不到，算了，看来是天意啊。
+I=3,宇文赫@不过，我倒是碰见了这几位朋友，个个身手不凡，不知能否帮上元帅？
+岳飞=4,各位请坐，果然，英武不凡。不知，是否愿意助我大宋，驱除金兵？
+I,A=[game_add_scene_event(1171)]4,原意。
+I,B=4,不愿意。
+岳飞,A=5,爽快，那我也不绕弯子。最近，金人不知使了什么妖术，金兵都变得穷凶极恶，这战打的十分艰难。知己知彼，百战不殆，只是目前没有合适的人选前去金营探查敌情。各位乃是顶尖高手，可敢前去金营？
+岳飞,B=5,既然如此，我也不勉强各位。远道而来，先去南营住下歇歇脚吧。
+I,A=5,我等愿意前往金营探查。
+I,B=5,多谢元帅
+岳飞,A=6,白天金营耳目众多，不如，先去南营住一会，等到了晚上再去探查。
+岳飞,B=6,
+I,A=6,好
+I,B=6,
+else
+岳飞=1,
+I=1,元帅，何事烦恼？
+岳飞=2,战事紧急，我曾派先锋官宇文赫前往江南查访能破解金兵的能人异士，结果至今渺无音讯。
+I=2,哦，在下不才，但愿意助抗金一臂之力。
+岳飞=3,谢谢好意，只是金人有邪术在手，非一般人可敌啊。
+I=3,实不相瞒，在下倒是会些奇门遁甲。
+岳飞=4,啊，天助我也，你们果真愿意协助我朝抗金？
+I,A=[game_add_scene_event(1171)]4,原意。
+I,B=4,不愿意。
+岳飞,A=5,爽快，那我也不绕弯子。最近，金人不知使了什么妖术，金兵都变得穷凶极恶，这战打的十分艰难。知己知彼，百战不殆，只是目前没有合适的人选前去金营探查敌情。各位乃是顶尖高手，可敢前去金营？
+岳飞,B=5,既然如此，我也不勉强各位。远道而来，先去南营住下歇歇脚吧。
+I,A=5,我等愿意前往金营探查。
+I,B=5,多谢元帅
+岳飞,A=6,白天金营耳目众多，不如，先去南营住一会，等到了晚上再去探查。
+岳飞,B=6,
+I,A=6,好
+I,B=6,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=CCD186A3BD55092F16D3E52403358126

@@ -1,0 +1,41 @@
+id=12198
+名称=沂州-十八里铺-村内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<:if game_check_scene_event(1085) then
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,夜晚,AT1000,0,0/2007.bmp"></CENTER>
+十八里铺-村内,夜晚，月明星稀。<p>
+村里早早黑了灯，只有<a href="game_page(2)" title="">李小其家</a>还透出忽明忽暗的油灯昏黄的光线来。
+
+else
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,十八里铺,AT1000,0,0/2007.bmp"></CENTER>
+村内-白天。<p>
+十八里铺村，大多姓李，少量姓王。<p>
+<a href="game_page(1)" title="">王六家</a>&nbsp;<a href="game_page(7)" title="">王七家</a>&nbsp;<a href="game_page(3)" title="">王九家</a><p>
+<a href="game_page(4)" title="">李大民家</a>&nbsp;<a href="game_page(2)" title="">李小其家</a><p>
+<a href="game_page(5)" title="">李二哲家</a>&nbsp;<a href="game_page(6)" title="">李真枝家</a>
+
+end:>
+<p>
+<a href="game_page(12195)">返回</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=7A2F59584B7554977AE1B2532EBEEC8F

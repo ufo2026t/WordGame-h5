@@ -1,0 +1,33 @@
+id=11648
+名称=少林寺-大雄殿
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,大雄殿,AT1000,0,0/2007.bmp"></CENTER>
+堂上塑着一尊高大的如来佛像。<br>
+<a href="game_pop_a(3);game_infobox('闭上眼睛，许个愿吧。许愿后点击“确定”按钮');game_chat('佛曰：心诚则灵')" title="">拜佛</a><p>
+<:game_true(1)string game_res_goods(5,1,'忘忧草'):>
+<a href="game_page(2)" title="通往方丈室">法堂</a><p>
+<a href="game_page(9)" title="通往塔林，达摩洞，千佛殿等">立雪亭</a><p>
+<p>
+<a href="game_page(-2)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2A5EC814D2A4A6EE4B6A8EEFBA0EEFB1

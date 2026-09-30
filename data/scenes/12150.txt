@@ -1,0 +1,45 @@
+id=12150
+名称=熊野本宮-大堂
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://371,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,大堂,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('忍者乙')">忍者乙</a><p>
+<a href="game_npc_talk('忍者丙')">忍者丙</a><p>
+<a href="game_npc_talk('忍者丁')">忍者丁</a>
+
+<p>
+<a href="game_page(12149)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1221) then
+忍者乙=1,最近，赤石山上鸟多起来了。
+I=1,
+忍者丙=1,
+I=1,
+忍者丁=1,
+I=1,
+else
+忍者乙=1,我们这的镇宫之宝，听说是很古老的时候传下来。
+I=1,
+忍者丙=1,赤石山上，有宝贝，但我不敢去。
+I=1,
+忍者丁=1,祖师说了，没事别去神堂
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=CFBE33E0F7A0A2341FB7F2643B53B357

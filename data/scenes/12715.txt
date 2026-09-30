@@ -1,0 +1,48 @@
+id=12715
+名称=会客大厅
+作者=
+属性=
+TempKey=
+动作=
+{
+D5001=game_can_stop_chat(1);if game_pop_fight_a(1,161) then game_add_scene_event(1287);game_chat('护法让开了去路。');game_reload_direct(0) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,会客大厅,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1287) then
+护法已准许你通行，可前往后院面见教主。<p>
+<a href="game_page(1)">前往后院</a><br>
+elseif game_check_scene_event(1288) then
+大厅空寂，只有风铃轻响。<p>
+else
+<a href="game_npc_talk('护法')">九毒派护法</a>横刀拦在厅中，目光如电。<p>
+end:>
+
+
+<p>
+<a href="game_page(-9)">天井</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+护法=1,总坛后院岂是外人随便能进的？报上名来！
+I=1,我在中原曾遇莫延顿贺，他说西域九毒派亦在追查藏宝图下落。
+if game_check_scene_event(1283) then
+护法=2,原来是莫师兄的朋友。教主正为藏宝图第七块烦心，你既为寻宝而来，便去后院吧——休要生事。
+I=[game_add_scene_event(1287);game_reload_direct(0)]2,多谢通融。
+else
+护法=2,口说无凭。要么打赢我，要么滚。
+I,A=[D5001]2,那就领教护法高招。
+I,B=2,改日再来。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=68419EA50A005334DA3803A905B380D6

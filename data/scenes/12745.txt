@@ -1,0 +1,44 @@
+id=12745
+名称=居民戊
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,居民戊,AT1000,0,0/2007.bmp"></CENTER>
+ 主妇腌制肉干，准备明日出摊。<p>
+<a href="game_npc_talk('摊主')">摊主</a><p>
+<p>
+<a href="game_page(-8)">中孚大街</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+摊主=1,青穜饼刚出炉，要不要来一块？
+I=1,最近生意怎样？
+if game_check_scene_event(1288) then
+摊主=2,中原来的侠士多，饼卖得快，听说有人拿了教主的碎块，大家都在议论。
+I=2,
+elseif game_check_scene_event(1281) then
+摊主=2,听说教主要去邙山，商队都在打听藏宝图的消息。
+I=2,
+else
+摊主=2,驼队路过时最好卖，你要是走迷宫来的，多带点干粮。
+I=2,
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B82D0E6F28F07418FF151E0BE0632420

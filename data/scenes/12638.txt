@@ -1,0 +1,39 @@
+id=12638
+名称=西域迷宫
+作者=
+属性=38
+载入后=game_pop_fight_a(1,37)
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,西域迷宫,AT1000,0,0/2007.bmp"></CENTER>
+墙上有人用石灰画了一支箭，指向出口方向。<p>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,1,'软骨粉'):><p>
+
+
+<p>
+前方有个出口，可以从这个出口
+<a href="game_page(12647)">进入西州城</a><br>
+<p>
+
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=435E7DDA57EE8AF9D4F1E1DE35139BB4

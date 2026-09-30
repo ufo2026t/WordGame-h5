@@ -1,0 +1,104 @@
+id=10587
+名称=平湖秋月
+作者=
+属性=1
+TempKey=平湖秋月
+动作=
+{
+D5001=if game_check_scene_event(1036) then game_chat('铁无梅：“西湖好风光，山山水水淡雅幽香。”') else game_npc_talk('铁无梅~') end
+D5002=if game_check_scene_event(1036) then game_chat('铁无梅：“西湖好风光，山山水水淡雅幽香”') else game_npc_talk('陌生女子') end
+D5003=if game_check_scene_event(1036) then game_chat('铁檑：“姑娘比以前更漂亮了。”') else game_npc_talk('铁檑~') end
+D5004=if game_check_scene_event(1036) then game_chat('铁檑：“请问姑娘芳名？”') else game_npc_talk('白衣公子') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clGreen}),clWindow,平湖秋月,AT1002,0,0/2007.bmp"></CENTER>
+平湖秋月景区位于白堤西端， 孤山南麓，濒临外西湖。其实，作为西湖十景之一， 南宋时平湖秋月并无固定景址，这从当时以及元，明两朝文人赋咏此景的诗词多从泛归舟夜湖，舟中赏月的角度抒写不难看出，如南宋孙锐诗中有“月冷寒泉凝不流， 棹歌何处泛舟”之句； 明洪瞻祖在诗中写道：“秋舸人登绝浪皱，仙山楼阁镜中尘。“留传千古的明万历年间的西湖十景木刻版画中，《平湖秋月》一图也仍以游客在湖船中举头望月为画面主体。
+<p>
+
+<:if game_check_scene_event(1036) then
+两个小孩在湖边抓鱼。<p>
+else
+if game_sex_from_id(1) then
+if game_check_scene_event(1032) then
+忽见<a href="D5001">铁无梅</a><img src="$apppath$img\6.bmp">也在这里。他乡遇故知赶紧上前问候一下。
+else
+一<a href="D5002">陌生女子</a><img src="$apppath$img\6.bmp">，看起来也像是婺州附近人士。
+end
+else
+if game_check_scene_event(1032) then
+忽见<a href="D5003">铁檑</a><img src="$apppath$img\46.bmp">也在这里。
+else
+一<a href="D5004">白衣公子</a><img src="$apppath$img\46.bmp">，看起来也像是婺州附近人士。
+end
+end
+end:>
+<p>
+<:game_true(1)string game_res_goods(0,1,'红酒'):><p>
+<p>
+
+<p>
+<a href="game_page(10584)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_not_scene_event(1036) then
+铁无梅~=1,<img src="$apppath$img\6.bmp">hi， string game_get_newname_at_id(1),你也来临安了？
+I=1,原来是铁姑娘，不在无剑山庄，怎么来此游玩？（<FONT color=#"FF0000">点此继续对话</FONT>）
+铁无梅~=2,我不是来游山玩水，是奉父命前往<FONT color=#"FF0000">望梅山庄</FONT>办事呢。
+I=2,哦，事情办成了吗。
+铁无梅~=3,还没，我刚到临安，不知望梅山庄往哪里走。
+I=3,if game_role_count(0)>1 then 我们else 我end 也是刚到临安，要不一起走吧，互相有个照应。
+铁无梅~=[game_add_friend('铁无梅',1);game_add_scene_event(1036)]4,好啊，我就喜欢凑热闹了。
+I=4,那咱们接着去哪？
+铁无梅~=5,我只听说，前往望梅山庄要从<FONT color=#"FF0000">十里琅当</FONT>过，其他就不知道了。
+I=5,
+陌生女子=1,<img src="$apppath$img\6.bmp">干吗老盯着我看，没见过美女啊？
+I=1,这位姑娘，看你打扮，可是婺州人士？（<FONT color=#"FF0000">点此继续对话</FONT>）
+陌生女子=2,你是？
+I=2,在下婺州河西人，刚来临安不久，人生地不熟的。
+陌生女子=3,哦，我家在河西过河的<FONT color=#"FF0000">无剑山庄</FONT>，真巧。
+I=3,原是大家小姐，来此游玩？
+陌生女子=4,不是，我奉父命前往临安的<FONT color=#"FF0000">望梅山庄</FONT>办事。
+I=4,望梅山庄，很有名的，过了十里琅当就是了。
+陌生女子=5,是吗，我也是刚来临安，真不知道望梅山庄怎么走。
+I=5,老乡见老乡，两眼泪汪汪，咱们一起走吧，我也想去那边看看。
+陌生女子=[game_add_friend('铁无梅',1);game_add_scene_event(1036)]6,也好
+I=6,
+
+铁檑~=1,<img src="$apppath$img\46.bmp">hi， string game_get_newname_at_id(1),你也来临安了？
+I=1,原来是铁公子，不在无剑山庄，怎么来此游玩？（<FONT color=#"FF0000">点此继续对话</FONT>）
+铁檑~=2,我不是来游山玩水，是奉父命前往<FONT color=#"FF0000">望梅山庄</FONT>办事呢。
+I=2,哦，事情办成了吗。
+铁檑~=3,还没，我刚到临安，不知望梅山庄往哪里走。
+I=3,if game_role_count(0)>1 then 我们else 我end 也是刚到临安，要不一起走吧，互相有个照应。
+铁檑~=[game_add_friend('铁檑',1);game_add_scene_event(1036)]4,好啊，我就好凑热闹了。
+I=4,那咱们接着去哪？
+铁檑~=5,我只听说，前往望梅山庄要从<FONT color=#"FF0000">十里琅当</FONT>过，其他的就不知道了。
+I=5,
+白衣公子=1,<img src="$apppath$img\46.bmp">
+I=1,这位公子，看你打扮，可是婺州人士？（<FONT color=#"FF0000">点此继续对话</FONT>）
+白衣公子=2,姑娘，你是？
+I=2,在下婺州河西人士，刚来临安不久，人生地不熟的。
+白衣公子=3,哈哈，我家在河西过河的<FONT color=#"FF0000">无剑山庄</FONT>，真巧。
+I=3,原是铁公子，来此游玩？
+白衣公子=4,不是，我奉父命前往临安的<strong>望梅山庄</strong>办事。
+I=4,望梅山庄，很有名的，过了十里琅当就是了。
+白衣公子=5,是吗，我也是刚来临安，真不知道望梅山庄怎么走。要不我跟着你们一道如何？
+I=5,老乡见老乡，两眼泪汪汪，那你就和我们一起吧。
+白衣公子=[game_add_friend('铁檑',1);game_add_scene_event(1036)]6,多谢姑娘。
+I=6,不必多礼。
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F842E24B3522C1ACF248B61A679F9C23

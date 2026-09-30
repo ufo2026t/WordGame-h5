@@ -1,0 +1,47 @@
+id=10105
+名称=宾至如归客房6
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,客房六,AT1005,0,0/2007.bmp"></CENTER>
+<p>
+<:game_check_scene_event(1015) <a href="game_npc_talk('小女孩')">小女孩</a>在房间里逗小狗玩。 else 一个<a href="game_npc_talk('小女孩')">小女孩</a>在房间里哭泣。:><p>
+<:game_true(1)string game_res_goods(5037,1,'红酒'):>
+<p>
+
+<a href="game_page(10099)">返回客栈二楼走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if not game_check_scene_event(1015) and not game_check_res_event(9004) then
+小女孩=1,
+I=1,小妹妹，哭什么呢？
+小女孩=2,if game_sex_from_id(1) then 大哥哥else 大姐姐end，呜呜，我的<FONT color=#"FF0000">小狗</FONT>跑了。
+I,A=2,别哭别哭，啊，我帮你附近找找。
+I,B=2,真是小孩子，狗跑了就叫爸妈再买一个了，有啥好哭的啊。
+小女孩,A=[game_add_task(9004)]3,if game_sex_from_id(1) then 谢谢大哥哥else 谢谢大姐姐end
+小女孩,B=3,人家就是小孩子嘛，呜呜。
+end
+if not game_check_scene_event(1015) and game_check_res_event(9004) then
+小女孩=1,if game_check_res_event(5038) then [game_add_scene_event(1015);game_comp_task(9004)]1,哇，真的是我的小狗狗啊。太谢谢了。else 我的小狗还是没有回来，呜呜…… end
+
+end
+if game_check_scene_event(1015) then
+小女孩=1,if game_sex_from_id(1) then 谢谢大哥哥帮我找到小狗else 谢谢大姐姐帮我找回小狗。 end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4776ABE35AB8C8AF1E7EB4A62F5B8B96

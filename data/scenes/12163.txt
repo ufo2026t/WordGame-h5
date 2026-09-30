@@ -1,0 +1,32 @@
+id=12163
+名称=富士山
+作者=
+属性=
+TempKey=富士山
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://99,33,(隶书,134,24,{Bold},{clWindowText}),clWindow,第八层,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,1,'降魔镖'):>
+<p>
+
+<a href="game_pop_a(3);if game_random_chance(8) then game_infobox('遇上滚石，下掉一层');game_page(-1) else game_page(1) end" title="往上爬一层">富士山依山小道</a>到山顶<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=7DB9BA1DBE71EFAE98133A36FDE4AD2C

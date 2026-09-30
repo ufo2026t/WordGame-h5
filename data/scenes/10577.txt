@@ -1,0 +1,35 @@
+id=10577
+名称=东兰驿站
+作者=
+属性=6
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://430,213,(隶书,134,160,{Bold},{clWindowText}),clWindow,驿站,AT1001,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+驿站，由3个小院构成，呈品字型结构，南面小院由长安君的人马占用了。<p>
+北面小院是马房和杂物间。西面小院内住了一些行商。<p>
+刺客就混迹其间，您可否找出刺客，救长安君一命？<p>
+
+<a href="game_page(10578)" title="">进入南面小院</a><p>
+<a href="game_page(10579)" title="">进入北面小院</a><p>
+<a href="game_page(10580)" title="">进入西面小院</a><p>
+
+<p>
+<a href="game_page(10571)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=063E7B1017B91EFAD3CBF1BD6F556C19

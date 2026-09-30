@@ -1,0 +1,81 @@
+id=10098
+名称=婺州放宝箱的房间
+作者=
+属性=
+动作=
+{
+D5001=if game_read_temp(100985001) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985001,1);if game_random_chance(1000) then game_change_money(10000);game_chat('您得到了10000金币') else if game_random_chance(500) then game_attribute_change(1,19,2000);game_chat('您得到了2000经验值')else if game_random_chance(2) then game_goods_change_n('皮帽',1);game_chat('您得到了皮帽一') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5002=if game_read_temp(100985002) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985002,1);if game_random_chance(100) then game_change_money(600);game_chat('您得到了600金币') else if game_random_chance(20) then game_attribute_change(1,19,50);game_chat('您得到了50经验值')else if game_random_chance(3) then game_goods_change_n('绸帽',1);game_chat('您得到了绸帽一顶') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5003=if game_read_temp(100985003) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985003,1);if game_random_chance(6) then game_change_money(30);game_chat('您得到了30金币') else if game_random_chance(500) then game_attribute_change(1,19,1000);game_chat('您得到了1000经验值')else if game_random_chance(9) then game_goods_change_n('锦衣',1);game_chat('您得到了锦衣一件') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5004=if game_read_temp(100985004) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985004,1);if game_random_chance(200) then game_change_money(2000);game_chat('您得到了2000金币') else if game_random_chance(100) then game_attribute_change(1,19,200);game_chat('您得到了200经验值')else if game_random_chance(6) then game_goods_change_n('幸运符',2);game_chat('您得到了幸运符2个') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5005=if game_read_temp(100985005) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985005,1);if game_random_chance(5) then game_change_money(60);game_chat('您得到了60金币') else if game_random_chance(10) then game_attribute_change(1,19,20);game_chat('您得到了20经验值')else if game_random_chance(3) then game_goods_change_n('黄铜戒指',2);game_chat('您得到了黄铜戒指2个') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5006=if game_read_temp(100985006) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985006,1);if game_random_chance(1000) then game_change_money(20000);game_chat('您得到了20000金币') else if game_random_chance(10) then game_attribute_change(1,19,100);game_chat('您得到了100经验值')else if game_random_chance(50) then game_goods_change_n('碧血剑',1);game_chat('您得到了碧血剑一') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5007=if game_read_temp(100985007) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985007,1);if game_random_chance(3) then game_change_money(40);game_chat('您得到了40金币') else if game_random_chance(10) then game_attribute_change(1,19,50);game_chat('您得到了50经验值')else if game_random_chance(10) then game_goods_change_n('铁剑',1);game_chat('您得到了铁剑一把') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5008=if game_read_temp(100985008) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985008,1);if game_random_chance(6) then game_change_money(80);game_chat('您得到了80金币') else if game_random_chance(20) then game_attribute_change(1,19,100);game_chat('您得到了100经验值')else if game_random_chance(7) then game_goods_change_n('镶金华冠',1);game_chat('您得到了镶金华冠一顶') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5009=if game_read_temp(100985009) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985009,1);if game_random_chance(10) then game_change_money(90);game_chat('您得到了90金币') else if game_random_chance(1000) then game_attribute_change(1,19,10000);game_chat('您得到了10000经验值')else if game_random_chance(9) then game_goods_change_n('百年灵芝',2);game_chat('您得到了百年灵芝2颗') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5010=if game_read_temp(100985010) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985010,1);if game_random_chance(9) then game_change_money(80);game_chat('您得到了80金币') else if game_random_chance(3) then game_attribute_change(1,19,5);game_chat('您得到了5经验值')else if game_random_chance(60) then game_goods_change_n('还魂丹',2);game_chat('您得到了还魂丹2颗') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5011=if game_read_temp(100985011) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985011,1);if game_random_chance(100) then game_change_money(1000);game_chat('您得到了1000金币') else if game_random_chance(100) then game_attribute_change(1,19,1000);game_chat('您得到了1000经验值')else if game_random_chance(4) then game_goods_change_n('蜂蜜',5);game_chat('您得到了蜂蜜5罐') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5012=if game_read_temp(100985012) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985012,1);if game_random_chance(20) then game_change_money(90);game_chat('您得到了90金币') else if game_random_chance(200) then game_attribute_change(1,19,2000);game_chat('您得到了2000经验值')else if game_random_chance(2) then game_goods_change_n('干粮',5);game_chat('您得到了干粮5份') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5013=if game_read_temp(100985013) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985013,1);if game_random_chance(4) then game_change_money(45);game_chat('您得到了45金币') else if game_random_chance(100) then game_attribute_change(1,19,900);game_chat('您得到了900经验值')else if game_random_chance(10) then game_goods_change_n('回城卷',2);game_chat('您得到了回城卷2个') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5014=if game_read_temp(100985014) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985014,1);if game_random_chance(1000) then game_change_money(10000);game_chat('您得到了1000金币') else if game_random_chance(1000) then game_attribute_change(1,19,10000);game_chat('您得到了10000经验值')else if game_random_chance(5) then game_goods_change_n('五毒丸',2);game_chat('您得到了五毒丸2颗') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5015=if game_read_temp(100985015) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985015,1);if game_random_chance(5) then game_change_money(60);game_chat('您得到了60金币') else if game_random_chance(500) then game_attribute_change(1,19,1200);game_chat('您得到了1200经验值')else if game_random_chance(30) then game_goods_change_n('银块',1);game_chat('您得到了一银块') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5016=if game_read_temp(100985016) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985016,1);if game_random_chance(5) then game_change_money(65);game_chat('您得到了65金币') else if game_random_chance(200) then game_attribute_change(1,19,5000);game_chat('您得到了5000经验值')else if game_random_chance(50) then game_goods_change_n('金猪',1);game_chat('您得到了金猪一个') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5017=if game_read_temp(100985017) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985017,1);if game_random_chance(5) then game_change_money(60);game_chat('您得到了60金币') else if game_random_chance(10) then game_attribute_change(1,19,500);game_chat('您得到了500经验值')else if game_random_chance(3) then game_goods_change_n('时间加速丸',1);game_chat('您得到了时间加速丸一颗') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5018=if game_read_temp(100985018) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985018,1);if game_random_chance(10) then game_change_money(90);game_chat('您得到了90金币') else if game_random_chance(5) then game_attribute_change(1,19,50);game_chat('您得到了50经验值')else if game_random_chance(250) then game_goods_change_n('存储卡',1);game_chat('您得到了存储卡一张') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5019=if game_read_temp(100985019) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985019,1);if game_random_chance(5) then game_change_money(90);game_chat('您得到了90金币') else if game_random_chance(20) then game_attribute_change(1,19,300);game_chat('您得到了300经验值')else if game_random_chance(2) then game_goods_change_n('三年生草药',1);game_chat('您得到了三年生草药一棵') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+D5020=if game_read_temp(100985020) then game_chat('宝箱已开过了') else if game_check_goods_nmb('中号钥匙',1) then game_pop(1);game_goods_change_n('中号钥匙',-1);game_write_temp(100985020,1);if game_random_chance(10) then game_change_money(150);game_chat('您得到了150金币') else if game_random_chance(500) then game_attribute_change(1,19,2000);game_chat('您得到了2000经验值')else if game_random_chance(200) then game_goods_change_n('日本刀',1);game_chat('您得到了日本刀一把') else game_chat('一个空箱子') end end end else game_chat('请先购买开箱的钥匙。') end end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+欢迎光临<p>
+祝君好运<p>
+<a href="game_page(10097)">返回</a><p>
+
+<TABLE height=200 cellSpacing=2 cellPadding=2 rules=all width=300 align=center border=2 frame=box>
+<TBODY>
+<TR>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5001" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5002" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5003" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5004" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5005" title="试试手气如何？">打开</a></TD></TR>
+<TR>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5006" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5007" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5008" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5009" title="试试手气如何？">打开</a></TD>
+<TD>
+<STRONG>宝箱</STRONG> <BR><a href="D5019" title="试试手气如何？">打开</a></TD></TR></TBODY></TABLE>
+<p>
+<TABLE height=200 cellSpacing=2 cellPadding=2 rules=all width=300 align=center border=2 frame=box>
+<TBODY>
+<TR>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5010" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5011" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5012" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5013" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5014" title="试试手气如何？">打开</a></TD></TR>
+<TR>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5015" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5016" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5017" title="试试手气如何？">打开</a></TD>
+<TD><STRONG>宝箱</STRONG> <BR><a href="D5018" title="试试手气如何？">打开</a></TD>
+<TD>
+<STRONG>宝箱</STRONG> <BR><a href="D5020" title="试试手气如何？">打开</a></TD></TR></TBODY></TABLE>
+
+<a href="game_page(10097)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=61F0403D921E6621F62EF222D9F1B920

@@ -1,0 +1,43 @@
+id=10499
+名称=黄药师遗址
+作者=
+属性=1
+TempKey=桃花岛
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://645,213,(隶书,134,160,{Bold},{clFuchsia}),clWindow,遗址,AT1001,0,65/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+穿过桃花阵，眼前是黄药师昔日的清修之地，如今大多房舍已塌。<p>
+《九阴真经》下卷早被梅超风、陈玄风盗去，岛上师传武学典籍散佚大半；所幸药王手札与练功旧物或还有残留。<p>
+不妨四处看看：<p>
+<a href="game_page(10502)" title="黄药师为封存药材而开凿，内有禁制">万年寒冰窟</a><p>
+<a href="game_chat('蛇园围栏塌了，毒蛇四散。有些竟游过海面，在蛇岛一带出没。')" title="当年黄药师在此饲蛇试毒">蛇园</a><p>
+<a href="game_page(10500)" title="或还有药王手札残卷">藏经阁</a><p>
+<a href="game_page(10501)" title="黄药师与弟子当年练功之处">练功房</a><p>
+码头方向留着黄药师布下的离岛法阵，踏之可直回东海岸，不必再穿桃花阵。<p>
+<a href="game_pop_a(3);game_page(10453)" title="离开桃花岛">法阵<img src="$apppath$img\fazhen.gif" border="0"></a><p>
+
+
+
+<:game_true(1)string game_res_goods(0,1,'软皮鞭'):>
+
+<p>
+<a href="game_pop_a(2);game_page(-2)">返回前页</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=FFD860F88B95ED3C7AB20AA022B97C2C

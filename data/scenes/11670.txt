@@ -1,0 +1,62 @@
+id=11670
+名称=飞龙帮-密室
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,密室,AT1002,0,0/2007.bmp"></CENTER>
+密室里空荡荡的。<p>
+忽然，见墙壁上有个机关，乃室中有室。<p>
+<:if game_check_scene_event(1162) then
+if game_read_temp(1167003) then
+箱子打开了：是一块丝绸手绢。上面写有血书：<p>
+恭福帝姬，赵小金。 <br>
+吾等北去，生死未卜。今别无他物，只祥凤玉佩一块，留于汝。<br>
+田夫人倩云<br>
+————————————————————<p>
+看来，传闻有个小公主遗落民间，是真的。那么她现在会在哪里呢？<br>
+为何血书会在这里？<br>
+还是先去其他地方打听打听吧。如果真能找到公主，送回临安，那也是大功一件哦。<p>
+<a href="game_goods_change_n('丝绸手绢',1);game_chat('得到了丝绸手绢');game_write_temp(1167003,0);game_reload_direct(0)" title="">收起手绢</a>
+else
+机关损坏，只见一只破了的箱子在这里。
+end
+else
+if game_read_temp(1167001) then
+if game_read_temp(1167002) then
+一只<a href="game_npc_talk('少帮主')" title="看看">小箱子</a><p>
+else
+可以看到有一些小箱子，但，还有一些写有文字的东西，估计还有一层机构，请看着选择：<br>
+1。<a href="game_pop(6);game_infobox('回答有误，书房有答案提示的哦。');game_goto_home(0)">东边日出西边雨</a><br>
+2。<a href="game_pop(6);game_infobox('回答有误，书房有答案提示的哦。');game_goto_home(0)">窗含西岭千秋雪，门泊东吴万里船</a><br>
+3。<a href="game_pop(6);game_write_temp(1167002,1);game_reload_direct(0)">众里寻她千百度</a><br>
+4。<a href="game_pop(6);game_infobox('回答有误，书房有答案提示的哦。');game_goto_home(0)">以上皆不是</a><p>
+end
+else
+<a href="game_pop(9);game_write_temp(1167001,1);game_reload_direct(0)" title="">开启机关</a>
+end
+end:>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+少帮主=1,<img src="$apppath$img\63.bmp">谁这么大胆在密室乱翻东西？
+I=1,我是误入此地的，无意中走进来的。
+少帮主=2,狡辩，看打。
+I,A=[game_pop_fight_a(1,128);game_infobox('少帮主：算你狠，走着瞧。');game_add_scene_event(1162);game_write_temp(1167003,1);game_reload_direct(0)]2,接招。
+I,B=[game_pop_a(6);game_goto_home(0)]2,逃跑
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E32F09018D854960D507D9BC88DFC1FA

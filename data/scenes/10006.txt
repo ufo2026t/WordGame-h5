@@ -1,0 +1,56 @@
+id=10006
+名称=客栈
+作者=
+属性=
+动作=
+{
+D5001=if game_check_money(50) then game_change_money(-50);game_role_all_MTL(0);game_delay(1000);game_infobox('休息了一晚上，生命值，体力值等全满。') else game_infobox('钱不够，不能住店。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<CENTER><img src="gpic://196,48,(黑体,134,36,{Bold},{clRed}),clOlive,悦来客栈,AT1001,0,0/2007.bmp"></CENTER>
+镇上只有这么一家客栈，因此常有南来北往的商贾落脚于此。<br>
+客栈有上下两层，每层大约5间房子。<p>
+<:if game_role_is_exist('江雪儿') then
+住客丁：“最近大家去婺州要小心点，那边的土匪很多。”<br>
+住客戊：“土匪不算啥，婺州兰若寺里的妖怪才厉害呢”<br>
+住客己：“呵呵，要是有谁敢晚上去兰若寺，我给他100钱。”<p>
+else
+ 住客甲：“我刚从临安过来，那可真是个大城市。”<br>
+住客乙：“刚才我在后院看见个<FONT color=#FF0000>美女</FONT>，现在世道不同了，大姑娘家也到处乱跑了。”<br>
+住客丙：“我常往来大都和临安，听说昆仑山上的镇妖神镜被完颜宗弼给偷走了，导致通往妖界的通道大开，很多妖魔跑了出来。”<p>
+end:>
+左边有个<a href="game_page(10010)" title="">楼梯</a>可以通往楼上。<p>
+右边一个门，通往<a href="game_page(10011)" title="">后院</a>。<p>
+客栈<a href="game_npc_talk('老板')">老板</a>正忙着招呼客人。<br>
+<p>
+<a href="game_page(10001)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if not game_check_scene_event(1005) and not game_check_res_event(9000) then
+老板=1,今天忙的团团转，对了，您是否有空帮我送封信？
+I,A=1,可以，送到哪？
+I,B=1,我也忙着呢。
+老板,A=[game_add_task(9000)]2,多谢，送往<FONT color=#"FF0000">东河村</FONT>的村长家，去东河村要坐渡船过河。
+老板,B=2,那我找别人吧，不麻烦你了。
+else
+老板=1,客官，住店不，标准间50？
+I,A=[D5001]1,住店。
+I,B=1,不住
+老板,A=2,
+老板,B=2,过了这个村，就没这个店了
+
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=85AA5DB8856C51547FA308B028C2758B

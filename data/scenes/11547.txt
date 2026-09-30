@@ -1,0 +1,49 @@
+id=11547
+名称=古墓
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+古墓，很破败了，看起来年代已经久远。<p>
+且被多次盗挖，因为有多个盗洞。里面基本上没什么有价值的东西了。<p>
+<:game_read_temp(1154701)
+run game_write_scene_integer(1332,1)
+看，这里有些竹简，上面写有文字：<br>
+“耿，老年得女。年二八，遇恶少，自尽。冤魂不散，乃害多人。遇老道，封于玉内。”<p>
+string game_get_newname_at_id(1)：“看来，这怨灵，从被害始，害人终。可悲，可叹。”<br>
+小毛爸爸：“既被封住了，为何还能吸人精气？”<br>
+string game_get_newname_at_id(1)：“风水不行，看这墓穴，乃是在至阴之地。千年以来，怨灵受阴气滋养，
+邪力大增，逐渐有破玉而出之势。咱们得赶紧回去，再晚了，等怨灵出来，不仅你孩子小命难保，还会祸害一方呢。”<p>
+
+else
+<a href="game_pop_a(6);game_chat('一些磁器风化后留下的残物。')" title="看看">一堆泥土</a><p>
+<a href="game_pop_a(6);game_chat('玉石的碎片，没什么价值。')" title="看看">一块玉石碎片</a><p>
+<a href="game_pop_a(6);game_chat('好像是墓志铭的一部分，但不全了，看不出什么')" title="看看">一块木头碎片</a><p>
+<a href="game_pop_a(6);game_chat('一些墓砖，看起来应是战国时期古墓。')" title="看看">可疑物品</a><p>
+<a href="game_pop_a(6);game_chat('看不出什么')" title="看看">可疑物品</a><p>
+<a href="game_pop_a(6);game_chat('看不出什么')" title="看看">可疑物品</a><p>
+<a href="game_pop_a(6);game_chat('看不出什么')" title="看看">可疑物品</a><p>
+<a href="game_pop_a(6);game_write_temp(1154701,1);game_reload_direct(0)" title="看看">可疑物品</a><p>
+<a href="game_pop_a(6);game_chat('看不出什么')" title="看看">可疑物品</a><p>
+<a href="game_pop_a(6);game_chat('看不出什么')" title="看看">可疑物品</a><p>
+:>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=83801EC342E1C0F7BB6BB8787469800D

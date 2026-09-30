@@ -1,0 +1,30 @@
+id=12709
+名称=练功房
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,练功房,AT1000,0,0/2007.bmp"></CENTER>
+ 墙上绘着人体穴位图，标注「毒走经脉」之处。<p>
+<p>
+<a href="game_page(-2)">走廊</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2ED0C5A632EB82DE80FE1CBE36C4100C

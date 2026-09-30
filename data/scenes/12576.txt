@@ -1,0 +1,29 @@
+id=12576
+名称=上京客栈楼上
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://343,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,上京客栈客房一,AT1000,0,0/2007.bmp"></CENTER>
+
+ <:game_true(1)string game_res_goods(0,1,'降神镖'):><p>
+<a href="game_page(12575)">返回</a><br>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=7930CD202D75C31079A4F7E79AE24E0D

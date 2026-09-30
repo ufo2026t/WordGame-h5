@@ -1,0 +1,34 @@
+id=10451
+名称=宋大夫家
+作者=
+属性=32
+载入后=game_add_scene_event(1046);game_set_role_0_hide('无名',0)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clGreen}),clWindow,诊所,AT1001,0,0/2007.bmp"></CENTER>
+在黑山，<:game_true(1) string game_newname_from_oldname('无名'):>中毒了，现在到了宋大夫的诊所。<p>
+宋大夫：“这是中的妖毒，根据古书记载，只有东海的<FONT color=#"FF0000">龙涎草</FONT>3棵才能解毒。<br>
+我先用银针封住毒气，但坚持不了多久，你们速去<FONT color=#"FF0000">东海</FONT>采集此药，方可救回性命。<p>
+要前往东海可从<strong>清波门码头</strong>坐船前去。<br>
+采到药材后，来<strong>酒坊巷</strong>找我。”<p>
+
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=80B8CC2C312E147570FB37726C9B4E86

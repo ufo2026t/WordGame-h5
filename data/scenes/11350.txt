@@ -1,0 +1,35 @@
+id=11350
+名称=虚无幻境四，第四关
+作者=
+属性=6
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,第四关,AT1000,0,0/2007.bmp"></CENTER>
+王植看到关羽来了满脸堆笑。<br>
+王植：将军赶路想必已经累了不如到城里休息1晚再走。<br>
+关羽：好啊！我们早就累了……<br>
+胡班：将军不要！王植和福韩是亲家他想加害与你！<br>
+王植：哈哈，你们知道了也来不及了。受死吧。<p>
+1。<a href="game_pop_fight_a(1,115);game_page(1)" title="">动手</a><br>
+2。<a href="game_pop_a(3);game_page(10574)" title="">开溜</a><br>
+
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5C76C9FF0531CD07727F7ADDE125E653

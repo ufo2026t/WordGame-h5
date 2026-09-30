@@ -1,0 +1,54 @@
+id=12692
+名称=走马巷
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,走马巷,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('路人甲')">路人甲</a><p>
+<a href="game_npc_talk('路人乙')">路人乙</a><p>
+日落时分香味最浓，布贩商队也常在此散开。<p>
+西域风味小吃云集于此，驼队歇脚时常在此买饼买茶。<p>
+<a href="game_page(1)">马奶茶店</a><br>
+<a href="game_page(2)">囊饼店</a><br>
+<a href="game_page(3)">青稞饼店</a><br>
+<a href="game_page(4)">小旅社</a><br>
+
+
+<p>
+<a href="game_page(-44)">西州城</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+路人甲=1,青穜饼店的老板娘和戏院大小姐是旧识，往来颇多。
+I=1,
+路人乙=1,我只是路过的，别问我江湖事。
+I=1,有什么消息？
+if game_check_scene_event(1289) and not game_check_scene_event(1300) then
+路人乙=2,听说九毒派偷了东来山庄的东来令，公子正满城找人呢。
+I=2,
+elseif game_check_scene_event(1300) then
+路人乙=2,东来令夺回来了，公子在练武厅设宴呢。
+I=2,
+else
+路人乙=2,东来山庄和九毒派隔街相望，看着挺和气，其实暗争不断。
+I=2,
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=37309BE7E254124D81562FE2F24855E7

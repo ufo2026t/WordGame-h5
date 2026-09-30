@@ -1,0 +1,44 @@
+id=12091
+名称=昆仑山-偏房一
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://314,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,偏房一,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('昆仑弟子')">昆仑弟子小东</a><p>
+
+<a href="game_page(12089)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1213) then
+昆仑弟子=1,师父好
+I=1,别叫我师父。
+昆仑弟子=2,知道了，师父
+I=2,你真是笨的可以。
+else
+昆仑弟子=1,我家掌门，狂妄自大，不是好事啊。
+I=1,哈哈，你好好练功，掌门之位应能者居之。
+昆仑弟子=2,嘘，被掌门听到，我就没命了。
+I=2,不怕，我传你一招魔法如何？
+昆仑弟子=3,真的？师父在上，请受徒儿一拜。
+I=3,别忙着行礼，我不收徒弟的，只是看不惯你家掌门目中无人，不学无术的样子。
+昆仑弟子=4,我一定勤练魔法，不辜负师父厚望。
+I=[game_pop_a(5);game_add_scene_event(1213)]4,看好了，我演示给你看。
+昆仑弟子=5,记住了，多谢师父。
+I=[game_reload_direct(0)]5,别叫我师父
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F45942747843DC744E384063FAC946CA

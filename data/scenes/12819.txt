@@ -1,0 +1,69 @@
+id=12819
+名称=伊贺-渡边竹夫家
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://371,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,渡边家,AT1000,0,0/2007.bmp"></CENTER>
+一户小庭院，院角堆着军械草药。<p>
+<a href="game_npc_talk('渡边竹夫')">渡边竹夫</a><p>
+<:if game_check_scene_event(1220) and not game_check_scene_event(1299) then
+<:if game_check_goods_nmb('鬼见愁',1) then
+<a href="game_goods_change_n('鬼见愁',-1);game_add_scene_event(1299);game_change_money(2000);game_add_message('渡边感谢侠士送药，提醒熊野本宮或藏有忍者钥匙。');game_chat('渡边竹夫：多谢！有了这药，伤兵能坚持到决战。熊野本宮神堂的镀金钥匙，或就是开启伊贺谷圣杯机关的要钥。');game_reload_direct(0)" title="">交付鬼见愁</a><p>
+else
+渡边竹夫需要<strong>鬼见愁</strong>救治伤兵，可在奈良或富士山道上找到。<p>
+end:>
+elseif game_check_scene_event(1299) then
+渡边感谢侠士相助，祝旅途顺利。<p>
+<:if game_check_scene_event(1293) and not game_check_res_event(5241) then
+<a href="game_pop(5);game_add_res_event(5241);game_goods_change_n('碧血剑',1);game_chat('渡边拿出家传碧血剑相赠，以表谢意。')" title="">接受谢礼</a><p>
+elseif game_check_res_event(5241) then
+谢礼已领取。<p>
+end:>
+end:>
+<a href="game_page(12120)">返回城下町</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_role_is_exist('千代美') then
+if game_check_scene_event(1299) then
+渡边竹夫=[game_rename_byid(game_id_from_oldname('千代美'),'平津千代' )]1,千代小姐！我还以为你……
+I=1,千代@渡边叔叔，我回来了。
+渡边竹夫=2,好，好啊！平氏有望了。
+I=2,
+elseif game_check_scene_event(1220) then
+渡边竹夫=1,我是平津家老仆，那夜源氏杀来，我拿着千代小姐逃出一条命。
+I=1,我们也在找圣杯。
+渡边竹夫=2,若能找到药救伤兵，我便把熊野本宮的线索告知于你。
+I=2,好的。
+else
+渡边竹夫=1,老仆渡边，还在等平氏的消息。
+I=1,
+end
+else
+if game_check_scene_event(1299) then
+渡边竹夫=1,多谢侠士，伤兵已有救。
+I=1,
+elseif game_check_scene_event(1220) then
+渡边竹夫=1,平氏旧部正在找圣杯，我这儿急缺药材救人。
+I=1,我去找找看。
+渡边竹夫=2,若能找到鬼见愁，必有重谢。
+I=2,
+else
+渡边竹夫=1,客人有何贵干？
+I=1,
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

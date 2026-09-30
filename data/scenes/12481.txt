@@ -1,0 +1,45 @@
+id=12481
+名称=天蓬山庄
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,天蓬山庄神堂,AT1000,0,0/2007.bmp"></CENTER>
+正中供奉着一尊不大但雕刻精细的木质八戒像。<p>
+神像前是一个红漆供桌，放了两盘馒头，一盘苹果。<br>
+供桌前摆着朝拜用的软垫。<p>
+不过，想来庄主自以为是天蓬下凡，为何还要朝拜这个神像呢。<br>
+
+左边一个方桌子，上面堆了一些香烛纸品。<br>
+神堂四壁墙上画着一些有关八戒的典故传说。<p>
+<:if game_check_scene_event(1258) then
+这个桌子下的空地，好像特别干净光亮，仔细<a href="game_pop_a(3);game_page(12487)" title="">瞧瞧</a>。
+else
+没发现什么特别的地方。
+end:>
+
+
+
+
+<p>
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1FF11820EA0E46CFEC6FE7AB234B2320

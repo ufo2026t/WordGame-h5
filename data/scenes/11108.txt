@@ -1,0 +1,56 @@
+id=11108
+名称=秀洲居民区
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,居民区,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('张大娘')">张大娘家</a><p>
+<a href="game_npc_talk('二狗子')">二狗子家</a><p>
+<a href="game_npc_talk('毛毛')">毛毛家</a><p>
+<p>
+<:game_true(1)string game_res_goods(0,1,'金块'):><p>
+
+<a href="game_page(-2)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_not_res_event(9012) then
+张大娘=1,唉，我家小儿身体不好，听老人说，多炖点<FONT color=#"FF0000">鲫鱼</FONT>汤可以补身子。你可以去帮我从小河里抓几个鲫鱼吗？
+I,A=[game_add_task(9012)]1,好啊
+I,B=1,我现在没空呢。
+else
+if game_check_goods_nmb('鲫鱼',2) then
+张大娘=[game_goods_change_n('鲫鱼',-2);game_comp_task(9012)]1,哇，谢谢你抓的鱼。还要再帮忙抓鱼吗？
+I=1,恩，不谢。
+else
+if not game_check_goods_nmb('鲫鱼',1) then
+张大娘=1,你还没去抓鱼呢，鲫鱼在<FONT color=#"FF0000">小河</FONT>那里很多的。
+I=1,恩，我马上去抓。
+else
+张大娘=1,你抓的鱼不够哦。要两条。
+I=1,恩，我再去抓。
+end
+end
+end
+二狗子=1,听说金兵又快要打到这里来了，怎么办才好啊。
+I=1,
+毛毛=1,你是谁啊，我不认识你。
+I=1,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EF838C2975A26D8EE4E29811DCD4499E

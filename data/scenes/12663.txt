@@ -1,0 +1,31 @@
+id=12663
+名称=房间三
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间三,AT1000,0,0/2007.bmp"></CENTER>
+ <a href="game_npc_talk('师类')">师类</a>拨弄算盘，核算城中税赋。<p>
+<p>
+<a href="game_page(-3)">走廊</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+师类=1,西州税赋多半来自丝路商队，可别让毒派坏了生意。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=562D13E14B3B5A5FA0D74906605699C0

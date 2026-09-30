@@ -1,0 +1,79 @@
+id=10976
+名称=李老板家
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,茶叶庄,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1067) then
+if game_sex_from_id(1) then
+茶叶店已经搬走了。<p>
+else
+江雪儿回娘家去了。<p>
+end
+else
+if game_check_scene_event(1007) and game_not_scene_event(1003) then
+if game_sex_from_id(1) then
+<img src="$apppath$img\4.bmp">江雪儿：“string game_get_newname_at_id(1)，怎么是你啊，真的是你？见到你太高兴了。”<p>
+string game_get_newname_at_id(1)：“你，是你，看你脸色有些憔悴，日子过的还好吧。”<p>
+江雪儿：“唉，嫁鸡随鸡，嫁狗随狗了，凑合着过吧。”<p>
+李老板：“雪儿，和谁在说话呢，和陌生男子聊这么起劲，过来，给我锤锤背。”<p>
+江雪儿：“来了，来了。……你快走吧，要不晚上又要打我了。”<p>
+<a href="game_npc_talk('江雪儿')">继续聊天</a>。
+else
+<img src="$apppath$img\4.bmp">江雪儿：“string game_get_newname_at_id(1)，怎么是你啊，好久不见了？来来，坐下，喝茶。”<p>
+string game_get_newname_at_id(1)：“看你，胖了好多，养的不错啊。”<p>
+江雪儿：“嘻嘻，还好啦，这段时间生意不错。”
+end
+else
+if not game_role_is_exist('江雪儿') and game_not_scene_event(1007) then
+if game_sex_from_id(1) then
+<img src="$apppath$img\4.bmp">江雪儿：“你，是你？”<p>
+string game_get_newname_at_id(1)：“你怎么在这里，我以为你在婺州呢，到处转了一圈，没找见你。”<p>
+江雪儿：“你找我了吗，真的来找我了吗？”（眼泪）<p>
+江雪儿：“你走吧，我不想再见到你了，走吧。”
+string game_get_newname_at_id(1)：“都怪我，没有勇气去比武。”<p>
+江雪儿：“你什么都不要说了，现在说什么都晚了。”<p>
+else
+<img src="$apppath$img\4.bmp">江雪儿：“string game_get_newname_at_id(1)，怎么是你啊，这世界真小，在这里又见到你了。来坐会。”<p>
+ string game_get_newname_at_id(1)：“嘻嘻，当时我还想去比武呢，不过，现在看你日子过的不错，应该是嫁了个好老公。”<p>
+江雪儿：“还好啦，对了，你有意中人了没？”<p>
+end
+else
+李老板：“客官好，我这有上等茶叶，价格便宜哦。”
+end
+end
+end:>
+<p>
+<a href="game_add_scene_event(1067);game_page(10702)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+江雪儿=1,你快走吧。
+I=1,我对不起你，都怪我武功太次了。唉，真是没用。
+江雪儿=2,你也不必自责，都怪我命不好。
+I,A=2,不，我不相信命运，我带你走，这就带你走。
+I,B=2,唉，这有一千两银子，你留着吧，好好照顾自己。
+I,C=2,无语，垂泪。
+江雪儿,A=3,我已心灰意冷，下半辈子就凑合着过吧。你走吧。
+江雪儿,B=3,谢谢你的好意，我不要。
+江雪儿,C=3,
+I,A=3,
+I,B=3,
+I,C=3,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=50583E1CF828EC8770807D7D13BB538A

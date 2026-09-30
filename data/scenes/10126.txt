@@ -1,0 +1,80 @@
+id=10126
+名称=婺州江府
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://114,56,(宋体,134,42,{Bold},{clBlack}),clOlive,府江,AT1002,0,0/2007.bmp"></CENTER>
+<p>
+江府老爷原是地方上的小官，在金兵南下赵构东逃海上时候救主有功。<p>
+高宗特赐府邸一座，良田千亩，在此颐养天年。<p>
+&nbsp;<p>
+&nbsp;<p>
+<a href="if game_role_is_exist('江雪儿') then game_page(10127) else game_npc_talk('江府守卫') end">进入</a><p>
+&nbsp;<p>
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+;;江雪儿不在时的对话
+if game_check_scene_event(1003) then
+;;如果已经加入过又不在的
+江府守卫=1,你都把我们家小姐给气跑了，又来这干吗？走开走开
+
+else
+if game_check_scene_event(1007) then
+;;如果已经比武，又没有1003事件发生，说明失败了
+江府守卫=1,走开走开，这地方也是你想来就来的吗。
+else
+if game_check_scene_event(1008) then
+江府守卫=1,公子是来参加比武招亲的吗。
+I,A=1,哈哈，是啊，艺高者得啊。
+I,B=1,我想进去看看。
+江府守卫,A=2,公子请。
+江府守卫,B=2,你以为这是公园啊，不是比武的一律不准进。
+I,A=2,请。
+I,B=2,你怎知我是比武不是？
+if game_check_scene_event(1020) then
+;;1020江府丫鬟对话后
+if game_check_scene_event(1021) then
+;;1021 打了蒙面人
+江府守卫,A=[game_page(10128)]3,请。
+江府守卫,B=3,干咱们这行的，眼神好，啥样人物一看便知。
+else
+;;没打蒙面人
+江府守卫,A=3, 江府丫鬟@我家小姐去<FONT color=#"FF0000">娘娘庙</FONT>好长时间了，还没回来呢。
+江府守卫,B=3,干咱们这行的，眼神好，啥样人物一看便知。
+I,A=3,恩，我这就去娘娘庙看看去。
+I,B=3,切，狗眼看人低。
+end
+else
+;;没对话
+江府守卫,A=[game_add_scene_event(1020);game_reload_direct(0)]3, 江府丫鬟@咦，这不是string game_newname_from_oldname('无名')吗，常听小姐提起你。不巧，我家小姐刚刚去<FONT color=#"FF0000">娘娘庙</FONT>进香去了。
+江府守卫,B=3,干咱们这行的，眼神好，啥样人物一看便知。
+I,A=3,听说娘娘庙那边常有贼人出没，我得去看看去。
+I,B=3,切，狗眼看人低。
+end
+else
+江府守卫=1,要逛到<FONT color=#"FF0000">城隍庙</FONT>那逛去，别在这瞎转。
+I=1,if game_sex_from_id(1) then 我有个朋友也姓江，不知是否贵府上人？else 我一个姐妹好像是这里的人，我想进去看看 end
+江府守卫=2,if game_sex_from_id(1) then 姓江的人多了去了，都是你朋友？别乱攀高枝。else 小妞，嘻嘻，想进去是不是，让哥们先乐和乐和。 end
+I=2,if game_sex_from_id(1) then 狗眼看人低。else 呸。也不撒泡尿照照自己，什么德行。 end
+end
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F3FFCF4EE314EFCA3388519BB515FECE

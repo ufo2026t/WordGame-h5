@@ -1,0 +1,48 @@
+id=10581
+名称=广州街头
+作者=
+属性=38
+载入后=if game_check_scene_event(1052) then game_change_money(200);game_chat('您得到了人民币200元。') else game_goods_change_n('存储卡',1);game_chat('您得到了一块存储卡');game_add_scene_event(1052) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://285,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,广州车站边,AT1000,0,0/2007.bmp"></CENTER>
+飞贼抓住了，被抢的包也拿回来了。
+<:game_sex_from_id(1)
+姑娘：“多些这位大哥，谢谢你了。能否留个电话，下次我好请你吃饭。”<br>
+string game_get_newname_at_id(1)：“电话，啥是电话。这里的一切都是怪怪的，我知道这是梦境。”<br>
+姑娘：“这大哥，穿着打扮，说话语气都和我们不一样啊，该不会是火星来的吧。”<p>
+两个记者挤上前来。<p>
+记者甲：“我是XXX报的，请问这位英雄，徒手擒两匪，且这身穿戴，是否正在拍电影？是什么电影，何人导演？”<br>
+记者乙：“我是ＸＸ周末的，看你言谈举止怪异，眼神飘忽。可否谈谈您的来历？虽然我一直怀疑时光隧道的存在。”<p>
+小孩甲：“哇，古代超人……”<p>
+小孩乙：“这位是啥明星啊，功夫这么棒，先给我签个名吧。”<p>
+else
+姑娘：“真是太谢谢你了，帮我拿回了包包。你功夫真好，刚好是在拍电视吧，穿着这身衣服，给我签个名吧。”<br>
+两个记者挤上前来。<p>
+记者甲：“我是XXX报的，请问这位姑娘，徒手擒两匪，且这身穿戴，是否正在拍电影？是什么电影，何人导演？”<br>
+记者乙：“我是ＸＸ周末的，姑娘你穿着打扮奇特，言谈举止怪异，眼神飘忽。可否谈谈您的来历？虽然我一直怀疑时光隧道的存在。”<p>
+小孩甲：“哇，美女超人……”<p>
+小伙子甲：“李师师，竟然来广州了……”<p>
+string game_get_newname_at_id(1)：“这里是不是到了西贺牛州啦，都和我们那里太不一样了，幻境快快结束吧。我受不了啦。”<br>
+:>
+<p>
+<a href="game_pop_a(3);game_kill_game_time(0);game_page(10570)">返回宋朝</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EB60A3A590E57F5AF2E64FE0EE69D819

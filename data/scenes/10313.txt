@@ -1,0 +1,35 @@
+id=10313
+名称=无剑山庄湖底
+作者=
+属性=34
+载入后=game_pop_fight_a(game_random_chance(1),79)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(黑体,134,220,{Bold},{clWindowText}),clWindow,湖底,AT1010,1,60/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+到了湖底了，这里很阴冷，有些黑暗，处处小心了。<p>
+&nbsp;<p>
+通往<a href="game_pop_a(2);game_page(10310)" title="">湖底310</a><p>
+通往<a href="game_pop_a(2);game_page(10312)" title="">湖底312</a><p>
+通往<a href="game_pop_a(2);game_page(10314)" title="">湖底314</a><p>
+<:game_random_chance(3)<a href="game_kill_game_time(0);game_page(10315)"><img src="gpic://217,29,(隶书,134,22,{Bold},{clRed}),clWindow,一个发亮的物体,AT1001,0,0/2007.bmp"></a>:>
+<:game_true(1)string game_res_goods(5152,1,'软骨粉'):>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=05A8DA0798D77271FA7E48FCE93E52AE

@@ -1,0 +1,41 @@
+id=11392
+名称=星月神教内
+作者=
+属性=4
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,大厅,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1117) then
+大厅的一角，有一缕阳光漏进来。
+if not game_check_goods_nmb('下半封密信',1) then
+忽然想起，腰牌碎块上的字，就是星月神三个字的一部分，那么，下半封密信，也许就在教内，到处找找。<p>
+end
+else
+if game_check_scene_event(1124) then
+星月神教教主在此。谁人大声喧哗？<br>
+1。<a href="game_pop_fight_a(1,120);game_add_scene_event(1117);game_goods_change_n('神教钥匙',1);game_infobox('得到了密室钥匙一把');game_page(11400)" title="迎难而上">迎战</a><br>
+2。<a href="game_pop_a(4);game_page(-1)" title="溜走">逃跑</a><br>
+else
+大厅里是空的。<br>
+end end:>
+<p>
+<a href="game_pop_a(2);game_page(1)">一个小门</a>
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=DB7019C597CE4B217872236D7A5731E4

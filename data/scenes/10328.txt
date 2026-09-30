@@ -1,0 +1,55 @@
+id=10328
+名称=山庄后院房间2
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://185,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,后院房间二,AT1000,0,0/2007.bmp"></CENTER>
+房间里还是一尘不染的。<p>
+收拾的很干净。<p>
+<:if game_sex_from_id(1) and game_role_is_exist('铁无梅') and game_random_chance(5) then
+
+  两个人情不自禁的<a href="game_role_all_mtl(0);game_delay(1000);game_chat('铁无梅脸色绯红，两人命体灵恢复全满。');game_npc_talk('江雪儿')" title="">拥抱</a>了一下。
+end:>
+&nbsp;<p>
+<a href="game_infobox('生命值体力和灵力补充到全满了。');game_role_all_mtl(0)">休息一下</a>。<p>
+
+
+&nbsp;<p>
+<a href="game_page(10324)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_role_is_exist('江雪儿') then
+江雪儿=1,……
+if game_check_goods_nmb('小金猪',1) then
+I=1,呀，你也来了，等会送你个小金猪
+else
+if game_check_goods_nmb('玫瑰花',1) then
+I=1,呀，你也来了，等会送你个玫瑰花
+else
+I=1,呀，你也来了，等会送你个好玩的
+end
+end
+
+江雪儿=2,才不要嘞，就会骗人。
+I=2,真的呢，我从不骗人
+end
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=06C1BBFEDFCD2DF175B372E6D2722CAE

@@ -1,0 +1,43 @@
+id=12010
+名称=武当山-老君岩
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,400,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,77/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,老君岩,AT1000,0,0/2007.bmp"></CENTER>
+巨岩天然酷似老君坐像，云雾常绕其顶。此处无迷宫，却是武当静修胜地。<p>
+<:game_true(1)string game_res_goods(0,1,'千年人参'):><p>
+<:if game_check_scene_event(1205) then
+武当弟子在远处扫地，见有人来，只点头不语。
+else
+<a href="game_npc_talk('守岩道人')">守岩道人</a>负手立在岩下，目光平和。<p>
+if not game_check_res_event(5242) then
+岩壁石龛里半掩着一卷<a href="game_add_res_event(5242);game_goods_change_n('还魂丹',1);game_attribute_change(1,19,500);game_infobox('在石龛中获得还魂丹一枚，并读出几句「道法自然，无为而治」。');game_reload_direct(0)" title="">前人抄本</a>。<p>
+end
+<a href="if game_check_scene_event(1320) then game_role_all_mtl(0);game_chat('面对老君岩静坐，命体灵恢复全满。') else game_add_scene_event(1320);game_role_all_mtl(0);game_attribute_change(1,19,800);game_infobox('首次在此悟得「致虚极，守静笃」，经验+800。');game_reload_direct(0) end" title="">面对老君岩静坐调息</a><p>
+end:>
+<a href="game_pop_a(2);game_page(-3)">返回山门</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+守岩道人=1,这老君岩乃张真人少年时常来打坐之处。岩无迷宫，心却有境——在此静一静，比在南天门乱闯有益得多。
+I=1,道长可否指点武当去处？
+守岩道人=2,紫霄宫见张真人，南天门有绝壁崖、深涧两处迷宫。深涧里传说有龙精甲、天蚕丝，乃是制造上等装备的必备材料——真人也曾如此告诫来客。
+I=2,多谢道长，我去看看石龛。
+守岩道人=3,能否悟得，看缘分。莫要惊扰此山清气。
+I=3,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=81C23CF14DE36F852B801CC64CE541A9

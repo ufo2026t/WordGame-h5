@@ -1,0 +1,33 @@
+id=12657
+名称=房间五
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间五,AT1000,0,0/2007.bmp"></CENTER>
+ 一位<a href="game_npc_talk('西域女子')">西域女子</a>在整理行囊，准备明日启程。<p>
+
+
+<p>
+<a href="game_page(-5)">返回二楼走廊</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+西域女子=1,我要回和田了，这儿的九毒派弟子真吓人。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4C63CD2DE14ADDD4DA6999EE8B1B3373

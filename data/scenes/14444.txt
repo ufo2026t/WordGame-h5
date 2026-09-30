@@ -1,0 +1,35 @@
+id=14444
+名称=游戏结束
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML>
+&nbsp;<p>&nbsp;<p>
+&nbsp;<p>
+
+<CENTER><img src="gpic://432,107,(黑体,134,80,{Bold},{clRed}),clBlack,饮恨江湖,AT1001,0,0/2007.bmp"></CENTER>
+&nbsp;<p>
+&nbsp;<p>
+
+<table width="75%" border="0" align="center">
+  <tr>
+    <td><strong><a href="game_start_now(0);if game_question('请定义主角性别，选择“是”为男，选择“否”为女。') then game_change_sex('无名',1) else game_change_sex('无名',0) end" title="重新开始游戏">新的征程</a></strong></td>
+    <td><a href="game_save(0)" title="读取存盘的游戏继续玩">旧梦再续</a></td>
+
+  </tr>
+</table>
+
+
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BA47B4155D34D7510730918A28A41F9A

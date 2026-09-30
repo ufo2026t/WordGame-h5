@@ -1,0 +1,50 @@
+id=10074
+名称=左书房
+作者=
+属性=34
+载入后=game_npc_talk('同伴')
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(楷体_GB2312,134,120,{Bold},{clWhite}),clSilver,古堡,AT1009,1,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+书房里面桌椅东倒西歪。<p>
+地上也扔着一些书。<p>
+周公解梦<p>
+山海经<p>
+搜神记<p>
+ <:if not game_check_res_event(5026) then 还有两本显得有些破旧的<a href="game_pop_a(2);game_goods_change_n('回春术',1);game_chat('得到了一本恢复能力的法术书籍“回春术”。在人物和物品界面可以学习，学会后可以通过消耗灵力来恢复生命。');game_add_res_event(5026);game_reload_direct(0)"
+title="看起来有些深奥">古书</a>else 还有一本显得有些破旧的古书 end:>
+。<p>
+
+<:game_true(1)阅读材料：string game_get_read_txt(0):><p>
+<:game_true(1)string game_res_goods(5026,1,'回春术'):>
+<p>
+
+<a href="game_page(10068)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_role_count(0) > 1 then
+同伴=1,
+I=[game_write_name('string game_get_newname_at_id(2)')]1,大家这里找找，看有没有什么线索。
+if game_id_exist(3) then
+string game_get_newname_at_id(2)=1,嗯。
+I=1,string game_get_newname_at_id(3)@对，到处翻翻。
+else
+string game_get_newname_at_id(2)=1,好。
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=56B8D6230E6BF2F7146F3266C452F81E

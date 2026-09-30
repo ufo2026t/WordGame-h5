@@ -1,0 +1,87 @@
+id=12074
+名称=恭喜-状元
+作者=
+属性=1
+动作=
+{
+D5001=game_del_scene_event(1211);game_add_scene_event(1212);game_del_friend('李疏盈',0);game_infobox('赵小金离开了队伍。')
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<bgsound src="$apppath$music\雪花神剑.mid" loop="-1">
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clBlack}),clWindow,金榜题名,AT1012,0,0/2007.bmp"></CENTER>
+恭喜您金榜题名，中得“<FONT color=#"FF0000">状元</FONT>”。<p>
+您受到了皇帝的亲切接见。并赐酒琼林宴。<p>
+其他还有<p>
+
+<:if game_sex_from_id(1) then
+run game_change_money(100000)
+
+皇上赏赐金钱十万。<p>
+if game_check_scene_event(1208) and game_role_is_exist('李疏盈') then
+run game_add_scene_event(1211)
+并且，皇上把赵小金公主赐予您。<p>
+只是当前朝廷财政紧张，驸马府就不建了。<p>
+您是：<br>
+1。<a href="game_npc_talk('谈话')">接受赐婚</a><p>
+2。<a href="game_npc_talk('拒绝接受')">拒绝接受</a><p>
+end
+else
+run game_change_money(100000)
+
+皇上赏赐金钱十万。
+end:>
+<p>
+
+<:if game_sex_from_id(1) then
+ if game_role_is_exist('江雪儿') then
+  江雪儿：“恭喜郎君金榜题名。”<br>
+  end
+ if game_role_is_exist('慕容丽雯') then
+    慕容丽雯：“真是春风得意马蹄疾，一夜看尽长安花。”<br>
+    end
+else
+
+  if game_role_is_exist('慕容丽雯') then
+    慕容丽雯：“春风得意马蹄疾，一夜看尽长安花。”<br>
+  end
+
+
+end
+:><p>
+<p>
+<a href="game_page(10781)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+谈话=1,
+I=1,谢主隆恩，吾皇万岁万岁万万岁。
+谈话=2,高宗@爱卿平身。
+I=2,谢皇上
+if game_check_scene_event(1022) then
+拒绝接受=1,高宗@呼呼
+I=1,多谢皇上美意，只是微臣在婺州比武招亲得胜，有约在先，不能违背。
+拒绝接受=2,高宗@哈哈，爱卿果然高风亮节，朕准你妻妾成群，如何？
+I,A=2,谢皇上，吾皇万岁万岁万万岁。（接受）
+I,B=[D5001]2,多谢皇上美意，微臣还是不能接受。
+拒绝接受,A=3,高宗@爱卿平身。
+拒绝接受,B=[game_change_money(500000)]3,高宗@爱卿既然一意痴情，朕也不便坚持，再赏你金钱50万吧。
+I,A=3,谢皇上
+I,B=3,谢皇上
+else
+拒绝接受=[D5001]1,高宗@呼呼
+I=1,多谢皇上美意，只是微臣并不爱小公主
+拒绝接受=2,高宗@人各有志，不可强求，随你了。
+I=2,谢皇上
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BA4AEDBCDA7B959619136547185CF0DC

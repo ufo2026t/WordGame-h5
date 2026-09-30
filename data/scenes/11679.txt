@@ -1,0 +1,58 @@
+id=11679
+名称=
+作者=
+属性=5
+动作=
+{
+D5001=if game_check_money(500) then game_change_money(-500); if game_pop_dig(1035)>=30 and game_random_chance(2) then game_attribute_change(1,33,1);game_infobox('恭喜：您获得了举人头衔');game_write_temp(4112,1);game_reload_direct(0) else game_chat('考试结束，您考试不合格') end else game_chat('您钱不够') end
+D5002=if game_check_money(500) then game_change_money(-500); if (game_pop_dig(1035)>=30) and game_random_chance(2) then game_attribute_change(1,33,1);game_infobox('恭喜：您获得了解元头衔');game_write_temp(4113,1);game_reload_direct(0) else game_chat('考试结束，您考试不合格') end else game_chat('您钱不够') end
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,考试,AT1000,0,0/2007.bmp"></CENTER>
+通过考试，您可以获得荣誉，从童生到状元，大学士。<p>
+当然，每次考试要收考试费500。<p>
+有不懂的，可以问<a href="game_npc_talk('先生')">先生</a><p>
+<:if game_get_role_suxing(1,33)= 2 then
+开始<a href="D5001" title="考举人">考试</a>（通过者将获得“举人”头衔，35题正确30题及以上，有二分之一机会获得）<p>
+else
+if game_get_role_suxing(1,33)= 3 then
+开始<a href="D5002" title="考解元">考试</a>（通过者将获得“解元”头衔，35题正确30题及以上，有二分之一机会）<p>
+else
+if game_get_role_suxing(1,33) <2 then
+您需要先在河西镇考取童生和秀才，然后才能来这里考试。
+else
+这里最高只能考得举人，您如需更高荣誉，需要前往<FONT color=#"FF0000">临安</FONT>考取了。
+end
+end
+end:>
+<p>
+<:if game_read_temp(4113) then
+  if game_role_is_exist('江雪儿') then
+  江雪儿：“考上解元了，你太厉害了。”<p>
+  end
+else
+if game_read_temp(4112) then
+ if game_role_is_exist('江雪儿') then
+  江雪儿：“恭喜考试成功。”<p>
+  end
+end
+end:>
+<p>
+<a href="game_page(10431)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+先生=1,这里考取解元和举人。其他要考秀才请到河西，考状元请到临安。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=09C991686909E9B86FE0D6A802EE2485

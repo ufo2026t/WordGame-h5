@@ -1,0 +1,39 @@
+id=12739
+名称=说书馆
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,说书馆,AT1000,0,0/2007.bmp"></CENTER>
+说书人拍响惊堂木，正讲中原邙山宝藏的旧闻。<p>
+<a href="game_npc_talk('说书人')">说书人</a><p>
+<a href="game_page(-2)">中孚大街</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1281) then
+说书人=1,听说九毒派也得了藏宝图一角，这邙山宝藏怕是要起风波。
+I=1,
+elseif game_check_scene_event(1300) then
+说书人=1,东来山庄与九毒派又为一块令信起冲突，还是那位中原侠士夺回来的，好一段佳话！
+I=1,
+else
+说书人=1,七块碎图合一，邙山机关自开——且听下回分解。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C1A8BDA6DEC478AB4FE369A31A37256A

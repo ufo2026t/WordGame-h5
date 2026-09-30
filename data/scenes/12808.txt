@@ -1,0 +1,31 @@
+id=12808
+名称=伊贺-霞ザ浦
+作者=
+属性=
+TempKey=伊贺
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,霞ザ浦,AT1000,0,0/2007.bmp"></CENTER>
+宽阔的湖泊，湖面如镜，是忍者训练的去处之一。<p>
+<a href="game_npc_talk('湖边渔人')">湖边渔人</a><p>
+<a href="if game_check_money(100) then game_change_money(-100);game_chat('在湖畔休息片刻，精神一振。');game_reload_direct(0) else game_chat('休息需100文。') end" title="">湖畔休息（100文）</a><p>
+<p>
+<a href="game_page(12121)">返回伊贺谷</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+湖边渔人=1,这湖深处有怪鱼，晚上别独自来。
+I=1,谢谢提醒。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

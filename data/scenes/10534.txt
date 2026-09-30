@@ -1,0 +1,71 @@
+id=10534
+名称=小姐房间
+作者=
+属性=
+动作=
+{
+
+D5001=if game_pop_game(1,175) then game_add_scene_event(1274);game_reload_direct(0) else game_add_scene_event(1275);game_reload_direct(0) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,天外天,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clGreen}),clWindow,小姐房,AT1001,0,0/2007.bmp"></CENTER>
+<:if game_sex_from_id(1) then
+
+if game_read_scene_integer(5262)=1 then
+云姑娘：“你突然闯进本小姐房间想图谋不轨，看打。”<p>
+string game_get_newname_at_id(1)：“姑娘误会了，我乃正人君子，非好色之徒。”<p>
+云姑娘：“赶紧出去，不知道姑娘的闺房是不能随便进的吗？”<p>
+else
+if game_read_scene_integer(5262)=2 then
+ 云姑娘：“又进我房间来了，还说不好色。”<p>
+string game_get_newname_at_id(1)：“走错了，不好意思，我马上就出去。”<p>
+云姑娘：“哼，算你识趣，不然我非教训你一顿不可。”<p>
+else
+if game_read_scene_integer(5262)=3 then
+ 云姑娘：“莫非你见本姑娘貌美？三番两次进来骚扰。”<p>
+string game_get_newname_at_id(1)：“偶然失误，不好意思，我马上就出去。”<p>
+云姑娘：“一次两次是偶然，三次就是必然了，你要有胆再进来看看。”<p>
+else
+
+if game_check_scene_event(1275) then
+云姑娘：“手下败将，又想来挨打是不是。”<p>
+“士别三日当刮目相看。”<a href="D5001" title="">与云小姐过招</a>;<p>
+else
+if game_check_scene_event(1274) then
+ 云姑娘：“你走开，我不想理你。”<p>
+else
+云姑娘：“好你小子存心想占我便宜。”<p>
+string game_get_newname_at_id(1)：“真走错了，不管你信不信，我是信的。”<p>
+云姑娘：“你要是能在我手下不败，我就信了。”<p>
+“好，我就见识见识你的功夫。”<a href="D5001" title="">与云小姐过招</a>;<p>
+end
+end
+
+
+end
+end
+end
+
+else
+房间里没人。<p>
+&nbsp;
+end:>
+<p>
+<a href="game_page(10529)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1A140FD3E0B3C421056F3DB1EF04BDED

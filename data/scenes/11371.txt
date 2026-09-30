@@ -1,0 +1,107 @@
+id=11371
+名称=南绍镇
+作者=
+属性=64
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,南绍镇,AT1002,0,0/2007.bmp"></CENTER>
+南绍镇，物产丰富。
+<a href="game_npc_talk('店家一')">店家一</a><p>
+<a href="game_npc_talk('店家二')">店家二</a><p>
+<a href="game_npc_talk('店家三')">店家三</a><p>
+<a href="game_npc_talk('店家四')">店家四</a><p>
+<a href="game_npc_talk('店家五')">店家五</a><p>
+<a href="game_npc_talk('店家六')">店家六</a><p>
+<:if game_read_scene_integer(1332)=0 then
+路边有个小孩，脖子上挂着个精美的玉佩，蔫搭搭的坐着。细看之下，小孩脸上有很重的阴霾之气。<a href="game_npc_talk('小毛')">交谈</a><p>
+else
+<a href="game_page(11546)" title="">进入小毛家</a>。<p>
+end:>
+<a href="game_pop_a(3);game_page(11373)">前往大理</a>
+<p>
+<a href="game_pop_a(6);game_page(11346)">返回严州驿站</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+店家一=1,客官，买点不，我这有上等蜂王浆哦。
+I=1,什么价格？
+店家一=2,一份200金钱
+I,A=[if game_check_money(200) then game_change_money(-200);game_goods_change_n('蜂王浆',1) else game_chat('钱不够') end]2,买一份
+I,B=[if game_check_money(2000) then game_change_money(-2000);game_goods_change_n('蜂王浆',10) else game_chat('钱不够') end]2,买十份
+I,C=[if game_check_money(20000) then game_change_money(-20000);game_goods_change_n('蜂王浆',100) else game_chat('钱不够') end]2,买一百份
+I,D=2,不买
+店家一,A=3,谢谢客官
+店家一,B=3,多谢客官，下次再来啊
+店家一,C=3,哇，豪客啊，出手真大方。
+店家一,D=3,小气鬼，喝凉水。
+I,A=3,
+I,B=3,
+I,C=3,
+I,D=3,
+if game_sex_from_id(1) then
+店家二=1,客官，来看看，我这有漂亮的玫瑰花卖,买点去送姑娘吧，每枝20金钱
+I,A=[if game_check_money(20) then game_change_money(-20);game_goods_change_n('玫瑰花',1) else game_chat('钱不够') end]1,好啊，买一支
+I,B=[if game_check_money(220) then game_change_money(-220);game_goods_change_n('玫瑰花',11) else game_chat('钱不够') end]1,买11枝
+I,C=[if game_check_scene_event(1114) then game_chat('店老板：没这么多花了。') else if game_check_money(19980) then game_change_money(-19980);game_page(1) else game_chat('钱不够') end end]1,买999枝
+I,D=1,太贵了，不买
+店家二,A=2,送花不在多少，在于情意。
+店家二,B=2,11枝，表示一心一意，不错。
+店家二,C=2,帅呆了
+店家二,D=2,这么铁公鸡，一毛不拔怎能抱得美人归。
+I,A=2,
+I,B=2,
+I,C=2,
+I,D=2,
+else
+店家二=1,客官，来看看，我这有漂亮的玫瑰花卖,每枝20金钱
+if game_role_is_exist('胡飛') then
+I=[if game_check_money(20) then game_change_money(-20);game_goods_change_n('玫瑰花',1);game_infobox('您得到了一支玫瑰花') else game_infobox('钱不够') end]1,胡飛@送你一支花吧。
+else
+I=1,这花不新鲜呢
+end
+end
+店家三=1,买暗器了，厉害的暗器，杀人于无形，实乃居家旅行，杀人越货的好东西啊。
+I=1,是什么暗器这么厉害？
+店家三=2,燕子镖，伤害值200啊，普通人一碰就死。
+I,A=[if game_check_money(2000) then game_change_money(-2000);game_goods_change_n('燕子镖',10) else game_infobox('钱不够') end]2,还行，我买10个。
+I,B=2,切，这么垃圾的东西还说好。
+店家三,A=3,果然识货。
+店家三,B=3,不识货别在这瞎嚷嚷，坏我生意。
+I,A=3,
+I,B=3,
+店家四=1,有啥买啥，客官，要地瓜干吗？上等红薯制作的，绿色天然食品。无化肥农药残留。补充体力50个点哦
+I,A=[if game_check_money(50) then game_change_money(-50);game_goods_change_n('地瓜干',10) else game_infobox('钱不够') end]1,看起来成色不错，买一包吧（10只装）。
+I,B=1,不买
+店家五=1,客官，吃碗馄饨吧。
+I,A=[if game_check_money(100) then game_change_money(-100);game_role_all_mtl(0);game_infobox('全体命体灵全满了。') else game_infobox('钱不够') end]1,吃
+I,B=1,不吃
+if game_check_scene_event(1229) then
+店家六=1,卖天麻了，上好的天麻，价格便宜了。每支1000钱
+I,A=[if game_check_money(1000) then game_change_money(-1000);game_goods_change_n('天麻',1);game_infobox('您得到了一支天麻') else game_infobox('钱不够') end]1,买一支
+I,B=1,不买
+else
+店家六=1,今天不营业
+I=1,
+end
+小毛=1,嘶的一声（鼻涕吸回鼻子里的声音）
+I=1,你爸妈在家吗？
+小毛=2,你是谁啊，找我爸妈什么事？
+I=2,有重要的事情了，小孩子不懂的。
+小毛=3,哦，在家的，你来吧，我带路。
+I=[game_page(11546)]3,好。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A4CAC969FEB2ECF18B4C342B78B2E0F0

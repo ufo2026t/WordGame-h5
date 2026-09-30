@@ -1,0 +1,82 @@
+id=10061
+名称=婺州城地图
+作者=
+属性=324
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<:if game_read_temp(8200) then
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+end:>
+;;<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<:if game_check_scene_event(1041) then
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clGray,半夜,AT1010,1,42/2007.bmp) fixed no-repeat center center;">
+else
+<BODY>
+end:>
+婺州地图<br>
+<:game_check_scene_event(1041)
+<CENTER><img src="gpic://585,37,(楷体_GB2312,134,28,{Bold},{clTeal}),clWindow,半夜，星星和月亮出来了,AT1002,0,0/2007.bmp" title="鼠标在地图上移动，有链接的地方就是可以进去的。"></CENTER>
+else
+<CENTER><img src="gpic://585,37,(楷体_GB2312,134,28,{Bold},{clTeal}),clWindow,白天，婺州地图上点击要去的地方,AT1001,0,0/2007.bmp" title="鼠标在地图上移动，有链接的地方就是可以进去的。"></CENTER>
+:><p>
+<:if game_read_temp(8200) then
+<a href="game_write_temp(8200,0);game_reload_direct(0)"><img src="gpic://147,19,(隶书,134,14,{Bold},{clWindowText}),clWindow,关闭字符集设定,AT1000,0,0/2007.bmp"></a>
+else
+<a href="game_write_temp(8200,1);game_reload_direct(0)" title="click here to show chinese char">Set Chinese</a>
+end:><p style=float:right;>
+<:game_check_scene_event(1065)
+<a href="game_del_scene_event(1065);game_page(10061)" title="点击打开背景音乐">打开</a><strong>背景音乐</strong>
+else
+<bgsound src="$apppath$music\01082.mid"><a href="game_add_scene_event(1065);game_page(10061)" title="点击关闭背景音乐">关闭</a><strong>背景音乐</strong>:>
+<p>
+&nbsp;<a href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10013) end">返回码头</a></p><p>
+
+<div align=center><img src="$apppath$img\wuzou.jpg" width="605" height="368" usemap="#eeMap">
+  <map name="eeMap">
+    <area   shape="rect"   coords="219,153,240,184"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10387) end"   alt="天皇门">
+    <area   shape="rect"   coords="553,189,592,217"   href="game_page(10198)"   alt="天坑">
+    <area   shape="rect"   coords="308,182,343,213"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10520)end"   alt="一品鲜酒楼">
+    <area   shape="rect"   coords="105,295,123,321"   href="if game_check_scene_event(1041) then game_chat('现在是半夜不要去了。先到客栈睡一觉吧。') else game_page(10519)end"   alt="通济桥">
+    <area   shape="rect"   coords="233,22,326,68"   href="if game_check_scene_event(1041) then game_chat('现在是半夜还是不要去了。先到客栈睡一觉吧。') else game_page(10186)end"   alt="北山">
+    <area   shape="rect"   coords="471,4,560,41"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10521)end"   alt="天外天山庄">
+    <area   shape="rect"   coords="32,20,137,91"   href="if game_check_scene_event(1041) then game_chat('现在是半夜等天亮再去。先到客栈睡一觉吧。') else game_page(10176)end"   alt="西峰山">
+    <area   shape="rect"   coords="173,55,210,122"   href="if game_check_scene_event(1041) then game_chat('现在是半夜等天亮再去。先到客栈睡一觉吧。') else game_page(10421)end"   alt="黑山">
+    <area   shape="rect"   coords="237,252,281,288"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10424)end"   alt="八咏楼">
+    <area   shape="rect"   coords="205,257,224,284"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10431)end"   alt="酒坊巷">
+    <area   shape="rect"   coords="161,258,185,283"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10126)end"   alt="江府">
+    <area   shape="rect"   coords="119,246,147,271"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10094)end"   alt="绸布坊">
+    <area   shape="rect"   coords="94,201,134,231"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10522)end"   alt="东方镖局">
+    <area   shape="rect"   coords="134,225,154,244"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10093)end"   alt="杂货铺">
+    <area   shape="rect"   coords="185,321,219,355"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10097)end"   alt="寻宝乐园">
+    <area   shape="rect"   coords="319,314,369,346"   href="if  game_check_scene_event(1045) then game_page(10425) else if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10423) end end"   alt="临江豪园">
+    <area   shape="rect"   coords="460,239,551,298"   href="if game_check_scene_event(1041) then game_chat('现在是半夜。先到客栈睡一觉吧。') else game_page(10160)end"   alt="三清山道观">
+    <area   shape="rect"   coords="514,112,583,182"   href="game_page(10135)"   alt="郊外密林">
+    <area   shape="rect"   coords="441,154,477,177"   href="game_page(10102)"   alt="破庙">
+    <area   shape="rect"   coords="247,136,276,205"   href="game_page(10116)"   alt="万佛塔">
+    <area   shape="rect"   coords="90,153,129,186"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10095)end"   alt="武器铺">
+    <area   shape="rect"   coords="43,162,84,194"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10092)end"   alt="药铺">
+    <area   shape="rect"   coords="6,204,46,235"   href="game_page(10096)"   alt="宾至如归客栈">
+    <area   shape="rect"   coords="27,252,68,283"   href="game_page(10059)"   alt="赌馆">
+    <area   shape="rect"   coords="77,255,115,283"   href="game_page(10114)"   alt="翠红院">
+    <area   shape="rect"   coords="148,192,187,219"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10063)end"   alt="知府衙门">
+    <area   shape="rect"   coords="198,217,237,248"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10060)end"   alt="城隍庙">
+    <area   shape="rect"   coords="308,235,379,293"   href="if game_check_scene_event(1041) then game_chat('现在是半夜，关门了。先到客栈睡一觉吧。') else game_page(10013)end"   alt="清波门码头">
+    <area   shape="rect"   coords="344,117,380,140"   href="game_page(10129)"   alt="娘娘庙">
+    <area   shape="rect"   coords="357,55,394,82"   href="game_page(10388)"   alt="兰若寺">
+  </map>
+</div>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=527CF49AB0EDAC2D6ED4CC7F610CE2C0

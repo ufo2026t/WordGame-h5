@@ -1,0 +1,42 @@
+id=10569
+名称=东方镖局仓库
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,东方镖局,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+仓库内看看，有无好东西。<p>
+好东西不少呢，地上一大堆形状各异的盒子，箱子，看来镖局走南闯北，积累了不少好货。<p>
+不过看似安全的地方也可能隐藏着危险，建议先<a href="game_save(0)" title="">游戏存储</a>一下吧。<p>
+<a href="if game_check_res_event(5166) then game_chat('箱子打开过了。') else game_pop_a(8);game_goods_change_n('粗钢腰带',1);game_chat('得到一粗钢腰带');game_add_res_event(5166) end" title="打开看看">一个坛子</a><p>
+<a href="if game_check_res_event(5167) then game_chat('箱子打开过了。') else game_pop_a(8);game_goods_change_n('钻石戒指',1);game_chat('得到一钻石戒指');game_add_res_event(5167) end" title="打开看看">一个大耳朵坛子</a><p>
+<a href="if game_check_res_event(5168) then game_chat('箱子打开过了。') else game_pop_a(8);game_goods_change_n('五毒丸',3);game_chat('得到3五毒丸');game_add_res_event(5168) end" title="打开看看">一个木箱</a><p>
+<a href="if game_check_res_event(5169) then game_chat('箱子打开过了。') else game_pop_a(8);game_goods_change_n('牛黄',2);game_chat('得到2牛黄');game_add_res_event(5169) end" title="打开看看">一个铁皮箱</a><p>
+<a href="if game_check_res_event(5170) then game_chat('箱子打开过了。') else game_pop_a(8);game_goods_change_n('上等木炭',1);game_chat('得到一上等木炭');game_add_res_event(5170) end" title="打开看看">一个牛皮盒子</a><p>
+<a href="if game_check_res_event(5171) then game_chat('箱子打开过了。') else game_pop_a(8);game_goods_change_n('上等木炭',1);game_chat('得到一上等木炭');game_add_res_event(5171) end" title="打开看看">一个小铁箱</a><p>
+<a href="if game_check_res_event(5172) then game_chat('箱子打开过了。') else game_pop_a(8);game_goods_change_n('软骨粉',1);game_chat('得到一软骨粉');game_add_res_event(5172) end" title="打开看看">一个锦盒</a><p>
+<a href="if game_check_res_event(5173) then game_chat('箱子打开过了。') else game_pop_a(8);game_infobox('镖局门人：“你在这仓库里翻箱倒柜的干吗？”');game_pop_fight_a(3,82);game_goods_change_n('九阳丹',1);game_chat('得到一九阳丹');game_add_res_event(5173) end" title="打开看看">一个坛子</a><p>
+<a href="if game_check_res_event(5174) then game_chat('箱子打开过了。') else game_pop_a(8);game_chat('空的箱子');game_add_res_event(5174) end" title="打开看看">一个木盒</a><p>
+<a href="if game_check_res_event(5175) then game_chat('箱子打开过了。') else game_pop_a(8);game_infobox('波斯怪：“哈哈哈哈，我被尘封于此，几百年啦，你却贪图财物，把我给放出来了，看过渔夫的故事吗？哈哈”');game_pop_fight_a(1,87);game_goods_change_n('驱魔符',1);game_chat('得到一驱魔符');game_add_res_event(5175) end" title="打开看看">一个有所罗门符咒封口的罐子，陶瓷的</a><p>
+
+<p>
+<a href="game_page(10527)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=564DE452FC445B40A1EA5AAB73ECBE01

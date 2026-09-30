@@ -1,0 +1,36 @@
+id=11850
+名称=上京王府
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clFuchsia}),clWindow,王府内,AT1002,0,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('家丁')">家丁</a><p>
+<a href="game_page(1)" title="">房间一</a><p>
+<a href="game_page(2)" title="">房间二</a><p>
+<a href="game_page(3)" title="">房间三</a><p>
+<a href="game_page(4)" title="">房间四</a><p>
+
+<:game_true(1)string game_res_goods(0,1,'天外飞仙'):><p>
+<p>
+<a href="game_page(11842)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+家丁=1,这里是王府，你们几个汉人进来干什么？
+I=1,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D9A7CD8DD1B575D8D90773BFE64C70B0

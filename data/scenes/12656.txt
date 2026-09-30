@@ -1,0 +1,56 @@
+id=12656
+名称=房间四
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间四,AT1000,0,0/2007.bmp"></CENTER>
+房间里住着两个中原客商。<p>
+<a href="game_npc_talk('客商甲')">客商甲</a><p>
+<a href="game_npc_talk('客商乙')">客商乙</a><p>
+
+
+
+
+<p>
+<a href="game_page(-4)">二楼走廊</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+客商甲=1,一别中原好几个月了，也不知家中老小怎么样？
+I=1,
+if game_check_scene_event(1286) then
+客商乙=1,谢谢你的玛瑙石。
+I=1,
+else
+if game_check_res_event(9035) then
+if game_check_goods_nmb('玛瑙石',1) then
+客商乙=1,对，要的就是玛瑙石。
+I=[game_goods_change_n('玛瑙石',-1);game_add_scene_event(1286);game_comp_task(9035);game_infobox('您得到了3000金币，2000经验，');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+客商乙=1,您的玛瑙石数量不够。
+end
+else
+客商乙=1,可帮我找1份<FONT color="#FF0000">玛瑙石</FONT>吗？
+I,A=[game_add_task(9035)]1,接受任务
+I,B=1,我现在没空。
+end
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=766018A0D424B54B34926BD9E91ABBAE

@@ -1,0 +1,33 @@
+id=10176
+名称=婺州西峰山入口
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(楷体_GB2312,134,240,{Bold},{clWindowText}),clWindow,西峰山,AT1001,0,65/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<:game_check_scene_event(1009) 自从匪首被擒以后，土匪组织已基本土崩瓦解了，只有零星的小土匪偶尔作乱。else
+ 西峰山上盘踞着一伙势力强大的土匪，经常拦路抢劫过往客商，还时不时下山滋扰乡民。官府虽然多次出兵抓捕，但由于匪首武功高强，且西峰山易守难攻，总是无功而返。<p>
+要进入土匪窝内部，需过七道关卡，且土匪一道比一道多。:>
+<p>
+ &nbsp;<p>
+<:if game_role_count(0) < 3 then 土匪人多势众，仅<b>一两个人</b>上山怕是容易落败，可先在婺州多逛逛结交更多好友。<p>end:>
+<a href="game_page(10177)">进入山寨</a><p>
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C72532BEA120CDF4F394E62811C0B974

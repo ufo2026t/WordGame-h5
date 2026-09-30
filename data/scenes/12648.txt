@@ -1,0 +1,153 @@
+id=12648
+名称=西州城
+作者=
+属性=65
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<:if game_check_scene_event(1085) then
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clGray,半夜,AT1010,1,42/2007.bmp) fixed no-repeat center center;">
+else
+<BODY>
+end:>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,西州城,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_not_scene_event(1282) then run game_add_scene_event(1282) end:>
+<:if game_role_is_exist('丝路花雨') and game_check_scene_event(1318) then
+丝路花雨：“花雨在西州有了根，可天涯路远，还要随你们走。”<p>
+elseif game_role_is_exist('柳依依') and game_check_scene_event(1316) then
+柳依依：“路上采的草，我都记着，回头寄给父亲。”<p>
+elseif game_role_is_exist('西门菲菲') and game_check_scene_event(1314) then
+西门菲菲：“西州风大，倒挺合我的脸。”<p>
+end:>
+西州城是西域的一个繁华城市，在丝绸之路上处于贸易交通要道，每天来往的客商也很多。<p>
+九毒派雄踞西域已久，在西州城势力最大，东来山庄由于庄主武功高强势力稳居第二。<p>
+<:if game_check_scene_event(1281) and not game_check_scene_event(1288) then
+城中传言：九毒派教主近日闭门不出，似在筹划与<b>邙山宝藏</b>有关的大事。<p>
+end:>
+<:if game_check_scene_event(1085) then
+半夜里，很多地方都关门了，只有少数几个地方还亮着灯。<p>
+<a href="game_page(3)">客栈</a><p>
+
+<a href="game_page(27)">东来山庄</a><p>
+<a href="game_page(44)">走马巷</a><p>
+
+else
+街上也时有九毒派的弟子在闲逛。<p>
+<a href="game_npc_talk('九毒派弟子甲')">九毒派弟子甲</a><br>
+<a href="game_npc_talk('九毒派弟子乙')">九毒派弟子乙</a><br>
+<a href="game_npc_talk('东来山庄弟子甲')">东来山庄弟子甲</a><br>
+<a href="game_npc_talk('居民甲')">居民甲</a><br>
+<a href="game_npc_talk('居民乙')">居民乙</a><br>
+<a href="game_npc_talk('客商甲')">客商甲</a><br>
+<a href="game_npc_talk('客商乙')">客商乙</a><br>
+<a href="game_npc_talk('行脚僧人')">行脚僧人</a><br>
+<a href="game_npc_talk('算命先生')">算命先生</a><p>
+
+<a href="game_page(1)">小酒馆</a><p>
+<a href="game_page(3)">客栈</a><p>
+<a href="game_page(10)">府衙</a><p>
+<a href="game_page(23)">药材店</a><p>
+<a href="game_page(24)">武器铺</a><p>
+<a href="game_page(25)">装备铺</a><p>
+<a href="game_page(26)">杂货铺</a><p>
+<a href="game_page(27)">东来山庄</a><p>
+<a href="game_page(44)">走马巷</a><p>
+<a href="game_page(55)">居民房甲</a><p>
+<a href="game_page(56)">居民房乙</a><p>
+end:>
+
+<a href="game_page(57)">九毒派</a><p>
+<a href="game_page(89)">中孚大街</a><p>
+
+
+<p>
+返回<a href="game_page(-1)">西州城外</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1284) then
+九毒派弟子甲=1,来到西州，就到处逛逛吧。
+I=1,好的
+else
+九毒派弟子甲=1,一看你就不像本地人士
+I=1,我是从中原来的
+九毒派弟子甲=2,我兄弟前段时间被教主派去中原了，你可曾见过？
+I=2,你兄弟姓甚名谁？
+九毒派弟子甲=3,莫延顿贺
+if game_check_scene_event(1283) then
+I=3,嘿，在临安还真碰到过。
+九毒派弟子甲=4,真的吗，他最近可好？
+I=4,挺好，就是说吃的不习惯。
+九毒派弟子甲=[if game_not_scene_event(1284) then game_goods_change_n('雪莲',1);game_add_scene_event(1284) end]5,谢谢你的消息，我这有天山雪莲一个送给你吧
+I=[game_reload_chatlist(0)]5,谢谢朋友
+else
+I=3,没有碰到过。
+end
+
+end
+
+九毒派弟子乙=1,这里可是我们九毒派的地盘，if game_sex_from_id(1) then 小子else 小妞end别到处乱闯。
+I=1,真的么？
+if game_check_scene_event(1300) then
+东来山庄弟子甲=1,你帮公子夺回东来令，全城都在说。庄主很感激。
+I=1,
+elseif game_check_scene_event(1289) then
+东来山庄弟子甲=1,公子在练武厅急着找人夺东来令，你若有空去帮忙。
+I=1,
+else
+东来山庄弟子甲=1,我们东来山庄可是名门正派，从不用毒这类下三滥手段。
+I=1,
+end
+居民甲=1,最近突然从中原来的侠士多起来了。
+I=1,这里是丝绸之路，中原人来往的多也很正常啊。
+居民甲=2,以前是客商多，现在是背剑拿刀的多了。
+I=2,
+if game_check_scene_event(1288) then
+居民甲=3,听说有人从教主手里夺了碎块，城里都在传，真是好大的胆子。
+I=3,
+end
+居民乙=1,中孚大街上醉仙楼的酒最醇了
+I=1,这边上不就有个小酒馆？
+居民乙=2,那都是骗骗外地人的，酒不好价格还不便宜
+I=2,
+客商甲=1,听说岳将军撤兵了？
+I=1,
+客商乙=1,驼队的领队说九毒派里有藏宝图。
+I=1,愿闻其详
+客商乙=2,九毒派号称西域毒王，一般人都不敢靠近他们大门，详细情况就不知道了。
+I=2,我听说他们教主手里就有一块藏宝图。
+if game_check_scene_event(1281) and not game_check_scene_event(1288) then
+客商乙=3,那你可去总坛碰碰运气，不过九毒派可不好惹。
+I=3,谢了。
+end
+
+行脚僧人=1,施主化缘，施主化灾。施主不问江湖事，只化缘不化灾。
+I=1,对藏宝图有什么看法？
+行脚僧人=2,财货如梦，不须执着。施主见施主取，施主见施主放。
+I=2,
+算命先生=1,给您算一卦？看你有缘分在西北，七星暗动。
+I=1,何意？
+if game_check_scene_event(1281) and not game_check_scene_event(1288) then
+算命先生=2,西北有宝，需七块碎图拼齐才能开邙山机关。你身带玄机，还差一块呢。
+I=2,
+elseif game_check_scene_event(1288) then
+算命先生=2,镜破了，快走吧，别在西州久留。
+I=2,
+else
+算命先生=2,施主今日宜静养，别闯九毒派总坛。
+I=2,
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F2B5897E455662B357DA776ADD801D54

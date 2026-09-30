@@ -1,0 +1,40 @@
+id=10109
+名称=宾至如归一楼客房2
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,客房二,AT1004,0,0/2007.bmp"></CENTER>
+<p>
+<a href="game_npc_talk('牌友甲')">四个人围坐一圈，正在打马吊</a>。<p>
+ <p>
+<:game_true(1)string game_res_goods(10,1,'五年生草药'):>
+<p>
+
+<a href="game_page(10107)">返回客栈一楼走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+牌友甲=1,东风
+I,A=1,牌友乙@白板
+I,B=1,牌友乙@北风
+牌友甲,A=2,牌友丙@五萬
+牌友甲,B=2,牌友丙@三萬
+I,A=2,牌友丁@自摸，胡啦。
+I,B=2,牌友丁@杠，一条。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=CFC84ACEF66BDFB5D1AA85B6F85D9865

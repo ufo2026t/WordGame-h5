@@ -1,0 +1,89 @@
+id=10702
+名称=葵巷
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,葵巷,AT1000,0,0/2007.bmp"></CENTER>
+巷子内多店铺，有武器装备等出售。<p>
+<a href="game_page(1)" title="">武器店</a><p>
+<a href="game_page(2)" title="">装备店</a><p>
+<a href="game_page(3)" title="">药材店</a><p>
+<a href="game_page(4)" title="">杂货店</a><p>
+<a href="game_npc_talk('赵老板')">赵老板</a>家<p>
+<:game_not_scene_event(1109)
+<a href="game_page(10976)" title="">李老板</a>家<p>:>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('小马')">小马</a>:><p>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('小熊')">小熊</a>:><p>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('小朱')">小朱</a>:><p>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('小方')">小方</a>:><p>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('小王')">小王</a>:><p>
+
+<p>
+<a href="game_page(10583)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_res_event(9003) then
+;;表示接受了任务，这里完成
+赵老板=1,
+I=1,这里有给您的一封信，客栈老板托我带来的。
+赵老板=2,哦，我看看。
+I=2,给
+赵老板=[game_add_scene_event(1014);game_comp_task(9003)]3,恩，多谢if game_sex_from_id(1) then公子else女侠end，这是一点小意思。
+I=3,不客气。
+else
+赵老板=1,if game_sex_from_id(1) then 公子，else 小姐 end 以后有空来坐坐，喝杯茶啊。
+I=1,好的
+end
+小马=1,这附近有个邪教啊，叫“星月神教”，可邪门了，就在<FONT color=#"FF0000">吴山</FONT>背面。
+if game_check_goods_nmb('腰牌碎块',1) then
+I=1,我拿到的这个碎块上的“申”字，莫非是“星月神”的“神”的半个？
+else
+I=1,恩
+end
+小熊=1,听说，宫里有个叫丽妃的，美若天仙，只是不能一见，唉。
+I=1,这有何难，给我100两银子，我带你进宫去见。
+小熊=2,你已经是第101个这样对我说的啦，我的钱是这么好骗的，做梦吧，你。
+I=2,那先带你去见人，在给钱如何？
+小熊=3,哼，你以为我会相信你的鬼话？
+I=3,if game_check_goods_nmb('皇宫令牌',1) then 你看，这是何物（拿出令牌） else 不相信就算了。等我拿了皇宫令牌再给你看见识见识。 end
+小熊=4,if game_check_goods_nmb('皇宫令牌',1) then 哇，你偷了皇宫令牌，我要报官。 else 天为什么这么黑，牛在天上飞，牛为什么在天上飞，你在地上吹……end
+I=4,if game_check_goods_nmb('皇宫令牌',1) then 真是死脑筋，能弄到皇宫令牌的，自非寻常人物，哈哈，你去报吧，else 孺子不可教也。end
+小朱=1,现在猪肉狂涨，弄的咱这姓朱的也跟着倒霉，同学们老是欺负我。
+I=1,小同学，我这有武学奇书一本，你学会了就没人敢欺负你了。
+小朱=2,你骗小孩子，我已经不是小孩子了。
+I=2,那你是？
+小朱=3,我是大孩子了。
+I=3,
+if game_sex_from_id(1) then
+小方=1,
+I=1,村里有个姑娘叫小芳，辫子粗又长……
+小方=2,怎么，没见过美女啊？
+I=2,
+else
+小方=1,鬼市里有十字绣卖，可好看了，我昨天买了两个，回家慢慢绣。
+I=1,
+end
+小王=1,西湖边的曲苑风荷那里的酒掌柜长期收购虎跑泉水呢。只是现在去虎跑的路上有妖怪了，唉。
+I=1,虎跑怎么去？
+小王=2,从灵隐寺的飞来峰那的玉乳洞穿过去就到，只是那玉乳洞迷宫很难走，非得像我这记忆力高强的人才能过。
+I=2,有这么难？
+小王=3,牛皮不是吹的，马车不是推的。
+I=3,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=449E0F9EBBBCD09F424FAAD1E782CC9D

@@ -1,0 +1,34 @@
+id=11893
+名称=昆仑山半山
+作者=
+属性=260
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://314,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,昆仑山,AT1000,0,0/2007.bmp"></CENTER>
+<img src="gpic://img_kunlun4.jpg"><p>
+<:game_true(1)string game_res_goods(0,5,'千年灵芝'):><p>
+
+ <a href="game_pop_a(10);game_page(1)">上山</a><p>
+
+
+
+<a href="game_pop_a(2);game_page(-1)">下山</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B284A31EC27F61774A6A9E4E86C43FB5

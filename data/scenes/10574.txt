@@ -1,0 +1,43 @@
+id=10574
+名称=虚无幻境四
+作者=
+属性=6
+动作=
+{
+D5001=if not game_check_goods_nmb('青龙堰月刀',1) then game_goods_change_n('青龙堰月刀',1);game_infobox('得到了青龙堰月刀一把') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+千里走单骑（过五关斩六将）故事内容由网友“暗黑♂狂人”和“hoking”提供，在此表示感谢<p>
+引子：<br>
+一<a href="game_npc_talk('关羽')">大汉</a>在山坡上叹气，似乎心事重重。<p>
+
+<a href="if game_check_goods_nmb('青龙堰月刀',1) then game_page(11347) else game_chat('您还没和大汉对话完毕。') end" title="">第一关</a>
+<p>
+<a href="if game_not_scene_event(1111) then if game_check_goods_nmb('青龙堰月刀',1) then game_infobox('关羽：“您没有帮我闯关，刀还给我吧。”，关羽拿走了青龙堰月刀');game_goods_change_n('青龙堰月刀',-1); end end game_pop_a(3);game_kill_game_time(0);game_page(10570)">返回宋朝</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+关羽=1,
+I=1,壮士何人，为何叹气？
+关羽=2,我乃蜀国人关羽也，前几日得到兄长刘备的消息，我便去向操要通关公文，但操却闭门不见这可如何是好。
+I=2,曹操欺人太甚！你也非寻常之辈，不理他，一路杀过去算了。
+关羽=3,要在几日前，这等鸟事岂能难的了我，只是这些天偶感风寒，四肢乏力，又无华佗在此，这可如何是好？
+I,A=3,那将军还是多去找几次曹操，告辞.
+I,B=3,我倒是可以帮你一个忙，一起冲出重围如何？
+关羽,A=4,你说的有理，我再去孟德那，烦死他。
+关羽,B=4,不成，我现在提刀都费力。这样，我把青龙堰月刀给你，你开路，我断后如何？
+I,A=4,好主意。
+I,B=[D5001]4,好，就这么做。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EC2B645E28C13D2945EEEBF9E15A104A

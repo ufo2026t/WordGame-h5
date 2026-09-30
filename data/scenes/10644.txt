@@ -1,0 +1,36 @@
+id=10644
+名称=皇城外
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://538,267,(隶书,134,200,{Bold},{clPurple}),clWindow,皇城,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+皇宫依山而建，气势恢宏。<p>
+进入皇宫：<p>
+<a href="game_chat('守卫：“此门平时不让走，只在大典时通行。现在请走其他门。')" title="正门">丽正门</a> <p>
+<a href="if game_check_goods_nmb('皇宫令牌',1) then if game_check_goods_nmb('皇宫衣物',1) then game_page(10780) else game_page(10921) end else game_npc_talk('守卫') end" title="">和宁门</a><p>
+<a href="if game_check_goods_nmb('皇宫令牌',1) then if game_check_goods_nmb('皇宫衣物',1) then game_page(10782) else game_page(10921) end else game_npc_talk('守卫') end" title="">东华门</a>
+<p>
+<a href="game_page(10583)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+守卫=1,站住，请出示令牌。
+I=1,我没有令牌怎么办？
+守卫=2,我只认令牌，不认人。没令牌就不准进去。
+I=2,唉，好吧，我先去秦府看看，或许那里能弄到令牌。
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=43D65E7E82B0EE604C0E0B5F5F091E26

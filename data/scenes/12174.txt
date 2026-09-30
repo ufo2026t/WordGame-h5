@@ -1,0 +1,40 @@
+id=12174
+名称=书院小树林
+作者=
+属性=
+动作=
+{
+D5001=game_pop_fight_a(1,151);game_add_scene_event(1224);game_del_scene_event(1085);game_reload_direct(0)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://260,64,(隶书,134,48,{Bold},{clBlack}),clWindow,树林八,AT1003,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,1,'百年灵芝'):><p>
+<:if game_check_scene_event(1085) and game_not_scene_event(1224) and game_check_scene_event(1233) then
+女妖：“你们到底来了。我与你们无怨无仇，为何与我过不去？”<br>
+string game_get_newname_at_id(1)：“人 妖殊途，本无瓜葛。你出来害人，就不对了。”<br>
+女妖：“我没有害人。只是陪伴公子读书罢了。”<br>
+string game_get_newname_at_id(1)：“陪伴读书是假，吸人元气是真。”<br>
+女妖：“事情说穿了，就不好玩了，不过，如果我再吸了你们几个的元气，我就大功告成啦。”<br>
+string game_get_newname_at_id(1)：“既然你不知悔改。那就超度了你，早日投胎去吧。”<p>
+1。<a href="D5001" title="">捉妖</a><br>
+2。<a href="game_page(11374)" title="">逃跑</a>
+end:><p>
+<a href="game_pop_a(3);game_page(11374)" title="">尽头了</a>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=DFBE8962BC7D5F4C801031250EC39C3B

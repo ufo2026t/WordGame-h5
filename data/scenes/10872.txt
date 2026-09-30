@@ -1,0 +1,51 @@
+id=10872
+名称=地牢
+作者=
+属性=38
+载入后=if not game_read_temp(game_get_pscene_id(1000))then game_pop_fight_a(5,25);game_write_temp(game_get_pscene_id(1000),1) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clWindowText}),clWindow,地牢,AT1001,0,55/2007.bmp) fixed no-repeat center center;">
+地牢内关押着很多犯人，形形色色的。<p>
+这里是地牢一层的牢房，关押着一个衣衫褴褛的<a href="game_npc_talk('老头')">老头</a>。<p>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,1,'大力丸'):><p>
+
+<p>
+<a href="game_pop_a(2);game_page(10873)" title="下到地牢二层">前行</a>
+一个<a href="game_page(10820)" title="">法阵<img src="$apppath$img\fazhen.gif" border="0"></a>，可以离开地牢
+<p>
+<a href="game_pop_a(2);game_page(10853)">返回前一场景</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+老头=1,在我将去西天极乐之前，能看到有活人进来，真是高兴啊。
+I=1,您是？
+if game_sex_from_id(1) then
+老头=2,这位大虾，别问我从哪里来，我命不久矣，只是，一直有个秘密，不想带到西天去。（点此继续对话）
+else
+老头=2,姑娘，我……我有话要告诉你。（点此继续对话）
+end
+I=2,我这就放你出去，你不会这么快死的。
+老头=3,不了，我知道自己，不行了。你过来，我告诉你。
+I=3,有什么话，你说吧，我会替你带到你需要传达的人的。
+老头=[game_add_scene_event(1060)]4,在临安的<FONT color=#"FF0000">凤凰山</FONT>上，有个<FONT color=#"FF0000">千佛洞</FONT>，洞里有个密室，密室里有个一个宝箱，那里，有，有，有藏宝图，还有一块通往皇宫的令牌。开启这个密室的钥匙在……在……<FONT color=#"FF0000">颐云洞</FONT>旁边的石头下。
+I=4,老伯……
+}
+
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0DB6659D611F4499FC2EE68FE662F6B8

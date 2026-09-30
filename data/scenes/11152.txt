@@ -1,0 +1,40 @@
+id=11152
+名称=淮阳乱坟岗内部
+作者=
+属性=6
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://807,267,(隶书,134,200,{Bold},{clWindowText}),clWindow,乱坟岗,AT1010,1,68/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,房三,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1101) then
+ 房间是空的。
+else
+if game_read_temp(1115201) then
+房间是空的。
+else
+一个<a href="game_npc_talk('山贼头目')">山贼头目</a>在独自饮酒。
+end
+end
+:>
+<a href="game_page(11149)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+山贼头目=1,什么人？
+I=1,说，隔壁房间的钥匙在哪？
+山贼头目=2,嘿嘿，想行侠仗义？钥匙在此，看你有没本事拿了。
+I=[game_pop_fight_a(1,47);game_write_temp(1115201,1);game_infobox('拿到了钥匙。');game_reload_direct(0)]2,拿来。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C1C7DF4B0B90D87D77173FE459B11E56

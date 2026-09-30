@@ -1,0 +1,49 @@
+id=11760
+名称=开封皇宫内
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,升平楼,AT1002,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1085) then
+<strong>晚上</strong>。<p>
+if game_read_scene_integer(1171)=1 then
+宫里的人睡着了。<a href="game_pop(6);game_chat('什么也没有发现。')" title="翻翻看">搜索线索</a>
+end
+else
+<strong>白天</strong><p>
+if game_read_scene_integer(1171)=2 then
+if not game_read_temp(1176001) then
+里面有金国高手。<br>
+高手：“好啊，都打进皇宫来了。”<br>
+1。<a href="game_pop_fight_a(3,138);game_write_temp(1176001,1);game_reload_direct(0)" title="">打</a><br>
+2。<a href="game_page(11754)" title="">逃</a>
+else
+宫里没人了。
+end
+else
+里面没人。
+end
+end:><p>
+
+
+<p>
+<a href="game_page(11754)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=21D210309ED77106F014E38CFC7E68B8

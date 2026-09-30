@@ -1,0 +1,49 @@
+id=10016
+名称=后山矿洞
+作者=
+属性=32
+载入后=if not game_check_scene_event(1001) and game_role_is_exist('江雪儿') then game_delay(1000);game_npc_talk('江雪儿') end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clWindow,矿洞,AT1000,1,75/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+洞内黑乎乎的。<p>
+这是以前挖矿留下的残洞，怪石嶙峋，不太好走。<br>
+在此可以<a href="game_pop_dig(100)" title="">挖矿</a>，运气好，能挖到金银也说不定。<p>
+再往里走，有个向下的<a href="game_pop_a(3);game_page(10017)" title="">小洞</a>，幽暗且深不可测。
+<:if game_not_scene_event(1003) and game_not_scene_event(1028) then 忽见一<a href="game_npc_talk('不明人物')">不明人物<img src="$apppath$img\4.bmp"></a>，在朝洞里张望。 end:>
+<p><a href="game_page(10015)">返回到山脚</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+江雪儿=1,这里可以挖矿，试试吧，也许能挖到点值钱的。
+I=1,恩，试试看，能挖到啥看运气。
+江雪儿=2,那边有个小洞，很小，刚好容一个人通过。
+I=2,要不进去看看妖怪可能躲在里面，呆会我进去，你留在外面。
+江雪儿=3,不，我也进去，自我感觉我的武功在你之上。
+I=3,是么，虽说我初入江湖，但士别三日当刮目相看。
+不明人物=1,<img src="$apppath$img\4.bmp">你是人是妖，突然进来吓着本宝宝了。.
+I=1,嘿胆子这么小也能来打怪？
+不明人物=2,这里除了我，就只剩妖怪了，谁料到会有人进来？
+I=2,看你穿着打扮，也不像习武之人啊？
+不明人物=3,我可是法术高手。要不要让你见识见识我的厉害？
+I=3,不了，不了，打怪要紧，听说这洞内的妖怪厉害着呢。
+不明人物=4,我才不怕，你要是不敢，就留在外面吧。
+I,A=4,胆小怕事，非我英雄本色。不过，里面路况复杂，不如我们一起进去也好有个照应。
+I,B=[game_add_scene_event(1028);game_add_friend('江雪儿',1);game_infobox('江雪儿加入了队伍。');game_page(10017)]4,看扁我了？你等着，我自个下去。
+不明人物,A=[game_add_scene_event(1028);game_add_friend('江雪儿',1);game_infobox('江雪儿加入了队伍。')]5,我读书少你可别骗我，也好，万一遇上大怪，你先顶着。
+I,A=[game_page(10017)]5,好，走。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=12C9DF5513C8F428B3B38411BF31156A

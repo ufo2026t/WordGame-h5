@@ -1,0 +1,51 @@
+id=10316
+名称=无剑山庄小岛
+作者=
+属性=32
+载入后=game_can_stop_chat(0);game_npc_talk('彩衣女子')
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://269,267,(隶书,134,200,{Bold},{clLime}),clWindow,岛,AT1001,0,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+小岛面积不大，看起来是人工垒成的。岛上树影婆娑，鲜花盛开，煞是好看。<p>
+<:if game_check_scene_event(1272) then
+捞了多次终于捞回来了，彩衣女子见后楞了一下。
+else
+彩衣女子见你这么快就找回玉钗有些许吃惊的表情。<p>
+end:>
+
+
+<a href="game_page(10304)">返回水榭走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1272) then
+彩衣女子=1,公子毅力过人，虽然捞的时间有点长但好歹捞到了。
+I=1,小姐见笑了。给你钗子。
+else
+彩衣女子=1,公子果然高人，真能从这水中捞回玉钗。
+I=1,小姐见笑了。给你钗子。
+end
+
+彩衣女子=2,这玉钗我既已丢了它，就不拿回来了。
+I=2,那我又把它丢回湖里去咯。
+彩衣女子=3,不如这个玉钗就送与你吧，留个纪念。
+I=3,玉钗看着挺好看的，我就先替姑娘保管着吧。不知姑娘怎么称呼呢
+彩衣女子=4,我叫铁无梅。公子怎么称呼？
+I=4,if game_not_rename(1) then 我还没起名字呢。 else string game_newname_from_oldname('无名') end
+彩衣女子=5,if game_checkname_abc('string game_newname_from_oldname(^无名^)') then  你的名字好怪啊，是不是网名？ else 嗯，今天天色已晚，我要回房休息了。后会有期。end
+I=[game_can_stop_chat(1)]5,后会有期。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3F95C485044F6C484F8F6E388EC91813

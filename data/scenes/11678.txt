@@ -1,0 +1,66 @@
+id=11678
+名称=考试院
+作者=
+属性=5
+动作=
+{
+D5001=if game_check_money(200) then game_change_money(-200); if game_pop_dig(1030)>=25 then game_attribute_change(1,33,1);game_infobox('您获得了童生头衔');game_write_temp(1167802,1);game_reload_direct(0) else game_chat('考试结束，您考试不合格') end else game_chat('您钱不够') end
+D5002=if game_check_money(200) then game_change_money(-200); if game_pop_dig(1030)>=25 then game_attribute_change(1,33,1);game_infobox('您获得了秀才头衔');game_write_temp(1167803,1);game_reload_direct(0) else game_chat('考试结束，您考试不合格') end else game_chat('您钱不够') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,考试,AT1000,0,0/2007.bmp"></CENTER>
+通过考试，您可以获得荣誉，从童生到状元，大学士。<p>
+当然，每次考试要收考试费200。<p>
+有不懂的，可以问<a href="game_npc_talk('先生')">先生</a><p>
+<:if game_get_role_suxing(1,33)= 0 then
+开始<a href="D5001" title="考童生">考试</a>（通过者将获得“童生”头衔，考试规范30题需至少正确25题）<p>
+if game_role_is_exist('江雪儿') then
+
+江雪儿：“有信心吗，来试试看吧。”<p>
+end
+
+else
+if game_get_role_suxing(1,33)= 1 then
+开始<a href="D5002" title="考秀才">考试</a>（通过者将获得“秀才”头衔，30题需至少正确25题，达标即可通过）<p>
+else
+这里最高只能考得秀才，您如需更高荣誉，需要前往<FONT color=#"FF0000">婺州</FONT>和<FONT color=#"FF0000">临安</FONT>考取了。
+end
+end:><p>
+考试院里也被贴上了众多牛皮癣：<p>
+<img src="gpic://262,185,(隶书,134,26,{Bold},{clBlack}),clWindow,葵花考典 135**,AT1006,0,0/2007.bmp">
+<img src="gpic://313,59,(隶书,134,22,{Bold},{clWindowText}),clWindow,考状元必过秘籍 138**,AT1000,0,0/2007.bmp"><p>
+<img src="gpic://299,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,考前辅导班 130**,AT1000,0,0/2007.bmp">
+<img src="gpic://262,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,名师串讲 139**,AT1000,1,0/2007.bmp">
+<p>
+<:if game_read_temp(1167803) then
+  if game_role_is_exist('江雪儿') then
+  江雪儿：“考上秀才了，好佩服你哦。”<p>
+  end
+else
+if game_read_temp(1167802) then
+ if game_role_is_exist('江雪儿') then
+  江雪儿：“哇，你好厉害啊，考试通过了。”<p>
+  end
+end
+end:>
+ <p>
+
+<a href="game_page(10001)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+先生=1,欢迎参加考试！这里可以考得童生和秀才，更高的学位就要去“婺州”考了。
+I=1,具体怎么考呢？
+先生=2,点击开始考试链接即可。一次不中，可以考多次哦。
+I=2,好的，知道了，谢谢先生。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6403D058F98FCCE6921F921B77593ACC

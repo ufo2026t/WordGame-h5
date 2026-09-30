@@ -1,0 +1,38 @@
+id=11582
+名称=朱仙镇客栈二楼
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,客房二,AT1002,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'千年灵芝'):><p>
+<:game_not_scene_event(1151)
+房内有两个<a href="game_npc_talk('和尚')">和尚</a>。
+else
+房间是空的。:>
+<p>
+<a href="game_page(11580)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+和尚=1,和尚甲@师兄，听说咱少林寺的藏经阁内有一本易筋经？
+I=1,和尚乙@那可是少林镇寺之宝啊，听说乃达摩祖师所传。
+和尚=2,和尚甲@今年8月中秋，听说江南要开群雄武林大会。到时寺内高僧都去江南了，咱们偷偷进藏经阁看看如何？
+I=2,和尚乙@不妥不妥，藏经阁乃少林重地，哪能说去就去的。
+和尚=[game_add_scene_event(1151)]3,和尚甲@切，撑死胆大的，饿死胆小的。
+I=3,和尚乙@……
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4B57D58C335B5AEB7580EDFB7AA5A1D8

@@ -1,0 +1,86 @@
+id=11567
+名称=石门关
+作者=
+属性=38
+载入后=if game_not_scene_event(1136) then game_pop_fight_a(5,51) end
+动作=
+{
+D5001=if game_read_temp(1156701)=7 then game_pop(6);game_change_money(30000);game_write_temp(1156701,8);game_chat('找到了3万金钱') else game_chat('破的罐子') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,石门关,AT1000,0,0/2007.bmp"></CENTER>
+此厅不大，石头构成。<p>
+所以看起来气势不错。<p>
+<:if game_check_scene_event(1136) then
+if game_read_temp(1156701)=7 then
+您答对了，土匪王愿赌服输，离开了此地，前往他处令谋出路了。您得到了金钱500作为奖励。<br>
+什么？嫌钱少？那就自己再翻翻找找，看有无其他值钱的。<p>
+一个<a href="game_pop(6);game_chat('一个空的罐子')">罐子</a><p>
+一个<a href="game_pop(6);game_chat('一个空的罐子')">罐子</a><p>
+一个<a href="game_pop(6);game_chat('一个空的罐子')">罐子</a><p>
+一个<a href="game_pop(6);game_chat('一个空的罐子')">罐子</a><p>
+一个<a href="game_pop(6);game_chat('一个空的罐子')">罐子</a><p>
+一个<a href="game_pop(6);game_chat('一个空的罐子')">罐子</a><p>
+一个<a href="game_pop(6);game_chat('一个空的罐子')">罐子</a><p>
+一个<a href="game_pop(6);game_chat('一个空的罐子')">罐子</a><p>
+一个<a href="D5001">罐子</a><p>
+一个<a href="game_pop(6);game_chat('一个空的罐子')">罐子</a><p>
+else
+房间是空的。
+end
+else
+土匪王：“我在这里占山为王多年了，前来打抱不平的也见多了。且看你能耐如何？”<p>
+1。<a href="game_pop_a(3);game_write_temp(1156702,1);game_reload_direct(0)">挑战</a><p>
+2。<a href="game_pop_a(2);game_chat('你趁乱溜走了。');game_page(-1)">溜走</a><p>
+if not game_read_temp(1156701) and game_read_temp(1156702) then
+土匪王：“我不想打打杀杀，来点新鲜的。我这有6张牌，我可以先给你看5张，然后根据这个规律，你要能猜出第六张，那么我就认输。”<br>
+1。<a href="game_pop_a(3);game_write_temp(1156701,1);game_reload_direct(0)">开始</a>
+end
+if game_read_temp(1156701)=1 then
+1。<a href="game_pop_a(6);game_write_temp(1156701,2);game_reload_direct(0)">查看第一张牌</a>
+end
+if game_read_temp(1156701)=2 then
+第一张牌是 A<p>
+1。<a href="game_pop_a(6);game_write_temp(1156701,3);game_reload_direct(0)">查看第二张牌</a>
+end
+if game_read_temp(1156701)=3 then
+第二张牌是 2<p>
+1。<a href="game_pop_a(6);game_write_temp(1156701,4);game_reload_direct(0)">查看第三张牌</a>
+end
+if game_read_temp(1156701)=4 then
+第三张牌是 3<p>
+1。<a href="game_pop_a(6);game_write_temp(1156701,5);game_reload_direct(0)">查看第四张牌</a>
+end
+if game_read_temp(1156701)=5 then
+第四张牌是 5<p>
+1。<a href="game_pop_a(6);game_write_temp(1156701,6);game_reload_direct(0)">查看第五张牌</a>
+end
+if game_read_temp(1156701)=6 then
+第五张牌是 8<p>
+您觉得第六张牌应该是：<br>
+<a href="game_pop_a(6);game_chat('答案错误')" title="选择">9</a><br>
+<a href="game_pop_a(6);game_chat('答案错误')" title="选择">10</a><br>
+<a href="game_pop_a(6);game_chat('答案错误')" title="选择">J</a><br>
+<a href="game_pop_a(6);game_chat('答案错误')" title="选择">Q</a><br>
+<a href="game_pop_a(6);game_add_scene_event(1136);game_write_temp(1156701,7);game_change_money(500);game_reload_direct(0)" title="选择">K</a><br>
+end
+end:><p>
+厅角岩壁上刻着驿道上的古法阵，踏之可直回石门关外。<p>
+<a href="game_pop_a(5);game_page(11554)" title="返回">法阵<img src="$apppath$img\fazhen.gif" border="0"></a><p>
+返回<a href="game_pop_a(2);game_page(-1)" title="返回">后退</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B4165B837F7F6541A2661F99BB6E6E10

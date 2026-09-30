@@ -1,0 +1,40 @@
+id=10575
+名称=虚无幻境五
+作者=
+属性=2
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+穿越到了2016年左右的某部抗日神剧电视里。<p>
+你的任务是去破坏一个秘密情报机构，在一个三层小楼上，每层都有忍者把守。<p>
+<strong>通关要点</strong>：逐层清剿忍者，在楼内找到<strong>定时炸弹</strong>，进入<strong>情报室</strong>启动定时器后立刻撤离；每次成功启动计为通关一次。累计通关<strong>两次</strong>后，东海边会出现前往东瀛的船只。<p>
+<:if game_read_scene_integer(1277)>0 then
+已通关 string game_inttostr(game_read_scene_integer(1277)) 次。
+if game_read_scene_integer(1277)>1 then
+东海边已有东渡之船。
+else
+再通关 1 次即可在东海边乘船东渡。
+end
+<p>
+end:>
+<a href="game_page(12582)" title="">进入第一层</a><p>
+
+<p>
+<a href="game_pop_a(3);game_kill_game_time(0);game_page(10570)">返回宋朝</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=712FB2BA50F9A5814FAEB8B469DEB439

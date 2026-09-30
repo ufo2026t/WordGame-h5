@@ -1,0 +1,44 @@
+id=10584
+名称=西湖区
+作者=
+属性=1
+TempKey=西湖
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+西湖风光旖旎。一山、两堤、三岛、五湖、十景。<br>
+水光潋滟晴方好，山色空蒙雨亦奇。欲把西湖比西子，淡妆浓抹总相宜。<p>
+
+<a href="game_page(1)" title="南宋西湖十景">苏堤春晓</a>
+<a href="game_page(2)" title="南宋西湖十景">曲苑风荷</a>
+<a href="game_page(3)" title="南宋西湖十景">平湖秋月</a>
+<a href="game_page(4)" title="南宋西湖十景">断桥残雪</a>
+<a href="game_page(5)" title="南宋西湖十景">柳浪闻莺</a>
+<a href="game_page(6)" title="南宋西湖十景">花港观鱼</a>
+<a href="game_page(7)" title="南宋西湖十景">雷峰夕照</a>
+<a href="game_page(8)" title="南宋西湖十景">双峰插云</a>
+<a href="game_page(9)" title="南宋西湖十景">南屏晚钟</a>
+<a href="game_page(10)" title="南宋西湖十景">三潭印月</a><p>
+<a href="game_page(10595)" title="">灵隐寺</a><br>
+<a href="game_page(10601)" title="">六和塔</a><br>
+<a href="game_page(10611)" title="到梅家坞,去望梅山庄或者采龙井茶">十里琅当</a><br>
+<a href="game_page(10642)" title="">钱塘门</a>
+<p>
+<a href="game_page(10583)">返回临安城</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D54A39F988BA9A22DAE0E4D7CA40C985

@@ -1,0 +1,29 @@
+id=12106
+名称=伊豆
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,伊豆,AT1000,0,0/2007.bmp"></CENTER>
+伊豆半岛以温泉与海景闻名，远离京都纷争。<p>
+<a href="game_page(12803)" title="">修善寺</a><p>
+<a href="game_page(12153)" title="">远眺富士山</a><p>
+<a href="game_page(12071)">返回九州岛码头</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=526498D3C7CADF70ADD2B1F11421CE66

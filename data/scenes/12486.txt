@@ -1,0 +1,45 @@
+id=12486
+名称=天蓬山庄
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,仓库,AT1000,0,0/2007.bmp"></CENTER>
+仓库内堆放着一些杂货：<p>
+1。一只<a href="game_pop_a(6);game_chat('空的箱子')" title="">箱子</a><br>
+2。一只<a href="game_pop_a(6);game_chat('空的箱子')" title="">箱子</a><br>
+3。一只<a href="if game_check_res_event(5254) then game_chat('物品已经拿走') else game_pop_a(6);game_add_res_event(5254);game_change_money(888);game_chat('得到888金钱') end" title="">箱子</a><br>
+4。一只<a href="game_pop_a(6);game_chat('空的箱子')" title="">箱子</a><br>
+5。一只<a href="game_pop_a(6);game_chat('空的箱子')" title="">箱子</a><br>
+6。一只<a href="game_pop_a(6);game_chat('空的箱子')" title="">箱子</a><br>
+7。一只<a href="if game_check_res_event(5255) then game_chat('物品已经拿走') else game_pop_a(6);game_add_res_event(5255);game_goods_change_n('宝石戒指',1);game_chat('得到宝石戒指1') end" title="">箱子</a><br>
+8。一只<a href="game_pop_a(6);game_chat('空的箱子')" title="">箱子</a><br>
+9。一只<a href="game_pop_a(6);game_chat('空的箱子')" title="">箱子</a><br>
+10。一只<a href="if game_check_res_event(5256) then game_chat('物品已经拿走') else game_pop_a(6);game_add_res_event(5256);game_goods_change_n('青干剑',1);game_chat('得到青干剑1') end" title="">箱子</a><br>
+11。一只<a href="game_pop_a(6);game_chat('空的箱子')" title="">箱子</a><br>
+<:game_true(1)string game_res_goods(0,1,'弯月魔弓'):><p>
+
+
+
+<p>
+<a href="game_page(-11)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=FFBF3F840CAC8820744F6FB536585715

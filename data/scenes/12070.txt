@@ -1,0 +1,35 @@
+id=12070
+名称=峨嵋山
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,400,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,77/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,峨嵋,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_page(12084)" title="">善觉殿</a><p>
+<a href="game_pop_a(5);game_page(12085)" title="">千佛顶</a><p>
+<a href="game_pop_a(20);game_page(12086)" title="">万佛顶</a><p>
+<a href="game_pop_a(50);game_page(12087)" title="">金顶</a><p>
+<a href="game_pop_a(100);game_page(12088)" title="">极顶</a><p>
+<:game_random_chance(3)
+忽然，蹿出<a href="game_npc_talk('猴子')">一只猴子</a>:><p>
+<a href="game_pop_a(2);game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+猴子=1,吱，吱
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=786C38DE6D45BDBCF71C757E67555141

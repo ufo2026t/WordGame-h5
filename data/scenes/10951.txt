@@ -1,0 +1,47 @@
+id=10951
+名称=大理寺天牢
+作者=
+属性=66
+动作=
+{
+D5001=if game_check_money(10000) then game_change_money(-10000) else game_clear_money(1) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://349,347,(隶书,134,260,{Bold},{clWindowText}),clWindow,监,AT1012,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+您和队友都被关进了监牢。
+您现在可以：<p>
+1。向狱卒<a href="game_npc_talk('狱卒')">行贿</a><p>
+2。<a href="game_page(10969)" title="">越狱</a><p>
+3。<a href="game_chat('出了此门，后有三个小门，北门看起来比较宽阔，东门显得阴暗，南门很小，看不太清楚。')" title="">先看看周边环境</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+狱卒=1,
+I=1,兵大爷，这里有一万两银票，您看是否高抬贵手，放了我们一马？
+狱卒=2,你以为这里是什么地方，想来就来，想走就走。你们在皇宫行窃，罪不可恕。且大理寺天牢守卫森严，就算我放了你们，外面这么多弓箭手。你们也是不能活着走出去的。
+I=2,那没有别的办法了吗？
+if game_check_money(10000) then
+狱卒=3,你银票拿来，我想想办法。
+I=[D5001]3,给
+else
+狱卒=3,你这还没一万两呢，不过，我看你像个好人，这样吧，你把钱都给我，我给你想想办法。
+I=[D5001]3,给
+end
+狱卒=4,既然收了你的钱，那我就给你指条明路吧。
+I=4,请兵大爷明示？
+狱卒=5,这天牢，看似固若金汤，也有漏洞，你可以在呆会，正午时分从南边小门一路打出去。
+I=5,现在几时？
+狱卒=6,现在差不多了，我给你开门。
+I=[game_page(10960)]6,ok
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D39B019C6AC442FD89EC3027DA075438

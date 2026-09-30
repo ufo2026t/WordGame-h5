@@ -1,0 +1,36 @@
+id=10502
+名称=寒冰窟
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,寒冰窟,AT1012,0,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+黄药师昔年为封存稀世药材与炼丹半成品，在遗址后开凿了这处万年寒冰窟。<p>
+窟内奇寒彻骨，他还设下时限禁制：寻常高手纵内力深厚，也难在一炷香内穿到最深处；超时便会被禁制弹出窟外。<p>
+传说最深处仍藏有药师亲手封存的异宝。入窟前请先存盘，并备好御寒之物。<p>
+是否进入探查？<p>
+<a href="game_save(0)" title="进入寒冰窟有风险，建议存盘">存盘点</a><p>
+<a href="game_set_game_time(600,10518);game_page(10503)" title="一炷香内须穿出迷宫">进入寒冰窟</a>
+;;<:if not game_check_res_event(game_get_pscene_id(0)) then 在一个不起眼的角落里，有个<a href="game_pop_a(9);game_goods_change_n('五毒丸',10);game_chat('捡到十个五毒丸，一种很厉害的暗器。可使敌人缓慢持续失血而死。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="好东西">陶罐子</a>。end:>
+
+<p>
+<a href="game_page(10499)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A8FC5DAE464A75ADAA95012F57109A86

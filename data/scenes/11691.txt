@@ -1,0 +1,51 @@
+id=11691
+名称=岳飞营
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,中区,AT1002,0,0/2007.bmp"></CENTER>
+宋军驻扎地。旌旗猎猎。<p>
+进入<a href="if game_check_scene_event(1170) then if game_check_scene_event(1194) then game_page(11997) else game_page(11692) end else game_npc_talk('宋兵') end" title="">岳飞大营</a><p>
+<:game_true(1)string game_res_goods(0,1,'软骨粉'):><p>
+
+
+<p>
+<a href="game_page(11576)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_role_is_exist('宇文赫') then
+宋兵=1,站住。岳元帅的大营，也是想进就能进的？
+I=1,宇文赫@（出示令牌）
+宋兵=2,原来是宇文先锋。请吧
+I=[game_add_scene_event(1170);game_page(1)]2,请
+else
+宋兵=1,站住。岳元帅的大营，也是想进就能进的？
+I=1,我们有要事拜见大元帅。
+宋兵=2,你们说有要事就有要事？走开。
+if game_check_goods_nmb('皇宫令牌',1) then
+I=2, （出示皇宫令牌）
+宋兵=3,啊，皇宫的令牌，里边请。
+I=[game_add_scene_event(1170);game_page(1)]3,呵呵
+else
+I=2,我的皇宫令牌呢？
+宋兵=3,令牌，啥令牌，我们没看见，你真要进去，就看你的能耐啦。
+I=[game_pop_a(30);game_add_scene_event(1170);game_page(1)]3,我试试
+end
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=42E49C9DFEFE21F119E4503DE5F668B6

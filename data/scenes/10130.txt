@@ -1,0 +1,52 @@
+id=10130
+名称=娘娘庙内殿
+作者=
+属性=32
+载入后=if not game_check_scene_event(1021) then game_npc_talk('毛贼') end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+娘娘庙内殿，比较冷清，在没膝深的杂草内，忽的飞起几只麻雀。<p>
+&nbsp;<p>
+<:if game_check_scene_event(1021) then
+if game_check_scene_event(1109) then
+旁边的残墙外，江雪儿的墓孤零零的在那里。<br>
+<a href="game_chat('飘起淡淡的烟,一柱清香忆一缕香魂。')" title="">上柱香吧</a><br>
+
+else
+ 一些香灰的余烬，随着微风起舞。
+end
+ else
+香案上青烟袅袅，<FONT color=#"FF0000">江雪儿</FONT>正在那磕头跪拜，两个丫鬟立在旁边。
+end:>
+<a href="game_page(10129)">返回娘娘庙</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if not game_check_scene_event(1021) then
+毛贼=[game_can_stop_chat(0)]1,蒙面人甲@嘿嘿，今天又有小妞送上门来了。
+I=1,蒙面人乙@看来咱哥几个艳福不浅啊。
+毛贼=2,蒙面人丙@弟兄们上。
+I,A=2,if game_sex_from_id(1) then 大爷在此，谁敢放肆？else 姑奶奶在此，何人如此大胆？end
+I,B=[game_delay(1000)]2,毛贼人多势众，我还是先回江府搬救兵吧。
+毛贼,A=3,if game_sex_from_id(1) then 哟嘿，英雄救美来了，弟兄们，先把这不知天高地厚的小子解决了，再来享用美人。else 嘻嘻，又来一小娘子，咱兄弟今天大走桃花运了，美女来者不拒，多多益善，啊，哈哈……end
+毛贼,B=[game_add_scene_event(1007);game_add_scene_event(1109);game_add_scene_event(1021);game_can_stop_chat(1)]3,信息提示@等救兵赶到，江雪儿由于寡不敌众，已被贼人侮辱了，事后觉得再无脸见人，横刀自刎……
+I,A=[game_can_stop_chat(1)]3,江雪儿你带人先走，几个毛贼小意思，我收拾他们绰绰有余了。
+毛贼,A=[game_pop_fight_a(3,46);game_add_scene_event(1021);game_reload_direct(0)]4,江雪儿@你自己千万小心，我带丫鬟去找救兵去。
+end
+I,B=[game_page(10061)]3,信息提示@返回婺州地图
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E3550B6324395D2294A0919A57B26FA5

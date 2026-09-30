@@ -1,0 +1,36 @@
+id=10700
+名称=钱塘江底迷宫
+作者=
+属性=36
+载入后=game_pop_fight_a(4,36)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+迷宫尽头，江水在这里略有缓势，但仍暗流不息。<p>
+<:game_true(1)string game_res_goods(0,1,'玛瑙石'):>
+<p>
+江底岩石上留着几道古阵纹路，据说踏阵可直回迷宫入口，不必再摸黑迂回。<p>
+<a href="game_page(10668)" title="直接返回迷宫入口">法阵<img src="$apppath$img\fazhen.gif" border="0"></a>
+
+<p>
+<a href="game_page(10692)">返回前一场景</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0B3019CA2E59B09190BC164F769BC851

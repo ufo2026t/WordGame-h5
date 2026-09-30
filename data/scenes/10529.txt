@@ -1,0 +1,45 @@
+id=10529
+名称=山庄走廊
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,天外天,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,走廊,AT1000,0,0/2007.bmp"></CENTER>
+<:game_random_chance(3) 手上托着果盘的<a href="game_npc_talk('小丫鬟')">小丫鬟</a>从走廊走过。:>
+<p>
+;;run game_dec_scene_event(5262,1)
+
+;;string game_inttostr( game_read_scene_integer(5262));
+<a href="game_pop_a(2);game_page(10530)" title="">东厢房</a><p>
+<a href="game_pop_a(2);game_page(10531)" title="">西厢房</a><p>
+<a href="game_pop_a(2);game_page(10532)" title="">书阁</a><p>
+<a href="game_pop_a(2);game_page(10533)" title="">兵器库</a><p>
+<a href="game_pop_a(2);game_inc_scene_event(5262,1);game_page(10534)" title="">小姐房间</a><p>
+<a href="game_pop_a(2);game_page(10535)" title="">公子房间</a><p>
+<a href="game_pop_a(2);game_page(10536)" title="">储物室</a><p>
+<a href="game_pop_a(2);game_page(10537)" title="">小河</a><p>
+;;<a href="game_pop_a(2);game_page(10538)" title="">假山</a><p>
+
+<p>
+<a href="game_page(10523)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+小丫鬟=1,if game_sex_from_id(1) then 公子，您是外地来的吧。 else 咦，你这衣裳哪买的，真好看。 end
+I=1,if game_sex_from_id(1) then 这也看的出来，我额头上写着字吗。 else 打妖怪时捡的，下次给你一件哦。 end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2C8C9FF931AA390BBEC086710A7CABD4

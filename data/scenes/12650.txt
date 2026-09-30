@@ -1,0 +1,43 @@
+id=12650
+名称=酒馆后院
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,酒馆后院,AT1000,0,0/2007.bmp"></CENTER>
+ 店里的<a href="game_npc_talk('伙计')">伙计</a>正在忙碌着。<p>
+
+
+<:game_true(1)string game_res_goods(0,1,'上等木炭'):><p>
+
+
+<p>
+<a href="game_page(-1)">小酒馆</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+伙计=1,
+I=1,不知这九毒派好进去不？
+伙计=2,啊，这位if game_sex_from_id(1) then 壮士else女侠end是有所不知啊，这九毒派我们平时都躲着走。
+I=2,为何？
+伙计=3,就怕不知不觉被下毒了。所以你没事最好别去惹他们。
+I=3,
+
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9163A9141DE84F8623BAEA1AB3F30E80

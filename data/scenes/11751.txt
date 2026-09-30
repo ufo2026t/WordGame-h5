@@ -1,0 +1,40 @@
+id=11751
+名称=开封
+作者=
+属性=
+TempKey=刘家寺
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,刘家寺,AT1002,0,0/2007.bmp"></CENTER>
+城东刘家寺，<br>
+京城沦陷后，这里成了金军的指挥部和寻欢作乐之处，宋廷的多位公主均被虐死于此。<p>
+多年过去了，而今金军驻扎到了城内，这里逐渐荒芜破落……<p>
+<:if game_check_scene_event(1244) then
+几个<a href="game_npc_talk('拾荒者')">拾荒者</a>
+else
+偶见老鼠跑过
+end:><p>
+<a href="game_page(12400)" title="">进入寺内</a>
+<p>
+<a href="game_page(11577)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+拾荒者=1,听说这寺内有传世神佛，所以来找找看，也许运气好能碰到。
+I=1,什么传世神佛？
+拾荒者=2,说是从南华寺传入的神像，有俩，能找到一个就能飞黄腾达了。
+I=2,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BE36CC975E609273D542187EF857DF38

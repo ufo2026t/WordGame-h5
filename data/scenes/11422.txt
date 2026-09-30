@@ -1,0 +1,38 @@
+id=11422
+名称=左院
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clBlack}),clWindow,慕容世家,AT1001,0,0/2007.bmp"></CENTER>
+<:if game_role_is_exist('慕容丽雯') or game_check_scene_event(1127) then
+丫鬟：“大小姐，二小姐好。远道而来的朋友好。”<p>
+<a href="game_page(1)" title="">房间一</a><p>
+<a href="game_page(2)" title="">房间二</a><p>
+else
+慕容紫霞<img src="$apppath$img\62.bmp">：“我姐姐去了临安很久了，也不知什么时候能回来。”
+end:>
+<p>
+<a href="game_page(3)" title="">书房</a><p>
+<:game_true(1)string game_res_goods(0,1,'迷踪蛊'):><p>
+<p>
+<a href="game_page(-3)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2706DADDD81A2F43D698B83AD54B1AA4

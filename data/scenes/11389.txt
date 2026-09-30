@@ -1,0 +1,52 @@
+id=11389
+名称=星月神教内
+作者=
+属性=4
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间四,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'虫草精'):><p>
+<:game_check_scene_event(1122)
+<a href="game_npc_talk('对话')">某人</a>若有所思<p>
+:>
+<p>
+<a href="game_pop_a(2);game_page(1)">前进</a>
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_role_is_exist('浅秋') then
+对话=1,浅秋@……
+I=1,想什么呢？
+对话=2,浅秋@我在想这神教的来历。
+I=2,哦，说说看，怎么来的？
+对话=3,浅秋@当年方腊起义，后来失败，逃到一山洞，因叛徒出卖被抓。随后大将辛兴宗赶来救援，但宋兵众多，只有大将方七佛等几人逃脱。后来方七佛联络一些旧部创建了星月神教。
+I=3,那方浩是方七佛的儿子？
+对话=4,浅秋@是的，老教主方七佛病故后，原左护法下毒害了方浩，夺取了教主之位，并和秦相爷暗中勾结，讨好金人。准备大发国难财。
+I=4,真是可恶。
+end
+if game_role_is_exist('方浩') then
+对话=1,方浩@……
+I=1,想什么呢？
+对话=2,方浩@我在想这神教的来历。
+I=2,哦，说说看，怎么来的？
+对话=3,方浩@当年方腊起义，后来失败，逃到一山洞，因叛徒出卖被抓。随后大将辛兴宗赶来救援，但宋兵众多，只有家父方七佛等几人逃脱。后来家父联络一些旧部创建了星月神教。
+I=3,那怎么会搞成现在这个样子？
+对话=4,方浩@年前家父病故后，原左护法下毒，使我个子缩小武功尽失。他趁机夺取了教主之位，并和秦宰相暗中勾结，讨好金人。准备大发国难财。
+I=4,真是可恶。
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=23034DFE292A84F5080C3699A2D4F2F4

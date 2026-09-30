@@ -1,0 +1,39 @@
+id=10018
+名称=矿洞底下一层18号地块
+作者=
+属性=38
+载入后=if game_random_chance(2) then game_pop_fight_a(1, 62) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clWindow,迷宫,AT1000,1,75/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+这里是矿洞的底下一层18号地块，周围转转，看能否捡到东西。<p>
+在迷宫里面，您将不能<a onMouseOver=location.href="game_pop_fight_a(1,61)">随时存盘</a>，当然，有购买存储卡的除外。<p>
+再往里走，旁边有个<a href="game_pop_a(2);game_page(10023)" title="">石门</a>，通向23号地块。<p>
+<:game_true(1)阅读材料：string game_get_read_txt(0):><p>
+远处<a onMouseOver=location.href="game_pop_fight_a(1,61)">又有一个</a><a href="game_pop_a(2);game_page(10019)" title="">石门通向19号地块。</a><p>
+<p>
+<:if not game_check_res_event(5003) then <span id="bo_113">一个东西在那<a href="game_goods_change_n('铜块',1);game_chat('捡到铜块一块。');game_add_res_event(5003);game_inner_html(113,' ')" title="">闪闪发光</a>。</span>end:>
+<:if not game_check_res_event(5085) then <span id="bo_114">一个东西在那<a href="game_goods_change_n('铁护腕',1);game_chat('捡到铁护腕一。');game_add_res_event(5085);game_inner_html(114,' ')" title="">闪闪发光</a>。</span>end:>
+<p>
+<a href="game_page(10017)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+江雪儿=1,往哪里走好呢，编号大的地块还是编号小的地块？
+I=1,这个不一定的，虚则实之，实则虚之。
+江雪儿=2,什么虚虚实实的，听我的，往23号走。
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A437CBBCF1A6AA9AB22E5EF6CD06C0B0

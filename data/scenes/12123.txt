@@ -1,0 +1,66 @@
+id=12123
+名称=平清盛家
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://371,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,平清盛家,AT1000,0,0/2007.bmp"></CENTER>
+房子里显得比较简陋<p>
+<:if game_check_scene_event(1293) then
+平清盛随平氏入京，正与忠正叔共商善后。府中只留老仆看守。<br>
+if game_role_is_exist('千代美') then
+string game_newname_from_oldname('千代美')：“哥哥终于也能扬眉吐气了。”<br>
+end
+else
+if game_check_scene_event(1221) then
+平清盛已经前往<strong>平安京</strong>去了。
+else
+if game_check_scene_event(1220) then
+平清盛：“我听忠正叔说，在<strong>伊贺谷</strong>里面有一个宝物，蕴含神力，可以助战。”
+else
+if game_check_scene_event(1219) then
+<a href="game_add_scene_event(1220);game_npc_talk('平清盛')">平清盛</a><br>
+else
+房间里没人。
+end
+end
+end
+end:>
+<p>
+
+<a href="game_page(12120)">返回</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_role_is_exist('千代美') then
+平清盛=[game_rename_byid(game_id_from_oldname('千代美'),'平津千代' )]1,&_&（惊讶）
+I=1,千代@oniisan（哥哥）
+平清盛=2,imouto（妹妹）
+I=2,千代@我以为再也见不到你了，呜呜……。
+平清盛=3,这几位是？
+I=3,平津千代@我来介绍一下，这几位是我在逃亡途中认识的，中土大宋人士。这位是我哥哥平清盛，我原名叫平津千代。
+平清盛=4,感谢你们对我妹妹的帮助，今天，我为大家接风洗尘。
+I=4,多谢平大侠。
+else
+平清盛=1,你们是何人，来此做什么？
+I=1,我们从中土大宋来的
+平清盛=2,来的都是客，在这里玩玩吧。
+I=2,听说你们和源氏有矛盾？
+平清盛=3,我们的事情，自己能解决。不劳外人操心。
+I=3,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1A822352F78C2476CFF7A62668343243

@@ -1,0 +1,46 @@
+id=12743
+名称=居民丙
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,居民丙,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('邻居')">邻居</a><p>
+ 铁匠帮邻居修门环，锤声叮当。<p>
+<a href="game_npc_talk('铁匠')">铁匠</a><p>
+<p>
+<a href="game_page(-6)">中孚大街</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+铁匠=1,你要打兵器？去中孚大街武器铺，我这只修农具。
+I=1,最近江湖上有什么动静？
+铁匠=2,中原来的侠士多了，都在打听藏宝图的事。我只打铁，不问那些。
+I=2,
+邻居=1,昨晚听到驼铃声，说是驼队进城了。
+I=1,与藏宝图有关吗？
+if game_check_scene_event(1281) and not game_check_scene_event(1288) then
+邻居=2,谁知道呢？只是教主闭门出神，城里人都在猜。
+I=2,
+else
+邻居=2,商队来去，商队来，西州城就靠这做生意。
+I=2,
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=48150354F69EFC0AAE401B7BB8CEBF56

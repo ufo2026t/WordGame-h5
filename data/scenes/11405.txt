@@ -1,0 +1,54 @@
+id=11405
+名称=东坡林
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,东坡林,AT1000,0,0/2007.bmp"></CENTER>
+东坡林，里面可以打怪升级。<p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):><p>
+一个小土坡，长着很多花花草草，<a href="game_pop_dig(200)" title="采药，可随时结束">采药</a>。<p>
+进入东坡林前是否<a href="game_save(0)" title="">存盘</a>？这样万一被怪打死，可以从游戏窗口上面的“<b>存取进度</b>”按钮那里读盘恢复目前的进度<p>
+<a href="if game_grade('无名',12) or game_check_role_values('无名',19,6000) then game_chat('本任务限12级，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('村民') end">村民</a>
+<a href="game_pop_a(2);game_page(1)" title="往前走">前进</a>
+<p>
+<:game_true(1)string game_res_goods(5238,1,'回城卷'):>
+<p>
+<:if game_not_res_event(5147) then <span id="bo_101">一个<a href="game_goods_change_n('铁蒺藜',1);game_goods_change_n('一年生草药',1);game_chat('捡到一年生草药1颗，可在战斗时补充生命值，捡到铁蒺藜暗器1个，可在战斗时用来投掷。');game_add_res_event(5147);game_inner_html(101,' ')" title="">宝箱</a></span>end:>
+<:if game_not_res_event(game_get_pscene_id(0)) then
+<span id="bo_102">一个小<a href="game_goods_change_n('存储卡',1);game_chat('捡到存储卡1。一种可以在迷宫内存盘的东西，一个卡只能存一次，可在杂货店买到。');game_add_res_event(game_get_pscene_id(0));game_inner_html(102,' ');game_add_message('等级提高后可去小镇转转，然后可以去拜访无剑山庄庄主。')" title="">包裹</a>。</span>end:><p>
+<p>
+<a href="game_page(-4)">返回</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+
+if game_check_res_event(9025) then
+if game_check_goods_nmb('茯苓根',2) then
+村民=1,对，要的就是茯苓根。
+I=[game_goods_change_n('茯苓根',-2);game_comp_task(9025);game_infobox('您得到了80金币，80经验');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+村民=1,您采集的茯苓根数量不够。
+end
+else
+村民=1,这里可以采药，但我一直没挖到，你可帮我采2份<FONT color="#FF0000">茯苓根</FONT>吗？
+I,A=[game_add_task(9025)]1,接受任务
+I,B=1,我现在没空。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9FD36008A578AED34C38A666EECE8055

@@ -1,0 +1,40 @@
+id=10116
+名称=万佛塔
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<:if game_check_scene_event(1041) then
+<BODY style="background:url(gpic://0,0,(隶书,134,240,{Bold},{clGray}),clWindow,塔,AT1012,1,0/2007.bmp) fixed no-repeat center center;">
+else
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clGray}),clWindow,塔,AT1012,0,0/2007.bmp) fixed no-repeat center center;">
+end:>
+
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+万佛塔由五代时期的吴越钱氏所造。<p>
+钱俶为吴越国王时，崇信佛教，想效仿阿育王造八万四千塔。<p>
+此塔高九层。每个砖上都雕有佛像，故名万佛塔。<p>
+&nbsp;<p>
+原先香火鼎盛，朝拜者甚多。<p>
+最近塔内却被妖魔占去做了修炼场所。<br>
+就没有人再敢随便靠近这里了。<p>
+进入<a href="if not game_grade('无名',10) then game_question('您的等级过低，塔内妖魔不是省油的灯，是否进入？'); end game_pop_a(2);game_page(10117)" title="">万佛塔一层</a><p>
+
+<a href="game_page(10061)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=317A5551D0312BD6FC19A98FD7C9105E

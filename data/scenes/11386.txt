@@ -1,0 +1,45 @@
+id=11386
+名称=星月神教内
+作者=
+属性=4
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间一,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,2,'千年人参'):><p>
+耳畔有悠悠的轻乐传来，夹杂着哀婉的歌声。<p>
+<a href="game_npc_talk('对话')">瞧一瞧</a>
+<p>
+<a href="game_pop_a(2);game_page(1)">前进</a>
+<p>
+<a href="game_pop_a(2);game_page(11377)">返回</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+对话=1,乐女@你可是要听歌么？
+I=1,我已经听过了，只是听得歌声甚是凄切，让我悲从中来。
+对话=2,乐女@我在此每天对人强颜欢笑，只能在无人的时候，独自悲伤。我爱的人已离我而去。
+I=2,有爱你的人在你身边，也是很好啊。
+对话=3,没有人真正的爱我，男人都当我是玩物。
+if game_sex_from_id(1) then
+I=3,世上也有很多重情重义的男人，比如我。
+对话=4,乐女@虚伪
+I=4,
+else
+I=3,天下男人没有一个是好东西。谁要是欺骗了你的感情，你就……
+对话=4,乐女@阉了他
+I=4,*_*
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0F2D07D3E9FFC77F0C6C5798D71E6865

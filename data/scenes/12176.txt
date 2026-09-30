@@ -1,0 +1,35 @@
+id=12176
+名称=书院宿舍
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://260,64,(隶书,134,48,{Bold},{clBlack}),clWindow,宿舍一,AT1003,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1085) then
+<a href="game_npc_talk('书生甲')">书生甲</a>正在看书。
+else
+白天，宿舍没人。
+end:><p>
+<:game_true(1)string game_res_goods(0,1,'干粮'):><p>
+<p>
+<a href="game_page(12175)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+书生甲=1,有朋自远方来，不亦乐乎。请坐。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3077749D67B0AF436BBF6D0677A97AD7

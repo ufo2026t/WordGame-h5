@@ -1,0 +1,35 @@
+id=11403
+名称=新手村-房间2
+作者=
+属性=256
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,房间二,AT1000,0,0/2007.bmp"></CENTER>
+;;<img src="gpic://img_xiaomei.jpg" style="float:left;">
+房间里只有一些简单的家具。<p>
+<:if game_check_res_event(5241) then
+小小的窗户外面，照进了一缕淡淡的阳光。
+else
+桌上放着一个小包裹，有点<a href="game_add_res_event(5241);game_change_money(200);game_chat('得到了200钱');game_reload_direct(0)" title="">碎银子</a>，可带着作为路上盘缠。
+end:><p>
+<:game_true(1)string game_res_goods(5238,1,'三年生草药'):> <p>
+<a href="game_page(-1)">返回</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9F9A1FDF98681A676AA1036F9AA069BD

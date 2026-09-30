@@ -1,0 +1,46 @@
+id=12575
+名称=上京客栈楼上
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,上京客栈,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_page(1)" title="">客房一</a><p>
+<a href="game_page(2)" title="">客房二</a><p>
+<a href="game_page(3)" title="">客房三</a><p>
+<a href="game_page(4)" title="">客房四</a><p>
+<a href="game_page(5)" title="">客房五</a><p>
+ <:game_true(1)string game_res_goods(0,1,'千年灵芝'):><p>
+<:if game_check_scene_event(1280) and not game_check_scene_event(1281) then
+run game_add_scene_event(1281);game_add_message('前往西域九毒派探查藏宝图碎块。')
+if game_role_is_exist('江雪儿') then
+ 江雪儿：
+else
+ if game_role_is_exist('慕容丽雯') then
+   慕容丽雯：
+else
+
+end
+end
+ “看来要去一趟<FONT color=#FF0000>西域</FONT>的<b>九毒派</b>打探打探消息。”<p>
+end:>
+<a href="game_page(11855)">返回</a><br>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A389B9740E14AAB4641113D7BEC9BA91

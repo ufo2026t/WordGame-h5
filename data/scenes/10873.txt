@@ -1,0 +1,34 @@
+id=10873
+名称=地牢
+作者=
+属性=38
+载入后=if not game_read_temp(game_get_pscene_id(1000))then game_pop_fight_a(2,95);game_write_temp(game_get_pscene_id(1000),1) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clWindowText}),clWindow,地牢,AT1001,0,55/2007.bmp) fixed no-repeat center center;">
+这里是地牢二层。铁闸门后传来鞭笞声，狱卒押着几个钦犯走过。<p>
+一个吓破胆的<a href="game_npc_talk('狱卒')">狱卒</a>缩在角落。<p>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,1,'银块'):><p>
+<p>
+<a href="game_pop_a(2);game_page(10874)" title="往二层深处">前行</a><p>
+<a href="game_pop_a(2);game_page(10872)" title="回到地牢一层">返回一层</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+狱卒=1,二层闲人免进！哎……你们把高手都打散了？
+I=1,二层关的都是什么人？
+狱卒=2,钦犯、言官、还有从宫里押下来的。再往里是赃物间和单间，最里面关着一个校尉，快不行了。
+I=2,你自己逃命去吧。
+}

@@ -1,0 +1,40 @@
+id=12698
+名称=二楼走廊房间一
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,二楼走廊房间一,AT1000,0,0/2007.bmp"></CENTER>
+楼梯口连着五间客房，墙上列着住宿须知与禁烟火。<p>
+<a href="game_npc_talk('店伙计')">店伙计</a><p>
+<a href="game_page(1)">房间二</a><br>
+<a href="game_page(2)">房间三</a><br>
+<a href="game_page(3)">房间四</a><br>
+<a href="game_page(4)">房间五</a><br>
+
+
+<p>
+<a href="game_page(-1)">账房</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+店伙计=1,别在走廊大声议论江湖事，九毒派的耳目多。
+I=1,
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=08C02D75CBA923BED6F650F052231CB7

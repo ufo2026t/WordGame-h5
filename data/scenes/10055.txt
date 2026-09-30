@@ -1,0 +1,32 @@
+id=10055
+名称=李大毛家
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+李大毛：“咱们村三年一度的比武擂台赛今天到了最关键的时候了，我看二愣子能胜出。”<p>
+李妻：“照我说呀，小黑才是最厉害的。别看黑不溜秋的，可灵活着呢。”<p>
+李大伯：“你们都别争，呆会去看看就知道了。我听村长说今年收成好，比赛头名还有银子奖励呢。”<p>
+<p>
+<:game_true(1)string game_res_goods(5016,1,'百年人参'):>
+<p>
+<a href="game_page(10054)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B1B6127316E40B4D782EA749EAE484BE

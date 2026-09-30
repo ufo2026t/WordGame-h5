@@ -1,0 +1,43 @@
+id=12655
+名称=房间三
+作者=
+属性=
+TempKey=
+动作=
+{
+D5001=if game_check_money(5000) then game_change_money(-5000);game_goods_change_n('黄玉',1);game_infobox('买了一块黄玉');game_add_scene_event(1285);game_reload_chatlist(0) else game_infobox('您钱不够') end;
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间三,AT1000,0,0/2007.bmp"></CENTER>
+ 房间里摆了不少行李。<p>
+住着一位<a href="game_npc_talk('商人')">商人</a>模样的中年人。
+
+
+
+
+<p>
+<a href="game_page(-3)">返回二楼走廊</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1285) then
+商人=1,天山的雪莲不错，下次我带点来卖卖。
+I=1,好的，下次再照顾你生意。
+else
+商人=1,我从和田那边来，手头有块上等黄玉想把它卖了，你要不要，5000？
+I,A=[D5001]1,好的，我买一块。
+I,B=1,谢谢，我不需要。
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E2AE2931D23409BC42DDDF5ADC7877BC

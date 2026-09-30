@@ -1,0 +1,58 @@
+id=12072
+名称=恭喜高中探花
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<bgsound src="$apppath$music\雪花神剑.mid" loop="-1">
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clBlack}),clWindow,金榜题名,AT1012,0,0/2007.bmp"></CENTER>
+恭喜您金榜题名，中得“<FONT color=#"FF0000">探花</FONT>”。<p>
+<:if game_sex_from_id(1) then
+run game_change_money(10000)
+李公公：“皇上赏赐金钱一万”<p>
+else
+run game_change_money(10000)
+李公公：“皇上赏赐金钱一万”。
+end:>
+<p>
+<:if game_sex_from_id(1) then
+ if game_role_is_exist('江雪儿') then
+  江雪儿：“好爱你啊，来亲一个。”<br>
+   if game_role_is_exist('慕容丽雯') then
+    慕容丽雯：“江姑娘注意形象，皇宫大殿上搂搂抱抱的成何体统。”<br>
+    李公公：“我啥都没看见，你们继续。”
+    end
+  end
+  
+else
+if game_role_is_exist('江雪儿') then
+  江雪儿：“都是女的怎么差别就这么大呢，啥时候我也考个功名来。”<br>
+  end
+  if game_role_is_exist('慕容丽雯') then
+    慕容丽雯：“巾帼不让须眉。”<br>
+  end
+  if game_role_is_exist('宇文赫') then
+  宇文赫：“你考试如同切萝卜，让我好有压力啊。”<br>
+  end
+
+end
+:><p>
+<a href="game_page(10781)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3755AD2F409188DDB8CF3F2B5979EE0E

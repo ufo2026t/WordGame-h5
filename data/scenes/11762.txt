@@ -1,0 +1,40 @@
+id=11762
+名称=开封皇宫内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,延福宫,AT1002,0,0/2007.bmp"></CENTER>
+宫的东门为晨晖，西门称丽泽。<p>
+<a href="game_page(1)" title="">延福殿</a><p>
+<a href="game_page(2)" title="">蕊珠殿</a><p>
+<a href="game_page(3)" title="">会宁殿</a><p>
+<a href="game_page(4)" title="">蕙馥阁</a>&nbsp;&nbsp;<a href="game_page(5)" title="">蟠桃阁</a>&nbsp;&nbsp;<a href="game_page(6)" title="">春锦阁</a><p>
+<a href="game_page(7)" title="">叠琼阁</a>&nbsp;&nbsp;<a href="game_page(8)" title="">芬芳阁</a>&nbsp;&nbsp;<a href="game_page(9)" title="">丽玉阁</a><p>
+在会宁殿之北，有一座用石头叠成的小山，山上建有一殿二亭，名为<a href="game_page(10)" title="">翠微殿</a>、<a href="game_page(11)" title="">云归亭</a>、<a href="game_page(12)" title="">层亭</a>。<p>
+凝和殿附近，有两座小阁，名曰玉英、玉涧。<p>
+背靠城墙处，筑有一个小土坡，上植杏树，名为杏岗，旁列茅亭、修竹，别有野趣。<p>
+宫有右侧为宴春阁，旁有一个小圆池，架石为亭，名为<a href="game_page(12)" title="">飞华</a>。<p>
+又有一个凿开泉眼扩建成的湖，湖中作堤以接亭，又于堤上架一道粱入于湖水，粱上设茅亭栅、鹤庄栅、鹿岩
+栅、孔翠栅。由此到丽泽门一带，嘉花名木，类聚区分，幽胜宛如天造地设。
+
+<p>
+<a href="game_page(11754)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5EBA17760F4E6635B230371568A4C947

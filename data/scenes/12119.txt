@@ -1,0 +1,47 @@
+id=12119
+名称=上野村
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,上野村,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('田边大郎')">田边大郎</a><p>
+<a href="game_npc_talk('小山雅子')">小山雅子</a><p>
+<a href="game_npc_talk('喜多郎')">喜多郎</a><p>
+<a href="game_page(12122)" title="">平忠正家</a>
+<p>
+<a href="game_page(12105)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_role_is_exist('千代美') then
+田边大郎=1,咦，这不是千代吗？你没事？回来了？
+I=1,千代@嗯
+小山雅子=1,千代回来了！这些时间吃了不少苦吧
+I=1,谢谢关心。
+喜多郎=1,上山捉鸟去了
+I=1,
+else
+田边大郎=1,干吗盯着我看？没见过日本人啊？
+I=1,
+小山雅子=1,看你们是外地人吧，我叫小山雅子，欢迎到伊贺来。
+I=1,
+喜多郎=1,你们从哪里来啊
+I=1,这小屁孩
+end
+
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=02E03C5126458092D09C786AC38CDA45

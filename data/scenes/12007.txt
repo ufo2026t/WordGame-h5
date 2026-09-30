@@ -1,0 +1,41 @@
+id=12007
+名称=武当山
+作者=
+属性=64
+TempKey=武当
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,400,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,77/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,武当,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('武当弟子')">武当弟子</a><p>
+<a href="game_page(1)">紫霄宫</a><p>
+<a href="game_page(2)">南天门</a><p>
+<a href="game_page(3)">老君岩</a><p>
+<a href="game_page(4)">天柱峰</a><p>
+<a href="game_pop_a(3);game_page(11998)">法阵<img src="$apppath$img\fazhen.gif" border="0">，到武当山脚</a><p>
+
+<a href="game_pop_a(2);game_page(-1)">返回迷宫</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+武当弟子=1,前方是“解剑池”原先有客到访，皆需在此解剑，不能带刃上山，不过，自从张真人主持武当后，说有剑无剑，自在心中。这规矩就作废了。
+I=1,多谢指点。只是这武当山错综复杂，都有哪些去处？
+武当弟子=2,南天门那里，有绝壁崖和深涧两处迷宫。老君岩，只是一山，没有迷宫。天柱峰，一般不让上，除非……
+I=2,除非什么？
+武当弟子=3,有武当弟子层层把守，除非能胜过他们，才能上得顶峰。
+I=3,哦，明白了，谢谢您。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3C4D7AF40826349213981B9E5F1DC693

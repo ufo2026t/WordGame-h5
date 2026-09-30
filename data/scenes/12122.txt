@@ -1,0 +1,110 @@
+id=12122
+名称=上野村-平忠正家
+作者=
+属性=
+载入后=if game_check_goods_nmb('平安京令牌',1) and game_not_scene_event(1333) then game_add_scene_event(1333) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://371,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,平忠正家,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1293) then
+平忠正已入<strong>平安京</strong>主持大局。京都传讯：源氏主力溃退，平氏重掌朝政。<br>
+if game_role_is_exist('千代美') then
+string game_newname_from_oldname('千代美')：“这一仗，总算为平氏争回一口气。”<br>
+end
+else
+if game_check_scene_event(1333) then
+平忠正：“万事俱备。你持<strong>平安京令牌</strong>，可入皇宫联络旧部，共讨源氏。”<br>
+if game_check_goods_nmb('平安京令牌',1) then
+可前往<strong>平安京</strong>的皇宫。
+else
+令牌请妥善保管。
+end
+else
+if game_check_scene_event(1221) then
+if game_check_goods_nmb('圣杯',1) and game_check_goods_nmb('罗钿紫檀五弦琵琶',1) and game_check_goods_nmb('琉璃杯',1) then
+平忠正：“圣杯与唐物俱齐，可正式起事了。”<br>
+<a href="game_goods_change_n('圣杯',-1);game_goods_change_n('罗钿紫檀五弦琵琶',-1);game_goods_change_n('琉璃杯',-1);game_goods_change_n('平安京令牌',1);game_add_scene_event(1333);game_chat('平忠正大喜：圣杯镇邪，唐物示诚。此平安京令牌收好，可入皇宫。');game_reload_direct(0)" title="">献圣杯与正仓院唐物</a>
+else
+if game_check_goods_nmb('圣杯',1) then
+平忠正：“圣杯既得，尚需<strong>罗钿紫檀五弦琵琶</strong>与<strong>琉璃杯</strong>为见面之礼。听说在<strong>奈良东大寺正仓院</strong>的旧藏中。”
+else
+平忠正：“现在手头有了这宝物，我们可以重返<strong>平安京</strong>，和源氏决一死战了。”
+end
+end
+else
+if game_check_scene_event(1220) then
+if game_check_scene_event(1223) and not game_check_scene_event(1299) then
+<a href="game_npc_talk('平中正')">平忠正</a>正在看书。
+elseif game_check_scene_event(1299) then
+平忠正：“渡边送来的药已救活几名伤兵，士气大振。”<br>
+else
+平忠正：“我们和源氏一战败北，源氏更是派出杀手，让千代全家几无活口。唉”<br>
+if game_role_is_exist('千代美') then
+string game_newname_from_oldname('千代美')：“我要杀了他们，为家人报酬。”<br>
+else
+“源氏如此作为，该杀。你们何不也雇请杀手，干掉他们？”<br>
+end
+平忠正：“此事要从长计议，不可操之过急。现在源氏势力很大。如果能找到在<strong>伊贺谷</strong>的
+“圣杯”，将可助我们一举扫平源氏，重振我平氏家族威望。”<br>
+“好，我们去伊贺谷看看。”
+end
+else
+if game_check_scene_event(1219) then
+平忠正：“去<strong>城下町</strong>看看吧”<br>
+else
+run game_add_scene_event(1219)
+<a href="game_npc_talk('平忠正')">平忠正</a>正在拭剑<br>
+end
+end
+end
+end:>
+
+<a href="game_page(12119)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_role_is_exist('千代美') then
+平忠正=1,
+I=1,千代美@忠正叔叔。
+平忠正=2,啊，千代回来了。我们都以为你死了呢，回来就好，回来就好。说说，这些日子去哪里了？
+I=2,千代美@我去了中土大宋。
+平忠正=3,中土，那地方听说比咱们这地方大啊。
+I=3,千代美@是的，大多了呢。
+平忠正=4,有见到你哥哥没？
+I=4,千代美@哥哥，他还活着？我没见到啊。
+平忠正=5,那你去<strong>城下町</strong>看看吧。
+I=5,千代美@好的，我这就去。
+else
+平忠正=1,唉，也不知当年平津千代逃出去后，是死是活，一直杳无音信。
+I=1,我好像见到过这个人，她应该还活着。
+平忠正=2,但愿如此。对了，你们不远千里，从中土来这里做什么？
+I=2,我们祖上曾有徐福东渡的传说，所以，就顺着海流，来到了这个海岛。
+平忠正=3,海岛？这可是一泱泱大国呢。
+I=3,哦，呵呵，是“大国”。
+平忠正=4,这还有假？
+I=4,我来这以后，听说了有关平氏和源氏的一些传闻。
+平忠正=5,一提起这事我就伤心。现在源氏好不嚣张，可惜我们经上次大战后元气大伤，难以挽回劣势啊。
+I=[game_add_scene_event(1220)]5,那可有想到补救之道？
+平忠正=6,祖上传闻，在<strong>伊贺谷</strong>，有一宝贝，其力能敌千军，只可惜，无能能寻回此物。否则，平氏复兴就有望了。
+I=6,
+end
+平中正=1,
+I=1,我们在伊贺谷底发现一个机关，但打不开。
+平中正=2,机关？真的找打机关了？传说，圣杯被放在一个牢不可破的机关内，只有用<strong>忍者钥匙</strong>才能打开。
+I=2,忍者钥匙？要在哪里才能找到？
+平中正=3,这个我也不清楚了，听说<strong>熊野本宮</strong>有个镇宫之宝，是个钥匙形状的东西，可能就是忍者钥匙。
+I=3,多谢平大侠，我们看看去。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=323E36A71927E52F8D0D785BA17A07EF

@@ -1,0 +1,56 @@
+id=11388
+名称=星月神教内
+作者=
+属性=4
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间三,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'虫草精'):><p>
+<a href="game_npc_talk('神教小头目')">神教小头目</a>
+<p>
+<a href="game_pop_a(2);game_page(1)">前进</a>
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1125) then
+神教小头目=1,您走好。
+I=1,
+else
+神教小头目=1,你们是新来的？这么不懂规矩，到处乱走。
+I=1,我爱走哪走哪，你管的着吗？
+神教小头目=[game_pop_fight_a(1,118)]2,看我不教训一下你们这不懂事的。
+I=2,如不服气，咱们再来比试比试？
+if game_grade('无名',50) then
+神教小头目=[game_add_scene_event(1125)]3,不敢了不敢了，您的武功不在教主之下啊，当真前途不可限量。
+I=3,哈哈哈哈，剑在手，四方云动，问苍天，谁是英雄？
+神教小头目=4,当然是您老了，谁与争锋？
+I=4,我老么？
+神教小头目=5,不老不老，小的有眼无珠，该死。
+I=5,滚
+神教小头目=6,是
+I=[game_reload_direct(0)]6,哈哈
+else
+神教小头目=[game_add_scene_event(1125)]3,不敢了不敢了，您的武功不在左右两大护法之下啊，厉害。
+I=3,哈哈哈哈，护法算啥，我连教主都不怕
+神教小头目=4,哟，您这牛皮可吹大了，教主的武功深不见底啊。
+I=4,教主有这么厉害？
+神教小头目=5,那是，没有两把刷子能做上教主？
+I=[game_reload_direct(0)]5,也对
+end
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=18004A0819B77DD74668A344911A7BE9

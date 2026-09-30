@@ -1,0 +1,70 @@
+id=10784
+名称=选德殿
+作者=
+属性=4
+动作=
+{
+D5001=game_npc_talk('大内高手')
+D5002=if game_check_scene_event(1137) and game_not_scene_event(1207) then game_write_temp(1078401,1);game_reload_direct(0) else game_page(1) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clPurple}),clWindow,选德,AT1001,0,62/2007.bmp) fixed no-repeat center center;">
+皇帝与群臣议事的选德殿。<p>
+<:game_check_scene_event(1073)
+窗台上新摆了一盆君子兰。
+else
+窗台边一个矮桌。装饰有牡丹天仙图的红木屏风在桌子后面。<br>
+桌子上的<a href="game_npc_talk('对话')" title="">沉香木笔筒</a>显得很精致。<p>
+:><p>
+两个<a href="game_add_scene_event(1066);game_npc_talk('卫兵')">卫兵</a><p>
+<:if game_read_temp(1078401) then
+if game_check_scene_event(1208) then
+赵小金：“你们进崇政殿去吧，我在外面等着。”<br>
+end
+<strong>大内高手</strong>：“现在皇帝正在崇政殿内，你们几个看起来鬼鬼祟祟的，不能进入。”<br>
+1。<a href="game_pop_fight_a(2,96);game_page(1)" title="进入崇政殿">就要进崇政殿</a><p>
+else
+一条石板路，通往<a href="D5002" title="">崇政殿</a><p>
+end:>
+一条石板路，通往<a href="game_page(10787)" title="到皇帝寝宫">福宁殿</a><p>
+一条石板路，通往<a href="game_page(-1)" title="返回">后殿</a><p>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1066) then
+卫兵=1,卫兵甲@昨晚没睡好。
+I=1,卫兵乙@是啊，这几天皇宫里老不安宁，闹心。
+else
+卫兵=1,卫兵甲@我昨天看见秦大人匆匆忙忙的来找皇上，不知是什么事情这么急。
+I=1,卫兵乙@好像和岳元帅有关，听说前线出事了。
+卫兵=2,卫兵甲@可知是什么事情？
+I=2,卫兵乙@说是金兵里有很多妖怪助阵。
+卫兵=3,卫兵甲@哦，有这稀奇事？
+I=3,卫兵乙@怪事年年有，今年特别多。
+end
+if game_role_count(0)>1 then
+对话=1,string game_get_newname_at_id(2)：“这个笔筒看起来有点怪异。”
+I=1,我看看。（点此继续对话）
+else
+对话=1,自言自语@这个东西怎么这么晃眼呢？
+I=1,拿起看看。（点此继续对话）
+end
+对话=2,大内高手@我注意你们好久了，果然是个混进宫里来的奸细。乖乖受绑，免得更多皮肉之苦。
+I,A=2,能来到这里，自然是高手啦，哈哈，咱们剑下见分晓。
+I,B=2,if game_sex_from_id(1) then 我确实是新来的太监，您误会了。else 我是新来的宫女，哪会是什么奸细啊，听风就是雨的 end
+对话,A=[game_pop_fight_a(1,96);game_goods_change_n('上半封密信',1);game_infobox('在笔筒下得到半封密信，只是这半封是密文，要和另外一半对照起来才能看懂内容。');game_add_scene_event(1073);game_reload_direct(0)]3,大内高手@爽快，接招。
+对话,B=3,大内高手@哈哈，那就别在这里乱动东西，出去。
+I,A=3,
+I,B=[game_page(-1)]3,是。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B6EAA0636359CA4D8E917CBDCE416F84

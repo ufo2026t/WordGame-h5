@@ -1,0 +1,42 @@
+id=10075
+名称=左卧室
+作者=
+属性=34
+载入后=game_npc_talk('同伴')
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(楷体_GB2312,134,120,{Bold},{clWhite}),clSilver,古堡,AT1009,1,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+卧室内只剩一些破家具。<p>
+<:game_true(1)阅读材料：string game_get_read_txt(0):><p>
+<:game_true(1)string game_res_goods(5027,1,'仙露饮'):>
+<p>
+
+<a href="game_page(10068)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_role_count(0) > 1 then
+同伴=1,
+I=[game_write_name('string game_get_newname_at_id(2)')]1,大家这里找找，看有没有什么线索。
+if game_id_exist(3) then
+string game_get_newname_at_id(2)=1,嗯。
+I=1,string game_get_newname_at_id(3)@对，到处翻翻。
+else
+string game_get_newname_at_id(2)=1,好。
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=75F99607136E3D257C7EE3E00AB17E39

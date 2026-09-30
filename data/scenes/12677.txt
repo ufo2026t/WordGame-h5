@@ -1,0 +1,64 @@
+id=12677
+名称=练武厅
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,练武厅,AT1000,0,0/2007.bmp"></CENTER>
+枪刀剑戟列于两侧，东来弟子在此切磋。<p>
+<a href="game_npc_talk('东来公子')">东来公子</a><p>
+<a href="game_npc_talk('练武弟子')">练武弟子</a><p>
+<:if game_check_scene_event(1289) and not game_check_scene_event(5300) then
+<FONT color=#FF0000>公子请你到后院房间四，夺回被九毒派窃走的东来令。</FONT><p>
+elseif game_check_scene_event(5300) and not game_check_scene_event(1300) then
+<FONT color=#FF0000>东来令已夺回，请回大厅交还庄主。</FONT><p>
+end:>
+<:if not game_check_scene_event(1300) then
+<a href="if game_pop_fight_a(1,45) then game_change_money(100);game_chat('与练武弟子切磋数招，略有小进。');game_reload_direct(0) end" title="">与弟子切磋（胜得百文）</a><p>
+end:>
+<p>
+<a href="game_page(-1)">山庄大厅</a><br>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+东来公子=1,我是东来庄主之子。西州城里，戏院的大小姐爱听曲，我也常去中孚大街捧场。
+I=1,
+if game_check_scene_event(1300) then
+东来公子=2,多亏侠士夺回东来令，家父已能安心筹备邙山之事。
+I=2,
+elseif game_check_scene_event(5300) then
+东来公子=2,令信既在，快去大厅交给家父吧。
+I=2,
+elseif game_check_scene_event(1289) then
+东来公子=2,昨夜九毒派派蒙面窃贼入庄，把家父的东来令藏进后院房间四。请侠士夺回！
+I=2,我这就去。
+else
+if game_check_scene_event(1282) then
+东来公子=2,九毒派与我家虽不相犯，却常派细作窥探。昨夜更有人盗走家父信物东来令，藏在后院房间四。
+I=2,我愿相助。
+东来公子=[game_add_scene_event(1289);game_chat('东来公子：务必小心，那贼人会使毒。');game_reload_chatlist(0)]3,有劳了！夺回后交还家父，必有答谢。
+I=3,
+else
+东来公子=2,侠士初到西州？不妨先城中走走，再来寻我。
+I=2,
+end
+end
+练武弟子=1,庄主说：练武先练德，东来山庄从不使毒。
+I=1,
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B35E2014BD416ADE26D39881C863854B

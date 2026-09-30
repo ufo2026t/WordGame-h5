@@ -1,0 +1,35 @@
+id=11861
+名称=望湖别墅
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clMaroon}),clWindow,后院,AT1002,0,0/2007.bmp"></CENTER>
+
+<a href="if game_check_scene_event(1145) then game_page(11863) else game_chat('您没有购买，这房间无法进入。') end">西厢房</a><p>
+<a href="if game_check_scene_event(1146) then game_page(11864) else game_chat('您没有购买，这房间无法进入。') end">东厢房</a><p>
+<a href="if game_check_scene_event(1147) then game_page(11865) else game_chat('您没有购买，这房间无法进入。') end">客房</a><p>
+<a href="if game_check_scene_event(1148) then game_page(11866) else game_chat('您没有购买，这房间无法进入。') end">睡房</a><p>
+<a href="if game_check_scene_event(1149) then game_page(11867) else game_chat('您没有购买，这房间无法进入。') end">沧浪亭</a><p>
+
+
+<p>
+<a href="game_page(11569)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1B46C643B48725336658C3AA550349C2

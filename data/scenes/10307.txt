@@ -1,0 +1,36 @@
+id=10307
+名称=无剑山庄水下超时
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+水下捞取时间超时了，你又回到了岛上。<p>
+但见那<a href="game_npc_talk('白衣公子')">白衣公子</a>正自暗自偷笑。<p>
+
+<a href="game_page(10304)">返回水榭走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+白衣公子=1,姑娘可有收获？
+I=1,哼，白忙乎了半天，说，是不是你编谎话来戏弄于我？
+白衣公子=2,哪里哪里，本公子从不忽悠别人。
+I=2,也罢，看你不像是奸诈之徒，姑奶奶不与你计较。
+白衣公子=3,哦，姑娘可有兴趣再捞一次？湖底确有秘籍，不曾被人捞得。
+I,A=3,哼，我才不那么笨呢，一块石头上翻两次船。
+I,B=[game_set_game_time(600,10307);game_page(10308)]3,好，我再去试试。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9A0B0E0A08CC9827EB8210AA1F86B7C8

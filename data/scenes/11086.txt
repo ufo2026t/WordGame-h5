@@ -1,0 +1,71 @@
+id=11086
+名称=庙府
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<:if game_check_scene_event(1080) then
+兵变平息后，苗家斩的斩，逃的逃。<p>
+苗府也成了一片废墟。<p>
+else
+皇城统领苗大人的府邸。气势恢宏。<p>
+if game_check_scene_event(1085) then
+半夜，苗府已经关门了，<a href="game_pop_a(3);game_page(11093)" title="">翻墙</a>入内？
+else
+if game_check_scene_event(1086) then
+if game_check_scene_event(1087) then
+if game_check_scene_event(1088) then
+if game_check_scene_event(1089) then
+人都差不多到齐了，<a href="game_pop_a(4);game_page(11093)" title="开始行动">发出行动暗号</a>。
+else
+苗府大门紧闭，高度戒备。先去<strong>淮阳</strong>找韩世忠吧。
+end
+else
+if game_add_scene_event(1092) then
+突然苗府变得戒备森严，看来，白天是进不去了。先到<strong>一溪楼</strong>住几个时辰，半夜再来。
+end
+end
+else
+突然苗府变得戒备森严，看来，白天是进不去了。先去<strong>秀洲平江府</strong>吧。<p>
+end
+else
+<a href="if game_check_scene_event(1079) then game_npc_talk('侍卫') else game_chat('卫兵：“闲杂人等，不得入内。”') end" title="">进入</a>
+end
+end end:>
+<p>
+<a href="game_page(10701)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+侍卫=1,什么人？不得入内。
+I=1,我们是苗大人的亲戚。
+侍卫=2,哦，乡下穷亲戚，来投靠苗大人的吧。
+I=2,是的是的
+侍卫=3,不巧，这段时间苗大人说了，一律不许外人进入府内。
+I=3,那，有什么办法可以让我们进去不？
+侍卫=4,看你们像是老实人，我这有些下人衣服，穿上后进去吧。
+if game_check_money(100) then
+I,A=[game_add_scene_event(1084);game_page(1)]4,谢谢，多谢了。
+I,B=[game_add_scene_event(1084);game_change_money(-100)]4,多谢你了，我这有100两银子，拿去喝酒吧。
+侍卫,A=5,
+侍卫,B=5,哇，出手这么大方，你既然如此阔绰，为何还要来投靠我们家老爷？
+I,A=5,
+I,B=[game_page(1)]5,哈哈，钱财乃身外之物了。
+else
+I=[game_add_scene_event(1084);game_page(1)]4,谢谢，多谢了。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=58DF022F0D9EDAB0AAC4EE3ED71D6D77

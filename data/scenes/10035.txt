@@ -1,0 +1,42 @@
+id=10035
+名称=迷宫大厅
+作者=
+属性=38
+载入后=if game_role_is_exist('江雪儿') and not game_check_scene_event(1001) then game_delay(1000);game_npc_talk('江雪儿') end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clWindow,Boss,AT1000,1,75/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+迷宫大厅，高大，宽敞。<p>
+<:if game_check_scene_event(1001) then 大厅里很安静。一个隐蔽的<a href="game_page(10016)" title="">出口处</a>透过来点点的微光。 else 一只金色的宝座上，<a href="game_npc_talk('矿洞怪王')">矿洞怪王</a>安坐其上。end:><p>
+<p>
+
+<a href="game_page(10033)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+江雪儿=1,
+I=1,大妖怪果然在此。
+江雪儿=2,小心了，大妖怪肯定很厉害的。
+I=2,战略上要藐视敌人。
+江雪儿=3,打掉这个boss后咱们就可以回去了。
+I=3,if game_check_goods_nmb('回城卷',1) then 我有回城卷，可以马上离开这里的。 else 忘记买回城卷了，呆会只好慢慢打回去了。 end
+
+矿洞怪王=1,大胆小贼，竟敢擅闯本殿？速速前来受死。
+I=1,你这妖魔，祸害百姓，尔等留你不得。
+矿洞怪王=2,你既能闯过迷宫，看来不是等闲之辈，废话少说，咱们刀下见分晓。
+I=[game_pop_fight_a(1,63);game_add_scene_event(1001);game_reload_direct(0);game_add_message('除掉后山妖王后去婺州的船就可以开了。')]2,看招。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=8BD57CE670B4511F89C91D6FDBD0ADF3

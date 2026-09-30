@@ -1,0 +1,47 @@
+id=11351
+名称=虚无幻境四，第五关
+作者=
+属性=6
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,第五关,AT1000,0,0/2007.bmp"></CENTER>
+刚到滑州就见刘延持枪站于马下。<br>
+刘延：逆贼纳命来！<br>
+哦，是最后一关了，过了就完成幻境任务了。<p>
+<:if game_read_temp(1135102) then
+if game_sex_from_id(1) then
+关羽：“多谢壮士鼎力相助，这个刀就送给你吧。”<br>
+“大丈夫岂能夺人之美，这刀我是万万不能要的。”<br>
+“没事，这刀我玄德哥那里还有一把。这把就送与你了。”<br>
+“既然如此，那恭敬不如从命了。多谢将军。”<br>
+else
+关羽：“多谢女侠鼎力相助，这个刀就送给你吧。”<br>
+“我一个姑娘家，带剑比较好看，刀不好，你有剑没。”<br>
+“这可难住我了，要说刀嘛，我玄德哥那里还有一把一模一样的。你就拿着这刀吧，要是用不上，就卖了，这刀用料不错，能卖不少钱。”<br>
+“既然如此，那恭敬不如从命了。多谢将军。”<br>
+end
+else
+1。<a href="game_pop_fight_a(1,116);game_add_scene_event(1111);game_write_temp(1135102,1);game_reload_direct(0)" title="">动手</a><br>
+2。<a href="game_pop_a(3);game_page(10574)" title="">开溜</a><br>
+end:>
+
+<p>
+ 从<a href="game_pop_a(3);game_page(10574)" title="">法阵<img src="$apppath$img\fazhen.gif" border="0"></a>直接返回
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A580A1CC1E7AFC3D8C415EAEA29F64EC

@@ -1,0 +1,53 @@
+id=11088
+名称=庙府内
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clGreen}),clWindow,苗,AT1002,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,客厅,AT1000,0,0/2007.bmp"></CENTER>
+墙上挂着一副<a href="game_npc_talk('周老虎')">华南虎</a>图。<p>
+<:if game_check_scene_event(1085) then
+夜晚，蛐蛐啾啾的叫着。<p>
+else
+<a href="game_npc_talk('小儿')">小儿</a>
+end:>
+
+<p>
+<a href="game_page(11087)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+周老虎=1,我画的华南虎，谁给挂这儿来了？
+I=1,林业部@没有我们撑腰，你老早死翘翘啦。
+if game_check_scene_event(1082) then
+if game_sex_from_id(1) then
+小儿=1,我家姐姐可喜欢在自家花园内赏花了。
+I=1,
+else
+小儿=1,我哥哥喜吟诗作画，常在花园内画牡丹。
+I=1,
+end
+else
+if game_sex_from_id(1) then
+小儿=1,我家姐姐经常喜欢去夜市逛逛，但那里坏人多哦。
+I=1,
+else
+小儿=1,我哥哥是个知书达礼之人，不喜舞刀弄剑。
+I=1,
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1E6D39287326D41AD7D98AB71D2D2115

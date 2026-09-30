@@ -1,0 +1,78 @@
+id=12479
+名称=天蓬山庄
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,天蓬山庄客厅,AT1000,0,0/2007.bmp"></CENTER>
+客厅正面墙壁上高悬一副采用金边装裱的高大猪八戒画像。<p>
+画上八戒身穿紫衣，手持钉耙，驾着祥云，威风凛凛。<p>
+
+<:if game_check_scene_event(1254) then
+if game_check_scene_event(1253) then
+赛天蓬外出了。
+else
+<a href="game_npc_talk('赛天蓬')">赛天蓬</a>手拿一苹果，正吃的欢。
+end
+else
+;;为得知藏宝图5任务
+if game_check_scene_event(1217) then
+赛天蓬：“盟主请上坐。”<br>
+
+else
+客厅内八仙桌上摆着一些水果。<br>
+game_true(1)string game_res_goods(0,1,'干粮')<p>
+end
+end:>
+
+
+
+
+<p>
+<a href="game_page(-4)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1217) then
+赛天蓬=1,盟主今天找我何事？
+I=1,我闻听有藏宝图5已经现身江湖了。
+赛天蓬=2,这个，我没听说，是谣言吧。
+I=2,哦。
+赛天蓬=3,一有消息，我马上向盟主禀报。
+I=3,唔
+赛天蓬=[game_add_scene_event(1256)]4,盟主，我听说藏宝图很有可能在东海小镇上的一个叫海龙世家的地方。
+I=4,消息可靠？
+赛天蓬=5,不敢欺瞒盟主。
+I=5,好，我去看看去。
+赛天蓬=6,恭送盟主
+I=6,
+else
+赛天蓬=1,你又想在我这里惹什么事？
+I=1,我听说你这有藏宝图。
+赛天蓬=2,没有怎么样，有又怎么样？关你什么事，别以为你胜的了我就可以胡来，武林大会上你不是被人家打的落花流水吗，别以为我不知道。
+I=2,这宝藏乃天下人的宝藏，理应找出造福苍生。
+赛天蓬=3,说的伟大，表面上仁义道德，暗地里男盗女娼，就是你这类人。假公济私。
+I=3,我今天不给你点颜色瞧瞧，你当真以为自己是天蓬元帅了。
+赛天蓬=[game_add_scene_event(1256)]4,有本事，你去东海小镇上的海龙世家那里去拿藏宝图去？
+I=4,此话怎讲？
+赛天蓬=5,我知道那里有藏宝图。
+I=5,谅你也不敢骗我，待我去看看再说
+赛天蓬=6,哼
+I=6,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4D0FF4BC9DA2C97DD4C612D4C99EEE90

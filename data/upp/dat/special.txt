@@ -1,0 +1,29 @@
+;;特殊物品的使用，只有 type为64的物品，才会读取这个文件,物品在调用这里的函数后被自动扣减一
+;;涉及到具体人物的函数，可以使用 $P$ 在实际调用时会被替换为有效的人物编号,注意必须大写
+
+;;85=回城卷,64,0,0,0,0,0,0,0,0,3,100,回城卷，立即离开野外回到最近的城镇
+回城卷=game_goto_home(0)
+
+;;86=太湖珍珠发簪,64,0,0,0,0,0,0,0,0,4,600,小礼品，可以送给MM
+太湖珍珠发簪=if game_random_chance(3) then game_attribute_change($P$,14,1);game_attribute_change($P$,15,2);game_infobox('string game_get_newname_at_id($P$)：好开心哦。') else game_attribute_change($P$,14,1);game_infobox('string game_get_newname_at_id($P$)：人家不好意思啦。') end
+
+;;90=水晶小熊摆件,64,0,0,0,0,0,0,0,0,8,120,小礼品，浦江产的水晶摆件，做工精细，可以送给MM。
+水晶小熊摆件=if game_random_chance(3) then game_attribute_change($P$,14,1);game_attribute_change($P$,15,1);game_infobox('string game_get_newname_at_id($P$)：谢谢你送我这么漂亮的水晶熊。') else game_attribute_change($P$,14,1);game_infobox('string game_get_newname_at_id($P$)：人家不好意思啦。') end
+
+;;91=极品缅甸玉胸针,64,0,0,0,0,0,0,0,0,12,1000,小礼品，可以送给MM
+极品缅甸玉胸针=if game_random_chance(3) then game_attribute_change($P$,14,1);game_attribute_change($P$,15,3);game_infobox('string game_get_newname_at_id($P$)：哇，从没收到过这么珍贵的礼物哦！！') else game_attribute_change($P$,14,1);game_infobox('string game_get_newname_at_id($P$)：人家不好意思啦。') end
+
+;;94=玫瑰花,64,0,0,0,0,0,0,0,0,6,11,小礼品，美眉喜欢的东西。
+玫瑰花=if game_random_chance(5) then game_attribute_change($P$,14,1);game_attribute_change($P$,15,1);game_infobox('string game_get_newname_at_id($P$)：谢谢你送我玫瑰花。') else game_attribute_change($P$,14,1);game_infobox('string game_get_newname_at_id($P$)：人家不好意思啦。') end
+
+;;95=小金猪,64,0,0,0,0,0,0,0,0,13,999,黄金做的小猪，极富收藏价值。现在金价看涨，增值潜力巨大。
+小金猪=if game_random_chance(3) then game_attribute_change($P$,14,1);game_attribute_change($P$,15,2);game_infobox('string game_get_newname_at_id($P$)：好可爱的金猪。') else game_attribute_change($P$,14,1);game_infobox('string game_get_newname_at_id($P$)：人家不好意思啦。') end
+
+;;96=伯牙古琴,64,0,0,0,0,0,0,0,0,14,20000,稀世珍品，名琴赠知音哦。
+伯牙古琴=if game_id_is_name($P$,'慕容丽雯') then game_attribute_change($P$,14,10);game_attribute_change($P$,15,10);game_infobox('string game_get_newname_at_id($P$)：哇，你哪来的稀世古琴！送给我的？太谢谢你了。') else game_goods_change_n('伯牙古琴',1);game_infobox('string game_get_newname_at_id($P$)：我不会弹琴，您还是送给别人吧。') end
+;;时间加速丸
+时间加速丸=game_attribute_change(1,30,20);
+存储卡=game_save(1);
+易筋经=if not game_check_role_values_byid($P$,8,game_get_role_suxing($P$,27)+1) and game_check_money(10000) then game_change_money(-10000);game_attribute_change($P$,6,2000);game_attribute_change($P$,8,1000);game_attribute_change($P$,5,500); else game_infobox('您钱不够或者增加的能力还没用完，暂时不能使用此术'); end game_goods_change_n('易筋经',1)
+飞行地图=if game_can_fly(0) then game_page(14445); else game_chat('禁止飞行'); end game_goods_change_n('飞行地图',1)
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

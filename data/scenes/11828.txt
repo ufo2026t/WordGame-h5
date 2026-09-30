@@ -1,0 +1,34 @@
+id=11828
+名称=五国城-小镇
+作者=
+属性=
+动作=
+{
+D5001=if game_check_scene_event(1185) then game_pop_a(10);game_page(11841) else game_chat('去那里干吗呢') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clGreen}),clWindow,五国城,AT1009,66,0/2007.bmp"></CENTER>
+名叫五国城的小镇，北风萧萧，很是荒凉。<p>
+<a href="game_page(1)" title="">院子一</a><p>
+<a href="game_page(11833)" title="">院子二</a><p>
+<a href="game_page(11837)" title="">院子三</a><p>
+<:game_not_scene_event(1186)
+<a href="D5001" title="">山路</a>
+:>
+<p>
+<a href="game_pop_a(2);game_page(-1)">前往上京</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1D08052A66CFA9BF305400D29EDA8CD1

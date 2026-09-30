@@ -1,0 +1,40 @@
+id=11346
+名称=严州驿站
+作者=
+属性=6
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clOlive}),clWindow,驿站,AT1002,0,0/2007.bmp"></CENTER>
+这里有个驿站，可以坐马车前往南绍镇。<p>
+过了南绍，就到大理了。<p>
+<a href="game_npc_talk('驿站管理员')">驿站管理员</a><p>
+<a href="game_pop_a(6);game_page(11371)">南绍镇</a><p>
+<a href="game_page(-1)">往临安方向</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1113) then
+驿站管理员=1,这些天来往的人真多
+I=1,
+else
+驿站管理员=1,你们是从临安来的吧
+I=1,是啊
+驿站管理员=2,唉，现在那边日子不太平，前几天，好多大户人家都南逃大理去了。
+I=2,大理那边情况如何？
+驿站管理员=3,目前还好，从这坐几天的马车，就到南绍镇了，过了南绍不远就是大理了。
+I=3,我们去看看去。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=29FB99337C7166F5D374E77BEF5CC046

@@ -1,0 +1,74 @@
+id=10793
+名称=受厘殿
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clPurple}),clWindow,受厘,AT1001,0,62/2007.bmp) fixed no-repeat center center;">
+丽妃房间。<p>
+<:if game_check_scene_event(1077) then
+<a href="game_npc_talk('丽妃')">丽妃</a>在弹琴。
+else
+if game_check_scene_event(1073) then
+丽妃娘娘不在，不过，房里的<strong>一副画</strong>引起了大家的注意。<p>
+if game_role_count(0)=1 then
+string game_get_newname_at_id(1)：“这画好像是一副地图，像是<FONT color=#"FF0000">东海</FONT>那边的一个岛。”<p>
+end
+if game_role_count(0)>1 then
+string game_get_newname_at_id(2)：“是啊，好奇怪啊，这画怎么会挂在丽妃房里？会不会和那<strong>半封密信</strong>有关？因为，我曾看到丽妃偷偷去过我们找到密信的地方。”<p>
+end
+if game_role_count(0)>2 then
+string game_get_newname_at_id(3)：“据我观察，这应该是东海珊瑚岛的地形图。”<p>
+end
+if game_role_count(0)>3 then
+string game_get_newname_at_id(4)：“莫非。<strong>珊瑚岛</strong>有文章？”<p>
+end
+else
+if game_sex_from_id(1) then
+丽妃：“你这太监好无理啊，在我房里乱串干吗。”<p>
+string game_get_newname_at_id(1)：“我是新来的太监，不懂规矩，请娘娘恕罪。”
+else
+丽妃：“你是新来的宫女吧，以前没见过，叫什么名字啊。”<p>
+string game_get_newname_at_id(1)：“我是新来的，在家时都叫我阿毛。”<p>
+丽妃：“哦，这多难听啊，我今儿赐你一个名字吧，叫小叶子如何啊。”<p>
+“多谢娘娘。”（pi，这名字又不好听。）<p>
+end
+end
+end:><p>
+;;一条石板路，通往<a href="game_page(1)" title="">受厘殿</a><p>
+一条石板路，通往<a href="game_page(-1)" title="返回">仁明殿</a><p>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_goods_nmb('腰牌碎块',1) then
+丽妃=1,我这有桂花糕吃，要不要来一块。
+I=1,谢谢娘娘,您自个吃吧，桂花糕美容呢。
+else
+丽妃=1,
+I=1,丽妃娘娘。
+丽妃=2,什么事？
+I=2,你可听说柳仙人？
+丽妃=3,（丽妃脸色一变）怎么？
+I=3,（小声说）可知密信？
+丽妃=4,唉，我早就看出你们是混进宫里来的。实话说吧，那封信柳仙人给我后，我还没来得及给皇上，就给一个武功高强的飞贼给抢走了。
+I=4,那飞贼是何来历？
+丽妃=5,飞的太快，看不清楚，我只抓下来这么一个东西。
+I=[if not game_check_goods_nmb('腰牌碎块',1) then game_goods_change_n('腰牌碎块',1);game_infobox('得到木头做的腰牌碎块一块。') end]5,我看看。
+丽妃=6,既然你们是柳仙人的朋友，这个东西你们拿去吧，也许有用。我一个妇道人家，也不想卷入这些纷争。
+I=[game_reload_direct(0)]6,谢谢娘娘。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BA2BDA7D53621459DC33048EDA18EEE5

@@ -1,0 +1,52 @@
+id=10107
+名称=宾至如归客栈一楼走廊
+作者=
+属性=32
+载入后=game_npc_talk('同伴')
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,一楼走廊,AT1005,0,0/2007.bmp"></CENTER>
+从一楼走廊可以通往各个房间，这里住着三教九流的人物，多于他们对话，能有意外收获。<p>
+<a href="game_page(10096)">返回客栈大厅</a>
+<div align="center">
+<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10108)" title="">101房</a><p>
+<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10109)" title="">102房</a><p>
+<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10110)" title="">103房</a><p>
+<a href="if game_random_chance(2) then game_pop_a(2);end game_chat('请勿打扰。')" title="">104房</a><p>
+<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10111)" title="">105房</a><p>
+<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10112)" title="">106房</a><p>
+<a href="if game_random_chance(2) then game_pop_a(2);end game_chat('门上挂着锁呢。')" title="">107房</a><p>
+<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10113)" title="">108房</a><p>
+ </div>
+<:game_true(1)string game_res_goods(5,1,'三年生草药'):>
+ <p>
+
+<a href="game_page(10096)">返回客栈大厅</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_role_count(0) > 1 then
+同伴=1,
+I=[game_write_name('string game_get_newname_at_id(2)')]1,这里住了不少外来人口，我们可以向他们打听一些消息。
+if game_id_exist(3) then
+string game_get_newname_at_id(2)=1,一楼的房价比二楼便宜。
+I=1,string game_get_newname_at_id(3)@可能二楼清净。
+else
+string game_get_newname_at_id(2)=1,好。
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=947F089943865624677FD92DA227302B

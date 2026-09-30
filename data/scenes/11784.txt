@@ -1,0 +1,36 @@
+id=11784
+名称=塞外
+作者=
+属性=260
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,阳关,AT1002,0,0/2007.bmp"></CENTER>
+前往昆仑的路上<p>
+<img src="gpic://img_yangguan.jpg"><p>
+劝君更进一杯酒，西出阳关无故人。<p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):>
+<p>
+<a href="game_page(11871)" title="西出阳关，到昆仑">阳关</a>
+<p>
+<:game_true(1)string game_res_goods(0,1,'虫草精'):><p>
+<a href="game_page(11578)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=655B9C82E8A4D41E1914B5ACB870E4C2

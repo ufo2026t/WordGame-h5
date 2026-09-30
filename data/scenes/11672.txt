@@ -1,0 +1,32 @@
+id=11672
+名称=飞龙帮-房间二
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,房间二,AT1002,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'金猪'):><p>
+<a href="game_npc_talk('丫鬟')">丫鬟</a>
+
+<p>
+<a href="game_page(11666)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+丫鬟=1,我家少帮主，经常一个人去听雨轩，呆呆的，也不知在那想什么。
+I=1,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A4C54706D6AD8CCAA30B7939F64A8561

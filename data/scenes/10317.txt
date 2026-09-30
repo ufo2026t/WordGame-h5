@@ -1,0 +1,37 @@
+id=10317
+名称=无剑山庄小岛
+作者=
+属性=32
+载入后=game_npc_talk('白衣公子')
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://269,267,(隶书,134,200,{Bold},{clLime}),clWindow,岛,AT1001,0,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+小岛面积不大，看起来是人工垒成的。岛上树影婆娑，鲜花盛开，煞是好看。<p>
+白衣公子还在那摇着扇子，暗自得意。<p>
+
+
+<a href="game_page(10304)">返回水榭走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+白衣公子=1,哇，姑娘你真不简单，今天总算见识了高人了。
+I=1,嘿嘿，有什么能难的住姑奶奶我的。
+白衣公子=2,小生佩服的五体投地，仰慕之情如滔滔江水之连绵不绝……
+I=2,停，少油嘴滑舌了。姑奶奶我累了，先回去了。
+白衣公子=3,姑娘你一路走好，欢迎再来。
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D9B09223D2D056FE32F0CC24210BE2B1

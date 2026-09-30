@@ -1,0 +1,62 @@
+id=11064
+名称=万灵山-小河
+作者=
+属性=38
+载入后=if not game_read_temp(game_get_pscene_id(1000))then game_pop_fight_a(1,36);game_write_temp(game_get_pscene_id(1000),1) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://512,384,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,68/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,小河,AT1000,0,0/2007.bmp"></CENTER>
+万灵山山洞。<p>
+。<p>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+;; <p>
+<:game_not_scene_event(1076)
+<a href="game_npc_talk('柳仙人')">柳仙人</a>在此。<p>
+<a href="game_npc_talk('物品')">给仙人物品</a><p>
+else
+仙人已回去，留下<a href="game_page(11020)" title="离开迷宫">法阵<img src="$apppath$img\fazhen.gif" border="0"></a>一个。
+:>
+<:game_true(1)string game_res_goods(0,1,'百年人参'):><p>
+<p>
+<a href="game_pop_a(2);game_page(1)" title="往迷宫深处走">前行1</a><p>
+
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回前一场景</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+柳仙人=1,你们是何人，来此做什么？
+I=1,我们从临安来，从皇宫出来。
+柳仙人=2,皇宫？可有令牌？
+I=2,if game_check_goods_nmb('皇宫令牌',1) then 你看 else [game_page(10453);game_infobox('您拿不出令牌，被柳仙人赶出了万灵山。')]2,这……这，令牌被我扔了。 end
+柳仙人=1,果然是皇宫来的。我也不问你们来找我刚什么，现在我正在找锆石五个，我打累了，先要休息一下，你们去帮我弄5个锆石来，然后再来此地找我吧。
+I=1,上哪里找锆石？
+柳仙人=2,你们继续往前，大约再过几个地儿，就有个<FONT color=#"FF0000">矿井</FONT>，经我卜卦，今天去挖，只需能连续挖12下，即可挖到5个锆石。
+I=2,好的，要连续挖对24下，不能出错吗？
+柳仙人=3,是的。要连续才行。
+I=3,明白了
+if game_check_goods_nmb('锆石',5) then
+物品=[if game_not_scene_event(1076) then game_add_scene_event(1076);game_goods_change_n('锆石',-5) end]1,恩，要的就是这些，我先回去了，你们呆会来大厅找我吧。
+I=[game_reload_direct(0)]1,给您锆石。
+else
+物品=1,您还没找到我要的东西呢，记住，要往前大约4个页面，然后那里有个矿井，需连续挖矿正确24次才能挖到5个锆石。
+I=1,恩，明白。
+end
+}
+
+
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=54575E9009CED961DB54CDF1BCBB6BFB

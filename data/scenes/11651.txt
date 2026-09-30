@@ -1,0 +1,36 @@
+id=11651
+名称=少林寺-禅室1
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,禅室,AT1000,0,0/2007.bmp"></CENTER>
+ <a href="game_npc_talk('老僧')">老僧</a><p>
+<a href="game_npc_talk('小和尚')">小和尚</a><p>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+老僧=1,if game_sex_from_id(1) then 施主 else 女施主 end 从哪里来？
+I=1,从来处来。
+老僧=2,往哪里去？
+I=2,往去处去。
+老僧=3,哦弥陀佛，拈花微笑，无物无我。
+I=3,
+小和尚=1,我最讨厌坐枯禅了，想来少林习武，结果，就是不教武功，每天叫打坐念经。怎么办呢？
+I=1,吃的苦中苦，方为人上人。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A58F1F64FA61072BB19C745C07AB852F

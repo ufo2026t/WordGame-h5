@@ -1,0 +1,38 @@
+id=11571
+名称=客栈
+作者=
+属性=
+动作=
+{
+D5001=if game_check_money(640) then game_change_money(-640);game_role_all_MTL(0);game_delay(1000);game_del_scene_event(1085);game_reload_direct(0);game_infobox('休息了一晚上，生命值，体力值等全满。天也亮了。') else game_infobox('钱不够，不能住店。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clMaroon}),clWindow,客栈,AT1002,0,0/2007.bmp"></CENTER>
+<:game_check_scene_event(1085)
+现在是晚上。
+else
+现在是白天:><p>
+客栈<a href="game_npc_talk('老板')">老板</a><p>
+客栈<a href="game_page(11580)" title="">二楼</a>
+<p>
+<a href="game_page(11417)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+老板=1,客官，里面请？
+I=1,你们这看起来倒还干净，住一晚上多少钱？
+老板=2,我们客栈按三星级标准设置，虽然未经衙门正式评定星级，但服务绝对另您满意。每晚800，现在优惠打8折，640
+I,A=[D5001]2,好，就住一晚上。
+I,B=2,哇，3星级的服务，5星级的收费？太贵了。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3E2A01AB2641ED086E7212E7EFA61FFE

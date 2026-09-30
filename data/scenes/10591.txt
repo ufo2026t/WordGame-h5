@@ -1,0 +1,36 @@
+id=10591
+名称=雷峰夕照
+作者=
+属性=
+TempKey=雷峰夕照
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clGreen}),clWindow,雷峰夕照,AT1002,0,0/2007.bmp"></CENTER>
+雷峰，位于净慈寺前，为南屏山向北伸展的余脉，濒湖勃然隆重起，林木葱郁。其册虽小巧玲珑，名气在湖上却是数一数二，因为山巅曾有吴越时建造的雷峰塔，是西湖众多古塔中最为风光也最为风流的一塔，可惜七十余年前倒掉了塔倒山虚，连山名也换成了夕照山。西湖南岸这座三面临水呈半岛状的名山，当年曾为南宋御花园占据。一九四九年以后，山上种埴了大量香樟、枫香、榆树等观赏树木，夕照林涛，景色依然富丽。
+
+<p>
+<:game_true(1)string game_res_goods(0,1,'上等木炭'):><p>
+<p>
+
+<p>
+<a href="game_page(10584)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5DEC98D9DBFB5655FC764A0C48D9686D

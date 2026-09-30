@@ -1,0 +1,49 @@
+id=12225
+名称=神殿地下室
+作者=
+属性=38
+载入后=game_pop_fight_a(1,154)
+TempKey=
+动作=
+{
+D5001=game_pop_fight_a(1,155);game_goods_change_n('封神珏',-1);game_add_scene_event(1241);game_reload_direct(0)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,神殿地下室,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,5,'千年灵芝'):><p>
+地下室的尽头，可见十二神将的封印已经碎裂，百鬼中最厉害的一个，正隐藏在这里。<br>
+<:if game_check_goods_nmb('封神珏',1) then
+1。<a href="D5001" title="">放出封神珏</a><p>
+2。<a href="game_page(12207)" title="">逃离</a>
+else
+if game_check_scene_event(1241) then
+十二神将封印已经修复，且在封神珏的作用下，法力大为增强，固若金汤了。<br>
+平安京暂时又获得了平安。
+else
+由于十二神将封印已破，即使现在消灭百鬼王，也难保日后不会出现新鬼王。<br>
+为彻底解决此祸害，需寻找到“<FONT color=#FF0000>封神珏</FONT>”来修补并增强封印法力才行。<br>
+封神珏可能在奈良的法隆寺内的<strong>五重塔</strong>下的地宫内。
+end
+end:>
+<p>
+<a href="game_page(-1)" title="返回">返回</a><br>
+<p>
+墙根留着昔年镇压百鬼时所刻退阵，踏之可直回平安京口。<p>
+<a href="game_pop_a(3);game_page(12207)" title="返回">法阵</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2E7C5562D901E8A81CAF0735D8473C5B

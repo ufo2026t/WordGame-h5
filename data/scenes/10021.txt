@@ -1,0 +1,45 @@
+id=10021
+名称=矿洞底下一层21号地块
+作者=
+属性=38
+载入后=game_pop_fight_a(1, 62);if game_role_is_exist('江雪儿') then game_delay(1000);game_npc_talk('江雪儿') end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clWindow,迷宫,AT1000,1,75/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+这里是矿洞的底下一层21号地块。<p>
+再往里走，旁边有个<a href="game_pop_a(3);game_page(10019)" title="">石门</a>，通通向19号地块。<p>
+怪打的多，等级升的也快哦。<br>
+
+远处<a onMouseOver=location.href="game_pop_fight_a(1,61)">又有一个</a><a href="game_pop_a(3);game_page(10020)" title="">石门通向20号地块。</a><p>
+此处地势平坦，比较明亮，远处似乎有不明生物在晃动。<br>
+<:if not game_check_res_event(5020) then 一个<a href="game_goods_change_n('恢复术',1);game_chat('捡到恢复术秘籍一本。');game_add_res_event(5020);game_reload_direct(0)" title="">书本</a>。end:>
+<p>
+<strong>小试身手：</strong><p>
+您知道“dairy”的正确意思是：<p>
+A： <a href="game_infobox('选择正确，您的生命值体力和灵力补充到全满了。');game_role_all_mtl(1)" title="这个看起来也像是正确的？">牛奶公司</a><p>
+B： <a href="game_infobox('很遗憾，您答错了。日记是：diary，有差别哦')" title="选择这个？"> 日记</a><p>
+<p>
+
+<a href="game_page(10019)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+江雪儿=1,绕来绕去，都绕到哪里了啊？
+I=1,我也不知道这里是什么地方了，应该离出口不远了吧。
+江雪儿=2,但愿吧
+I=2,恩，坚持就是胜利。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C5D2A1AF0AA0F04439D2EC302AC5B1BC

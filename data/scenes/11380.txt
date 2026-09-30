@@ -1,0 +1,40 @@
+id=11380
+名称=星月神教内
+作者=
+属性=4
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间一,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'千年人参'):><p>
+<a href="game_npc_talk('门徒甲')">门徒甲</a><p>
+<a href="game_npc_talk('门徒乙')">门徒乙</a><p>
+一个怪异的<a href="game_pop_a(3);game_chat('好像是榨汁机。')">机器</a><p>
+一些不明<a href="game_pop_a(3);game_chat('橙色的带有奇香的液体。')">液体</a><p>
+<p>
+<a href="game_pop_a(2);game_page(1)">前进</a>
+<p>
+<a href="game_pop_a(2);game_page(11377)">返回</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+门徒甲=1,你们是新来的吧，最好不要到处乱走，被教主发现就惨了？
+I=1,为何
+门徒甲=2,你不知道，教主武功高不可测，且教规很严，胡乱走动，轻者杖责，重者杖毙。
+I=2,哇，知道了，谢谢小哥
+门徒乙=1,我们教主不但武功天下第一，而且毒功也是天下第一
+I=1,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=541986FE5F6395605ADB3CA4D52D6044

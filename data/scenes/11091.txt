@@ -1,0 +1,49 @@
+id=11091
+名称=练功房
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clGreen}),clWindow,苗,AT1002,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,练功,AT1000,0,0/2007.bmp"></CENTER>
+苗将军是一员武将，所以经常在此练功。<p>
+<:game_check_scene_event(1085)
+晚上，练功房没人。
+else
+今天，<a href="game_npc_talk('苗大人')">苗大人</a>又在练功。
+:>
+
+<p>
+<a href="game_page(11087)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1082) then
+if game_sex_from_id(1) then
+苗大人=1,前几天,有个少侠救下了我女儿。没留下姓名就走了。
+I=1,区区小事，大人何必放在心上。
+苗大人=2,你一个府里的下人哪能懂得这些，快去干活吧，我看花园里的有些花都快晒死了，也不浇一下。
+I=2,
+else
+苗大人=1,前几天,有个女侠救下了犬子。没留下姓名就走了。
+I=1,看来世上还是好人多啊。
+苗大人=2,错，好人少。所以，我没能当面答谢人家，很是过意不去。
+I=2,
+end
+else
+苗大人=1,你不在府里好好干活，来这干吗？快出去。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D462B31B5E5EA59C4FA9941BE50CA730

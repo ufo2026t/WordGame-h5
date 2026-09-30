@@ -1,0 +1,56 @@
+id=10975
+名称=花满楼
+作者=
+属性=4
+动作=
+{
+D5001=if game_check_money(100) then game_change_money(-100);if game_check_scene_event(1325) then game_chat('小丽又唱了一曲，余韵绕梁。') else game_add_scene_event(1325);game_attribute_change(1,19,500);game_infobox('听清倌小丽唱曲，经验+500。');game_reload_direct(0) end else game_chat('凤姨：听曲一百文，先付账哦。') end
+D5002=if game_check_money(50) then game_change_money(-50);game_chat('饮了花满楼特酿，微醺。');game_reload_direct(0) else game_chat('凤姨：酒钱五十文。') end
+D5003=if game_check_scene_event(1326) then game_chat('那恶客已被教训过了。') else if game_pop_fight_a(2,100) then game_add_scene_event(1326);game_change_money(200);game_attribute_change(1,19,600);game_attribute_change(1,9,1);game_infobox('为小丽出头，获二百文谢礼，道德+1，经验+600。');game_reload_direct(0) else game_reload_direct(0) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://349,347,(隶书,134,260,{Bold},{clRed}),clWindow,花,AT1009,0,62/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clMaroon}),clWindow,花满楼,AT1002,0,0/2007.bmp"></CENTER>
+新近修葺的重张花满楼，红袖招香，丝竹悦耳。坊间说这里是清倌卖艺、浊酒论剑的去处，并非那些腌臜所在。<p>
+<a href="game_npc_talk('凤姨')">老鸨凤姨</a>在厅中招呼，<a href="game_npc_talk('小丽')">清倌小丽</a>正在拨弦。<p>
+<:if game_check_scene_event(1085) then
+夜深烛火通明，仍有宾客听曲。<p>
+else
+日头尚好，楼内已有三五茶客。<p>
+end:>
+<:if not game_check_res_event(5245) then
+栏边供着一盆<a href="game_add_res_event(5245);game_goods_change_n('玫瑰花',1);game_chat('凤姨笑道：这枝玫瑰送您，图个吉利。');game_reload_direct(0)" title="">新开的玫瑰</a>，凤姨说赏玩即可，不必破费。<p>
+end:>
+<a href="D5001" title="">听小丽唱曲（100文）</a><p>
+<a href="D5002" title="">饮花满楼特酿（50文）</a><p>
+<:if game_check_scene_event(1326) then
+小丽冲你福了一福，眼带笑意。<p>
+else
+角落里有<a href="game_npc_talk('纨绔')">纨绔子弟</a>言语轻薄，小丽眉头紧蹙。<p>
+<a href="D5003" title="">出手教训恶客</a><p>
+end:>
+<p>
+<a href="game_page(10804)">离开花满楼</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+凤姨=1,哎哟，客官里边请。咱们花满楼刚粉刷一新，清倌卖艺，只图个诗酒风流。
+I=1,听说秦府守卫都认得你们楼里的人？
+凤姨=2,呵呵，小丽姑娘偶尔去秦府唱曲，守卫们都面善。客官若去元宝街，报花满楼的名儿，有时好说话些。
+I=2,原来如此。
+小丽=1,if game_sex_from_id(1) then 公子 else 姑娘 end是来听曲的？小丽只会弹唱，别的可不依。
+I=1,
+纨绔=1,小美人，跟爷走，保你吃香喝辣……
+I=1,（此人好生无礼）
+纨绔=2,关你什么事？滚！
+I=2,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=8ADEFA2332FC4D98F424888E38244F5B

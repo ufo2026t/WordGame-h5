@@ -1,0 +1,33 @@
+id=12114
+名称=唐招提寺
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://371,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,金堂,AT1000,0,0/2007.bmp"></CENTER>
+金堂建筑精美，供有鉴真大师坐像。<p>
+金堂内还供奉着金色的主佛卢舍那佛像，其两侧是千手观音佛立像和药师如来佛立像。<br>
+三尊大佛像前还有梵天、帝释天两尊小像和４尊天王的木雕像，<br>
+堂内还有平安初期大日如来的木雕佛像。<p>
+
+
+<p>
+<a href="game_page(12113)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3B89D265369131309177EF2739D0541F

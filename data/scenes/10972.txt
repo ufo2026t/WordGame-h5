@@ -1,0 +1,77 @@
+id=10972
+名称=鹤林宫大赌馆
+作者=
+属性=2
+动作=
+{
+D5001=if game_check_role_values('无名',0,50) then game_write_temp(1097210,50)else game_infobox('钱不够。')end
+D5002=if game_check_role_values('无名',0,100) then game_write_temp(1097210,100)else game_infobox('钱不够。')end
+D5003=if game_check_role_values('无名',0,150) then game_write_temp(1097210,150)else game_infobox('钱不够。')end
+D5006=if game_check_role_values('无名',0,200) then game_write_temp(1097210,200)else game_infobox('钱不够。')end
+D5007=if game_check_role_values('无名',0,500) then game_write_temp(1097210,500)else game_infobox('钱不够。')end
+D5008=if game_check_role_values('无名',0,1000) then game_write_temp(1097210,1000)else game_infobox('钱不够。')end
+D5009=if game_check_role_values('无名',0,2000) then game_infobox('钱太多了，大于两千不能全押。') else if game_check_role_values('无名',0,1) then game_write_temp(1097210,game_get_money(0))else game_infobox('钱不够。')end end
+D5004=if game_bet(1097210,1) then game_infobox('您赢了string game_read_temp_string(1097210)两')else game_infobox('您输了string game_read_temp_string(1097210)两');if not game_check_money(10) then game_write_name('赌场庄家') end end
+D5005=if game_bet(1097210,0) then game_infobox('您赢了string game_read_temp_string(1097210)两')else game_infobox('您输了string game_read_temp_string(1097210)两');if not game_check_money(10) then game_write_name('赌场庄家') end end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://349,347,(隶书,134,260,{Bold},{clWindowText}),clWindow,赌,AT1012,0,0/2007.bmp) fixed no-repeat center center;">
+情场失意，赌场得意。赌场失意，情场得意，两者必居其一啊。<p>
+来了，那就玩上两把。<p>
+<a href="game_npc_talk('庄家')">庄家</a>庄家在此恭贺多时了。<p>
+&nbsp;<p>
+&nbsp;<p>
+&nbsp;<p>
+
+<a href="game_page(10804)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+庄家=1,if game_sex_from_name('无名') then 小兄弟，要下注赶快。 else 这位女侠，来两手？end
+I,A=[D5001]1,押50两
+I,B=[D5002]1,押100两
+I,C=[D5003]1,押150两
+I,D=[D5006]1,押200两
+I,E=[D5007]1,押500两
+I,F=1,if game_check_money(1000) then [D5008]1,押1000两 else [D5009]1,全押上 end
+庄家=2,爽快，押大押小？
+I,A=[D5004]2,押大
+I,B=[D5005]2,押小
+if game_sex_from_name('无名') then
+if game_role_sex_count(0)=0 then
+赌场庄家=1,哈哈，小兄弟今天手气不好啊，下次再来了。
+end
+if game_role_sex_count(0)=1 then
+赌场庄家=1,哈哈，想翻本不，我看你身边这位姑娘家倒是长的花容月貌，如果肯献出一晚，这2000两就是你的了。
+I,A=1,少动歪脑筋，信不信我阉了你。
+I,B=1,两千太少了。
+赌场庄家,A=2,哼，不识时务。
+赌场庄家,B=2,女人如衣服，小兄弟果然聪明，给，5000两。
+I,B,A=2,逗你玩呢。
+I,B,B=[game_attribute_change(1,9,-1);game_infobox('您的道德值降低了一个点。');game_write_name('姑娘')]2,成交。
+姑娘=[game_del_friend_byid(game_get_fm_1(0),1)]1,string game_get_newname_at_id(game_get_fm_1(0))@你既如此无情无义，那好。以后你走你的阳光道，我走我的独木桥。
+end
+if game_role_sex_count(0)>1 then
+赌场庄家=1,哈哈，想翻本？这位兄台身边的姑娘们倒是可人，不如……。
+I,A=1,if game_id_exist(2) then if game_sex_from_id(2)=0 then string game_get_newname_at_id(2)@休想。 end end
+I,B=1,if game_id_exist(3) then if game_sex_from_id(3)=0 then string game_get_newname_at_id(3)@没门。 end end
+I,C=1,if game_id_exist(4) then if game_sex_from_id(4)=0 then string game_get_newname_at_id(4)@姐妹们，上，砸了这赌窝。 end end
+I,D=1,if game_id_exist(5) then if game_sex_from_id(5)=0 then string game_get_newname_at_id(5)@这位老板，你出的起多少钱？ end end
+I,E=1,if game_id_exist(6) then if game_sex_from_id(6)=0 then string game_get_newname_at_id(6)@休想。 end end
+end
+else
+赌场庄家=1,哈哈，想翻本不？如果姑娘今晚愿意从了我，这2000两你先拿着，再来。
+I,A=1,我呸，想占姑奶奶便宜，没门。
+I,B=[game_change_money(2000);game_attribute_change(1,9,-1);game_infobox('您的道德值降低了一个点。')]1,这个……，好，再赌。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0AFB208FD7E621C55A5505B59E63CA65

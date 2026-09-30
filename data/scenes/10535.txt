@@ -1,0 +1,37 @@
+id=10535
+名称=公子房间
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,天外天,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clGreen}),clWindow,公子房,AT1001,0,0/2007.bmp"></CENTER>
+<:if not game_sex_from_id(1) then
+云公子：“嘿，小娘子，来坐，喝茶。”<p>
+string game_get_newname_at_id(1)：“我还有事，告辞。”<p>
+云公子：“小娘子，别急着走啊。”<p>
+else
+房间里没人。<p>
+&nbsp;
+end:>
+<p>
+<a href="game_page(10529)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=305E0FDA8606DDE4787552CA7A14AA2B

@@ -1,0 +1,42 @@
+id=12104
+名称=奈良县
+作者=
+属性=
+TempKey=奈良
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,奈良县,AT1000,0,0/2007.bmp"></CENTER>
+奈良是早期的日本首都，名为平城京。是模仿唐的首都长安建造的。<p>
+后于8世纪迁都平安京。<p>
+
+可前往下列寺院与古迹：<p>
+
+<a href="game_page(12107)" title="">东大寺</a><p>
+<a href="game_page(12113)" title="">唐招提寺</a><p>
+<a href="game_page(12118)" title="">法隆寺</a><p>
+<a href="game_page(12807)" title="">兴福寺</a><p>
+<a href="game_page(12815)" title="">药师寺</a><p>
+<a href="game_page(12816)" title="">高松塚古坟</a><p>
+<a href="game_page(12806)" title="">春日大社</a><p>
+
+
+<p>
+<a href="game_page(12071)">返回九州岛码头</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0ED1579A423F031F7328DEAB20061CD4

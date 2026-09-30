@@ -1,0 +1,41 @@
+id=10346
+名称=古墓
+作者=
+属性=6
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clWindow,古墓,AT1012,1,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+这是一个很久很久以前的大将军的墓，由于陪葬品众多，为防盗墓贼，里面设置了重重机关。<p>
+<:if game_role_count(0)<2 then 您一个人来古墓探险，里边<strong>危机重重</strong>哦，建议在镇上<strong>先找个帮手</strong>。<a href="game_npc_talk('系统')" title="">如何找到同伴</a>？ end:>
+<p>
+ 另外，进入古墓探险，回城卷，还魂丹等是必备之物（可在镇上杂货店买到）。
+<p>
+古墓内有很多的小间和小隧道，看起来都是一模一样的。<br>
+但是，您可以在路上<FONT color=#"FF0000">做标记</FONT>，做个标记，就知道这个地方已经来过了。
+<p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):>
+<p>
+<a href="if not game_grade('无名',5) then if game_question('您的等级偏低，去古墓探险有困难，建议先在柳树林，小桃源，后山矿洞等地方先练练，是否坚持前往古墓?') then game_page(10347) end else game_page(10347)end">进入古墓</a>
+<p>
+<a href="game_page(10001)">返回镇上</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+系统=1,您可以在镇上到处进去看看，并和大家多对话，比如茶楼，<FONT color=#"FF0000">客栈</FONT>等地方。只有在对话后，你才有机会找到新的伙伴。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=794A9BC0D620024A5C08E20D88EAD355

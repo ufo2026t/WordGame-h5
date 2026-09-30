@@ -1,0 +1,29 @@
+id=12194
+名称=沂山顶
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://111,35,(隶书,134,26,{Bold},{clMaroon}),clWindow,沂山顶,AT1008,0,0/2007.bmp"></CENTER>
+山顶的石缝里有不少蝎子在活动，全蝎，可入药。<a href="if game_pop_a(5) and game_random_chance(4) then game_goods_change_n('全蝎',1);game_chat('抓到了一只蝎子。') else game_role_value_half(1);game_chat('抓蝎失败，且被蝎子毒钩蜇了一下，生命值减半。') end" title="试试能捉到蝎子不？">抓蝎子</a>。<p>
+
+<p>
+<a href="game_page(12188)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6A4E3FD255602EE4E283DEE5275A82E1

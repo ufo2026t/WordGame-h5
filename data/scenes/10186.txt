@@ -1,0 +1,47 @@
+id=10186
+名称=婺州城外北山
+作者=
+属性=5
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,500,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs-5,AT1000,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+北山山高林密，多金银矿产，多飞禽走兽。是挖矿和采药的好地方。<p>
+<:if game_read_temp(1056606) then
+if game_role_is_exist('江雪儿') then
+<b> 江雪儿</b>：“怎么来到野外了？”<p>
+end
+if game_role_is_exist('慕容丽雯') then
+ <b>慕容丽雯</b>：“这密道有点坑，走着走着就出来了，也没见什么大怪。可能做起来逃跑用的。”<p>
+end
+else
+一阵微风吹过，树叶轻轻的晃动着。<p>
+end:><p>
+<:game_true(1)string game_res_goods(0,2,'迷踪蛊'):><p>
+
+&nbsp;<p>
+您可以在这里<a href="if game_random_chance(2) then game_weather(1);else game_weather(0);end game_pop_dig(100)" title="宝贝多多，金块银块，不在话下。">挖矿</a>。<p>
+一个小土坡，长着很多花花草草，<a href="game_pop_dig(200)" title="采药，可随时结束">采药</a>。<p>
+&nbsp;<p>
+或者也可以进山<a href="game_page(10187)" title="打怪练级，首选">打怪</a>。<p>
+&nbsp;<p>
+
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D5B49F3F1136D0EA3CF8830F104AEFE5

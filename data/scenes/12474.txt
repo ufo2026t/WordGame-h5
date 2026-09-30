@@ -1,0 +1,54 @@
+id=12474
+名称=王府地下室
+作者=
+属性=4
+TempKey=
+动作=
+{
+
+D5001=if game_pop_a(6) and game_random_chance(3) then game_add_scene_event(1250);game_reload_direct(0) else game_chat('开启机关失败，请重试') end
+D5002=if game_pop_a(8) and game_random_chance(5) then game_add_scene_event(1252);game_goods_change_n('玉制如来像',1);game_chat('得到一玉制如来像');game_reload_direct(0) else game_chat('开启宝盒失败，请重试') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,王府地下室,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:if game_check_scene_event(1244) then
+if game_check_scene_event(1250) then
+if game_check_scene_event(1251) then
+if game_check_scene_event(1252) then
+宝盒是空的。
+else
+两层机关都开启，内现一宝盒。<a href="D5002;" title="">开启</a>。
+end
+else
+第一层机关已经开启，总共有两层机关，还需去其他地方打开第二层机关。
+end
+else
+有一只机关，宝物可能在这里下面，<a href="D5001;" title="">是否开启</a>？
+end
+else
+string game_res_goods(0,1,'金块')<p>
+end
+:>
+
+
+
+
+<p>
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=81B65769C96A781E55B1E4915EBC3F25

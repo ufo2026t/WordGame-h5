@@ -1,0 +1,39 @@
+id=11160
+名称=淮阳乱坟岗内部
+作者=
+属性=6
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://807,267,(隶书,134,200,{Bold},{clWindowText}),clWindow,乱坟岗,AT1010,1,68/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,密室,AT1000,0,0/2007.bmp"></CENTER>
+密室内收藏着不少物品：<p>
+<:game_del_scene_event(1100):>
+1。<a href="if game_check_res_event(5179) then game_chat('已经拿了') else game_goods_change_n('钻石戒指',1);game_add_res_event(5179) end" title="">钻石戒指</a>一个<p>
+2。<a href="if game_check_res_event(5180) then game_chat('已经拿了') else game_goods_change_n('武器制造',1);game_add_res_event(5180) end" title="">技能书籍一本</a><p>
+3。<a href="if game_check_res_event(5181) then game_chat('已经拿了') else game_goods_change_n('金猪',1);game_add_res_event(5181) end" title="">金猪</a>一个<p>
+4。<a href="if game_check_res_event(5182) then game_chat('已经拿了') else game_goods_change_n('五毒丸',3);game_add_res_event(5182) end" title="">五毒丸</a>3个<p>
+5。<a href="if game_check_res_event(5183) then game_chat('已经拿了') else game_goods_change_n('千剑飘雨',1);game_add_res_event(5183) end" title="">武功秘籍</a>一本<p>
+6。<a href="if game_check_res_event(5184) then game_chat('已经拿了') else game_change_money(50000);game_add_res_event(5184) end" title="">钱5万</a><p>
+7。<a href="game_chat('空的箱子。')" title="">没了</a>
+<p>
+<a href="game_page(11159)">返回</a><p>
+密室搜罗完毕；若要早些脱身，可踏墙根法阵直回乱坟岗外，不必再走一遍险路。<p>
+<a href="game_pop_a(3);game_page(11137)" title="">法阵<img src="$apppath$img\fazhen.gif" border="0"></a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=18F96646EF83ABF3201E70984DCEAF67

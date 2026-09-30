@@ -1,0 +1,52 @@
+id=12416
+名称=刘家寺内
+作者=
+属性=4
+TempKey=
+动作=
+{
+
+D5001=if game_random_chance(5) and game_pop(6) then game_add_scene_event(1246);game_chat('开启了机关，再去2432标记处看看') else game_chat('操作失败，请重试') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,刘家寺内,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:if game_check_scene_event(1244) then
+if game_check_scene_event(1245) then
+if game_check_scene_event(1246) then
+石像已经损坏。
+else
+一个怪异的石像，会不会和2432标记有关，<a href="D5001;" title="">查看</a>。
+end
+else
+一个怪异的石像，只是看不明白。
+end
+else
+这里好像有些不寻常，等以后有空再来看看吧。
+end:><p>
+
+<:game_true(1)string game_res_goods(0,2,'降神镖'):><p>
+<a href="game_pop_a(3);game_page(-8)">前行</a><br>
+<a href="game_pop_a(3);game_page(2)">前行2</a><br>
+<a href="game_pop_a(3);game_page(1)">前行3</a><br>
+<a href="game_pop_a(3);game_page(8)">前行4</a><br>
+
+
+<p>
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E784842D372E817DDF2648FDAE386E31

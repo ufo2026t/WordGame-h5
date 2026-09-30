@@ -1,0 +1,55 @@
+id=11352
+名称=槐树下村
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,槐树下村,AT1000,0,0/2007.bmp"></CENTER>
+村口有一棵老槐树，几百年树龄了，所以叫槐树下村。<p>
+<a href="game_npc_talk('村民甲')">村民甲</a><p>
+<a href="game_npc_talk('村民乙')">村民乙</a><p>
+<a href="game_npc_talk('村民丙')">村民丙</a><p>
+<a href="game_npc_talk('村民丁')">村民丁</a><p>
+<a href="game_npc_talk('村民老于')">村民老于</a><p>
+<a href="game_page(11354)" title="">地下长河入口</a><p>
+
+<p>
+<a href="game_page(11337)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+村民甲=1,今年收成好啊，可是官府的税负又增加了，到手的还是没多起来。空欢喜一场。
+I=1,
+村民乙=1,我看上了邻村的一个姑娘，正托人说媒呢，也不知好事能不能成？
+I=1,
+村民丙=1,听说我们村旁边的地下长河里面有宝贝，只是这河又长又深，里面多怪兽，无人敢去寻宝。
+I=1,哦，这地下长河在哪？
+村民丙=2,入口就在村口不远处，你不会是想去吧？小心有命赚钱没命花钱。
+I=2,
+村民丁=1,前几天地下长河发大水，冲出来一只玉如意，运气真是太好了。
+I=1,
+if game_check_res_event(9014) then
+村民老于=1,
+I=1,我这有一封信，是你在宋军当兵的儿子托我带来的。
+村民老于=[game_comp_task(9014)]2,啊，我儿可好？太谢谢你啦
+I=2,一切还好，您老不必挂念。
+else
+村民老于=1,我大儿子去前线了，现在听说金兵很猛，好久没消息了，真当心啊。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9B85EDE4E68CCAAF442F92DF342C9A77

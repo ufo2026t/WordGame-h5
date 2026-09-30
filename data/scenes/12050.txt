@@ -1,0 +1,36 @@
+id=12050
+名称=武当山迷宫-深涧
+作者=
+属性=38
+载入后=game_pop_fight_a(1,94)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,400,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,77/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,深涧,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+
+<:if not game_check_res_event(game_get_pscene_id(0)) then
+一个大<a href="game_goods_change_n('龙精甲',1);game_goods_change_n('鬼见愁',1);game_goods_change_n('迷踪蛊',1);game_goods_change_n('水晶小熊摆件',5);game_chat('捡到龙精甲1，鬼见愁1，迷踪蛊1，水晶小熊摆件5。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">宝箱</a>。end:><p>
+
+ <a href="game_pop_a(2);game_page(12009)">法阵<img src="$apppath$img\fazhen.gif" border="0">，返回开头</a><p>
+
+<a href="game_pop_a(2);game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=68DCDBAB9274BCA3AFA5F20FE8AC6478

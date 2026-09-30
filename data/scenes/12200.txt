@@ -1,0 +1,46 @@
+id=12200
+名称=沂州-十八里铺-村内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,李小其家,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'赤铁矿'):><p>
+<:if game_check_scene_event(1237) then
+屋里没人。
+else
+if game_check_scene_event(1085) then
+run game_add_scene_event(1237)
+夜晚。<p>
+感觉院子里有一股淡淡的怪香味。<br>
+1。<a href="game_pop(3);game_chat('不对')" title="">这是蚊香，不用大惊小怪</a><br>
+2。是小其妹妹的<a href="game_pop(3);game_chat('不对')" title="">香水味</a><br>
+3。是<a href="game_pop(3);game_npc_talk('对话')">迷魂香</a>
+else
+李小其妹妹：“你们是什么人？找我哥哥吗？他出去了。”<br>
+string game_get_newname_at_id(1)：“不找他，没事。”
+end
+end:>
+<p>
+<a href="game_page(12198)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+对话=1,
+I=1,不好，是迷魂香，大家提气运功，阻止毒气内侵。赶紧去气味飘来的房间看看。
+对话=2,系统@忽见一黑影从房顶飘过。
+I=[game_page(12198)]2,追
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EB85E9449AF4ADFC24D805A5CA59116C

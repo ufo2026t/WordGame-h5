@@ -1,0 +1,39 @@
+id=11475
+名称=梅里雪山
+作者=
+属性=4
+TempKey=梅里雪山
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWhite}),$008000FF,梅里雪山,AT1009,0,0/2007.bmp"></CENTER>
+梅里雪山，举世闻名，气候变化无常。<p>
+<:game_true(1)exeing game_include_str('mgnd.upp'):></strong><br>
+<p>
+<:if game_not_scene_event(1133) then
+王宫总管：“我们王子已经进山好久了，不知是否会出意外。你们进山时帮忙留意一下，如果王子出险，救出者<strong>重重有赏</strong>。”<p>
+
+end:>
+
+<a href="game_pop_a(3);game_page(1)" title="">进山</a><p>
+
+<p>
+<a href="game_page(11418)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2D4222125FB9952968E942AD888B59FB

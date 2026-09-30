@@ -1,0 +1,56 @@
+id=10004
+名称=副食杂货店
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<CENTER><img src="gpic://248,39,(隶书,134,36,{Bold},{clBlack}),clWindow,副食杂货铺,AT1000,0,0/2007.bmp"></CENTER>
+主营：南北山货，滋补珍品。<p>
+一些补充体力的物品可以在野外捡到，可以打怪掉落，也可以来店铺购买。<p>
+如果要服装鞋帽这些提高防护值的装备，在装备店出售，或者自己提炼合成。（点铸剑炼药按钮）<p>
+<p>
+由于顾客不多，<a href="game_npc_talk('掌柜')">掌柜</a>的正在盘点货物。<p>
+如果您想买或者卖东西，请与<a href="game_npc_talk('掌柜')">掌柜</a>联系。<p>
+有空闲时间，也可和掌柜的<a href="if game_grade('无名',30) or game_check_role_values('无名',19,15000) then game_chat('本任务限30级以内，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('聊天') end">聊天</a>。<p>
+<a href="game_page(10001)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+掌柜=1,客官请随便挑。
+I,A=1,我看看先
+I,B=[game_trade(10,0)]1,我想买东西。
+I,C=[game_trade(10,1)]1,我要卖货品。
+掌柜,A=2,唉，中原连续打仗，百姓日子不好过啊，咱这小店生意也大受影响。
+掌柜,B=2,呵呵，咱们价格公道，且绝无假冒伪劣。
+掌柜,C=2,各类矿石药材装备等，本店高价收购。
+I,A,A=2,听说岳大元帅连战连捷啊，打跑金兵指日可待。
+I,A,B=2,我还想去中原呢，看来风险不小啊。
+
+if game_check_res_event(9028) then
+if game_check_goods_nmb('锆石',1) then
+聊天=1,对，要的就是锆石。
+I=[game_goods_change_n('锆石',-1);game_comp_task(9028);game_infobox('您得到了500金币，500经验');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+聊天=1,您采集的锆石数量不够。
+end
+else
+聊天=1,我夫人想要一个精美的锆石来别在头上，你可帮我找1个<FONT color="#FF0000">锆石</FONT>吗？
+I,A=[game_add_task(9028)]1,接受任务
+I,B=1,我现在没空，不接任务。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=CA8B8B5B93979D24CFF9CA1FB29F34F7

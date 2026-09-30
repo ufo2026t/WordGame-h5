@@ -1,0 +1,132 @@
+id=10001
+名称=河西镇
+作者=傅铖荣
+属性=324
+动作=
+{
+D5001=game_pop(3);game_page(10002);
+D5005=game_pop_fight(2,23);
+D5006=game_pop_fight(1,19);
+D5007=game_show_scene(10001);
+D5008=game_page(10012);
+D5009=game_chat_cleans(0);game_chat('游戏操作很简单，只需鼠标点点即可完成。在窗口内有链接的地方点击一下，你会发现，链接是物品名，您就捡到了该物品，链接是人名，会在这个窗口出现对话，链接是地名，就可以到达那个地方，链接是怪名，点击可以打怪。背单词也会在打怪，挖矿，旅行等场合出现。');
+D5010=game_page(10318)
+D5011=if game_random_chance(2) then if not game_check_scene_event(1033) then game_chat('救命，救命啊。');game_chat('有人呼救，<a href="D5010" title="点此到事发现场。">过去看看</a>。') end end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+;;<meta http-equiv="Page-Exit" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+;;<BODY style="background:url(gpic://BG_xiaozhen.jpg) fixed no-repeat center center;">
+ <BODY>
+ <CENTER><img src="gpic://784,48,(隶书,134,36,{Bold},{clMaroon}),clWindow,自在飞花轻似梦，无边丝雨细如愁,AT1001,0,0/2007.bmp"></CENTER>
+<P><:game_check_scene_event(1065)
+<a href="game_del_scene_event(1065);game_page(10001)" title="点击打开背景音乐">打开</a><strong>背景音乐</strong><br>
+else
+<bgsound src="$apppath$music\0106.mid" loop="-1"><a href="game_add_scene_event(1065);game_page(10001)" title="点击关闭背景音乐">关闭</a><strong>背景音乐</strong>:><p>
+
+这个江南小镇虽然离中原有点远，但最近也陆续从那边传来了不少令人不安的消息。
+似乎天下又有大事发生了。还是先到附近转转吧。<a href="D5009" title="如果您是新手，点此了解如何开始游戏。">如何玩游戏背单词？</a></P>
+<P><a onMouseOver=location.href="D5011">这里是一个江南的普通小镇，灰色的墙，黛色的瓦。镇前有河，镇后有山，依山傍水。一条街道横贯而过。</a><BR>
+初春时节江南多雨。蒙蒙细雨，落下几多思绪。</P>
+<P>小镇的东头<A href="game_page(10002)" title="点击进入镇长家">镇长家</A>。西头<A href="game_page(10003)">王大妈</A>家，可以进去看看有没游戏线索<p>
+小镇上有一<a href="game_chat_cleans(0);game_npc_talk('乾坤指路人')" title="解答一些游戏入门问题">乾坤指路人</a>，可以帮你<FONT color=#"FF0000">解答一些常见问题</FONT>。
+<p><a href="game_chat_cleans(0);game_npc_talk('李大伯')" title="点击和李大伯对话">李大伯</a>是个和善的老人，没事也可以和他聊两句。<br>
+<p>街头的
+<A href="game_page(10008)" title="休闲喝茶的地方"><img src="gpic://66,33,(隶书,134,24,{Bold},{clGreen}),clWindow,茶楼,AT1002,0,0/2007.bmp"></A>总是门庭若市，天天客满。<p>
+与茶楼毗邻的
+<A href="game_page(10006)" title="客栈">客栈</A>相对冷清很多了。当然冷清的地方有时是好地方，进去看看吧也许能认识新的伙伴。<p>
+街道中间有几间店铺连在一起，是
+<A href="game_page(10004)" title="购买补充体力的食品和一些特殊物品">杂货铺</A>和
+<A href="game_page(10005)" title="购买防护用品，可提高防值">装备店</A><br>这些店铺的对面是
+<A href="game_page(10007)" title="购买补充生命值的药材">药材铺</A>和一间
+<A href="game_page(10009)" title="购买武器">铁店</A><p>
+<:game_check_scene_event(1033)<A href="game_page(10318)" title="老胡茶铺"><img src="gpic://132,33,(隶书,134,24,{Bold},{clGreen}),clWindow,老胡茶铺,AT1001,0,0/2007.bmp"></A><p>:>
+另外，告诉大家一下，在这个镇上还有个好去处，就是
+<A href="game_page(10039)" title="今天手气不错">寻宝屋</A>，您可以来这里试试手气，也许会有意外收获哦。<p>
+还有，如果您想给自己改个更有个性的名字，那么请你来
+<A href="game_page(10038)" title="您可以在此改名换姓">易名轩</A>吧，当然，改名是要收费的哦。
+
+<P>穿过镇中的一条小路，是<A href="D5008" title="前往临安，婺州，或者河对岸的东河村"><img src="gpic://107,48,(隶书,134,36,{Bold},{clGreen}),clWindow,渡口,AT1002,0,0/2007.bmp"></A>。镇上的交通主要靠水运。您如果想去<FONT color=#"FF0000">婺州</FONT>或者<FONT color=#"FF0000">临安</FONT>，
+就要从这里走了。</P>
+
+在小镇边上，是“<a href="game_page(10148)" title="怪多，经验值高，是练级的好地方"><img src="gpic://147,48,(隶书,134,36,{Bold},{clGreen}),clWindow,柳树林,AT1001,0,0/2007.bmp"></a>”<a onMouseOver=location.href="D5011">，离小镇不远，常有野猪精、邋遢狗等怪出没，平时可以去那里打怪练级。</a>。<p>
+在小镇边上，还有一个名曰“<a href="game_page(11162)" title="怪多，经验值高，是练级的好地方"><img src="gpic://147,48,(隶书,134,36,{Bold},{clGreen}),clWindow,野猪湖,AT1002,0,0/2007.bmp"></a>”的地方，常有野猪精和大野猪出没。
+
+<p><a href="game_page(10343)" title="怪多，经验值高，是练级的好地方"><img src="gpic://147,48,(隶书,134,36,{Bold},{clGreen}),clWindow,小桃源,AT1001,0,0/2007.bmp"></a>是一个适合新手练级的地方。
+<P>镇长家后边有一条山路，通往<A href="game_page(10014)" title="可挖矿和打怪"><img src="gpic://107,48,(隶书,134,36,{Bold},{clPurple}),clWindow,后山,AT1002,0,0/2007.bmp"></A>,
+此山原名石头子山，由于山在小镇的后面，大家又称其为“后山”，山不高，但很险峻。<BR>
+山上林木苍翠，多松树和枫树，且常有野猪出没。<BR>半山还有一座废弃的矿洞，有空可以去那里挖矿，也许能挖到金银财宝呢。</P>
+在离小镇半柱香路程的地方，有个<a href="game_page(10066)" title="神秘的古堡">神秘的古堡</a>，已经很久很久没人住了，甚至，天一黑大家都不敢在古堡附近逗留。因为传说那个古堡经常闹鬼。
+<P>&nbsp;</P>
+<a href="game_page(11678)" title="通过考试可以获得荣誉">考试院</a>在这里通过一定的单词考试可以获得各种头衔<p>
+<a href="game_page(11401)" title="新手村">返回新手村</a>
+</body>
+</html>
+}
+对话资源=
+{
+乾坤指路人=1,你好，请问你有什么不明白的地方？
+I,A=1,是否可以提高单词显示和过场动画的速度？
+I,B=1,请问如何<FONT color=#"FF0000">打怪</FONT>？
+I,C=1,如何挖矿？
+I,D=1,怎么样才能获得金钱？
+I,E=1,我想知道故事的背景。
+I,F=1,如何去其他地方，比如<FONT color=#"FF0000">临安</FONT>，<FONT color=#"FF0000">婺州</FONT>，<FONT color=#"FF0000">大理</FONT>等地？
+I,G=1,如何施展<FONT color=#"FF0000">法术</FONT>？
+I,H=1,法术要学吗？
+I,I=1,矿物除了卖钱，还有其他作用吗？
+I,J=1,在“动作”按钮下的“<FONT color=#"FF0000">背单词</FONT>”有何特殊之处？
+I,K=1,在打怪时如何使用药品补充生命值？
+I,L=1,如何<FONT color=#"FF0000">做任务</FONT>？
+I,M=1,如何改名，我不喜欢游戏默认的名字。
+I,N=1,主界面内的那个“<FONT color=#"FF0000">聊天</FONT>”按钮干吗用的？
+I,O=1,请问战斗时候的选项面板“<FONT color=#"FF0000">攻</FONT>”“<FONT color=#"FF0000">防</FONT>”“<FONT color=#"FF0000">术</FONT>”“<FONT color=#"FF0000">物</FONT>”“<FONT color=#"FF0000">逃</FONT>”干吗用的
+I,P=1,我还有更多问题呢。
+乾坤指路人,A=2,可以，需要在杂货铺购买“时间加速丸”然后在背单词窗口把“时间加速-关闭”前面的勾去掉就行了。
+乾坤指路人,B=2,怪物一般出现在野外，迷宫，或者其他荒凉的地方，比如<FONT color=#"FF0000">后山</FONT>矿洞内，<FONT color=#"FF0000">古堡</FONT>，<FONT color=#"FF0000">柳树林</FONT>等地。
+乾坤指路人,C=2,挖矿在指定的矿洞，矿山进行，挖矿的背单词窗口可随时关闭，挖到金块的概率还是蛮高的。
+乾坤指路人,D=2,挖矿后卖掉，或者打怪，都能得到金钱。
+乾坤指路人,E=2,故事发生在南宋初期，岳飞抗金节节获胜，不料金兀术盗得镇妖神镜，引来了暗黑世界的力量。顿时战场形式出现了逆转……
+乾坤指路人,F=2,从小镇的渡口，找船工可以坐船去婺州，然后从婺州可以到临安、东海、开封、大理、塞外边疆……
+乾坤指路人,G=2,在打怪时，轮到你攻击的时候，选择“术”，然后从列表内选择一种法术即可。
+乾坤指路人,H=2,一般在迷宫内或者一些特定的地方可以得到秘籍，在游戏窗口上方的“<b>人物 物品</b>”窗口的特殊物品列表内，双击即可学会。
+乾坤指路人,I=2,矿物还可以用来铸剑，极品武器需要自己铸造。
+乾坤指路人,J=2,这里的背单词，有个特殊的地方，就是背满20个单词就有机会双方增加一个点爱情值，爱情值的高低，会影响游戏结局。
+乾坤指路人,K=2,在打怪时，轮到你时选择“物”，然后在物品列表内点击一个物品即可。
+乾坤指路人,L=2,做任务能增加不少经验值和金钱。在与人对话时，有些人会要你帮忙，如果答应下来，就会接到一个任务，点击“任务和消息”按钮就可以看到已完成或者未完成的任务。
+乾坤指路人,M=2,改名要在“易名轩”或者类似的地方进行，您可以改自己的名字，也可以改队伍内其他人的名字，但改名是要收费的哦。
+乾坤指路人,N=2,点击此按钮，是表示和队伍内的人聊天，因此要先选择一个队伍内的人。在很多场景内，可以和队伍内的人聊几句，以获得更多信息。
+乾坤指路人,O=2,这些功能是供你组合战斗用的，比如“物”按钮表示你可以选择物品来补生命值，“术”按钮表示你可以选择法术攻击或者恢复，等等
+乾坤指路人,P=2,更多问题可以再问问我，或者多和镇上的人聊聊。
+I,A=[game_write_name('乾坤指路人')]2,返回上页。
+I,B=[game_write_name('乾坤指路人')]2,返回上页。
+I,C=[game_write_name('乾坤指路人')]2,返回上页。
+I,D=[game_write_name('乾坤指路人')]2,返回上页。
+I,E=[game_write_name('乾坤指路人')]2,返回上页。
+I,F=[game_write_name('乾坤指路人')]2,返回上页。
+I,G=[game_write_name('乾坤指路人')]2,返回上页。
+I,H=[game_write_name('乾坤指路人')]2,返回上页。
+I,I=[game_write_name('乾坤指路人')]2,返回上页。
+I,J=[game_write_name('乾坤指路人')]2,返回上页。
+I,K=[game_write_name('乾坤指路人')]2,返回上页。
+I,L=[game_write_name('乾坤指路人')]2,返回上页。
+I,M=[game_write_name('乾坤指路人')]2,返回上页。
+I,N=[game_write_name('乾坤指路人')]2,返回上页。
+I,O=[game_write_name('乾坤指路人')]2,返回上页。
+I,P=[game_write_name('乾坤指路人')]2,返回上页。
+if game_check_scene_event(1030) then
+李大伯=1,if game_sex_from_id(1) then 壮士，<FONT color=#"FF0000">柳树林</FONT>可是打怪练手的好地方。else 姑娘，最近听说衣服装备的价格又跌了。 end
+I=1,嗯
+else
+李大伯=1,if not game_check_scene_event(1030) then [game_goods_change_n('一年生草药',3);game_goods_change_n('忘忧草',2);game_add_scene_event(1030);game_chat('得到了一年生草药3个，忘忧草2个')]1,行走江湖，难免磕磕碰碰，我这有点草药，带上吧。else 到处转转，会有很多收获的。 end
+I=1,谢谢大伯。
+李大伯=2,如果不知道游戏怎么玩，你可以问问<a href="game_npc_talk('乾坤指路人')" title="">乾坤指路</a>人。
+I=2,好的。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5C0D07B4CBEF84CA02F106573B13936E

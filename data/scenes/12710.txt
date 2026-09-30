@@ -1,0 +1,41 @@
+id=12710
+名称=制药房
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,制药房,AT1000,0,0/2007.bmp"></CENTER>
+药罐沸响，空气中弥漫着辛辣药味。弟子在此调配五毒丸与解毒散。<p>
+<a href="game_npc_talk('制药弟子')">制药弟子</a><p>
+<:if game_check_scene_event(1289) and not game_check_scene_event(5300) then
+<FONT color=#FF0000>弟子嘀咕：昨夜有个蒙面人领走毒囊，说是要去东来山庄「取物」……</FONT><p>
+end:>
+<:game_true(1)string game_res_goods(0,1,'五毒丸'):><p>
+<p>
+<a href="game_page(-3)">走廊</a><br>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+制药弟子=1,毒物用得好是药，用不好是害。我们教主从不让外人进这药房。
+I=1,
+if game_check_scene_event(1289) and not game_check_scene_event(5300) then
+制药弟子=2,怪事！昨夜有人取走毒囊，往东来山庄方向去了……
+I=2,
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=600B4FA51D9DDD158D137256FE667A9E

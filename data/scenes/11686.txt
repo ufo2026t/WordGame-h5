@@ -1,0 +1,34 @@
+id=11686
+名称=村外荒地-沈村
+作者=
+属性=
+动作=
+{
+D5001=if game_check_scene_event(1169) then game_add_scene_event(1166);game_chat('你不是想帮蒙面人吗，呸，我也不要你帮忙。') else game_role_only_show('无名');game_add_friend('李疏盈',1);game_pop_fight_a(4,29);game_add_scene_event(1166);game_del_friend('李疏盈',0);game_role_reshow(0);game_reload_direct(0);game_chat('少帮主：你为何要帮我？（说罢，离开了队伍，走了。）') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,村外荒地,AT1000,0,0/2007.bmp"></CENTER>
+<:game_run_off_no(0):>
+<:if game_check_scene_event(1166) or game_role_is_exist('李疏盈') or game_check_scene_event(1169) then
+荒地上芳草萋萋，两只黄鹂鸣翠柳。<p>
+else
+原来是飞龙帮的少帮主和几个蒙面人在打。<p>
+1。帮助少帮主<a href="D5001" title="">打蒙面人</a>。<p>
+2。帮助蒙面人<a href="game_add_scene_event(1169);game_chat('蒙面人：老子的事不用你们插手，滚。（蒙面人拒绝了你的帮助）')">打少帮主</a>。
+end:>
+<a href="game_page(-2)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E53DBF86A04E34539982A295B3262985

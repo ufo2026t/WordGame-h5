@@ -1,0 +1,62 @@
+id=10319
+名称=河西镇客栈楼上第一间房
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://124,29,(隶书,134,22,{Bold},{clWindowText}),clWindow,客栈客房,AT1000,0,0/2007.bmp"></CENTER>
+房间不大，但显得干净。<p>
+一个身背长剑，脚穿薄底快靴的<a href="game_npc_talk('少年')">少年</a>立于窗前。<p>
+
+<:if not game_check_res_event(5153) then 一个小<a href="game_goods_change_n('铁蒺藜',1);game_chat('捡到铁蒺藜一个。');game_add_res_event(5153);game_reload_direct(0)" title="">锦盒</a>。end:>
+<p>
+<a href="game_page(10010)">返回客栈走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+少年=1,if game_sex_from_id(1) then 你是何人，为何冒然闯入我房间？ else 你这姑娘好没道理啊，不敲门就进来了？end
+I=1,不好意思，走错门了。
+if game_check_scene_event(1001) then
+少年=2,既然进来了，就聊两句吧，听说中原战况吃紧，有这回事吗？
+I=2,我久居江南，对这事儿还真了解不多。
+少年=3,if game_sex_from_id(1) then 大丈夫当以天下为重，公子应当北上看看去。else 姑娘家不闻天下大事，可以理解，女子无才便是得。end
+I=3,if game_sex_from_id(1) then 恩，侠士说的在理，我自当北上，为国效力。else 哼，小瞧我了。end
+else
+少年=2,既然进来了，就聊两句吧，听说这小镇的后山有妖怪很厉害？
+I=2,是有此事，是否您会降妖？
+少年=3,我一介粗人，只会舞刀弄剑，却打不得妖怪，如要降妖，还需找会法术之人。
+I=3,哦，那不知要在哪里才能找到这样的人啊？
+if game_role_is_exist('江雪儿') then
+少年=4,和你同行之人，我没看错的话，她就会法术。
+I=4,哇，你真是高人啊，这也看的出？
+少年=5,呵呵，说来简单，会法术之人，眉宇间透出一丝灵气。
+I=5,不知这法术如何使出？
+少年=6,在战斗时，轮到会法术之人出招时，选择“术”按钮，然后点击相应的法术即可。
+I=6,攻击需要消耗体力，不知使用法术是否要消耗什么？
+少年=7,使用法术一般可以获得更大的杀伤力，但需要消耗一定的灵力，不过吃点忘忧草之类的物品可以补充灵力。
+I=7,多谢侠士，受教了。
+少年=8,不客气，在游戏内，多问，多看，是打好游戏的不二法门。
+I=8,
+else
+少年=4,到处转转，多问问，找到会法术之人不难。
+I=4,您说的有理，我去楼下看看去。
+少年=5,闻道不分先后，修道不问男女，去吧。
+I=5,
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=AA03C27C6077158D6508A4A72C29DD50

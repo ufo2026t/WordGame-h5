@@ -1,0 +1,70 @@
+id=10406
+名称=一号房
+作者=
+属性=34
+载入后=if game_check_scene_event(1041) then game_add_scene_event(1042) else game_chat('房间很干净。')end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,22,{Bold},{clRed}),clWindow,{-61@25}十{-61@68}里{-61@111}平{-61@154}湖{-61@197}霜{-61@240}满{-61@283}天{-107@25}寸{-107@68}寸{-107@111}青{-107@154}丝{-107@197}愁{-107@240}华{-107@283}年{-153@25}对{-153@68}月{-153@111}形{-153@154}单{-153@197}空{-153@240}相{-153@283}护{-199@25}只{-199@68}羡{-199@111}鸳{-199@154}鸯{-199@197}不{-199@240}羡{-199@283}仙,AT1000,0,65/2007.bmp) fixed no-repeat center center;">
+<bgsound src="$apppath$music\qnyh.mid" loop="-1">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://148,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,一号房,AT1002,0,0/2007.bmp"></CENTER>
+房间里干干净净的，墙上挂着一副图。<img src="gpic://img_qiannv.jpg"><p>
+<:if game_check_scene_event(1041) then
+if game_check_scene_event(1042) then
+房间里很安静。
+else
+if game_sex_from_id(1) then
+<img src="$apppath$img\qiannv2.jpg">：“哟，公子，这么晚了来我这里何事啊”<br>
+“你是人是鬼？”<br>
+“我是鬼，不过是好鬼。”<br>
+“既是好鬼，为何不投胎转世？”<br>
+“你问这么多干吗呢，既然来了，咱们就快活快活。”<br>
+“我来这里是因为，这里妖孽众多，祸害人间，所以要铲除妖孽。”<br>
+“看你是个正义之人，那就快走吧。我们都受黑山老妖控制，它法力无边呢。你们不是它的对手。”<br>
+“不怕，既能来到这里，便是下定决心要除妖的了。”<br>
+“公子心意已决，那我就告诉你一个秘密，你先到地下室，然后找到一间<FONT color=#"FF0000">密室</FONT>，进入后打开里面的机关。，
+然后变可以到达兰若寺的后院，从那里有个法阵，可以直达黑山，打掉了黑山老妖，我们这些孤魂野鬼，就能得救了。”
+else
+<img src="$apppath$img\qiannv2.jpg">：“哟，姑娘家，这么晚了来我这里何事啊”<br>
+“荒宅之内，看你非妖即鬼了。”
+“鬼也并非个个都是坏的啊。我也不想害你，你走吧，呆会要是黑山姥姥来了，你就没命了。”
+“我来这里就是为了除妖，哪怕什么老妖。”
+“嘘，小声点，黑山姥姥法力无边，你们不是她的对手，还是趁早逃命吧。”
+“你小看我了，没有金刚钻，哪敢揽磁器活。”
+“也罢，你既决心已定，那我就告诉你一个秘密，你先到地下室，然后找到一间<FONT color=#"FF0000">密室</FONT>，进入后打开里面的机关。，
+然后变可以到达兰若寺的后院，从那里有个法阵，可以直达黑山，打掉了黑山老妖，我们这些孤魂野鬼，就能得救了。”
+end
+end
+else
+run game_add_scene_event(1040)
+现在是白天，这里看不出有什么，到<FONT color=#"FF0000">客栈</FONT>先休息一下，<strong>半夜</strong>再来吧。<p>
+run game_allow_gohome(0)
+end
+:>
+;;<:game_true(1)string game_res_goods(0,1,'回城卷'):><p>
+;;<:game_true(1)string game_res_goods(5,1,'百年灵芝'):>
+<p>
+
+<p>
+;;添加一个1040事件，表示可以到客栈睡觉到半夜。
+<a href="if game_check_scene_event(1042) then game_del_scene_event(1040);game_del_scene_event(1041); else game_add_scene_event(1040);end game_pop(2);game_allow_gohome(1);game_page(10405)">返回二楼走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=CE6895E4390F3A847AA3B220B975603C

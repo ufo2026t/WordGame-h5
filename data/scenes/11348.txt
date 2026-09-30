@@ -1,0 +1,43 @@
+id=11348
+名称=虚无幻境四，第二关
+作者=
+属性=6
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,第二关,AT1000,0,0/2007.bmp"></CENTER>
+刚到洛阳关口，便见1队人马已在山上。<p>
+韩福：报上名来！<br>
+关羽：我是汉寿亭侯关羽，想要路过此地。<br>
+韩福：将军有通关文书吗？<br>
+关羽：你想和孔秀一样吗？<br>
+韩福：要是在平日里，我还惧你三分，但今天，哈哈，见你连刀也拿不动，还想闯关，做梦。孟坦，出战！<br>
+
+
+<:game_read_temp(1134801)
+孟坦被杀<br>
+韩福从斜射飞出1支弓箭将关羽射伤<br>
+关羽：小人，竟敢放暗箭。<br>
+1。<a href="game_pop_fight_a(1,113);game_page(1)" title="">闯关</a><br>
+2。<a href="game_pop_a(3);game_page(10574)" title="">开溜</a><br>
+else
+<a href="game_pop_fight_a(1,112);game_write_temp(1134801,1);game_reload_direct(0)" title="">迎战孟坦</a><p>
+:>
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=04AE1EB568FFB18D4725BB7FA2D39D6F

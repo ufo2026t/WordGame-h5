@@ -1,0 +1,56 @@
+id=12726
+名称=教主房
+作者=
+属性=
+TempKey=
+动作=
+{
+D5001=game_can_stop_chat(1);if game_pop_fight_a(1,175) then if not game_check_goods_nmb('藏宝图碎片7',1) then game_goods_change_n('藏宝图碎片7',1) end game_add_scene_event(1288);game_add_message('已取得藏宝图第七块，可往开封邙山汇合。');game_chat('毒王教主败退，留下藏宝图碎块一块。');game_reload_direct(0) end
+D5002=game_can_stop_chat(1);if not game_check_goods_nmb('藏宝图碎片7',1) then game_goods_change_n('藏宝图碎片7',1) end game_add_scene_event(1288);game_add_message('已取得藏宝图第七块，可往开封邙山汇合。');game_infobox('教主交出了藏宝图碎块。');game_reload_direct(0)
+D5003=if game_check_money(5000) then game_change_money(-5000);D5002 else game_chat('你带的银两不够。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,教主房,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1288) or game_check_goods_nmb('藏宝图碎片7',1) then
+教主已不在，案上留着一张邙山地图的拓本，标注「七块齐聚，石门可开」。<p>
+elseif game_check_scene_event(1287) then
+<a href="game_npc_talk('毒王教主')">毒王教主</a>负手立在案前，袖中隐约露出半幅古旧图纸。<p>
+else
+教主房门紧闭，门外两名弟子把守：「护法未允，任何人不得入内。」<p>
+end:>
+
+
+<p>
+<a href="game_page(-2)">走廊</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+毒王教主=1,中原来客？你也是为了周世宗宝藏而来吧。我手中这一块，江湖上称为藏宝图第七碎块。
+I=1,邙山宝藏关乎天下苍生，教主若肯交出碎块，他日宝藏可与众同享。
+毒王教主=2,哼，我九毒派在西域称雄，岂会白白送人？不过……若你肯助我在邙山打开机关，也不是不能商量。
+I,A=2,邙山机关需七块齐备，你若交出来，咱们各取所需。
+I,B=2,废话少说，动手吧！
+I,C=2,我愿以五千两换这一块碎图。
+毒王教主,A=3,好，你倒明白事理。这碎块给你，邙山见。
+I,A=[D5002]3,一言为定。
+毒王教主,B=3,来得好！让我看看中原高手几斤几两。
+I,B=[D5001]3,请赐教。
+if game_check_money(5000) then
+毒王教主,C=3,五千两虽不多，今日心情好，成交。
+I,C=[D5003]3,银票在此。
+else
+毒王教主,C=3,穷酸也敢来九毒派讨宝？看招！
+I,C=[D5001]3,那就手底下见真章。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=781E3C280B04CF18E4CCA311EE649D4F

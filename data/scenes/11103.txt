@@ -1,0 +1,41 @@
+id=11103
+名称=客房六
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,客房六,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1085) then
+if game_sex_from_id(1) then
+女子：“你这人好无理啊，半夜三更到奴家房里来干吗。”<br>
+“对不起，走错房间了。”<br>
+“哟，原来是帅哥啊，别急着走啊，既然来了，就先坐回啊。”<p>
+else
+男子：“哇，美梦成真了，半夜真来了美女啊。”<br>
+“对不起，走错房间了。”<br>
+“别走啊，我梦还没做完呢。”<p>
+end
+else
+房间是空的，住的人出去了。</a>。
+end:>
+<p>
+<a href="game_page(11098)">退出</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=12E720A8417E95D44751CEF3D0038BFD

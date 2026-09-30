@@ -1,0 +1,44 @@
+id=11669
+名称=飞龙帮-书房
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,书房,AT1002,0,0/2007.bmp"></CENTER>
+飞龙帮主不喜看书。也就少帮主偶尔看看。<p>
+1。<a href="game_pop_a(6);game_npc_talk('书籍')">艺文类聚</a><br>
+2。<a href="game_pop_a(6);game_npc_talk('书籍')">新旧唐书</a><br>
+3。<a href="game_pop_a(6);game_npc_talk('书籍')">南北史</a><br>
+4。<a href="game_pop_a(6);game_npc_talk('书籍')">晋书</a><br>
+5。<a href="game_pop_a(6);game_npc_talk('书籍')">三国</a><br>
+6。<a href="game_pop_a(6);game_npc_talk('史记')">史记</a><br>
+7。<a href="game_pop_a(6);game_npc_talk('书籍')">前汉书</a><br>
+8。<a href="game_pop_a(6);game_npc_talk('书籍')">后汉书</a><p>
+9。<a href="if game_not_res_event(5219) then game_pop_a(20);game_add_res_event(5219);game_goods_change_n('万剑飞雪',1);game_chat('得到万剑飞雪武功秘籍一本') else game_chat('一个空的书皮。') end">一本古书</a><p>
+……<p>
+
+
+<a href="game_pop_a(10);game_page(1)" title="">密室</a>
+<p>
+<a href="game_page(11665)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+书籍=1,一本常见的书籍。
+I=1,
+史记=1,史记
+I=[game_pop_a(8);game_infobox('众里寻她千百度')]1,这书里面用毛笔写着几个字，点击查看。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=7C516EF03144F1C7FC38C27E3F0E1BE7

@@ -1,0 +1,37 @@
+id=12660
+名称=走廊
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,走廊,AT1000,0,0/2007.bmp"></CENTER>
+ 府衙内廊曲折，通向各间厢房与后院。<p>
+<a href="game_page(1)">房间一</a><br>
+<a href="game_page(2)">房间二</a><br>
+<a href="game_page(3)">房间三</a><br>
+<a href="game_page(4)">房间四</a><br>
+<a href="game_page(5)">房间五</a><br>
+
+
+<p>
+<a href="game_page(-1)">客厅</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=AEF64826E831E2AB2599FDAE57EBF79F

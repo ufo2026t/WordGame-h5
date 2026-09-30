@@ -1,0 +1,70 @@
+id=12432
+名称=刘家寺内
+作者=
+属性=4
+TempKey=
+动作=
+{
+
+D5001=if game_random_chance(3) and game_pop(6) then game_add_scene_event(1245);game_reload_direct(0) else game_chat('开启操作不成功，请重试。') end
+D5002=if game_random_chance(4) and game_pop(7) then game_write_temp(1243201,1);game_reload_direct(0) else game_chat('打开铁涵失败，请重试') end
+D5003=game_pop(20);game_add_scene_event(1248);game_goods_change_n('木制如来像',1);game_reload_direct(0)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,刘家寺内,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:if game_check_scene_event(1244) then
+if game_check_scene_event(1248) then
+一个空的铁盒子。
+else
+if game_check_scene_event(1247) then
+if game_read_temp(1243201) then
+铁函打开，里面一张纸片，记载的大意是原先寺内有俩佛，一尊玉佛被金兵掠走北上，剩下木佛，一老僧将之封存于此。<br>
+所以现在铁函里面只剩下一尊<b>木佛</b>。<a href="D5003;" title="">拿起</a>。
+else
+三层机关已经全部打开，里面现出一个铁函，<a href="D5002;" title="">开启</a>
+end
+
+else
+if game_check_scene_event(1246) then
+;;提示需要1247线索
+run game_add_scene_event(1249)
+两层机关已经开启，现在您需要再去其他地方查找打开第三层机关了，宝物一般都保存的很复杂的。
+else
+if game_check_scene_event(1245) then
+;;提示需要1246线索
+一层机关打开，但内部还有一层机关，且控制器不在这里，需去其他地方开启。
+else
+;;翻动，来创建1245线索，然后需要去16号标记
+一个可控制手柄，<a href="D5001;" title="">转动试试</a>。
+end
+end
+end
+end
+else
+一个隐约有光透过的石洞。<br>
+string game_res_goods(0,1,'金块')
+end:><p>
+
+<a href="game_pop_a(3);game_page(1)">前行</a><br>
+
+
+<p>
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F0D3AC3B01C7FEE87807F80CDA3184DF

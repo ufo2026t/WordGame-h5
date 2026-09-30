@@ -1,0 +1,34 @@
+id=10598
+名称=天王殿
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clWindowText}),clWindow,佛,AT1012,0,80/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clBlack}),clWindow,天王殿,AT1003,0,0/2007.bmp"></CENTER>
+天王殿正中佛龛里坐着袒胸露腹的弥勒佛，两边为四大天王，弥勒佛后壁佛龛里站着手执金刚杵的韦驮菩萨，
+韦驮佛像造型端庄，由独块香樟木雕成，是南宋遗物，已有700多年历史，很具观赏价值、
+天王殿两侧是四大天王彩塑像，俗称四大金刚。
+<p>
+<:if not game_check_res_event(game_get_pscene_id(0)) then 一个小<a href="game_pop_a(7);game_goods_change_n('钻石戒指',1);game_chat('捡到钻石戒指1。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">大包裹</a>。end:><p>
+
+<p>
+<a href="game_pop_a(2);game_page(10595)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=25268CDF85ACDCB824EC0F2203157228

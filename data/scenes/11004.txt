@@ -1,0 +1,35 @@
+id=11004
+名称=净慈寺-禅房
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://349,347,(隶书,134,260,{Bold},{clWindowText}),clWindow,佛,AT1001,0,70/2007.bmp) fixed no-repeat center center;">
+禅房。<p>
+&nbsp;<p>
+<a href="game_npc_talk('老僧')">老僧</a>
+<p>
+<a href="game_page(-1)">退出</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+老僧=1,if game_sex_from_id(1) then 施主 else 女施主 end 何事找我？
+I=1,一事不明，请教大师。
+老僧=2,哦，请讲。
+I=2,晚上做梦，常见一山被黑云遮蔽。爬之而不上。
+老僧=3,if game_sex_from_id(1) then 施主 else 女施主 end 不必烦恼，念由心生，复由心所灭。
+I=3,明白了，多谢大师。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B0DCF4D0EB5F555AACA47D717CDE1779

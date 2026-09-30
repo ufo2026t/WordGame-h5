@@ -1,0 +1,57 @@
+id=10426
+名称=书房
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+这里摆放着你收集来的值钱的古玩和冶炼用矿物：<p>
+<:if game_check_goods_nmb('金佛',1) then <img src="$apppath$sml\big301.jpg">金佛：数量 string game_inttostr(game_get_goods_count('金佛'))个 end
+if game_check_goods_nmb('金猪',1) then <img src="$apppath$sml\big288.jpg">金猪：数量 string game_inttostr(game_get_goods_count('金猪'))个 end
+if game_check_goods_nmb('陨铁矿',1) then <img src="$apppath$sml\big370.jpg">陨铁矿：数量 string game_inttostr(game_get_goods_count('陨铁矿'))个 end
+if game_check_goods_nmb('上古神石',1) then <img src="$apppath$sml\big371.jpg">上古神石：数量 string game_inttostr(game_get_goods_count('上古神石'))个 end
+if game_check_goods_nmb('红宝石',1) then <img src="$apppath$sml\big375.jpg">红宝石：数量 string game_inttostr(game_get_goods_count('红宝石'))个 end
+if game_check_goods_nmb('蓝宝石',1) then <img src="$apppath$sml\big376.jpg">蓝宝石：数量 string game_inttostr(game_get_goods_count('蓝宝石'))个 end
+<p>
+if game_check_goods_nmb('水晶',1) then <img src="$apppath$sml\big377.jpg">水晶：数量 string game_inttostr(game_get_goods_count('水晶'))个 end
+if game_check_goods_nmb('金块',1) then <img src="$apppath$sml\big381.jpg">金块：数量 string game_inttostr(game_get_goods_count('金块'))个 end
+if game_check_goods_nmb('银块',1) then <img src="$apppath$sml\big382.jpg">银块：数量 string game_inttostr(game_get_goods_count('银块'))个 end
+if game_check_goods_nmb('绿翡翠',1) then <img src="$apppath$sml\big378.jpg">绿翡翠：数量 string game_inttostr(game_get_goods_count('绿翡翠'))个 end
+if game_check_goods_nmb('玛瑙石',1) then <img src="$apppath$sml\big379.jpg">玛瑙石：数量 string game_inttostr(game_get_goods_count('玛瑙石'))个 end
+if game_check_goods_nmb('和田黑玉',1) then <img src="$apppath$sml\big380.jpg">和田黑玉：数量 string game_inttostr(game_get_goods_count('和田黑玉'))个 end
+<p>
+if game_check_goods_nmb('铜块',1) then <img src="$apppath$sml\big383.jpg">铜块：数量 string game_inttostr(game_get_goods_count('铜块'))个 end
+if game_check_goods_nmb('锡块',1) then <img src="$apppath$sml\big384.jpg">锡块：数量 string game_inttostr(game_get_goods_count('锡块'))个 end
+if game_check_goods_nmb('黑钨矿',1) then <img src="$apppath$sml\big385.jpg">黑钨矿：数量 string game_inttostr(game_get_goods_count('黑钨矿'))个 end
+if game_check_goods_nmb('锆石',1) then <img src="$apppath$sml\big386.jpg">锆石：数量 string game_inttostr(game_get_goods_count('锆石'))个 end
+if game_check_goods_nmb('尖晶石',1) then <img src="$apppath$sml\big387.jpg">尖晶石：数量 string game_inttostr(game_get_goods_count('尖晶石'))个 end
+if game_check_goods_nmb('孔雀石',1) then <img src="$apppath$sml\big388.jpg">孔雀石：数量 string game_inttostr(game_get_goods_count('孔雀石'))个 end
+<p>
+if game_check_goods_nmb('电气石',1) then <img src="$apppath$sml\big389.jpg">电气石：数量 string game_inttostr(game_get_goods_count('电气石'))个 end
+if game_check_goods_nmb('黄玉',1) then <img src="$apppath$sml\big390.jpg">黄玉：数量 string game_inttostr(game_get_goods_count('黄玉'))个 end
+if game_check_goods_nmb('硝石',1) then <img src="$apppath$sml\big391.jpg">硝石：数量 string game_inttostr(game_get_goods_count('硝石'))个 end
+if game_check_goods_nmb('赤铁矿',1) then <img src="$apppath$sml\big372.jpg">硝石：数量 string game_inttostr(game_get_goods_count('硝石'))个 end
+if game_check_goods_nmb('上等木炭',1) then <img src="$apppath$sml\big373.jpg">上等木炭：数量 string game_inttostr(game_get_goods_count('上等木炭'))个 end
+if game_check_goods_nmb('石灰石',1) then <img src="$apppath$sml\big374.jpg">石灰石：数量 string game_inttostr(game_get_goods_count('石灰石'))个 end
+
+:>
+<p>
+<a href="game_page(10425)">返回客厅</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=69D343FA82FB04D6E038FA2A3356CB5C

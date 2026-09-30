@@ -1,0 +1,85 @@
+id=11858
+名称=
+作者=
+属性=5
+动作=
+{
+D5001=if game_check_money(800) then game_change_money(-800); if game_pop_dig(1035)>=30 and game_random_chance(3) then game_attribute_change(1,33,1);game_infobox('恭喜：您获得了贡士头衔');game_write_temp(4222,1);game_reload_direct(0) else game_chat('考试结束，您没有及第') end else game_chat('您钱不够') end
+D5002=if game_check_money(800) then game_change_money(-800); if (game_pop_dig(1035)>=30) and game_random_chance(3) then game_attribute_change(1,33,1);game_infobox('恭喜：您获得了会元头衔');game_write_temp(4223,1);game_reload_direct(0) else game_chat('考试结束，您没有及第') end else game_chat('您钱不够') end
+D5003=if game_check_money(800) then game_change_money(-800); if (game_pop_dig(1035)>=30) and game_random_chance(3) then game_attribute_change(1,33,1);game_infobox('恭喜：您获得了进士头衔');game_write_temp(4224,1);game_reload_direct(0) else game_chat('考试结束，您没有及第') end else game_chat('您钱不够') end
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,考试,AT1000,0,0/2007.bmp"></CENTER>
+通过考试，您可以获得荣誉，从童生到状元，大学士。<p>
+当然，每次考试要收考试费800元。<p>
+有不懂的，可以问<a href="game_npc_talk('先生')">先生</a><p>
+<:if game_get_role_suxing(1,33)= 4 then
+开始<a href="D5001" title="考贡士">考试</a>（通过者将获得“贡士”头衔，35题需正确30题，有三分之一机会通过）<p>
+else
+if game_get_role_suxing(1,33)= 5 then
+开始<a href="D5002" title="考会元">考试</a>（通过者将获得“会元”头衔，35题正确30题，有三分之一机会通过）<p>
+else
+if game_get_role_suxing(1,33)= 6 then
+开始<a href="D5003" title="考进士">考试</a>（通过者将获得“进士”头衔，35题正确30题，有三分之一机会通过）<p>
+else
+if game_get_role_suxing(1,33) <4 then
+您需要先在婺州考取解元后，然后才能来这里考试。
+else
+这里最高只能考得进士，您如需更高荣誉，需要前往<FONT color=#"FF0000">皇宫</FONT>考取了。
+end
+end
+end
+end:>
+<p>
+<:if game_read_temp(4224) then
+  if game_role_is_exist('江雪儿') then
+  江雪儿：“恭喜进士及第，接下来能去皇宫参加殿试考状元啦。”<br>
+  end
+  if game_role_is_exist('慕容丽雯') then
+  慕容丽雯：“恭喜您蟾宫折桂。”<br>
+  end
+  if game_role_is_exist('宇文赫') then
+  宇文赫：“老大您太厉害了。”<br>
+  end
+else
+if game_read_temp(4223) then
+ if game_role_is_exist('江雪儿') then
+   if game_role_is_exist('慕容丽雯') then
+     江雪儿：“上次谁说我容易满足来的？”<br>
+      慕容丽雯：“哼，说了你也不懂。”<br>
+    else
+      江雪儿：“恭喜恭喜，考了会元了。”<br>
+    end
+
+  end
+else
+if game_read_temp(4222) then
+ if game_role_is_exist('江雪儿') then
+    江雪儿：“我好佩服你哦。”<br>
+    if game_role_is_exist('慕容丽雯') then
+    慕容丽雯：“我说江姑娘，你好容易满足啊，这才考了个贡士，后面还有好几级呢。”<br>
+    end
+  end
+end
+
+end
+end:>
+<p>
+<a href="game_page(10802)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+先生=1,这里考取贡士，会元，进士。考状元，榜眼探花请到皇宫内。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3039451174915E30E4AA344D4C725957

@@ -1,0 +1,30 @@
+id=11649
+名称=少林寺-那罗店殿
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,那罗殿,AT1000,0,0/2007.bmp"></CENTER>
+有不少少林弟子在修行。<p>
+1。与<a href="if game_pop_game(1,130) then game_chat('承让，承让') else game_chat('少林弟子：哦弥陀佛，多有得罪，请见谅') end">十八罗汉比试</a>。<p>
+2。与<a href="if game_pop_game(1,131) then game_chat('承让，承让') else game_chat('少林弟子：哦弥陀佛，多有得罪，请见谅') end">三十六棍僧比试</a><p>
+<p>
+<a href="game_page(-3)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2AB27F2B545050CD60BD53A7BB8D43D4

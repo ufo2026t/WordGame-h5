@@ -1,0 +1,35 @@
+id=11093
+名称=墙角边
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<:game_check_scene_event(1089)
+韩将军带领一队乔装打扮为平民的人马从大门杀进去了。<p>
+我们，要从这里悄悄的去干掉苗刘二人。<p>
+else
+刚刚翻身入墙角边，没走几步，<br>
+忽听得一声暴喝：“站住，大胆毛贼，竟敢偷到苗将军头上了。”
+定睛一看，两个苗府高手直奔这边而来。:>
+<p>
+<a href="game_page(11086)" title="看来不是他们的对手，先逃吧">溜走</a>
+<a href="game_pop_fight_a(2,99);game_page(11087)">进入</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F905A77431E6457C628EAE857437B868

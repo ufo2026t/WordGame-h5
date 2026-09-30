@@ -1,0 +1,43 @@
+id=11577
+名称=开封
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,开封,AT1002,0,0/2007.bmp"></CENTER>
+<:game_check_scene_event(1085)
+现在是<strong>晚上</strong>。<p>
+<a href="game_page(11746)">进入皇宫</a><p>
+<a href="game_page(11747)">街道一</a><p>
+<a href="game_page(11752)">金兵大营</a>
+else
+现在是<strong>白天</strong><p>
+<a href="game_page(11746)">进入皇宫</a><p>
+<a href="game_page(11747)">街道一</a><p>
+<a href="game_page(11748)">街道二</a><p>
+<a href="game_page(11749)">街道三</a><p>
+<a href="game_page(11750)">汴京八景</a><p>
+<a href="game_page(11752)">金兵大营</a><p>
+<a href="game_page(11751)">刘家寺</a>
+:><p>
+<p>
+前往<a href="game_page(12747)" title="">邙山郊外</a><p>
+<a href="game_page(11417)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EB543D1FFEC6785696EE0C601E01CB21

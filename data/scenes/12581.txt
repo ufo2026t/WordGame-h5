@@ -1,0 +1,53 @@
+id=12581
+名称=茅草屋
+作者=
+属性=
+TempKey=
+动作=
+{
+D5001=if game_question('是否升级改造，要花1000两银?') then if game_check_money(1000) then game_change_money(-1000);game_add_scene_event(1270);game_reload_direct(0) else game_infobox('您钱不够.') end end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+ <:if game_check_scene_event(1270) then
+ <CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,砖瓦房,AT1000,0,0/2007.bmp"></CENTER>
+房子里收拾的干干净净。<p>
+else
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,茅草屋,AT1000,0,0/2007.bmp"></CENTER>
+由于连年战乱中与家人失散，居无定所流落到此。在村边的一个茅草屋里暂住。<p>
+end:>
+
+<:if game_role_is_exist('江雪儿') then
+if game_check_scene_event(1270) then
+ 江雪儿：“哇窗明几净，造的挺好看的，我喜欢。”<p>
+else
+ 江雪儿:"这茅草房太寒酸了，如果手头有钱，升级改造一下多好。"<br>
+ “好，马上<a href="D5001" title="">升级改造</a>。”<p>
+end
+if game_sex_from_id(1) and game_random_chance(5) then
+两个人情不自禁的<a href="game_role_all_mtl(0);game_delay(1000);game_chat('江雪儿脸色绯红，两人命体灵恢复全满。')" title="">拥抱</a>了一下。
+else
+ 先休息一会吧。
+end
+<p>
+end:>
+
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+当前手头有钱：<:game_true(1)string game_inttostr(game_get_money(1)):><p>
+在房子里可以<a href="game_role_all_mtl(0);game_delay(1000);game_chat('命体灵恢复全满。')" title="">休息</a>。<p>
+
+<a href="game_page(11401)">返回</a><br>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=11C84623F2FD7AD62E7F86871B65AA97

@@ -1,0 +1,54 @@
+id=10005
+名称=装备店
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<CENTER><img src="gpic://288,39,(隶书,134,36,{Bold},{clBlack}),clWindow,甲天下装备防具店,AT1000,0,0/2007.bmp"></CENTER>
+
+这里有各种服装，鞋帽等供出售。这些物品能提高人物防护值和攻击速度。<br>
+点击“人物和物品”按钮可以给各个人物穿戴不同装备。<br>
+如欲买卖，请与<a href="game_npc_talk('掌柜')">掌柜</a>的联系。<p>
+有空闲也可与掌柜的<a href="game_npc_talk('闲聊')">闲聊</a>。
+<p>
+<a href="game_page(10001)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+掌柜=1,本店装备款式新颖，轻便耐用。做工精细，用料考究。
+I,A=1,恩，我看看先。
+I,B=1,好，就先买上三五件。身上穿一件，包里背一件，家里再藏一件。
+I,C=[game_trade(4,1)]1,我有装备要出售。
+掌柜,A=2,随便看，随便挑。
+掌柜,B=[game_trade(4,0)]2,看来遇上大主顾了。
+掌柜,C=2,本店高价收购哦。
+
+
+if game_check_res_event(9029) then
+if game_check_goods_nmb('水晶',1) then
+闲聊=1,对，要的就是水晶。
+I=[game_goods_change_n('水晶',-1);game_comp_task(9029);game_infobox('您得到了500金币，350经验');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+闲聊=1,您采集的水晶数量不够。
+end
+else
+闲聊=1,听说水晶石可以通灵，你可帮我找1份<FONT color="#FF0000">水晶</FONT>吗？
+I,A=[game_add_task(9029)]1,接受任务
+I,B=1,我现在没空。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=02D2073CF6A7579D76232589EEB94393

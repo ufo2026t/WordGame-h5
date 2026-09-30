@@ -1,0 +1,33 @@
+id=10571
+名称=虚无幻境一
+作者=
+属性=2
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+您来到了战国时期：<p>
+赵惠文王驾崩，孝成王年幼，赵太后执政。秦军趁机攻赵。赵国危在旦夕。<p>
+于是赵国向齐国求救。齐国要求用长安君做人质，才肯出兵。<p>
+赵太后起初不答应，最后还是听从左师触龙的意见，安排百乘车马，送长安君去齐国。<p>
+秦军得知这个消息后，派出顶尖高手在<strong>东兰驿站</strong>狙击长安君……<p>
+进入<a href="game_page(10577)" title="">驿站</a>
+<p>
+<a href="game_pop_a(3);game_kill_game_time(0);game_page(10570)">返回宋朝</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C847F8A0590EDCF86A24F8D9D3073F95

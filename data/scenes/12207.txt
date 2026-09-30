@@ -1,0 +1,30 @@
+id=12207
+名称=平安京
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,小巷,AT1000,0,0/2007.bmp"></CENTER>
+一条石板小巷。<p>
+1。一个荒芜的<a href="if game_check_scene_event(1239) then game_page(1) else game_chat('此宅十分荒凉，还是不要进去为好。') end" title="">大宅院</a>
+
+<p>
+<a href="game_page(12152)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5AA82B7DBB8FD053F89B194B478C95E9

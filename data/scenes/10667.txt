@@ -1,0 +1,52 @@
+id=10667
+名称=天妃庙
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clMaroon}),clWindow,天妃庙,AT1000,1,0/2007.bmp"></CENTER>
+天妃庙，由福建商人所建，祭祀妈祖娘娘的庙宇。<p>
+<:game_check_scene_event(1056)庙内有好多善男信女在朝拜。
+else
+庙内有个<a href="game_npc_talk('香客')">香客</a>，看起来神情沮丧。:>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。9007
+if game_not_scene_event(1056) then
+if game_check_res_event(9007) then
+if game_check_goods_nmb('霸王腰带',1) then
+香客=1,对对，被抢走的就是这腰带。
+I=[game_goods_change_n('霸王腰带',-1);game_comp_task(9007);game_add_scene_event(1056);game_infobox('您得到了钱500和经验值2000');game_reload_direct(0)]1,给你腰带（鼠标点击此处把腰带还给香客）。
+else
+香客=1,您还没帮我找到腰带呢。
+end
+else
+香客=1,唉，我的腰带啊。
+I=1,为区区腰带为何这么唉声叹气呢？
+香客=2,您有所不知，这可不是普通腰带，名唤<FONT color=#"FF0000">霸王腰带</FONT>，乃前朝皇帝所赐。这次不慎被钱塘江底的<FONT color=#"FF0000">水怪</FONT>偷走了。
+I=2,水怪在何处？
+香客=3,水怪在钱塘江底下，我看您眉宇间透出一股仙气，可会捉妖？
+I,A=[game_add_task(9007)]3,嗯，我呆会帮你找找看，不知能否找回霸王腰带。
+I,B=3,我现在很忙，过些天在帮你看看吧。
+香客,A=4,太谢谢您了，愿你马到成功，手到擒来。
+香客,B=4,唉，那下次再说吧。
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=AE1AEE7BC173A135B6170F3615B8B8C4

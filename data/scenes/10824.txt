@@ -1,0 +1,37 @@
+id=10824
+名称=场景扩展
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+本游戏支持网友自行对游戏内容进行扩展。<a href="game_goto_home(0)" title="">回城</a><p>
+如果您有好的故事，并且想写出来给大家欣赏，那么欢迎加入编写。<p>
+对编写者的要求：<br>
+1。会做网页。<br>
+2。会一点脚本，比如VB。<br>
+3。擅长文学艺术。<p>
+如果不符合以上条件，而善于写小说者，也可以把你写的故事email给我，我会择优写入游戏内。<p>
+参与者的署名，你可以在进入您写的第一个场景时署名。<p>
+联系方式：<p>
+您可以加入qq群：44901218<br>
+或者给我来信：<a href="mailto:ufo2003a@gmail.com" title="">ufo2003a@gmail.com</a> <a href="mailto:ufo2003@126.com" title="">ufo2003@126.com</a><p>
+<a href="game_goto_home(0)" title="">回城</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=121CFBDD31BF77DF8E0883319EF63F83

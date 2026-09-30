@@ -1,0 +1,32 @@
+id=11671
+名称=飞龙帮-房间一
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,房间一,AT1002,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'千年灵芝'):><p>
+<a href="game_npc_talk('家丁')">家丁</a>
+
+<p>
+<a href="game_page(11666)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+家丁=1,离这里不远，有个沈村，听说经常闹鬼。
+I=1,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C0B305B273268ECE1354D52729EF6824

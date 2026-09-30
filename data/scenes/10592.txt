@@ -1,0 +1,35 @@
+id=10592
+名称=双峰插云
+作者=
+属性=
+TempKey=双峰插云
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clGreen}),clWindow,双峰插云,AT1002,0,0/2007.bmp"></CENTER>
+巍巍天目山东走，其余脉的一支，遇西湖而分弛南北形成西湖风景名胜区的南山、北山。其中的南高峰与北高峰古时均为僧人所占，山巅建佛塔，遥相对峙，迥然高于群峰之上。春秋佳日，岚翠雾白，塔尖入云，时隐时显，远望气势非同一般。南宋时，两峰插云列为西湖十景之一清康熙帝改题为双峰插云，建景碑亭于洪春桥畔。其时双峰古塔毁圮已久，以至连此景原有的内涵也一度难为人知‘插云’者虚言也。设景碑亭于此，实为权宜之计。“浮图对立晓崔巍，积翠浮空霁蔼迷。试向凤凰山上望，南高天近北烟低”。这是南宋诗人王洧的《两峰插云》诗，它告诉人们：双峰插云的景观。
+<p>
+<:game_true(1)string game_res_goods(0,1,'水晶小熊摆件'):><p>
+<p>
+
+<p>
+<a href="game_page(10584)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=966D78A008BFABD2E8237DFB3B1570F2

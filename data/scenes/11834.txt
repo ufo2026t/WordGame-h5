@@ -1,0 +1,43 @@
+id=11834
+名称=房间一
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+房间一<p>
+<:game_role_is_exist('李疏盈')
+宋钦宗<a href="game_npc_talk('赵桓')">赵桓</a>
+else
+宋钦宗：“你们来这干什么，我不认识你们。”
+:>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+赵桓=1,你们是？赵构派你们来的？
+I=1,不是，我们是和小公主一起来复仇的。
+赵桓=2,小公主？当年帝姬不都被带来金国了吗？
+I=2,不，还有一侥幸留存下来的。
+赵桓=3,唉，既然活下来了，就隐姓埋名吧，复仇，谈何容易，敌强我弱啊。
+I=3,以我们的武功，杀了金人皇帝，不是难事。
+赵桓=4,不是仅杀个金人皇帝就行的，还有千千万万的军队，杀的完吗？
+I=4,擒贼擒王，杀了金国皇帝，他们就群贼无首了
+赵桓=5,没用的，杀了一个皇帝，会又出一个皇帝。大宋国力不强，朝廷昏官误国，这才是根本啊。
+I=5,那你想回宋吗？
+赵桓=[game_add_scene_event(1188)]6,想，做梦都在想。你们回去如能见到皇上，请转告高宗，若能归宋，我当一太乙宫主足矣，绝不和他争位。
+I=6,好的，如能见到，我定然转告。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=637B632C91E81A1C6780C89FB3837A6E

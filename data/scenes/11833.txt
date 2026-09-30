@@ -1,0 +1,30 @@
+id=11833
+名称=院子二
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+院子二<p>
+<a href="game_page(1)" title="">房间一</a><p>
+<a href="game_page(2)" title="">房间二</a><p>
+<a href="game_page(3)" title="">房间三</a>
+<p>
+<a href="game_page(11828)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=77E83145C6FCED734BF13B67249E6F96

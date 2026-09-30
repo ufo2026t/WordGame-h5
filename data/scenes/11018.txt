@@ -1,0 +1,46 @@
+id=11018
+名称=珊瑚岛-张家堡客厅
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://645,213,(隶书,134,160,{Bold},{clFuchsia}),clWindow,岛,AT1001,0,75/2007.bmp) fixed no-repeat center center;">
+ <CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,客厅,AT1000,0,0/2007.bmp"></CENTER>
+客厅正中挂有一<a href="game_npc_talk('老虎卧瀑图')">老虎卧瀑图</a>。<p>
+<:game_check_scene_event(1074)
+忽然，有人跑进来，在堡主耳边轻语几句。<p>
+张堡主：“哈哈哈，稀客，稀客，自己送上门来了。”<br>
+接着，张堡主面色一沉：“皇宫的密信是不是你们偷的？难怪非的要去万灵山。
+你们乖乖的把那半封密信交给我，就放你们一条生路，否则，休怪老夫不客气。想上万灵山，地图在此，看你们是否有本事拿去。”<p>
+1。<a href="game_infobox('张堡主接过密信瞄了一眼，突然哈哈大笑：「想拿这个换命？天真！」密信仍在你手中，弓箭手已张弓搭箭。');game_pop_fight_a(1,98);game_add_scene_event(1075);game_page(-1)" title="以求自保？">交出密信</a><p>
+2。<a href="game_pop_fight_a(1,98);game_add_scene_event(1075);game_page(-1)" title="">事已败露，只好背水一战</a><p>
+3。自知不敌，<a href="game_page(-1)" title="">逃走吧</a>，不用地图去闯万灵山<p>
+else
+<a href="game_npc_talk('堡主')">堡主</a>年约5旬，头发花白，双眼炯炯有神。<p>:>
+
+
+<a href="if game_check_scene_event(1074) then game_infobox('想溜？没门');game_pop_fight_a(1,98);game_add_scene_event(1075);game_page(-1) else game_page(-1) end">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+老虎卧瀑图=1,有点眼熟哦，<FONT color=#"FF0000">华南虎</FONT>？
+I=1,
+堡主=1,你们不像本地人，远道而来，找我有什么事，直说无妨。
+I=1,张堡主果然快人快语。那我也不绕弯子了，我们想上万灵山拜访仙人。只是初来乍到，不懂规矩，所以，想先来贵堡请教一二。
+堡主=2,哦，去万灵山，何事？
+I=2,（密信之事，不可说出，先撒个谎）我们在临安听人说，这珊瑚岛的万灵山有得道高人，我们仰慕仙术已久，特不辞劳苦前来寻仙。
+堡主=3,既是这样，那请回吧。山上仙人，不闻俗世，概不见客。
+I=[game_add_scene_event(1074);game_reload_direct(0)]3,这……
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6F020F0D39DFCCDC67C90F861C8F322C

@@ -1,0 +1,34 @@
+id=10778
+名称=虎跑泉小路
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://300,300,(隶书,134,22,{Bold},{clWindowText}),clWindow,$tree,AT1000,0,68/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,虎跑泉,AT1000,0,0/2007.bmp"></CENTER>
+小路<p>
+<:game_true(1)阅读材料：string game_get_read_txt(0):><p>
+<p>
+<a href="game_pop_a(2);game_page(1)" title="虎跑">进入泉区</a><p>
+
+<p>
+<a href="game_page(-1)">从迷宫返回飞来峰</a><p>
+<a href="game_pop_a(6);game_page(10643)">走捷径到飞来峰</a><p>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=DC7C80F015508629642ED80CC9A0A027

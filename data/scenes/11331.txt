@@ -1,0 +1,31 @@
+id=11331
+名称=梵天寺
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,梵天寺,AT1000,1,0/2007.bmp"></CENTER>
+落日寒蝉鸣，独归林下寺。<br>
+柴扉夜未掩，片月随行履。<br>
+惟闻犬吠声，又入青萝去。<p>
+<a href="game_page(1)" title="">进入寺内</a>
+<p>
+<a href="game_page(10583)">返回临安</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D3FADDCC814FC0D9058CC2CD692BF473

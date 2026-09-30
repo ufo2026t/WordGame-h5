@@ -1,0 +1,51 @@
+id=12805
+名称=平安京-源氏本阵
+作者=
+属性=
+动作=
+{
+D5001=game_pop_fight_a(1,157);game_add_scene_event(1293);game_change_money(10000);game_goods_change_n('金块',2);game_add_message('平氏重掌京都。源氏势力暂退，东瀛乱世暂告段落。');game_chat('源氏大将败退，平氏旧部欢呼雀跃。');game_reload_direct(0)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,源氏本阵,AT1000,0,0/2007.bmp"></CENTER>
+<:if not game_check_scene_event(1296) then
+先锋未破，本阵重兵不可攻。<br>
+<a href="game_page(12804)">返回外苑</a>
+else
+<:if game_check_scene_event(1293) then
+源氏大将已败，平氏旗帜飘扬于阵前。<br>
+<FONT color=#FF0000>源氏决战已完成。</FONT><br>
+if game_role_is_exist('千代美') then
+string game_newname_from_oldname('千代美')：“终于为平氏报了这一仇。”<br>
+end
+else
+源氏大将源义朝抽刀出鞘：“平氏余党，今日必止。”<br>
+1。<a href="D5001" title="">与源义朝决死战</a><br>
+end:>
+<p>
+<a href="game_npc_talk('源义朝')">与源义朝对话</a><p>
+<a href="game_page(12800)">返回内殿</a><p>
+<a href="game_page(12152)">离开皇宫</a>
+end:>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1293) then
+源义朝=1,我败了……平氏果然有圣杯助阵。
+I=1,
+else
+源义朝=1,平氏余党今日必死！
+I=1,那就看看圣杯是否真能故事。
+源义朝=2,受死吧！
+I=2,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

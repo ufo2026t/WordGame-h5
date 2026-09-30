@@ -1,0 +1,36 @@
+id=12831
+名称=藏羚羊谷
+作者=
+属性=4
+动作=
+{
+D5001=if not game_check_scene_event(1322) then game_chat('先捣毁盗猎营地再来。') else if game_check_scene_event(1323) then game_chat('谢礼已经领过了。') else game_add_scene_event(1323);game_change_money(5000);game_attribute_change(1,19,2000);game_attribute_change(1,9,2);game_goods_change_n('雪莲',3);game_infobox('扎西致谢：五千文、雪莲三朵、道德+2、经验+2000。');game_reload_direct(0) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,藏羚羊谷,AT1000,0,0/2007.bmp"></CENTER>
+成群藏羚羊在谷地觅食，见人来也不惊逃——似乎知道你是来救它们的。<p>
+<a href="game_npc_talk('扎西')">巡山人扎西</a>在此等候。<p>
+<:if game_check_scene_event(1322) then
+<a href="D5001" title="">领取巡山队谢礼</a><p>
+else
+扎西：“先除了盗猎营地，再来领谢不迟。”<p>
+end:>
+<a href="game_role_all_mtl(0);game_chat('在藏羚羊谷歇脚，命体灵恢复全满。');game_reload_direct(0)" title="">谷中歇息</a><p>
+<a href="game_pop_a(4);game_page(12821)">法阵<img src="$apppath$img\fazhen.gif" border="0">，回垭口</a><p>
+<a href="game_pop_a(3);game_page(11890)">返回昆仑山口</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+扎西=1,羊群又回来了。可可西里能安生一阵，全仗诸位侠义。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=012345678ABCD12826AABBCCD

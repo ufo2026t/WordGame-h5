@@ -1,0 +1,91 @@
+id=10320
+名称=无剑山庄大厅
+作者=
+属性=
+动作=
+{
+;;10321 和庄主比武获胜，跳到出老千页面 否则，跳到正常页面 10322
+D5001=game_add_scene_event(1035);if game_pop_game(1,81) then game_page(10321) else game_page(10322) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://67,56,(隶书,134,42,{Bold},{clRed}),clWindow,剑,AT1012,0,20/2007.bmp"></CENTER>
+;;未举行比武大会时
+无剑山庄客厅<p>
+
+<:if game_check_scene_event(1137) then
+if game_check_scene_event(1196) then
+;;筹备完成，开始武林大会
+if game_check_scene_event(1205) then
+;;武林大会结束
+ 铁庄主不在。
+else
+铁庄主：“本届武林英雄会，将选出有德有才之人来光大武林，以期造福苍生。”<p>
+进入<a href="game_page(10323)" title="">武林大会</a><p>
+end
+else
+<img src="$apppath$img\47.bmp">：“武林大会即将开始，麻烦您前往各家门派通知一下如何？”<br>
+“好，只是不知要通知哪几家门派？”<br>
+“少林，武当，峨嵋，昆仑，天山五大门派<br>
+其他还有江湖上有名望的：<br>
+东方镖局，飞龙帮，天外天山庄等”<p>
+if game_check_scene_event(1214) then
+;;通知提示
+if game_not_scene_event(1197) then
+少林还没有通知。<br>
+end;
+if game_not_scene_event(1198) then
+武当还没有通知。<br>
+end
+if game_not_scene_event(1199) then
+峨嵋没有通知。<br>
+end
+if game_not_scene_event(1200) then
+昆仑没有通知。<br>
+end
+if game_not_scene_event(1201) then
+天山没有通知。<br>
+end
+if game_not_scene_event(1202) then
+东方镖局还没有通知。<br>
+end
+if game_not_scene_event(1203) then
+天外天山庄没有通知。<br>
+end
+if game_not_scene_event(1204) then
+飞龙帮没有通知。<br>
+end
+;;通知提示结束
+else
+1。<a href="game_add_scene_event(1214);game_reload_direct(0)" title="">接受任务</a>，前去通知各大门派。<p>
+
+end
+end
+else
+if game_check_scene_event(1035) then
+庄主不在，正为英雄比武大会忙碌着。
+else
+<img src="$apppath$img\47.bmp">：“你能除掉古堡僵尸王，真是英雄出少年啊。”<p>
+“庄主过奖，在下此次慕名前来，特想和庄主切磋切磋武艺。”<p>
+庄主：“哦，年轻人心高气傲，那老夫就陪你玩两圈。”<p>
+“<a href="D5001" title="开始比武">多谢庄主，请</a>。”
+end
+end:>
+<p>
+&nbsp;<p>
+<a href="game_page(10303)">返回山庄前院</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5634BDC1AFED18708C453118F2BFA6A1

@@ -1,0 +1,105 @@
+id=11260
+名称=龙泓洞下层
+作者=
+属性=38
+载入后=game_pop_fight_a(2,94)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,400,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clGreen}),clWindow,龙泓洞,AT1009,66,0/2007.bmp"></CENTER>
+龙泓洞最底下。<p>
+有时会出现神泉，有神泉出现时，可以给一个队员<strong>永久增加上限</strong>5-50点命，灵或者攻属性（只能选择一种）<p>
+<:if game_read_temp(1120808) then
+if game_random_chance(5) and game_write_temp(1126001,game_random_chance_2(51)) and game_write_temp(1120808,0) then
+if game_read_temp(1126001)<5 then
+game_write_temp(1126001,5)
+end
+神泉出现了。您可以给队员增加的点数是：string game_inttostr(game_read_temp(1126001))点<br>
+给 string game_get_newname_at_id(1)<a href="game_attribute_change(1,27,game_read_temp(1126001));game_reload_direct(0)">增加生命值</a><br>
+if game_role_count(0)>1 then
+给 string game_get_newname_at_id(2)<a href="game_attribute_change(2,27,game_read_temp(1126001));game_reload_direct(0)">增加生命值</a><br>
+end
+if game_role_count(0)>2 then
+给 string game_get_newname_at_id(3)<a href="game_attribute_change(3,27,game_read_temp(1126001));game_reload_direct(0)">增加生命值</a><br>
+end
+if game_role_count(0)>3 then
+给 string game_get_newname_at_id(4)<a href="game_attribute_change(4,27,game_read_temp(1126001));game_reload_direct(0)">增加生命值</a><br>
+end
+if game_role_count(0)>4 then
+给 string game_get_newname_at_id(5)<a href="game_attribute_change(5,27,game_read_temp(1126001));game_reload_direct(0)">增加生命值</a><br>
+end
+if game_role_count(0)>5 then
+给 string game_get_newname_at_id(6)<a href="game_attribute_change(6,27,game_read_temp(1126001));game_reload_direct(0)">增加生命值</a><br>
+end
+if game_role_count(0)>6 then
+给 string game_get_newname_at_id(7)<a href="game_attribute_change(7,27,game_read_temp(1126001));game_reload_direct(0)">增加生命值</a><p>
+end
+<p>
+给 string game_get_newname_at_id(1)<a href="game_attribute_change(1,26,game_read_temp(1126001));game_reload_direct(0)">增加灵力值</a><br>
+if game_role_count(0)>1 then
+给 string game_get_newname_at_id(2)<a href="game_attribute_change(2,26,game_read_temp(1126001));game_reload_direct(0)">增加灵力值</a><br>
+end
+if game_role_count(0)>2 then
+给 string game_get_newname_at_id(3)<a href="game_attribute_change(3,26,game_read_temp(1126001));game_reload_direct(0)">增加灵力值</a><br>
+end
+if game_role_count(0)>3 then
+给 string game_get_newname_at_id(4)<a href="game_attribute_change(4,26,game_read_temp(1126001));game_reload_direct(0)">增加灵力值</a><br>
+end
+if game_role_count(0)>4 then
+给 string game_get_newname_at_id(5)<a href="game_attribute_change(5,26,game_read_temp(1126001));game_reload_direct(0)">增加灵力值</a><br>
+end
+if game_role_count(0)>5 then
+给 string game_get_newname_at_id(6)<a href="game_attribute_change(6,26,game_read_temp(1126001));game_reload_direct(0)">增加灵力值</a><br>
+end
+if game_role_count(0)>6 then
+给 string game_get_newname_at_id(7)<a href="game_attribute_change(7,26,game_read_temp(1126001));game_reload_direct(0)">增加灵力值</a><p>
+end
+<p>
+给 string game_get_newname_at_id(1)<a href="game_attribute_change(1,3,game_read_temp(1126001));game_reload_direct(0)">增加攻击值</a><br>
+if game_role_count(0)>1 then
+给 string game_get_newname_at_id(2)<a href="game_attribute_change(2,3,game_read_temp(1126001));game_reload_direct(0)">增加攻击值</a><br>
+end
+if game_role_count(0)>2 then
+给 string game_get_newname_at_id(3)<a href="game_attribute_change(3,3,game_read_temp(1126001));game_reload_direct(0)">增加攻击值</a><br>
+end
+if game_role_count(0)>3 then
+给 string game_get_newname_at_id(4)<a href="game_attribute_change(4,3,game_read_temp(1126001));game_reload_direct(0)">增加攻击值</a><br>
+end
+if game_role_count(0)>4 then
+给 string game_get_newname_at_id(5)<a href="game_attribute_change(5,3,game_read_temp(1126001));game_reload_direct(0)">增加攻击值</a><br>
+end
+if game_role_count(0)>5 then
+给 string game_get_newname_at_id(6)<a href="game_attribute_change(6,3,game_read_temp(1126001));game_reload_direct(0)">增加攻击值</a><br>
+end
+if game_role_count(0)>6 then
+给 string game_get_newname_at_id(7)<a href="game_attribute_change(7,3,game_read_temp(1126001));game_reload_direct(0)">增加攻击值</a><br>
+end
+else
+这次神泉没有出现哦，继续努力，下次再来吧。
+end
+else
+神泉已经出现过了，要下次了。
+end:>
+<:game_true(1)string game_res_goods(0,2,'黑钨矿'):><p>
+
+进入<a href="game_pop_a(3);game_page(11191)" title="返回洞口">法阵<img src="$apppath$img\fazhen.gif" border="0"></a>。<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E43F8BB3AD05C49712CE37E613776DD0

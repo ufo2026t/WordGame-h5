@@ -1,0 +1,31 @@
+id=10036
+名称=东河村口
+作者=
+属性=64
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+东河村民以种棉花为生，村口种了大量的棉花。纵横交错，再辅以机关，形成了一个蜿蜒曲折的棉花阵。<p>
+要进<strong>东河村</strong>必须先通过这个“<a href="game_page(10041)" title="">棉花阵</a>”
+<p>
+在棉花阵的旁边有个山岭山高林密苍翠巍峨，林间一条小路通往<a href="game_pop_a(10);game_page(10302)" title="">无剑山庄</a><p>
+
+<a href="game_page(10012)">返回河西码头</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=AB56D8E41AB0CE5AE36681875A610B21

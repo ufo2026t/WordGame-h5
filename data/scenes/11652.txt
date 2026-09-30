@@ -1,0 +1,45 @@
+id=11652
+名称=少林寺-藏经阁
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,藏经阁,AT1000,0,0/2007.bmp"></CENTER>
+好多的书啊。<p>
+<a href="game_pop(3);game_chat('书名:金刚经    作者:鸠摩罗什')">金刚经</a><p>
+<a href="game_pop(3);game_chat('西域奇学，难以炼成。')" title="西域奇学">密宗密法</a><p>
+<a href="game_pop(3);game_npc_talk('对话')>罗汉拳谱</a><p>
+<a href="game_pop(3);game_chat('好东西，厨师必备')">青菜18炒法</a><p>
+<a href="game_pop(3);game_chat('冷兵器')">兵器起源</a><p>
+<a href="game_page(11700)" title="佛门圣典">多心经</a><p>
+<a href="game_pop(3);game_chat('少林棍法，刚猛有劲。')">少林棍法</a><p>
+<a href="game_pop(3);game_chat('一部佛经。')">法华经</a><p>
+<a href="game_pop(3);game_chat('一部佛经。')">楞严经</a><p>
+<a href="game_pop(10);game_page(11701)" title="">易筋经</a><p>
+<a href="game_pop(3);game_chat('梵文，未翻译。')">佛学正宗</a><p>
+藏经阁<a href="game_page(11702)" title="">小院</a>
+<p>
+<a href="game_page(-2)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_role_count(0)>1 then
+对话=1,
+I=1,这书怎么样？
+对话=2,string game_get_newname_at_id(2)@现在法术都会啦，还学这些外家拳法？
+I=2,说的也是
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=37DA20C5B3DADA03910508A6EF57519F

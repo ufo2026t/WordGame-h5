@@ -1,0 +1,49 @@
+id=10069
+名称=后厅
+作者=
+属性=34
+载入后=if game_random_chance_at_sleep(2) then game_pop_fight_a(game_random_chance_2(3),73) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(楷体_GB2312,134,120,{Bold},{clWhite}),clSilver,古堡,AT1009,1,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+长期无人居住，里面落满了灰层。<p>
+层层叠叠的，到处是蜘蛛网。<p>
+<div align="center">
+后厅空荡荡的，墙上提着一首诗：<p>
+<a href="game_add_scene_event(1271);game_npc_talk('宇文赫')" title="">
+昨夜寒蛩不住鸣。惊回千里梦，已三更。<br>
+起来独自绕阶行。人悄悄，帘外月胧明。<br>
+白首为功名。旧山松竹老，阻归程。<br>
+欲将心事付瑶琴。知音少，弦断有谁听？<br></a>
+</div>
+<:if game_random_chance(5) then <p><span id="bo_113">一个小<a href="game_goods_change_n('三年生草药',2);game_chat('捡到3年生草药2颗。');game_inner_html(113,' ')" title="好东西哦">包裹</a></span>end:>
+<p>
+
+<a href="game_page(10067)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_role_is_exist('宇文赫') then
+宇文赫=1,此词好像是岳元帅所作，古堡至少有几十年没人住了，怎么会有岳元帅的词？
+I=1,仔细看这字迹，应该是写上去不久。
+宇文赫=2,奇怪，真奇怪。
+I=2,看来，不久前有人来过，我们到处找找，应该还会有其他痕迹留下。
+else
+宇文赫=1,
+I=1,此词好像是岳元帅所作，古堡至少有几十年没人住了，怎么会有岳元帅的词？仔细看这字迹，应该是写上去不久。我们到处找找，应该还会有其他痕迹留下。
+end
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=26FCE0BD53FD84F8D644ACC7DD130643

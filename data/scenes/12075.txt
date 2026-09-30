@@ -1,0 +1,32 @@
+id=12075
+名称=考试被拒绝
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clBlack}),clWindow,金榜无名,AT1012,0,0/2007.bmp"></CENTER>
+太监王公公：“皇上有旨：<p>
+奉天承运，皇帝诏曰<p>
+<:game_true(1) string game_get_newname_at_id(1):>曾经因岳飞事件胁迫过圣上。<p>
+令圣上龙颜大怒，今下旨曰：此人打入黑名单，永不录用。钦此。<p>
+
+<p>
+<a href="game_page(10781)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=34069D3539D30C98478610AA16616DEB

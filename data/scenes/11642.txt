@@ -1,0 +1,37 @@
+id=11642
+名称=少林寺前
+作者=
+属性=
+TempKey=少林寺
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,少林寺,AT1000,0,0/2007.bmp"></CENTER>
+少林寺，相传为印度僧人跋陀以及后续者达摩祖师所创。<p>
+<a href="if game_check_scene_event(1157) then game_page(1) else game_npc_talk('少林弟子') end" title="进入少林寺">进入山门</a><p>
+
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+少林弟子=1,阿弥陀佛，施主请留步。
+I=1,啊，要买门票？
+少林弟子=2,施主误会，要买门票，得等几百年后再来呢。这里是少林，非本门弟子未经允许不得入内。
+I=2,那要如何才能进寺？
+少林弟子=3,有扰我佛门清净者，需从棍下过。
+I,A=[game_pop_fight_a(1,126);game_add_scene_event(1157);game_page(1)]3,那多有得罪了。
+I,B=3,哇，好厉害的棍法，还是知难而退吧。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6EDFD1E08A14373C068E47735E60E6D2

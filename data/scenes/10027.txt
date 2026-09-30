@@ -1,0 +1,47 @@
+id=10027
+名称=矿洞底下一层27号地块
+作者=
+属性=38
+载入后=game_pop_fight_a(1, 61)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clWindow,迷宫,AT1000,1,75/2007.bmp) fixed no-repeat center center;">
+这里是矿洞的底下一层地块。<p>
+旁边洞口众多，也不知道通往哪里才是正确的，先到处转转看了<br>
+
+再往里走，旁边有个<a href="game_pop_a(3);game_page(10028)" title="">石门</a>，通向28号地块。<p>
+
+远处<a onMouseOver=location.href="game_pop_fight_a(1,61)">又有一个</a><a href="game_pop_a(3);game_page(10029)" title="">石门通向29号地块。</a><p>
+此处地势平坦，比较明亮，远处似乎有不明生物在晃动。<br>
+
+再远处还有一个<a href="game_pop_a(3);game_page(10034)" title="">石门通向34号地块。</a><p>
+<p>
+<:game_true(1)string game_res_goods(5007,1,'冰蚕'):>
+<p>
+<strong>小试身手：</strong><p>
+您知道“contract”的正确意思是：<p>
+A： <a href="game_infobox('选择正确，您的生命值体力和灵力补充到全满了。');game_role_all_mtl(1)" title="这个看起来也像是正确的？">合同</a><p>
+B： <a href="game_infobox('很遗憾，您答错了。对照的单词是：contrast，有差别哦')" title="选择这个？"> 对照</a><p>
+<p>
+
+<a href="game_page(10026)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+江雪儿=1,if game_check_res_event(5007) then 这“冰蚕”干吗用？ else 那边有个东西好捡耶。 end
+I=1,if game_check_res_event(5007) then 是补药了。 else 我看看去。 end
+
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=11E963B959A3C54ACA0C28D72FC00207

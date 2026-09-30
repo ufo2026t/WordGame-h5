@@ -1,0 +1,65 @@
+id=12649
+名称=小酒馆
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,小酒馆,AT1000,0,0/2007.bmp"></CENTER>
+ 小酒馆内三三两两的坐着一些客人。<br>
+<a href="game_npc_talk('客人甲')">客人甲</a><p>
+<a href="game_npc_talk('客人乙')">客人乙</a><p>
+<a href="game_npc_talk('客人丙')">客人丙</a><p>
+<a href="game_npc_talk('客人丁')">客人丁</a><p>
+
+
+
+<a href="game_page(1)">酒馆后院</a><br>
+
+
+<p>
+<a href="game_page(12648)">退出</a><br>
+
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+客人甲=1,戏院的戏曲好看。就连九毒派的大小姐都经常去捧场。
+I=1,
+客人乙=1,你知道不，东来山庄的公子也是本地响当当的人物。
+I=1,
+if game_check_scene_event(1282) and not game_check_scene_event(1300) then
+客人丙=1,听说东来公子最近在找人帮忙，跟九毒派偷东西有关。
+I=1,
+else
+客人丙=1,这里的酒其实味道不错，别听有些人瞎说。
+I=1,
+end
+if game_check_scene_event(1281) and not game_check_scene_event(1288) then
+客人丁=1,我听说教主要去邙山，总坛里气气很紧张。
+I=1,
+elseif game_check_scene_event(1288) then
+客人丁=1,有人拿了教主的碎块跑了，酒馆里都在议论呢。
+I=1,
+elseif game_check_scene_event(1300) then
+客人丁=1,东来令夺回来了，公子请全城喝酒，这儿酒都快售罄了。
+I=1,
+else
+客人丁=1,老板，再上一壶。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1D9DA8B8CEF31A731EB76DA413F02C5B

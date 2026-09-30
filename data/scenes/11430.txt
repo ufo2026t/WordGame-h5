@@ -1,0 +1,32 @@
+id=11430
+名称=大理-房间三
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+房间三
+<:game_true(1)string game_res_goods(0,1,'降魔镖'):><p>
+一些杂物堆在这里：<br>
+
+
+<p>
+<a href="game_page(-3)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6911BBD9D7C630A53B0AF68AD46F7087

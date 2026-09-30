@@ -1,0 +1,64 @@
+id=10781
+名称=大庆殿
+作者=
+属性=1
+动作=
+{
+D5001=if game_check_money(800) then game_change_money(-800); if game_pop_dig(1040)>=35 and game_random_chance(3) then game_attribute_change(1,33,1);game_page(12072) else if game_check_scene_event(1207) then game_page(12075) else game_chat('考试结束，您没有及第') end end else game_chat('您钱不够') end
+D5002=if game_check_money(800) then game_change_money(-800); if (game_pop_dig(1045)>=40) and game_random_chance(3) then game_attribute_change(1,33,1);game_page(12073) else if game_check_scene_event(1207) then game_page(12075) else game_chat('考试结束，您没有及第') end end else game_chat('您钱不够') end
+D5003=if game_check_money(800) then game_change_money(-800); if (game_pop_dig(1050)>=45) and game_random_chance(3) then game_attribute_change(1,33,1);game_add_scene_event(1209);game_page(12074) else if game_check_scene_event(1207) then game_page(12075) else game_chat('考试结束，您没有及第') end end else game_chat('您钱不够') end
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clPurple}),clWindow,大庆,AT1001,0,62/2007.bmp) fixed no-repeat center center;">
+大庆殿，殿如其名，是皇帝进行大型庆典，朝会的场所。<p>
+<:if game_check_scene_event(1209) then
+if game_sex_from_id(1) then
+小太监：“状元公好。”
+else
+小太监：“咦，女状元，女的也能考状元了？”
+end
+else
+;;开始考试×××××××××××
+if game_get_role_suxing(1,33)= 7 then
+开始<a href="D5001" title="考探花">考试</a>（通过者将获得“探花”头衔，40题需正确35题，有三分之一机会通过）<p>
+else
+if game_get_role_suxing(1,33)= 8 then
+开始<a href="D5002" title="考榜眼">考试</a>（通过者将获得“榜眼”头衔，45题需正确40题，有三分之一机会通过）<p>
+else
+if game_get_role_suxing(1,33)= 9 then
+开始<a href="D5003" title="考状元">考试</a>（通过者将获得“状元”头衔，50题需正确45题，有三分之一机会通过）<p>
+else
+if game_get_role_suxing(1,33) <7 then
+这里殿试，可以考得状元，不过，您需要先去临安的元宝街考进士。
+else
+状元是最高荣誉了。
+end
+end
+end
+end
+
+;;结束
+end:>
+
+
+
+
+<p>
+
+<a href="game_page(-1)">返回垂拱殿</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5E08571ED75B0D75BF8104DD2A5539E9

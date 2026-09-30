@@ -1,0 +1,51 @@
+id=10136
+名称=郊外密林
+作者=
+属性=1
+动作=
+{
+D5001=game_add_friend('蒙面人甲',1);game_add_friend('蒙面人乙',1);game_pop_fight_a(1,78);game_del_friend('蒙面人甲',0);game_infobox('蒙面人甲离开了队伍。');game_del_friend('蒙面人乙',0);game_infobox('蒙面人乙离开了队伍。');game_attribute_change(1,9,-1);game_add_scene_event(1273);game_npc_talk('蒙面人')
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://756,187,(隶书,134,140,{Bold},{clGreen}),clWindow,郊外密林,AT1012,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+树林内有两个蒙面人正围着一素衣女子穷追猛打，眼看素衣女子渐露败像。您可以：<p>
+1。以多欺少，非君子所为。立即上前<a href="game_add_friend('慕容丽雯',1);game_pop_fight_a(2,46);game_add_scene_event(1024);game_npc_talk('慕容丽雯')" title="">营救素衣女子</a>。<p>
+2。多一事不如少一事，马上<a href="game_add_scene_event(1024);game_page(10135)" title="">离开此地</a>。<p>
+3。加入蒙面人队列，<a href="D5001" title="">围攻不明女子</a>。
+<p>
+<:game_run_off_no(0):>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+慕容丽雯=[game_can_stop_chat(0)]1,<img src="$apppath$img\7.bmp">if game_sex_from_id(1) then 多谢公子出手相救。else 多谢姑娘救命之恩 end
+I=1,if game_sex_from_id(1) then 姑娘言重了。举手之劳，不足挂齿。else 不客气，他们以多欺少，就是该打。end
+慕容丽雯=2,不知恩人为何来这荒郊野外？
+I=2,我正好路过听到打斗声过来看看，不知姑娘怎么会被人追杀？
+慕容丽雯=3,说来话长，我从大理前往临安，不料路上一直有人跟踪追杀我。
+I=3,常言到怀璧其罪，是不是您携带了什么财宝或者知道了什么重大秘密？
+慕容丽雯=4,我只带了几百两盘缠，也不算多。
+I=4,那可能是世道混乱吧，打家劫舍的就多了。
+慕容丽雯=5,也许，不过，总算快到临安了。
+I,A=5,我过几天也要去临安，不如咱们一起同行，也好有个伴（邀请）。
+I,B=5,恩，快到临安了就好，一个女子孤身行走确实不安全，以后路上多多小心。
+慕容丽雯,A=6,好啊，有劳if game_sex_from_id(1) then 公子了else 姑娘了end
+慕容丽雯,B=6,恩，多谢if game_sex_from_id(1) then 公子else 姑娘end关心，我会照顾好自己的。
+I,A=[game_add_scene_event(1023);game_can_stop_chat(1);game_page(10135)]6,那咱们走吧。
+I,B=[game_del_friend('慕容丽雯',0);game_infobox('慕容丽雯离开了队伍。');game_can_stop_chat(1);game_page(10135)]6,咱们就此别过，后会有期。
+
+蒙面人=[game_can_stop_chat(0)]1,if game_sex_from_id(1) then 你这毛头小子，想和我们争功？没门。else 哟，小娘子也想要这藏宝图？跟了我们，这藏宝图就是你的了。end
+I=1,if game_sex_from_id(1) then 有啥好事？说说清楚。else 好呀，看你们有这本事没？end
+蒙面人=2,if game_sex_from_id(1) then 好，让你也好死个明白，我们追杀这女子，是因为她身上带有一部分藏宝图，且死活不肯和我们合作。明白了吧，受死吧，小子。else 这年头真是邪门了，女的怎么一个个都脾气火爆，先过两招给你见识一下爷们的厉害。end
+I=[game_can_stop_chat(1);game_pop_fight_a(2,46);game_goods_change_n('藏宝图碎片4',1);game_infobox('得到了一个藏宝图碎片');game_add_scene_event(1024);game_page(10135)]2,好，放马过来。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=8CB4B6AA5517EA3389A49276B661050D

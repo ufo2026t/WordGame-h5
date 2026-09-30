@@ -1,0 +1,49 @@
+id=12718
+名称=书房
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,书房,AT1000,0,0/2007.bmp"></CENTER>
+书案上摊着毒经药谱，墙角一只鎏金香炉仍冒着青烟。<p>
+<:if game_check_scene_event(1287) and not game_check_scene_event(1288) then
+案头压着一张字条：「碎块七已验，邙山机关图待齐。密室内箱空，仍随身。」<br>
+看来<b>藏宝图第七块</b>仍在教主身上，密室中并无实物。<p>
+<a href="game_page(1)">查看密室</a><br>
+elseif game_check_scene_event(1288) then
+书房已被收拾一空，只余药香袅袅。<p>
+else
+书房上了锁，似乎只有教主亲信才能进入。<p>
+end:>
+
+
+<p>
+<a href="game_page(-2)">后院</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+if game_check_scene_event(1287) and not game_check_scene_event(1288) then
+看守弟子=1,教主说碎块不在箱中，要拿图得面见教主本人。
+I=1,
+elseif not game_check_scene_event(1287) then
+看守弟子=1,书房重地，闲杂人等闪开。
+I=1,
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=225D0571F7F4959027286F05CD3AA879

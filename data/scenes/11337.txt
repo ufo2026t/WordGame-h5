@@ -1,0 +1,52 @@
+id=11337
+名称=严州小镇
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,严州,AT1000,0,0/2007.bmp"></CENTER>
+严州，一个小镇，位于婺州旁，是来往于临安和大理的必经之路。<p>
+<a href="game_npc_talk('路人甲')">路人甲</a><p>
+<a href="game_npc_talk('路人乙')">路人乙</a><p>
+<a href="game_npc_talk('老板')">小茶馆</a><p>
+<a href="game_trade(8,0)" title="买点草药，路上用">草药铺</a>
+<p>
+<a href="game_pop_a(3);game_page(11352)" title="到槐树下村">一条小路</a><p>
+<:if game_not_scene_event(1112) then
+if game_role_is_exist('慕容丽雯') then
+一个<a href="game_npc_talk('女孩')">女孩</a>在路边哭泣<p>
+end
+end:>
+<a href="game_page(10582)">到临安</a><p>
+<a href="game_page(1)">到大理</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+路人甲=1,人来熙熙，皆为利来，人来攘攘，皆为利往。
+I=1,
+路人乙=1,听说大理那边多奇货，我想去贩些来卖卖，但又担心山高路远，贼人打劫。
+I=1,
+老板=1,客官，喝茶吗？
+I=1,谢谢，我们急着赶路呢。
+女孩=1,呜呜呜呜
+I=1,慕容丽雯@哭什么呢？
+女孩=2,男人骗了我，他又爱上别的女人了。
+I=2,慕容丽雯@小妹妹，做女人一定要经得起谎言，受得起敷衍，忍得住欺骗，忘得了诺言，放得下一切。
+女孩=[game_add_scene_event(1112)]3,（恍然大悟）
+I=3,擦擦眼泪，回家去吧。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5D6577A26136B9928EA156797A449B00

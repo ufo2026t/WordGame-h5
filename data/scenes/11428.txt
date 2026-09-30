@@ -1,0 +1,53 @@
+id=11428
+名称=大理-房间一
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+房间一
+<:if game_role_is_exist('慕容丽雯') or game_check_scene_event(1127) then
+if game_check_scene_event(1129) and game_not_scene_event(1128) then
+<a href="game_npc_talk('慕容紫霞')">慕容紫霞</a>
+else
+if game_role_is_exist('慕容紫霞') then
+慕容紫霞：“花园里的红豆好漂亮哦。”
+else
+ 房间里没人。
+end
+end
+else
+家丁：“我很喜欢我家大小姐，只是身份悬殊，连梦都不敢做。”
+end:>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_sex_from_id(1) then
+慕容紫霞=1,我好想去江南和塞北看看。
+I=1,外面兵荒马乱的，不好玩。
+慕容紫霞=2,你武功这么高，有你罩着我呢。
+I=2,你父母不会答应你出去的。
+慕容紫霞=3,我要走遍天涯海角，没人能挡的住我。
+I=3,真的要去么，可要想好了？
+慕容紫霞=4,决定了
+I,A=[game_add_scene_event(1128);game_add_friend('慕容紫霞',1);game_reload_direct(0)]4,好，那我就带上你。
+I,B=4,不好，我还是不能带你走。
+else
+慕容紫霞=1,大理的段王子好帅哦，我好喜欢。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2A4D30DCCD18E884DF66566374045885

@@ -1,0 +1,78 @@
+id=10003
+名称=王大妈家
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+;;<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+今天天气好，<a href="game_npc_talk('王大妈')">王大妈</a>正<:if game_check_scene_event(1011) then 抱着小孩在晒太阳。else
+和邻居聊天。<br>
+王大妈：“最近小镇旁的<FONT color=#"FF0000">古堡</FONT>经常半夜发出响声，让人听了心惊肉跳。”<br>
+<a href="if game_grade('无名',12) or game_check_role_values('无名',19,6000) then game_chat('本任务限12级以内，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('邻居') end">邻居</a>：“是啊，连我家的狗都害怕，天一黑就往屋子里钻，赶都赶不出去。真是邪门了。”end:>
+<p>
+<p>
+<:game_random_chance(10)<a href="game_pop_a(2);game_goods_change_n('一年生草药',2);game_chat('得到了2颗一年生草药。');game_reload(0)"
+title="草药">墙角有什么东西在闪光</a>:>
+<p>
+<:game_true(1)string game_res_goods(0,2,'迷踪蛊'):><p>
+
+<strong>小试身手：</strong><p>
+您知道“对华贸易”的正确说法是：<p>
+A： <a href="game_infobox('很遗憾，您答错了。这个词的意思是“中国贸易”')" title="选择这个？">Chinese trade</a><p>
+B： <a href="game_infobox('选择正确，您的生命值体力和灵力补充到全满了。');game_role_all_mtl(1)" title="这个看起来也像是正确的？">China trade</a><p>
+
+<p>
+ <a href="game_page(10001)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;在添加任务时会自动在res事件列表内添加一个同名事件，完成任务时删除此事件
+;;如果此任务只能做一次，那么可以在完成任务后在scene事件内添加一个id，然后检测此id是否存在即可
+if game_check_scene_event(9001) then
+;;事情做过了
+王大妈=1,小孩吃了您采的药后身体就好了。
+else
+if game_check_res_event(9001) then
+if game_check_goods_nmb('三年生草药',5) then
+王大妈=[game_goods_change_n('三年生草药',-5);game_comp_task(9001);game_add_scene_event(9001);game_reload_direct(0)]1,谢谢您，这是一点小意思。
+I=1,不用客气。
+else
+王大妈=1,您采的数量不够。
+end
+else
+王大妈=1,唉，我家小儿这段时间经常生病，大夫说需要一味药。
+I=1,缺什么药？
+王大妈=2,是一种<FONT color=#cc0000>三年生草药5颗</FONT>，您能帮我去后山找找不？
+I,A=[game_add_task(9001)]2,可以。
+I,B=2,我现在没空。
+王大妈,A=3,多谢您了。
+;;带string 关键字的函数，会返回取得的字符串填充到内容里面
+王大妈,B=3,string game_newname_from_oldname('无名')，你这个if game_sex_from_id(1) then懒鬼else懒丫头end。
+end
+end
+
+if game_check_res_event(9027) then
+if game_check_goods_nmb('蜂王浆',3) then
+邻居=1,对，要的就是蜂王浆。
+I=[game_goods_change_n('蜂王浆',-3);game_comp_task(9027);game_infobox('您得到了300金币，300经验');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+邻居=1,您采集的蜂王浆数量不够。
+end
+else
+邻居=1,我家老头想弄点蜂王浆泡酒喝，你可帮我找3份<FONT color="#FF0000">蜂王浆</FONT>吗？在野猪湖那常有蜜蜂飞舞。
+I,A=[game_add_task(9027)]1,接受任务
+I,B=1,我现在没空。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=CB9C1F380C3A84973E24A6E772371F05

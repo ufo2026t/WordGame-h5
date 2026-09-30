@@ -1,0 +1,50 @@
+id=12196
+名称=沂州-十八里铺-山神庙
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://196,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,山神庙,AT1000,0,0/2007.bmp"></CENTER>
+这是一座普通的山神庙，内外两间，，外间供着四大金刚，内间塑一红脸山神大像。<br>
+中间是一个小天井，摆着一口水缸和一个大香炉。水缸是供香客上香前洗手用的。<p>
+虽然香火不旺，但庙内还是有着浓浓的焚香气味。<p>
+
+<:if game_check_scene_event(1085) then
+夜晚，月明星稀。<p>
+庙里还比较干净，<a href="game_pop(5);game_del_scene_event(1085);game_infobox('时间过去了');game_reload_direct(0)" title="">睡到天亮</a><p>
+
+else
+白天。<p>
+庙里还比较干净，<a href="game_pop(5);game_add_scene_event(1085);game_infobox('时间过去了');game_reload_direct(0)" title="">睡到半夜</a>。
+
+end:>
+<p>
+<:if game_not_scene_event(1238) and game_check_scene_event(1237) then
+一路追到庙里，不见了贼人踪影，真奇怪，庙又不大，人去哪里了呢？<br>
+1。检查<a href="game_pop(4);game_chat('大梁上除了落满灰尘，其他什么也没有。')" title="">大梁</a><br>
+2。检查<a href="game_pop(4);game_chat('什么也没有。')" title="">大香炉</a><br>
+3。查看<a href="game_pop(4);game_chat('没有发现线索。')" title="">四大金刚像</a><br>
+4。检查<a href="game_pop(4);game_page(1)" title="">佛像</a><br>
+5。看看<a href="game_pop(6);game_goods_change_n('百年灵芝',1);game_chat('得到一颗百年灵芝。')" title="">屋外</a>。
+end:>
+<p>
+<a href="game_page(-1)">返回</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=879B9F5971D0B9C1A5F7281861A470BE

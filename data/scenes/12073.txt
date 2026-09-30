@@ -1,0 +1,58 @@
+id=12073
+名称=恭喜高中榜眼
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<bgsound src="$apppath$music\雪花神剑.mid" loop="-1">
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clBlack}),clWindow,金榜题名,AT1012,0,0/2007.bmp"></CENTER>
+恭喜您金榜题名，中得“<FONT color=#"FF0000">榜眼</FONT>”。<p>
+<:if game_sex_from_id(1) then
+run game_change_money(50000)
+李公公：“皇上赏赐金钱五万。”<p>
+else
+run game_change_money(50000)
+李公公：“皇上赏赐金钱五万。”
+end:>
+<p>
+<:if game_sex_from_id(1) then
+ if game_role_is_exist('江雪儿') then
+  江雪儿：“今晚好好庆祝一下。”<br>
+   if game_role_is_exist('慕容丽雯') then
+    慕容丽雯：“你想怎么庆祝？”<br>
+    江雪儿：“就是吃吃喝喝呗，你想到哪儿去了。”
+    end
+  end
+
+else
+if game_role_is_exist('江雪儿') then
+  江雪儿：“老大都考了榜眼了，我们也要努力上进。”<br>
+  end
+  if game_role_is_exist('慕容丽雯') then
+    慕容丽雯：“东风夜放花千树，一夜鱼龙舞。”<br>
+  end
+  if game_role_is_exist('宇文赫') then
+  宇文赫：“我们要紧跟老大的步伐。”<br>
+  end
+
+end
+:><p>
+<a href="game_page(10781)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=684DF30264B0A6A7ED0882AC3E89EFE7

@@ -1,0 +1,46 @@
+id=10580
+名称=西面小院
+作者=
+属性=6
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+数名行商，落脚于此。<p>
+<a href="game_npc_talk('行商甲')">行商甲</a><p>
+<a href="game_npc_talk('行商乙')">行商甲</a><p>
+<a href="game_npc_talk('行商丙')">行商甲</a><p>
+<a href="game_npc_talk('行商丁')">行商甲</a><p>
+<a href="game_npc_talk('行商戊')">行商甲</a><p>
+
+<p>
+<a href="game_page(10577)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+行商甲=1,今天天气不错。
+I=1,
+行商乙=1,连年战乱，生意不好做啊。
+I=1,
+行商丙=1,听说赵国有个和氏璧，价值连城啊。
+I=1,是啊，要是有得一见，就好了。
+行商丙=2,这东西，咱们普通人哪能见到。
+I=2,
+行商丁=[game_write_temp(1058001,1)]1,您认识长安君吗。
+I=1,不认识。
+行商戊=1,怎么还不下雪啊，我这棉袄都卖不出去呢。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C3D81052B5D41FF8380DA3478AB261FF

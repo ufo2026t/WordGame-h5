@@ -1,0 +1,25 @@
+{
+  "importedAt": "2026-09-02T03:36:55.333Z",
+  "source": "D:\\ufo2003\\WordGame\\output",
+  "imgCount": 136,
+  "smlCount": 73,
+  "extra": 4,
+  "imgDir": "data/img",
+  "smlDir": "data/sml",
+  "missingSceneStills": [
+    "img_tianshan1.jpg",
+    "img_tianshan2.jpg",
+    "img_tianshan3.jpg",
+    "img_tianshan4.jpg",
+    "img_tianshan5.jpg",
+    "img_tianshan6.jpg",
+    "img_tianshan7.jpg",
+    "img_tianshan8.jpg",
+    "img_tianshan9.jpg",
+    "img_tianshan10.jpg",
+    "img_tianshan11.jpg",
+    "img_tianshan12.jpg",
+    "img_shamo1.jpg",
+    "img_yumenguan.jpg"
+  ]
+}

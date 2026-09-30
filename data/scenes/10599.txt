@@ -1,0 +1,57 @@
+id=10599
+名称=大雄宝殿
+作者=
+属性=1
+动作=
+{
+D5001=if game_check_goods_nmb('佛舍利',1) then game_goods_change_n('佛舍利',-1);game_attribute_change(1,19,9000);game_chat('您增加了经验值9000') else game_write_name('老僧~') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clWindowText}),clWindow,佛,AT1012,0,80/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,184,42,{Bold},{clBlack}),clWindow,大雄宝殿,AT1003,0,0/2007.bmp"></CENTER>
+大雄宝殿，重檐高33.6米，十分雄伟。大殿正中是一座高24.8米的释迦牟尼莲花坐像，造像“妙相庄严”、“气韵生动”，是一件不可多得的宗教艺术作品。
+这是我国最高大的木雕坐式佛像之一。
+正殿两边是二十诸天立像，殿后两边为十二圆觉坐像。
+大殿后壁有“慈航普渡”、“五十三参”海岛立体群塑，共有佛像150尊，正中为鳌鱼观音立像，手执净水瓶，
+普渡众生，下塑善财童子，说是善财童子拜观音的故事，善财童子参拜名师53位，
+第27参拜见观音得道成佛。观音两侧为第子善才与龙女，上有地藏菩萨，再上面是释迦牟尼雪山修道的场景：
+白猿献果、麋鹿献乳，整座佛山造型生动，很有艺术价值。
+<p>
+古佛，青灯，<a href="game_npc_talk('老僧')">老僧</a>
+<p>
+<:if not game_check_res_event(game_get_pscene_id(0)) then 一个小<a href="game_pop_a(15);game_goods_change_n('魔力戒指',1);game_chat('捡到魔力戒指1。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">大包裹</a>。end:><p>
+
+<p>
+<a href="game_pop_a(2);game_page(10595)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_goods_nmb('佛舍利',1) then
+老僧=[D5001]1,此物正是佛舍利子，多谢菩萨保佑，又回到了佛门净土之中。
+I=1,空不异色，色不异空。
+老僧=2,if game_sex_from_id(1) then 施主 else 女施主 end 您真是与佛有缘啊。
+I=2,佛观世界，五蕴皆空，有缘既是无缘，无缘也是有缘。
+老僧=3,阿弥陀佛
+I=3,挥挥手，不带走一片云彩。
+else
+老僧=1,if game_sex_from_id(1) then 施主 else 女施主 end 找老衲何事？
+I=1,听说飞来峰上闹妖怪？可有此事。
+老僧=2,确有此事，不仅飞来峰，连六和塔上也都被妖怪占据了，<FONT color=#"FF0000">六和塔</FONT>上的佛舍利子，现在落入了妖怪手中。
+I=2,妖孽真是猖獗，都与当今圣上比邻而居了。
+end
+老僧~=1,阿弥陀佛，多谢施主。
+I=1,不谢，不谢。
+老僧~=2,阿弥陀佛，多谢施主。
+I=2,不谢，不谢。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2AE900FAC173F2958707627FA4903A0E

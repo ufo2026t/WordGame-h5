@@ -1,0 +1,35 @@
+id=10593
+名称=南屏晚钟
+作者=
+属性=
+TempKey=南屏晚钟
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clGreen}),clWindow,南屏晚钟,AT1002,0,0/2007.bmp"></CENTER>
+南屏晚钟，也许是西湖十景中问世最早的景目。北宋末即赫有名的画家张择端曾经画过《南屏晚钟图》。尽管此图远不如他的《清明上河图》那么蜚声画坛，但却被记载于明人《天水冰山录》中。南屏山，绵延横陈于西湖南岸，山高不过百米，山体延伸却长达千余米。山上怪石耸秀，绿树惬眼。晴好日 ，满山岚翠在蓝天白云得衬托下 秀色可餐，遇雨雾天，云烟遮遮掩掩，山峦好像翩然起舞，飘渺空灵，若即若离。后周显得元年（九五四），吴越国主钱弘叔在南屏山麓建佛寺慧日永明院，后来成为与灵隐寺并峙于南北的西湖两大佛教道场之一的净慈寺。
+<p>
+<:game_true(1)string game_res_goods(0,1,'黄金戒指'):><p>
+<p>
+
+<p>
+<a href="game_page(10584)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=86FDA12F933C758834667EE112D3ADDA

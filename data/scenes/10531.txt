@@ -1,0 +1,50 @@
+id=10531
+名称=西厢房
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,天外天,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clGreen}),clWindow,西厢房,AT1001,0,0/2007.bmp"></CENTER>
+一个<a href="game_npc_talk('小妹')">小妹</a>在独自玩耍。<p>
+<:game_true(1)阅读材料：string game_get_read_txt(0):><p>
+<:game_true(1)string game_res_goods(0,2,'石灰石'):><p>
+<:game_true(1)string game_res_goods(5,1,'百年灵芝'):>
+
+<p>
+<a href="game_page(10529)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_sex_from_id(1) then
+小妹=1,大哥哥，和我一起踢毽子吗？
+I=1,不了，你慢慢玩，乖，我到处走走。
+小妹=2,是想找点好玩的吗？<FONT color=#FF0000>兵器库</FONT>里有好多好玩的。
+I=2,呵呵，小妹妹真聪明。
+小妹=3,人家都叫我傻妹呢。
+I=3,那是他们笨。
+else
+小妹=1,小姐姐，和我一起跳皮筋吧。
+I=1,这是小孩子的玩意，你拿个凳子撑着就能跳了。
+小妹=2,我已经用凳子撑着了，不过一个人跳不好玩。
+I=2,是吗，那我陪你跳会。
+小妹=3,谢谢小姐姐。
+I=3,你跳一，我跳一，从前有个周扒皮……
+end
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=06C64B173957B7D20C5876E25EEA180D

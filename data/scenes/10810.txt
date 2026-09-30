@@ -1,0 +1,35 @@
+id=10810
+名称=众安桥
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<a href="game_chat('侍卫：韩将军去淮阳了。')" title="">韩薪王府</a><p>
+<a href="game_npc_talk('侍卫')">岳王府</a><p>
+
+<a href="game_page(10583)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1137) then
+侍卫=1,岳飞涉嫌谋反，府邸已经被查封了。
+I=1,
+else
+侍卫=1,岳元帅正在前线保家卫国，他的府邸家眷，受特别保护，闲人不得靠近。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A7BD1A484341DBCF3C49B3D06DB31750

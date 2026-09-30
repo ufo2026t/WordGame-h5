@@ -1,0 +1,34 @@
+id=10420
+名称=祭坛
+作者=
+属性=32
+载入后=game_pop_fight_a(2,40);game_add_scene_event(1043)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://98,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,祭坛,AT1002,0,0/2007.bmp"></CENTER>
+祭坛上有好多的骷髅。<p>
+附近是一个<a href="game_page(10422)" title="去黑山吗？">法阵<img src="$apppath$img\fazhen.gif" border="0"></a>，直达黑山。<p>
+<:game_true(1)string game_res_goods(0,1,'金块'):>
+
+<p>
+<a href="game_page(-1)">返回兰若寺后院</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C1B7E03250250ED444696B064C956F4B

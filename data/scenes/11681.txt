@@ -1,0 +1,35 @@
+id=11681
+名称=沈村
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,小二家,AT1002,0,0/2007.bmp"></CENTER>
+小二。<p>
+家穷人丑，一米四九。<br>
+小学文化，农村户口。<br>
+薄田一亩，老婆没有。<p>
+
+<:game_true(1)string game_res_goods(0,1,'牛黄'):><p>
+
+<p>
+<a href="game_page(11575)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C1912C54ED5426916D01D14356A273AE

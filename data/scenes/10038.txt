@@ -1,0 +1,40 @@
+id=10038
+名称=易名轩内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+易名轩内很安静，一位<a href="game_npc_talk('老者')" title="要改名吗，和我联系。">老者</a>端坐于上。<br>
+这里只能改主角的名字，改名一次收200。
+<p>
+<a href="game_page(10001)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+江雪儿=1,改名？好好玩啊。
+I=1,只是要花钱哦。
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+老者=1,这位英雄，想起个啥名啊。
+I=1,好听的就是了，不知具体如何操作。
+老者=2,简单，简单，付钱就可以了，改一次收费200。
+I,A=2,哇，这么贵，打劫啊。
+I,B=2,太贵啦，可否优惠？
+I,C=2,好，就给我改个名吧。
+老者,A=3,姜太公钓鱼，愿者上钩。
+老者,B=3,明码标价，恕不还价。
+老者,C=3,if game_check_money(200) then [game_rename('无名');game_change_money(-200)]3,好，请输入一个名字吧。else 您钱不够，无法改名。 end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=CB7E96279651B82FD00E063CEBB0031C

@@ -1,0 +1,55 @@
+id=10302
+名称=无剑山庄
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://114,56,(隶书,67,42,{Bold},{clRed}),clWindow,剑,AT1012,0,20/2007.bmp"></CENTER>
+庄主铁凌风，早年曾单挑战胜江湖三大顶尖高手，而一举成名。后创立无剑山庄。<p>
+无剑山庄创立后，铁庄主却深感为名所累，因为不断的有不知天高地厚者来找他挑战，铁庄主不堪其扰，
+逐闭门谢客。<p>
+<:if game_check_scene_event(1205) then
+ 武林大会过后，庄里逐渐安静了下来。
+else
+不料，江湖又传言失传已久的魔剑被铁庄主所得，于是，无剑山庄再次成了黑白两道的关注焦点……<p>
+近日，铁庄主广发英雄帖，定于3月后在无剑山庄召开一次<b>武林大会</b>，一方面是为了澄清魔剑传言，另一方面，也想发掘一些武学新人。<p>
+end:>
+
+&nbsp;<p>
+<a href="if game_check_scene_event(1137) then game_page(10303) else game_npc_talk('山庄家丁')end" title="进入山庄">进入无剑山庄</a><p>
+
+<a href="game_page(10036)">返回东河码头</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1011) then
+山庄家丁=1,你是何人？
+I=1,在下想见见铁庄主，烦劳通报一声。
+山庄家丁=2,哦，除掉古堡僵尸王的可是你？
+I=2,正是在下。
+山庄家丁=3,请随我来。
+I=[game_page(10303)]3,请。
+else
+山庄家丁=1,庄主现闭门谢客，任何人不得入内。
+I=1,在下想见见铁庄主，烦劳通报一声。
+山庄家丁=2,想见铁庄主的多了，哪能来者不拒啊。说说，你有何过人之处？
+I=2,要什么条件才能入内拜访？
+山庄家丁=3,如果你能把河西镇附近的<FONT color=#"FF0000">神秘古堡</FONT>内的僵尸王给收拾了，那也许庄主会见你一面。
+I=3,我考虑考虑。
+end;
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9DEEE77D227135767B295FEF9B441C9A

@@ -1,0 +1,40 @@
+id=10324
+名称=无剑山庄后院
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://67,56,(隶书,134,42,{Bold},{clRed}),clWindow,剑,AT1012,0,20/2007.bmp"></CENTER>
+山庄后院<p>
+<a href="game_page(10325)" title="">通往花园</a><p>
+<a href="game_page(10335)" title="">通往山庄<strong>练功房</strong></a><p>
+<a href="game_page(10326)" title="">通往后院房间1</a><p>
+<a href="if game_check_scene_event(1036) then game_page(10328) else game_page(10327)end" title="">通往后院房间2</a><p>
+<a href="game_page(10329)" title="">通往后院房间3</a><p>
+<a href="game_page(10330)" title="">通往后院房间4</a><p>
+<a href="game_page(10331)" title="">通往后院房间5</a><p>
+<a href="game_page(10332)" title="">通往后院房间6</a><p>
+<a href="game_page(10336)" title="">通往山庄后<FONT color=#"FF0000">密林</FONT></a><p>
+<a href="game_page(10333)" title="">通往山庄<strong>藏书阁</strong></a><p>
+<a href="game_page(10334)" title="">通往山庄厨房</a><p>
+&nbsp;<p>
+<a href="game_page(10303)">返回山庄前院</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=8E74D472B4A6CB8C1515CF4705511440

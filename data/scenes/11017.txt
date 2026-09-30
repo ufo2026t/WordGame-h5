@@ -1,0 +1,49 @@
+id=11017
+名称=珊瑚岛-张家堡内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://645,213,(隶书,134,160,{Bold},{clFuchsia}),clWindow,岛,AT1001,0,75/2007.bmp) fixed no-repeat center center;">
+ <CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,张家堡,AT1000,0,0/2007.bmp"></CENTER>
+堡内有好多人。<p>
+<:game_true(1)string game_res_goods(0,1,'珊瑚项链'):><p>
+<a href="game_npc_talk('渔民甲')">渔民甲</a><p>
+<a href="game_npc_talk('渔民已')">渔民已</a><p>
+<a href="game_npc_talk('家丁甲')">家丁甲</a><p>
+<a href="game_npc_talk('家丁乙')">家丁乙</a><p>
+<a href="game_npc_talk('家丁丙')">家丁丙</a>
+<a href="if game_check_scene_event(1075) then game_chat('张堡主在后院养伤，闭门谢客。') else game_page(1)end" title="">进入客厅</a><p>
+
+<a href="game_page(-2)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+渔民甲=1,我抓了很多乌贼啊，听说当今皇上好吃乌贼，所以，特来找堡主，希望能卖到皇宫去，图个好价钱。
+I=1,
+渔民已=1,我上次给的鱼，还没拿钱呢，今天来拿钱。
+I=1,
+家丁甲=1,我家堡主，对本地的渔民，还是很照顾的。
+I=1,
+家丁乙=1,你也想是来托关系卖鱼的吧，去厅里找堡主去就行。
+I=1,
+家丁丙=1,这附近的万灵山，听说有高人在那，进山要过一个八卦阵。
+I=1,这位小哥，可说其详？
+家丁丙=2,哦，你是外地人吧，这都不知道，想当年，当今圣上可是全靠我们堡主护送上万灵山才躲过金人所派高手的追杀呢。
+I=2,哦，这山上有什么，这么厉害？
+家丁丙=3,我也只是听说，山上有一世外高人，人称柳仙人。在山腰布有八卦阵，然后独自在山上修仙练道。我们这些武功稀松平常之人，哪上的山去？
+I=3,谢谢小哥。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=22EB0DE1A7E0FDC25287C762EF4BC124

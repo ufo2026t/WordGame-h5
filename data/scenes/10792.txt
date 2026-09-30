@@ -1,0 +1,102 @@
+id=10792
+名称=仁明殿
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clPurple}),clWindow,仁明,AT1001,0,62/2007.bmp) fixed no-repeat center center;">
+皇太后房间。<p>
+<:if game_role_is_exist('李疏盈') and game_not_scene_event(1208) and game_not_scene_event(1210) then
+皇太后：“你就是赵小金？”<br>
+赵小金：“是的。”<br>
+皇太后：“我听皇上提起过你，怎么着你也是皇室血脉。在外流落多年，吃了不少苦吧。”<br>
+赵小金：“还好，都已经过去了。”<br>
+皇太后：“这样吧，现在你既然来到了皇宫，我就让皇上给你一个名分，恢复你的公主身份吧。”<p>
+1。<a href="game_npc_talk('认祖归宗')">认祖归宗</a><br>
+2。<a href="game_npc_talk('拒绝接受')">拒绝接受</a><p>
+else
+if game_role_is_exist('李疏盈') and game_check_scene_event(1208) then
+赵小金：“见过皇太后。”<br>
+皇太后：“免礼。”
+end
+end:>
+<p>
+<:if game_check_scene_event(1080) then
+if game_check_scene_event(1081) then
+。。。
+else
+if game_sex_from_id(1) then
+皇太后：“这次兵变的顺利解决，你功不可没。只可惜你已净身了，否则的话，我把大长公主许配与你。”<br>
+string game_get_newname_at_id(1)：“太后，其实，我……”<br>
+if game_role_is_exist('江雪儿') then 江雪儿：“你什么，你想说什么。”<br>end
+if game_role_is_exist('慕容丽雯') then 慕容丽雯：“嗯，有什么话就对太后说吧，机不可失时不再来哦。”<br>end
+皇太后：“你有什么话就说吧。”<br>
+“没什么，我是想说，我一个“太监”，当然不能耽误了公主的幸福。（胸中一万个草泥马奔腾而过）”<br>
+“你果然深明大义，像你这样的人，往往视金钱如粪土，且现在也正是朝廷困难之际，就意思一下吧。赏你“封神披风”一件，钱2万。”<br><p>
+<a href="game_change_money(2000);game_goods_change_n('封神披风',1);game_add_scene_event(1081);game_reload_direct(0)" title="接受"> “谢太后”（点此接受赏赐）</a><br>
+else
+皇太后：“这次兵变的顺利解决，你功不可没。且确是个人才。我朝为才是用，只是朝中不设女官，这样吧，如果你看上哪个公子王孙的，我替你作主。”<br>
+string game_get_newname_at_id(1)：“谢太后，其实，我……”<br>
+if game_role_is_exist('胡飛') then 胡飛：“你不会吧……”<br>end
+if game_role_is_exist('铁檑') then 铁檑：“汗，这下麻烦了。”<br>end
+皇太后：“你有什么话尽管直说。”<br>
+“我一介女流之辈，无甚么要求。”<br>
+“也是，这些个公子王孙，只知吃喝嫖赌，我看着也心烦。这样吧，赏你“羽翼披风”一件，钱2万。”<br><p>
+<a href="game_change_money(2000);game_goods_change_n('羽翼披风',1);game_add_scene_event(1081);game_reload_direct(0)" title="接受"> “谢太后”（点此接受赏赐）</a><br>
+
+end
+end
+else
+if game_check_scene_event(1079) then
+皇太后：“事情进展如何？”<br>
+“请太后放心。”<br>
+else
+皇太后：“唉，苗傅，刘正彦俩统兵将领造反了。这皇宫卫队都听他们的。我朝大将又在外抗金。<br>
+这可如何是好，唉，愁死我了。”<br>
+string game_get_newname_at_id(1)：“太后何事烦恼？”<br>
+if game_sex_from_id(1) then
+皇太后：“你一个小小太监，懂什么，出去吧。”<br>
+string game_get_newname_at_id(1)：“朝廷有难，匹夫有责。”<br>
+皇太后：“哦，看来你是个有心之人，只可惜不会武功啊。”<br>
+“小的在家乡时学过些独门功夫。”<br>
+太后闻之大喜：“是吗，当前正是用人之际。英雄不问出处。如果帮我朝度过此难关。重重有赏。”<br>
+else
+皇太后：“你一个小小宫女，懂什么，出去吧。”<br>
+string game_get_newname_at_id(1)：“朝廷有难，我等义不容辞。”<br>
+皇太后：“哦，看来你是个有心之人，只可惜不会武功啊。”<br>
+“小女子在家乡时学过些独门功夫。”<br>
+太后闻之大喜：“是吗，当前正是用人之际。英雄不问出处。如果帮我朝度过此难关。重重有赏。”<br>
+end
+“那如何帮忙？”<br>
+皇太后：“你既会独门武功，那先去<FONT color=#"FF0000">苗府</FONT>刺探军情，然后见机行事吧。”<p>
+<a href="game_add_scene_event(1079);game_add_message('任务，前往苗府刺探军情');game_reload_direct(0)" title="点此接受任务。">“好，我这就去。”点击接受任务</a>（杭州兵变由网友“火”根据历史故事提供思路，在此表示感谢）<p>
+end
+end:>
+
+一条石板路，通往<a href="game_page(1)" title="">受厘殿</a><p>
+一条石板路，通往<a href="game_page(-1)" title="返回">慈元殿</a><p>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+认祖归宗=[game_add_scene_event(1208)]1,皇太后@好，现在就恢复你原先的“恭福公主”名号，并赐你凤凰裙一条
+I=1,赵小金@多些皇太后。
+认祖归宗=2,众宫女@小的见过恭福公主
+I=[game_goods_change_n('凤凰裙',1);game_page(-1)]2,赵小金@各位快起来吧。
+拒绝接受=[game_add_scene_event(1210)]1,皇太后@唉
+I=1,赵小金@我习惯了风雨江湖路，这里的，都不适合我。
+拒绝接受=2,皇太后@既然如此，我也就不勉强你了。
+I=[game_page(-1)]2,赵小金@谢太后
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C69F9454D12818E6BA3141314AAFC3A7

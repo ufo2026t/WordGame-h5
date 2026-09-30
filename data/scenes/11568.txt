@@ -1,0 +1,75 @@
+id=11568
+名称=望湖别墅
+作者=
+属性=4
+动作=
+{
+D5001=if game_check_money(50000) then game_change_money(-50000);game_add_scene_event(1140);game_chat('购买成功');game_reload_direct(0) else game_chat('您钱不够。') end
+D5002=if game_check_money(250000) then game_change_money(-250000);game_add_scene_event(1141);game_chat('购买成功');game_reload_direct(0) else game_chat('您钱不够。') end
+D5003=if game_check_money(500000) then game_change_money(-500000);game_add_scene_event(1142);game_chat('购买成功');game_reload_direct(0) else game_chat('您钱不够。') end
+D5004=if game_check_money(1000000) then game_change_money(-1000000);game_add_scene_event(1143);game_chat('购买成功');game_reload_direct(0) else game_chat('您钱不够。') end
+D5005=if game_check_money(1500000) then game_change_money(-1500000);game_add_scene_event(1144);game_chat('购买成功');game_reload_direct(0) else game_chat('您钱不够。') end
+D5006=if game_check_money(1500000) then game_change_money(-1500000);game_add_scene_event(1145);game_chat('购买成功');game_reload_direct(0) else game_chat('您钱不够。') end
+D5007=if game_check_money(1500000) then game_change_money(-1500000);game_add_scene_event(1146);game_chat('购买成功');game_reload_direct(0) else game_chat('您钱不够。') end
+D5008=if game_check_money(1500000) then game_change_money(-1500000);game_add_scene_event(1147);game_chat('购买成功');game_reload_direct(0) else game_chat('您钱不够。') end
+D5009=if game_check_money(1500000) then game_change_money(-1500000);game_add_scene_event(1148);game_chat('购买成功');game_reload_direct(0) else game_chat('您钱不够。') end
+D5010=if game_check_money(1500000) then game_change_money(-1500000);game_add_scene_event(1149);game_chat('购买成功');game_reload_direct(0) else game_chat('您钱不够。') end
+D5011=if game_check_money(10000000) then game_change_money(-10000000);game_add_scene_event(1140);game_add_scene_event(1141);game_add_scene_event(1142);game_add_scene_event(1143);game_add_scene_event(1144);game_add_scene_event(1145);game_add_scene_event(1146);game_add_scene_event(1147);game_add_scene_event(1148);game_add_scene_event(1149);game_chat('购买成功');game_reload_direct(0) else game_chat('您钱不够。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clMaroon}),clWindow,望湖别墅,AT1002,0,0/2007.bmp"></CENTER>
+望湖别墅，是一套超豪华大型水景花园别墅。装修完成。购得睡房或客房后，可在其中休息，全队命、体、灵恢复全满（免费）。<p>
+<a href="if game_check_scene_event(1140) then game_page(1) else game_write_temp(1156801,1);game_reload_direct(0) end" title="">进入</a><p>
+<a href="game_write_temp(1156801,1);game_reload_direct(0)" title="">购买</a> <p>
+<:if game_read_temp(1156801) then
+if game_not_scene_event(1140) then
+购买<a href="D5001" title="价格5万，解锁进入与院子">别墅-院子</a><br>
+end
+if game_not_scene_event(1141) then
+购买<a href="D5002" title="价格25万，立即购买">别墅-客厅</a><br>
+end
+if game_not_scene_event(1142) then
+购买<a href="D5003" title="价格50万，立即购买">别墅-花园</a><br>
+end
+if game_not_scene_event(1143) then
+购买<a href="D5004" title="价格100万，立即购买">别墅-后院</a><br>
+end
+if game_not_scene_event(1144) then
+购买<a href="D5005" title="价格150万，立即购买">别墅-书房</a><br>
+end
+if game_not_scene_event(1145) then
+购买<a href="D5006" title="价格150万，立即购买">别墅-西厢房</a><br>
+end
+if game_not_scene_event(1146) then
+购买<a href="D5007" title="价格150万，立即购买">别墅-东厢房</a><br>
+end
+if game_not_scene_event(1147) then
+购买<a href="D5008" title="价格150万，立即购买">别墅-客房</a><br>
+end
+if game_not_scene_event(1148) then
+购买<a href="D5009" title="价格150万，立即购买">别墅-睡房</a><br>
+end
+if game_not_scene_event(1149) then
+购买<a href="D5010" title="价格150万，立即购买">别墅-沧浪亭</a><br>
+<a href="D5011" title="价格1000万，购买全部（比逐项购买省80万）">购买全部</a>
+else
+已经售完。
+end
+end:>
+<p>
+<a href="game_page(10583)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0EF49B4F97BA8FDA8D3BFD6EC8B7EE26

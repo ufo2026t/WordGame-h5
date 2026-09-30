@@ -1,0 +1,42 @@
+id=11553
+名称=大理王宫-库房
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clNavy}),clWindow,大理王宫,AT1002,0,0/2007.bmp"></CENTER>
+库房<p>
+一个四方的木制<a href="game_pop_a(6);if game_check_res_event(5200) then game_chat('空的箱子') else game_chat('拿到牛黄16个');game_goods_change_n('牛黄',16);game_add_res_event(5200) end">箱子1</a><p>
+一个四方的木制<a href="game_pop_a(20);if game_check_res_event(5201) then game_chat('空的箱子') else game_chat('拿到六脉神剑秘籍一本');game_goods_change_n('六脉神剑',1);game_add_res_event(5201) end">箱子2</a><p>
+一个四方的木制<a href="game_pop_a(6);if game_check_res_event(5202) then game_chat('空的箱子') else game_chat('拿到雪莲10个');game_goods_change_n('雪莲',10);game_add_res_event(5202) end">箱子3</a><p>
+一个四方的木制<a href="game_pop_a(6);game_chat('一个破的箱子')">箱子4</a><p>
+一个四方的木制<a href="game_pop_a(6);if game_check_res_event(5203) then game_chat('空的箱子') else game_chat('拿到迷踪蛊1个');game_goods_change_n('迷踪蛊',1);game_add_res_event(5203) end">箱子5</a><p>
+一个四方的木制<a href="game_pop_a(6);if game_check_res_event(5204) then game_chat('空的箱子') else game_chat('拿到鬼见愁1个');game_goods_change_n('鬼见愁',1);game_add_res_event(5204) end">箱子6</a><p>
+一个四方的木制<a href="game_pop_a(6);game_chat('一个破的箱子')">箱子7</a><p>
+一个四方的木制<a href="game_pop_a(6);if game_check_res_event(5205) then game_chat('空的箱子') else game_chat('拿到钱1万');game_change_money(10000);game_add_res_event(5205) end">箱子8</a><p>
+一个四方的木制<a href="game_pop_a(6);game_chat('一个破的箱子')">箱子9</a><p>
+一个四方的木制<a href="game_pop_a(6);if game_check_res_event(5206) then game_chat('空的箱子') else game_chat('获得了经验值0.5万');game_attribute_change(1,19,5000);game_add_res_event(5206) end">箱子10</a><p>
+
+<:game_true(1)string game_res_goods(0,1,'雪莲'):><p>
+
+<p>
+<a href="game_page(11549)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5DC74D17213A4C6C16DEC56D3185BFA5

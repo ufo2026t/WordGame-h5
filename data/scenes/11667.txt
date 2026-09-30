@@ -1,0 +1,43 @@
+id=11667
+名称=飞龙帮-后院
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,后院,AT1002,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'佛珠'):><p>
+<a href="game_npc_talk('老家丁')">老家丁</a>
+
+<a href="game_page(11674)" title="">房间一</a><p>
+<a href="game_page(11675)" title="">房间二</a><p>
+<a href="game_page(11676)" title="">房间三</a><p>
+<a href="game_page(11677)" title="">仓库</a>
+<p>
+<a href="game_page(11605)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1164) then
+老家丁=1,今天天气不错啊。
+I=1,呵呵
+else
+老家丁=1,少帮主武功高强，深得帮主赏识。
+I=1,帮主还有其他孩子吗？
+老家丁=2,没，帮主就这么一个孩子。
+I=2,哦
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2AA74D483EFC9137B14424BC8100E746

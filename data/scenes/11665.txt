@@ -1,0 +1,69 @@
+id=11665
+名称=飞龙帮-大厅
+作者=
+属性=4
+动作=
+{
+D5001=if game_pop_game(1,124) then game_chat('飞龙帮主：长江后浪推前浪啊，我老了。'); else game_chat('飞龙帮主：不是吹牛，能在我手下过三招的，已属高手。'); end game_del_scene_event(1158)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://114,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,大厅,AT1002,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1158) then
+if game_check_scene_event(1161) then
+飞龙帮主：“果然英雄出少年，能打败副帮主，武功定然不错。”<br>
+string game_get_newname_at_id(1)：“帮主见笑了。”<br>
+飞龙帮主：“今天老夫心情不错，咱们来过两招如何。”<p>
+1。和帮主<a href="D5001">过招</a><p>
+2。<a href="game_npc_talk('推辞')">推辞</a>
+else
+飞龙帮主：“来者是客，你们先歇歇，喝杯茶吧。”<p>
+1。提出和帮主<a href="game_npc_talk('比试比试')">比试比试</a>。<br>
+2。<a href="game_npc_talk('到处逛逛')">到处逛逛</a>。
+end
+else
+;;比武大会开始×××
+if game_check_scene_event(1205) then
+;;     武林大会已经结束。
+飞龙帮主闭关修炼中……。
+else
+if game_check_scene_event(1137) and game_check_scene_event(1214) then
+if game_check_scene_event(1204) then
+飞龙弟子：“帮主去参加武林大会了。”
+else
+飞龙帮主：“今日找我何事？”<br>
+1。<a href="game_pop_a(10);game_add_scene_event(1204);game_chat('飞龙帮主：谢谢，我知道了。你先回去吧，我稍后就到。')" title="邀请">邀请飞龙帮</a>参加无剑山庄的武林大会。
+end
+else
+;;岳飞还在开封
+飞龙帮主不在。厅内无人。
+end
+end
+;;比武大会结束×××
+end:>
+<p>
+<a href="game_page(11669)" title="">书房</a><p>
+
+<p>
+<a href="game_page(11605)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+到处逛逛=1,帮主@敝帮地儿小，各位如若不嫌，到处走走吧。
+I=1,谢谢帮主。
+比试比试=1,帮主@呵呵，各位如果能打败副帮主，再来找老夫比试不迟。
+I=1,副帮主在哪？
+比试比试=2,帮主@副帮主常在前院走动。
+I=2,好。先去会会副帮主。
+推辞=1,
+I=1,在下才疏学浅，不敢。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1FEDA2247D03DF90A31FD6986EC021AE

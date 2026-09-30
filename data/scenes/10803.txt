@@ -1,0 +1,36 @@
+id=10803
+名称=正厅
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clWindowText}),clWindow,正厅,AT1001,0,55/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://308,75,(隶书,134,56,{Bold},{clOlive}),clWindow,命请民为,AT1012,0,0/2007.bmp"></CENTER>
+正厅，一般用于举行大型仪式，常规宾客接见，都在客厅。<p>
+<:game_true(1)string game_res_goods(0,1,'上等木炭'):><p>
+<p>
+进入<a href="if game_not_scene_event(1062) then game_npc_talk('秦府高手') else game_page(10811) end" title="">客厅</a>
+ <p>
+<a href="game_page(10802)">返回元宝街</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+秦府高手=1,看你们鬼鬼祟祟的，来这干吗？老实交代，免受皮肉之苦。
+I,A=[game_pop_fight_a(2,95);game_add_scene_event(1062)]1,与这帮人说不灵清，先下手为强。
+I,B=[game_page(10802)]1,找个借口，逃出秦府。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BC4B9AFFAE0F7112FAC34C5ABC4FC221

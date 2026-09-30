@@ -1,0 +1,31 @@
+id=10421
+名称=黑山脚下
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+黑山，因山上多裸露的黑色岩石而得名。山高，险峻。<p>
+山上时常云遮雾罩。<p>
+山上多妖怪。<p>
+进入黑山前，建议<FONT color=#FF0000>买足药品</FONT>，多带还魂丹，带上回城卷（逃命法宝）。<p>
+<a href="if game_check_scene_event(1043) then if game_grade('无名',15) then game_page(10422) else if game_question('前方山高路险，您等级偏低是否前往?') then game_page(10422)end end else game_infobox('去黑山的路被兰若寺内的妖怪挡牢了，要先去把那里的机关打开才行。白天如果兰若寺看不出门道，要晚上再去，那么可以先去客栈住店先。') end" title="准备好了吗？">进入黑山</a><p>
+<a href="game_page(10061)">返回婺州</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=28A55AE7B8AEFBE21EC5CD5455D06313

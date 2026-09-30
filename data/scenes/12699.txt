@@ -1,0 +1,31 @@
+id=12699
+名称=房间二
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间二,AT1000,0,0/2007.bmp"></CENTER>
+ 简陋客房，一张床、一张桌。<p>
+<p>
+<a href="game_page(-1)">二楼走廊房间一</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+过路商人=1,明日走，今晚睡不着。听说教主有藏宝图，真假难辨。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=26B5B354168E3E4CACD431660AD9CC6A

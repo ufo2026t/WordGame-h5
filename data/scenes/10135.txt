@@ -1,0 +1,41 @@
+id=10135
+名称=郊外密林
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<:if game_check_scene_event(1041) then
+<BODY style="background:url(gpic://0,0,(隶书,134,140,{Bold},{clGreen}),clWindow,郊外密林,AT1012,1,0/2007.bmp) fixed no-repeat center center;">
+晚上，密林里有些黑暗。<p>
+else
+<BODY style="background:url(gpic://756,187,(隶书,134,140,{Bold},{clGreen}),clWindow,郊外密林,AT1012,0,0/2007.bmp) fixed no-repeat center center;">
+end:>
+
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+天苍苍，树茫茫。<p>
+
+<:game_not_scene_event(1024)树林里忽然传出了<FONT color=#"FF0000">打斗</FONT>声，是否<a href="game_page(10136)" title="">过去看看</a>。else
+树林里静悄悄的，似乎潜伏着什么危机。:>
+<p>
+<a href="game_page(10137)" title="">进入树林深处东</a><p>
+
+<a href="game_page(10147)" title="">进入树林深处西</a>
+<p>
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BC1C298662029385984F96AD618BC0DC

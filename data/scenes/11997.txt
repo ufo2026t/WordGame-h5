@@ -1,0 +1,51 @@
+id=11997
+名称=岳飞营
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,岳飞帐,AT1002,0,0/2007.bmp"></CENTER>
+岳飞大帐内。<p>
+岳飞：“众将士们，这一战打的很好，接下来，大家继续努力，直捣黄龙，再与君痛饮尔。”<br>
+众将士：“其心协力，直捣黄龙。”<p>
+忽然。<p>
+传令官：“报告元帅，朝廷已发六道金牌，召元帅班师回朝。”<p>
+岳飞大惊：“什么？现在形式刚刚逆转。朝廷怎么会要撤军？”<br>
+<:if game_add_scene_event(1137) then
+string game_get_newname_at_id(1)：“元帅，将在外，君命有所不受。今金兵大败，眼见大功即成，应一举平定北方，迎二主还朝。”<br>
+岳飞：“我岳飞一生精忠报国，岂能抗旨不遵。”<br>
+string game_get_newname_at_id(1)：“我思量着，这事儿没这么简单，会不会朝廷要你回朝，是怕你救回二主，影响高宗王位？”<br>
+岳飞：“皇上一直想要迎二主回朝呢，断不会有此念头。也许是怕我等支撑不住，以退为进吧，待我草拟一份奏折上报军情。”<br>
+string game_get_newname_at_id(1)：“我看不像，肯定是朝廷别有用心。别理他们，打到上京再说。”<br>
+岳飞：“也罢，我先让人上奏朝廷，择日出兵北伐。乘胜追击。”<p>
+忽然<p>
+传令官：“报告元帅，朝廷又发六道金牌，召元帅班师回朝。”<p>
+岳飞：“天意如此，天意如此，12道金牌，功亏一溃啊。罢了，罢了。明日班师回朝。” <br>
+string game_get_newname_at_id(1)：“元帅真要班师回朝？”<br>
+岳飞：“朝廷连下命令，我等抗旨不得啊，待我先行回朝，再细细奏明圣上，定能再来收复失地。”<br>
+string game_get_newname_at_id(1)：“唉，但愿能天遂人意。”<br>
+岳飞：“对了，我回朝后，你有何打算？”<br>
+string game_get_newname_at_id(1)：“我要前往金兀术那里，把<FONT color=#"FF0000">神镜找回</FONT>，现在有混沌之晶，神镜奈何不了我们，
+但落在金人手中，终究是个祸害。待我找回神镜后，拿往<FONT color=#"FF0000">昆仑归位</FONT>。以堵暗黑之路。”<br>
+岳飞：“这次多亏你等能人异士帮忙，我会奏明圣上，为你们论功行赏。if game_role_is_exist('宇文赫') then 你们前去金营找神镜，风险不小，<strong>宇文赫</strong>还是先跟随你等行动，待我回来后再战金军。 end ”<br>
+string game_get_newname_at_id(1)：“多谢元帅，期待元帅早日归来。收复中原。”
+end:>
+<a href="game_page(11417)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C4A191197A1BAECDAE9DEDE91C88927D

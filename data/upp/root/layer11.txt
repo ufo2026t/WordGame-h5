@@ -1,0 +1,8 @@
+id=layer11
+begin=258
+end=262
+begin2=277
+end2=281
+;可以使用begin2，end2等定义多个物品区间，最多搜索到begin9为止
+;中级副食杂货店
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

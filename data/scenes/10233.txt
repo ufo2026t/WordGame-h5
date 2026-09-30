@@ -1,0 +1,43 @@
+id=10233
+名称=天坑迷宫
+作者=
+属性=38
+载入后=if game_random_chance(10) then game_pop_fight_a(1,35) else if game_random_chance_at_sleep(2) then game_pop_fight_a(1,34) else game_pop_fight_a(1,39) end end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://640,480,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://259,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,天坑迷宫第四层,AT1005,0,0/2007.bmp"></CENTER>
+天坑底下迷宫。<p>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+&nbsp;<p>
+<:game_true(1)string game_res_goods(5114,1,'还魂丹'):>
+<:game_true(1)string game_res_goods(5,1,'三年生草药'):>
+<p>
+
+您可以：<p>
+<a href="game_pop_a(2);game_page(10234)">往左</a>
+&nbsp;<p>
+<a href="game_pop_a(2);game_page(10238)">往右</a>
+&nbsp;<p>
+<a href="game_page(10232)">返回前一个场景</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=CB60C23EF18C7037560435D1BE679B22

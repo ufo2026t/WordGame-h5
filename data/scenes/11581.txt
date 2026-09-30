@@ -1,0 +1,47 @@
+id=11581
+名称=朱仙镇客栈二楼
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,客房一,AT1002,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'千年人参'):><p>
+
+房内有一个<a href="game_npc_talk('老头')">老头</a>。
+
+<p>
+<a href="game_page(11580)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1138) then
+老头=1,……。
+I=1,
+else
+if game_check_scene_event(1137) then
+老头=1,大鹏南飞，凶多吉少啊。
+I=1,愿闻其详。
+老头=2,传说，岳元帅乃天上大鹏鸟下凡。
+I=2,传说哪能当真呢。
+else
+老头=1,昆仑山崩，邪魔辈出。
+I=1,此话怎讲？
+老头=2,去了昆仑就知道了。
+I=2,
+end
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=27B438045E9863EB3FB324C9EC5E1F21

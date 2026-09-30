@@ -1,0 +1,31 @@
+id=12661
+名称=房间一
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间一,AT1000,0,0/2007.bmp"></CENTER>
+ 书吏在此誊写公文，桌上堆满卷宗。<p>
+<p>
+<a href="game_page(-1)">走廊</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+书吏=1,太守让我整理通商文书，九毒派的投诉我们只好接着收着。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=10B14F89E37692CF5184406A8A1C27F8

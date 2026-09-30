@@ -1,0 +1,52 @@
+id=11576
+名称=岳飞营
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,岳飞营,AT1002,0,0/2007.bmp"></CENTER>
+宋军驻扎地。旌旗猎猎。<p>
+<:game_check_scene_event(1085)
+夜晚，可出去探查金营，如需切换到白天，可再去南营休息。
+else
+白天。:><p>
+<:if game_check_scene_event(1193) and game_not_scene_event(1194) then
+开始<a href="game_page(11996)" title="进入战场">二次宋金大战</a>
+else
+if game_read_scene_integer(1171)=4 then
+开始和金兵<a href="game_page(11792)" title="进入战场">正面交锋</a>。
+else
+if game_read_scene_integer(1171)=3 then
+开始和金兵<a href="game_page(11792)" title="进入战场">正面交锋</a>。
+end
+end
+end:>
+
+<p>
+进入<a href="if game_check_scene_event(1085) then game_chat('现在是夜晚，士兵都睡觉了。') else game_page(11687) end" title="">东区兵营</a><p>
+进入<a href="if game_check_scene_event(1085) then game_chat('现在是夜晚，士兵都睡觉了。') else game_page(11688) end" title="">西区兵营</a><p>
+进入<a href="game_page(11689)" title="">南区兵营</a><p>
+进入<a href="if game_check_scene_event(1085) then game_chat('现在是夜晚，士兵都睡觉了。') else game_page(11690) end" title="">北区兵营</a><p>
+进入<a href="if game_check_scene_event(1085) then game_chat('现在是夜晚，元帅睡觉了。') else game_page(11691) end" title="">中区大营</a><p>
+。<p>
+
+
+<a href="game_page(11417)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=131427A33D07B030AA7CC2A936837A69

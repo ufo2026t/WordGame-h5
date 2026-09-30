@@ -1,0 +1,37 @@
+id=10597
+名称=飞来峰
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://300,300,(隶书,134,22,{Bold},{clWindowText}),clWindow,$tree,AT1000,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clBlack}),clWindow,飞来峰,AT1003,0,0/2007.bmp"></CENTER>
+飞来峰不仅风景美，而且是我国南方古代古窟艺术重要地区之一。
+在青林洞、玉乳洞、龙泓洞、射阳洞以及沿溪涧的悬崖峭壁上，有五代至宋、元年间的石刻造像330余尊。
+其中最引人注目的，要数那喜笑颜开、袒腹露胸的弥勒佛。
+这是飞来峰石窟中最大的造像，为宋代造像艺术的代表作，具有较高的艺术价值。
+<p>
+<a href="game_page(10643)" title="">进入</a>
+<p>
+<:if not game_check_res_event(game_get_pscene_id(0)) then 一个小<a href="game_pop_a(20);game_goods_change_n('碧血剑',1);game_chat('捡到碧血剑1。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">大包裹</a>。end:><p>
+
+<p>
+<a href="game_pop_a(2);game_page(10595)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EDF5CE6876C3F6CE712CA93FF033575A

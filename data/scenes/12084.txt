@@ -1,0 +1,54 @@
+id=12084
+名称=峨嵋山
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,400,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,77/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,善觉殿,AT1000,0,0/2007.bmp"></CENTER>
+;;比武大会开始×××
+<:if game_check_scene_event(1205) then
+;;     武林大会已经结束。
+峨嵋掌门人不在。
+else
+if game_check_scene_event(1137) and game_check_scene_event(1214) then
+if game_check_scene_event(1199) then
+峨嵋弟子：“掌门去参加武林大会了。”
+else
+峨嵋掌门：“今日找我何事？”<br>
+1。<a href="game_pop_a(10);game_add_scene_event(1199);game_chat('峨嵋掌门：谢谢，我知道了。你先回去吧，我稍后就到。')" title="邀请">邀请峨嵋派</a>参加无剑山庄的武林大会。
+end
+else
+;;岳飞还在开封
+峨嵋派的<a href="game_npc_talk('掌门人')">掌门人</a>正闭目运功。<p>
+end
+end:>
+;;比武大会结束×××
+<p>
+<a href="game_pop_a(2);game_page(12070)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+猴子=1,吱，吱
+I=1,
+if game_sex_from_id(1) then
+掌门人=1,你不要找我比武，我最讨厌臭男人了。
+I=1,峨嵋小崔@掌门人曾经为情所伤，所以，现在对男人恨之入骨，你还是少惹为妙。
+else
+掌门人=1,天下男人没一个好东西，我奉劝你一句，千万别相信男人的甜言蜜语。
+I=1,多谢您的教诲，我记住了。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=957D1F2D282692504780E99C9DA44D93

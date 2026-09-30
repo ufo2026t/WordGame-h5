@@ -1,0 +1,48 @@
+id=12475
+名称=天蓬山庄
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,天蓬山庄,AT1000,0,0/2007.bmp"></CENTER>
+山庄大门<p>
+天蓬山庄庄主赛天蓬，长的肥头肥脑，耳朵倒是不大，但确有几分猪样。<br>
+此人自以为天蓬下凡，庄内供奉有八戒像，初一十五上香，从不间断。<p>
+赛天蓬武功不高，但力大无比，且为人还算豪爽，所以在江湖上也有一些威望。<p>
+
+<:if game_check_scene_event(1217) then
+赛天蓬：“武林盟主大驾光临，另敝庄蓬壁生辉啊，里边请。”
+end:><p>
+
+<:if game_check_scene_event(1255) then
+<a href="game_page(1)">走廊</a><br>
+<a href="game_page(4)">客厅</a><br>
+<a href="game_page(11)">仓库</a><br>
+else
+赛天蓬：“本庄乃受天蓬大元帅天佑，闲杂人等不得乱闯。”<br>
+1。<a href="game_pop_fight_a(1,157);game_add_scene_event(1255);game_reload_direct(0)" title="">要求进入</a><br>
+2。<a href="game_page(11417)" title="">退出</a>
+end:>
+
+<p>
+<a href="game_page(11417)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6C3EF4588F4F55834FCF80C8A3F89BB5

@@ -1,0 +1,35 @@
+id=11855
+名称=上京-客栈
+作者=
+属性=64
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,客栈,AT1009,66,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('小二')" title="">住店</a><p>
+<a href="game_page(12575)" title="">客栈楼上</a>
+
+<p>
+<a href="game_page(11842)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+小二=1,住店，胡人100，汉人200
+I=1,为何汉人费用要高一点的？
+小二=2,汉人有钱，不多收白不收。
+I=2,现在战乱连年，汉人的百姓也都在水深火热之中呢。
+小二=3,你和我说没用，这是老板定的规矩。
+I=3,这不明摆着宰人吗，不住了。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=DF5A4CDBF8BF2D567B64F228FB05E9E5

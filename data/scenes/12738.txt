@@ -1,0 +1,66 @@
+id=12738
+名称=戏院
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,戏院,AT1000,0,0/2007.bmp"></CENTER>
+台上正演一出《长坂坡》，台下喝彩不断。九毒派大小姐偶尔也会来此捧场。<p>
+<:if game_check_scene_event(1282) and not game_check_scene_event(1312) and not game_role_is_exist('丝路花雨') then
+幕布后传来胡琴声，一名<a href="game_npc_talk('丝路花雨')">异域女子</a><img src="$apppath$img\10.bmp">正与伙计争执什么。<p>
+elseif game_check_scene_event(1312) then
+<a href="game_npc_talk('丝路花雨')">丝路花雨</a><img src="$apppath$img\10.bmp">在后台整理行装，见你会心一笑。<p>
+end:>
+<a href="game_npc_talk('戏院伙计')">戏院伙计</a><p>
+<:if game_check_scene_event(1312) and not game_check_scene_event(1318) then
+<a href="game_add_scene_event(1318);game_change_money(5000);game_infobox('丝路花雨专场演《丝路花雨》，观众打赏丰厚；她把五千文塞进你手里。');game_reload_direct(0)">观看丝路花雨专场演出</a><p>
+elseif game_check_scene_event(1318) then
+戏院贴着《丝路花雨》新戏海报，花雨已是西州名角。<p>
+end:>
+<a href="if game_check_money(100) then game_change_money(-100);game_chat('看了一出好戏，心情舒畅。');game_reload_direct(0) else game_chat('看戏一百文。') end" title="">看戏（100文）</a><p>
+<a href="game_page(-1)">中孚大街</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_not_scene_event(1312) then
+丝路花雨=1,<img src="$apppath$img\10.bmp">请让一让！我……我不是赖账，只是商队被劫，欠下的钱一时还不上。
+I=1,姑娘何事？（<FONT color=#"FF0000">点此继续对话</FONT>）
+丝路花雨=2,我叫丝路花雨，随驼队从中亚来西州献舞。班主预支的银两被沙匪抢光，戏院掌柜便叫打手来押我抵债。
+I=2,欠了多少？
+丝路花雨=3,三千文。花雨会舞、略通术法，若肯给我时间，定能挣回来。可他们……
+I=3,若我代你还债，你可愿与我们同行？
+丝路花雨=4,你当真？花雨做牛做马也要报答if game_sex_from_id(1) then 恩公 else 恩姐 end！
+I,A=4,if game_check_money(3000) then [game_change_money(-3000);game_add_friend('丝路花雨',1);game_add_scene_event(1312);game_infobox('丝路花雨加入了队伍。');game_reload_direct(0)]5,这三千文我出了，你跟我们走吧。 else [game_infobox('您的钱不够三千文。')]5,我手头不够，另想办法吧。 end
+I,B=4,那些打手来了，我们先把他们打退再说。
+丝路花雨,B=[game_add_friend('丝路花雨',1);game_pop_fight_a(2,44);game_add_scene_event(1312);game_infobox('丝路花雨加入了队伍。');game_reload_direct(0)]6,好！花雨虽不会使剑，灵力尚可，愿与if game_sex_from_id(1) then 恩公 else 恩姐 end并肩。
+I,A=5,
+I,B=6,
+elseif game_check_scene_event(1318) then
+丝路花雨=1,<img src="$apppath$img\10.bmp">恩公/恩姐在，花雨才敢再登台。这五千文，是花雨的心意。
+I=1,
+else
+丝路花雨=1,<img src="$apppath$img\10.bmp">戏院的风尘，不如跟着你们走天涯。花雨这条命，是if game_sex_from_id(1) then 恩公 else 恩姐 end给的。
+I=1,
+end
+戏院伙计=1,大小姐脾气大，可每次来都打赏丰厚。
+I=1,
+if game_check_scene_event(1300) then
+戏院伙计=2,听说东来公子丢了令信，是那位侠士从九毒派手里夺回来的，台上正排新戏呢。
+I=2,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=26C783B9B6C2789837509A8D23831EB2

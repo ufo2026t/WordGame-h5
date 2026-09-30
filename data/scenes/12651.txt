@@ -1,0 +1,51 @@
+id=12651
+名称=客栈
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<:if game_check_scene_event(1085) then
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clGray,半夜,AT1010,1,42/2007.bmp) fixed no-repeat center center;">
+else
+<BODY>
+end:>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,客栈,AT1000,0,0/2007.bmp"></CENTER>
+客栈墙上挂着牦牛皮，地上铺着细绒地毯。<p>
+<a href="game_npc_talk('店主')">店主</a><p>
+<:if game_check_scene_event(1085) then
+ 现在是晚上，您可以<a href="game_del_scene_event(1085);game_reload_direct(0)" title="">住店然后等到白天</a><p>
+else
+ 现在是白天，您可以<a href="game_add_scene_event(1085);game_reload_direct(0)" title="">住店然后等到半夜</a><p>
+end:>
+
+
+<a href="game_page(1)">二楼走廊</a><br>
+
+
+<p>
+<a href="game_page(12648)">返回</a><br>
+
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+店主=1,本店上好牛皮和细绒地毯，住店可按夜晚切换。
+I=1,有什么消息？
+店主=2,二楼有商人找玛瑙石，还有人议论教主的藏宝图。
+I=2,
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EF8CAB01572BC8877AC626C269420DB6

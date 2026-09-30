@@ -1,0 +1,36 @@
+id=11013
+名称=珊瑚岛
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://645,213,(隶书,134,160,{Bold},{clFuchsia}),clWindow,珊瑚岛,AT1001,0,65/2007.bmp) fixed no-repeat center center;">
+离岸边较远。由数万年以来珊瑚虫逐步筑成此岛。<p>
+岛上风光旖旎。<p>
+<:if game_check_scene_event(1073) or game_check_goods_nmb('上半封密信',1) then
+岛上有一山，唤作<a href="game_page(1)" title="">万灵山</a>。虽和西天如来的灵山只一字之差，但一个在东一个在西，一个在天一个在地，差距还是非常大的。<p>
+在岛的南边，有一数百年历史的古堡，原先是海盗的根据地。叫<a href="game_page(2)" title="">张家堡</a><p>
+else
+这里看起来有点荒无人烟，我还是先去临安吧，等以后再来。<br>
+（需先在皇宫内找到<FONT color=#"FF0000">上半封密信</FONT>和相关线索后再来这里）
+end:>
+<p>
+（珊瑚岛剧情由网友“*火*”提供）
+<a href="game_page(10453)">返回东海岸</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B8E4DD0F5C63B68E746AF61EC67F1BAC

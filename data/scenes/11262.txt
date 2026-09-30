@@ -1,0 +1,44 @@
+id=11262
+名称=韩府偏房
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,偏房,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1104) then
+房间里没人。<p>
+if not game_check_res_event(game_get_pscene_id(0)) then
+一个小<a href="game_goods_change_n('牛黄',3);game_chat('捡到牛黄3。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">包裹</a>。end<p>
+
+else
+<a href="game_npc_talk('管家')">管家</a><p>
+if not game_check_res_event(game_get_pscene_id(0)) then
+一个小<a href="game_goods_change_n('铁帽',1);game_chat('捡到铁帽1。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">包裹</a>。end<p>
+
+end:>
+<p>
+<a href="game_page(11136)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+管家=1,你们是？
+I=1,请问韩将军在吗？
+管家=2,韩将军出去了。
+I=2,可知道去哪了？我们有事情找他。
+管家=3,去了东淮山，前天晚上天降神火，落在了东淮山上，韩将军说可能会有神铁，乃是制造神兵利器的上等材料，所以今天一大早就去山上找去了。你们如果有急事，就去那看看吧，应该能碰上。
+I=3,（两眼放光状，神铁？陨铁矿，太好了）恩，马上去看看。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B43183543E3364CBC2C594EAE0647D51

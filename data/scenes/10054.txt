@@ -1,0 +1,57 @@
+id=10054
+名称=东河村
+作者=
+属性=100
+载入后=if game_role_is_exist('江雪儿') then game_delay(500);game_npc_talk('江雪儿') end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+东河村一面环水，三面环山，环境清幽。<p>
+村民大多姓李，祖辈皆尚武。更有祖传五行八卦枪，枪法凌厉，攻守自如。<p>
+<:if game_check_scene_event(1331) then
+ 村民们都出去干活了<br>
+else
+ 村民李二：“祖祖辈辈传下来的规矩，每3年举行一次武术擂台赛，除了本村村民，还有大量周围的村民也会来参加。”<br>
+
+end:>
+
+<:if game_random_chance(5) then <p><span id="bo_113">一个小<a href="game_goods_change_n('百年灵芝',1);game_chat('捡到百年灵芝1颗。');game_inner_html(113,' ')" title="好东西哦">包裹</a></span>end:>
+村头<a href="if game_check_scene_event(1331) then game_chat('门锁着') else game_page(10055) end">李大毛</a>家
+<p><a href="if game_check_scene_event(1331) then game_chat('家里没人') else game_page(10056) end">李二毛</a>家<p>
+村中间是一个<:if game_not_scene_event(1331) or game_check_temp(1005801,1) then<a href="game_page(10058)" title="">大晒场</a>，今天晒场上很热闹，因为三年一度的武术擂台赛正在进行……
+else 大晒场，晒场上静悄悄的。end:><p>
+<p>
+村长<a href="game_page(10057)" title="">李大爷</a>家，坐北朝南。<p>
+
+
+;;离开村庄时，总是设置比武为已经结束
+要出村，需从<a href="game_page(10052)">棉花阵</a>过。
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1331) then
+江雪儿=1,
+I=1,大家都忙去了，村里静悄悄的。
+江雪儿=2,是啊，好安静。
+I=2,要没什么事，咱们就回去吧。
+else
+江雪儿=1,总算到东河村了。这棉花阵费了我不少力气。
+I=1,走的有点绕，不过在迷宫内适当点一下标记，还是能走出来。
+江雪儿=2,我听说这个村里的人不管男女老少都好武。
+I=2,看，村里正在举行比赛呢。
+江雪儿=3,嗯，咱们看看去。
+I=3,走。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BCB35E9E1F9B09092A51F1B89BD18C61

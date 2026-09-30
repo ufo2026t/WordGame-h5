@@ -1,0 +1,51 @@
+id=11133
+名称=城南荒地
+作者=
+属性=1
+动作=
+{
+D5001=if game_check_scene_event(1096) then game_chat('草垛后什么也没有') else game_chat('草垛后有一些血迹') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,45/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clOlive}),clWindow,荒草地,AT1009,0,0/2007.bmp"></CENTER>
+这里是一片荒芜的草地。<p>
+草地上堆了几个<a href="D5001" title="查看">草垛</a>。<p>
+一块<a href="game_npc_talk('对话')">大石头</a>，在路边。
+<p>
+<a href="game_page(11106)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1094) then
+对话=1,
+I=[game_pop_a(3)]1,这石头似乎有文章，仔细看看。
+对话=2,……
+I=[game_pop_a(4)]2,问题在哪呢，草垛后只有一些血迹，其他什么都没有发现。会不会有被忽略的地方？
+对话=3,……
+I,A=[game_pop_a(5)]3,凶器，杀人的尖刀？
+I,B=[game_pop_a(5)]3,歪嘴林说，抓野兔，在哪抓的野兔？是否撒谎？
+I,C=[game_pop_a(5);game_add_scene_event(1095)]3,月亮？
+对话,A=4,……
+对话,B=4,……
+对话,C=4,……
+I,A=4,想不出有什么问题。
+I,B=4,想不出哪不对。
+I,C=[game_add_scene_event(1095)]4,对了，问题就在月亮上，我找到线索了。回衙门。
+
+else
+对话=1,
+I=1,我看这石头干吗呢。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6F5006972B3812F7DDF6D704321C5059

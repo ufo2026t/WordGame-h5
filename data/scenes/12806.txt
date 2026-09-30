@@ -1,0 +1,43 @@
+id=12806
+名称=奈良-春日大社
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,春日大社,AT1000,0,0/2007.bmp"></CENTER>
+奈良最古老的神社之一，万盈的桐树与灯笼映着古意。<p>
+<a href="game_npc_talk('社祀守')">社祀守</a><p>
+<:if game_check_scene_event(1293) then
+战后，祭祀为平氏重掌京都而特别兴盛。<br>
+elseif game_check_scene_event(1298) then
+已在此祝福，心神定。
+else
+<a href="if game_check_money(500) then game_change_money(-500);game_add_scene_event(1298);game_chat('供奉五百文，求旅途平安。');game_reload_direct(0) else game_chat('供奏需五百文。') end" title="">供奏祈福（500文）</a>
+end:>
+<p>
+<a href="game_page(12104)">返回奈良县</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1293) then
+社祀守=1,太平了，奈良又能安心祇福了。
+I=1,
+elseif game_check_scene_event(1220) then
+社祀守=1,听说伊贺平氏在找圣杯，奈良正仓院的唐物，或可助其一臂之力。
+I=1,多谢指点。
+else
+社祀守=1,旅人可在此祈福，保一路顺遂。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

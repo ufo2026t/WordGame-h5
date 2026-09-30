@@ -1,0 +1,35 @@
+id=12273
+名称=龙潭底
+作者=
+属性=38
+载入后=game_pop_fight_a(1,94)
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,龙潭底,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,1,'暗器制造'):><p>
+龙潭最深处，幽暗无声。<p>
+潭底礁石上有法阵刻痕，乃前人留下的捷径，踏之可直回临安城外。<p>
+<a href="game_pop_a(3);game_page(11082)">法阵</a><br>
+<p>
+<a href="game_page(-1)">龙潭</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=00D75DBA493F82D518E71CEBBDE6E1E9

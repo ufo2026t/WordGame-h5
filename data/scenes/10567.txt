@@ -1,0 +1,81 @@
+id=10567
+名称=东方镖局大厅
+作者=
+属性=
+动作=
+{
+D5001=if game_check_money(100000) then game_change_money(-100000);game_goods_change_n('修罗剑',1);game_infobox('您买了一把修罗剑');game_reload_direct(0) else game_infobox('您钱不够。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,东方镖局,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+风吹过，卷起几根鸡毛飞向天空。<p>
+<:if game_random_chance(3) then
+if game_check_scene_event(1051) then
+东方大侠去了大理，还没回来。如果有事找他，你可以稍后再来看看。<p>
+else
+<a href="game_npc_talk('东方林')">东方林</a>大侠在擦拭着一把锋利的宝剑。<p>
+end
+else
+;;比武大会开始×××
+if game_check_scene_event(1205) then
+;;     武林大会已经结束。
+东方大侠出远门了。
+else
+if game_check_scene_event(1137) and game_check_scene_event(1214) then
+if game_check_scene_event(1202) then
+镖师：“东方大侠去参加武林大会了。”
+else
+东方：“今日找我何事？”<br>
+1。<a href="game_pop_a(10);game_add_scene_event(1202);game_chat('东方林：谢谢，我知道了。你先回去吧，我稍后就到。')" title="邀请">邀请东方镖局</a>参加无剑山庄的武林大会。
+end
+else
+;;岳飞还在开封
+厅内无人，东方大侠比较忙，不是经常在，有时能看到有时看不到。
+end
+end
+;;比武大会结束×××
+end:>
+<p>
+<a href="game_page(10527)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_not_scene_event(1051) then
+东方林=[game_add_scene_event(1051)]1,
+I=1,此剑出鞘即寒气侵人，有吹毛断发之刃，何剑？
+东方林=2,可听说过欧阳冶善？
+I=2,略有耳闻，春秋时韩国人氏，善铸剑。
+东方林=3,此剑正是欧阳冶善所铸，名“修罗剑”。
+if game_check_goods_nmb('修罗剑',1) or game_get_accoutre(1,8)=178 then
+I=3, 修罗剑？我也有一把啊。感觉没这么锋利，莫非有真假？
+东方林=4,我看看你的剑。
+I=4,给
+东方林=5,好剑，好剑，和我这一模一样。不过，听说当年欧阳冶善只铸了一剑，现在何来两剑？
+I=5,哈哈，我这是按古人铸剑配方，现代重新铸造的。
+东方林=6,明白了，难怪，我这剑是上次去塞外押镖所得，估计也是今人所作，唉。
+I=6,欧阳冶善，都一千多年啦，真品估计极难得到。咱都使相同的剑，有机会比划比划。
+东方林=7,好，等我这趟镖押完回来。
+I=7,东方兄这次要押镖去哪？
+东方林=8,大理。
+I=8,南边的大理？听说那边多难得之货，真想去看看。
+东方林=9,这次不行，下次的话我带你去。
+I=9,那多谢东方大侠了。
+else
+I=3,果然是一把好剑。东方兄卖不？
+东方林=4,这是难得之物，我上次去塞外押镖，费银10万购买的。您真要的话，就卖给你啦，我下次去塞外再买一把就是。
+I,A=[D5001]4,好，10万就10万，我买了。
+I,B=4,呜，剑是好剑，就是价格有点高，我琢磨着再搞点原材料，自己铸一把好了。
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A8C2D6DC86053F987A07DE1E27690208

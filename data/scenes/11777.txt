@@ -1,0 +1,44 @@
+id=11777
+名称=开封
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,酒楼,AT1002,0,0/2007.bmp"></CENTER>
+酒楼，有上等杜康酒出售。<p>
+几个<a href="game_npc_talk('金兵')">金兵</a>在喝酒<p>
+偏远一点的地方，坐着几个<a href="game_npc_talk('市民')">市民</a><p>
+
+<a href="game_page(11747)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1137) then
+金兵=1,金兵甲@哈哈，岳飞一走，我们的日子就好过啦
+I=1,金兵乙@早就在等着这一天啦。
+else
+金兵=1,金兵甲@这战也不知要打到什么时候？
+I=1,金兵乙@你有所不知啊，现在我们可厉害了，宋军很快就招架不住了。
+end
+市民=1,市民甲@家徒四壁的，也该到逃难的时候了
+I=1,市民乙@为何不逃？
+市民=2,在等一个人。
+I=2,男人，女人？
+市民=3,女人，约好了在这等她的。
+I=3,还要等多久？
+市民=4,不知道，也许一天，也许一年，也许，永远。
+I=4,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=184BD375292C264667683684311D334B

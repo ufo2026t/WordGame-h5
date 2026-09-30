@@ -1,0 +1,40 @@
+id=11776
+名称=开封
+作者=
+属性=
+动作=
+{
+D5001=if game_check_money(200) then game_change_money(-200);game_del_scene_event(1085);game_chat('命体灵全满');game_role_all_mtl(0);game_reload_direct(0) else game_chat('您钱不够，不能住店，晚上住店需要钱200') end
+D5002=if game_check_money(100) then game_change_money(-100);game_add_scene_event(1085);game_chat('命体灵全满');game_role_all_mtl(0);game_reload_direct(0) else game_chat('您钱不够，不能住店，白天住店需要钱100') end
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,客栈,AT1002,0,0/2007.bmp"></CENTER>
+世道不太平，这客栈也越开越小了。<p>
+<:game_check_scene_event(1085)
+客栈里点着一盏油灯，发出昏暗的光。<p>
+店小二：“客官，住宿？”<br>
+1。<a href="D5001" title="">住宿</a>（睡到天亮）<br>
+else
+大白天的，走累了，可以休息休息，一觉睡到天黑。<p>
+店小二：“客官，住不？白天房价五折。”
+1。<a href="D5002" title="">住宿</a>（睡到天黑）<br>
+:>
+2。<a href="game_page(11747)" title="">不住</a><p>
+
+<a href="game_page(11747)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F4C4ED2DB7DF971B20A7E8803D47338B

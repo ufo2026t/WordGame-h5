@@ -1,0 +1,54 @@
+id=11376
+名称=万松书院-西院
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://260,64,(隶书,134,48,{Bold},{clBlack}),clWindow,实务真求,AT1003,0,0/2007.bmp"></CENTER>
+<:if not game_role_is_exist('慕容丽雯') or game_check_scene_event(1115) then
+两个<a href="game_npc_talk('老头')">老头</a>在下棋。
+else
+if game_check_scene_event(1117) then
+run game_add_scene_event(1115)
+何先生：“现在邪教已经解决，有空可以回大理去看看吧。”<br>
+<img src="$apppath$img\7.bmp">：“好的。”
+else
+if game_check_scene_event(1118) then
+何先生：“星月神教可有消息？”<br>
+慕容丽雯：“还在努力。”
+else
+run game_add_scene_event(1118)
+<img src="$apppath$img\7.bmp">：“何先生。”<br>
+何先生：“是慕容啊，你什么时候来临安的？”<br>
+慕容丽雯：“家父要我带一重要信件给你。”<br>
+何先生：“恩，此事和江湖上兴风作浪的星月神教有关。你可以去打听打听，切记小心为上。”<br>
+慕容丽雯：“我明白了。”
+end
+end
+end
+:>
+
+<p>
+<a href="game_page(11374)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+老头=1,跳马。
+I=1,快，飞象
+老头=2,观棋不语真君子。
+I=2,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E71C7E1333A6056723EC812A0B275A6E

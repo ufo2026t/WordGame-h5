@@ -1,0 +1,32 @@
+id=10501
+名称=黄药师练功房
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,练功房,AT1012,0,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+练功房内落满了灰尘，地上有不少老鼠的脚印。<p>
+墙边还留着排打木人与几个已裂的陶瓮，应是黄药师试招或试毒时所用。<p>
+
+<:if not game_check_res_event(game_get_pscene_id(0)) then 在一个不起眼的角落里，有个<a href="game_pop_a(9);game_goods_change_n('五毒丸',10);game_chat('捡到十个五毒丸，一种很厉害的暗器。可使敌人缓慢持续失血而死。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="好东西">陶罐子</a>。end:>
+
+<p>
+<a href="game_page(10499)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=026397619EEA72848F27F8B4BADA4024

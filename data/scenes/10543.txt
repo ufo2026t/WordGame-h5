@@ -1,0 +1,53 @@
+id=10543
+名称=小楼4
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,天外天,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clGreen}),clWindow,小楼4,AT1001,0,0/2007.bmp"></CENTER>
+<:if game_not_scene_event(1050) then
+房间里有一男一女在那卿卿我我。<p>
+白衣男：“谁，来这干吗？”<p>
+云庄主小妾：“啊，我们的事被人看到了，要是让庄主知道了怎么办？”<p>
+if game_role_is_exist('江雪儿') then
+ 江雪儿：“哎呀，羞死人了。”<p>
+end
+if game_role_is_exist('慕容丽雯') then
+ 慕容丽雯：“我什么都没看见，我先出去。”<p>
+end
+<p>
+<a href="game_can_stop_chat(0);game_npc_talk('白衣男')">返回</a>
+</BODY>
+else
+房间里散落着一些衣物。<p>
+
+<a href="game_page(10539)" title="">返回</a>
+</BODY>
+end
+:>
+
+
+
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+白衣男=1,你既然知道了这事情？还想走？
+I,A=1,我啥都没看见，你们继续。
+I,B=1,狗男女，想杀人灭口？
+白衣男=2,别怪我，只能怪你命不好。
+I=[game_can_stop_chat(1);game_pop_fight_a(1,22);game_add_scene_event(1050);game_page(10539)]2,你不仁，别说我不义。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E071E103816D2675DE38810297A2C42C

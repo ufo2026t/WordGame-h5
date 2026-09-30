@@ -1,0 +1,36 @@
+id=11147
+名称=淮阳乱坟岗内部
+作者=
+属性=6
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://807,267,(隶书,134,200,{Bold},{clWindowText}),clWindow,乱坟岗,AT1010,1,68/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,内部,AT1000,0,0/2007.bmp"></CENTER>
+扑通，脚下一空，就掉进来了。<p>
+眼前比较黑暗，过了一会，适应了点，慢慢看清楚了周围的环境。<p>
+<:if game_check_scene_event(1101) then
+这里是一个地下室的入口，周围是石壁，前面有一个入口，通往地下室内部。<p>
+else
+这里是一个地下室的入口，周围是石壁，前面有一个入口，通往地下室内部，隐约有歌声，哭声，笑声和灯光传出。<p>
+end:>
+
+<a href="game_pop_a(4);game_page(1)" title="">进入</a>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C0C9FE99F58F2820171C9C802E979163

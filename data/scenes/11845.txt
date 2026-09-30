@@ -1,0 +1,51 @@
+id=11845
+名称=上京皇宫内
+作者=
+属性=
+动作=
+{
+D5001=game_pop_fight_a(4,138);game_page(11869);game_add_scene_event(1184)
+D5002=game_pop_fight_a(5,138);game_page(11870)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clFuchsia}),clWindow,宫殿二,AT1002,0,0/2007.bmp"></CENTER>
+<:if game_role_is_exist('李疏盈') then
+if game_check_scene_event(1186) then
+皇上不在。
+else
+if game_check_scene_event(1185) then
+赵小金：“我父皇是怎么死的？说”<br>
+金熙宗：“他，他是病死的。“<br>
+run game_time_exe(3,'D5002')
+赵小金：“胡说，明明是被你们害死的。今天，我要你们血债血偿！”
+else
+if game_check_scene_event(1184) then
+金熙宗：“已经告诉你们地址了，自己去看看吧。”
+else
+金熙宗：“你们是什么人，来这撒野，来人，拿下。”<br>
+run game_time_exe(3,'D5001')
+赵小金：“我们是专门来取你性命的。”
+end
+end
+end
+else
+皇上去后宫了。
+end:>
+
+<p>
+<a href="game_page(11843)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=263D39D4C57C57B07A28B15458398039

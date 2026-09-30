@@ -1,0 +1,37 @@
+id=10160
+名称=三清山道观前迷宫
+作者=
+属性=6
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://796,197,(隶书,134,148,{Bold},{clBlue}),clWindow,道观迷宫,AT1001,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<:game_check_scene_event(1026)自从上次来此除妖后，就有了这条<a href="game_page(10174)" title="">通道</a>，可直达道观。:>
+<p>
+这里的迷宫比较简单，左转右转很容易转出去的。<p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):>
+<p>
+&nbsp;<p>
+红色<a href="game_page(10161)" title="">石门</a><p>
+黑色<a href="game_page(10162)" title="">石门</a><p>
+<:game_true(1)string game_res_goods(0,1,'五毒丸'):>
+
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A62A88F3A47A8D31C79F2F53E6D047CB

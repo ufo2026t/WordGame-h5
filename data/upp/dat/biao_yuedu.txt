@@ -1,0 +1,10 @@
+<span id="biao_1"><:if game_read_temp(game_get_pscene_id(0)) then
+<a href="game_write_temp(game_get_pscene_id(0),0);game_biao_html(0)" title="取消标记">
+<img src="$apppath$img/img_flag.gif" border="0">string game_get_pscene_id_s(-10000)</a>
+else
+<a href="game_write_temp(game_get_pscene_id(0),1);game_biao_html(1)"
+title="在这里做个标记，表明到过这里了。">点此<b>做个标记</b></a>
+end:></span><p>
+
+<:game_true(1)阅读材料：string game_get_read_txt(0):>
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

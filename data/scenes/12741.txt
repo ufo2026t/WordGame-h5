@@ -1,0 +1,42 @@
+id=12741
+名称=驿站
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,驿站,AT1000,0,0/2007.bmp"></CENTER>
+驿站马厅，驼铃声声，客商换马整备行装。<p>
+<a href="game_npc_talk('驿丞')">驿丞</a><p>
+<a href="game_npc_talk('驼队领队')">驼队领队</a><p>
+<a href="game_page(-4)">中孚大街</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+驿丞=1,往东出城可至邙山方向，不过那迷宫凶险，没有把握别去。
+I=1,邙山？
+驿丞=2,传说藏宝图碎块凑齐后，邙山自有异象。你若有心，先在西州打听九毒派动静。
+I=2,
+if game_check_scene_event(1288) then
+驿丞=3,听说你从教主手里拿了碎块？快去邙山吧，路上小心毒派的追兵。
+I=3,
+end
+驼队领队=1,我们从兰州来，走了三十天才到西州。迷宫里的怪物，最怕遇到白熊怪。
+I=1,
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=855D4C5A4183405BDEB905AEF77771BC

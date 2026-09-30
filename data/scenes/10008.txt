@@ -1,0 +1,107 @@
+id=10008
+名称=茶楼
+作者=
+属性=
+动作=
+{
+D1001=if game_pop_fight(2,67) then game_add_scene_event(1004);game_reload_direct(0);game_chat_cleans(0);game_npc_talk('!官差'); end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clGreen}),clWindow,茶,AT1010,0,65/2007.bmp) no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<CENTER><img src="gpic://285,56,(隶书,134,42,{Bold},{clTeal}),clWindow,一杯香茶楼,AT1001,0,0/2007.bmp"></CENTER>
+这里人来人往，生意不错，且常有三教九流聚集。所以可以与店里的客人聊聊，也许能得到一些剧情<FONT color=#FF0000>新线索</FONT>。<p>
+店小二：“产自临安的正宗西湖龙井，各位客官来喝一喝”。<p>
+<a href="game_npc_talk('掌柜')">掌柜</a>的正在打算盘<p>
+楼下三三两两的坐了几座客人。<a href="game_npc_talk('店小二')">店小二</a>在跑前跑后的忙乎着。<p>
+靠窗的一桌，坐着两个<a href="game_npc_talk('书生甲')">书生</a>模样的。
+<p>
+另一边，<a href="game_npc_talk('带刀客')">两个腰挂短刀的</a>在悄悄议论着什么。
+<p>
+
+<a href="game_page(10001)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1004) then
+书生甲=1,喝茶喝茶，闲聊闲聊。
+I=1,书生乙@听说婺州的八咏楼风景很好。
+书生甲=2,一个破亭子，我是不喜欢。
+I=2,书生乙@不过婺州还有其他很多好玩的地方，只是现在那边土匪有点多不敢去。
+书生甲=3,还好咱们离婺州有点远，否则时不时土匪来一下可受不了。
+I=3,书生乙@说远也不远，水路几个时辰就到了。
+else
+书生甲=1,听说这后山上有宝藏，可确有其事？
+I=1,书生乙@这后山现在正闹妖怪，历害着呢。只怕有命寻宝，没命享受。
+书生甲=2,也是，咱这舞文弄墨的，哪里是妖怪对手。
+I=2,书生乙@来，喝茶，喝茶。
+书生甲=3,唉，无奈朝廷昏庸，奸臣当道，你我学富五车，也是无用武之地啊。
+I=[game_write_name('官差')]3,书生乙@可不是，秦桧独霸朝纲，唉。
+官差=1,<img src="$apppath$img\cai.jpg">谁这么大胆子，敢在这说秦相爷的坏话？
+I=1,书生甲@没有没有，我们哪敢冒犯秦相爷。
+官差=[game_delay(1000)]2,我听得一清二楚，还有有错，来人，把这两个刁民给我拿下
+I,A=2,住手
+I,B=2,事不关己，高高挂起。
+官差,A=3,何人如此张狂？
+官差,B=3,没事别在这瞎掺和。
+I,A=3,几个朝廷鹰犬，我看着就是不顺眼。
+官差,A=[D1001]4,左右，给我上。
+end
+
+!官差=1,算你厉害，咱们撤。
+I=[game_write_name('书生们')]1,滚吧，if game_sex_from_id(1) then 以后少在这作威作福。else 姑奶奶今天心情好，绕了你们。 end
+书生们=1,多谢if game_sex_from_id(1) then 公子 else 女侠 end 仗义出手，一点小意思，望笑纳。
+I,A=1,区区小事，不足挂齿。银两还是你们自己留着吧。
+I,B=[game_change_money(10);game_chat('得到了10两银子。')]1,咱手头正紧着呢，既然你们执意相送，我也就不客气了。
+书生们,A=2,if game_sex_from_id(1) then公子else女侠end不必推辞，要不是您仗义出手咱们还得在牢里呆几天呢。
+书生们,B=2,应该应该
+I,A=2,
+I,B=2,
+店小二=1,客官，坐楼上楼下？
+I=1,楼上楼下有何不同？
+店小二=2,楼下消费随意，楼上雅座，最低消费100
+I,A=2,好，楼上雅座吧。
+I,B=2,if game_role_count(0)=1 then 楼下就行，现在孤身一人，没必要花这个钱。else string game_get_newname_at_id(2)@楼上太贵了吧。 end
+店小二,A=3,if game_check_role_values('无名',0,100) then 客官楼上请。 else 您钱不够哦。 end
+店小二,B=3,客官说的是。
+I,A=3,if game_check_role_values('无名',0,100) then[game_change_money(-100)]3,请。 else 大爷我有的是钱，你这厮如此小看人。end
+
+带刀客=1,带刀客甲@兄弟，听说过无剑山庄么？
+I=1,带刀客乙@听我师父提起过，据说庄主武功深不可测。
+带刀客=2,带刀客甲@江湖一直传闻威震武林的<FONT color=#"FF0000">魔剑</FONT>在无剑山庄的庄主手上。但无剑庄主已经退隐江湖多年了，前段时间却忽然谣言四起，说魔剑又重现江湖了。
+I=2,带刀客乙@真有此事，无剑山庄在江南赫赫有名，且离此不远，只是你我师出无名，不敢去无剑山庄一探究竟。
+带刀客=3,带刀客@谣传而已，不必理会，喝茶。
+I=3,带刀客@喝茶。
+带刀客=4,if game_sex_from_id(1) then 这位仁兄，站这里有何事？ else 这位姑娘，坐下来聊聊。 end
+I=4,我只是想问一下，你们说的无剑山庄在哪？
+带刀客=5,带刀客甲@无剑山庄啊，在离此地不远，从渡口过河便是了。
+I=5,多谢。
+if game_not_res_event(9011) then
+掌柜=1,哟，这不是string game_get_newname_at_id(1)吗，今天有空？可否去<FONT color=#"FF0000">渡口</FONT>那帮我抓3个石斑鱼来？有不少客人爱吃这个。
+I,A=[game_add_task(9011)]1,好啊
+I,B=1,我现在没空呢。
+else
+if game_check_goods_nmb('石斑鱼',3) then
+掌柜=[game_goods_change_n('石斑鱼',-3);game_comp_task(9011)]1,哇，谢谢你抓的鱼。还要再帮忙抓鱼吗？
+I=1,恩，不谢。
+else
+if not game_check_goods_nmb('石斑鱼',1) then
+掌柜=1,你还没去抓鱼呢，石斑鱼在<FONT color=#"FF0000">渡口</FONT>那里很多的。
+I=1,恩，我马上去抓。
+else
+掌柜=1,你抓的鱼不够哦。
+I=1,恩，我再去抓。
+end
+end
+end;
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5B0A40DA857A134DFC9C69E50CFE02DA

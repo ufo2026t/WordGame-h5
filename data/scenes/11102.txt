@@ -1,0 +1,34 @@
+id=11102
+名称=客房五
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,客房五,AT1000,0,0/2007.bmp"></CENTER>
+一个<a href="game_npc_talk('普通人')">普通人</a>。
+
+<p>
+<a href="game_page(11098)">退出</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+普通人=1,现在北方好乱啊。都没法活了。
+I=1,怎么回事？
+普通人=2,唉，金兵烧杀抢掠，罄竹难书啊。
+I=2,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=65CAD3B5B5C17D88AB44860A45023146

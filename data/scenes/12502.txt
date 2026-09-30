@@ -1,0 +1,40 @@
+id=12502
+名称=海龙世家大门
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,海龙世家大门,AT1000,0,0/2007.bmp"></CENTER>
+
+<:game_true(1)string game_res_goods(0,1,'忘忧草'):><p>
+海龙世家主要于东海一带活动，所以在中原并无多大名气。<p>
+<a href="game_npc_talk('家丁')">进入</a><p>
+
+
+<p>
+<a href="game_page(10454)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+家丁=1,去去去，我家主人不欢迎外人入内。
+I=1,有事要见你们主人。
+家丁=2,除非打的过我们。
+I,A=[game_pop_fight_a(2,160);game_page(1)]2,执意进入
+I,B=[game_page(10454)]2,退出
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6D56254EDCDE1A7BBA3DD72686ED904A

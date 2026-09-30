@@ -1,0 +1,48 @@
+id=11399
+名称=星月神教内
+作者=
+属性=4
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,密室,AT1000,0,0/2007.bmp"></CENTER>
+一些不透明的大陶瓷<a href="game_pop_a(6);if game_check_res_event(5193) then game_chat('空的瓶子') else game_chat('拿到五毒丸5个');game_goods_change_n('五毒丸',5);game_add_res_event(5193) end">瓶子1</a><p>
+一些不透明的大陶瓷<a href="game_pop_a(6);if game_check_res_event(5194) then game_chat('空的瓶子') else game_chat('拿到太岁1个');game_goods_change_n('太岁',1);game_add_res_event(5194) end">瓶子2</a><p>
+一些不透明的大陶瓷<a href="game_pop_a(6);if game_check_res_event(5195) then game_chat('空的瓶子') else game_chat('拿到天蚕丝1个');game_goods_change_n('天蚕丝',1);game_add_res_event(5195) end">瓶子3</a><p>
+一些不透明的大陶瓷<a href="game_pop_a(6);game_chat('一个破的瓶子')">瓶子4</a><p>
+一些不透明的大陶瓷<a href="game_pop_a(6);if game_check_res_event(5196) then game_chat('空的瓶子') else game_chat('拿到龙精甲1个');game_goods_change_n('龙精甲',1);game_add_res_event(5196) end">瓶子5</a><p>
+一些不透明的大陶瓷<a href="game_pop_a(6);if game_check_res_event(5197) then game_chat('空的瓶子') else game_chat('拿到云上于天武功秘籍1个');game_goods_change_n('云上于天',1);game_add_res_event(5197) end">瓶子6</a><p>
+一些不透明的大陶瓷<a href="game_pop_a(6);game_chat('一个破的瓶子')">瓶子7</a><p>
+一些不透明的大陶瓷<a href="game_pop_a(6);if game_check_res_event(5198) then game_chat('空的瓶子') else game_chat('拿到钱2万');game_change_money(20000);game_add_res_event(5198) end">瓶子8</a><p>
+一些不透明的大陶瓷<a href="game_pop_a(6);game_chat('一个破的瓶子')">瓶子9</a><p>
+
+
+<:if game_check_res_event(5199) then
+一个空的箱子<br>
+if game_check_goods_nmb('上半封密信',1) then
+两封密信都已经在手，拼在一起，显示了如下信息：<br>
+“宝在汴山，送予我主，福寿万年，永世齐昌。--秦”<br>
+原来宝藏在开封附近？秦相爷想把宝藏送与金人，卖宝求荣。<br>
+end
+else
+<a href="game_add_res_event(5199);game_goods_change_n('下半封密信',1);game_add_message('可以前往开封了。');game_chat('获得了下半封密信');game_reload_direct(0)" title="打开看看">一个箱子</a>
+end:>
+
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=144A4A2E7A81C0C5178602CD04675523

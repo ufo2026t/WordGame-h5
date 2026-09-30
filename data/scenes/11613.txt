@@ -1,0 +1,38 @@
+id=11613
+名称=十里坪内部
+作者=
+属性=6
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,十里坪,AT1002,0,0/2007.bmp"></CENTER>
+这里由于环境怪异，连妖怪也不敢在这呆着。<p>
+但诡异中隐藏着很多谜团，这些未知的问题能否一一找到答案？<p>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):>
+一些<a href="game_pop_a(5);game_chat('捡到石灰石一。');game_goods_change_n('石灰石',1)">石灰石</a><p>
+一块<a href="game_pop_a(5);game_chat('上面写着符号：S')">碎竹片</a><p>
+一块<a href="game_pop_a(5);game_chat('上面写着符号：i')">碎竹片</a><p>
+<:game_true(1)string game_res_goods(0,1,'百年灵芝'):><p>
+
+<a href="game_pop_a(2);game_page(1)" title="">前进</a>
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=ECD20BFBE8D405A68FC96E36E9D150FF

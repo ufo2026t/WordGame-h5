@@ -1,0 +1,33 @@
+id=10921
+名称=皇宫仓库
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<:game_check_goods_nmb('皇宫衣物',1)
+立即<a href="game_page(10780)" title="">进入皇宫</a><p>
+else
+要进入皇宫，需在此先偷点宫女太监的衣服，才能在宫内行走不惹人注意。<p>
+:>
+这里不远处有个仓库，根据观察，侍卫每隔9分钟走回来一次。
+所以，只要9分钟（540秒）内能跑到仓库并偷到衣服即可。<p>
+<a href="game_set_game_time(540,10951);game_page(10937)" title="">去仓库</a><p>
+<a href="game_page(10644)">返回皇宫外</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C49D59D3636D6FDDCAA4FF408D85412F

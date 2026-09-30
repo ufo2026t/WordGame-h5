@@ -1,0 +1,38 @@
+id=11690
+名称=岳飞营
+作者=
+属性=
+动作=
+{
+D5001=if game_check_goods_nmb('千年人参',100) then game_goods_change_n('千年人参',-100);game_add_scene_event(1174);game_chat('火头军：谢谢你的人参，这是一点小意思（得到了一个迷踪蛊）');game_goods_change_n('迷踪蛊',1) else game_chat('您千年人参的数量不够') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,北区,AT1002,0,0/2007.bmp"></CENTER>
+火头军。<p>
+<:if game_check_scene_event(1174) then
+火头长：“多谢你的人参啊，现在军队的士气大长了。”
+else
+火头长：“这可怎么办呢，这些金兵不仅凶猛，还好像带有邪气，现在士兵们身体一天不如一天了。”<br>
+string game_get_newname_at_id(1)：“可有良策？”<br>
+火头长：“古书上记载，千年人参可制邪气。只是，士兵人多，最少要100个千年人参才行，上哪去弄这么多名贵的人参哦。”<br>
+帮助火头军<a href="D5001" title="给100个人参">筹集人参</a>。<br>
+
+end:>
+
+<p>
+<a href="game_page(11576)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=7CDA689E83ACB95D40B782DEECC95EEA

@@ -1,0 +1,51 @@
+id=11668
+名称=飞龙帮-听雨轩
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,听雨轩,AT1002,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1164) then
+if game_role_is_exist('李疏盈') then
+if game_check_scene_event(1165) then
+<img src="$apppath$img\63.bmp">：“我好喜欢这里的一草一木。”
+else
+<img src="$apppath$img\63.bmp">：“现在我知道了自己的身世，是否要把名字也改回“赵小金”呢？”<br>
+1。<a href="game_rename_byid(game_id_from_oldname('李疏盈'),'赵小金' );game_add_scene_event(1165);game_reload_direct(0)" title="改为赵小金">改名</a><br>
+2。<a href="game_npc_talk('不改')">不改</a>
+end
+end
+else
+if game_check_scene_event(1160) then
+<img src="$apppath$img\63.bmp">：“你来了？真的愿意带我去金国吗？”<br>
+1。<a href="game_del_scene_event(1160);game_add_scene_event(1164);game_add_friend('李疏盈',1);game_reload_direct(0)" title="加入新队友">加入</a><br>
+2。<a href="game_del_scene_event(1160);game_reload_direct(0)" title="拒绝请求">拒绝</a>
+else
+if game_check_scene_event(1180) then
+丫鬟：“你是来找少帮主的吧，她去了开封皇宫了。好长时间了，还没回来，我都当心会不会出事呢。”
+else
+微风吹过，飘来阵阵花香。
+end
+end
+end:>
+<p>
+<a href="game_page(11605)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+不改=1,
+I=[game_page(11605)]1,不用了，还是继续使用原来的名字吧。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=00636BEA1E23708BA7E29E32060228A8

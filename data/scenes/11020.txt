@@ -1,0 +1,49 @@
+id=11020
+名称=万灵山-树下
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://320,300,(隶书,134,22,{Bold},{clWindowText}),clWindow,$tree,AT1000,0,0/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://285,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,万灵山树下,AT1000,0,0/2007.bmp"></CENTER>
+万灵山，山不在高，有仙则灵。<p>
+<:game_check_scene_event(1107)
+千代美<img src="$apppath$img\8.bmp">：“好啊，见到你们真高兴，我已经在这里开始学艺了。”<p>
+:>
+一个<a href="game_npc_talk('仙童')">仙童</a>在树下打盹<p>
+<a href="game_page(1)" title="">进大厅</a><p>
+<a href="game_page(2)" title="">小路</a><p>
+
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1076) then
+仙童=1,柳仙人在大厅。
+I=1,
+else
+仙童=1,何人扰我清梦？
+I=1,请问柳仙人在吗？
+仙童=2,师父去山内挖矿了。
+I=2,那大约何时返回，我们有事求见。
+仙童=3,这个就不知道了，师父有时一去十天半月不回的。
+I=3,哦，在山内何处？我们去山上找吧。
+仙童=4,只在此山中，云深不知处啊。
+I=4,多谢仙童。
+仙童=5,不谢。
+I=5,恩，您继续睡吧，打扰了。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6C5E42B834F6183ED1954C9AB4ADFD86

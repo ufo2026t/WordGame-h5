@@ -1,0 +1,48 @@
+id=11424
+名称=房间二
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clBlack}),clWindow,慕容世家,AT1001,0,0/2007.bmp"></CENTER>
+房间二
+<:if game_check_scene_event(1127) then
+慕容紫霞<img src="$apppath$img\62.bmp">：“你远道而来，幸苦了，只是我们家小，人多。就不留你多住几日了。”
+else
+if game_role_is_exist('慕容丽雯') then
+if game_sex_from_id(1) then
+
+慕容紫霞<img src="$apppath$img\62.bmp">：“我姐姐对你很有感觉哦，可是我姐姐从小和段王子指腹为婚，这以后可怎么办？”<br>
+string game_get_newname_at_id(1)：“这个……，车到山前必有路了。”
+
+else
+慕容紫霞：“你和我姐姐情同姐妹，真是不错。”
+end
+else
+房间里没人。
+end
+
+end:>
+<p>
+<:game_true(1)string game_res_goods(0,1,'金鼠'):><p>
+<p>
+<a href="game_page(-2)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=25238E2BFFCEC0B1A1D73900596AEF2D

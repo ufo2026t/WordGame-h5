@@ -1,0 +1,51 @@
+id=10007
+名称=药材铺
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,26,{Bold},{clWindowText}),clWindow,{-167@25}悬{-167@77}壶{-167@129}济{-167@181}世,AT1000,0,60/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+出门在外，难免磕磕碰碰的。来这淘点药品，有备无患哦。<p>
+各种药材可以在野外捡到，也可以在某些地方点击“采药”挖到。高级药物可以点“铸剑和炼药”按钮来自己合成。<p>
+然后非战斗状态下，可以点击“人物和物品”按钮给各个人物使用以补充体力灵力，或者学习法术。<p>
+
+您可以<br>
+<a href="game_npc_talk('药铺掌柜')">随意瞧瞧</a><br>
+<a href="game_trade(7,0)" title="">立即购买</a>立即购买<p>
+或者把多余的药材<a href="game_trade(7,1)" title="">卖给药铺</a>立即购买
+如果有空，也可与老板<a href="game_npc_talk('聊天')">聊天</a>。<p>
+
+<a href="game_page(10001)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+药铺掌柜=1,有看到中意的，您还可以尝尝。
+I=1,ok
+
+if game_check_res_event(9030) then
+if game_check_goods_nmb('金块',1) then
+聊天=1,对，要的就是金块。
+I=[game_goods_change_n('金块',-1);game_comp_task(9030);game_infobox('您得到了1000金币，500经验');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+聊天=1,您采集的金块数量不够。
+end
+else
+聊天=1,黄金是一种很好的药引，我长期收购黄金，你可帮我找1份<FONT color="#FF0000">金块</FONT>吗，一般挖矿的地方能挖到或者野外捡到？
+I,A=[game_add_task(9030)]1,接受任务
+I,B=1,我现在没空。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F77A9A379FEB7F06EA6C2D8A9ADE5909

@@ -1,0 +1,35 @@
+id=10455
+名称=东海蛇岛
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://378,187,(隶书,134,140,{Bold},{clOlive}),clWindow,蛇岛,AT1001,0,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+蛇岛顾名思义，蛇多，且多毒蛇。<p>
+在蛇岛中间的小山上多奇花异草。<p>
+蛇岛上偶尔有日本忍者活动。<p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):>
+<p>
+<a href="game_page(1)" title="前进">进入蛇岛深处</a>。
+<p>
+<a href="game_page(10453)">返回东海岸</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B91FA6604B9C58C272FE6A7787624499

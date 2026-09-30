@@ -1,0 +1,38 @@
+id=10423
+名称=临江豪园
+作者=
+属性=1
+动作=
+{
+D5001=if game_question('是否购买此宅院?') then if game_check_money(50000) then game_change_money(-50000);game_add_scene_event(1045);game_reload_direct(0) else game_infobox('您钱不够') end end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://538,267,(隶书,134,200,{Bold},{clTeal}),clWindow,豪园,AT1001,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<:game_check_scene_event(1045)
+唉，买亏了，就这么几间房子，也能称“豪园”？旁边一臭水沟，也能称“临江”？<p>
+房产商：“这还算好的，你没见人家一个小池塘边的房产都是“湖畔名居”吗？”<p>
+房产商：“现在不买，过几天还得涨，现在北方战乱，炒房团都奔南方来了。”<p>
+房产商：“真要买大宅子，去<FONT color=#"FF0000">临安</FONT>吧，那边的房子大，当然，也不是这个价能买到的了。”<p>
+&nbsp;<p>
+<a href="game_page(10425)" title="">去新房子看看</a>
+else
+本栋豪宅出售，价格5万金币。<p>
+<a href="D5001" title="购买房产">购买</a><p>
+:>
+<p>
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0C27097D93171CFC513930C0640CECB3

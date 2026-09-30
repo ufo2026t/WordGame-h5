@@ -1,0 +1,28 @@
+id=10970
+名称=小路
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,260,{Bold},{clWindowText}),clWindow,$grass,AT1012,0,66/2007.bmp) fixed no-repeat center center;">
+终于，冲出了天牢。<p>
+看着路边的花花草草，感觉特亲切。<p>
+返回<a href="game_page(10583)" title="">临安城</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1C72C0F4AADCCA5B6DA26066D1C948E3

@@ -1,0 +1,55 @@
+id=11419
+名称=慕容世家
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clBlack}),clWindow,慕容世家,AT1001,0,0/2007.bmp"></CENTER>
+慕容世家，是大理的名门望族，世代为官，家大业大。<p>
+<:if game_check_scene_event(1130) then
+<a href="game_npc_talk('家丁甲')">家丁甲</a>。<p>
+<a href="game_npc_talk('家丁乙')">家丁乙</a>。
+else
+run game_add_scene_event(1130)
+if game_role_is_exist('慕容丽雯') then
+慕容紫霞<img src="$apppath$img\62.bmp">：“姐姐，你回来了。”<br>
+慕容丽雯<img src="$apppath$img\7.bmp">：“妹妹，怎么，又准备出门惹事去了？”<br>
+慕容紫霞：“才不呢。来，大家先去客厅休息一下。”<br>
+else
+if game_check_scene_event(1127) then
+慕容紫霞<img src="$apppath$img\62.bmp">：“姐姐吩咐让我等客人，就是你们吧，来，到客厅先坐一会。”
+else
+慕容紫霞<img src="$apppath$img\62.bmp">：“你们是什么人，来这里干吗，出去。”<p>
+end
+end
+end:>
+<p>
+<a href="game_page(11420)" title="">进入客厅</a><p>
+<a href="game_page(2)" title="">进入正厅</a><p>
+<a href="game_page(3)" title="">进入左院</a><p>
+<a href="game_page(11426)" title="">进入花园</a><p>
+<a href="game_page(11427)" title="">进入后院</a><p>
+<p>
+<a href="game_page(11373)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+家丁甲=1,梅里雪山，有听说过没？
+I=1,
+家丁乙=1,老爷说了，会吧丫鬟小翠许配给我呢。想到这事儿心里就乐开花。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=CC914D439AC6C1F75D32C57953250C5C

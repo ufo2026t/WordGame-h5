@@ -1,0 +1,37 @@
+id=10818
+名称=花园中路
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clWindowText}),clWindow,中路,AT1001,0,55/2007.bmp) fixed no-repeat center center;">
+这里有个颐云洞，洞名为高宗亲笔所提。洞内冬暖夏凉，温度宜人。<p>
+该洞为溶洞，洞内纵横交错，四通八达。<p>
+不过，自从听说洞里闹鬼后，该洞渐渐被荒废了，周围长满了杂草。<p>
+洞口也被秦桧叫人堆起了大量的大石块。堵上了。<p>
+
+;;<:game_true(1)string game_res_goods(0,1,'仙露饮'):><p>
+
+ <p>
+<a href="game_page(10826)" title="">颐云洞</a><p>
+<a href="game_page(1)" title="">蝠厅</a><p>
+
+<a href="game_page(10814)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=29347CDB6B2FB375C6388575D0CE0154

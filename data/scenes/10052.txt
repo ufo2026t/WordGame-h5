@@ -1,0 +1,34 @@
+id=10052
+名称=棉花阵52
+作者=
+属性=38
+载入后=if game_random_chance(2) then game_pop_fight_a(1,68) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(楷体_GB2312,134,120,{Bold},{clWhite}),clSilver,棉花阵,AT1011,0,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+乱花丛中，小道纵横交错，委实难走。<p>
+时疏时密的棉花地，连绵不绝，长达数里。<p>
+眼前有两条路可走：<p> <p>
+
+一条到<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10051)" title="">51号地块</a><p>
+
+旁边还有一条通往<a href="if game_grade('无名',10) then game_add_scene_event(1331); end game_page(10054)" title="这里到东河村了"><img src="gpic://99,33,(黑体,134,24,{Bold},{clWindowText}),clWindow,东河村,AT1000,1,0/2007.bmp"></a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B04D7216D74927F44DD62298CA608376

@@ -1,0 +1,50 @@
+id=10813
+名称=书房
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clWindowText}),clWindow,书,AT1001,0,55/2007.bmp) fixed no-repeat center center;">
+书可真多，汗牛充栋。<p>
+《<a href="game_pop_a(5);game_chat('朝辞白帝彩云间, 千里江陵一日还。')" title="一本书">李太白文集</a>》<br>
+《<a href="game_pop_a(5);game_chat('绝代有佳人，幽居在空谷。')" title="一本书">杜工部集</a>》<br>
+《<a href="game_pop_a(5);game_chat('书中自有颜如玉，书中自有黄金屋。')" title="一本书">苏州府志</a>》<br>
+《<a href="game_pop_a(5);game_chat('蒹葭苍苍，白露为霜。所谓伊人，在水一方。')" title="一本书">诗经</a>》<br>
+《<a href="game_pop_a(5);game_chat('夫战，勇气也，一鼓作气，再而衰，三而竭。')" title="一本书">左传</a>》<br>
+《<a href="game_pop_a(5);game_chat('西山经华山之首，曰钱来之山，其上多松，其下多洗石。')" title="一本书">山海经</a>》<br>
+《<a href="game_pop_a(5);game_chat('旦徘徊于长阪兮，夕彷徨而独宿。')" title="一本书">楚辞</a>》<br>
+《<a href="game_pop_a(5);game_chat('兵者，国之大事，死生之地，存亡之道，不可不察也。')" title="一本书">孙子兵法</a>》<br>
+《<a href="game_pop_a(5);game_chat('惟始元六年，有诏书使丞相、御史与所举贤良、文学语。问民间所疾苦。')" title="一本书">盐铁论</a>》<br>
+《<a href="game_pop_a(5);game_chat('天覆地载，物数号万，而事亦因之。')" title="一本书">天工开物</a>》<br>
+《<a href="game_pop_a(5);if game_check_goods_nmb('秦府密室钥匙',1) then game_chat('九层之台，起于累土；千里之行，始于足下。') else game_chat('捡到了一个钥匙');game_goods_change_n('秦府密室钥匙',1)end" title="">老子</a>》<br>
+《<a href="game_pop_a(5);game_chat('入国而不存其士，则亡国矣。见贤而不急，则缓其君矣。')" title="一本书">墨子</a>》<br>
+《<a href="game_pop_a(5);game_chat('黄帝者，少典之子，姓公孙，名曰轩辕。生而神灵，弱而能言，幼而徇齐，长而敦敏，成而聪明。')" title="一本书">史记</a>》<br>
+《<a href="game_pop_a(5);game_chat('北冥有鱼，其名为鲲。鲲之大，不知其几千里也。化而为鸟，其名为鹏。鹏之背，不知其几千里也；怒而飞，其翼若垂天之云。')" title="一本书">庄子</a>》<br>
+《<a href="game_pop_a(5);game_chat('君子曰：学不可以已。青，取之於蓝而青於蓝；冰，水为之而寒於水。')" title="一本书">荀子</a>》<br>
+《<a href="game_pop_a(5);game_chat('秦兴师临周而求九鼎，周君患之，以告颜率。颜率曰：“大王勿忧，臣请东借救于齐。”。')" title="一本书">战国策</a>》<br>
+《<a href="game_pop_a(5);game_chat('“须菩提！如恒河中所有沙数，如是沙等恒河，于意云何？是诸恒河沙宁为多不？”须菩提言：“甚多，世尊！但诸恒河尚多无数，何况其沙？”')" title="一本书">金刚经</a>》<br>
+ ……<br>
+
+<:game_true(1)string game_res_goods(0,1,'上等木炭'):><p>
+<p>
+
+ <p>
+<a href="game_page(10811)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C80B48D5CFF36B287E0A6DC9F1F0ED92

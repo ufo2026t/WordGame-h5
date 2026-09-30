@@ -1,0 +1,29 @@
+id=10010
+名称=客栈上层
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+客栈的楼上，显得干净整洁。<p>
+楼上<a href="game_page(10319)" title="进入">第一间房</a>的门虚掩着。<p>
+<a href="game_chat('门里面反锁了，推不开。')" title="">第二间</a>的门紧闭着。
+<a href="game_page(10006)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9A555D23E6A687CD4A79910DAB873903

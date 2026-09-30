@@ -1,0 +1,46 @@
+id=12507
+名称=贝壳路
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,贝壳路,AT1000,0,0/2007.bmp"></CENTER>
+一条用贝壳镶嵌铺设的小路，绿色环保且十分美观。<p>
+通往青龙堂，紫龙堂，黑龙堂和黄龙堂，直到通海洞迷宫。<p>
+<:game_true(1)string game_res_goods(0,1,'百年人参'):><p>
+<a href="game_npc_talk('海珍姑娘')">海珍姑娘</a>
+<p>
+<a href="game_page(1)">青龙堂</a>
+<p>
+<a href="game_page(-4)">院子</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_res_event(9034) then
+if game_check_goods_nmb('绿翡翠',1) then
+海珍姑娘=1,对，要的就是绿翡翠。
+I=[game_goods_change_n('绿翡翠',-1);game_comp_task(9034);game_infobox('您得到了2000金币，800经验')]1,提交任务（鼠标点击此处提交物品）。
+else
+海珍姑娘=1,您采集的绿翡翠数量不够。
+end
+else
+海珍姑娘=1,我特喜欢绿翡翠，只是父亲不让我随意外出。你能帮我找1份<FONT color="#FF0000">绿翡翠</FONT>吗？
+I,A=[game_add_task(9034)]1,接受任务
+I,B=1,我现在没空。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0C23F5AA7266AD74A0B52D24DDC5A781

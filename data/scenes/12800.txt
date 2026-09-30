@@ -1,0 +1,74 @@
+id=12800
+名称=平安京-皇宫
+作者=
+属性=
+载入后=if game_check_goods_nmb('平安京令牌',1) and game_not_scene_event(1333) then game_add_scene_event(1333) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,皇宫,AT1000,0,0/2007.bmp"></CENTER>
+<:if not game_check_goods_nmb('平安京令牌',1) then
+守卫拦住去路：“无<strong>平安京令牌</strong>者，不得入内。”<br>
+<a href="game_page(12152)">返回</a>
+else
+皇宫内殿，平氏旧部正在集结。<br>
+<:if game_check_scene_event(1293) then
+源氏已退，京都重归平氏掌控。<br>
+if game_role_is_exist('千代美') then
+string game_newname_from_oldname('千代美')：“终于为平氏报了这一仇。”<br>
+end
+elseif game_check_scene_event(1333) then
+平氏武士：“以<strong>圣杯</strong>为誓，共讨源氏。”<br>
+<:if not game_check_scene_event(1241) then
+<FONT color=#FF0000>然而百鬼夜游未平，城内阴风阵阵，源氏仍借乱局把守外苑。</FONT><br>
+请先往<strong>茶楼</strong>打听百鬼下落，取得<strong>封神珏</strong>修补十二神将封印。<br>
+elseif not game_check_scene_event(1296) then
+十二神将封印已固，源氏把守的外苑仍在顽抗。<br>
+1。<a href="game_page(12804)" title="">前往外苑，击破源氏先锋</a><br>
+else
+源氏先锋已溃，本阵就在外苑尽头。<br>
+1。<a href="game_page(12805)" title="">攻入源氏本阵，与大将决战</a><br>
+end:>
+else
+内殿静静的，似乎在等待平氏献宝后的总攻号令。
+end:>
+<p>
+<a href="game_npc_talk('平氏武士')">与平氏武士交谈</a><p>
+<p>
+<a href="game_page(12152)">离开皇宫</a>
+end:>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1293) then
+平氏武士=1,多亏诸位中土侠士，平氏方能重掌京都。
+I=1,
+elseif game_check_scene_event(1241) then
+平氏武士=1,封印既固，便可与源氏决一死战了。
+I=1,我们这就去外苑会会源氏先锋。
+平氏武士=2,外苑阵线交给我们，请侠士主攻。
+I=2,
+elseif game_check_scene_event(1296) then
+平氏武士=1,先锋既破，源氏本阵就在前面。请侠士直取大将首级。
+I=1,
+elseif game_check_scene_event(1333) then
+平氏武士=1,圣杯与唐物既献，旧部已聚。但百鬼未平，源氏仍猖獗。
+I=1,百鬼之事我们已在查。
+平氏武士=2,茶楼老板熟知荒宅内情；法隆寺五重塔下或有封神珏。
+I=2,多谢指点。
+else
+平氏武士=1,持令牌者方可入内联络旧部。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

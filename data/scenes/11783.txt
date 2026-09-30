@@ -1,0 +1,53 @@
+id=11783
+名称=开封
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,福宁宫,AT1002,0,0/2007.bmp"></CENTER>
+少帮主：“你为何三番五次的救我。有什么目的？”<br>
+<:game_true(1)
+run game_add_scene_event(1181)
+run game_add_scene_event(1160)
+string game_get_newname_at_id(1)：“君子坦荡荡，小人常戚戚。我救人只因上天有好生之德罢了。”<br>
+:>
+少帮主：“现在人已经打完了，我要回去了。”<br>
+“稍等，给你看一样东西。”（拿出手绢）<br>
+少帮主：“这是什么，给我看干吗。”<br>
+“你可知这手绢来历？”<br>
+“不知。”<br>
+“可知自己身世？”<br>
+“知道，我是飞龙帮的少帮主。”<br>
+“有证据表明，你是前朝遗公主。你真名赵小金”<br>
+“你胡说。”<br>
+“这个手绢是从飞龙帮的密室得到，而且，经过丁姑辨认确实是小公主之物。
+还有重要的一点，我刚才在你打斗时看到你的左手臂上确实有牙印，这和丁姑的说法相吻合。”<br>
+“把手绢给我看看。”<br>
+（少帮主眼圈发红，落泪）“怎么了?”<br>
+“我似乎感觉这手绢似乎在说话，突然感觉心里很难受。”<br>
+ “看来，这手绢上的血书确实是你母亲所留，母女连心，这是旁人说不能感觉到的。不过，你原先既然不知道自己的身世，为何要来刺杀金兀术？”<br>
+“金人无道，人人得而诛之。”<br>
+“那现在你知道了自己的出身，你有什么想法？”<br>
+“去上京（金国都城）！！！”<br>
+“好，我也去。”<br>
+“不用了，谢谢你。”（少帮主独自走了）
+<p>
+<a href="game_page(11754)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6EDCEA6F2A1F8E3B1FFB8B3F223AD8AB

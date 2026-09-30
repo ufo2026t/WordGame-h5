@@ -1,0 +1,45 @@
+id=10431
+名称=酒坊巷
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+一条老的巷子，里面有些杂货可以买：<p>
+<a href="game_trade(13,0)" title="买点矿物杂货">矿物杂货商</a>。<p>
+<:if game_role_is_exist('西门菲菲') and game_check_scene_event(1311) and not game_check_scene_event(1313) then
+<a href="game_npc_talk('西门菲菲')">西门菲菲</a>在巷口往来望着，似在等什么人。<p>
+elseif game_check_scene_event(1313) then
+西门菲菲：“父亲说婚约已作罢，可知府那边未必肯放手……”<p>
+end:>
+巷子内，还有一个<a href="game_page(10452)" title="">宋大夫</a>在此行医。<p>
+另外，在僻静处还有一个<a href="game_page(11679)" title="">考试院</a>隐藏其间，可以考取头衔。<p>
+
+<p>
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_role_is_exist('西门菲菲') and game_check_scene_event(1311) and not game_check_scene_event(1313) then
+西门菲菲=1,方才宋大夫说，有人到酒坊巷打听西门家的姑娘……我怕又是知府那边的人。
+I=1,你父亲呢？
+西门菲菲=2,家中乳母托人带信：父亲已写信说婚约作罢，让我在外历练，不可再胡闹。可知府那边未必肯放手。
+I=2,我们去府衙问个清楚。
+西门菲菲=[game_add_scene_event(1313);game_infobox('西门菲菲收到家书口信，婚约已作罢。');game_reload_direct(0)]3,好，有你们陪着，菲菲不怕。
+I=3,
+end
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5F7949FFE139B6053F96703653AAE46B

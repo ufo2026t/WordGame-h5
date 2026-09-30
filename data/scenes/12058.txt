@@ -1,0 +1,55 @@
+id=12058
+名称=武当山-天柱峰
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,400,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,77/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,天柱峰,AT1000,0,0/2007.bmp"></CENTER>
+天柱峰顶上，有个茅草屋。（现在的金顶，乃是明朝初期所造）<p>
+<:if game_check_scene_event(1205) then
+;;武林大会已经结束。
+if not game_check_res_event(5234) then
+一个小<a href="game_goods_change_n('九阳丹',5);game_chat('捡到九阳丹5。');game_add_res_event(5234);game_reload_direct(0)" title="">包裹</a>。end
+<p>
+张真人：“虚怀若谷，天道酬勤。”
+else
+if game_check_scene_event(1137) then
+if game_check_scene_event(1198) then
+武当弟子：“师父去参加武林英雄会了。”
+else
+;;张真人在天柱峰顶
+if not game_check_res_event(5235) then
+一个小<a href="game_goods_change_n('风卷残云',1);game_chat('捡到法术书籍-风卷残云1。');game_add_res_event(5235);game_reload_direct(0)" title="">包裹</a>。end<p>
+张真人：“至虚极，守静笃，万物复归其跟。”<p>
+<a href="game_pop_a(10);game_add_scene_event(1198);game_chat('张真人：好，你先回去吧，我稍后就到。')" >邀请武当派</a>参加武林大会。
+end
+else
+;;岳飞还在开封，张真人在紫霄宫
+顶峰没人。<p>
+if not game_check_res_event(game_get_pscene_id(0)) then
+一个小<a href="game_goods_change_n('万年人参',2);game_goods_change_n('玛瑙石',1);game_goods_change_n('降神镖',5);game_chat('捡到万年人参2，玛瑙石1，降神镖5。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">包裹</a>。end
+<p>
+end
+end:>
+峰顶风大；茅屋旁立着武当弟子日常维护的小法阵，踏之可直回武当山脚。<p>
+<a href="game_pop_a(2);game_page(12011)">法阵<img src="$apppath$img\fazhen.gif" border="0"></a><p>
+<a href="game_pop_a(2);game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=98E22D353B7F38992A11D188A8EBD89C

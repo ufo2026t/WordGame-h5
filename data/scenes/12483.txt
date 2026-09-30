@@ -1,0 +1,55 @@
+id=12483
+名称=天蓬山庄
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,天蓬山庄后院,AT1000,0,0/2007.bmp"></CENTER>
+转角处忽现一假山，碧水环绕，飘着袅袅雾气。<p>
+<a href="game_npc_talk('侍女啊呗')">侍女啊呗</a><p>
+<:game_true(1)string game_res_goods(0,1,'钢护腕'):><p>
+
+
+<a href="game_page(1)">前行</a><br>
+
+
+<p>
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1260) then
+侍女啊呗=1,谢谢你找来的手镯，迷死人了，我在庄里走，那些武师老是找借口和我搭讪。
+I=1,效果这么惊人？
+else
+if game_check_res_event(9033) then
+if game_check_goods_nmb('银丝护腕',1) then
+侍女啊呗=1,对，要的就是银丝护腕。
+I=[game_goods_change_n('银丝护腕',-1);game_add_scene_event(1260);game_comp_task(9033);game_infobox('您得到了300金币，500经验')]1,提交任务（鼠标点击此处提交物品）。
+else
+侍女啊呗=1,您采集的银丝护腕数量不够。
+end
+else
+侍女啊呗=1,看我这手洁白细嫩的，要是戴上一个银丝护腕别提多美了，你能帮我找1副<FONT color="#FF0000">银丝护腕</FONT>吗？
+I,A=[game_add_task(9033)]1,接受任务
+I,B=1,我现在没空。
+end
+end
+
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=02DDE1EDD00ACFF577D811D5705DE9AD

@@ -1,0 +1,39 @@
+id=10936
+名称=冲天观内
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,冲天观,AT1002,0,0/2007.bmp"></CENTER>
+今天，一个道士外出化缘了。<p>
+观内剩下<a href="if game_check_scene_event(1064) then game_chat('道长：“天机不可泄露”。') else game_npc_talk('老道长')end">老道长</a>。<p>
+
+<p>
+<a href="game_page(-1)" title="">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+老道长=1,if game_sex_from_id(1) then 施主 else 女施主 end 请问远道而来，何事？
+I=1,凤凰山上有一条路，沿途而来，就到这里了。
+老道长=2,唉，自从此路上有妖怪后，很多年都没人来了，原先观内香火旺盛，吃喝不愁。现在，都要出去化缘了。
+I=2,道长法术高强，为何不斩妖除魔呢。
+老道长=3,劫数啊，我夜观天象，见此劫数未过，妖魔除之不尽。
+I=3,不知道长可知劫数从何而来？
+老道长=4,天机不可泄露。不过，你既来我观，也是有缘之人，我这有法术书籍一本，送与你。
+I=[game_goods_change_n('云上于天',1);game_chat('得到法术书籍一本：云上于天');game_add_scene_event(1064)]4,多谢道长
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=21068AA033AD30DDE692FBC866F60318

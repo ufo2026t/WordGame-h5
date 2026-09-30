@@ -1,0 +1,46 @@
+id=10100
+名称=宾至如归客房1
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,客房一,AT1005,0,0/2007.bmp"></CENTER>
+<p>
+<:game_true(1)string game_res_goods(5035,1,'仙露饮'):>
+ <p>
+客房内住着一个北方<a href="game_npc_talk('商人')">商人</a>模样的。<p>
+
+<p>
+
+<a href="game_page(10099)">返回客栈二楼走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+商人=1,if game_role_count(0)>1 then 请问你们有何贵干？else 请问这位小兄弟为何突入我房间？end
+I,A=1,在下想打听一下外面战况如何？
+I,B=1,我无聊，我到处转转不行啊。
+商人,A=2,if game_sex_from_id(1) then 小兄弟还蛮关心国事，实不相瞒，战况不理想。else 哦，姑娘是否有家人在前线？ end
+商人,B=2,这是我的房间，我付了钱的，风可进雨可进，你不能进。
+I,A=2,if game_sex_from_id(1) then 是不是金狗使了妖术？ else 女的就只能呆在家里？听说过巾帼不让须眉不？end
+I,B=2,我进了，怎么样啊？今天倒霉，一大早出门就遇上你个丧门星，我今天非抽你个丫挺的。
+商人,A=3,if game_sex_from_id(1) then 你怎么知道，这金人不知哪里得来的妖术，把士兵变的人不人鬼不鬼的。else 原来是一位女侠，失敬失敬。end
+商人,B=[game_pop_fight_a(1,75)]3,兵荒马乱的，没有两把刷子哪能出来跑江湖。
+I,B=3,if game_sex_from_id(1) then 我是听人说的，您行走江湖，经验丰富，可知这妖术来历？ else 不打扰你了，我去别处问问去。 end
+商人,B=4,if game_sex_from_id(1) then 也不太清楚，据说和昆仑山有关。什么镇妖神镜被盗，导致暗黑世界的妖物大量逃出。再多我就不知道了。else 好，女侠慢走 end
+I,B=4,谢谢了，我再别处看看去。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=849BF129B807738F240CEF933017BF17

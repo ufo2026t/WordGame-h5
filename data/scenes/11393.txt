@@ -1,0 +1,40 @@
+id=11393
+名称=星月神教内
+作者=
+属性=4
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,内室一,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1120) and game_not_scene_event(1126) then
+有很多的瓶瓶罐罐。看看有没有解药。<p>
+<a href="game_pop_a(5);game_chat('这个不是')" title="看看">瓶子一</a><p>
+<a href="game_pop_a(5);game_chat('这个也不是')" title="看看">瓶子二</a><p>
+<a href="game_pop_a(5);game_chat('这个也不是')" title="看看">瓶子三</a><p>
+else
+有很多的瓶瓶罐罐。不知干什么用的。<p>
+<a href="game_pop_a(5);game_chat('什么也看不明白')" title="看看">瓶子一</a><p>
+<a href="game_pop_a(5);game_chat('什么也看不明白')" title="看看">瓶子二</a><p>
+<a href="game_pop_a(5);game_chat('什么也看不明白')" title="看看">瓶子三</a><p>
+end:>
+
+<p>
+<a href="game_pop_a(2);game_page(1)">往前</a>
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=83DB4F1B8B5A77A50479A9108404DB6F

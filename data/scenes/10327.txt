@@ -1,0 +1,52 @@
+id=10327
+名称=山庄后院房间2
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://185,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,后院房间二,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_sex_from_id(1) then
+小姐的房间<p>
+if game_check_scene_event(1032) then
+<img src="$apppath$img\6.bmp">铁无梅：“公子，是你啊。”<p>
+“不知小姐在此，打扰了，在下告退。”<p>
+铁无梅：“你既然来了顺便问你一下，去<FONT color=#FF0000>临安</FONT>怎么走？”<p>
+“河西码头坐船先到婺州，再坐船就到临安了。怎么您要去临安？”<p>
+“这个嘛，不告诉你。”<p>
+else
+房间里没人，小姐出去附近<b><FONT color=#FF0000>小岛上</FONT></b>玩去了。<p>
+end
+else
+公子的房间<p>
+if game_check_scene_event(1032) then
+<img src="$apppath$img\46.bmp">铁檑：“小姐，是你啊。”<p>
+“哦，不好意思，不知道你在这里，我走了。”<p>
+ “咦，不要急着走啊，又没人赶你。”<p>
+else
+房间里没人，公子在附近走走呢。<p>
+end
+end
+:><p>
+
+<:if not game_check_res_event(5156) then 一个<a href="game_goods_change_n('燕子镖',5);game_chat('得到了燕子镖一枚。');game_add_res_event(5156);game_reload_direct(0)" title="">小锦盒</a>end:> <p>
+<p>
+<a href="game_page(10324)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0B2D524976FCE8F74BD67BAFBED5A9C1

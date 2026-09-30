@@ -1,0 +1,43 @@
+id=11761
+名称=开封皇宫内
+作者=
+属性=4
+动作=
+{
+D5001=game_pop_fight_a(4,138);game_page(11783)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,福宁宫,AT1002,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1181) then
+里面没人。
+else
+if game_check_scene_event(1180) then
+run game_time_exe(4,'D5001')
+女子：“大帅，喝酒。”<br>
+金兀术：“喝。”<br>
+三杯下肚<br>
+忽见女子从靴子里抽出一短剑。<br>
+金兀术：“来人，有刺客。”<p>
+
+else
+宫女：“这里是金大帅喝酒的地方，闲人免进。”
+end
+end:>
+
+<p>
+<a href="game_page(11754)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C170A25205AC534EE5E2105849AAFE0B

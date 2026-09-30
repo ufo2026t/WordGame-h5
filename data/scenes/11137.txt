@@ -1,0 +1,108 @@
+id=11137
+名称=淮阳城北
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<:if game_check_scene_event(1100) then
+<BODY bgcolor="#000000" text="#CCFCFE">
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,夜晚,AT1000,0,0/2007.bmp"></CENTER>
+城北是个乱坟岗。月落乌啼，很是阴森。<p>
+远处，似乎有点点<a href="game_pop(3);game_chat('什么也没有。')">鬼火</a><p>
+<:if not game_check_scene_event(1101) then
+隐隐约约有女人的<a href="game_npc_talk('对话')">哭声</a>传来<p>
+end:>
+一些<a href="game_npc_talk('乱石')">乱石</a><p>
+前方凶险，是否<a href="game_save(0)" title="有备无患">存盘</a>？<p>
+<strong>警告</strong>：打乱坟岗山贼有一定<FONT color=#"FF0000">难度</FONT>，如果您等级低于30级，建议备好回城卷，到时好逃出来，修炼等级提高后再来打。<p>
+您还可以选择迷宫内打怪的难度：<br>
+if game_read_factor(0)=20 then
+1。<strong>难度和经验值加倍（√）</strong><br>
+else
+1。<a href="game_write_factor(20);game_reload_direct(0)" title="迷宫内怪物的攻打难度和获得的经验值均是标准的两倍">难度和经验值加倍</a><br>
+end
+if game_read_factor(0)=0 then
+2。<strong>标准（√）</strong><br>
+else
+2。<a href="game_write_factor(0);game_reload_direct(0)" title="默认的难度和经验值，也许不一定适合你。">标准</a><br>
+end
+if game_read_factor(0)=5 then
+3。<strong>经验值和难度减半（√）</strong><br>
+else
+3。<a href="game_write_factor(5);game_reload_direct(0)" title="怪的攻击力，生命值和经验值只有默认值的一半">经验值和难度减半</a><br>
+end
+if game_read_factor(0)=3 then
+4。<strong>三分之一（√）</strong><br>
+else
+4。<a href="game_write_factor(3);game_reload_direct(0)" title="怪的生命力和攻击力和经验值只默认值的三分之一">三分之一</a><br>
+end
+<p>
+进入<a href="game_del_scene_event(1100);game_page(1)" title="继续深入">坟地深处</a><p>
+else
+<BODY>
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,城北,AT1000,0,0/2007.bmp"></CENTER>
+乱坟岗，白天。<p>
+<a href="game_npc_talk('老头')">老头</a><p>
+if game_check_scene_event(1101) and game_not_scene_event(1328) then
+乱坟间有个<a href="game_npc_talk('小棠')">姑娘</a>跪在无名碑前，袖上还带着地牢的泥，膝盖湿了一片。<p>
+end
+if game_random_chance(3) then
+一只<a href="game_pop_fight_a(1,28);game_reload_direct(0)" title="">野猪</a>。<p>end
+if game_random_chance_at_sleep(3) then
+几条<a href="game_pop_fight_a(1,106);game_reload_direct(0)" title="">毒蛇</a>。<p>end
+一些乱石。<p>
+end:>
+<:game_true(1)string game_res_goods(0,5,'百年灵芝'):><p>
+<p>
+<a href="game_del_scene_event(1100);game_page(-3)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1328) then
+老头=1,那两个姑娘后来还来过。采了一把野花，跪了好久。小的那个把玉镯放上坟头，又轻轻收回怀里，说：娘，我们带回家，天天看见，就当您还在。
+I=1,她们能平安，便好。
+end
+if game_check_scene_event(1101) and game_not_scene_event(1328) then
+老头=1,自从上次来了几个大侠以后，这里安静多了。
+I=1,
+end
+if game_not_scene_event(1101) then
+老头=1,你们来这里干吗，赶紧离开。
+I=1,请问老伯这里为何不能来？
+老头=2,嗨，你们是不知道啊，这里可可怕了，战争啊，瘟疫啊，都不知道这里埋了多少人。大白天的，如果有人进了这里，都会莫名其妙的失踪，晚上，还经常有女人的哭声。还有黑影经常在墓地里飘来飘去。
+I=2,那我们<FONT color=#"FF0000">晚上</FONT>再来看看。
+老头=3,你们不要命了，白天都很凶险了，还要晚上来？
+I=3,我们不信邪，不怕妖魔鬼怪呢。
+老头=[game_add_scene_event(1099)]4,既然如此，老朽也就不劝你们了，艺高人胆大啊，多加小心吧。
+I=4,谢谢老伯。我们先到<FONT color=#"FF0000">城南</FONT>的<FONT color=#"FF0000">破庙</FONT>里住上几个时辰，晚上再来。
+end
+小棠=1,您……是救过我们的那位？小棠不该再让您操心。可镯子找不到，阿绣姐夜里会哭，我比挨打还难受。
+I=1,一个人回来太危险。镯子在哪？
+小棠=2,娘走的那天，把这只玉镯塞进我手里，说：阿绣护着你，你护着镯子，就当娘还在。山贼把我们推进地牢时，它掉在墓道边上了。
+I=2,我陪你找。找到就回家。
+小棠=3,找到了……就在碑根下。可草丛里有动静，溃逃的山贼还没走干净！
+I=[game_pop_fight_a(2,45);game_add_scene_event(1328);game_add_message('小棠找回玉镯，已回城与阿绣会合。');game_attribute_change(1,19,800);game_infobox('击退溃兵。小棠把玉镯贴在胸口，说要去告诉阿绣姐：娘可以安心了。经验+800。');game_reload_direct(0)]3,躲到我身后。
+
+if game_role_count(0)>2 and not game_check_scene_event(1101) then
+对话=1,string game_get_newname_at_id(2)@<FONT color=#"000000">我听这声音好像是在坟地深处传来的，咱们过去看看。</font>
+I=1,好
+对话=2,string game_get_newname_at_id(3)@<FONT color=#"000000">if game_sex_from_id(3) then 恩，咱们过去看看。else 呀，我害怕啊。end </font>
+I=2,不入虎穴，蔫得虎仔
+end
+乱石=1,string game_get_newname_at_id(2)@<FONT color=#"FF0000">看，这里是什么？</font>
+I=1,if not game_check_res_event(game_get_pscene_id(-1)) then [game_goods_change_n('软骨粉',2);game_add_res_event(game_get_pscene_id(-1))]1,<FONT color=#"FF0000">是几个软骨粉，看来，这里应该有贼人行动。</font>else 软骨粉已经捡起来了。end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=FA87B501101D3BEB5566DB2246BF67CA

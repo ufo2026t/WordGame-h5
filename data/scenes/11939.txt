@@ -1,0 +1,34 @@
+id=11939
+名称=冰雪宫内
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,400,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,77/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,冰雪宫,AT1000,0,0/2007.bmp"></CENTER>
+<img src="$apppath$img\img_tianshan9.jpg"><p>
+里面有冰桌冰凳。<br>
+一只<a href="game_pop(3);game_chat('里面是空的。')" title="">冰葫芦</a><p>
+
+ <a href="game_page(1)">房间一</a><p>
+ <a href="game_page(2)">房间二</a><p>
+ <a href="game_page(3)">房间三</a><p>
+
+<a href="game_page(-1)">退出</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3577727B7FBFF78249FFA42F5605ABA1

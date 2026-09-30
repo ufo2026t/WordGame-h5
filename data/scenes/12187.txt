@@ -1,0 +1,49 @@
+id=12187
+名称=沂州
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://98,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,沂州,AT1002,0,0/2007.bmp"></CENTER>
+沂州，地处山东境内。<p>
+进入<a href="game_page(1)" title="">沂山</a><p>
+到<a href="game_page(12195)" title="">十八里铺</a><p>
+<a href="game_npc_talk('路人甲')">路人甲</a><p>
+<a href="game_npc_talk('路人乙')">路人乙</a><p>
+
+<p>
+<a href="game_pop_a(5);game_page(10582)">前往临安</a><p>
+前往<a href="if game_check_scene_event(1117) then game_pop_a(4);game_page(11417) else game_chat('不能前往，汴京现在被金兵占领了呢。需要先在临安完成星月神教任务') end" title="">汴梁</a>(开封)<p>
+
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+路人甲=1,
+I=1,请问老伯，我想找一药材“全蝎”，不知哪里有？
+路人甲=2,蝎子，这不远的<strong>沂山</strong>上就有，不过，这山不好走，有个五行阵，难度不小。
+I=2,多谢
+路人乙=1,十八里铺村，听说最近常有采花贼光顾，现在是有女子的人家，晚上天没黑就关门了。
+I=1,有这等事？
+if game_sex_from_id(1) then
+路人乙=2,咋会有假？俺一个表姨的外孙女就嫁在那个村哩。
+I=2,
+else
+路人乙=2,姑娘不信？我看你还是别去那边，离的远远的好。
+I=2,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A05F0DBC6C8AA14DAA5B0BA649750512

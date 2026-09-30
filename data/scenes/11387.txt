@@ -1,0 +1,52 @@
+id=11387
+名称=星月神教内
+作者=
+属性=4
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间二,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'千年灵芝'):><p>
+<a href="game_npc_talk('对话')">门徒小谢</a>
+<p>
+<a href="game_pop_a(2);game_page(1)">前进</a>
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+对话=1,
+I=1,还有女的门徒？还打扮的这么妖里妖气的？
+if game_sex_from_id(1) then
+对话=2,小谢@哟，公子真帅，去我房里喝杯酒啊。
+I=2,不了，我有事呢。
+对话=3,小谢@看我漂亮不？比起你身边的mm来，我比她们更能让你快活呢。走吧，别不好意思。
+I=3,哇，你这人怎么这样啊
+对话=4,小谢@你是新来的啦，不用大惊小怪哦，我的工作就是让教里的男人醉生梦死，乐不思蜀，为教主死心塌地了。
+I=4,您先忙别的吧，教主吩咐我还有事，先走了。
+对话=5,小谢@傻子一个。哼
+I=5,
+else
+对话=2,小谢@哟，又来新人了。还挺嫩的。
+I=2,怎么说？
+对话=3,小谢@在这里，咱们女的工作就是伺候男人。要让他们在温柔乡里一个个舒舒服服的，醉生梦死，然后才能为教主死心塌地的卖命。
+I=3,啊，还有这样的安排？
+对话=4,小谢@这就是咱们教主的高明之处。要让男人听命，就得先满足他们。
+I=4,哦，明白了。我先去别处看看去。
+对话=5,小谢@好，有不懂的来问我就是。
+I=5,好的
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9C85B037EA7FE9DE6CA82807BB01E510

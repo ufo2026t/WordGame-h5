@@ -1,0 +1,32 @@
+id=10812
+名称=福乐堂
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clWindowText}),clWindow,福乐,AT1001,0,55/2007.bmp) fixed no-repeat center center;">
+里面放着祖宗牌位。<p>
+;;<:game_true(1)string game_res_goods(0,1,'上等木炭'):><p>
+<p>
+进入<a href="if game_check_goods_nmb('秦府密室钥匙',1) then game_pop_a(7);game_page(10815) else game_chat('密室门锁着') end" title="保存金银财宝，武功秘籍等物">密室</a><p>
+
+ <p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B475CE6EDF806E18DF81BF6D0DD30E17

@@ -1,0 +1,36 @@
+id=10595
+名称=灵隐寺
+作者=
+属性=
+TempKey=灵隐寺
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clBlack}),clWindow,灵隐寺,AT1003,0,0/2007.bmp"></CENTER>
+灵隐寺，创建于东晋咸和元年（公元326年），当时印度僧人<strong>慧理</strong>来到杭州，看到这里山峰奇秀，认为是“仙灵所隐”之地，所以就在这里建寺，取名“灵隐”。
+<p>
+<a href="game_page(10596)" title="">冷泉亭</a><br>
+<a href="game_page(10597)" title="">飞来峰</a><br>
+<a href="game_page(10598)" title="">天王殿</a><br>
+<a href="game_page(10599)" title="">大雄宝殿</a><br>
+<a href="game_page(10600)" title="">药师殿</a>
+<p>
+<a href="game_page(10584)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C5D91807510AA82F0C7B9A534CB71071

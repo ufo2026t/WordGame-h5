@@ -1,0 +1,38 @@
+id=10528
+名称=东方镖局
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,东方镖局,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+李镖头：“这次押镖被劫，唉，都是我贪杯所致。”<br>
+王镖头：“也不都错在你，主要是大理的劫匪非等闲之辈，似乎使的妖术？”<p>
+小米：“天外天山庄的云庄主来。”<p>
+李镖头：“云庄主好。”<br>
+王镖头：“云庄主，请上坐。”<p>
+云霸天：“大家不必客气，我听说镖局出了点事，过来看看。”<br>
+李镖头：“说来惭愧，前些日子我们押了一批古董前往大理，我在一小酒馆多喝了两杯，古董被劫走。”<br>
+王镖头：“当时，劫匪一共两人，我们有4人，除了李镖头喝醉，还有3人，但那两人手上放光，身形飘忽不定，我们全然不是对手。”<br>
+王镖头：“我行走江湖多年，从未见过此等邪门武功，怀疑是妖术。<p>
+云霸天：“好，我知道了，我先回去，这事<b>过几天</b>我会和东方总镖头商量一下如何解决。你们不用放在心上。<p>
+王，李：“谢谢云庄主。”
+<p>
+<a href="game_add_scene_event(1048);game_page(10522)">先返回，等去了天外天山庄后再来镖局看看</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C893F95C2D186F4BBC0E926C84A4766D

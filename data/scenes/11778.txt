@@ -1,0 +1,31 @@
+id=11778
+名称=开封
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,药材铺,AT1002,0,0/2007.bmp"></CENTER>
+即使乱世，药材铺子的生意还是过的去的。<p>
+1。<a href="game_trade(9,0) " title="">买药</a><p>
+2。<a href="game_trade(9,1) " title="">卖出</a><p>
+
+<p>
+<a href="game_page(11748)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EE315B2EF27412670C41CDF32E7B68F1

@@ -1,0 +1,42 @@
+id=10519
+名称=婺州通济桥
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clOlive}),clWindow,通济桥,AT1001,0,0/2007.bmp) fixed no-repeat center center;">
+一座古老的石桥。桥下流水潺潺，站在桥上望向远处山峦叠嶂，满目苍翠。<p>
+<:if game_sex_from_id(1) then
+if game_role_is_exist('江雪儿') then <img src="$apppath$img\4.bmp">：“清风松间过，山泉桥下流。”<p>end
+if game_role_is_exist('慕容丽雯') then <img src="$apppath$img\7.bmp">：“好山好水好风光。” end
+else
+if game_role_is_exist('胡飛') then <img src="$apppath$img\1.bmp">：“水至清则无鱼。”<p> end
+if game_role_is_exist('宇文赫') then <img src="$apppath$img\3.bmp">：“这桥下河里的鱼可真大。”<p> end
+end:>
+<p>
+<:if game_check_scene_event(1026) then
+游客甲：“城隍庙算是婺州最热闹的地方了。”<br>
+游客乙：“我不喜欢城隍庙，还是喜欢清净点的地儿去八咏楼”<p>
+else
+游客甲：“三清山道观的道长可是个有德之人。”<br>
+游客乙：“三清山的<b>幻境</b>走进去像真的一样。”<p>
+end:>
+<p>
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=55947034E3470BBA3F94FB14FED7EB8A

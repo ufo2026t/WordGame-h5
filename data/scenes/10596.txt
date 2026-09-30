@@ -1,0 +1,36 @@
+id=10596
+名称=冷泉亭
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clBlack}),clWindow,冷泉亭,AT1003,0,0/2007.bmp"></CENTER>
+唐时冷泉上有5座亭子，后因山洪四亭俱毁，冷泉也于明万历年间移建岸上。
+现有“壑雷”“冷泉”二亭。
+亭建于宋代，苏东坡有诗“不知水从何处来，跳波赴壑如奔雷”，亭因诗得名。
+冷泉亭上有一副对联“泉自几时冷起，峰从何处飞来”写得很有意趣。
+<p>
+<:game_true(1)string game_res_goods(0,1,'冰蚕精'):><p>
+
+<p>
+<a href="game_pop_a(2);game_page(10595)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=AD417EFDA35D7B3ED4D0342F7192C073

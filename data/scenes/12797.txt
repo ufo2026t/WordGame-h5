@@ -1,0 +1,49 @@
+id=12797
+名称=宝藏
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://98,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,宝藏,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_not_scene_event(1290) then
+run game_add_scene_event(1290);game_change_money(500000);game_attribute_change(1,19,50000);game_goods_change_n('金块',10);game_goods_change_n('陨铁矿',3);game_goods_change_n('上古神石',1);game_goods_change_n('龙精甲',2);game_goods_change_n('天蚕丝',3);game_add_message('邙山宝藏主线已完成，仍可继续探索江湖。')
+石门在完整藏宝图的指引下缓缓开启，露出周世宗当年私埋的秘藏。<br>
+金银珠玉堆满石室，角落还锁着几箱<FONT color=#FF0000>前朝冶炼秘料</FONT>，市面上绝无出售。<br>
+更有一匣文书，记载宝藏本为备宋室幼主复位之用。<br>
+if game_role_is_exist('慕容丽雯') then
+慕容丽雯：“七块碎图终于归位，这宝藏当用于天下苍生，而非一人一姓之私。”<br>
+end
+if game_role_is_exist('宇文赫') then
+宇文赫：“岳元帅若知今日之事，定也会欣慰——大宋尚有希望。”<br>
+end
+string game_get_newname_at_id(1)：“神镜传说至此一段落，然江湖路远，故事未必就此终结。”<p>
+<FONT color=#FF0000>获得 500000 金币、50000 经验、金块×10、陨铁矿×3、上古神石×1、龙精甲×2、天蚕丝×3。</FONT><p>
+else
+石室中宝藏已取，只余空箱与壁上机关痕迹，仍可在此整理行囊、保存进度。<p>
+end:>
+
+<hr>
+<b>请选择：</b><p>
+1。<a href="game_save_panel(0)" title="保存到浏览器，并可导出存盘码">保存进度</a>（存盘 / 导出）<p>
+2。<a href="game_page(11577)" title="前往开封，继续探索">继续闯荡江湖</a><p>
+3。<a href="game_save(0);game_page(12798)" title="进入通关胜利画面">结束游戏</a>（自动存盘后进入胜利场景）<p>
+4。<a href="game_page(-1)" title="">返回石门</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EF1606784273AE03AB9C603124044522

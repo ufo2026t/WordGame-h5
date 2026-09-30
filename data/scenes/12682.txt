@@ -1,0 +1,39 @@
+id=12682
+名称=房间四
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,房间四,AT1000,0,0/2007.bmp"></CENTER>
+ 一位老侠客在此养伤，不愿多谈江湖事。<p>
+<a href="game_npc_talk('老侠客')">老侠客</a><p>
+<a href="game_page(-4)">走廊</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+老侠客=1,别看我这副样子，是中了九毒派的暗手。庄主请我在此养伤。
+I=1,有什么内情吗？
+老侠客=2,教主手里有藏宝图碎块，还派人去中原。你若要进总坛，先找到在中原遇见过的那位莫延顿贺。
+I=2,谢谢前辈提醒。
+if game_check_scene_event(1287) then
+老侠客=3,护法放行了？那便去后院书房密室一探，或直接见教主。
+I=3,
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2B5B6E7A53D4F48CC08699A775AB2D41

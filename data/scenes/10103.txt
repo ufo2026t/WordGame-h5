@@ -1,0 +1,38 @@
+id=10103
+名称=宾至如归客房4
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,客房四,AT1005,0,0/2007.bmp"></CENTER>
+<p>
+客房内<a href="game_npc_talk('侠客甲')">两个身背长剑的人</a>在聊天。<p>
+<:game_true(1)string game_res_goods(5,1,'三年生草药'):>
+<p>
+
+<a href="game_page(10099)">返回客栈二楼走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+侠客甲=1,在<FONT color=#"FF0000">郊外的密林</FONT>里面有文章。
+I=1,侠客乙@我们一路追踪藏宝图下落，到郊外的密林里就不见目标了。
+侠客甲=2,对，今晚要不要再去密林探查一番？
+I=2,侠客乙@那地方太过诡异，晚上去恐生意外。
+侠客甲=3,也对，咱们武功不算高，还是小心为妙。
+I=3,侠客乙@师兄所言极是。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=A03E9F1FA59B35F70D14B5F45BB5951A

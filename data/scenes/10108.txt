@@ -1,0 +1,50 @@
+id=10108
+名称=宾至如归一楼客房1
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,客房一,AT1004,0,0/2007.bmp"></CENTER>
+<p>
+一个<a href="game_npc_talk('道士')">道士</a>在那闭目静坐。似乎已到物我两忘的状态了。<p>
+<:game_true(1)string game_res_goods(5039,1,'大力丸'):>
+ <p>
+<:game_true(1)string game_res_goods(5,1,'三年生草药'):>
+<p>
+
+<a href="game_page(10107)">返回客栈一楼走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+道士=1,if game_sex_from_id(1) then 这位施主else 这位女施主end，可知三清山道观在哪？
+I=1,哦，离这不远，城外东南方向就是了。
+道士=2,多谢if game_sex_from_id(1) then 施主else 女施主end
+I=2,不知道长去三清山何事？
+道士=3,我此番奉师命前来三清山找一阳道长，商量昆仑山神镜被盗之事。
+I=3,愿闻其详。
+道士=4,昆仑山上有一阴阳交界之口，可通暗黑世界。上古时期，伏羲氏做一镇妖神镜，放置昆仑山，堵住了暗黑之门，保护了人间免受暗黑世界妖魔的祸害。不料，最近有人盗走了此宝，让暗黑世界的妖魔泉涌而出。
+I=4,神镜在昆仑数千年了，为何到现在才被盗？
+道士=5,原本神镜放置昆仑地宫内，有地宫神灵守护，一般人无法接近，可保神镜安全。显是盗镜之人非偷鸡摸狗之徒。
+I=5,不知这神镜除了阻止暗黑世界的妖魔外，还有无它用？
+道士=6,得此神镜者，可号令天地，暗黑妖魔也会听其召唤。
+I=6,天下无敌了？
+道士=7,不过，神镜威力过大，很难驾驭，如若不得其法，易弄巧成拙，反受其害。
+I=7,会不会是金兀术得了此镜？
+道士=8,这个贫道就不知了。if game_sex_from_id(1) then 施主else 女施主end可去开封看看。
+I=8,多谢道长教诲。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B58CDEEB0DCFBFF2FB65EAB4266D66CB

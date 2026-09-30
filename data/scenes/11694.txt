@@ -1,0 +1,44 @@
+id=11694
+名称=岳飞营
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,兵营二,AT1002,0,0/2007.bmp"></CENTER>
+兵营二<p>
+<:game_true(1)string game_res_goods(0,1,'大力丸'):><p>
+<a href="game_npc_talk('宋兵甲')">宋兵甲</a><p>
+<a href="game_npc_talk('宋兵乙')">宋兵乙</a><p>
+<a href="game_npc_talk('宋兵丙')">宋兵丙</a><p>
+
+<p>
+<a href="game_page(11687)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+宋兵甲=1,
+I=1,最近战事如何？
+宋兵甲=2,就一个字，难
+I=2,
+宋兵乙=1,听说西湖歌舞升平，达官贵人声色犬马。就我们在这拼死拼活的。
+I=1,从古到今，都是如此。你有见过兔子吃狼的吗？
+宋兵丙=1,我要打到黄龙府，把那些被金人抢去的金银珠宝夺回来。
+I=1,就这些？
+宋兵丙=2,对，还有美女。
+I=2,……
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BC8B2553822F538121BD83603AEC5EFB

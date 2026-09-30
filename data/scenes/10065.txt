@@ -1,0 +1,53 @@
+id=10065
+名称=婺州府大厅
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clOlive}),clWindow,公正廉明,AT1012,0,0/2007.bmp"></CENTER>
+<p>
+<:if game_role_is_exist('西门菲菲') and game_check_scene_event(1313) and not game_check_scene_event(1314) then
+西门菲菲拉着你的袖角：“堂上那位，便是当初要讨我的人……我们说清楚。”<p>
+elseif game_check_scene_event(1314) then
+西门菲菲：“父亲说闹够了便回家。可我还没闯够呢。”<p>
+end:>
+<a href="game_npc_talk('知府大人')">知府大人</a>知府大人正在堂上。<p>
+
+<a href="game_page(10063)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1313) and not game_check_scene_event(1314) and game_role_is_exist('西门菲菲') then
+知府大人=1,咦，这不是西门家的姑娘？西门傲昨日来过，说婚约作废了。
+I=1,正是。请大人约束令郎，勿再纠缠。
+知府大人=2,罢了罢了。西门小姐想闯江湖，本官管不着。这有西门爷托本官转交的盘缠。
+I=2,[game_add_scene_event(1314);game_change_money(800);game_attribute_change(1,19,600);game_infobox('西门菲菲释然了，获800两与600经验。');game_reload_direct(0)]3,多谢大人。
+elseif game_check_scene_event(1009) then
+;;擒获了匪首
+if game_check_scene_event(1010) then
+知府大人=1,这位if game_sex_from_id(1) then 壮士else 女侠end，今日有空来转转？
+
+else
+知府大人=1,多谢if game_sex_from_id(1) then 壮士else 女侠end帮全城人解除了一大祸害。这是一点小意思。
+I,A=[game_change_money(5000);game_add_scene_event(1010);game_infobox('您领取了5000两赏金。');game_reload_direct(0)]1,领取。
+I,B=1,推辞。
+end
+else
+知府大人=1,这西峰山的匪徒如此猖狂，如何是好。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=41C853C4D99CCE7B2758F392D519821D

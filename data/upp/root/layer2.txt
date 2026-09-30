@@ -1,0 +1,14 @@
+id=layer2
+begin=170
+end=174
+begin2=189
+end2=190
+begin3=200
+end3=201
+begin4=203
+end4=204
+begin5=206
+end5=208
+;可以使用begin2，end2等定义多个物品区间，最多搜索到begin9为止
+;中级武器店
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

@@ -1,0 +1,38 @@
+id=10073
+名称=地下室73
+作者=
+属性=34
+载入后=if game_random_chance_at_sleep(2) then game_pop_fight_a(game_random_chance_2(4),73)else if game_id_exist(2) then game_npc_talk('string game_get_oldname_at_id(2)') end end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(楷体_GB2312,134,120,{Bold},{clWhite}),clSilver,古堡,AT1009,1,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+地下室内十分阴冷。<p>
+透着腐朽的气息。<p>
+<p>
+ <:game_true(1)阅读材料：string game_get_read_txt(0):><p>
+一扇木门，到<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10086)" title="">地下室86</a><p>
+一扇木门，到<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10087)" title="">地下室87</a><p>
+<:if game_random_chance(5) then <p><span id="bo_113">一个小<a href="game_goods_change_n('一年生草药',2);game_chat('捡到一年生草药2颗。');game_inner_html(113,' ')" title="好东西哦">包裹</a></span>end:>
+<p>
+
+<a href="game_page(10067)">返回大厅</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+string game_get_oldname_at_id(2)=1,if game_sex_from_id(2) then 这里感觉有股杀气，大家小心点。 else 呀，我怕怕。end
+I=1,if game_sex_from_id(1) then if game_sex_from_id(2) then 对，僵尸王可能就在下面。else 不怕，有我呢。 end else 我是女侠我怕谁。 end
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=65C2C5F9591414E3BCCC3B040FE7A6F5

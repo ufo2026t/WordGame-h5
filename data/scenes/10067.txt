@@ -1,0 +1,50 @@
+id=10067
+名称=古堡大厅
+作者=
+属性=2
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(楷体_GB2312,134,120,{Bold},{clWhite}),clSilver,古堡,AT1009,1,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+古堡内光线不足黑乎乎的，泛着一股淡淡的霉味。<p>
+大厅边上有一些门，然后连着走廊又有一些门。<p>
+<:if game_check_scene_event(1011) then
+ 自从上次大怪除掉后，古堡里的阴气淡了很多。
+else
+if game_role_is_exist('江雪儿') then
+ 江雪儿：“这里情况不明，我们要保持队形一起行动。”<p>
+end
+if game_role_is_exist('宇文赫') then
+ 宇文赫：“争取每个房间都看看，有没什么情况。”<p>
+end
+string game_get_newname_at_id(1)：“特别是地下室之类的地方要仔细搜索。”
+end
+<p>
+:>
+一扇腐朽的木门<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10068)" title="">通往左边厢房</a><p>
+摇摇晃晃的楼梯<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10079)" title="">可以到楼上</a><p>
+又一扇木门<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10070)" title="">通往厨房</a><p>
+又一扇木门<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10071)" title="">通往右边厢房</a><p>
+又一扇木门<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10072)" title="">通往储物室</a><p>
+又一扇木门<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10073)" title="">通往地下室</a><p>
+又一扇木门<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10078)" title="">这是一个后门</a><p>
+又一扇木门<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10069)" title="">后厅</a><p>
+一个<a href="game_page(11353)" title="">残破的书卷</a><p>
+<a href="game_page(10066)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5499C6C59EFE522F58DC4B00DDAD0DE9

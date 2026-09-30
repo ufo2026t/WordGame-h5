@@ -1,0 +1,48 @@
+id=12705
+名称=九毒派
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,九毒派,AT1000,0,0/2007.bmp"></CENTER>
+九毒派总坛大门，门楣上悬着「西域毒王」四字匾，两侧弟子佩刀而立。<p>
+<:if game_check_scene_event(1288) then
+你已取走教主手中的藏宝图碎块，守门弟子对你怒目而视，不宜久留。<p>
+<a href="game_page(-57)">离开九毒派</a><br>
+elseif game_check_scene_event(1280) or game_check_scene_event(1281) then
+if game_not_scene_event(1281) then run game_add_scene_event(1281) end
+守门弟子上下打量你一番，默许你入内。<br>
+江湖传闻：教主近日得藏宝图一小块，正遣人赴中原搜寻其余部分；宝藏或在<b>开封邙山</b>。<p>
+<a href="game_page(1)">进入总坛</a><br>
+else
+守门弟子：「九毒派总坛岂是外人乱闯的？去去去！」<p>
+<:if game_check_scene_event(1289) and not game_check_scene_event(5300) then
+守门弟子低声道：「昨夜有人从制药房取走毒囊，往东来山庄去了……」<p>
+end:>
+if game_check_scene_event(1283) then
+你提及莫延顿贺之名，弟子略一犹豫：「……你若有事，可先去城中打听，莫要硬闯。」<p>
+end
+end:>
+
+<p>
+<a href="game_page(-57)">西州城</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B7354C6F2E93CA549A47F212A0219AD8

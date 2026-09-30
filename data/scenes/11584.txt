@@ -1,0 +1,43 @@
+id=11584
+名称=朱仙镇客栈二楼
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,客房四,AT1002,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,1,'迷踪蛊'):><p>
+<:game_check_scene_event(1152)
+房间是空的
+else
+房间里住者几名<a href="game_npc_talk('工匠')">工匠</a>
+:>
+<p>
+<a href="game_page(11580)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+工匠=1,
+I=1,这里离战场不远，你们是不是要去南方避难的？
+工匠=2,我们是从南方过来的。
+I=2,啊，真是要钱不要命啊。
+工匠=3,你有所不知。我们乃是从龙泉来此，受韩将军所托，来修复离这不远铸剑山上的古铸剑炉。
+I=3,哦，龙泉剑也很有名，为何不在龙泉铸剑，要不远千里来这铸剑。
+工匠=4,听说是要铸“魔剑”
+I=4,魔剑？
+工匠=5,恩，因为铸剑山上有个战国时铸剑大师欧阳冶善留下的铸剑炉。因年久失修，已经损坏，但其剑气仍存，乃是铸魔剑的不二选择。
+I=5,明白了，多谢指教。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2B20A5D9C403ACE0195C449D2D73EDF2

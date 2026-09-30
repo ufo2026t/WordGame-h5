@@ -1,0 +1,58 @@
+id=12820
+名称=西门茶榭
+作者=
+属性=1
+TempKey=西门茶榭
+动作=
+{
+D5001=if game_check_scene_event(1311) then if game_check_scene_event(1314) then game_chat('西门菲菲：“父亲说闯够了再回家。可我还没闯够呢。”') else if game_check_scene_event(1313) then game_chat('西门菲菲：“婚约虽作罢，知府那边未必肯放手。”') else game_chat('西门菲菲：“八咏楼风景好，我偶尔来坐坐。”') end end else game_npc_talk('绿衣琴女') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://807,267,(隶书,134,200,{Bold},{clGreen}),clWindow,八咏楼,AT1012,0,60/2007.bmp) fixed no-repeat center center;">
+八咏楼侧有一小茶榭，临水而建，竹帘低垂。<p>
+<:if game_check_scene_event(1311) then
+<a href="D5001">西门菲菲</a><img src="$apppath$img\5.bmp">在茶榭里抚琴，见你来便起身相迎。<p>
+elseif game_grade('无名',8) then
+帘后传来琴声，一名<a href="D5001">绿衣琴女</a><img src="$apppath$img\5.bmp">正独自饮茶，神色有些警惕。<p>
+else
+茶榭里空无一人，只有炉上残茶尚温。<p>
+end:>
+<p>
+<a href="game_page(10424)">返回八咏楼</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_not_scene_event(1311) then
+绿衣琴女=1,<img src="$apppath$img\5.bmp">这位if game_sex_from_id(1) then 公子 else 姑娘 end，请留步。小女子西门菲菲，并非歹人，只是……
+I=1,姑娘为何独自在此？（<FONT color=#"FF0000">点此继续对话</FONT>）
+绿衣琴女=2,家父西门傲在婺州也算有些名望，却硬要把我许给知府衙门的公子。我不从，便连夜逃出西门府。
+I=2,那些追你的人呢？
+绿衣琴女=3,方才在酒坊巷口，几个家丁还在寻我。我轻功不济，不敢走远，只好躲在这茶榭里。
+I=3,若你愿意，可先与我们同行。江湖路远，总比一个人安全。
+绿衣琴女=4,你……不怕惹上西门家？
+I,A=4,路见不平尚且拔刀，何况姑娘不愿屈从包办婚姻。
+I,B=4,我可没空管闲事，姑娘自便吧。
+绿衣琴女,A=[game_add_friend('西门菲菲',1);game_pop_fight_a(2,40);game_add_scene_event(1311);game_infobox('西门菲菲加入了队伍。');game_reload_direct(0)]5,多谢if game_sex_from_id(1) then 公子 else 姐姐 end侠义！那些家丁追来了，菲菲愿与你们并肩一战。
+绿衣琴女,B=5,也好，菲菲不敢强求。只愿日后别在八咏楼前再遇见那些家丁。
+I,A=5,
+I,B=5,
+elseif game_check_scene_event(1314) then
+西门菲菲=1,<img src="$apppath$img\5.bmp">父亲说闯够了再回家。我要随你们闯到天涯角落再说。
+I=1,
+elseif game_check_scene_event(1313) then
+西门菲菲=1,<img src="$apppath$img\5.bmp">家书口信让我放心一些，可知府那边……我们还是去说清楚好。
+I=1,
+else
+西门菲菲=1,<img src="$apppath$img\5.bmp">八咏楼的江风最解愁。菲菲跟着你们走，比困在西门府里强多了。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=COMPANION12820PLACEHOLDER01

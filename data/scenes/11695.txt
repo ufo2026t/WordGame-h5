@@ -1,0 +1,56 @@
+id=11695
+名称=岳飞营
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,兵营三,AT1002,0,0/2007.bmp"></CENTER>
+兵营三<p>
+<:game_true(1)string game_res_goods(0,1,'仙露饮'):><p>
+<a href="game_npc_talk('宋兵甲')">宋兵甲</a><p>
+<a href="game_npc_talk('宋兵乙')">宋兵乙</a><p>
+<a href="game_npc_talk('宋兵丙')">宋兵丙</a><p>
+
+<p>
+<a href="game_page(11687)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+宋兵甲=1,
+I=1,你跟随岳元帅多久了？
+宋兵甲=2,很多年啦，岳元帅用兵如神那，连战连捷。不过，这次仗打的最艰难了，目前还胜负难料。
+I=2,
+宋兵乙=1,以前都是和人打战，现在看那些金兵，太恐怖啦。
+I=1,生化人？
+宋兵乙=2,生化人是什么？没听说过，猜想也就是这类东西了，反正不是人。
+I=2,
+if game_not_res_event(9014) then
+宋兵丙=1,爹娘，小弟小妹，身体可好？
+I=1,写信给家里吗？你家是那里的呢？
+宋兵丙=2,我乃严州槐树下村人。都写了好几封了，只是通信不畅，送不到家啊。
+I,A=2,我倒是经常去那些地方，如若大哥信的过，我可代你送信。
+I,B=2,但愿战争早日平息，你可早日与家人团聚。
+宋兵丙,A=3,那太谢谢您了。
+宋兵丙,B=3,唉
+I,A=[game_add_task(9014)]3,（点此接受送信任务）
+I,B=3,……
+else
+宋兵丙=1,我的信送到了吗？
+I=1,还没，快了。
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=71B738BF31C646FA1628750EFF07FECD

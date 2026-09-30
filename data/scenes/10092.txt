@@ -1,0 +1,37 @@
+id=10092
+名称=中档药材铺
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,26,{Bold},{clWindowText}),clWindow,{-167@25}悬{-167@77}壶{-167@129}济{-167@181}世,AT1000,0,60/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+出门在外，难免磕磕碰碰的。来这淘点药品，有备无患哦。<p>
+这里是一家中档药材铺，卖的都是比较好的药材。<p>
+
+现在您可以<br>
+<a href="game_npc_talk('药铺掌柜')">随意瞧瞧</a><br>
+<a href="game_trade(8,0)" title="">立即购买</a>立即购买<p>
+或者把多余的药材<a href="game_trade(8,1)" title="">卖给药铺</a>立即购买
+
+
+<a href="game_page(10061)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+药铺掌柜=1,有看到中意的，您还可以尝尝。
+I=1,ok
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6B4E4918D9B851655AA82721F852718E

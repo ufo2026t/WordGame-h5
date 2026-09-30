@@ -1,0 +1,81 @@
+id=10583
+名称=临安城
+作者=
+属性=324
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<:if game_check_scene_event(1085) then
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+</HEAD>
+<BODY style="background:url(gpic://538,267,(隶书,134,200,{Bold},{clOlive}),clWindow,临安,AT1001,0,0/2007.bmp) fixed no-repeat center center;">
+else
+if game_read_temp(8200) then
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+end
+</HEAD>
+<BODY>
+end:>
+<:if game_read_temp(8200) then
+<a href="game_write_temp(8200,0);game_reload_direct(0)"><img src="gpic://147,19,(隶书,134,14,{Bold},{clWindowText}),clWindow,关闭字符集设定,AT1000,0,0/2007.bmp"></a>
+else
+<a href="game_write_temp(8200,1);game_reload_direct(0)" title="click here to show chinese char">Set Chinese</a>
+end:>&nbsp;&nbsp;
+<:game_check_scene_event(1065)
+<a href="game_del_scene_event(1065);game_page(10583)" title="点击打开背景音乐">打开</a><strong>背景音乐</strong>
+else
+<bgsound src="$apppath$music\蝴蝶曲.mid" loop="-1"><a href="game_add_scene_event(1065);game_page(10583)" title="点击关闭背景音乐">关闭</a><strong>背景音乐</strong>:>
+临安城。
+<:if game_check_scene_event(1085) then<p>
+<strong>半夜</strong>了，天山繁星点点。街上静悄悄的，没人。（如果要再次进入白天，可以重新去住宿，然后在提示是否外出时选择“否”即可返回白天了。）<p>
+<a href="game_page(10804)" title="商业街，有酒楼，赌馆等">清河坊</a><p>
+<a href="game_page(10645)" title="夜市">鬼市</a><p>
+<a href="game_page(10802)" title="秦府">元宝街</a><p>
+<a href="game_page(10810)" title="韩薪王府，岳王府">众安桥</a><p>
+<a href="game_page(10701)" title="苗府，千佛洞，冲天观">凤凰山</a><p>
+<a href="game_page(11374)" title="万松书院">万松书院</a><p>
+<a href="game_page(11568)" title="私家豪宅">望湖别墅</a><p>
+<a href="game_page(-1)" title="码头，走水路可通往各处">钱塘码头</a><p>
+else
+if game_check_scene_event(1205) and game_not_scene_event(1261) then
+<br><CENTER><b>皇榜</b></CENTER>
+昭告天下：<br>
+当今圣上，广招贤士<br>
+有能力拔千钧者，可揭此榜。<br>
+即日<br>
+<a href="game_add_scene_event(1261);game_add_scene_event(1262);game_reload_direct(0);game_chat('您已揭榜，可去皇宫面见圣上。');game_add_message('可到皇宫拜见圣上。')">揭榜</a>，<a href="game_add_scene_event(1261)" title="以后不再显示">放弃</a>
+end
+<div align=center><img src="$apppath$img\linan.jpg" width="800" height="600" usemap="#eeMap">
+  <map name="eeMap">
+    <area   shape="rect"   coords="613,162,710,273"   href="game_page(10810)"   alt="众安桥">
+    <area   shape="rect"   coords="498,334,588,416"   href="game_page(11378)"   alt="城隍庙">
+    <area   shape="rect"   coords="233,15,386,78"   href="game_page(11331)"   alt="梵天寺">
+    <area   shape="rect"   coords="656,20,745,128"   href="game_page(10666)"   alt="艮山门">
+    <area   shape="rect"   coords="24,27,149,111"   href="game_page(11069)"   alt="吴山">
+    <area   shape="rect"   coords="284,268,428,352"   href="game_page(10804)"   alt="酒楼，赌馆等">
+    <area   shape="rect"   coords="94,158,216,247"   href="game_page(11568)"   alt="望湖别墅">
+    <area   shape="rect"   coords="153,377,330,447"   href="game_page(10802)"   alt="元宝街">
+    <area   shape="rect"   coords="328,466,543,567"   href="game_page(10644)"   alt="皇宫">
+    <area   shape="rect"   coords="633,379,779,474"   href="game_page(-1)"   alt="码头，走水路可通往各处">
+    <area   shape="rect"   coords="478,113,594,182"   href="game_page(10702)"   alt="葵巷">
+    <area   shape="rect"   coords="247,136,407,205"   href="game_page(10645)"   alt="鬼市">
+    <area   shape="rect"   coords="4,245,85,312"   href="game_page(1)"   alt="西湖十景，灵隐寺，十里琅当，六合塔">
+    <area   shape="rect"   coords="622,517,785,579"   href="game_page(10922)"   alt="从万松岭可以通往净慈禅寺">
+    <area   shape="rect"   coords="70,511,248,578"   href="game_page(10701)"   alt="苗府，千佛洞，冲天观">
+  </map>
+</div>
+
+end:>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2CA3BEBB608C21027F676D343CC3F7E7

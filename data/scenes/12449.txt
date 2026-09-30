@@ -1,0 +1,45 @@
+id=12449
+名称=刘家寺内
+作者=
+属性=4
+TempKey=
+动作=
+{
+
+D5001=if game_random_chance(3) and game_pop_a(6) then game_add_scene_event(1247);game_chat('机关已打开') else game_chat('机关开启失败，请重试') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,刘家寺内,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:if game_check_scene_event(1244) then
+if game_check_scene_event(1249) then
+一尊石像，<a href="D5001;" title="">查看</a>。
+
+else
+一尊石像，<a href="game_pop(3);game_chat('似乎有玄机，以后再来看看')" title="">查看</a>。
+end
+else
+string game_res_goods(0,1,'七星剑')<p>
+end:>
+
+<a href="game_page(-47)">偏厅</a><br>
+
+
+<p>
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E9D792EB86055B07A79FC460E370583D

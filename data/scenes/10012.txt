@@ -1,0 +1,86 @@
+id=10012
+名称=码头
+作者=
+属性=1
+动作=
+{
+D5001=if game_check_money(1000) then game_change_money(-1000);game_infobox('您扣去了1000金钱。');game_page(10013) else game_infobox('你钱不够。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</head>
+<BODY style="background:url(gpic://538,267,(隶书,134,200,{Bold},{clBlue}),clWindow,码头,AT1001,0,60/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+码头上比较安静，停靠着几艘小船。<p>
+河对岸有<strong>无剑山庄</strong>和<strong>东河村</strong>。<p>
+无剑山庄庄主铁凌风也是江湖中的知名人物，只是这几年闭门修炼甚少出来活动，不过最近江湖风闻魔剑重现，且和无剑山庄有关，所以这个小镇上的不少武林人士都是为打探这个事情而来。<p>
+东河村坐落在一个山坳里，进村需经过一个棉花阵，村里每3年会举行一次比武大赛。另外由于经常有人闯棉花阵，阵里落了不少好东西在里边，所以走一走估计能<b>收获不少</b>。<p>
+<:if game_check_scene_event(1001) and not game_check_scene_event(1011) then
+船工甲：“听说小镇上<b><FONT color=#FF0000>古堡</FONT></b>里的僵尸很厉害，不知有哪位高人能降妖除魔。”<br>
+船工乙：“河对面无剑山庄铁庄主长期闭关一般人不见，但曾放出话来谁要是能除去古堡僵尸即可破格接待。”<p>
+end:>
+
+<:if game_check_scene_event(1001) and game_check_scene_event(1011) and not game_check_scene_event(1036) then
+if game_check_scene_event(1032) then
+船工甲：“天下武功出少林”<br>
+船工乙：“那只是传说，我认为武当更厉害。”<p>
+else
+船工甲：“听说无剑山庄<b><FONT color=#FF0000>庄主的女儿</FONT></b>长的如花似玉武功又好，只是不愿呆在家里一心想去外边世界长长见识。”<br>
+船工乙：“年轻人多出去看看是好事，什么来着不如行万里路。”<p>
+end
+
+end:>
+如果是去<FONT color=#"FF0000">河对岸</FONT>，那么要坐<a href="game_npc_talk('老王')" title="客官，要去河对岸吗？">渡船</a>。<p>
+
+
+您如果想去<a href="game_npc_talk('船工')" title="坐船"><FONT color=#"FF0000">婺州，临安</FONT></a>等地，需找船工乘坐客轮前往。收费低廉，速度快捷。<p>
+正好有一位<a href="if not game_grade('无名',10) then game_infobox('您的等级过低，现在出去闯荡江湖容易被K，建议练到10级再出去。'); end game_npc_talk('船工')" title="客官，坐船吗？">船工</a>在附近。<p>
+
+<:game_true(1)string game_res_goods(0,2,'迷踪蛊'):><p>
+河里有不少小鱼在游动，<a href="if game_pop_a(3) and game_random_chance(4) then game_goods_change_n('石斑鱼',1);game_chat('恭喜：抓到了一条石斑鱼。') else game_chat('抓鱼失败，鱼逃走了。') end" title="试试能捉到鱼不？">抓鱼</a>。<p>
+<a href="game_page(10001)">返回镇上</a><p>
+;;<a href="game_page(10824)" title="更多地方">其他路线</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1001) then
+船工=1,if game_sex_from_id(1) then 这位公子，else 这位姑娘，end 坐船不？
+I,A=1,您这都能到哪些地方？
+I,B=1,现在不坐，只是到处逛逛。
+船工,A=2,这里可以到<FONT color=#"FF0000">临安</FONT>，<FONT color=#"FF0000">婺州</FONT>，<FONT color=#"FF0000">东海</FONT>
+船工,B=2,听说东海边有很多宝物。
+I,A,A=2,我要去婺州
+I,A,B=2,我要去临安
+I,A,C=2,我要去东海
+I,B=2,if game_role_is_exist('江雪儿') then 江雪儿@是嘛，我最喜欢珍珠了。 else 听说有一种龙诞草只有东海岛上才有。 end
+船工,A,A=3,if game_check_role_values('无名',0,10) then [game_change_money(-10);game_page(10013)]3,开船了。else 坐一次收10钱，您钱不够，去不了。 end
+船工,A,B=3,最近不巧，到临安的船不走了，您要到婺州去坐才行。
+船工,A,C=3,东海有海盗打劫，咱都不敢去，您到婺州看看，有没有去东海的船。
+船工,B=3,不过这些都只是小道消息，真假不知。
+else
+船工=1,后山的妖怪闹的厉害，现在咱哪也去不了。
+I=1,我想去婺州，怎么办？
+船工=2,要等能人异士出现，除了此妖，才能成行啊。
+I,A=2,妖在哪？我虽算不上能人，但对打怪很有经验。
+I,B=2,我出高价，去不去婺州？
+船工,A=3,妖怪平时躲在小镇后面的后山<FONT color=#"FF0000">石头子山</FONT>半山腰的矿洞内。
+船工,B=3,若能出一千两，我考虑一下。
+I,A=3,好，待我除了此妖再来。
+I,B,A=3,太贵了，算了，还是先不去了。
+I,B,B=[D5001]3,行，就一千两，走。
+end
+老王=1,摆渡到河对岸，每次收1钱
+I,A=1, if game_check_role_values('无名',0,1) then [game_change_money(-1)]1,好，走。else 这次没带钱，下次吧。 end
+I,B=1,这次不去对岸。下次再来照顾您生意。
+老王,A=2,if game_check_role_values('无名',0,1) then [game_show_scene(10036)]2,到了，客官您走好。else 出门就是少不得钱。 end
+老王,B=2,行，我常在这河边呆着。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=63A8E24534873B471F1E42AAC2C370E8

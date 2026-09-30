@@ -1,0 +1,33 @@
+id=12829
+名称=可可西里荒原
+作者=
+属性=38
+载入后=game_pop_fight_a(2,37)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,荒原,AT1000,0,0/2007.bmp"></CENTER>
+风雪中隐约望见前方有帐篷炊烟——应是盗猎者的营地。<p>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:if not game_check_res_event(5243) then
+冻土缝里藏着<a href="game_add_res_event(5243);game_goods_change_n('九阳丹',1);game_chat('在冻土缝中找到九阳丹一枚。');game_reload_direct(0)" title="">小包裹</a>。<p>
+end:>
+ <a href="game_pop_a(3);game_page(12830)">前往盗猎者营地</a><p>
+<a href="game_pop_a(2);game_page(12828)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=89012345678ABCD12826AABBC

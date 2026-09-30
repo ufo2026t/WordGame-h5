@@ -1,0 +1,44 @@
+id=12574
+名称=上京皇宫地宫
+作者=
+属性=38
+载入后=game_pop_fight_a(4,137)
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,天王山,AT1000,0,0/2007.bmp"></CENTER>
+
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,1,'干粮'):><p>
+
+<:if game_check_res_event(5257) then
+地下室是空的。
+else
+这里已经是地下迷宫的终点了，但并没有发现大宋的镇国神器，只有一份藏宝图的碎块。以及一个写着<b>天王山</b>的小纸片，看来再去一趟天王山了。<p>
+地上有一个不起眼的<FONT color=#FF0000>物品</FONT>，捡起看看
+run string game_res_goods(5257,1,'藏宝图碎片6')<p>
+end:>
+<p>
+
+<p>
+
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=47C473FC625C81BE1EDFF41BFB3BEAB1

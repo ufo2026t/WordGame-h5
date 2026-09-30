@@ -1,0 +1,54 @@
+id=10814
+名称=花园
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clWindowText}),clWindow,花园,AT1001,0,55/2007.bmp) fixed no-repeat center center;">
+花朵，树多，水多。<p>
+
+路边有<:game_true(1)string game_res_goods(0,1,'大力丸'):><p>
+ 亭子里有几个<a href="if game_check_scene_event(1058) then game_chat('丫鬟：“听说明天要下雨了。”') else game_npc_talk('小丫鬟') end">小丫鬟</a>聊天。<p>
+ <a href="game_page(10816)">望云楼</a><p>
+ <a href="game_page(10817)">宝约楼</a><p>
+ <a href="game_page(10818)">花园中路</a><p>
+
+ <p>
+<a href="game_page(10811)">返回客厅</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+小丫鬟=1,丫鬟甲@听说<FONT color=#"FF0000">福乐堂</FONT>那里有个密室哦。里面有好多好多金银珠宝。
+I=1,丫鬟乙@只是，那个密室我们都不能靠近呢，而且还上锁的。
+小丫鬟=2,丫鬟甲@嘘，小声点，我上次帮老爷整理书房的时候，好像看到过那个密室的钥匙，长长的。
+I=2,丫鬟乙@唉，要是我有一个小小的金元宝，我就不用在这里做丫鬟了。
+小丫鬟=3,丫鬟甲@是呀，你的命可真苦，从小没了娘，又被卖到秦府做了丫头，受人欺负。（抹泪）
+if game_check_goods_nmb('金元宝',1) and game_not_scene_event(1058) then
+I,A=3,这位姑娘，我这有金元宝一枚，给你。
+I,B=3,唉，是挺可怜的，精神上支持你。
+小丫鬟,A=4,if game_sex_from_id(1) then 这，这，谢谢公子了，我不能要。else 多谢女菩萨，元宝您留着吧，无功不受禄。end
+小丫鬟,B=4,谢了。
+I,A=[game_goods_change_n('金元宝',-1);game_attribute_change(1,9,1);game_chat('道德值增加了一点');game_add_scene_event(1058)]4,拿着吧，我这元宝多的是，不用和我客气。
+I,B=4,
+小丫鬟,A=5,if game_sex_from_id(1) then 那，太谢谢公子了，我该不会是在做梦吧。else 您真是女财神啊，这么大一个金元宝，我终于可以从秦府赎身了。end
+小丫鬟,B=5,
+I,A=5,您就回老家，找个老实人，嫁了吧。以后好好过日子。
+I,B=5,
+else
+I=3,丫鬟乙@唉，怪咱自个命不好。
+end;
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5FE426A2C691788FB2FF0CD61A51F9C7

@@ -1,0 +1,41 @@
+id=12185
+名称=婺州西峰山岩洞
+作者=
+属性=38
+载入后=game_pop_fight_a(2,30)
+动作=
+{
+D5001=if game_pop_a(20) then game_add_res_event(5240);game_goods_change_n('陨铁矿',1);game_chat('得到了陨铁矿一');game_reload_direct(0) else game_reload_direct(0) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://74,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,岩洞,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(8,1,'三年生草药'):><p>
+<:if game_check_res_event(5240) then
+宝物已经不在，洞内只有阵阵的冷风，透彻心脾。
+else
+run game_add_res_event(5240)
+<strong>警告</strong>：获取宝物只有<FONT color="#FF0000">一次机会</FONT>请勿背错单词。<br>
+一缕幽幽的荧光，忽隐忽现。<a href="D5001" title="">拿取宝物</a><br>
+end:>
+<p>
+<a href="game_page(-6)" title="返回洞口">法阵<img src="$apppath$img\fazhen.gif"></a>
+<p>
+
+<a href="game_page(-1)">后退</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=033897AF87191C845B9C35B4CC67E658

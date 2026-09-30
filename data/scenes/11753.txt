@@ -1,0 +1,30 @@
+id=11753
+名称=开封
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,皇宫,AT1002,0,0/2007.bmp"></CENTER>
+跳进皇宫后，这里是一个小树林。<p>
+皇宫守卫：“谁？站住。”<p>
+1。<a href="game_pop_fight_a(2,138);game_page(1)" title="冲出去">迎战</a>
+<p>
+2。<a href="game_pop_a(3);game_page(11746)">逃跑</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EC500E531CA1A9A3AC0135D8612A15E8

@@ -1,0 +1,40 @@
+id=12565
+名称=上京皇宫地宫
+作者=
+属性=38
+载入后=game_pop_fight_a(2,137)
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,天王山,AT1000,0,0/2007.bmp"></CENTER>
+
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,1,'百年人参'):><p>
+
+
+<p>
+<a href="game_pop_a(3);game_page(-5)">前行</a><br>
+<a href="game_pop_a(3);game_page(1)">前行2</a><br>
+
+<p>
+
+<a href="game_page(-1)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3B8BAF8FA5DB6B0411B98477335B1397

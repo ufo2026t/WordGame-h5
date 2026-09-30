@@ -1,0 +1,39 @@
+id=10300
+名称=婺州天坑底部
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+千辛万苦，终于到了天坑的最底下。
+这里终年暗无天日，里面白骨累累，有人的也有动物的。<p>
+<:if game_role_is_exist('江雪儿') then
+江雪儿：“一路打过来好累啊，不过捡到的物品能卖不少钱。”<br>
+end
+if game_role_is_exist('慕容丽雯') then
+慕容丽雯：“有些材料只能在野外捡，买都买不到的呢，挖矿也挖不到。”<br>
+end
+:><p>
+<:game_not_scene_event(1029)在坑壁的一边，有个<a href="game_goods_change_n('陨铁矿',1);game_add_scene_event(1029);game_chat('得到了一块罕见的陨铁矿');game_reload_direct(0)" title="">亮晶晶的东西</a>，一端嵌入了岩石内。:>
+<p>
+<a href="game_pop_a(9);game_page(10198)">直接返回地面</a>
+<p>
+<a href="game_page(10299)">从迷宫返回地面</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=FCB01D26894A27D2B773E45AAD439B11

@@ -1,0 +1,34 @@
+id=10014
+名称=后山脚
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clGreen}),clWindow,山,AT1001,0,65/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+由于平时不常有人来这里，所以道路崎岖，且山上乱石密布。<p>
+偶尔路上能捡到“<b>时间加速丸</b>”，在战斗时使用能提高己方速度，获得更多的攻击机会。<p>
+
+<:if game_check_res_event(5001) then 花儿开的正艳 else 有一些<a href="game_goods_change_n('一年生草药',2);game_chat('得到了2颗一年生草药。');game_add_res_event(5001);game_reload_direct(0)" title="">草药</a>散落在花丛中 end:>
+<p>
+<:if not game_check_res_event(5148) then <span id="bo_113">一个<a href="game_goods_change_n('时间加速丸',2);game_chat('捡到时间加速丸两个，在战斗时点击窗口上部的“单词显示延迟”前面的勾去掉，可关闭单词延迟显示20次。');game_add_res_event(5148);game_inner_html(113,' ')" title="">宝箱</a></span><p>end:>
+进入<a href="game_pop_a(3);game_page(10015)" title="">后山半山腰</a>
+<p>
+<a href="game_page(10001)">返回镇上</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=23EE1E4F1C93A193D7345D7FAC5568CA

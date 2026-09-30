@@ -1,0 +1,53 @@
+id=10002
+名称=镇长家
+作者=
+属性=260
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;<img src="gpic://img_zhenzhang.jpg"><p>
+ <:if game_check_scene_event(1001) then
+ 本镇民风淳朴，环境适宜，欢迎各位经常来游玩小住。<p>
+else
+ 由于最近镇上闹妖怪，镇长总是为这件事坐卧不安<br>
+end:>
+今日闲来无事，<a href="game_npc_talk('镇长')" title="点击和镇长对话，对话将显示在下面的窗口">镇长</a>正坐在客厅里自斟自饮。
+<p>
+镇长是镇上的最高行政长官。<p>
+ <:if not game_check_res_event(5010) then<a href="game_pop_a(2);game_goods_change_n('一年生草药',2);game_chat('得到了2颗一年生草药。在战斗时可以用来补生命值。');game_add_res_event(5010);game_reload_direct(0)"
+title="草药">一颗草药</a>else 墙角放着一只花盆<img src="gpic://120,120,(隶书,134,22,{Bold},{clWindowText}),clWindow,$tree,AT1000,0,0/2007.bmp"> end:>
+<p>
+ <a href="game_page(10001)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;检查是否杀死了野猪王
+if game_check_scene_event(1001) then
+镇长=1,if game_sex_from_id(1) then 壮士 else 女侠 end 果然非同一般，此次降妖有功，我必将上报县太爷，为您邀功请赏。
+I,A=1,多谢镇长，有劳了。
+I,B=1,多谢镇长，好意心领了。我打算去婺州走走。
+镇长,A=2,您等着我的好消息。
+镇长,B=2,if game_check_scene_event(1002) then 对了，您不是说要去婺州吗？ else[game_change_money(50);game_add_scene_event(1002)]2,不错，if game_sex_from_id(1) then 壮士 else 女侠 end 志在四方，这50两银子您带上作盘缠吧。 end
+else
+镇长=1,最近后山（石头子山）上闹妖怪，小镇居民们人心惶惶，已经请了几个道士，都没能降住此妖，不知怎么办好？
+I=1,不知是何方妖怪，您老可知其来历？
+镇长=2,听道士们说起，好像和昆仑山有关，其他的就不清楚了。
+I=2,道士都降不住，估计妖怪有点厉害了。
+镇长=3,这可如何是好。
+I=3,我这些年也多少学了些本事，这样吧我去山上看看情况。
+镇长=4,if game_role_count(0)>1 then 好，这事儿就拜托你们了。 else 不仅大妖，还有不少小妖。妖多势众啊，你一个人恐难抵挡，可在附近<FONT color=#FF0000>客栈</FONT>去看看，有没有愿意一同前往降妖的。end
+I=4,if game_role_count(0)>1 then 镇长尽管放心。 else 也对，找个帮手打起来就省力多了。 end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B0E10AA236A8E0D3EE6F28825B54E732

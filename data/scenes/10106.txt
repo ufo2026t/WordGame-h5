@@ -1,0 +1,38 @@
+id=10106
+名称=宾至如归客房7
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,客房七,AT1005,0,0/2007.bmp"></CENTER>
+<p>
+<a href="game_npc_talk('和尚甲')">两个和尚</a>在那谈话。<p>
+<:game_true(1)string game_res_goods(5,1,'恢复术'):>
+<p>
+
+<a href="game_page(10099)">返回客栈二楼走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+和尚甲=1,唉，<FONT color=#"FF0000">兰若寺</FONT>，<FONT color=#"FF0000">万佛塔</FONT>，都被妖魔所占，咱们这些佛门弟子，倒无处容身了。
+I=1,和尚乙@阿弥陀佛，望佛祖快快显灵，早日超度了这些妖魔鬼怪吧。
+和尚甲=2,这兰若寺内，树妖成群，也不知吃了多少人了。
+I=2,和尚乙@万佛塔还稍微好些，只是妖魔在内吸收天地灵气，没怎么害人。
+和尚甲=3,听说万佛塔顶有旷世奇珍？
+I=3,和尚乙@罪过罪过，我等出家之人，怎可起贪念。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=ACCD99B9BCA007AF639DF6F7EB260E95

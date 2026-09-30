@@ -1,0 +1,37 @@
+id=12103
+名称=平安京-城门口
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,平安京,AT1000,0,0/2007.bmp"></CENTER>
+1。<a href="game_page(12152)" title="">入城</a><br>
+2。前往<a href="game_page(12153)" title="">富士山</a><p>
+<:game_random_chance_at_sleep(3)
+<a href="game_npc_talk('路人甲')">路人甲</a><p>:>
+<:game_random_chance_at_sleep(3)
+<a href="game_npc_talk('路人乙')">路人乙</a><p>:>
+<p>
+<a href="game_page(12071)">返回九州岛码头</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+路人甲=1,天下不太平啊。不仅武士混战，还有妖怪出没。
+I=1,
+路人乙=1,听说，富士山上有妖怪。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D1FE1F389DF70D6DDD8E4B5CC7BA1CC8

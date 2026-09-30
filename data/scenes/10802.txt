@@ -1,0 +1,56 @@
+id=10802
+名称=元宝街
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,元宝街,AT1000,0,0/2007.bmp"></CENTER>
+<:game_check_scene_event(1085)
+晚上没人
+else
+<a href="game_page(11858)" title="考取功名">考试院</a><p>
+<a href="game_npc_talk('守卫')" title="">秦府</a><p>
+:>
+<a href="game_page(10583)">返回</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+守卫=1,站住。干什么的？
+I,A=1,我找秦大人。
+I,B=1,我没事瞎溜达。
+if game_sex_from_id(1) then
+守卫,A=2,看你一副乡巴佬模样，还想见秦大人，乱攀亲戚？
+守卫,B=2,到钱塘江里溜达去，少在这儿碍眼。
+I,A,A=2,兄弟，通融一下（摸出50两银子）
+I,A,B=2,狗仗人势，有啥了不起的。
+I,B=2,不和你一般见识。
+守卫,A,A=3,if game_check_money(50) then 谁是你兄弟。哦，不，不，咱们是兄弟，好兄弟。else 没钱，还想充胖子，趁大爷我还没发火，赶紧滚蛋。 end
+守卫,A,B=3,咱就看你不上眼，咋啦。
+守卫,B=3,
+I,A,A=3,if game_check_money(50) then  [game_change_money(-50);game_page(10803)]3,那我就进府去啦 else 不就几个臭钱吗，有啥稀奇。 end
+I,A,B=3,哼哼，呆会拿钱砸死你。
+I,B=3,
+else
+守卫,A=2,哟，您不是花满楼的小丽姑娘吗，里边请。
+守卫,B=2,这也是你随便溜达的地方吗，滚，别在小爷我面前晃悠。
+I,A,A=[game_page(10803)]2,是呀，秦大人约我今天来唱曲呢。（将错就错，趁机混入）
+I,A,B=2,呸，你妈才是花满楼的。
+I,B=2,
+end
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1EA8D9E5D3128E04BB13247BF99AF773

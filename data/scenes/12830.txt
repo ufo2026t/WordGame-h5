@@ -1,0 +1,33 @@
+id=12830
+名称=盗猎者营地
+作者=
+属性=4
+动作=
+{
+D5001=if game_check_scene_event(1322) then game_chat('盗猎者早已逃散，只剩空帐篷。') else if game_pop_fight_a(2,45) then if game_pop_fight_a(1,47) then game_add_scene_event(1322);game_add_message('捣毁盗猎营地，藏羚羊暂得安宁。');game_infobox('击退盗猎者！可前往藏羚羊谷领取谢礼。');game_reload_direct(0) else game_reload_direct(0) end else game_reload_direct(0) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,盗猎营地,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1322) then
+营地空荡，只余剥皮工具与未运走的羚羊角，风卷残雪。<p>
+<a href="game_page(12831)">前往藏羚羊谷</a><p>
+else
+帐篷里传出粗野笑声，地上堆着刚剥下的藏羚羊皮。<p>
+<a href="D5001" title="">冲入营地营救藏羚羊</a><p>
+end:>
+<a href="game_pop_a(3);game_page(12829)">返回荒原</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=9012345678ABCD12826AABBCC

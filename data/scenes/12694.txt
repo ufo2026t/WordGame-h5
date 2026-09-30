@@ -1,0 +1,38 @@
+id=12694
+名称=囊饼店
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,囊饼店,AT1000,0,0/2007.bmp"></CENTER>
+刚出炉的囊饼外酥里软，是驼队最爱带的干粮。<p>
+<a href="game_npc_talk('饼匠')">饼匠</a><p>
+<a href="if game_check_money(30) then game_change_money(-30);game_chat('买了几个囊饼充饥。');game_reload_direct(0) else game_chat('囊饼三十文一个。') end" title="">买囊饼（30文）</a><p>
+<a href="game_page(-2)">走马巷</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+饼匠=1,往东是九毒派，往西是东来山庄，别走错门。
+I=1,
+if game_check_scene_event(1300) then
+饼匠=2,东来公子请人夺回东来令的事，全城都在传。你是不是帮他的那位侠士？
+I=2,
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=6CA7DDCECF52DEF99C5EF3AFE56AA58F

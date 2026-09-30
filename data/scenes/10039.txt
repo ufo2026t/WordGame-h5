@@ -1,0 +1,56 @@
+id=10039
+名称=寻宝屋
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<:game_true(1)string game_include_str('cslx.upp'):>
+<CENTER><img src="gpic://296,40,(隶书,134,26,{Bold},{clGreen}),clWindow,欢迎来到寻宝乐园,AT1000,0,0/2007.bmp"></CENTER>
+<p>
+里面房间内有20个宝箱，要打开宝箱，您需要<a href="game_npc_talk('购买钥匙')">购买钥匙</a>。<br>
+一把钥匙只能开一个箱子。花费5<br>
+当然，开宝箱是凭运气，如果运气好，能开出极品装备或者大量的经验值等。
+<p>
+与老板<a href="if game_grade('无名',12) or game_check_role_values('无名',19,6000) then game_chat('本任务限12级以内，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('聊天') end">聊天</a><p>
+
+ <a href="game_page(10040)" title="">进入宝箱房间</a><p>
+每次进入房间，里面的宝箱都会更新。<p>
+
+<a href="game_page(10001)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+购买钥匙=1,开宝箱需要用钥匙，您要购买几把钥匙？
+I,A=[if game_check_money(5) then game_change_money(-5);game_goods_change_n('小号钥匙',1);game_infobox('您购买了1把钥匙') else game_infobox('您钱不够。')end]1,购买一个。
+I,B=[if game_check_money(25) then game_change_money(-25);game_goods_change_n('小号钥匙',5);game_infobox('您购买了5把钥匙') else game_infobox('您钱不够。')end]1,购买五个。
+I,C=[if game_check_money(50) then game_change_money(-50);game_goods_change_n('小号钥匙',10);game_infobox('您购买了10把钥匙') else game_infobox('您钱不够。')end]1,购买10个。
+I,D=[if game_check_money(100) then game_change_money(-100);game_goods_change_n('小号钥匙',20);game_infobox('您购买了20把钥匙') else game_infobox('您钱不够。')end]1,购买20个。
+I,E=[if game_check_money(250) then game_change_money(-250);game_goods_change_n('小号钥匙',50);game_infobox('您购买了50把钥匙') else game_infobox('您钱不够。')end]1,购买50个。
+
+if game_check_res_event(9031) then
+if game_check_goods_nmb('赤铁矿',3) then
+聊天=1,对，要的就是赤铁矿。
+I=[game_goods_change_n('赤铁矿',-3);game_comp_task(9031);game_infobox('您得到了100金币，100经验');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+聊天=1,您采集的赤铁矿数量不够。
+end
+else
+聊天=1,可帮我找3份<FONT color="#FF0000">赤铁矿</FONT>吗？
+I,A=[game_add_task(9031)]1,接受任务
+I,B=1,我现在没空。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C507182726C7FF25877653A755A6AA85

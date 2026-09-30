@@ -1,0 +1,54 @@
+id=10785
+名称=崇政殿
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clPurple}),clWindow,崇政,AT1001,0,62/2007.bmp) fixed no-repeat center center;">
+皇帝举行讲学的崇政殿<p>
+<:if game_check_scene_event(1137) and game_not_scene_event(1138) then
+if game_check_scene_event(1207) then
+一片树叶，轻轻的飘落了下来。<p>
+else
+<a href="game_npc_talk('宋高宗')">宋高宗</a>正在凝视着殿前的一颗树。<p>
+end
+end:>
+一条石板路，通往<a href="game_page(1)" title="">藏书阁</a><p>
+一条石板路，通往<a href="game_page(-1)" title="返回">选德殿</a><p>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+宋高宗=1,
+I=1,我问你，为何要这样对待岳元帅？
+if game_check_scene_event(1209) then
+宋高宗=2,大胆，你是当朝状元，胆敢如此对朕说话，来人，把他们拿下。
+I=2,哈哈，来不了人了，你周围这些小兵，都已被我等施了麻痹之术，非1个时辰动弹不得呢。
+宋高宗=3,（大惊）朕对你有知遇之恩，你却背叛于我。
+I=3,我只忠于正义，岳飞元帅乃国之栋梁，却被小人陷害。实乃朝廷之大不幸也。
+else
+宋高宗=2,大胆，你是何人，敢如此和朕说话，来人，把他们拿下。
+I=2,哈哈，来不了人了，你周围这些小兵，都已被我等施了麻痹之术，非1个时辰动弹不得呢。
+宋高宗=3,（大惊）你们，你们究竟是什么人，想干什么？
+I=3,我等是正义之士，岳飞元帅乃国之栋梁，却被小人陷害。实乃朝廷之大不幸也。
+end
+宋高宗=4,江山乃朕的江山，岳飞试图谋反，证据确凿。朕早朝上已经说过，谁再替岳飞说话，拉出去斩。
+I=4,哈哈哈哈，好个昏君，大宋将完，你死到临头了，还在摆皇帝的威风，难道忘了被金国俘虏的那些日子了吗？
+宋高宗=5,你，你们。来人那，快来人那，有刺客。
+I=5,与你多说无益，且去看看岳飞去。你说，岳飞在哪？说了饶你一命。
+宋高宗=[game_add_scene_event(1055);game_add_scene_event(1207)]6,在钱塘门那里，风波亭
+I=6,风波亭，不好，赶快去风波亭。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=38E45A841BD034F3634CD436C7DA3C4C

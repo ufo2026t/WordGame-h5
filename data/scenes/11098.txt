@@ -1,0 +1,36 @@
+id=11098
+名称=临安酒店二楼
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+这里是客房，要住店的需要先去楼下掌柜那交钱。<img src="gpic://30,40,(隶书,134,22,{Bold},{clWindowText}),clWindow,$tree,AT1000,0,0/2007.bmp"><p>
+<a href="game_page(1)" title="">客房一</a><p>
+<a href="game_page(2)" title="">客房二</a><p>
+<a href="game_page(3)" title="">客房三</a><p>
+<a href="game_page(4)" title="">客房五</a><p>
+<a href="game_page(5)" title="">客房六</a><p>
+<a href="if game_read_temp(1109801) then game_page(6) else game_chat('店小二：客官，请先到一楼掌柜处付钱。') end" title="">客房七</a><p>
+<a href="game_page(7)" title="">客房八</a><p>
+如果您现在不想或者不需要做任务，那么可以点此<a href="game_del_scene_event(1085);game_reload_direct(0)" title="">切换回白天</a>。<p>
+<p>
+<a href="game_page(10805)">下楼</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E644F613C66295779E16DA19A4BFD1A5

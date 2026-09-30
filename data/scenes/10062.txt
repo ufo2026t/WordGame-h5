@@ -1,0 +1,36 @@
+id=10062
+名称=婺州比武招亲告示
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<CENTER><img src="gpic://74,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,告示,AT1012,0,0/2007.bmp"></CENTER>
+ “比武招亲”<p>
+ 因小女刁蛮任性，时常外出惹是生非。且当今世道盗匪成群，妖魔横行。<p>
+故欲招德才兼备，武艺超群的有志之士与小女共结连理。<p>
+江府，即日。<p>
+&nbsp;<p>
+&nbsp;<p>
+<:game_sex_from_id(1)暗自思量：“小女生，江府，比武招亲，会不会是江雪儿？我且去江府看看去。”else
+“咦，该不会江雪儿要比武招亲了吧，都不知是些什么臭男人看上江雪儿了，待我女扮男装去试探试探。”:>
+<p>
+<a href="game_page(10060);game_add_scene_event(1008)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D08FD24FB61E5AB42874DD1EA88F9CFD

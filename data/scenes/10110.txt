@@ -1,0 +1,98 @@
+id=10110
+名称=宾至如归一楼客房3
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,134,42,{Bold},{clGreen}),clWindow,客房三,AT1004,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1234) or game_check_scene_event(1235) then
+房间是空的。
+else
+if game_check_scene_event(1229) then
+（本故事由网友 lilylily 提供创意）<br>
+郎中（玉生香）：请问药材找齐了吗？<br>
+if game_check_goods_nmb('胆南星',1) and game_check_goods_nmb('天麻',1) and game_check_goods_nmb('全蝎',1) then
+交出药材：“<a href="game_goods_change_n('胆南星',-1);game_goods_change_n('天麻',-1);game_goods_change_n('全蝎',-1);game_npc_talk('玉生香')">给，你看看是不是这些</a>”<br>
+else
+“嗯，还没呢，找这些药难度不小哦。”<br>
+郎中（玉生香）：是不容易，等你好消息哦。
+end
+
+else
+一个秀发<a href="game_npc_talk('女子')">女子</a>，身着华丽绸衣。<br>
+（本故事由网友 lilylily 提供创意）
+end
+end:>
+<p>
+<:game_true(1)string game_res_goods(5040,1,'首乌精'):>
+ <p>
+ <:game_true(1)string game_res_goods(15,1,'五年生草药'):>
+<p>
+
+<a href="game_page(10107)">返回客栈一楼走廊</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+玉生香=[game_add_scene_event(1234);game_comp_task(9016)]1,果然是这些。你真厉害。
+I=1,那没我的事啦，对了，接下来，你想去何方？
+玉生香=2,也许会去北方吧。
+I=2,那，咱们就先别过，后会有期。
+玉生香=3,后会有期
+I=3,
+if game_check_scene_event(1227) and game_check_scene_event(1228) then
+;;发现了伤员，也发现了女子
+女子=1,？？
+I=1,隔壁有个伤员，你是大夫，可否去看看？
+女子=2,悬壶济世乃是我的本份，你先回去，我一会过来。
+I=2,好
+else
+if game_check_scene_event(1228) then
+;;发现过了伤员，但没有发现女子
+女子=1,何人？乱窜！看打
+I=1,姑娘别生气，误闯，误闯
+女子=2,哦，为何乱跑？
+I=2,是这样的，隔壁发现一个采矿人被土匪所伤，委实可怜，我想找个大夫给救治一下。
+女子=3,这样，看来你人蛮好的，碰上我，也算你运气，我会不少疑难杂症。
+I=3,那太好了，伤员在隔壁5号房间，你去看看如何？
+女子=4,好，你先过去，我一会就来。
+I=4,
+else
+if game_check_scene_event(1227) then
+;;没有发现伤员，但发现过了女子
+女子=1,if game_sex_from_id(1) then 你这小子，又闯进来了，是不是看上我了啊 else 姑娘，又来坐坐？end
+I=1,没事，没事，我这就出去。
+else
+;;没有发现伤员，也没发现女子
+女子=1,干嘛？
+I=1,转转
+女子=2,你看着像本地人士，请问这里何处能采到药材？
+I=2,药材？北山为多。你会医术？
+女子=[game_add_scene_event(1227)]3,惭愧，粗通皮毛而已。
+I=3,姑娘谦虚了，敢问姑娘来自何方？
+女子=4,天津来的。
+I=4,远，没去过。
+女子=5,您贵姓？
+I=5,在下 string game_get_newname_at_id(1)
+女子=6,if game_checkname_abc('game_get_newname_at_id(1)') then 好奇怪的名字 else 嗯 end
+I=6,if game_sex_from_id(1) then 请问姑娘高姓大名 else 请问姐妹贵姓？ end
+女子=7,小女子名叫“玉生香”
+I=7,幸会幸会，我这还有点事，就先不打扰你了。
+女子=8,88
+I=8,88
+end
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1E7757D10DA7B1C4EB93807AFD81F7FA

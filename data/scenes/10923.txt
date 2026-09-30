@@ -1,0 +1,47 @@
+id=10923
+名称=一溪楼包间
+作者=
+属性=4
+动作=
+{
+D5001=if game_check_money(50) then game_change_money(-50);game_role_all_mtl(0);game_chat('西湖醋鱼上桌，味道鲜美，体力也恢复了些。');game_reload_direct(0) else game_chat('店小二：这道名菜五十文。') end
+D5002=if game_check_money(30) then game_change_money(-30);game_chat('饮了一壶绍兴女儿红，浑身暖洋洋的。');game_reload_direct(0) else game_chat('店小二：女儿红三十文。') end
+D5003=if game_check_scene_event(1324) then game_chat('今日已在包间听过小曲了。') else game_add_scene_event(1324);game_attribute_change(1,19,400);game_infobox('听一曲《平湖秋月》，经验+400。');game_reload_direct(0) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clMaroon}),clWindow,酒,AT1002,0,55/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,雅座,AT1000,0,0/2007.bmp"></CENTER>
+临窗雅座，窗外便是西湖烟波。索心兰特地留的这间包间，竹帘低垂，案上摆着女儿红与醋鱼菜单。<p>
+<a href="game_npc_talk('店小二')">店小二</a>在旁侍候。<p>
+<:game_true(1)string game_res_goods(0,1,'五毒丸'):><p>
+<:if not game_check_res_event(5244) then
+博古架下压着一只<a href="game_add_res_event(5244);game_goods_change_n('龙井茶',1);game_chat('在博古架下找到上等龙井一包。');game_reload_direct(0)" title="">旧茶匣</a>，似是前人遗忘。<p>
+end:>
+<a href="D5003" title="">听琴女奏一曲（已含在包间费中）</a><p>
+<a href="D5001" title="">点西湖醋鱼（50文）</a><p>
+<a href="D5002" title="">点绍兴女儿红（30文）</a><p>
+<:if game_check_scene_event(1093) and game_not_scene_event(1086) then
+楼上传来沉重脚步，像是有壮汉进了客房……<p>
+<a href="game_page(11098)">出包间，上二楼客房</a><p>
+else if game_check_scene_event(1085) then
+夜深了，楼下仍有酒客喧哗，楼上客房区却静得出奇。<p>
+end:>
+<p>
+<a href="game_page(10805)">下楼回大堂</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+店小二=1,客官，这包间是咱们一溪楼的招牌。醋鱼、女儿红、听曲，您吩咐就是。
+I=1,听说临安达官贵人也常来？
+店小二=2,那可不。苗府的刘大人就爱在这喝酒，有时还包下楼上客房谈事。咱们做小的，只管用酒菜，别的不问。
+I=2,明白了。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3FDD7061004F047CAE8D145F63BFC735

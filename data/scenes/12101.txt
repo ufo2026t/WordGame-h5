@@ -1,0 +1,107 @@
+id=12101
+名称=比武胜利
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,比武获胜,AT1000,0,0/2007.bmp"></CENTER>
+<:if game_check_scene_event(1209) then
+铁庄主：“<strong>文状元</strong>同时获得武林大会<strong>武功天下第一</strong>的，乃前无古人后无来者，稀世奇才。”
+else
+铁庄主：“年轻人，真不简单啊，竟然能力克群雄，本届武林大会盟主，非您莫属啊。”
+end:><p>
+<:if game_check_scene_event(1218) then
+武当张真人：“年轻人一人战胜各路高手，贫道佩服，佩服。”<p>
+少林方丈：“哦弥陀佛，老衲今天总算开了眼界了，竟能见识此等高人，真乃佛祖显灵。”<br>
+昆仑派掌门：“我一直以为是昆仑武功天下第一，今日见此一役，胜读十年书啊。”<br>
+天山派掌门：“我天山剑法，历来难有敌手，少侠武功，让我等自愧不如。”<br>
+if game_sex_from_id(1) then
+峨嵋师太：“少侠武功盖世，贫尼今日一见，也算三生有幸。”<br>
+else
+峨嵋师太：“哈哈，看来巾帼不让须眉，今日女侠连胜群雄，也算替我们女人出了一口气，看这些臭男人以后还敢嚣张不。”
+end
+if game_role_is_exist('李疏盈') and game_sex_from_id(1) then
+飞龙帮帮主：“天下第一，少侠当之无愧。以后要好生待疏盈，否则老夫定然饶不了你。”<br>
+string game_get_newname_at_id(1)：“晚辈紧尊前辈教诲。”<br>
+else
+飞龙帮帮主：“天下第一，少侠当之无愧。”
+end
+else
+;;是团体作战
+武当张真人：“虽是团队作战，但能多人配合，实现一加一大于二的效果，也是人才。”<p>
+少林方丈：“哦弥陀佛，善哉善哉。”<br>
+昆仑派掌门：“我一直以为是昆仑武功天下第一，现在还是这么认为，因为你们是以多胜少，胜之不武。”<br>
+天山派掌门：“天山剑阵，以后要吸收少侠的战略战术，威力定能更上一层楼。”<br>
+if game_sex_from_id(1) then
+峨嵋师太：“切，臭男人，不还是要联合女人才能胜利。”<br>
+else
+峨嵋师太：“今日的胜利，是在我们女人的领导下取得的，哈哈，我师太同为女人，脸上有光啊。”
+end
+if game_role_is_exist('李疏盈') and game_sex_from_id(1) then
+飞龙帮帮主：“少侠能联合众多高手，进退如一人，除了武功，更具高超领导力。小女跟着你，以后要好生待她，否则，老夫定然饶不了你。”<br>
+string game_get_newname_at_id(1)：“晚辈紧尊前辈教诲。”<br>
+else
+飞龙帮帮主：“少侠前途无量。”
+end
+end:>
+
+<:if game_role_is_exist('铁无梅') then
+if game_check_scene_event(1218) then
+铁无梅：“爹，string game_get_newname_at_id(1)哥哥厉害吧。”<br>
+铁庄主：“唔，却是武学奇才，难怪能得我宝贝女儿芳心。”<br>
+铁无梅：“爹，不说了，羞死人了。”
+else
+铁庄主：“少侠武功卓绝，小女能和你们在一起，我也放心了。”<br>
+铁无梅：“爹，您说什么呢。”<br>
+end
+else
+if game_role_is_exist('铁檑') then
+if game_check_scene_event(1218) then
+铁檑：“爹，string game_get_newname_at_id(1)小妹武功确实非凡吧。”<br>
+铁庄主：“你还好意思说，看看你自己。”<br>
+else
+铁庄主：“女侠技压群雄，老夫佩服，只叹我儿不争气，唉。”<br>
+铁檑：“爹，我的武功，也长进了很多的。”<br>
+铁庄主：“你给我闭嘴。”
+end
+
+end
+end:> <p>
+
+<:if game_check_scene_event(1217) then
+众门派：“武林大业，功在千秋，祝武林盟主，福寿无疆，光照史册。”<br>
+string game_get_newname_at_id(1)：“诸位请起。”<br>
+铁庄主：“今晚我庄摆下盛宴，大家一醉方休。”<p>
+else
+众门派：“我们一致推荐您做我们的武林盟主。”<br>
+1。<a href="game_add_scene_event(1217);game_reload_direct(0)" title="">接受</a><br>
+2。<a href="game_npc_talk('推辞')">推辞</a>
+end:>
+<p>
+<a href="game_page(10320)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+推辞=1,
+I=1,在下何德何能，坐的了这个武林盟主大位？我看，还是另选贤能吧。
+推辞=2,众门派@小侠过谦了，今日比武已经胜出，您做盟主，当今武林，无人敢说“不”字。
+I,A=[game_add_scene_event(1217);game_reload_direct(0)]2,蒙承各位错爱，在下就做了这盟主，今后，还望各位前辈多多照应。
+I,B=2,不行，这盟主大位，受之有愧，各位前辈还是另选高人为好。
+推辞,A=3,
+推辞,B=3,众门派@既然少侠决意不受，那我们也不好强求，这盟主之位，当日后再议吧。
+I,A=3,
+I,B=3,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=41E4851B1866607A4F92CB068622EA49

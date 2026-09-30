@@ -1,0 +1,43 @@
+id=12652
+名称=二楼走廊
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,二楼走廊,AT1000,0,0/2007.bmp"></CENTER>
+ 客栈二楼走廊，连着几个房间。走廊尽头挂着一个牛角号。<p>
+<a href="game_npc_talk('店小二')">店小二</a><p>
+<a href="game_page(1)">房间一</a><br>
+<a href="game_page(2)">房间二</a><br>
+<a href="game_page(3)">房间三</a><br>
+<a href="game_page(4)">房间四</a><br>
+<a href="game_page(5)">房间五</a><br>
+
+<:game_true(1)string game_res_goods(0,1,'牛黄'):><p>
+<p>
+<a href="game_page(-1)">客栈</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+店小二=1,二楼房间都满了，要住店可在楼下按夜晚。
+I=1,有什么消息吗？
+店小二=2,客人里有个商人在找玛瑙石，说是要带回中原。还有人议论九毒派教主手里的藏宝图。
+I=2,
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=42E176FBD40EC885C96447F7421D829D

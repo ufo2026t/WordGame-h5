@@ -1,0 +1,35 @@
+id=11015
+名称=珊瑚岛-张家堡
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://645,213,(隶书,134,160,{Bold},{clFuchsia}),clWindow,岛,AT1001,0,75/2007.bmp) fixed no-repeat center center;">
+ <CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,张家堡,AT1000,0,0/2007.bmp"></CENTER>
+张家堡，原先是海盗建的根据地<p>
+现在的张家堡已经不再做海盗，并且，由于赵构东逃海上避难时，救主有功，得到了大笔赏赐。<p>
+高宗回銮后，张家堡凭借关系，被指定为御用海产供应商。从此，财源滚滚。<p>
+钱多了就需要保护，所以，张家堡四周筑有高墙，挖有深沟。养了大狗和大批的251049009打手。<p>
+
+<a href="game_npc_talk('家丁')" title="">进堡</a>
+<a href="game_page(-2)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+家丁=1,你们来这干什么，鬼鬼祟祟的。
+I=1,哦，我们是附近的渔民，想来……
+家丁=2,想和我们堡主套交情，卖鱼给朝廷是吧，老规格，进门费50
+I=[if game_check_money(50) then game_change_money(-50);game_page(2) else game_infobox('您钱不够') end]2,恩，这点小意思。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=847C7B33E35030A98ADF9D066640AFAB

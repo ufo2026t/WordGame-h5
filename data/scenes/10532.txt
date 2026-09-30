@@ -1,0 +1,50 @@
+id=10532
+名称=书阁
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,天外天,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clGreen}),clWindow,书阁,AT1001,0,0/2007.bmp"></CENTER>
+山庄的藏书还真丰富。<p>
+山海经<p>
+渭南志<p>
+<p>
+<:if game_not_res_event(5261) then
+ 一本<a href="game_goods_change_n('存储卡',1);game_chat('书里掉出来一个存储卡。得到存储卡一个。');game_add_res_event(5261);game_reload_direct(0)" title=""><FONT color=#"FFFFFF">游戏编写指北</FONT></a>。
+ else
+ 一本游戏编写指北<p>
+ end:><
+<p>角落里有一张类似废纸的
+<:if game_not_res_event(game_get_pscene_id(0)) then
+ <a href="game_goods_change_n('九转还魂术',1);game_chat('捡到九转还魂术，学习后可在战斗中使用。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">旧纸片</a>，散发出淡淡的光芒。
+ else
+ 旧纸片。
+ end:>
+<p>
+
+<:game_true(1)阅读材料：string game_get_read_txt(0):><p>
+<:game_true(1)string game_res_goods(0,1,''):>
+
+<p>
+<a href="game_page(10529)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5D49AC581945F893133AE471CF6B8EAA

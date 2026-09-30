@@ -1,0 +1,47 @@
+id=12744
+名称=居民丁
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,居民丁,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('母亲')">母亲</a><p>
+<a href="game_npc_talk('娃娃')">娃娃</a><p>
+ 孩童在巷中追闹，见生人就躲到门后。<p>
+<p>
+<a href="game_page(-7)">中孚大街</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+母亲=1,别在街上乱跑，最近外来的侠士多，娃娃别接近生人。
+I=1,听说过什么吗？
+if game_check_scene_event(1289) and not game_check_scene_event(1300) then
+母亲=2,娃子听说东来公子的东来令被偷了，公子正急着呢。
+I=2,
+elseif game_check_scene_event(1300) then
+母亲=2,东来令找回来了，公子在山庄里请客，街上都在说有侠士帮了大忙。
+I=2,
+else
+母亲=2,戏院里唱戏的多，晚上去听听也挺热闹。
+I=2,
+end
+娃娃=1,我昨天看到九毒派的人在街上走，好吓人。
+I=1,
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=959B17A26928AC0D0B3AAF801E835FEF

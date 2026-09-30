@@ -1,0 +1,37 @@
+id=11843
+名称=上京皇宫内
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clFuchsia}),clWindow,皇宫内,AT1002,0,0/2007.bmp"></CENTER>
+<a href="game_npc_talk('宫女')">宫女</a><p>
+<a href="game_page(1)" title="">宫殿一</a><p>
+<a href="game_page(2)" title="">宫殿二</a><p>
+<a href="game_page(3)" title="">宫殿三</a><p>
+<a href="game_page(4)" title="">宫殿四</a><p>
+<a href="game_page(5)" title="">宫殿五</a><p>
+<a href="game_page(6)" title="">宫殿六</a><p>
+<:game_true(1)string game_res_goods(0,1,'干粮'):><p>
+<p>
+<a href="game_page(11842)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+宫女=1,这些年，到宫里的汉人是越来越多了。
+I=1,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=35B978E7127C85FC799BEC0121433196

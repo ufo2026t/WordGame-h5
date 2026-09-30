@@ -1,0 +1,28 @@
+id=12815
+名称=奈良-药师寺
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,药师寺,AT1000,0,0/2007.bmp"></CENTER>
+奈良旧都的古刹，药师三塔是奈良的地标。<p>
+<a href="game_npc_talk('老和尚')">老和尚</a><p>
+<a href="game_page(12104)">返回奈良县</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+老和尚=1,奈良以佛法安人心，可天下乱迹未恢啊。
+I=1,我们也在寻解法。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

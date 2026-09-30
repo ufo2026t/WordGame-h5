@@ -1,0 +1,36 @@
+id=12695
+名称=青稞饼店
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,青稞饼店,AT1000,0,0/2007.bmp"></CENTER>
+青稞饼带着谷物清香，比城内小酒馆的酒更招本地人待见。<p>
+<a href="game_npc_talk('老板娘')">老板娘</a><p>
+<a href="if game_check_money(40) then game_change_money(-40);game_chat('买了青稞饼，味道朴实。');game_reload_direct(0) else game_chat('青稞饼四十文。') end" title="">买青稞饼（40文）</a><p>
+<a href="game_page(-3)">走马巷</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+老板娘=1,中孚大街的醉仙楼才是请客的地方，咱们这儿管饱。
+I=1,
+老板娘=2,戏院大小姐最爱吃我家青穜饼，每回来都打赏一链钱。
+I=2,
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=FBC98926636E9F000B12D007C864A519

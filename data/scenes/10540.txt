@@ -1,0 +1,86 @@
+id=10540
+名称=小楼
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,天外天,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+<:game_read_temp(1054001)
+<bgsound src="$apppath$music\guzheng.mid" loop="-1">
+:>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clGreen}),clWindow,小楼1,AT1001,0,0/2007.bmp"></CENTER>
+<:game_read_temp(1054001)
+听琴中……，如果没有听到声音，可能您的声卡驱动没有安装完整，无法合成mid声音。<p>
+:>
+轻风吹过，玉石垂帘发出簌簌轻响。<p>
+楼上琴声悠悠。<p>
+上得楼来，见一女子伏案抚琴。<p>
+1。<a href="game_write_temp(1054001,1);game_page(10540)" title="">听琴</a><p>
+2。<a href="game_npc_talk('小珠')">聊天</a><p>
+
+
+
+<p>
+<a href="game_page(10539)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_read_temp(1054001) then
+if game_sex_from_id(1) then
+小珠=1,
+I=1,听你琴声，似乎有心事？
+小珠=2,公子真是精通音律呀。
+I,A=2,略懂一二。
+I,B=2,是姑娘琴声太传神了。
+小珠,A=[game_add_scene_event(1276)]3,那看来咱们是心有灵犀呢。我在翠红院8206号房，公子记得去找我啊。
+小珠,B=3,沦落天涯，唯琴声以寄托。
+I,A=3,if game_get_goods_count('翠红院贵宾金卡')>0 then 我有贵宾金卡呢，一定前来。  else 一定前来捧场。end
+if game_check_goods_nmb('水晶小熊摆件',1) then
+I,B=[game_goods_change_n('水晶小熊摆件',-1)]3,同时天涯沦落人，相逢何必曾相识，这个水晶小熊送给你吧。
+小珠,B=4,谢谢公子的礼物。
+else
+if game_check_goods_nmb('玫瑰花',1) then
+I,B=[game_goods_change_n('玫瑰花',-1)]3,同时天涯沦落人，相逢何必曾相识，送你一支玫瑰花。
+小珠,B=4,谢谢公子送的花。
+else
+I,B=3,同时天涯沦落人，相逢何必曾相识，要是手头有玫瑰花的话送你一枝。
+小珠,B=4,公子的心意我心领了，玫瑰花后院有我自己会去摘的。
+end
+end
+
+else
+小珠=1,这云庄主又纳妾了？
+I=1,不知道啊。
+小珠=2,哦，我以为你是……
+I=2,切，我怎么会看的上他。
+小珠=3,云庄主有钱有势，武功又高，只要他看上的，没几个能逃脱的。
+I=3,不会吧，云庄主不像是欺男霸女之徒。
+小珠=4,偶尔
+I=4,这世道，唉。
+end
+else
+if game_sex_from_id(1) then
+小珠=1,公子，可愿听小女抚琴一曲？
+I,A=[game_write_temp(1054001,1);game_write_name('听曲');game_page(10540)]1,好啊
+I,B=1,不了，我还有事呢。
+else
+小珠=1,姑娘，可愿听小女抚琴一曲？
+I,A=[game_write_temp(1054001,1);game_write_name('听曲');game_page(10540)]1,好啊
+I,B=1,不了，我还有事呢。
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=42F2E32DCDC2C22BE30FE87068EC219A

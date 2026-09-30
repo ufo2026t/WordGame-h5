@@ -1,0 +1,36 @@
+id=10601
+名称=六和塔
+作者=
+属性=
+TempKey=六和塔
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clOlive}),clWindow,六和塔,AT1001,0,0/2007.bmp"></CENTER>
+六和塔历史悠久，初建于北宋开宝四年（971），
+“智觉禅师延寿始于钱氏南果园开山建塔，因地造寺，以镇江潮，
+塔高九级，五十余丈，内藏佛舍利。”
+据说，六和塔建成之后，江潮果然不再荡溢迸流，而是乖乖地沿着原先的江道平稳地流动，
+作孽日久的钱塘江潮从此被镇伏，沿岸百姓再无惊溺之忧。
+岂料，最近妖怪占据了此塔，江潮又开始兴风作浪了。<p>
+<a href="game_page(1)" title="塔内多妖怪">进入六和塔</a>。
+<p>
+<a href="game_page(10584)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=230BE9CC0D0FF4F23BEE77661833D372

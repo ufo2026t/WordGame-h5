@@ -1,0 +1,29 @@
+id=11574
+名称=飞龙帮
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,飞龙帮,AT1002,0,0/2007.bmp"></CENTER>
+飞龙帮是中原第一大帮。帮主“过江飞龙”嫉恶如仇，且武功过人，因此在江湖上很有威望。<p>
+<a href="game_page(11604)" title="">进入</a>
+<p>
+<a href="game_page(11417)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0C728D3D0C5E7FBE714DD5C5D0E9E7D3

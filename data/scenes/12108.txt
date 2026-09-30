@@ -1,0 +1,42 @@
+id=12108
+名称=东大寺-正仓院
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,正仓院,AT1000,0,0/2007.bmp"></CENTER>
+仓库保存了不少好东西。<p>
+<:if game_check_scene_event(1220) and not game_check_scene_event(1333) then
+<FONT color=#FF0000>平忠正所要的唐物，或许就藏在这些箱子里。</FONT><p>
+end:>
+<a href="game_pop(8);game_chat('空的箱子。')" title="">一只箱子</a><p>
+<a href="game_pop(8);game_chat('空的箱子。')" title="">一只箱子</a><p>
+<a href="game_pop(8);game_chat('空的箱子。')" title="">一只箱子</a><p>
+<a href="game_pop(8);game_chat('空的箱子。')" title="">一只箱子</a><p>
+<a href="if game_check_res_event(5236) then game_chat('空的箱子。') else game_pop(8);game_add_res_event(5236);game_goods_change_n('罗钿紫檀五弦琵琶',1);game_chat('得到了一个罗钿紫檀五弦琵琶。')end" title="">一只箱子</a><p>
+<a href="game_pop(8);game_chat('空的箱子。')" title="">一只箱子</a><p>
+<a href="game_pop(8);game_chat('空的箱子。')" title="">一只箱子</a><p>
+<a href="if game_check_res_event(5237) then game_chat('空的箱子。') else game_pop(8);game_add_res_event(5237);game_goods_change_n('琉璃杯',1);game_chat('得到了一个琉璃杯。')end" title="">一只箱子</a><p>
+<a href="game_pop(8);game_chat('空的箱子。')" title="">一只箱子</a><p>
+<a href="game_pop(8);game_chat('空的箱子。')" title="">一只箱子</a><p>
+
+<p>
+<a href="game_page(12107)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=396C6BA5D78B2FCCA831260B7CAAD30E

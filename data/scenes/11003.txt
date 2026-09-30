@@ -1,0 +1,88 @@
+id=11003
+名称=净慈寺-大殿
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://349,347,(隶书,134,260,{Bold},{clWindowText}),clWindow,佛,AT1001,0,70/2007.bmp) fixed no-repeat center center;">
+净慈禅寺规模很大，内塑有500罗汉。<p>
+&nbsp;<p>
+<a href="if game_read_temp(1100301) then game_chat('每日一签，多则不灵。') else game_npc_talk('求签');game_write_temp(1100301,1) end">求签，心诚则灵</a><p>
+&nbsp;<p>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('香客甲')">香客甲</a><p>:>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('女香客')">女香客</a><p>:>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('香客乙')">香客乙</a><p>:>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('男香客')">男香客</a><p>:>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('香客丙')">香客丙</a><p>:>
+<a href="game_page(1)" title="">禅房</a><p>
+<p>
+<a href="game_page(-1)">退出</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+香客甲=1,听说这寺内的佛很灵，有求必应。
+I=1,
+女香客=1,我妈非要带我来这求子呢。
+I=1,香客妈@看你，都过门两年了，肚子一点动静都没，你不急，我还急着要抱孙子呢。
+香客乙=1,见庙烧香，见佛拜佛。
+I=1,
+男香客=1,都老大不小了，还没老婆，特来求菩萨保佑，早点找到梦中情人。
+I=1,
+香客丙=1,今天特地沐浴更衣，来求菩萨保佑，好中个秀才。
+I=1,
+求签=1,请选择
+I,A=1,求姻缘
+I,B=1,求财运
+I,C=1,求仕途
+if game_sex_from_id(1) then
+求签,A,A=2,上上签，美女就在眼前
+求签,A,B=2,中平
+求签,A,C=2,下下签，劳而无功
+求签,A,D=2,下下签，我爱的人，名花有主
+求签,A,E=2,中平，继续追了。
+求签,A,F=2,中平
+求签,B,A=2,上上签，哇，会中大奖哦
+求签,B,B=2,中平
+求签,B,C=2,下下签
+求签,B,D=2,中平，最近财运一般
+求签,B,E=2,中平
+求签,B,F=2,下下签，唉，又有人想你请客了。
+求签,C,A=2,上上签，官运亨通
+求签,C,B=2,中平
+求签,C,C=2,下下签，仕途不顺，提防小人。
+求签,C,D=2,中平
+求签,C,E=2,中平
+求签,C,F=2,下下签
+else
+求签,A,A=2,上上签，哇，一堆帅哥追你哦。
+求签,A,B=2,中平
+求签,A,C=2,下下签，帅哥被人抢走了。
+求签,A,D=2,下下签，我的爱，还在等待。
+求签,A,E=2,中平，感情生活一般。
+求签,A,F=2,中平
+求签,B,A=2,上上签，哇，会中大奖哦
+求签,B,B=2,中平，偶尔有人请你吃个饭了。
+求签,B,C=2,下下签
+求签,B,D=2,中平，最近财运一般
+求签,B,E=2,中平
+求签,B,F=2,下下签，你是不是好久没请人家吃饭了？该轮到你破费啦。
+求签,C,A=2,上上签，官运亨通，夫贵妻荣。
+求签,C,B=2,中平
+求签,C,C=2,下下签，仕途不顺，提防小人。
+求签,C,D=2,中平
+求签,C,E=2,中平
+求签,C,F=2,下下签
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0B8924802B3A9E459A07BD3F7136D637

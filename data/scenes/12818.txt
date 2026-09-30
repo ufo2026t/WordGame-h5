@@ -1,0 +1,37 @@
+id=12818
+名称=伊贺-城下町-西街
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,西街,AT1000,0,0/2007.bmp"></CENTER>
+静谧的住户区，偶见平氏旧部在此整理行装。<p>
+<a href="game_npc_talk('老婆婆')">老婆婆</a><p>
+<a href="game_page(12123)" title="">往平清盛家方向</a><p>
+<a href="game_page(12120)">返回城下町</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1293) then
+老婆婆=1,西街又能睡个安稳觉了。
+I=1,
+elseif game_check_scene_event(1219) then
+老婆婆=1,平清盛家就在街尾，千代小姐弟若还活着，该去看看。
+I=1,
+else
+老婆婆=1,西街住的多是平氏旧识，别乱闹事。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

@@ -1,0 +1,53 @@
+id=10091
+名称=地下室91
+作者=
+属性=34
+载入后=game_not_scene_event(1011);game_npc_talk('同伴')
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(楷体_GB2312,134,120,{Bold},{clWhite}),clSilver,地下室,AT1009,1,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<:
+if game_check_scene_event(1271) then
+一些椅子东倒西歪的
+else
+string game_get_newname_at_id(1)：“
+这里是地下室的最深处了。整个古堡几乎翻了个遍。
+那些新鲜脚印和诗词到底是谁留下的暂时没有发现新线索，等以后再继续查找。”
+end:>
+<p>
+<:game_check_scene_event(1011)地下室里很安静 else
+一个<a href="game_pop_fight_a(1,74);game_add_scene_event(1011);game_reload_direct(0)" title="打">衣着华丽的僵尸</a>正在那里练功。:><p>
+<p>
+一扇木门，到<a href="if game_random_chance(2) then game_pop_a(2);end game_page(10090)" title="">地下室90</a><p>
+<:game_true(1)string game_res_goods(5032,1,'还魂丹'):>
+<p>
+
+<a href="game_page(10067)">返回大厅</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_role_count(0) > 1 then
+同伴=1,
+I=[game_write_name('string game_get_newname_at_id(2)')]1,大家小心，僵尸王应该就在这里。
+if game_id_exist(3) then
+string game_get_newname_at_id(2)=1,全体备战。
+I=1,string game_get_newname_at_id(3)@坚持就是胜利。
+else
+string game_get_newname_at_id(2)=1,全体备战。
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B8F252E5437794B730454BB4D8C9EA04

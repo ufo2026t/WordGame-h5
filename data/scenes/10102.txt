@@ -1,0 +1,52 @@
+id=10102
+名称=破庙
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<:game_check_scene_event(1016)一个<a href="game_npc_talk('乞丐')">乞丐</a>正在呼呼大睡 else
+一个<a href="game_npc_talk('乞丐')">乞丐</a>在破庙内烤叫化鸡下酒。:>
+<p>
+
+<a href="game_page(10061)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1017) then
+乞丐=1,以后维护世界和平的重任就交给你啦。
+else
+if game_check_scene_event(1016) then
+乞丐=1,
+I=1,日上三竿了。
+乞丐=2,何人扰我清梦
+I=2,来而不往非礼也，上次你给我一个鸡屁股，我这次还你两个鸡屁股啊。
+乞丐=3,if game_sex_from_id(1) then 公子果然有情有义 else 姑娘家就是小气，为何再不多给一个。end
+I=3,您慢用，我先告辞了。
+乞丐=4,if game_sex_from_id(1) then 公子请留步 else 女侠请留步。end
+I=4,还有事么？
+乞丐=[game_goods_change_n('暗器制造',1);game_chat('得到暗器制造术一本');game_add_scene_event(1017);game_reload_direct(0)]5,我这有一本杂书，送给你吧，应该用的上。
+I=5,
+else
+乞丐=1,世人皆醒，我何妨独醉。
+I=1,世人皆醉，我又何必独醒，哈哈，逍遥好啊。
+乞丐=2,醉过方知酒浓，来，见者有份。
+I=2,不会吧，一个鸡屁股？
+乞丐=[game_add_scene_event(1016)]3,不要啊，还给我。
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=87ECBF748ECCA80E78C04CE3201AA362

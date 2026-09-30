@@ -1,0 +1,50 @@
+id=11554
+名称=石门关
+作者=
+属性=4
+TempKey=石门关
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,石门关,AT1001,0,0/2007.bmp"></CENTER>
+石门关是滇藏驿道上的一座雄关隘口，由两座高数百米的断崖峡谷，形两扇巨大的石门，当奔腾咆哮的怒江流经此地时，顿时陡狭，清流飞瀑，奔泻而出，地形非常险要，有 “一夫当关，万夫莫开”之势。
+<p>
+<:game_check_scene_event(1136)
+<a href="game_npc_talk('行人丙')">行人丙</a><p>
+else
+<a href="game_npc_talk('行人甲')">行人甲</a><p>
+<a href="game_npc_talk('行人乙')">行人乙</a><p>
+:>
+<:game_true(1)exeing game_include_str('mgnd.upp'):></strong><br>
+<p>
+<a href="game_page(11555)" title="">进关</a>
+<p>
+<a href="game_page(11418)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+行人甲=1,最近，凭借石门关天险，一群土匪在这里占山为王，祸害乡邻。
+I=1,
+行人丙=1,现在土匪没了，来这里玩的人也多起来了。风光真不错。
+I=1,
+行人乙=1,我有好多儿时的朋友都去做了土匪了，吃喝不愁，还有钱分。
+I=1,做土匪？那不是害人吗？
+行人乙=2,唉，这年头，我不害人，人就害我，怎么办呢？
+I=2,好好学习，天天向上才对。
+行人乙=3,废话。
+I=3,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B1482EBEBA4498B02DDBAFD252C1E6EA

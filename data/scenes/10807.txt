@@ -1,0 +1,37 @@
+id=10807
+名称=仙界天牢二层
+作者=
+属性=38
+载入后=game_pop_fight_a(1,91);game_write_temp(10807,1);game_reload_direct(0)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://538,267,(隶书,134,200,{Bold},{clWindowText}),clWindow,天牢,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,仙界,AT1000,0,0/2007.bmp"></CENTER>
+仙界的牢房，关押那些私逃下凡或者其他违反天条的神仙。<p>
+<:game_read_temp(10807)
+string game_get_newname_at_id(1)：“你这天将，和上层守门的一样。也像妖怪。”<p>
+烈火轻云：“唉，实话和你说吧，我是来自<a href="game_infobox('群号：44901218')" title="群号：44901218">玩游戏背单词qq群</a>的网友，在这客串一下做天将呢，刚才要不是我手下留情，你岂能打的过我？”<p>
+string game_get_newname_at_id(1)：“败了就败了，还吹什么牛啊。”<p>
+烈火轻云：“不和你一般见识，我像一片烈火的轻云，掠过蔚蓝的天心，永远歌唱着飞翔，飞翔着歌唱……”<p>
+:>
+进入<a href="game_page(1)" title="">天牢三层</a>。
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E5D13861830AB851A84C203E68FBB423

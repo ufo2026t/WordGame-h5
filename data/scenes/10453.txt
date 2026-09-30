@@ -1,0 +1,47 @@
+id=10453
+名称=东海岸边
+作者=
+属性=64
+TempKey=东海
+动作=
+{
+if game_check_scene_event(1006) then
+D5001=if game_question('要去临安吗？') then if game_check_money(15) then game_change_money(-15);game_page(10582) else game_chat('您钱不够，去临安要15两。') end end
+else
+D5001=game_chat('现在兰若寺妖怪闹腾的厉害，到临安的船已经停开了。');
+end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://645,213,(隶书,134,160,{Bold},{clGreen}),clWindow,东海岸,AT1001,0,60/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+这里是东海岸边了。<p>
+这里可以买到一些海鲜。<p>
+近段时间常有一些不明人士在这出没。据说和藏宝图有关。<p>
+<:if not game_grade('无名',15) then
+您的等级<FONT color=#"FF0000">偏低</FONT>，去东海各岛可能有危险。建议15级以上前往<p>
+end:>
+<a href="game_page(10454)" title="到小镇上逛逛，也许能买到点新鲜货">前往东海小镇</a><p>
+<a href="game_page(10455)" title="蛇岛">前往蛇岛</a><p>
+<a href="game_page(10477)" title="桃花岛">前往桃花岛</a><p>
+<a href="if game_grade('无名',20) then game_page(11013) else game_infobox('您的等级低于20，此岛离陆地远，到不了。') end" title="">前往珊瑚岛</a><p>
+<a href="if game_grade('无名',20) then game_page(11315) else game_infobox('您的等级低于20，此岛离陆地远，到不了。') end" title="">前往牡蛎岛</a><p>
+<a href="game_page(11606)" title="东渡日本">前往东瀛</a><p>
+
+
+<p>
+<a href="game_page(10061)" title="到婺州">返回婺州</a><p>
+<a href="D5001" title="到临安">返回临安</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=84DEDB910E1E06E64B938748CBB37BAE

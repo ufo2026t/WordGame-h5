@@ -1,0 +1,48 @@
+id=10388
+名称=兰若寺门口
+作者=
+属性=1
+动作=
+{
+D5001=if game_check_scene_event(1037) then game_pop_a(8);game_page(10419) else game_chat('这小路有机关，一般开启机关的设施是在寺内的。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,72,{Bold},{clWindowText}),clWindow,{-12712582@20}兰{-127@145}若{-127@290}寺,AT1002,0,0/2007.bmp) fixed no-repeat center center;">
+<bgsound src="$apppath$music\qnyh.mid" loop="-1">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<:if game_check_scene_event(1041) then
+半夜，草虫啾啾，十分安静，似乎黑暗中潜藏着什么。<p>
+
+ <a href="if game_check_scene_event(1040) then game_page(10389) else game_chat('情况有点复杂，我还是先白天来看看才行。') end" title="">进入寺内</a><p>
+
+
+else
+兰若寺，位于金华北郊，原先香火鼎盛，寺内僧人众多，名噪江南。<p>
+后来黑山老妖看中这块风水宝地，带着众小妖赶走了僧人，吓跑了香客。<p>
+而今，寺内十分荒凉，蒿草没人。<p>
+能否碰上<FONT color=#"0000FF">聂小倩</FONT>？<p>
+到了兰若寺门口。<p>
+<a href="game_page(10389)" title="">进入寺内</a><p>
+
+<a href="D5001" title="去兰若寺的背面瞧瞧">到兰若寺后院</a><p>
+
+end:>
+
+
+<a href="game_page(10061)">返回婺州地图</a>
+
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EBF84E85803CA67D932BB0201E600839

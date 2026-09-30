@@ -1,0 +1,34 @@
+id=10600
+名称=药师殿
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clWindowText}),clWindow,佛,AT1012,0,80/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,184,42,{Bold},{clBlack}),clWindow,药师殿,AT1003,0,0/2007.bmp"></CENTER>
+药师殿为近年重建，殿中供奉药师佛像，药师佛的左胁侍为日光遍照菩萨，简称日光菩萨，
+右胁侍为月光遍照菩萨，简称月光菩萨，合称“东方三圣”或“药师三尊”。
+殿左，有重建的罗汉堂，陈列五百罗汉像线刻石。
+<p>
+<:if not game_check_res_event(game_get_pscene_id(0)) then 一本<a href="game_pop_a(20);game_goods_change_n('药王神录',1);game_chat('捡到药王神录1。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">秘籍</a>。end:><p>
+
+<p>
+<a href="game_pop_a(2);game_page(10595)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E6CFD9122A120F195D296BD9503FB7C5

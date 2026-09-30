@@ -1,0 +1,84 @@
+id=12737
+名称=中孚大街
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<:if game_check_scene_event(1085) then
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clGray,半夜,AT1010,1,42/2007.bmp) fixed no-repeat center center;">
+else
+<BODY>
+end:>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,中孚大街,AT1000,0,0/2007.bmp"></CENTER>
+<:if not game_check_scene_event(1085) then
+街上人来人往，有人议论藏宝图，有人只顾着买饼。<p>
+<a href="game_npc_talk('过路侠客')">过路侠客</a><p>
+<a href="game_npc_talk('摆摊老汉')">摆摊老汉</a><p>
+<a href="game_npc_talk('布贩女子')">布贩女子</a><p>
+end:>
+<:if game_role_is_exist('丝路花雨') and game_check_scene_event(1312) and not game_check_scene_event(1318) then
+摆摊老汉喊：“今晚戏院有那位丝路花雨的专场，可别错过！”<p>
+elseif game_role_is_exist('丝路花雨') and game_check_scene_event(1318) then
+丝路花雨在街角向往来的驿队挥手：“花雨在西州结下了缘，下回走天涯。”<p>
+end:>
+西州最热闹的主街，戏院、酒肆、驿站林立。<p>
+<:if game_check_scene_event(1281) and not game_check_scene_event(1288) then
+<FONT color=#FF0000>江湖人议论：九毒派教主握有藏宝图碎块，邙山宝藏或在其图谋之中。</FONT><p>
+end:>
+<a href="game_page(1)">戏院</a><br>
+<a href="game_page(2)">说书馆</a><br>
+<a href="game_page(3)">醉仙楼</a><br>
+<a href="game_page(4)">驿站</a><br>
+<a href="game_page(5)">居民乙</a><br>
+<a href="game_page(6)">居民丙</a><br>
+<a href="game_page(7)">居民丁</a><br>
+<a href="game_page(8)">居民戊</a><br>
+<a href="game_page(9)">城外郊外</a><br>
+
+
+<p>
+<a href="game_page(-89)">西州城</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+过路侠客=1,我从少林路过来，西州比想象中更热闹。
+I=1,有什么消息？
+if game_check_scene_event(1288) then
+过路侠客=2,恭喜你拿到碎块！往邙山走吧，路上小心毒派追兵。
+I=2,
+elseif game_check_scene_event(1281) then
+过路侠客=2,教主闭门出神，似在图谋邙山。要进总坛，先找到在中原遇见过的莫延顿贺。
+I=2,
+else
+过路侠客=2,听说九毒派和东来山庄暗地里斗着，也跟藏宝图有关。
+I=2,
+end
+摆摊老汉=1,卖链子、打火石，江湖上的事我可不敢管。
+I=1,听说过什么？
+摆摊老汉=2,东来公子和戏院大小姐是点头交，两家明不来暗地里斗着。
+I=2,
+if game_check_scene_event(1300) then
+摆摊老汉=3,前几天东来令被盗的事传得满城飞，是不是你帮的？
+I=3,
+end
+布贩女子=1,我们商队明早走，在这儿买点饼干带着。
+I=1,教主的藏宝图是真的吗？
+布贩女子=2,谁知道呢？反正中原来的人多了起来，怕是要生乱子。
+I=2,
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0AE69E7641D7A96400F6F99DF8A75D3D

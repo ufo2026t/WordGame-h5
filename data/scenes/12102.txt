@@ -1,0 +1,56 @@
+id=12102
+名称=比武失败
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,比武失败,AT1000,0,0/2007.bmp"></CENTER>
+铁庄主：“年轻人，胜败乃兵家常事。不必气馁。”<p>
+<:if game_check_scene_event(1218) then
+武当张真人：“年轻人一人力敌各路高手，委实不简单啊。输之无愧。”<p>
+end:>
+<:if game_role_is_exist('铁无梅') then
+if game_check_scene_event(1218) then
+铁无梅：“爹，string game_get_newname_at_id(1)哥哥是单人迎战你们多位高手呢。”<br>
+铁庄主：“唔，在后辈当中，也算是厉害了，难怪能得我女儿芳心。”<br>
+铁无梅：“爹，还说，羞死人了。”
+else
+铁无梅：“爹，您还有什么压箱底的功夫，教教我们吧。”<br>
+铁庄主：“哈哈，无他，勤学苦练，功到自然成。”
+end
+else
+if game_role_is_exist('铁檑') then
+if game_check_scene_event(1218) then
+铁檑：“爹，string game_get_newname_at_id(1)小妹是单人迎战你们多个高手呢。”<br>
+铁庄主：“唔，女儿家由此武功，也算是厉害了，唉，你的武功，都比不上她呢。”<br>
+else
+铁檑：“爹，您还有什么压箱底的功夫，教教我们吧。”<br>
+铁庄主：“哈哈，无他，勤学苦练，功到自然成。”
+end
+
+end
+end:> <p>
+众门派：“大家继续比，高手定在你我之中。”<p>
+<:game_not_scene_event(1139) string game_get_newname_at_id(1)：“在下虽然不才，但和岳元帅有过一面之缘，救岳飞的事情，
+救岳飞的事情，在下会一力承担，绝不会让大家失望。”<p>
+众门派：“切……”:>
+<p>
+<a href="game_page(10320)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4A9F25281994A250EEF1D4AAD6C889D8

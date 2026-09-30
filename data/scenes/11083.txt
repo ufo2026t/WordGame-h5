@@ -1,0 +1,53 @@
+id=11083
+名称=吴山顶
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://300,300,(隶书,134,22,{Bold},{clWindowText}),clWindow,$tree,AT1000,0,68/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,山顶,AT1000,0,0/2007.bmp"></CENTER>
+山顶。<p>
+<:if not game_check_res_event(game_get_pscene_id(0)) then 几颗<a href="game_goods_change_n('十年生草药',3);game_chat('捡到十年生草药3颗。');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="">草药</a>。end:><p>
+<:if game_sex_from_id(1) then
+if game_role_is_exist('江雪儿') then
+<img src="$apppath$img\4.bmp">：“看，一只鸟飞过去了，好漂亮啊。”<p>
+end
+if game_role_is_exist('慕容丽雯') then
+<img src="$apppath$img\7.bmp">：“千江有水千江月，万里无云万里天，江南的景色真不错。”<p>
+end
+if game_role_is_exist('铁无梅') then
+<img src="$apppath$img\6.bmp">：“我小时候就喜欢爬山。”<p>
+end
+if game_role_is_exist('千代美') then
+<img src="$apppath$img\8.bmp">：“远处的皇宫真漂亮，难怪这么多人想做皇帝。”<p>
+end
+else
+if game_role_is_exist('胡飛') then
+<img src="$apppath$img\1.bmp">：“看天上云卷云舒。真是心情舒畅啊。远离江湖纷争。”<p>
+end
+if game_role_is_exist('宇文赫') then
+<img src="$apppath$img\3.bmp">：“只有打退了金兵，才会有百姓的安宁。”<p>
+end
+if game_role_is_exist('铁檑') then
+<img src="$apppath$img\46.bmp">：“看，远处的皇宫，又在载歌载舞，苦的只有普通百姓。”<p>
+end
+end:>
+<p>
+<a href="game_pop_a(2);game_page(-1)">返回</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D418508F9A2013BFE7EB38CD1201B6A0

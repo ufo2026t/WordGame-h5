@@ -1,0 +1,33 @@
+id=10322
+名称=和庄主比武结束
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://67,56,(隶书,134,42,{Bold},{clRed}),clWindow,剑,AT1012,0,20/2007.bmp"></CENTER>
+<:game_sex_from_id(1)“庄主果然武功高深不可测，晚辈甘拜下风。”else “庄主武功深不可测，小女子甘拜下风。”:><p>
+<img src="$apppath$img\47.bmp">铁庄主：“哈哈哈，老夫老矣，以后的天下还是要看你们的了。我这有一本铸剑杂书，送给你吧。”<p>
+“多谢铁庄主。”
+<p>
+<a href="game_goods_change_n('武器制造',1);game_infobox('得到“武器制造”书籍一本。');game_add_res_event(5154);game_page(10303);game_add_message('可到河西古墓探险，或者婺州。')" title="一本书">铸剑秘籍</a>
+<p>
+<a href="game_page(10303)">返回山庄前院</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=16B6645521E6E6E3E93F3841E63FBDDA

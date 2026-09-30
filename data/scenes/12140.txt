@@ -1,0 +1,46 @@
+id=12140
+名称=伊贺谷-赤石山
+作者=
+属性=38
+载入后=game_pop_fight_a(1,149)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,400,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,77/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,赤石山,AT1000,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+
+<:if game_check_scene_event(1221) then
+机关已经破坏。
+else
+if game_check_goods_nmb('忍者钥匙',1) then
+if game_check_goods_nmb('圣杯',1) then
+机关已经打开，圣杯已取走。
+else
+谷底有个机关装置，<a href="game_goods_change_n('忍者钥匙',-1);game_goods_change_n('圣杯',1);game_chat('忍者钥匙插入机关，机关开启，得到了圣杯。');game_add_scene_event(1221);game_reload_direct(0)" title="">用忍者钥匙开启</a>。
+end
+else
+谷底有个机关装置，<a href="game_pop_a(8);game_add_scene_event(1223);game_chat('开启机关失败，看来要打开这个机关，需要特殊的钥匙，再返回<strong>伊贺</strong>找找线索吧。')" title="">开启</a>。
+end
+end:><p>
+赤石山迷宫走到谷底；岩壁上刻着伊贺忍者留下的退阵，踏之可直回伊贺谷口。<p>
+<a href="game_pop_a(3);game_page(12124)">法阵<img src="$apppath$img\fazhen.gif" border="0"></a><p>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E522CC41A070B22CD35323500C2D6E05

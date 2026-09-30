@@ -1,0 +1,47 @@
+id=12613
+名称=12号房间
+作者=
+属性=38
+载入后=game_pop_fight_a(2,177)
+TempKey=
+动作=
+{
+D5001=game_pop(3);game_goods_change_n('智能芯片',-1);if not game_check_res_event(game_get_pscene_id(0)) then game_add_res_event(game_get_pscene_id(0));game_goods_change_n('九阳丹',5);game_attribute_change(0,19,3000);game_change_money(5000);game_infobox('工厂核心炸裂，幻境如烟消散。您得到了九阳丹5、金钱5000、经验3000。');game_kill_game_time(0);game_page(10570) else game_attribute_change(0,19,800);game_change_money(1000);game_infobox('幻境再度崩溃。时空震荡留下经验800、金钱1000。');game_kill_game_time(0);game_page(10570) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,十二号,AT1000,0,0/2007.bmp"></CENTER>
+
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,1,'硝石'):><p>
+
+ <:if game_check_scene_event(1278) then
+ if game_check_goods_nmb('智能芯片',1) then
+ 找到了芯片，<a href="D5001" title="">启动机器</a>，炸毁工厂并结束幻境。
+else
+机器无法启动，缺少一个<b>智能芯片</b>，去<FONT color=#FF0000>附近找找</FONT>。
+end
+
+else
+ 这里有一个高能武器，<a href="game_pop(3);game_add_scene_event(1278);game_reload_direct(0)" title="">启动看看</a>。
+end:>
+<p>
+
+<p>
+
+<a href="game_page(-2)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=597FF419F36416FB219B7394CFD3F7C4

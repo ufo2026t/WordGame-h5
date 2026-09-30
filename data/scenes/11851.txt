@@ -1,0 +1,32 @@
+id=11851
+名称=上京王府
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clFuchsia}),clWindow,房间一,AT1002,0,0/2007.bmp"></CENTER>
+房内只有一个<a href="game_npc_talk('丫鬟')">丫鬟</a>在。<p>
+墙上挂了几幅画。
+
+
+<p>
+<a href="game_page(11850)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+丫鬟=1,找老爷吗？去郊外赏花去了。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C6FF502FF662419D15B6E4A04B10CD2D

@@ -1,0 +1,43 @@
+id=12696
+名称=小旅社
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,小旅社,AT1000,0,0/2007.bmp"></CENTER>
+ 走马巷尽头的小旅社，价钱便宜，驻队常在此打尖。<p>
+<a href="game_npc_talk('掌柜')">掌柜</a><p>
+<a href="game_page(1)">账房与上楼</a><br>
+
+
+<p>
+<a href="game_page(-4)">走马巷</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+掌柜=1,小旅社便宜，就是夜里走马巷仍有些吵闹。
+I=1,有什么消息吗？
+掌柜=2,中原来的侠士多，有人寻藏宝图，有人找莫延顿贺。你若要打听，去醉仙楼或说书馆。
+I=2,
+if game_check_scene_event(1286) then
+掌柜=3,住在你楼上的商人说他找到玛瑙石了，看来很高兴。
+I=3,
+end
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=298CCCECB5FF148BED09928D97E8720F

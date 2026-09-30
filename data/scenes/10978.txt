@@ -1,0 +1,30 @@
+id=10978
+名称=望梅山庄内
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://321,320,(隶书,134,240,{Bold},{clOlive}),clWindow,梅,AT1009,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clYellow}),clWindow,飞霞流醉,AT1003,0,67/2007.bmp"></CENTER>
+<a href="game_page(1)" title="">大厅</a></a>
+<a href="if game_check_scene_event(1036) then game_page(2) else game_chat('我闲着没事去后院干吗呢？') end" title="">小院</a>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=1A54481B41444FBC095D2B4ED8FAAD86

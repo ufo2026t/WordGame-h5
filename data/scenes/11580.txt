@@ -1,0 +1,45 @@
+id=11580
+名称=朱仙镇客栈二楼
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,客栈二楼,AT1002,0,0/2007.bmp"></CENTER>
+<:game_true(1)string game_res_goods(0,3,'虫草王'):><p>
+客栈二楼走廊<p>
+<:game_check_scene_event(1085)
+现在是晚上。
+else
+现在是白天:><p>
+<a href="game_page(1)">客房一</a><p>
+<a href="game_page(2)">客房二</a><p>
+<a href="game_page(3)">客房三</a><p>
+<a href="game_page(4)">客房四</a><p>
+<a href="game_page(5)">客房五</a><p>
+<a href="game_page(6)">客房六</a><p>
+<a href="game_page(7)">客房七</a><p>
+<a href="game_page(8)">客房八</a><p>
+<a href="game_page(9)">客房九</a><p>
+
+
+<p>
+<a href="game_page(11571)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=5777C21C6BFE02A7A47D20BC4EC2988B

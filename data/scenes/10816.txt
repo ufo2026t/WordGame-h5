@@ -1,0 +1,50 @@
+id=10816
+名称=望云楼
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://642,320,(隶书,134,240,{Bold},{clWindowText}),clWindow,望云,AT1001,0,55/2007.bmp) fixed no-repeat center center;">
+昨夜西风凋碧树，<br>
+独上高楼，<br>
+望尽天涯路。<br>
+欲寄彩笺兼尺素，<br>
+山长水阔知何处。<br>
+<p>
+<:if game_check_scene_event(1137) and game_not_scene_event(1138) then
+if game_check_scene_event(1206) then
+该房间好久没人住了，地上落了很多灰。
+else
+run game_add_scene_event(1206)
+run game_write_temp(1081601,1)
+秦桧坐于东窗之下，正为岳飞之事踌躇不绝，见其妻王氏过来，便说：“现在岳飞已经在狱中，不知接下来如何办才好。”<br>
+王氏从袖中取出一个桔子，掰成两半，将一半递与秦桧<br>
+说：“此柑一掰即分，有何难哉？君不闻古语云：‘纵虎易兮擒虎难’乎？”<br>
+秦桧于是心领神会的点了点头。<p>
+end
+else
+房内无人。<p>
+end:>
+
+<:game_true(1)string game_res_goods(0,1,'迷踪蛊'):><p>
+
+ <p>
+<a href="if game_read_temp(1081601) then game_infobox('秦府高手：什么人，竟敢偷听秦大人谈话？');game_pop_fight_a(2,95);game_page(10814) else game_page(10814) end">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4B55735CC824C6153FEE6BB82A6F33FC

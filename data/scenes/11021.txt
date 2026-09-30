@@ -1,0 +1,46 @@
+id=11021
+名称=万灵山-大厅
+作者=
+属性=
+动作=
+{
+D5001=if game_check_scene_event(1077) then game_chat('柳仙人正在打坐，不便打扰。') else game_npc_talk('柳仙人') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://285,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,万灵山大厅,AT1000,0,0/2007.bmp"></CENTER>
+<:game_check_scene_event(1076)
+<a href="D5001">柳仙人</a>正闭目练功。<p>
+else
+柳仙人不在。进山采矿去了。<p>
+:>
+
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+柳仙人=[game_can_stop_chat(0)]1,……
+I=1,柳大仙人。
+柳仙人=2,请坐，请上坐。你们来此可是为那半封密信？
+I=2,仙人未卜先知。正是为此事。
+柳仙人=3,我夜观天象，见将星黯淡，岳帅恐有大难临头。宋室见危。
+I=3,密信和这有关？
+柳仙人=4,密信的内容我不知道。数月前，我应圣上邀请，前往皇宫赴宴，，忽见一黑衣人飞身而出。我拿下黑衣人，得到下半封密信，正好见丽妃去晋见皇上，就让她把密信带给皇上了。
+I=4,这么说，密信都在皇上那？
+柳仙人=5,后我和皇上谈起金人密信之事，皇上似乎并不知晓此事，密信由秦大人送进宫，但皇上还没看，上半封密信被人盗走，下半封密信我给了丽妃。按理说丽妃没这么大胆子，不敢私藏密信？
+I=5,会不会，密信在<FONT color=#"FF0000">丽妃</FONT>那又被人盗走？
+柳仙人=6,这个，我倒没想到。不过，你们虽武功高强，但这国家之事，异常凶险复杂，我看，还是不去理会的好啊。
+I=6,现家国危难，我等有志之士，当为国出力。
+柳仙人=[game_goods_change_n('迷踪蛊',1);game_add_scene_event(1077);game_can_stop_chat(1)]7,哦，呵呵，我这有“迷踪蛊”一个，送与你，也许可在危急时刻救你一命。
+I=7,多谢仙人。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E8B387D70BFA6DF1E6686F68ECB7FC28

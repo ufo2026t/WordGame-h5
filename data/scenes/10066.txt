@@ -1,0 +1,54 @@
+id=10066
+名称=小镇古堡
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;<BODY style="background:url(gpic://img_gubao.jpg) fixed no-repeat center center;">
+;;<DIV ID="ufoDiv" STYLE="z-index:-1;position:absolute;left:0px;top:0px; height:100%; width:102%;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='gpic://img_gubao.jpg', sizingMethod='scale');" ></DIV>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+夜探古堡。<p>
+
+古堡已经有上百年历史了，原先是一个大户人家所建，因主人收有一藏宝图，<br>
+关乎一价值连城的宝藏。结果引祸上身全家几十口人一夜之间被贼人所杀。藏宝图去向不明。<p>
+至此后，古堡一直无人敢住，听说半夜经常有凄婉的歌声传出……<p>
+<:if not game_grade('无名',4) then 您当前<FONT color=#"FF0000">等级过低</FONT>，来这里打僵尸王估计有一定难度哦。 end:>
+&nbsp;</P>
+忽然，阴风吹过，楼里发出了呜呜的声音。<p>
+&nbsp;</P>
+<:if game_check_scene_event(1013) or game_check_scene_event(1012) then 古堡的大门虚掩着，<a href="game_page(10067)" title="">进入</a>。 else
+月光下，一个长长的身影在快速移动。<br>
+瞬间，一<a href="game_npc_talk('不明人物')">穿着不俗的人</a>来到跟前。end:><p>
+
+<a href="if game_check_scene_event(1011) and not game_check_scene_event(1013) then if game_role_is_exist('宇文赫') then game_del_friend('宇文赫',0);game_infobox('宇文赫：“诸位就此别过，我先去婺州找能人异士，咱们婺州再会。”'); end end game_page(10001)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+不明人物=[game_can_stop_chat(0)]1,<img src="$apppath$img\3.bmp">默不作声。
+I=1,你是何人？是人是鬼？
+不明人物=2,if game_role_count(0)>1 then 你们else 你end是何许人物，为何深夜到此？
+I=2,if game_role_count(0)>1 then 我们else 我end听说这里半夜闹鬼，特来探查一番。看你穿着不是本地人士，怎么来的这里？
+不明人物=3,实不相瞒，我乃岳飞元帅手下的先锋官，前方战事出现了困难，岳元帅夜观天象，见紫微星日渐黯淡，显是大宋王朝危也。近日见东南方向忽现异星，因是力挽狂澜之能人异士在临安附近出现，特命我前来寻找。
+I=3,这奇人异士有和特征，见了如何认得？
+不明人物=4,岳元帅只说：“此人现在金星与婺女两星争华之地，乃是婺州附近”其他语焉不详。
+I=4,哦，难道这奇人异士在此古堡不成？
+不明人物=5,非也，我见此古堡阴气甚重，似有僵尸王出现之兆。为免僵尸王祸害人间，特前来除妖。
+I=5, 那这月黑风高之夜，正是阴气最重时候，白天除妖，岂不更容易？
+不明人物=6,你有所不知僵尸王未完全修炼成功之前，子午交界正是其吸收月之精华的时间，其防护力最弱。
+I,A=[game_can_stop_chat(1);game_add_scene_event(1012);game_reload_direct(0);game_add_friend('宇文赫',1)]6,那咱们一起进去除妖。
+I,B=[game_can_stop_chat(1);game_add_scene_event(1012);game_reload_direct(0)]6,有理，我这就进去除妖（不加入新朋友）。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E7811EE098C475462BF1EDA3F9E4B292

@@ -1,0 +1,33 @@
+id=12167
+名称=书院小树林
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://260,64,(隶书,134,48,{Bold},{clBlack}),clWindow,树林一,AT1003,0,0/2007.bmp"></CENTER>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(0,1,'银块'):><p>
+<:if game_not_scene_event(1224) and game_check_scene_event(1225) then
+一些<a href="game_pop_a(6);game_chat('没有发现任何线索')" title="查看">可疑的物品</a><p>
+end:>
+<a href="game_pop_a(3);game_page(1)" title="">前进</a>
+<p>
+<a href="game_page(11374)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=26F215A07AF62909EB333EB924EE4BF2

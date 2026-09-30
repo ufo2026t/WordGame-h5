@@ -1,0 +1,35 @@
+id=12802
+名称=平安京-客栈
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://74,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,客栈,AT1000,0,0/2007.bmp"></CENTER>
+平安京里为数不多的客栈，可略事歇息。<p>
+<a href="game_npc_talk('掌柜')">掌柜</a><p>
+<a href="if game_check_money(200) then game_change_money(-200);game_chat('付宿费二百文，在此歇了一宿，精神一振。');game_reload_direct(0) else game_chat('宿费二百文，您的钱不够。') end" title="">投宿歇息（200文）</a><p>
+<p>
+<a href="game_page(12152)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+if game_check_scene_event(1333) and not game_check_scene_event(1293) then
+掌柜=1,听说平氏要反攻了，源氏把守甚严，您若进宫，小心些。
+I=1,
+else
+掌柜=1,外地来的？住店200文。
+I=1,
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

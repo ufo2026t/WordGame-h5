@@ -1,0 +1,98 @@
+id=10114
+名称=婺州翠红院
+作者=
+属性=
+动作=
+{
+D5001=if game_check_money(20000) then game_change_money(-20000);game_write_temp(1011401,0);game_page(10115) else game_infobox('你钱不够，被妈咪给赶了出来。');game_page(10061)end
+D5002=if game_check_money(200) then game_change_money(-200);game_add_scene_event(1276);game_chat('妈咪压低声：琴师小珠偶在8206号房，别声张。');game_page(10061) else game_infobox('连茶钱也不够。') end
+D5003=if game_check_money(100) then game_change_money(-100);game_chat('你在门厅听完一曲，拱手告辞。');game_page(10061) else game_infobox('钱不够。') end
+D5004=if game_check_money(300) then game_change_money(-300);game_write_temp(1011401,1);game_page(10115) else game_infobox('钱不够。') end
+D5005=if game_check_money(500) then game_change_money(-500);game_write_temp(1011401,1);game_page(10115) else game_infobox('钱不够。') end
+D5006=if game_check_money(800) then game_change_money(-800);game_write_temp(1011401,1);game_page(10115) else game_infobox('钱不够。') end
+D5007=if game_check_money(1500) then game_change_money(-1500);game_write_temp(1011401,1);game_page(10115) else game_infobox('钱不够。') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<:if game_check_scene_event(1041) then
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clGray,半夜,AT1010,1,42/2007.bmp) fixed no-repeat center center;">
+else
+<BODY>
+end:>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+<CENTER><img src="gpic://171,56,(楷体_GB2312,134,42,{Bold},{clRed}),clOlive,院红翠,AT1012,0,0/2007.bmp"></CENTER>
+<p>
+翠红院艳名远播，门前总是车水马龙，人来人往。<p>
+不知有多少富商巨贾，豪门公子这里千金买笑。<p>
+<:if game_check_scene_event(1041) then
+  翠红院老板热情招呼到：“大半夜的来这里正是来对了地方，里面请。”<p>
+else
+  白天人少一些。<p>
+end:>
+<a href="game_npc_talk('妈咪')" title="">进入</a><p>
+
+<a href="game_page(10061)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_role_sex_count(1)> 0 then
+if game_sex_from_id(1) then
+妈咪=1,if game_role_sex_count(0)>0 then 公子请进。您身边的姑娘请到偏厅歇息，莫坏了人家清誉。 else 公子请进。 end
+I,A=1,if game_check_money(500) then [game_write_temp(1011401,0);game_attribute_change(1,9,-1);game_change_money(-500);game_page(10115)]1,请。
+I,B=1,[D5004]1,只在内厅品茶听曲，不招姑娘。
+I,C=1,[D5002]1,不进去，就在门外给200两打听个人。
+I,D=1,[D5003]1,门厅听一曲便走，不打扰。
+I,E=1,[game_chat('你拱手一别，转身离去。');game_page(10061)]1,正人君子，不踏此途。
+if game_role_sex_count(0)>0 then
+I,F=1,[D5006]1,请女伴去偏厅歇息，我自去内厅听琴。
+I,G=1,[game_chat('你示意女伴在外等候，一同离开。');game_page(10061)]1,携伴离开，不在此消磨。
+end
+妈咪,A=2,if game_check_money(500) then …… else 没钱来这瞎晃悠，滚开。 end
+妈咪,B=2,公子倒懂礼数，请。
+妈咪,C=2,哟，问人也要意思意思。
+妈咪,D=2,门厅那边请，不勉强。
+妈咪,E=2,慢走，下次再来也不迟。
+if game_role_sex_count(0)>0 then
+妈咪,F=2,这样甚好，不风流也不扫兴。
+妈咪,G=2,也好，省得院里起闲话。
+end
+else
+妈咪=1,你旁边的爷们可以进去，你就在外边候着吧。
+I=1,我有钱也不行啊？要多少钱，这楼我今天全包了。
+妈咪=2,谁会和银子过不去呢，今天花魁在此，如果你能出2万两，自可入内。
+I,A=[D5001]2,好，姑奶奶今天就让你开开眼。
+I,B=2,想的美，我有钱也不给你赚。
+I,C=[D5005]2,让他们进去，我在内厅喝茶，只打听小珠下落。
+I,D=[D5002]2,我不进去了，就在门外给200两问问小珠在哪。
+I,E=[D5007]2,出1500两，只请琴师弹一曲，不寻欢作乐。
+I,F=[game_chat('你冷哼一声，拂袖而去。');game_page(10061)]2,女侠不屑与此处纠缠，告辞。
+妈咪,A=2,……
+妈咪,B=2,哼。
+妈咪,C=2,姑娘倒会安排。
+妈咪,D=2,得，别挡着做生意。
+妈咪,E=2,琴师价钱可不含在里头，姑娘自己谈。
+妈咪,F=2,慢走，别坏了本院名声。
+end
+else
+妈咪=1,if game_role_count(0)>1 then 一群姑娘家的，出去出去，这是爷们寻欢作乐的地方 else 小姑娘长的眉清目秀，是不是无家可归啊，我们这随时欢迎你加盟啊。 end
+I,A=1,各位姐妹，今天我出钱，把这场子全包了，大家进去随便玩。
+I,B=1,[D5003]1,我只想在内厅外听一曲。
+I,C=1,[D5002]1,我找琴师小珠，不是来闹事的。
+I,D=1,[D5004]1,出300两，只入内厅品茶听曲。
+I,E=1,[game_chat('你摇摇头，转身离去。');game_page(10061)]1,算了，离开。
+妈咪,A=[game_delay(500);game_page(10061)]2,敢情是遇到花痴了，来人啊，把if game_role_count(0)>1 then 她们else 她end给我赶出去。
+妈咪,B=2,门厅那边请，别往里闯。
+妈咪,C=2,if game_check_scene_event(1276) then 小珠不在，8206号房自己问去 else 先付200两再说话 end
+妈咪,D=2,只喝茶不闹事就行，请。
+妈咪,E=2,走吧，别挡道。
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E24CA0C6A3A92197CD4A691C261DB3DA

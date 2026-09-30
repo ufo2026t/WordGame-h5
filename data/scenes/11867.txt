@@ -1,0 +1,47 @@
+id=11867
+名称=望湖别墅
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<:game_read_temp(1186701)
+<bgsound src="$apppath$music\天堂.mid" loop="-1">
+:>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clMaroon}),clWindow,沧浪亭,AT1002,0,0/2007.bmp"></CENTER>
+
+<:if game_role_is_exist('慕容丽雯') then
+if game_check_res_event(11727) then
+慕容丽雯：“喜欢听吗？”<a href="game_write_temp(1186701,1);game_page(11867)" title="">听琴</a>
+else
+慕容丽雯：“这里好幽静，有个古琴，轻弹一曲，多好。”<br>
+if game_sex_from_id(1) then
+string game_get_newname_at_id(1)：“只要你喜欢，我一定给你去找个古琴来。听说有一种叫“伯牙古琴”的，选材优良，做工精细，可惜可遇不可求。”。
+else
+string game_get_newname_at_id(1)：“是不错，下次有机会我弄个琴来。”。
+end
+end
+else
+string game_get_newname_at_id(1)：“西湖之水清兮”
+end:>
+
+
+<p>
+<a href="game_page(11861)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E4621AD5D6AD535FC302F401C2E7FD4F

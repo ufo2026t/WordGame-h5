@@ -1,0 +1,80 @@
+id=11404
+名称=黄鹤台遗址
+作者=
+属性=260
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://285,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,黄鹤台遗址,AT1000,0,0/2007.bmp"></CENTER>
+<p>
+<:if not game_grade('角色名',3) and game_role_count(0) =1 then 您<FONT color="#FF0000">单人独往</FONT>在迷宫内行走，危机重重。<br>
+建议您可以先到小镇上到处逛逛，比如<FONT color="#FF0000">客栈，柳树林</FONT>等地方，也许能找到帮手一起行动。 end:>
+
+<a href="game_npc_talk('村民辛')">村民辛</a><br>
+<a href="game_npc_talk('村民壬')">村民壬</a><br>
+<a href="game_npc_talk('村民癸')">村民癸</a><br>
+<a href="if game_grade('无名',7) or game_check_role_values('无名',19,3500) then game_chat('本任务限7级，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('村民老刘') end">村民老刘</a><br>
+<a href="if game_grade('无名',10) or game_check_role_values('无名',19,5000) then game_chat('本任务限10级以内，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('朱一刀') end">朱一刀</a>
+
+调整迷宫难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):><p>
+进入黄鹤台前是否<a href="game_save(0)" title="">存盘</a>？这样万一被怪打死，可以从“<b>存取进度</b>”按钮那里读盘恢复目前的进度<p>
+进入<a href="game_page(12368)" title="">黄鹤台</a>
+;;池塘里有不少小鱼在游动，<a href="if game_pop_a(3) and game_random_chance(4) then game_goods_change_n('石斑鱼',1);game_chat('恭喜：抓到了一条石斑鱼。') else game_chat('抓鱼失败，鱼逃走了。') end" title="试试能捉到鱼不？">抓鱼</a>。<p>
+<p>
+<a href="game_page(-3)">返回</a>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+村民辛=1,我经常在这附近砍柴，可从不敢进这废墟内。
+I=1,为什么？
+村民辛=2,听我爷爷的爷爷说啊，这里远古时候是个小城镇，后来因为天灾一夜之间成了废墟。有大胆的人进废墟都是有去无回。
+I=2,
+村民壬=1,这黄鹤台内听说多鬼怪，也多陷阱暗坑，还有无底洞呢？
+I=1,
+村民癸=1,都是人吓人的，没这么可怕。
+I=1,你有进去过吗？
+村民癸=2,没进去过，小命就一条，万一他们说的是真的呢？
+I=2,
+
+if game_check_res_event(9024) then
+if game_check_goods_nmb('铜块',1) then
+村民老刘=1,对，要的就是铜块。
+I=[game_goods_change_n('铜块',-1);game_comp_task(9024);game_infobox('您得到了100金币，150经验');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+村民老刘=1,您采集的铜块数量不够。
+end
+else
+村民老刘=1,我想做铜壶，听说这迷宫内可以捡到铜块，但我不敢进去，你可帮我找1份<FONT color="#FF0000">铜块</FONT>吗？
+I,A=[game_add_task(9024)]1,接受任务
+I,B=1,我现在没空。
+end
+
+if game_check_res_event(9026) then
+if game_check_goods_nmb('银块',1) then
+朱一刀=1,对，要的就是银块。
+I=[game_goods_change_n('银块',-1);game_comp_task(9026);game_infobox('您得到了500金币，500经验');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+朱一刀=1,您采集的银块数量不够。
+end
+else
+朱一刀=1,我需要上等银块来做精美首饰，听说这遗址内能捡到，只是我不敢进去，怕妖怪，你可帮我找1份<FONT color="#FF0000">银块</FONT>吗？
+I,A=[game_add_task(9026)]1,接受任务
+I,B=1,我现在没空。
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=09F4C5066E95655877FBADA391DC0EE5

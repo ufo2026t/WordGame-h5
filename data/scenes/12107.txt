@@ -1,0 +1,35 @@
+id=12107
+名称=东大寺
+作者=
+属性=
+TempKey=东大寺
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,东大寺,AT1000,0,0/2007.bmp"></CENTER>
+东大寺以佛像巨大而著名，佛坐像高达15米。这尊佛像始建于公元747年。<p>
+东大寺里有<a href="game_page(1)" title="">正仓院</a>，是寺院的仓库。<p>
+<a href="game_page(2)" title="">前殿</a><p>
+<a href="game_page(3)" title="">中殿</a><p>
+<a href="game_page(4)" title="">大殿</a><p>
+<a href="game_page(5)" title="">佛像内部</a><p>
+
+<p>
+<a href="game_page(12104)">返回奈良县</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D0B2B0E0F1900B78D4AF9195CCE5B2D1

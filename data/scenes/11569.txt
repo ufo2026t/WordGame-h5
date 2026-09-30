@@ -1,0 +1,40 @@
+id=11569
+名称=望湖别墅-院子
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clMaroon}),clWindow,望湖别墅,AT1002,0,0/2007.bmp"></CENTER>
+院子内<p>
+<:game_check_res_event(5221)
+<a href="game_npc_talk('管家')" title="管家">管家老赵</a><p>
+:>
+<a href="if game_check_scene_event(1141) then game_page(11859) else game_chat('您没有购买，这房间无法进入。') end">客厅</a><p>
+<a href="if game_check_scene_event(1142) then game_page(11860) else game_chat('您没有购买，这房间无法进入。') end">花园</a><p>
+<a href="if game_check_scene_event(1143) then game_page(11861) else game_chat('您没有购买，这房间无法进入。') end">后院</a><p>
+<:if game_check_scene_event(1140) then
+<a href="game_role_all_mtl(0);game_chat('在院内歇息片刻，全队命、体、灵均已恢复全满。');game_reload_direct(0)" title="免费恢复全队命体灵">休息</a><p>
+end:>
+<:game_check_res_event(5223)家丁乙<p>:>
+<:game_check_res_event(5228)丫鬟乙<p>:>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+管家=1,if game_sex_from_id(1) then 公子 else 小姐 end 好。这家有我在，您放心吧。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=D0C84311478E53E1BB36D3256BCAFE8D

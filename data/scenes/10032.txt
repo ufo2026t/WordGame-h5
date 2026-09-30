@@ -1,0 +1,41 @@
+id=10032
+名称=矿洞底下一层32号地块
+作者=
+属性=38
+载入后=game_pop_fight_a(1, 61)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clWindow,迷宫,AT1000,1,75/2007.bmp) fixed no-repeat center center;">
+这里是矿洞的底下一层地块。<p>
+这里路不通了，迷宫出口不在这里。<br>
+
+此处地势平坦，比较明亮，远处似乎有不明生物在晃动。<br>
+<:game_true(1)阅读材料：string game_get_read_txt(0):><p>
+<:game_true(1)string game_res_goods(5021,1,'玛瑙石'):>
+
+<p>
+<a href="game_page(10031)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+江雪儿=1,
+I=1,没路了。
+江雪儿=2,往回走吧，看你这向导当的。
+I=2,我要是手里有地图，就好了。
+江雪儿=3,有地图的还叫迷宫吗？
+
+
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4593A7EAC4028FA6652B79AFFB5CE087

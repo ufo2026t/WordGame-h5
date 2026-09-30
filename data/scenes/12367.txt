@@ -1,0 +1,67 @@
+id=12367
+名称=村东豆腐坊
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,豆腐坊,AT1000,0,0/2007.bmp"></CENTER>
+豆腐坊里有些前来买豆腐的村民，您可以和村民聊聊，接一些低等级的任务，以尽快提高等级。等级高了后战斗力，防护和速度都会提高。<p>
+村民小孙：“听说有种法术叫妙手空空，可以在战斗时偷取到敌人身上的钱物。”<br>
+村民大牛：“在婺州有个乞丐据说就会这种法术，只是很多人去问给钱也不教呢。”<p>
+
+<a href="if game_grade('无名',6) or game_check_role_values('无名',19,3000) then game_chat('本任务限6级，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('豆腐东施') end">豆腐东施</a>：“这些天豆腐生意真不错啊，每天都能卖掉三四架子。”<p>
+<a href="game_npc_talk('村民己')">村民己</a><br>
+<a href="game_npc_talk('村民庚')">村民庚</a><br>
+<a href="if game_grade('无名',6) or game_check_role_values('无名',19,3000) then game_chat('本任务限6级，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('村民瘦猴') end">村民瘦猴</a><br>
+<a href="game_page(11401)">返回</a><br>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+村民己=1,这里的豆腐好吃，我每天来买一块。
+I=1,
+村民庚=1,离这不远的无剑山庄，据说藏有神兵利器？
+I=1,是什么兵刃？
+村民庚=2,我也不太清楚，没人见过，也许是传闻吧。
+I=2,
+if game_check_res_event(9017) then
+if game_check_goods_nmb('蜂蜜',1) then
+豆腐东施=1,对，要的就是蜂蜜。
+I=[game_goods_change_n('蜂蜜',-1);game_comp_task(9017);game_infobox('您得到了120金币，102经验，');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+豆腐东施=1,您采的蜂蜜数量不够。
+end
+else
+豆腐东施=1,可帮我找1份<FONT color="#FF0000">蜂蜜</FONT>吗？
+I,A=[game_add_task(9017)]1,接受任务
+I,B=1,我现在没空。
+end
+
+
+if game_check_res_event(9023) then
+if game_check_goods_nmb('硝石',1) then
+村民瘦猴=1,对，要的就是硝石。
+I=[game_goods_change_n('硝石',-1);game_comp_task(9023);game_infobox('您得到了100金币，100经验');game_reload_chatlist(0)]1,提交任务（鼠标点击此处提交物品）。
+else
+村民瘦猴=1,您采集的硝石数量不够。
+end
+else
+村民瘦猴=1,可帮我找1份<FONT color="#FF0000">硝石</FONT>吗？
+I,A=[game_add_task(9023)]1,接受任务
+I,B=1,我现在没空。
+end
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=463BD61F530A4ADB8E00A6AC13D0C4E1

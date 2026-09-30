@@ -1,0 +1,31 @@
+id=10500
+名称=黄药师藏经阁
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://483,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,藏经阁,AT1012,0,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+经历风雨侵蚀，经卷散乱，满室纸屑。<p>
+地上也满是纸片，多是药理笔记，字迹已漫漶难辨。<p>
+<:if not game_check_res_event(game_get_pscene_id(0)) then 在一个不起眼的角落里，有个<a href="game_pop_a(9);game_goods_change_n('药王神录',1);game_chat('捡到药王神录一本。可修习炼药术');game_add_res_event(game_get_pscene_id(0));game_reload_direct(0)" title="好东西">木头盒子</a>。end:>
+
+<p>
+<a href="game_page(10499)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0617C3703A09EF670A5B395BBA601254

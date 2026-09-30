@@ -1,0 +1,39 @@
+id=12209
+名称=平安京-小巷-大宅院
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,客厅,AT1000,0,0/2007.bmp"></CENTER>
+客厅的墙上画了很多壁画，大多是观花赏月，饮酒作乐的场景。<br>
+<p>
+
+<:if game_check_scene_event(1241) then
+房间的门关着。
+else
+if game_role_is_exist('千代美') then
+千代：“看看这些画，就知是奢靡之人，死了活该。”<br>
+end
+宅子的主人楼内设置了一间规模不小的神殿，用来镇鬼。<br>
+进入<a href="game_page(1)" title="">神殿</a>
+end:>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=98AA8540D7713FF1682DE675C732FE3C

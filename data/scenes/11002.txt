@@ -1,0 +1,50 @@
+id=11002
+名称=净慈寺内-大院
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://349,347,(隶书,134,260,{Bold},{clWindowText}),clWindow,佛,AT1001,0,70/2007.bmp) fixed no-repeat center center;">
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('香客甲')">香客甲</a><p>:>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('女香客')">女香客</a><p>:>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('香客乙')">香客乙</a><p>:>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('男香客')">男香客</a><p>:>
+<:game_random_chance_at_sleep(2)<a href="game_npc_talk('香客丙')">香客丙</a><p>:>
+<a href="game_page(1)" title="">进入大殿</a><p>
+小路，<a href="if game_check_scene_event(1072) then game_pop_a(5);game_page(3) else game_npc_talk('小和尚') end" title="">前往雷锋塔</a>
+<p>
+<a href="game_page(-1)">退出</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+小和尚=1,if game_sex_from_id(1) then 施主，else 女施主 end 请留步。
+I=1,怎么了？
+小和尚=2,您有所不知，这雷峰塔现在被妖孽所占，如若人去那里，皆尸骨无存。所以，方丈吩咐，不要让香客去往那里。
+I=2,呵呵，不碍事，我习得文武艺，专杀妖和怪。
+小和尚=3,这妖，法力无边，非拳脚之术所能降伏啊。
+I=3,你看（说罢，露了一手给小和尚看过）
+小和尚=4,if game_sex_from_id(1) then 施主，else 女施主 end 确非等闲之辈。阿弥陀佛。
+I=[game_pop_a(5);game_page(3)]4,到雷锋塔去。
+香客甲=1,雷峰塔上的妖怪越来越多了，也不见官府有啥动静。
+I=1,
+女香客=1,这万松岭上现在都有妖怪了，我绕了很长的山路才到这，累死我了。
+I=1,
+香客乙=1,听说，这寺内的老方丈乃是有道高人，不知真假。
+I=1,
+男香客=1,我现在要么去灵隐，要么来这里，都不去梵天寺上香了，因为那里的和尚竟敢骂我。
+I=1,
+香客丙=1,听说现在北方打战打的好厉害，这里还算平静。
+I=1,
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=774DE34FD988BAD40DDFAB8CFD258CC2

@@ -1,0 +1,31 @@
+id=10579
+名称=北面小院
+作者=
+属性=6
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+旁边是一间马房。<p>
+一匹黑马引颈长嘶，其他马儿都在安心吃草。<p>
+<:game_read_temp(1057901)
+一个黑影一闪而过，似乎对马料做了手脚。<a href="game_chat('果然，马料内被人下了软骨粉，马吃后就会四肢无力，不能奔跑。');game_write_temp(1057902,1);" title="">看个究竟</a>。:>
+<p>
+<a href="game_page(10577)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3E86C4C21E645C6A1497E0EB57AAF895

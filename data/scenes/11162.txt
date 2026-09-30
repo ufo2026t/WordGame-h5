@@ -1,0 +1,40 @@
+id=11162
+名称=野猪湖
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clGreen}),clWindow,野猪湖,AT1002,0,0/2007.bmp"></CENTER>
+很多年以前，有一个小湖泊，水深，清澈。后来，湖泊逐渐被泥沙淤积，渐渐变成了一个沼泽地。<p>
+<:game_true(1)string game_res_goods(0,5,'百年灵芝'):><p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):>
+<p>
+<a href="game_page(1)" title="">进入野猪湖</a>
+<p>
+<a href="game_page(10001)">返回小镇</a>
+<p>
+在野猪湖的附近有一座年代久远的
+<p><a href="game_page(10346)" title="去古墓探险"><img src="gpic://74,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,古墓,AT1000,1,0/2007.bmp"></a>有一定难度，适合等级五级以上玩家前往探险
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F8BCC0F7C5C425CEB00729B075F16067

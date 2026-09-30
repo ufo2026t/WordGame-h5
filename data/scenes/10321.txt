@@ -1,0 +1,32 @@
+id=10321
+名称=
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://67,56,(隶书,134,42,{Bold},{clRed}),clWindow,剑,AT1012,0,20/2007.bmp"></CENTER>
+<img src="$apppath$img\47.bmp">铁庄主：“这怎么可能，你一定是出老千。”<p>
+<:game_sex_from_id(1)“承让，承让，晚辈失礼了。”else “小女子多谢庄主承让。”:>
+<p>
+“哼，本庄主平生最瞧不起弄虚作假之人，你走吧。”
+<p>
+<a href="game_page(10303)">返回山庄前院</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BE1EF56C215691872D2B25D197118BE2

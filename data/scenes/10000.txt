@@ -1,0 +1,44 @@
+id=10000
+名称=开始游戏
+作者=傅铖荣
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML>
+<HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="0">
+</HEAD>
+<body>
+<img src="gpic://64,174,(隶书,134,42,{Bold},{clBlack}),clWindow,{2@2}神{2@42}镜{2@82}传{2@122}说,AT1001,0,0/2007.bmp" style="float:left;">
+<CENTER><img src="file://$apppath$img\logo.jpg" alt="武侠游戏背单词-神镜传说 此图片由网友Fleiy友情提供"></center>
+<p>精于心，简于形。本版为单机重制，不联网。
+<p>
+<table width="75%" border="0" align="center">
+  <tr>
+;;跳过了一个带性别选择的页面
+    <td><strong><a href="game_start_now(1);game_page(10301)" title="开始新游戏，单机运行"><font size="+2">开始游戏</font></a></strong></td>
+    <td><a href="game_save(0)" title="读取存盘游戏继续玩">旧梦再续(<:game_true(1)string game_inttostr(game_save_count(0)):>存档可用)</a></td>
+  </tr>
+</table>
+
+感谢热心网友名单：（排名不分先后）
+从头开始，妮妮，FIRE王子，crazy fish，暗黑♂狂人，失魂ゞ魚，K★Y，Sam.J.Zheng,life,烈火轻云，索心兰，……
+<p>
+<hr>
+<br>本机游戏更新时间：<FONT color=#FF0000>2018年4月5号</FONT><br>
+</body>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=780BA1F598EBCF58205CA02FC3DA6098

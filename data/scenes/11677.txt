@@ -1,0 +1,36 @@
+id=11677
+名称=飞龙帮-仓库
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://171,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,仓库,AT1002,0,0/2007.bmp"></CENTER>
+仓库里有很多东西。<p>
+一只<a href="if game_not_res_event(5208) then game_pop(6);game_add_res_event(5208);game_goods_change_n('雪莲',1);game_chat('得到物品：雪莲') else game_chat('箱子已打开') end" title="">箱子</a>。<p>
+一只<a href="if game_not_res_event(5209) then game_pop(6);game_add_res_event(5209);game_goods_change_n('虫草王',1);game_chat('得到物品：虫草王') else game_chat('箱子已打开') end" title="">箱子</a>。<p>
+一只<a href="if game_not_res_event(5210) then game_pop(6);game_add_res_event(5210);game_goods_change_n('古藤精',1);game_chat('得到物品：古藤精') else game_chat('箱子已打开') end" title="">箱子</a>。<p>
+一只<a href="if game_not_res_event(5211) then game_pop(6);game_add_res_event(5211);game_goods_change_n('红酒',1);game_chat('得到物品：红酒') else game_chat('箱子已打开') end" title="">箱子</a>。<p>
+一只<a href="if game_not_res_event(5212) then game_pop(6);game_add_res_event(5212);game_goods_change_n('蜂王浆',1);game_chat('得到物品：蜂王浆') else game_chat('箱子已打开') end" title="">箱子</a>。<p>
+一只<a href="if game_not_res_event(5213) then game_pop(6);game_add_res_event(5213);game_goods_change_n('龙筋鞭',1);game_chat('得到物品：龙筋鞭') else game_chat('箱子已打开') end" title="">箱子</a>。<p>
+一只<a href="if game_not_res_event(5214) then game_pop(6);game_add_res_event(5214);game_goods_change_n('白金戒指',1);game_chat('得到物品：白金戒指') else game_chat('箱子已打开') end" title="">箱子</a>。<p>
+
+<p>
+<a href="game_page(11667)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=B0C8D5CB0F2E94F4F33583AC56E1FBE3

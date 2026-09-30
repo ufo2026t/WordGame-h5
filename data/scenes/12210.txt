@@ -1,0 +1,55 @@
+id=12210
+名称=平安京-小巷-神殿
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,神殿,AT1000,0,0/2007.bmp"></CENTER>
+神殿内供奉着十二神将的雕塑。<br>
+由于久没上香，雕塑上结满了蜘蛛网和落满了灰尘。<p>
+
+<p>
+
+<:if game_check_scene_event(1241) then
+房间的门关着。
+else
+if game_check_scene_event(1240) then
+边上显示出了一个矮门，通往地下室。鬼怪可能躲在下面。<br>
+进入<a href="game_page(1)" title="">地下室</a>
+else
+;;未发现线索，需要先查找
+在四周找找，看能否查到一些线索：<br>
+1。查看神像<a href="game_pop(5);game_chat('没有发现')" title="">青龙</a><br>
+2。查看神像<a href="game_pop(5);game_chat('没有发现')" title="">白虎</a><br>
+3。查看神像<a href="game_pop(5);game_chat('没有发现')" title="">朱雀</a><br>
+4。查看神像<a href="game_pop(5);game_chat('没有发现')" title="">玄武</a><br>
+5。查看神像<a href="game_pop(5);game_chat('没有发现')" title="">腾蛇</a><br>
+6。查看神像<a href="game_pop(5);game_chat('没有发现')" title="">勾阵</a><br>
+7。查看神像<a href="game_pop(5);game_chat('没有发现')" title="">太阴</a><br>
+8。查看神像<a href="game_pop(5);game_add_scene_event(1240);game_reload_direct(0);game_chat('发现了一个机关，开启')" title="">六合</a><br>
+9。查看神像<a href="game_pop(5);game_chat('没有发现')" title="">天空</a><br>
+10。查看神像<a href="game_pop(5);game_chat('没有发现')" title="">天后</a><br>
+11。查看神像<a href="game_pop(5);game_chat('没有发现')" title="">天一</a><br>
+12。查看神像<a href="game_pop(5);game_chat('没有发现')" title="">天常</a><br>
+end
+end:>
+<p>
+<a href="game_page(-1)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3B4A43A5E82EA68B61161B962444AFD2

@@ -1,0 +1,62 @@
+id=11603
+名称=铸剑山
+作者=
+属性=
+动作=
+{
+D5001=if game_random_chance(3) and game_pop_a(20) then game_goods_change_n('魔剑',1);game_infobox('魔剑铸造成功。'); else game_infobox('魔剑铸造失败。'); end game_add_scene_event(1153);game_reload_direct(0)
+D5002=if game_random_chance(3) and game_pop_a(20) then game_goods_change_n('魔剑',1);game_infobox('魔剑铸造成功。'); else game_infobox('魔剑铸造失败。'); end game_goods_change_n('陨铁矿',-1);game_add_scene_event(1153);game_reload_direct(0)
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,房间二,AT1000,0,0/2007.bmp"></CENTER>
+房间中间有一个大的铸剑炉。<p>
+<:if game_check_scene_event(1152) then
+if game_check_scene_event(1153) then
+铸剑炉已经损坏了。<p>
+else
+if game_check_scene_event(1105) then
+if game_role_is_exist('铁无梅') or game_role_is_exist('铁檑') then
+人员都已经离开，<br>
+铸剑炉内还有上次铸造失败后留下的半成品<br>
+铁：“听闻家父说起过，魔剑的铸造要点是在铸件时融入大量灵力才能成功，我来试试看。”<br>
+<a href="D5001" title="">开始铸剑</a>
+else
+看来韩将军魔剑没有铸造成功。铸剑炉都被搞的东倒西歪了。<p>
+江湖传闻：魔剑的铸造秘籍应该在无剑山庄庄主手上。
+end
+else
+if game_check_goods_nmb('陨铁矿',1) then
+if game_role_is_exist('铁无梅') or game_role_is_exist('铁檑') then
+人员都已经离开，<br>
+由于缺少陨铁，铸剑炉内留下了上次铸造失败后的半成品<br>
+铁：“听闻家父说起过，魔剑的铸造除了需要使用陨铁矿外，还有要点是在铸件时融入大量灵力才能成功，我来试试看。”<br>
+<a href="D5002" title="">使用一块陨铁矿，并开始铸剑</a>
+else
+看来韩将军缺少陨铁魔剑没有铸造成功。铸剑炉都被搞的东倒西歪了。<p>
+江湖传闻：魔剑的铸造秘籍应该在无剑山庄庄主手上。
+end
+else
+没有<b>陨铁矿</b>，看来魔剑是无法铸成了。
+end
+end
+end
+else
+一些人正在忙碌着，铸剑进行中……<b>过段时间</b>再来看看结果吧<p>
+end:>
+<p>
+返回<a href="game_pop_a(2);game_page(-1)" title="返回">后退</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E1BF620758527B8C9B3390A07245933B

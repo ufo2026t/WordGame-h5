@@ -1,0 +1,275 @@
+{
+  "importedAt": "2026-08-31T03:00:32.619Z",
+  "source": "public/data/upp (local plaintext)",
+  "encoding": "utf-8",
+  "files": [
+    {
+      "text": "data/upp/dat/anqi.txt",
+      "bytes": 745
+    },
+    {
+      "text": "data/upp/dat/biao_yuedu.txt",
+      "bytes": 541
+    },
+    {
+      "text": "data/upp/dat/const_cy.txt",
+      "bytes": 486
+    },
+    {
+      "text": "data/upp/dat/const.txt",
+      "bytes": 413
+    },
+    {
+      "text": "data/upp/dat/cslx.txt",
+      "bytes": 2386
+    },
+    {
+      "text": "data/upp/dat/effect.ini",
+      "bytes": 3987
+    },
+    {
+      "text": "data/upp/dat/error.txt",
+      "bytes": 2194
+    },
+    {
+      "text": "data/upp/dat/guai.txt",
+      "bytes": 10619
+    },
+    {
+      "text": "data/upp/dat/hou.txt",
+      "bytes": 659
+    },
+    {
+      "text": "data/upp/dat/mgnd.txt",
+      "bytes": 1064
+    },
+    {
+      "text": "data/upp/dat/qian.txt",
+      "bytes": 820
+    },
+    {
+      "text": "data/upp/dat/read.txt",
+      "bytes": 153920
+    },
+    {
+      "text": "data/upp/dat/set.txt",
+      "bytes": 3626
+    },
+    {
+      "text": "data/upp/dat/sg3.txt",
+      "bytes": 189
+    },
+    {
+      "text": "data/upp/dat/sg4.txt",
+      "bytes": 220
+    },
+    {
+      "text": "data/upp/dat/sg5.txt",
+      "bytes": 187
+    },
+    {
+      "text": "data/upp/dat/sg6.txt",
+      "bytes": 188
+    },
+    {
+      "text": "data/upp/dat/special.txt",
+      "bytes": 3582
+    },
+    {
+      "text": "data/upp/dat/sword.txt",
+      "bytes": 1011
+    },
+    {
+      "text": "data/upp/dat/task.txt",
+      "bytes": 3556
+    },
+    {
+      "text": "data/upp/dat/touxian.txt",
+      "bytes": 870
+    },
+    {
+      "text": "data/upp/dat/ttserror.txt",
+      "bytes": 1302
+    },
+    {
+      "text": "data/upp/dat/yao.txt",
+      "bytes": 507
+    },
+    {
+      "text": "data/upp/dat/zhuangbei.txt",
+      "bytes": 1096
+    },
+    {
+      "text": "data/upp/dat/zk10.txt",
+      "bytes": 211
+    },
+    {
+      "text": "data/upp/dat/zk11.txt",
+      "bytes": 181
+    },
+    {
+      "text": "data/upp/dat/zk12.txt",
+      "bytes": 241
+    },
+    {
+      "text": "data/upp/dat/zk7.txt",
+      "bytes": 220
+    },
+    {
+      "text": "data/upp/dat/zk8.txt",
+      "bytes": 219
+    },
+    {
+      "text": "data/upp/dat/zk9.txt",
+      "bytes": 279
+    },
+    {
+      "text": "data/upp/persona/ext.txt",
+      "bytes": 481
+    },
+    {
+      "text": "data/upp/persona/Player0.txt",
+      "bytes": 576
+    },
+    {
+      "text": "data/upp/persona/Player1.txt",
+      "bytes": 593
+    },
+    {
+      "text": "data/upp/persona/Player10.txt",
+      "bytes": 590
+    },
+    {
+      "text": "data/upp/persona/Player11.txt",
+      "bytes": 593
+    },
+    {
+      "text": "data/upp/persona/Player12.txt",
+      "bytes": 593
+    },
+    {
+      "text": "data/upp/persona/Player13.txt",
+      "bytes": 588
+    },
+    {
+      "text": "data/upp/persona/Player14.txt",
+      "bytes": 587
+    },
+    {
+      "text": "data/upp/persona/Player15.txt",
+      "bytes": 584
+    },
+    {
+      "text": "data/upp/persona/Player16.txt",
+      "bytes": 600
+    },
+    {
+      "text": "data/upp/persona/Player17.txt",
+      "bytes": 602
+    },
+    {
+      "text": "data/upp/persona/Player2.txt",
+      "bytes": 588
+    },
+    {
+      "text": "data/upp/persona/Player3.txt",
+      "bytes": 585
+    },
+    {
+      "text": "data/upp/persona/Player4.txt",
+      "bytes": 591
+    },
+    {
+      "text": "data/upp/persona/Player5.txt",
+      "bytes": 584
+    },
+    {
+      "text": "data/upp/persona/Player6.txt",
+      "bytes": 599
+    },
+    {
+      "text": "data/upp/persona/Player7.txt",
+      "bytes": 592
+    },
+    {
+      "text": "data/upp/persona/Player8.txt",
+      "bytes": 593
+    },
+    {
+      "text": "data/upp/persona/Player9.txt",
+      "bytes": 581
+    },
+    {
+      "text": "data/upp/root/goods.txt",
+      "bytes": 27436
+    },
+    {
+      "text": "data/upp/root/layer1.txt",
+      "bytes": 272
+    },
+    {
+      "text": "data/upp/root/layer10.txt",
+      "bytes": 213
+    },
+    {
+      "text": "data/upp/root/layer11.txt",
+      "bytes": 213
+    },
+    {
+      "text": "data/upp/root/layer12.txt",
+      "bytes": 213
+    },
+    {
+      "text": "data/upp/root/layer13.txt",
+      "bytes": 248
+    },
+    {
+      "text": "data/upp/root/layer14.txt",
+      "bytes": 273
+    },
+    {
+      "text": "data/upp/root/layer15.txt",
+      "bytes": 203
+    },
+    {
+      "text": "data/upp/root/layer16.txt",
+      "bytes": 213
+    },
+    {
+      "text": "data/upp/root/layer17.txt",
+      "bytes": 229
+    },
+    {
+      "text": "data/upp/root/layer2.txt",
+      "bytes": 272
+    },
+    {
+      "text": "data/upp/root/layer3.txt",
+      "bytes": 272
+    },
+    {
+      "text": "data/upp/root/layer4.txt",
+      "bytes": 181
+    },
+    {
+      "text": "data/upp/root/layer5.txt",
+      "bytes": 201
+    },
+    {
+      "text": "data/upp/root/layer6.txt",
+      "bytes": 202
+    },
+    {
+      "text": "data/upp/root/layer7.txt",
+      "bytes": 184
+    },
+    {
+      "text": "data/upp/root/layer8.txt",
+      "bytes": 184
+    },
+    {
+      "text": "data/upp/root/layer9.txt",
+      "bytes": 228
+    }
+  ]
+}

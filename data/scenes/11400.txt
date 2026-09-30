@@ -1,0 +1,49 @@
+id=11400
+名称=星月神教内
+作者=
+属性=4
+动作=
+{
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://147,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,内室三,AT1000,0,0/2007.bmp"></CENTER>
+战斗胜利了，邪恶教主被除。可以去<FONT color=#"FF0000">万松书院</FONT>看看了。<p>
+<:if game_role_is_exist('浅秋') then
+if game_check_role_values('浅秋',15,20) then
+浅秋：“方，这一段时间以来，我发现我爱的不是你。你，忘了我吧。也许我们有缘无份……”<br>
+方浩：“浅妹，我知道你内心还是爱我的，我会一直等着你回来，永远，永远”<br>
+浅秋：“你别傻了，我们真的不合适。”<br>
+else
+run game_del_friend('浅秋',0)
+浅秋离开了队伍。决定和方浩一起重振星月神教。
+end
+end
+
+if game_role_is_exist('方浩') then
+if game_check_role_values('方浩',15,20) then
+方浩：“浅妹，对不起。我发现我心里已经有了别人，我要追随她一起浪迹天涯……”<br>
+浅秋：“浩哥，你为什么这样对我，为什么，为什么”（哭泣）<br>
+方浩：“感情的事，不能勉强。你是个好姑娘，忘了我吧。”<br>
+else
+run game_del_friend('方浩',0)
+方浩离开了队伍。方浩和浅秋一起，决定重振星月神教。
+end
+end
+:>
+<p>
+<a href="game_pop_a(2);game_page(11392)">返回</a><p>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=00C35D6FD0C8F691AC46A8341A315A2D

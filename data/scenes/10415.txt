@@ -1,0 +1,38 @@
+id=10415
+名称=地下室
+作者=
+属性=34
+载入后= game_pop_fight_a(3,73)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://603,200,(隶书,134,150,{Bold},{clWindowText}),clWindow,地下室,AT1000,1,60/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://111,35,(隶书,134,26,{Bold},{clWindowText}),clWindow,地下三,AT1002,0,0/2007.bmp"></CENTER>
+地下室。<p>
+有很多的骸骨。<p>
+弥漫着一股腐朽的气味。<p>
+
+<:game_true(1)string game_res_goods(0,1,'九阳丹'):><p>
+<:game_true(1)string game_res_goods(5,1,'百年灵芝'):>
+<p>
+
+<p>
+<a href="game_pop_a(2);game_page(10412)">返回地下室通道</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=81825220DB003A4AC358E69E3C69FC4D

@@ -1,0 +1,40 @@
+id=10378
+名称=古墓
+作者=
+属性=38
+载入后=game_pop_fight_a(game_random_chance_2(3),52)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,0,(隶书,134,200,{Bold},{clWindowText}),clWindow,古墓,AT1012,1,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+这里是古墓内圈。<p>
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+古墓内有机关，小心。<p>
+<a href="if game_read_temp(2378) then game_page(10380) else game_write_temp(2377,1);game_infobox('门上有机关，打不开，先附近转转，要触动机关后再来这里才能开门。') end" title="开门">这里有一个门，可以通往古墓核心</a>。<p>
+
+;;<:game_true(1)string game_res_goods(0,1,'锆石'):><p>
+<:game_true(1)string game_res_goods(5,1,'忘忧草'):>
+<p>
+<a href="game_pop_a(2);game_page(1)" title="继续前行">进入古墓深处</a><p>
+;;<a href="game_page(game_random_chance_2(5))" title="走到哪算哪">随机跳转</a><p>
+<a href="game_pop_a(2);game_page(-1)">返回前页</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=3C6EF88122651E8ECB36A9CB3C65AFA4

@@ -1,0 +1,52 @@
+id=11315
+名称=牡蛎岛
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://645,213,(隶书,134,160,{Bold},{clFuchsia}),clWindow,牡蛎岛,AT1001,0,65/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://171,56,(隶书,134,42,{Bold},{clOlive}),clWindow,牡蛎岛,AT1002,0,0/2007.bmp"></CENTER>
+牡蛎岛，岛上多螃蟹。<p>
+您还可以选择迷宫内打怪的难度：<br>
+<:game_true(1)exeing game_include_str('mgnd.upp'):>
+<p>
+您可以在岛上<a href="if game_pop_a(4) and game_random_chance(3) then game_goods_change_n('海蟹',1);game_chat('恭喜：抓到了一只大海蟹。') else game_chat('抓蟹失败，蟹咬了你一口，逃走了。') end" title="抓住海蟹后可以卖给东海小镇上的海鲜商人。">抓蟹</a><p>
+<:game_not_scene_event(1106)
+忽然看见几个日本浪人在欺负一个日本女子<p>
+1。上前<a href="game_infobox('“SHI NE.”日本浪人拒绝了你的帮助。');game_add_scene_event(1106);game_reload_direct(0)" title="我就喜欢以多欺少">帮助日本浪人</a><br>
+2。上去<a href="game_add_friend('千代美',1);game_pop_fight_a(2,13);game_add_scene_event(1106);game_reload_direct(0);game_npc_talk('千代美')" title="ta zi gei dei">帮助日本女子</a><br>
+3。<a href="game_add_scene_event(1106);game_reload_direct(0)" title="走了">不管闲事</a><br>
+:>
+<p>
+<a href="game_page(1)" title="">进入</a><p>
+<a href="game_page(10453)">返回东海岸</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+千代美=1,<img src="$apppath$img\8.bmp">a li ya duo
+I=1,举手之劳，不用谢。（<FONT color=#"FF0000">点此继续对话</FONT>）
+千代美=2,我家受人迫害，全都被杀，只有我逃了出来，从海上飘到了这里。但他们还是派杀手跟踪而来要杀我。
+I=2,那你以后打算怎么办？
+千代美=3,我要回去报仇。
+I=3,你武功这么差，如何报的了仇？
+千代美=4,我，我会有办法的。
+I,A=4,离这不远的地方，有个珊瑚岛，岛上有位道长，功夫深不可测，你可以去那里拜他为师。
+I,B=4,不如跟着我们，等你武功练好了再回去报仇。
+千代美,A=[game_add_scene_event(1107);game_del_friend('千代美',0)]5,好，谢谢你们的关照。
+千代美,B=5,愿意带我这么一个累赘，那太谢谢你们了。
+I,A=5,
+I,B=5,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=C7D3238844174B99BE5D03400EF81434

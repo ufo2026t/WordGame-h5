@@ -1,0 +1,43 @@
+id=11646
+名称=少林寺-天王殿
+作者=
+属性=
+动作=
+{
+D5001=if game_check_money(100000) then game_change_money(-100000);game_add_scene_event(1176) else game_chat('你钱不够10万') end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,天王殿,AT1000,0,0/2007.bmp"></CENTER>
+<a href="game_page(2)" title="">大雄殿</a><p>
+<a href="game_page(3)" title="">那罗殿</a><p>
+<a href="game_page(1)" title="">六祖殿</a>
+<:game_true(1)string game_res_goods(10,1,'百年灵芝'):>
+一个<a href="game_npc_talk('老和尚')">老和尚</a>
+<p>
+<a href="game_page(-3)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+老和尚=1,if game_sex_from_id(1) then 哦弥陀佛，看施主眉开眼阔，乃是人中龙凤啊。else 女施主唇红齿白，乃是有福之人啊end
+I=1,if game_sex_from_id(1) then 谢师傅吉言 else 不是说佛门弟子不近女色的啊，怎么看这么仔细，花和尚？ end
+老和尚=2,if game_sex_from_id(1) then 现在寺里缺钱，施主可愿多捐善款？else 心中无色，眼中自然无色。请问女施主可愿给本寺捐善款？end
+I=2,怎么个捐法？
+老和尚=3,捐款10万，可在山门内给施主立一功德牌。无其他好处。
+I,A=[D5001]3,捐款10万
+I,B=3,不捐
+老和尚,A=4,多谢施主。哦弥陀佛
+老和尚,B=4,捐与不捐，全凭一念，哦弥陀佛
+I,A=4,
+I,B=4,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=ED060D7F6F21024646DD8F1C3B8204DE

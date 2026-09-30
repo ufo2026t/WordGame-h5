@@ -1,0 +1,37 @@
+id=10128
+名称=江府比武
+作者=
+属性=32
+载入后=game_role_only_show('无名')
+动作=
+{
+D5001=if game_pop_game(1,1) then if game_pop_game(1,2) then if game_pop_game(1,3) then if game_pop_game(1,4) then game_infobox('一番激战后，您终于抱得美人归。');game_page(10132) else game_page(10131)end else game_page(10131)end  else game_page(10131) end else game_page(10131) end ;game_add_scene_event(1007);game_role_reshow(0);
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://228,56,(黑体,134,42,{Bold},{clRed}),clWindow,比武招亲,AT1012,0,50/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+今天是江府为女儿江雪儿举行比武招亲大选赛的大好日子。<p>
+全府上下喜气洋洋，热闹非凡。<p>
+由于听说江家女儿貌美如花，因此各色人物均蜂拥而至，以期一亲芳泽。<p>
+&nbsp;<p>
+&nbsp;<p>
+当前已经决出一至四名。<p>
+
+<a href="D5001" title="">参与角逐</a><p>
+
+<a href="game_role_reshow(0);game_page(10126)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=F6AB51F07A8AF7130D8FE4C97F163D85

@@ -1,0 +1,28 @@
+id=11820
+名称=前往五国城
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+五国城，一个偏远荒凉的小镇。徽钦二帝被囚禁于此。<p>
+<a href="game_page(1)" title="">前往五国城</a>
+<p>
+<a href="game_page(-1)">返回上京</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=CBEAA2C29FC2F6A929BEC802154A90A5

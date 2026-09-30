@@ -1,0 +1,38 @@
+id=10168
+名称=三清山道观前迷宫
+作者=
+属性=38
+载入后=if game_random_chance(5) then game_pop_fight_a(1,31) else game_pop_fight_a(1,30)end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,200,(隶书,134,22,{Bold},{clWindowText}),clWindow,$grass,AT1000,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<:game_true(1)exeing game_include_str('biao_yuedu.upp'):><p>
+<:game_true(1)string game_res_goods(5065,1,'软骨粉'):>
+<:game_true(1)string game_res_goods(8,1,'三年生草药'):>
+<p>
+红色<a href="game_pop_a(2);game_page(10169)" title="">石门</a><p>
+黑色<a href="game_pop_a(2);game_page(10172)" title="">石门</a><p>
+<p>
+
+<a href="game_page(10164)">后退</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=43CB23716C5F22FCF0305A5B4A74A50E

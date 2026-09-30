@@ -1,0 +1,46 @@
+id=11354
+名称=地下长河
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,地下长河,AT1000,0,0/2007.bmp"></CENTER>
+这是一条经过几十万年的地下水冲刷出来的溶洞河。<p>
+因为这地下是石灰岩为主。<p>
+<:game_true(1)exeing game_include_str('mgnd.upp'):></strong><br>
+
+<p>
+<a href="game_page(1)" title="">进入</a>
+
+<p>
+<a href="game_page(11352)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+村民甲=1,今年收成好啊，可是官府的税负又增加了，到手的还是没多起来。空欢喜一场。
+I=1,
+村民乙=1,我看上了邻村的一个姑娘，正托人说媒呢，也不知好事能不能成？
+I=1,
+村民丙=1,听说我们村旁边的地下长河里面有宝贝，只是这河又长又深，里面多怪兽，无人敢去寻宝。
+I=1,哦，这地下长河在哪？
+村民丙=2,入口就在村口不远处，你不会是想去吧？小心有命赚钱没命花钱。
+I=2,
+村民丁=1,前几天地下长河发大水，冲出来一只玉如意，运气真是太好了。
+I=1,
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=2601E522B6928E05E3A38789DE02E0AC

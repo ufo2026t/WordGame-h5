@@ -1,0 +1,34 @@
+id=11272
+名称=东淮山
+作者=
+属性=38
+载入后=game_pop_fight_a(1,43)
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://807,267,(隶书,134,200,{Bold},{clWindowText}),clWindow,东淮山,AT1010,1,68/2007.bmp) fixed no-repeat center center;">
+好山好水好风光。<p>
+<:game_true(1)string game_res_goods(0,1,'牛黄'):><p>
+ <:game_true(1)exeing game_include_str('biao_yuedu.upp'):> <p>
+<a href="game_page(3)" title="">前进1</a><p>
+<p>
+<a href="game_page(-3)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0EE7C3F2E4794C52FF04E2ECB678D571

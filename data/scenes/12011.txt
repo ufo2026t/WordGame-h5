@@ -1,0 +1,32 @@
+id=12011
+名称=武当山
+作者=
+属性=4
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,天柱峰,AT1000,0,0/2007.bmp"></CENTER>
+武当弟子：“天柱峰乃武当禁地，外人不得随意进入。不过，如果你对自己的武功比较自信，那么可以一路打上去。”<br>
+当然，您也可以选择难度。<p>
+<:game_true(1)exeing game_include_str('mgnd.upp'):><p>
+<a href="game_page(12051)">打上顶峰</a><p>
+
+<a href="game_pop_a(2);game_page(-4)">返回迷宫</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=0D4DC1086F0419F13CE2614B988FA116

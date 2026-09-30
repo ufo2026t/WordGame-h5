@@ -1,0 +1,37 @@
+id=11750
+名称=开封
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://342,56,(隶书,201,42,{Bold},{clMaroon}),clWindow,汴京八景,AT1002,0,0/2007.bmp"></CENTER>
+<img src="gpic://img_bianjing.jpg"><p>
+<a href="game_page(11795)" title="">艮岳行云</a><p>
+<a href="game_page(11796)" title="">夷山夕照</a><p>
+<a href="game_page(11797)" title="">金梁晓月</a><p>
+<a href="game_page(11798)" title="">资圣熏风</a><p>
+<a href="game_page(11799)" title="">百岗冬雪</a><p>
+<a href="game_page(11800)" title="">大河春浪</a><p>
+<a href="game_page(11801)" title="">吹台秋雨</a><p>
+<a href="game_page(11802)" title="">开宝晨钟</a><p>
+
+<p>
+<a href="game_page(11577)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=EA1EBF43D534CD8D0701E8FD41F4E983

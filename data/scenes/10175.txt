@@ -1,0 +1,60 @@
+id=10175
+名称=三清山道观内殿
+作者=
+属性=1
+动作=
+{
+D5001=game_can_stop_chat(1);if not game_check_res_event(game_get_pscene_id(0)) then game_add_scene_event(1026);game_goods_change_n('五气朝阳',1);game_add_res_event(game_get_pscene_id(0))end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url($apppath$gif\3862.gif) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+<p>
+;;<:game_true(1)string game_res_goods(5069,1,'电气石'):>
+;;<:game_true(1)string game_res_goods(8,1,'三年生草药'):>
+<p>
+道观内十分清幽，只有<a href="game_npc_talk('一阳道长')">一阳道长</a>在那打坐。<p>
+边上虚掩着门，是道观<a href="game_page(10570)" title="进入密室">密室</a><p>
+&nbsp;<p>
+<a href="game_page(10174)">返回三清山道观前殿</a>
+
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_check_scene_event(1026) then
+一阳道长=1,施主有空可去旁边的密室内的须弥幻境看看，那里每次会随机进入一个幻境。真是假时假亦真，假是真来真亦假。
+I=1,好。
+else
+一阳道长=[game_can_stop_chat(0)]1,请坐。
+I=1,谢谢道长。晚生有事求教。
+一阳道长=2,不知施主找贫道何事？
+I,A=2,我近日听到些许动静，好像与昆仑山有关，心中有诸多疑点，特来向道长请教一二。
+I,B=2,没事，我瞎逛呢。
+一阳道长,A=3,哦，施主可曾听说“<FONT color=#"FF0000">暗黑世界</FONT>？”
+一阳道长,B=[game_can_stop_chat(1)]3,那你继续逛吧，随意逛。
+I,A=3,略有耳闻，不知其详。
+一阳道长,A=4,天地初开，清气上升而为天，浊气下沉而为地，中气飘逸而成暗黑世界。由于暗黑上不合天，下不合地，故而长期与天地之力较量，渐败下风，逐隐若于天地之外，仅剩一小出口于昆仑山处。但还是常常有暗黑妖魔从此出口蹿出危害世间，后圣人伏羲氏聚天地之能量作了一神镜镇守此出口，从此天下安宁了几千年。
+I,A=4,是否目前世间各处妖魔数量暴涨和暗黑世界有关？
+一阳道长,A=5,正是，由于昆仑山的镇妖神镜被盗，通往暗黑世界的通道被重新打开了，原先生活在暗黑世界的妖魔大量鱼贯而出，在世间各地安营扎寨，开始危害人间。
+I,A=5,请问道长，如何才能重新镇住妖魔？
+一阳道长,A=6,唉，圣人已经仙去，世上再无人能聚合天地之力来重铸镇妖神镜。只有重新找回被盗神镜，镇住通往暗黑世界的通道才能恢复世间的平和。已经蹿出的妖魔会由于被断绝了暗黑能量的源泉而功力大减，消灭妖魔也就指日可待了。
+I,A=6,道长可知神镜去向？
+一阳道长,A=7,贫道不知。施主可往<FONT color=#FF0000>临安</FONT>打探。
+I,A=7,多谢道长指教。
+一阳道长,A=[D5001]8,探查神镜下落路途艰险。我这有“五气朝阳”法术秘籍一本，赠与施主。可助一二。
+I,A=[game_reload_direct(0)]8,多谢道长。
+end
+}
+
+
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=69C8ED78B5C01FAD49DE1A4276136967

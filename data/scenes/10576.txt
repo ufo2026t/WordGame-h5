@@ -1,0 +1,34 @@
+id=10576
+名称=虚无幻境六
+作者=
+属性=2
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+23世纪：<p>
+随着机器人技术的高度发展，灵魂可以附着在了机器人身上，于是机器人有了自主意识。<br>
+能源问题也已经解决，机器人大量使用的是以微型黑洞为能量来源的驱动块。呈四方盒子状。因为黑洞的质能转换效率比核聚变要高一个数量级。<br>
+有了强大的能源再加上钢铁之躯，机器人很快就占据了统治地位，人类纷纷四散逃命，到了崩溃的边缘。<br>
+你这次的任务是去炸毁机器人的黑洞能源驱动块制造工厂。<p>
+<a href="game_del_scene_event(1278);game_del_scene_event(1279);game_page(12601)" title="">前往工厂</a><p>
+
+<p>
+<a href="game_pop_a(3);game_kill_game_time(0);game_page(10570)">返回宋朝</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=877E431BC03930B02EED396DFCA9E55A

@@ -1,0 +1,78 @@
+id=10013
+名称=清波门码头
+作者=
+属性=32
+载入后=if game_role_is_exist('江雪儿') and not game_check_scene_event(1003) then game_del_friend('江雪儿',0);game_npc_talk('!江雪儿');game_infobox('江雪儿离开了队伍。');game_add_message('初到婺州，可以先去北山打怪。或者到城隍庙逛逛。') end
+动作=
+{
+;;兰若寺除掉大怪后
+if game_check_scene_event(1006) then
+D5001=if game_question('要去临安吗？') then if game_check_money(15) then game_change_money(-15);game_page(10582) else game_chat('您钱不够，去临安要15两。') end end
+else
+D5001=game_chat('现在兰若寺附近的黑山上的黑山老妖闹腾的厉害，到临安的船已经停开了。');
+end
+D5002=if game_question('要去东海吗？') then if game_check_money(20) then game_change_money(-20);game_page(10453) else game_chat('您钱不够，去东海要20两。') end end
+D5003=if game_question('要去河西镇吗？') then if game_check_money(10) then game_change_money(-10);game_page(10012) else game_chat('您钱不够，去河西要10两。') end end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://567,187,(隶书,134,140,{Bold},{clOlive}),clWindow,清波门,AT1001,0,0/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。
+
+婺州码头果然热闹。不愧四省通衢之地。<p>
+<:if game_check_res_event(10386) then
+码头上，有几个年轻人。<br>
+if game_check_scene_event(1006) then
+年轻人甲：“我告诉你啊，临安的冲天观可是个好地方。”<br>
+年轻人乙：“那也比不上皇宫好。”
+else
+
+年轻人甲：“我告诉你啊，婺州的兰诺寺白天和黑夜不同。”<br>
+年轻人乙：“那里有妖怪，我白天都不敢去，更不用说晚上了。”
+end
+
+else
+码头上，几个侠士模样的人正在等船。<br>
+侠士甲：“听说在河西镇的野猪湖边上有座年代久远的<b>古墓</b>，里面有一本<FONT color=#FF0000>武功秘籍</FONT>。”<br>
+侠士乙：“只是那古墓里面机关众多，我等武功低微，不敢进去。”
+end:><p>
+<p>
+
+<a href="game_page(10061)" title="">进入婺州城</a><p>
+<p>
+码头边停着一排船，您还可以坐这些船前往<p>
+<a href="D5001" title="乘船前往临安">临安</a><p>
+<a href="D5002" title="乘船前往东海">东海滨</a><p>
+<a href="D5003" title="">河西镇</a><p><p>
+码头边上摆着一个棋摊，您可以<a href="game_wuziqi(1)" title="">下棋</a>。
+;;<a href="game_page(10824)" title="更多地方">其他路线</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+if game_role_is_exist('江雪儿') and not game_check_scene_event(1003) then
+!江雪儿=1,我出来好几天了，该回家了。
+if game_sex_from_id(1) then
+I=1,你家在哪儿，我送你回去吧。
+!江雪儿=2,谢谢，不用送，我自己回去。你到婺州了，不知有何打算？
+I=2,我想先在婺州到处转转先了解一下，再做决定。
+!江雪儿=3,那咱们就此别过，后会有期。
+I=3,我们还能再见面吗。
+!江雪儿=4,有缘自会再相见。
+else
+I=1,是耶，是耶，都出来这么多天了，家里人肯定挂念。
+!江雪儿=2,你呢，要去哪儿？
+I=2,我想先在婺州看看。
+!江雪儿=3,好艾，到婺州别忘了来找我玩。
+I=3,嗯。
+end
+end
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=09D47BBFE612195DC44CF37173EF4BFF

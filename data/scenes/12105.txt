@@ -1,0 +1,37 @@
+id=12105
+名称=伊贺
+作者=
+属性=
+载入后=if game_check_goods_nmb('平安京令牌',1) and game_not_scene_event(1333) then game_add_scene_event(1333) end
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://271,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,伊贺,AT1000,0,0/2007.bmp"></CENTER>
+平氏武士集团的大本营。前段时间在平源两氏的斗争中，平氏处于下风，一度被打的落花流水。<p>
+<:if game_check_scene_event(1293) then
+<FONT color=#FF0000>源氏已退，伊贺上下正在庆贺。</FONT>城下町有庆功酒宴。<p>
+elseif game_check_scene_event(1333) then
+平氏旧部摩拳擦掌，只待平安京决战。<p>
+end:>
+<a href="game_page(12119)" title="">上野村</a><p>
+<a href="game_page(12120)" title="">城下町</a><p>
+<a href="game_page(12121)" title="">伊贺谷</a> 忍者出没之地
+<p>
+<a href="game_page(12071)">返回九州岛码头</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=736F31D43961821C88CB630031325261

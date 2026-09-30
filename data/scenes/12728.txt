@@ -1,0 +1,35 @@
+id=12728
+名称=走廊
+作者=
+属性=
+TempKey=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,走廊,AT1000,0,0/2007.bmp"></CENTER>
+ 内廊通向大小姐与公子所居之处。<p>
+<a href="game_page(1)">储物间</a><br>
+<a href="game_page(2)">大小姐房</a><br>
+<a href="game_page(3)">二小姐房</a><br>
+
+
+<p>
+<a href="game_page(-6)">返回</a><br>
+
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=BF8686A678A28915A7289AA0516DDBC0

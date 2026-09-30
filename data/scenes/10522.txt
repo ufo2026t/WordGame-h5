@@ -1,0 +1,34 @@
+id=10522
+名称=东方镖局
+作者=
+属性=1
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://0,161,(隶书,134,120,{Bold},{clWindowText}),clWindow,东方镖局,AT1001,0,66/2007.bmp) fixed no-repeat center center;">
+;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
+东方镖局。<p>
+多年前由东方一剑所创，现由其子东方林主掌大局，由于北方战乱，镖局的生意很好。<p>
+&nbsp;<p>
+
+<a href="if game_check_scene_event(1048) then game_page(10527) else game_page(10528) end" title="">进入镖局</a><p>
+
+
+<p>
+<a href="game_page(10061)">返回婺州地图</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=E835070EB3F480FDBBC1EB94C5675FCE

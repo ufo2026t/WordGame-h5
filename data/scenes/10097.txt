@@ -1,0 +1,42 @@
+id=10097
+名称=婺州寻宝乐园
+作者=
+属性=
+动作=
+{
+
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY>
+<:game_true(1)string game_include_str('cslx.upp'):>
+<CENTER><img src="gpic://296,40,(隶书,134,26,{Bold},{clGreen}),clWindow,欢迎来到寻宝乐园,AT1000,0,0/2007.bmp"></CENTER>
+宝贝多多，开宝箱钥匙每个10元<p>
+
+里面房间内有20个宝箱，要打开宝箱，您需要先<a href="game_npc_talk('购买钥匙')">购买中号钥匙</a>。<br>
+一把钥匙只能开一个箱子。<br>
+当然，开宝箱是凭运气，如果运气好，能开出极品装备或者大量的经验值等。
+<p>
+ <a href="game_page(10098)" title="">进入宝箱房间</a><p>
+每次进入房间，里面的宝箱都会更新。<p>
+
+<a href="game_page(10061)">返回</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+;;对话必须由对方发起，如果是需要我方提问的对话类型，请把对方的首句话内容清空即可。
+购买钥匙=1,开宝箱需要用钥匙，您要购买几把钥匙？
+I,A=[if game_check_money(10) then game_change_money(-10);game_goods_change_n('中号钥匙',1);game_infobox('您购买了1把钥匙') else game_infobox('您钱不够。')end]1,购买一个。
+I,B=[if game_check_money(50) then game_change_money(-50);game_goods_change_n('中号钥匙',5);game_infobox('您购买了5把钥匙') else game_infobox('您钱不够。')end]1,购买五个。
+I,C=[if game_check_money(100) then game_change_money(-100);game_goods_change_n('中号钥匙',10);game_infobox('您购买了10把钥匙') else game_infobox('您钱不够。')end]1,购买10个。
+I,D=[if game_check_money(200) then game_change_money(-200);game_goods_change_n('中号钥匙',20);game_infobox('您购买了20把钥匙') else game_infobox('您钱不够。')end]1,购买20个。
+I,E=[if game_check_money(500) then game_change_money(-500);game_goods_change_n('中号钥匙',50);game_infobox('您购买了50把钥匙') else game_infobox('您钱不够。')end]1,购买50个。
+}
+;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1
+Code=4E55425980F709AE8EEDE75DDFEE7358
