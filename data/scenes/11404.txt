@@ -27,6 +27,7 @@ id=11404
 调整迷宫难度：<br>
 <:game_true(1)exeing game_include_str('mgnd.upp'):><p>
 进入黄鹤台前是否<a href="game_save(0)" title="">存盘</a>？这样万一被怪打死，可以从“<b>存取进度</b>”按钮那里读盘恢复目前的进度<p>
+废墟外的草丛里盘着<a href="game_pop_fight_a(1,169)" title="菜花蛇会溜走">菜花蛇</a>，比里面的怪物好对付。<p>
 进入<a href="game_page(12368)" title="">黄鹤台</a>
 ;;池塘里有不少小鱼在游动，<a href="if game_pop_a(3) and game_random_chance(4) then game_goods_change_n('石斑鱼',1);game_chat('恭喜：抓到了一条石斑鱼。') else game_chat('抓鱼失败，鱼逃走了。') end" title="试试能捉到鱼不？">抓鱼</a>。<p>
 <p>

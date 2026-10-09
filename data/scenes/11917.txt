@@ -19,6 +19,13 @@ D5002=if game_check_goods_nmb('五色石',1) then if game_pop(20) and game_rando
 <:game_true(1)exeing game_include_str('biao_yuedu.upp'):>
 <p>
 密室尽头，有个很大的祭坛。<p>
+<:if game_not_scene_event(1191) then
+if game_not_scene_event(5717) then
+孔洞里的暗黑之气已经凝成人形，<a href="game_pop_a(3);game_page(12950)" title="神镜原位漏出的暗黑之气">进去看看</a>。<p>
+else
+暗黑使者已被驱散，孔洞仍在漏出阴寒。<p>
+end
+end:>
 <:if game_check_scene_event(1191) then
 神镜已经归位，散发着幽幽的光芒。<p>
 if game_not_res_event(5233) then

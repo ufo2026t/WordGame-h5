@@ -24,6 +24,7 @@ else
  赵大妈说：“说是前朝儿皇帝留下来的宝藏。”<br>
 村民乙说：“咳咳，这事儿保不准是真的，我听我爷爷说起过。”
 end:><p>
+田埂上有<a href="game_pop_fight_a(1,168)" title="野兔见人会跑">野兔</a>窜来窜去，可以拿来练手。<p>
 
 <a href="if game_grade('无名',5) or game_check_role_values('无名',19,2500) then game_chat('本任务限5级，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('村民老六') end">村民老六</a><br>
 <a href="if game_grade('无名',6) or game_check_role_values('无名',19,3000) then game_chat('本任务限6级，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('村民李') end">村民李</a><br>

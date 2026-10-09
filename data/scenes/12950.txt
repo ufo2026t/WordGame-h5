@@ -1,0 +1,35 @@
+id=12950
+名称=祭坛孔洞
+作者=
+属性=38
+动作=
+{
+D5001=if game_pop_fight_a(1,57) then game_add_scene_event(5717);game_add_message('暗黑使者已被驱散，神镜原位的阴寒稍减。');game_page(11917) end
+}
+描述=
+{
+<HTML><HEAD><TITLE>FINER</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+</HEAD>
+<BODY style="background:url(gpic://600,400,(隶书,134,22,{Bold},{clWindowText}),clWindow,$ifs,AT1000,0,66/2007.bmp) fixed no-repeat center center;">
+<CENTER><img src="gpic://231,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,祭坛孔洞,AT1000,0,0/2007.bmp"></CENTER>
+<p>
+神镜被金兀术盗走之后，祭坛上的小孔一直往外涌阴寒。暗黑之气在孔洞深处凝成了使者，守着神镜原来的位置。<p>
+<:if game_check_scene_event(1191) then
+神镜已经归位，孔洞重新闭合，这里只剩下石壁上的寒气。<p>
+else
+if game_check_scene_event(5717) then
+暗黑使者已经散去，孔洞仍在漏出阴寒，但不再凝成人形。神镜归位之前，这里还不能算安宁。<p>
+else
+一个<a href="D5001" title="驱散从神镜原位涌出的暗黑之气">暗黑使者</a>挡在前面。不把它驱散，阴寒就不会减弱。<p>
+end
+end:>
+<a href="game_page(11917)">返回祭坛</a>
+</BODY>
+</HTML>
+}
+对话资源=
+{
+
+}
