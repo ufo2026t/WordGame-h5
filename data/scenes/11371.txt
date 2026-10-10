@@ -83,8 +83,8 @@ I,C=2,
 end
 店家三=1,买暗器了，厉害的暗器，杀人于无形，实乃居家旅行，杀人越货的好东西啊。
 I=1,是什么暗器这么厉害？
-店家三=2,燕子镖，伤害值200啊，普通人一碰就死。十支两千二百钱。
-I,A=[if game_check_money(2200) then game_change_money(-2200);game_goods_change_n('燕子镖',10) else game_infobox('钱不够') end]2,还行，我买10个。
+店家三=2,燕子镖，伤害值200啊，普通人一碰就死。十支一千九百钱。
+I,A=[if game_check_money(1900) then game_change_money(-1900);game_goods_change_n('燕子镖',10) else game_infobox('钱不够') end]2,还行，我买10个。
 I,B=2,切，这么垃圾的东西还说好。
 店家三,A=3,果然识货。
 店家三,B=3,不识货别在这瞎嚷嚷，坏我生意。
