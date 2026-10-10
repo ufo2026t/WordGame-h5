@@ -25,7 +25,15 @@ else
 兰若寺，位于金华北郊，原先香火鼎盛，寺内僧人众多，名噪江南。<p>
 后来黑山老妖看中这块风水宝地，带着众小妖赶走了僧人，吓跑了香客。<p>
 而今，寺内十分荒凉，蒿草没人。<p>
-能否碰上<FONT color=#"0000FF">聂小倩</FONT>？<p>
+<:if game_check_scene_event(1042) then
+if game_check_scene_event(1006) then
+你已在半夜见过<FONT color=#"0000FF">聂小倩</FONT>。黑山老妖已除，她和寺中孤魂可以解脱了。<p>
+else
+你已在半夜见过<FONT color=#"0000FF">聂小倩</FONT>。她说众鬼受黑山老妖所制，须打开寺内密室的机关，才能从后院法阵去黑山。<p>
+end
+else
+寺中传闻，半夜到二楼一号房，或能见到<FONT color=#"0000FF">聂小倩</FONT>。<p>
+end:>
 到了兰若寺门口。<p>
 <a href="game_page(10389)" title="">进入寺内</a><p>
 

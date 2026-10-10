@@ -1,0 +1,8 @@
+id=layer18
+begin=339
+end=340
+begin2=342
+end2=342
+begin3=346
+end3=347
+;河西镇副食杂货店的暗器匣

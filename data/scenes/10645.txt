@@ -18,6 +18,7 @@ D5002=if game_check_money(10) then game_goods_change_n('上等木炭',10);game_c
 ;;游戏场景写在这里，游戏脚本对大小写敏感，关键字和函数必须全部小写。&nbsp;
 潘楼东去十字街，谓之土市子，又谓之竹竿市．又东十字大街，曰从行角，茶坊毎五更点灯，博易买卖衣物图画花环领抹之类，至晓即散，谓之‘鬼市子’。
 <p>
+灯影里有个<a href="game_trade(20,0)" title="高阶暗器">黑摊</a>，专卖厉害的暗器。<p>
 一个<a href="game_npc_talk('小摊甲')">小摊</a><p>
 一个<a href="game_npc_talk('小摊乙')">小摊</a><p>
 一个<a href="game_npc_talk('小摊丙')">小摊</a><p>

@@ -581,9 +581,14 @@ export class GameAPI {
       const cur = readValues(this.state, roleIndex, statId);
       writeValues(this.state, roleIndex, statId, cur + Number(delta));
     };
-    if (Number(p) === 0) {
+    const named = typeof p === 'string' && p.trim() && !/^\d+$/.test(p.trim());
+    if (named) {
+      const idx = findRoleIndex(this.state, p.trim());
+      if (idx < 0) return 0;
+      apply(idx);
+    } else if (Number(p) === 0) {
       for (let i = 0; i < getRoleCount(this.state); i += 1) apply(i);
-    } else if (p <= getRoleCount(this.state)) {
+    } else if (Number(p) >= 1 && Number(p) <= getRoleCount(this.state)) {
       apply(Number(p) - 1);
     } else return 0;
     syncPlayerFromRole(this.state, 0);

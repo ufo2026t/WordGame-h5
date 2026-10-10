@@ -15,9 +15,11 @@ export function getGameData() {
 export function getGoodsInfo(name) {
   const info = _data?.goodsByName?.[name];
   if (info) {
+    const full = _data?.goodsById?.[String(info.id)] || {};
+    const merged = { ...full, ...info };
     return {
-      ...info,
-      price: (info.priceNum ?? Number(info.price)) || 0,
+      ...merged,
+      price: (merged.priceNum ?? Number(merged.price)) || 0,
     };
   }
   return { price: 50, priceNum: 50, category: 'misc', desc: '', name };

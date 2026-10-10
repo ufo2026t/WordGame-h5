@@ -21,6 +21,7 @@ id=10004
 <p>
 由于顾客不多，<a href="game_npc_talk('掌柜')">掌柜</a>的正在盘点货物。<p>
 如果您想买或者卖东西，请与<a href="game_npc_talk('掌柜')">掌柜</a>联系。<p>
+柜台角落另有一只<a href="game_trade(18,0)" title="铁蒺藜、药粉一类">暗器匣</a>，卖些常见的铁蒺藜和药粉。<p>
 有空闲时间，也可和掌柜的<a href="if game_grade('无名',30) or game_check_role_values('无名',19,15000) then game_chat('本任务限30级以内，您的等级过高或者经验值过多，任务被拒绝。') else  game_npc_talk('聊天') end">聊天</a>。<p>
 <a href="game_page(10001)">返回</a>
 </BODY>

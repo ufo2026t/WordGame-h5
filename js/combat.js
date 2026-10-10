@@ -86,9 +86,12 @@ export function getMonsterAttack(monster) {
 
 export function getMonsterSpeed(monster) {
   if (!monster || (monster.hp ?? 0) <= 0) return 0;
+  if (monster.speedMode === 'zero') return 0;
   const base = Number(monster.speed ?? monster.speedNum) || 10;
   const penalty = monster?.debuffs?.speed || 0;
-  return Math.max(1, base - penalty);
+  let speed = Math.max(1, base - penalty);
+  if (monster.speedMode === 'half') speed = Math.max(1, Math.floor(speed / 2));
+  return speed;
 }
 
 export function applySpellDebuffsToMonster(monster, debuffs) {

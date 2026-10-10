@@ -20,12 +20,16 @@ id=10406
 房间里干干净净的，墙上挂着一副图。<img src="gpic://img_qiannv.jpg"><p>
 <:if game_check_scene_event(1041) then
 if game_check_scene_event(1042) then
-房间里很安静。
+if game_check_scene_event(1006) then
+房中已空。黑山老妖既除，<FONT color=#"0000FF">聂小倩</FONT>不必再受制于此。
+else
+<FONT color=#"0000FF">聂小倩</FONT>已不在房中。她说过：地下室密室里的机关通向后院法阵，从那里才能去黑山。
+end
 else
 if game_sex_from_id(1) then
-<img src="$apppath$img\qiannv2.jpg">：“哟，公子，这么晚了来我这里何事啊”<br>
+<img src="$apppath$img\qiannv2.jpg"><FONT color=#"0000FF">聂小倩</FONT>：“哟，公子，这么晚了来我这里何事啊”<br>
 “你是人是鬼？”<br>
-“我是鬼，不过是好鬼。”<br>
+“我是聂小倩。虽是鬼，却是好鬼。”<br>
 “既是好鬼，为何不投胎转世？”<br>
 “你问这么多干吗呢，既然来了，咱们就快活快活。”<br>
 “我来这里是因为，这里妖孽众多，祸害人间，所以要铲除妖孽。”<br>
@@ -34,9 +38,9 @@ if game_sex_from_id(1) then
 “公子心意已决，那我就告诉你一个秘密，你先到地下室，然后找到一间<FONT color=#"FF0000">密室</FONT>，进入后打开里面的机关。，
 然后变可以到达兰若寺的后院，从那里有个法阵，可以直达黑山，打掉了黑山老妖，我们这些孤魂野鬼，就能得救了。”
 else
-<img src="$apppath$img\qiannv2.jpg">：“哟，姑娘家，这么晚了来我这里何事啊”<br>
-“荒宅之内，看你非妖即鬼了。”
-“鬼也并非个个都是坏的啊。我也不想害你，你走吧，呆会要是黑山姥姥来了，你就没命了。”
+<img src="$apppath$img\qiannv2.jpg"><FONT color=#"0000FF">聂小倩</FONT>：“哟，姑娘家，这么晚了来我这里何事啊”<br>
+“荒宅之内，看你非妖即鬼了。”<br>
+“我是聂小倩。鬼也并非个个都是坏的啊。我也不想害你，你走吧，呆会要是黑山姥姥来了，你就没命了。”<br>
 “我来这里就是为了除妖，哪怕什么老妖。”
 “嘘，小声点，黑山姥姥法力无边，你们不是她的对手，还是趁早逃命吧。”
 “你小看我了，没有金刚钻，哪敢揽磁器活。”
@@ -46,7 +50,7 @@ end
 end
 else
 run game_add_scene_event(1040)
-现在是白天，这里看不出有什么，到<FONT color=#"FF0000">客栈</FONT>先休息一下，<strong>半夜</strong>再来吧。<p>
+墙上这幅画像便是传闻中的<FONT color=#"0000FF">聂小倩</FONT>。现在是白天，人影不现，到<FONT color=#"FF0000">客栈</FONT>先休息一下，<strong>半夜</strong>再来吧。<p>
 run game_allow_gohome(0)
 end
 :>

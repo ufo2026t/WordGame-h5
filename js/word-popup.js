@@ -32,6 +32,7 @@ import {
   calcAttackSpellMpCost,
   applySpellAttackToMonster,
   calcThrowableDamage,
+  tickThrowableAilments,
   deductSpellMp,
   tryStealFromMonster,
   tryEscapeCombat,
@@ -416,9 +417,17 @@ export class WordPopup {
     this.updateFightTitle();
 
     if (this.combat.turn === 'player') {
+      const notes = tickThrowableAilments(this.combat);
+      this.renderFightBar();
+      const afterDot = combatFinished(this.combat, this.saveRef);
+      if (afterDot === 'win') {
+        this.finishFightWin();
+        return;
+      }
       const ri = this.activeRoleIndex();
       const name = getRoleDisplayName(this.saveRef, ri + 1);
-      this.feedbackEl.textContent = name + ' \u7684\u56de\u5408\uff1a\u653b / \u9632 / \u6cd5 / \u7269 / \u9003\uff08\u70ed\u952e\u53ef\u7528\uff09';
+      const turnLine = name + ' \u7684\u56de\u5408\uff1a\u653b / \u9632 / \u6cd5 / \u7269 / \u9003\uff08\u70ed\u952e\u53ef\u7528\uff09';
+      this.feedbackEl.textContent = notes.length ? notes.join('\uff1b') + '\u3002' + turnLine : turnLine;
       this.fightActions?.classList.remove('hidden');
       this.promptEl.textContent = name + ' \u51fa\u624b';
       this.choicesEl.innerHTML = '';
@@ -839,8 +848,7 @@ export class WordPopup {
           this.finishPlayerAction();
           return;
         }
-        target.hp = Math.max(0, target.hp - roll.dmg);
-        this.feedbackEl.textContent = item.name + ' \u547d\u4e2d ' + target.name + '\uff0c\u9020\u6210 ' + roll.dmg + ' \u70b9\u4f24\u5bb3';
+        this.feedbackEl.textContent = item.name + ' \u547d\u4e2d ' + target.name + '\uff0c' + (roll.text || '\u547d\u4e2d');
         this.renderFightBar();
         this.updateFightTitle();
         this.finishPlayerAction();

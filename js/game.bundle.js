@@ -359,9 +359,11 @@ let _data = null;
  function getGoodsInfo(name) {
   const info = _data?.goodsByName?.[name];
   if (info) {
+    const full = _data?.goodsById?.[String(info.id)] || {};
+    const merged = { ...full, ...info };
     return {
-      ...info,
-      price: (info.priceNum ?? Number(info.price)) || 0,
+      ...merged,
+      price: (merged.priceNum ?? Number(merged.price)) || 0,
     };
   }
   return { price: 50, priceNum: 50, category: 'misc', desc: '', name };
@@ -5614,9 +5616,14 @@ const MAX_TIME_EXE_SECONDS = 60000;
       const cur = readValues(this.state, roleIndex, statId);
       writeValues(this.state, roleIndex, statId, cur + Number(delta));
     };
-    if (Number(p) === 0) {
+    const named = typeof p === 'string' && p.trim() && !/^\d+$/.test(p.trim());
+    if (named) {
+      const idx = findRoleIndex(this.state, p.trim());
+      if (idx < 0) return 0;
+      apply(idx);
+    } else if (Number(p) === 0) {
       for (let i = 0; i < getRoleCount(this.state); i += 1) apply(i);
-    } else if (p <= getRoleCount(this.state)) {
+    } else if (Number(p) >= 1 && Number(p) <= getRoleCount(this.state)) {
       apply(Number(p) - 1);
     } else return 0;
     syncPlayerFromRole(this.state, 0);
@@ -6566,9 +6573,12 @@ function ensureMonsterDebuffs(monster) {
 
  function getMonsterSpeed(monster) {
   if (!monster || (monster.hp ?? 0) <= 0) return 0;
+  if (monster.speedMode === 'zero') return 0;
   const base = Number(monster.speed ?? monster.speedNum) || 10;
   const penalty = monster?.debuffs?.speed || 0;
-  return Math.max(1, base - penalty);
+  let speed = Math.max(1, base - penalty);
+  if (monster.speedMode === 'half') speed = Math.max(1, Math.floor(speed / 2));
+  return speed;
 }
 
  function applySpellDebuffsToMonster(monster, debuffs) {
@@ -7394,19 +7404,123 @@ function scaleNamedSpellDebuffs(profile, level, power) {
   if (roleIndex === 0) syncPlayerFromRole(state, 0);
 }
 
+function throwableProfile(info) {
+  const rounds = statNum(info, 'durability');
+  let speed = statNum(info, 'speed');
+  let speedMode = '';
+  if (speed >= FULL) {
+    speedMode = 'zero';
+    speed = 0;
+  } else if (speed >= HALF) {
+    speedMode = 'half';
+    speed = 0;
+  }
+  return {
+    hp: statNum(info, 'luck'),
+    tili: statNum(info, 'hp'),
+    mp: statNum(info, 'magic'),
+    attack: statNum(info, 'attack'),
+    defense: statNum(info, 'defense'),
+    speed,
+    speedMode,
+    rounds,
+  };
+}
+
+function clearThrowableAilment(monster) {
+  const ailment = monster?.ailment;
+  if (!monster) return;
+  if (ailment && monster.debuffs) {
+    monster.debuffs.attack = Math.max(0, (monster.debuffs.attack || 0) - (ailment.attack || 0));
+    monster.debuffs.defense = Math.max(0, (monster.debuffs.defense || 0) - (ailment.defense || 0));
+    monster.debuffs.speed = Math.max(0, (monster.debuffs.speed || 0) - (ailment.speed || 0));
+  }
+  monster.speedMode = '';
+  monster.ailment = null;
+}
+
+/** 标志是 10 秒一跳。攻、防、速在持续时间内生效，时间到后恢复；体、灵、命按回合持续扣除。怪物没有单独的体力和灵力槽，这两项也计入生命。 */
+ function applyThrowableToMonster(monster, info) {
+  const profile = throwableProfile(info);
+  clearThrowableAilment(monster);
+  const parts = [];
+  const lasting = profile.rounds > 0;
+  const hasDot = profile.hp > 0 || profile.tili > 0 || profile.mp > 0;
+
+  if (lasting && hasDot) {
+    if (profile.hp) parts.push(`生命每回合-${profile.hp}`);
+    if (profile.tili) parts.push(`体力每回合-${profile.tili}`);
+    if (profile.mp) parts.push(`灵力每回合-${profile.mp}`);
+  } else if (hasDot) {
+    const burst = profile.hp + profile.tili + profile.mp;
+    monster.hp = Math.max(0, monster.hp - burst);
+    if (profile.hp) parts.push(`生命-${profile.hp}`);
+    if (profile.tili) parts.push(`体力-${profile.tili}`);
+    if (profile.mp) parts.push(`灵力-${profile.mp}`);
+  }
+
+  const hasDebuff = profile.attack > 0 || profile.defense > 0 || profile.speed > 0 || profile.speedMode;
+  if (hasDebuff || (lasting && hasDot)) {
+    monster.ailment = {
+      rounds: lasting ? profile.rounds : 99,
+      dotHp: lasting ? profile.hp : 0,
+      dotTili: lasting ? profile.tili : 0,
+      dotMp: lasting ? profile.mp : 0,
+      attack: profile.attack,
+      defense: profile.defense,
+      speed: profile.speed,
+    };
+    if (hasDebuff) {
+      applySpellDebuffsToMonster(monster, {
+        attack: profile.attack,
+        defense: profile.defense,
+        speed: profile.speed,
+      });
+      if (profile.speedMode) monster.speedMode = profile.speedMode;
+      if (profile.attack) parts.push(`攻击-${profile.attack}`);
+      if (profile.defense) parts.push(`防护-${profile.defense}`);
+      if (profile.speedMode === 'half') parts.push('速度减半');
+      else if (profile.speedMode === 'zero') parts.push('速度为零');
+      else if (profile.speed) parts.push(`速度-${profile.speed}`);
+    }
+    if (lasting) parts.push(`${profile.rounds}回合`);
+  }
+
+  return { text: parts.join('，') || '命中' };
+}
+
+ function tickThrowableAilments(combat) {
+  const notes = [];
+  for (const monster of combat?.monsters || []) {
+    const ailment = monster?.ailment;
+    if (!ailment || monster.hp <= 0) continue;
+    const dot = (ailment.dotHp || 0) + (ailment.dotTili || 0) + (ailment.dotMp || 0);
+    if (dot > 0) {
+      monster.hp = Math.max(0, monster.hp - dot);
+      const bits = [];
+      if (ailment.dotHp) bits.push(`生命-${ailment.dotHp}`);
+      if (ailment.dotTili) bits.push(`体力-${ailment.dotTili}`);
+      if (ailment.dotMp) bits.push(`灵力-${ailment.dotMp}`);
+      notes.push(`${monster.name} 持续受损（${bits.join('，')}）`);
+    }
+    ailment.rounds -= 1;
+    if (ailment.rounds <= 0) {
+      const name = monster.name;
+      clearThrowableAilment(monster);
+      notes.push(`${name} 身上的暗器效果消退了`);
+    }
+  }
+  return notes;
+}
+
  function calcThrowableDamage(info, monster, playerSpeed) {
   const defense = getMonsterDefense(monster);
   const speed = Math.max(1, Number(playerSpeed) || 1);
   const w = Math.round((defense / speed + 1) * 10);
   if (Math.floor(Math.random() * Math.max(1, w)) > 10) {
-    return { hit: false, dmg: 0, tiliDmg: 0, mpDmg: 0 };
+    return { hit: false, text: '' };
   }
-  return {
-    hit: true,
-    dmg: Math.max(1, statNum(info, 'luck')),
-    tiliDmg: statNum(info, 'hp'),
-    mpDmg: statNum(info, 'magic'),
-  };
+  return { hit: true, text: applyThrowableToMonster(monster, info).text };
 }
 
 /** 妙手道：仅消耗灵力，按成功率偷取敌人金钱或掉落物（无道德值判定）。 */
@@ -7490,6 +7604,8 @@ exports.calcSpellDebuffs = calcSpellDebuffs;
 exports.calcSpellAttackDamage = calcSpellAttackDamage;
 exports.applySpellAttackToMonster = applySpellAttackToMonster;
 exports.deductSpellMp = deductSpellMp;
+exports.applyThrowableToMonster = applyThrowableToMonster;
+exports.tickThrowableAilments = tickThrowableAilments;
 exports.calcThrowableDamage = calcThrowableDamage;
 exports.tryStealFromMonster = tryStealFromMonster;
 exports.tryEscapeCombat = tryEscapeCombat;
@@ -7503,7 +7619,7 @@ const { getMonsterIconUrl } = __wgImport("goods-data.js", {"getMonsterIconUrl":"
 const { readValues, writeValues, STAT, syncPlayerFromRole, getRoleDisplayName, getRoleCount } = __wgImport("game-runtime.js", {"readValues":"readValues","writeValues":"writeValues","STAT":"STAT","syncPlayerFromRole":"syncPlayerFromRole","getRoleDisplayName":"getRoleDisplayName","getRoleCount":"getRoleCount"});
 const { changeGoodsByName } = __wgImport("inventory-system.js", {"changeGoodsByName":"changeGoodsByName"});
 const { rollDigDrop, getMineTable, getHerbTable, calcDigCloseBonusExp } = __wgImport("dig-system.js", {"rollDigDrop":"rollDigDrop","getMineTable":"getMineTable","getHerbTable":"getHerbTable","calcDigCloseBonusExp":"calcDigCloseBonusExp"});
-const { listCombatSpells, listCombatItems, bumpSpellUse, calcHealAmount, applyHealToRole, calcAttackSpellMpCost, applySpellAttackToMonster, calcThrowableDamage, deductSpellMp, tryStealFromMonster, tryEscapeCombat } = __wgImport("combat-actions.js", {"listCombatSpells":"listCombatSpells","listCombatItems":"listCombatItems","bumpSpellUse":"bumpSpellUse","calcHealAmount":"calcHealAmount","applyHealToRole":"applyHealToRole","calcAttackSpellMpCost":"calcAttackSpellMpCost","applySpellAttackToMonster":"applySpellAttackToMonster","calcThrowableDamage":"calcThrowableDamage","deductSpellMp":"deductSpellMp","tryStealFromMonster":"tryStealFromMonster","tryEscapeCombat":"tryEscapeCombat"});
+const { listCombatSpells, listCombatItems, bumpSpellUse, calcHealAmount, applyHealToRole, calcAttackSpellMpCost, applySpellAttackToMonster, calcThrowableDamage, tickThrowableAilments, deductSpellMp, tryStealFromMonster, tryEscapeCombat } = __wgImport("combat-actions.js", {"listCombatSpells":"listCombatSpells","listCombatItems":"listCombatItems","bumpSpellUse":"bumpSpellUse","calcHealAmount":"calcHealAmount","applyHealToRole":"applyHealToRole","calcAttackSpellMpCost":"calcAttackSpellMpCost","applySpellAttackToMonster":"applySpellAttackToMonster","calcThrowableDamage":"calcThrowableDamage","tickThrowableAilments":"tickThrowableAilments","deductSpellMp":"deductSpellMp","tryStealFromMonster":"tryStealFromMonster","tryEscapeCombat":"tryEscapeCombat"});
 
 /** Study-mode reward: each correct answer restores 1% max lingli (min 1) for every party member. */
 function addPartyLingliByPercent(save, percent = 1) {
@@ -7884,9 +8000,17 @@ function addPartyLingliByPercent(save, percent = 1) {
     this.updateFightTitle();
 
     if (this.combat.turn === 'player') {
+      const notes = tickThrowableAilments(this.combat);
+      this.renderFightBar();
+      const afterDot = combatFinished(this.combat, this.saveRef);
+      if (afterDot === 'win') {
+        this.finishFightWin();
+        return;
+      }
       const ri = this.activeRoleIndex();
       const name = getRoleDisplayName(this.saveRef, ri + 1);
-      this.feedbackEl.textContent = name + ' \u7684\u56de\u5408\uff1a\u653b / \u9632 / \u6cd5 / \u7269 / \u9003\uff08\u70ed\u952e\u53ef\u7528\uff09';
+      const turnLine = name + ' \u7684\u56de\u5408\uff1a\u653b / \u9632 / \u6cd5 / \u7269 / \u9003\uff08\u70ed\u952e\u53ef\u7528\uff09';
+      this.feedbackEl.textContent = notes.length ? notes.join('\uff1b') + '\u3002' + turnLine : turnLine;
       this.fightActions?.classList.remove('hidden');
       this.promptEl.textContent = name + ' \u51fa\u624b';
       this.choicesEl.innerHTML = '';
@@ -8307,8 +8431,7 @@ function addPartyLingliByPercent(save, percent = 1) {
           this.finishPlayerAction();
           return;
         }
-        target.hp = Math.max(0, target.hp - roll.dmg);
-        this.feedbackEl.textContent = item.name + ' \u547d\u4e2d ' + target.name + '\uff0c\u9020\u6210 ' + roll.dmg + ' \u70b9\u4f24\u5bb3';
+        this.feedbackEl.textContent = item.name + ' \u547d\u4e2d ' + target.name + '\uff0c' + (roll.text || '\u547d\u4e2d');
         this.renderFightBar();
         this.updateFightTitle();
         this.finishPlayerAction();

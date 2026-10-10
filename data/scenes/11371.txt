@@ -66,25 +66,34 @@ I,B=2,
 I,C=2,
 I,D=2,
 else
-店家二=1,客官，来看看，我这有漂亮的玫瑰花卖,每枝20金钱
+店家二=1,客官，来看看，我这有漂亮的玫瑰花卖，每枝20金钱。姑娘戴上添气色，送人也能结一段心意。
+I,A=[if game_check_money(20) then game_change_money(-20);game_goods_change_n('玫瑰花',1);if game_not_scene_event(1341) then game_add_scene_event(1341);game_attribute_change(1,1,1);game_attribute_change(1,10,1);game_infobox('第一次戴上玫瑰：幸运+1，威望+1。') else game_infobox('您得到了一支玫瑰花。') end else game_infobox('钱不够') end]1,买一支自己戴上。
+I,C=1,太贵了，不买
 if game_role_is_exist('胡飛') then
-I=[if game_check_money(20) then game_change_money(-20);game_goods_change_n('玫瑰花',1);game_infobox('您得到了一支玫瑰花') else game_infobox('钱不够') end]1,胡飛@送你一支花吧。
-else
-I=1,这花不新鲜呢
+I,B=[if game_check_money(20) then game_change_money(-20);if game_not_scene_event(1342) then game_add_scene_event(1342);game_attribute_change('胡飛',14,1);game_attribute_change('胡飛',15,1);game_attribute_change(1,9,1);game_infobox('胡飛爱情+1，对你的心意+1。你的道德+1。') else game_infobox('胡飛收下了花。') end else game_infobox('钱不够') end]1,送给胡飛。
 end
+店家二,A=2,戴在鬓边正好。花不在多，在于心意。
+店家二,C=2,客官慢走。
+if game_role_is_exist('胡飛') then
+店家二,B=2,胡飛接过花，耳根都红了。
+I,B=2,
+end
+I,A=2,
+I,C=2,
 end
 店家三=1,买暗器了，厉害的暗器，杀人于无形，实乃居家旅行，杀人越货的好东西啊。
 I=1,是什么暗器这么厉害？
-店家三=2,燕子镖，伤害值200啊，普通人一碰就死。
-I,A=[if game_check_money(2000) then game_change_money(-2000);game_goods_change_n('燕子镖',10) else game_infobox('钱不够') end]2,还行，我买10个。
+店家三=2,燕子镖，伤害值200啊，普通人一碰就死。十支两千二百钱。
+I,A=[if game_check_money(2200) then game_change_money(-2200);game_goods_change_n('燕子镖',10) else game_infobox('钱不够') end]2,还行，我买10个。
 I,B=2,切，这么垃圾的东西还说好。
 店家三,A=3,果然识货。
 店家三,B=3,不识货别在这瞎嚷嚷，坏我生意。
 I,A=3,
 I,B=3,
-店家四=1,有啥买啥，客官，要地瓜干吗？上等红薯制作的，绿色天然食品。无化肥农药残留。补充体力50个点哦
-I,A=[if game_check_money(50) then game_change_money(-50);game_goods_change_n('地瓜干',10) else game_infobox('钱不够') end]1,看起来成色不错，买一包吧（10只装）。
-I,B=1,不买
+店家四=1,客官，南绍山里猎的鹿茸，炼丹制药用的，一支100钱。
+I,A=[if game_check_money(100) then game_change_money(-100);game_goods_change_n('鹿茸',1);game_infobox('您得到了一支鹿茸。') else game_infobox('钱不够') end]1,买一支。
+I,B=[if game_check_money(1000) then game_change_money(-1000);game_goods_change_n('鹿茸',10);game_infobox('您得到了十支鹿茸。') else game_infobox('钱不够') end]1,买十支。
+I,C=1,不买
 店家五=1,客官，吃碗馄饨吧。
 I,A=[if game_check_money(100) then game_change_money(-100);game_role_all_mtl(0);game_infobox('全体命体灵全满了。') else game_infobox('钱不够') end]1,吃
 I,B=1,不吃
