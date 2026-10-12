@@ -19,6 +19,10 @@ id=10431
 巷尾还有一个<a href="game_trade(19,0)" title="飞镖和僵化剂">暗器摊</a>，卖飞镖和几样药。<p>
 <:if game_role_is_exist('西门菲菲') and game_check_scene_event(1311) and not game_check_scene_event(1313) then
 <a href="game_npc_talk('西门菲菲')">西门菲菲</a>在巷口往来望着，似在等什么人。<p>
+elseif game_check_scene_event(1315) then
+西门菲菲：“爹在八咏楼把琴还给我了。信里写着：路走完，再回家。”<p>
+elseif game_check_scene_event(1314) then
+西门菲菲：“知府已经松口。父亲若在八咏楼茶榭等我，我们去见一面。”<p>
 elseif game_check_scene_event(1313) then
 西门菲菲：“父亲说婚约已作罢，可知府那边未必肯放手……”<p>
 end:>

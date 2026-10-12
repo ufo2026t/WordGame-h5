@@ -25,13 +25,17 @@ id=10611
 <p>
 <a href="game_pop_a(2);game_page(1)">前行</a>
 <p>
-<:if game_role_is_exist('西门菲菲') and game_check_scene_event(1314) then
-西门菲菲：“前面就是望梅山庄的路了。父亲说闹够再回家，我偏要再走远一些。”<p>
+<:if game_role_is_exist('西门菲菲') and game_check_scene_event(1315) then
+西门菲菲：“爹在八咏楼把琴还我了。前面就是望梅山庄，我还要再走远一些。”<p>
+elseif game_role_is_exist('西门菲菲') and game_check_scene_event(1314) then
+西门菲菲：“知府松口了。父亲说闯够再回家，我们先去八咏楼茶榭见他一面。”<p>
 elseif game_role_is_exist('西门菲菲') and game_check_scene_event(1311) then
 西门菲菲：“走吧，别回八咏楼前躺着那位公子。”<p>
 end:>
-<:if game_role_is_exist('柳依依') and game_check_scene_event(1316) then
-柳依依：“路上草木多，恰好顺道采些药回去。”<p>
+<:if game_role_is_exist('柳依依') and game_check_scene_event(1317) then
+柳依依：“百年老柳皮已经寄回去了。父亲能出诊，我也可以安心走远些。”<p>
+elseif game_role_is_exist('柳依依') and game_check_scene_event(1316) then
+柳依依：“路上草木多。灵芝寄回去了，百年老柳皮还得回柳浪闻莺采。”<p>
 elseif game_role_is_exist('柳依依') and game_check_scene_event(1310) then
 柳依依：“越走越远，心里越挂着家里的父亲……”<p>
 end:>

@@ -26,6 +26,9 @@ string game_get_newname_at_id(1)：“这个……，车到山前必有路了。
 
 else
 慕容紫霞：“你和我姐姐情同姐妹，真是不错。”
+if game_check_scene_event(1128) then
+<br>慕容紫霞：“以后我也跟着你们走。江南塞北，不能只让姐姐一个人去看。”
+end
 end
 else
 房间里没人。

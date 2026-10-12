@@ -5,7 +5,7 @@ id=12820
 TempKey=西门茶榭
 动作=
 {
-D5001=if game_check_scene_event(1311) then if game_check_scene_event(1314) then game_chat('西门菲菲：“父亲说闯够了再回家。可我还没闯够呢。”') else if game_check_scene_event(1313) then game_chat('西门菲菲：“婚约虽作罢，知府那边未必肯放手。”') else game_chat('西门菲菲：“八咏楼风景好，我偶尔来坐坐。”') end end else game_npc_talk('绿衣琴女') end
+D5001=if game_check_scene_event(1311) then if game_check_scene_event(1315) then game_chat('西门菲菲：“爹说闯够了再回家。我回信写了：路还没走完。”') else if game_check_scene_event(1314) then game_npc_talk('西门傲') else if game_check_scene_event(1313) then game_chat('西门菲菲：“婚约虽作罢，知府那边未必肯放手。”') else game_chat('西门菲菲：“八咏楼风景好，我偶尔来坐坐。”') end end end else game_npc_talk('绿衣琴女') end
 }
 描述=
 {
@@ -16,7 +16,11 @@ D5001=if game_check_scene_event(1311) then if game_check_scene_event(1314) then 
 <BODY style="background:url(gpic://807,267,(隶书,134,200,{Bold},{clGreen}),clWindow,八咏楼,AT1012,0,60/2007.bmp) fixed no-repeat center center;">
 八咏楼侧有一小茶榭，临水而建，竹帘低垂。<p>
 <:if game_check_scene_event(1311) then
+if game_check_scene_event(1314) and game_role_is_exist('西门菲菲') and not game_check_scene_event(1315) then
+<a href="D5001">西门傲</a>在茶榭里坐着，膝上横着一张琴，正等女儿。<p>
+else
 <a href="D5001">西门菲菲</a><img src="$apppath$img\5.bmp">在茶榭里抚琴，见你来便起身相迎。<p>
+end
 elseif game_grade('无名',8) then
 帘后传来琴声，一名<a href="D5001">绿衣琴女</a><img src="$apppath$img\5.bmp">正独自饮茶，神色有些警惕。<p>
 else
@@ -43,8 +47,17 @@ I,B=4,我可没空管闲事，姑娘自便吧。
 绿衣琴女,B=5,也好，菲菲不敢强求。只愿日后别在八咏楼前再遇见那些家丁。
 I,A=5,
 I,B=5,
+elseif game_check_scene_event(1314) and game_not_scene_event(1315) and game_role_is_exist('西门菲菲') then
+西门傲=1,<img src="$apppath$img\5.bmp">菲菲，知府把话带到了。婚约作罢，为父不拦你。
+I=1,西门前辈。（<FONT color=#"FF0000">点此继续对话</FONT>）
+西门傲=2,她逃出西门府那夜，琴也没带。这张琴还她。人，就拜托各位照看。闯够了，再回八咏楼。
+西门菲菲=3,爹，我回信写好了：路还没走完。等把天涯走一遭，再回来看这江。
+I=[game_add_scene_event(1315);game_change_money(1500);game_attribute_change(1,19,1000);game_attribute_change('西门菲菲',15,2);game_infobox('西门傲把琴交还菲菲，并留下盘缠。经验+1000。');game_reload_direct(0)]3,我们会照看她。
+elseif game_check_scene_event(1315) then
+西门菲菲=1,<img src="$apppath$img\5.bmp">爹说闯够了再回家。我回信写了：路还没走完。
+I=1,
 elseif game_check_scene_event(1314) then
-西门菲菲=1,<img src="$apppath$img\5.bmp">父亲说闯够了再回家。我要随你们闯到天涯角落再说。
+西门菲菲=1,<img src="$apppath$img\5.bmp">父亲说闯够了再回家。可我还没闯够呢。
 I=1,
 elseif game_check_scene_event(1313) then
 西门菲菲=1,<img src="$apppath$img\5.bmp">家书口信让我放心一些，可知府那边……我们还是去说清楚好。

@@ -16,6 +16,12 @@ TempKey=
 <BODY>
 <CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,驿站,AT1000,0,0/2007.bmp"></CENTER>
 驿站马厅，驼铃声声，客商换马整备行装。<p>
+<:if game_role_is_exist('丝路花雨') and game_check_scene_event(1318) and not game_check_scene_event(1319) then
+驼队里有人喊花雨的名字。几个沙匪堵在马厅口，正是当初劫她商队的人。<p>
+<a href="if game_pop_fight_a(2,45) then game_add_scene_event(1319);game_change_money(4000);game_attribute_change(1,19,1200);game_infobox('夺回商队被劫的银两。花雨把四千文塞回来，说当初那笔情，这回算还上了。经验+1200。');game_reload_direct(0) else game_chat('沙匪还没退，银两没能夺回。') end">帮丝路花雨夺回被劫银两</a><p>
+elseif game_role_is_exist('丝路花雨') and game_check_scene_event(1319) then
+丝路花雨：“银两回来了。花雨这回是自己挣的名，不是抵债的人。”<p>
+end:>
 <a href="game_npc_talk('驿丞')">驿丞</a><p>
 <a href="game_npc_talk('驼队领队')">驼队领队</a><p>
 <a href="game_page(-4)">中孚大街</a><br>
@@ -36,6 +42,15 @@ I=3,
 end
 驼队领队=1,我们从兰州来，走了三十天才到西州。迷宫里的怪物，最怕遇到白熊怪。
 I=1,
+if game_role_is_exist('丝路花雨') and game_check_scene_event(1319) then
+驼队领队=2,花雨姑娘，上次被沙匪抢走的银两，听驿丞说已经追回来了。商队还欠你一声谢。
+丝路花雨=3,领队不必客气。花雨跟他们走天涯，舞还是要跳的。
+I=3,
+elseif game_role_is_exist('丝路花雨') and game_check_scene_event(1318) then
+驼队领队=2,花雨姑娘？你不是被戏院扣下抵债了吗？那些沙匪，近来又在驿站外转。
+丝路花雨=3,银两是商队的。他们再来，我们一起夺回来。
+I=3,
+end
 
 }
 ;;game_password=8A7D7BA288CA0F0EA1ECF975B026E8E1

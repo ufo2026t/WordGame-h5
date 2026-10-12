@@ -15,7 +15,15 @@ id=12101
 <BODY>
 <CENTER><img src="gpic://228,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,比武获胜,AT1000,0,0/2007.bmp"></CENTER>
 <:if game_check_scene_event(1209) then
+if game_sex_from_id(1) then
 铁庄主：“<strong>文状元</strong>同时获得武林大会<strong>武功天下第一</strong>的，乃前无古人后无来者，稀世奇才。”
+else
+if game_check_scene_event(1350) then
+铁庄主：“<strong>女状元</strong>又是翰林待诏，今日再夺<strong>武功天下第一</strong>，文武兼备，老夫服了。”
+else
+铁庄主：“<strong>女状元</strong>同时获得武林大会<strong>武功天下第一</strong>的，乃前无古人后无来者，稀世奇才。”
+end
+end
 else
 铁庄主：“年轻人，真不简单啊，竟然能力克群雄，本届武林大会盟主，非您莫属啊。”
 end:><p>

@@ -6954,14 +6954,15 @@ function applyMonsterSpellDamageToRole(save, roleIndex, damage, combat) {
   return Math.abs(dmg);
 }
 
- function applyPlayerAttack(combat, mode = 'attack', targetIndex = 0) {
+ function applyPlayerAttack(combat, save, roleIndex, mode = 'attack', targetIndex = 0) {
   const alive = combat.monsters.filter((m) => m.hp > 0);
   const target = alive[targetIndex] || alive[0];
   if (!target) return { dmg: 0, target: null };
   let base = 14;
   if (mode === 'magic') base = 18;
   if (mode === 'item') base = 10;
-  const raw = playerDamage(base);
+  const attack = Math.max(0, Number(readValues(save, roleIndex, STAT.attack)) || 0);
+  const raw = mode === 'attack' && attack > 0 ? attack : playerDamage(base);
   const dmg = calcDamageAfterDefense(raw, getMonsterDefense(target));
   target.hp = Math.max(0, target.hp - dmg);
   return { dmg, target };
@@ -8237,7 +8238,7 @@ function addPartyLingliByPercent(save, percent = 1) {
 
     const alive = this.combat.monsters.filter((m) => m.hp > 0);
     const pickTarget = (index) => {
-      const { dmg, target } = applyPlayerAttack(this.combat, mode, index);
+      const { dmg, target } = applyPlayerAttack(this.combat, this.saveRef, ri, mode, index);
       this.feedbackEl.textContent = '\u5bf9 ' + (target?.name || '\u654c\u4eba') + ' \u9020\u6210 ' + dmg + ' \u70b9\u4f24\u5bb3';
       this.renderFightBar();
       this.updateFightTitle();

@@ -4,8 +4,8 @@ id=11603
 属性=
 动作=
 {
-D5001=if game_random_chance(3) and game_pop_a(20) then game_goods_change_n('魔剑',1);game_infobox('魔剑铸造成功。'); else game_infobox('魔剑铸造失败。'); end game_add_scene_event(1153);game_reload_direct(0)
-D5002=if game_random_chance(3) and game_pop_a(20) then game_goods_change_n('魔剑',1);game_infobox('魔剑铸造成功。'); else game_infobox('魔剑铸造失败。'); end game_goods_change_n('陨铁矿',-1);game_add_scene_event(1153);game_reload_direct(0)
+D5001=game_pop_a(20);game_goods_change_n('魔剑',1);game_infobox('灵力灌进剑胚，魔剑铸造成功。');game_add_scene_event(1153);game_reload_direct(0)
+D5002=game_pop_a(20);game_goods_change_n('陨铁矿',-1);game_goods_change_n('魔剑',1);game_infobox('灵力灌进剑胚，魔剑铸造成功。');game_add_scene_event(1153);game_reload_direct(0)
 }
 描述=
 {
@@ -24,8 +24,8 @@ if game_check_scene_event(1105) then
 if game_role_is_exist('铁无梅') or game_role_is_exist('铁檑') then
 人员都已经离开，<br>
 铸剑炉内还有上次铸造失败后留下的半成品<br>
-铁：“听闻家父说起过，魔剑的铸造要点是在铸件时融入大量灵力才能成功，我来试试看。”<br>
-<a href="D5001" title="">开始铸剑</a>
+铁：“家父说过，魔剑要一次把灵力灌进剑胚。连续背对二十个单词就能铸成，答错不损材料，可以再试。”<br>
+<a href="D5001" title="背对二十题即铸成">开始铸剑</a>
 else
 看来韩将军魔剑没有铸造成功。铸剑炉都被搞的东倒西歪了。<p>
 江湖传闻：魔剑的铸造秘籍应该在无剑山庄庄主手上。
@@ -35,8 +35,8 @@ if game_check_goods_nmb('陨铁矿',1) then
 if game_role_is_exist('铁无梅') or game_role_is_exist('铁檑') then
 人员都已经离开，<br>
 由于缺少陨铁，铸剑炉内留下了上次铸造失败后的半成品<br>
-铁：“听闻家父说起过，魔剑的铸造除了需要使用陨铁矿外，还有要点是在铸件时融入大量灵力才能成功，我来试试看。”<br>
-<a href="D5002" title="">使用一块陨铁矿，并开始铸剑</a>
+铁：“家父说过，除了陨铁矿，还要一次把灵力灌进剑胚。连续背对二十个单词就铸成；答错的话，陨铁矿还在，可以再试。”<br>
+<a href="D5002" title="背对二十题即铸成，并消耗一块陨铁矿">使用一块陨铁矿，并开始铸剑</a>
 else
 看来韩将军缺少陨铁魔剑没有铸造成功。铸剑炉都被搞的东倒西歪了。<p>
 江湖传闻：魔剑的铸造秘籍应该在无剑山庄庄主手上。

@@ -34,7 +34,15 @@ else
 if game_not_scene_event(1263) and game_check_scene_event(1262) then
 if game_check_scene_event(1207) then
 if game_check_scene_event(1209) then
+if game_sex_from_id(1) then
  赵构：“你可是当朝状元，虽在岳飞事情上与朕作对，但朕念你人才难得，<br>
+else
+if game_check_scene_event(1350) then
+ 赵构：“你是朕亲封的翰林待诏，虽在岳飞事情上与朕作对，但朕念你人才难得，<br>
+else
+ 赵构：“你可是当朝女状元，虽在岳飞事情上与朕作对，但朕念你人才难得，<br>
+end
+end
 现今朝廷正在用人之际，朕既往不咎了。<br>
 靖康时节，宫中一<b>镇国神器</b>被金贼掳走，现下落不明。<br>
 缺少此物，致国道中落。如能寻回镇国神器，朕将更予以提拔重用。”<p>
@@ -46,7 +54,15 @@ else
 end
 else
 if game_check_scene_event(1209) then
+if game_sex_from_id(1) then
  赵构：“你是当朝状元，现在是为国出力的时候了。<br>
+else
+if game_check_scene_event(1350) then
+ 赵构：“你是朕的翰林待诏，现在是为国出力的时候了。<br>
+else
+ 赵构：“你是当朝女状元，现在是为国出力的时候了。<br>
+end
+end
 靖康时节，宫中一<b>镇国神器</b>被金贼掳走，现下落不明。<br>
 缺少此物，致国道中落。如能寻回镇国神器，朕将更予以提拔重用。”<p>
 else

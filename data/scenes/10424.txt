@@ -46,7 +46,9 @@ end:>
 elseif game_check_scene_event(1311) then
 西门菲菲常到<a href="game_page(12820)">西门茶榭</a>小坐。<p>
 end:>
-<:if game_role_is_exist('西门菲菲') then
+<:if game_role_is_exist('西门菲菲') and game_check_scene_event(1315) then
+西门菲菲：“爹把琴还我了。八咏楼的江还在，人先跟你们走。”<p>
+elseif game_role_is_exist('西门菲菲') then
 西门菲菲：“八咏楼风大，诗稿别被吹跑了。”<p>
 end:>
 <p>

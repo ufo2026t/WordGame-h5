@@ -15,7 +15,7 @@ D5002=if game_check_money(200) then game_change_money(-200); if game_pop_dig(103
 </HEAD>
 <BODY>
 <CENTER><img src="gpic://114,56,(隶书,134,42,{Bold},{clWindowText}),clWindow,考试,AT1000,0,0/2007.bmp"></CENTER>
-通过考试，您可以获得荣誉，从童生到状元，大学士。<p>
+通过考试，您可以获得荣誉，从童生到状元。<p>
 当然，每次考试要收考试费200。<p>
 有不懂的，可以问<a href="game_npc_talk('先生')">先生</a><p>
 <:if game_get_role_suxing(1,33)= 0 then

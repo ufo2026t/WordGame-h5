@@ -16,7 +16,9 @@ TempKey=
 <BODY>
 <CENTER><img src="gpic://294,48,(隶书,134,36,{Bold},{clWindowText}),clWindow,山庄大厅,AT1000,0,0/2007.bmp"></CENTER>
 正堂悬「东来」匾额，两侧陈列刀枪架。庄中弟子往来，与九毒派井水不犯河水。<p>
-<:if game_role_is_exist('丝路花雨') and game_check_scene_event(1318) then
+<:if game_role_is_exist('丝路花雨') and game_check_scene_event(1319) then
+丝路花雨：“银两追回来了。庄主若要看舞，花雨这回是自己登台，不是抵债。”<p>
+elseif game_role_is_exist('丝路花雨') and game_check_scene_event(1318) then
 丝路花雨：“庄主听说花雨的舞，要在大厅排一出新戏呢。”<p>
 end:>
 <a href="game_npc_talk('庄主')">庄主</a><p>
@@ -50,6 +52,11 @@ I=2,
 elseif game_check_scene_event(1289) and not game_check_scene_event(5300) then
 庄主=1,公子说信物在后院房间四，请侠士速去夺回东来令。
 I=1,
+elseif game_check_scene_event(1319) and game_role_is_exist('丝路花雨') then
+庄主=1,花雨姑娘把商队的银两追回来了？九毒派大小姐还念着她的舞。
+丝路花雨=2,银两是商队的，舞是花雨的。庄主要看，花雨就跳一回，不抵债。
+庄主=3,好好。东来山庄不使毒，也不扣人。有缘再来坐坐。
+I=3,
 elseif game_check_scene_event(1318) and game_role_is_exist('丝路花雨') then
 庄主=1,听说戏院里那位丝路花雨舞得好，连九毒派大小姐都去捧场了。
 I=1,花雨是我们的伙伴。

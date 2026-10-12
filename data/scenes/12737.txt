@@ -25,7 +25,9 @@ end:>
 <a href="game_npc_talk('摆摊老汉')">摆摊老汉</a><p>
 <a href="game_npc_talk('布贩女子')">布贩女子</a><p>
 end:>
-<:if game_role_is_exist('丝路花雨') and game_check_scene_event(1312) and not game_check_scene_event(1318) then
+<:if game_role_is_exist('丝路花雨') and game_check_scene_event(1319) then
+丝路花雨在街角向驿队挥手：“银两追回来了。花雨这回自己登台，下回走天涯。”<p>
+elseif game_role_is_exist('丝路花雨') and game_check_scene_event(1312) and not game_check_scene_event(1318) then
 摆摊老汉喊：“今晚戏院有那位丝路花雨的专场，可别错过！”<p>
 elseif game_role_is_exist('丝路花雨') and game_check_scene_event(1318) then
 丝路花雨在街角向往来的驿队挥手：“花雨在西州结下了缘，下回走天涯。”<p>

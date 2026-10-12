@@ -25,8 +25,10 @@ else
 <:if game_role_is_exist('柳依依') and game_check_scene_event(1310) and not game_check_scene_event(1316) then
 柳依依：“宋大夫，您认得我父柳怀远吗？”<p>
 <a href="game_npc_talk('宋医生')">向宋大夫询问父病</a><p>
+elseif game_role_is_exist('柳依依') and game_check_scene_event(1317) then
+柳依依：“父亲来信，老柳皮到了，已经能出诊。让我跟着你们把行医的本事练出来。”<p>
 elseif game_role_is_exist('柳依依') and game_check_scene_event(1316) then
-柳依依：“宋大夫说，父亲服药后气色好多了。”<p>
+柳依依：“宋大夫说灵芝止住了急病。父亲的老腿，还要回柳浪闻莺采百年老柳皮。”<p>
 end:>
 我这善治妖毒，有需要可以来找我。<p>
 帮宋大夫<a href="if game_grade('无名',28) or game_check_role_values('无名',19,14000) then game_chat('佛珠已经够了，不收购了。') else game_npc_talk('宋大夫')end">帮忙找药引</a>子。

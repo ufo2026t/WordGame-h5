@@ -467,14 +467,15 @@ export function calcDamageAfterDefense(rawDmg, defense) {
   return Math.abs(dmg);
 }
 
-export function applyPlayerAttack(combat, mode = 'attack', targetIndex = 0) {
+export function applyPlayerAttack(combat, save, roleIndex, mode = 'attack', targetIndex = 0) {
   const alive = combat.monsters.filter((m) => m.hp > 0);
   const target = alive[targetIndex] || alive[0];
   if (!target) return { dmg: 0, target: null };
   let base = 14;
   if (mode === 'magic') base = 18;
   if (mode === 'item') base = 10;
-  const raw = playerDamage(base);
+  const attack = Math.max(0, Number(readValues(save, roleIndex, STAT.attack)) || 0);
+  const raw = mode === 'attack' && attack > 0 ? attack : playerDamage(base);
   const dmg = calcDamageAfterDefense(raw, getMonsterDefense(target));
   target.hp = Math.max(0, target.hp - dmg);
   return { dmg, target };

@@ -654,7 +654,7 @@ export class WordPopup {
 
     const alive = this.combat.monsters.filter((m) => m.hp > 0);
     const pickTarget = (index) => {
-      const { dmg, target } = applyPlayerAttack(this.combat, mode, index);
+      const { dmg, target } = applyPlayerAttack(this.combat, this.saveRef, ri, mode, index);
       this.feedbackEl.textContent = '\u5bf9 ' + (target?.name || '\u654c\u4eba') + ' \u9020\u6210 ' + dmg + ' \u70b9\u4f24\u5bb3';
       this.renderFightBar();
       this.updateFightTitle();

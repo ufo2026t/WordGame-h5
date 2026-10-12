@@ -21,7 +21,15 @@ D5003=if game_check_money(800) then game_change_money(-800); if (game_pop_dig(10
 if game_sex_from_id(1) then
 小太监：“状元公好。”
 else
+if game_check_scene_event(1350) then
+小太监：“翰林待诏到。皇上说了，宫里的章奏还请女状元过目。”
+else
+if game_check_scene_event(1351) then
+小太监：“女状元不留宫中，倒也潇洒。皇上倒还念着您。”
+else
 小太监：“咦，女状元，女的也能考状元了？”
+end
+end
 end
 else
 ;;开始考试×××××××××××

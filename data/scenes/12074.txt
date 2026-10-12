@@ -34,7 +34,22 @@ end
 else
 run game_change_money(100000)
 
-皇上赏赐金钱十万。
+皇上赏赐金钱十万。<p>
+高宗：“女子中状元，太祖太宗以来未有。朕欲封你为翰林待诏，掌宫中章奏。你可愿留在临安？”<p>
+if game_check_scene_event(1208) and game_role_is_exist('李疏盈') then
+赵小金：“父皇，她与我一同走过江湖。若把她留在宫里，倒像关起一只鹰。”<p>
+end
+if game_not_scene_event(1350) and game_not_scene_event(1351) then
+您是：<br>
+1。<a href="game_add_scene_event(1350);game_attribute_change(1,10,3);game_add_message('高宗封女状元为翰林待诏。');game_infobox('您受封翰林待诏，威望上升。');game_reload_direct(0)" title="">接受封职</a><p>
+2。<a href="game_add_scene_event(1351);game_change_money(50000);game_attribute_change(1,9,1);game_add_message('女状元谢绝留宫，仍回江湖。');game_infobox('您谢绝留宫，皇上另赏金钱五万。');game_reload_direct(0)" title="">谢恩，仍回江湖</a><p>
+else
+if game_check_scene_event(1350) then
+高宗：“翰林待诏既已受职，宫中章奏仍可送来。你若要行走江湖，朕不拦。”<p>
+else
+高宗：“既不愿留宫，朕也不强求。状元之名，天下已识。”<p>
+end
+end
 end:>
 <p>
 
@@ -46,11 +61,18 @@ end:>
     慕容丽雯：“真是春风得意马蹄疾，一夜看尽长安花。”<br>
     end
 else
-
+  if game_role_is_exist('江雪儿') then
+  江雪儿：“女状元！我以后说出去，都有面子。”<br>
+  end
   if game_role_is_exist('慕容丽雯') then
     慕容丽雯：“春风得意马蹄疾，一夜看尽长安花。”<br>
   end
-
+  if game_role_is_exist('慕容紫霞') then
+    慕容紫霞：“我就说女子不该只守在家里。你看，状元都考上了。”<br>
+  end
+  if game_role_is_exist('宇文赫') then
+    宇文赫：“老大这回是文压全场。我等只有跟着喝彩的份。”<br>
+  end
 
 end
 :><p>

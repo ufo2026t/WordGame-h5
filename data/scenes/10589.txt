@@ -26,6 +26,11 @@ elseif game_check_goods_nmb('还魂丹',1) then
 else
 柳依依望着北方：“再找到一味好药，父亲就有救了。”<p>
 end
+elseif game_check_scene_event(1317) then
+柳依依：“百年老柳皮寄到了。父亲来信说能出诊了，让我跟着你们把行医的本事练出来。”<p>
+elseif game_check_scene_event(1316) and game_role_is_exist('柳依依') then
+柳依依拉着你到老柳下：“灵芝只止住了急病。父亲的老腿，要的还是这百年老柳皮。”<p>
+<a href="if game_pop_a(4) then game_add_scene_event(1317);game_attribute_change(1,19,1500);game_attribute_change(1,9,1);game_change_money(500);game_infobox('采下百年老柳皮寄回婺州。柳怀远来信已能出诊，并寄来五百文谢礼。经验+1500，道德+1。');game_reload_direct(0) else game_chat('柳皮没剥好，再试一次。') end">和柳依依一起剥取百年老柳皮</a><p>
 elseif game_check_scene_event(1316) then
 柳依依：“家父来信说能下床了。这份感情，依依记一辈子。”<p>
 end:>
